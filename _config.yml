@@ -4,7 +4,7 @@ baseurl: ""
 url: https://dandee42.github.io./
 
 theme: cvless
-remote_theme: cvless
+remote_theme: piazzai/cvless
 
 # site settings
 taglong: Jekyll theme for a beautiful online CV
