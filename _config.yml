@@ -3,7 +3,6 @@ description: Jekyll theme for a beautiful online CV
 baseurl: ""
 url: https://dandee42.github.io./
 
-theme: cvless
 remote_theme: piazzai/cvless
 
 # site settings
