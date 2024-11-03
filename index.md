@@ -7,10 +7,10 @@ title: Home
 
 
 <ul>
-    <li>[Click here - default](about/default)</li>
-    <li>[Click here - page](about/page)</li>
-    <li>[Click here - posts](posts)</li>
-    <li><a href="{{ site.baseurl }}/about/default">Externí stránka</a></li>
+    <li><a href="{{ site.baseurl }}/about/default">Default</a></li>
+    <li><a href="{{ site.baseurl }}/posts">Posts</a></li>
+    <li><a href="{{ site.baseurl }}/about/page">Page</a></li>
+    <li><a href="{{ site.baseurl }}/about/cv">CV</a></li>
     
     <li><a href="https://www.google.com" target="_blank">Externí stránka</a></li>
 </ul>
