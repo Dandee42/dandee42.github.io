@@ -7,9 +7,9 @@ title: Home
 
 <nav>
     <ul>
-        <li><a href="{{ site.baseurl }}/about/default.html">Domov</a></li>
-        <li><a href="{{ site.baseurl }}/about/about.html">O nás</a></li>
-        <li><a href="{{ site.baseurl }}/posts.html">Příspěvky</a></li>
+        <li>[Click here - default](about/default)</li>
+        <li>[Click here - page](about/page)</li>
+        <li>[Click here - posts](posts)</li>
         <li><a href="https://www.google.com" target="_blank">Externí stránka</a></li>
     </ul>
 </nav>
