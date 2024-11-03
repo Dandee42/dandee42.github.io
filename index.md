@@ -5,6 +5,18 @@ title: Home
 
 # About
 
+<nav>
+    <ul>
+        <li><a href="{{ site.baseurl }}/about/default.html">Domov</a></li>
+        <li><a href="{{ site.baseurl }}/about/about.html">O nás</a></li>
+        <li><a href="{{ site.baseurl }}/posts.html">Příspěvky</a></li>
+        <li><a href="https://www.google.com" target="_blank">Externí stránka</a></li>
+    </ul>
+</nav>
+
+[Click here - default](about/default)
+[Click here - page](about/page)
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 This is the home page. It can be used for a short introduction. [Click here](cv) to see the full CV, and [here](assets/files/cv.pdf) to download a print version. The theme also ships with a blog: [click here](posts) to scroll posts from the most recent. Finally, [click here](404) to see a page that can't be found.
