@@ -10,6 +10,9 @@ title: Home
     <li>[Click here - default](about/default)</li>
     <li>[Click here - page](about/page)</li>
     <li>[Click here - posts](posts)</li>
+    <li><a href="{{ site.baseurl }}/about/default.md" target="_blank">Externí stránka</a></li>
+    <li><a href="{{ site.baseurl }}/about/default" target="_blank">Externí stránka</a></li>
+    <li><a href="{{ site.baseurl }}/about/default.html" target="_blank">Externí stránka</a></li>
     <li><a href="https://www.google.com" target="_blank">Externí stránka</a></li>
 </ul>
 
