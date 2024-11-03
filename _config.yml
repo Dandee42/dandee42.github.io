@@ -1,4 +1,4 @@
-title: Daniel
+title: Daniel Hladík
 description: Jekyll theme for a beautiful online CV
 baseurl: ""
 url: https://dandee42.github.io./
@@ -10,7 +10,7 @@ taglong: Jekyll theme for a beautiful online CV
 tagshort: Jekyll theme
 
 # author settings
-author:
+author: Daniel Hladík
   name: Place Holder
   email: username@domain.com
 photo: assets/files/photo.jpg
