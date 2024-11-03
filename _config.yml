@@ -10,7 +10,7 @@ taglong: Jekyll theme for a beautiful online CV
 tagshort: Jekyll theme
 
 # author settings
-author: Daniel Hladík
+author:
   name: Place Holder
   email: username@domain.com
 photo: assets/files/photo.jpg
