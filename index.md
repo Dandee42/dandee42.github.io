@@ -5,14 +5,14 @@ title: Home
 
 # About
 
-<nav>
-    <ul>
-        <li>[Click here - default](about/default)</li>
-        <li>[Click here - page](about/page)</li>
-        <li>[Click here - posts](posts)</li>
-        <li><a href="https://www.google.com" target="_blank">Externí stránka</a></li>
-    </ul>
-</nav>
+
+<ul>
+    <li>[Click here - default](about/default)</li>
+    <li>[Click here - page](about/page)</li>
+    <li>[Click here - posts](posts)</li>
+    <li><a href="https://www.google.com" target="_blank">Externí stránka</a></li>
+</ul>
+
 
 [Click here - default](about/default)
 [Click here - page](about/page)
