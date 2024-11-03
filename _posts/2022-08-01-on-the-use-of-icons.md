@@ -2,6 +2,8 @@
 layout: post
 title: On the use of icons
 lead: A very quick guide.
+pagination:
+  enabled: true
 ---
 
 The icons used throughout this theme are partly custom-made, and partly come from the [Iconoir](https://iconoir.com/) library. More can be created or downloaded from the Iconoir website as svg files, and saved in `assets/svg` for use in your website.
