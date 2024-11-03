@@ -1,13 +1,13 @@
 title: Daniel Hladík
-description: Welcome to my CV
+description: Online markeťák asimilující do světa IT
 baseurl: ""
 url: https://dandee42.github.io./
 
 remote_theme: piazzai/cvless
 
 # site settings
-taglong: Welcome to my CV - <br>Jsem online markeťák
-tagshort: Welcome to my CV
+taglong: Online markeťák asimilující do světa IT
+tagshort: Online markeťák asimilující do světa IT
 
 # author settings
 author:
