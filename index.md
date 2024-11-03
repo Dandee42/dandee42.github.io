@@ -10,7 +10,7 @@ title: Home
     <li><a href="{{ site.baseurl }}/about/default">Default</a></li>
     <li><a href="{{ site.baseurl }}/posts">Posts</a></li>
     <li><a href="{{ site.baseurl }}/about/page">Page</a></li>
-    <li><a href="{{ site.baseurl }}/about/cv">CV</a></li>
+    <li><a href="{{ site.baseurl }}/cv">CV</a></li>
     
     <li><a href="https://www.google.com" target="_blank">Externí stránka</a></li>
 </ul>
