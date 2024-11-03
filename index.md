@@ -2,9 +2,7 @@
 layout: home
 title: Home
 ---
-
 # About
-
 
 <ul>
     <li><a href="{{ site.baseurl }}/about/page">Page</a></li>
