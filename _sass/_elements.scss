@@ -105,6 +105,7 @@ a.reversefootnote {
   color: var(--color-text);
   background-color: var(--color-button);
   border: solid 1px var(--color-border);
+
   &:focus,
   &:hover {
     border: inherit;
