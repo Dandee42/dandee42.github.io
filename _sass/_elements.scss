@@ -102,9 +102,9 @@ a.reversefootnote {
 }
 
 .button {
-  color: var(--color-button);
-  background-color: var(--color-background);
-  border: solid 1px var(--color-border);
+  background-color: var(--oc-gray-8);
+  color: var(--color-background);
+  border: solid 1px var(--oc-gray-8);
   border-radius: 6px;
   padding: 8px;
   text-decoration: none;
@@ -112,8 +112,8 @@ a.reversefootnote {
 
   &:focus,
   &:hover {
-    border: solid 1px var(--color-button);
-    color: var(--color-background);
-    background-color: var(--color-border);
+    background-color: var(--color-background);
+    color: var(--oc-gray-8);
+    border: solid 1px var(--oc-gray-8);
   }
 }
