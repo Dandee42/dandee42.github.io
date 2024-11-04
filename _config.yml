@@ -1,4 +1,4 @@
-title: Daniel Hladík
+title: Daniel Hladík - online markeťák v IT světě
 description: Online markeťák asimilující do světa IT
 baseurl: ""
 url: https://daniel-hladik.cz
@@ -7,7 +7,7 @@ remote_theme: piazzai/cvless
 
 # site settings
 taglong: Online markeťák asimilující do světa IT
-tagshort: Online markeťák asimilující do světa IT
+tagshort: online markeťák v IT světě
 
 # author settings
 author:
