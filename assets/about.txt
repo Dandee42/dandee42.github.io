@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Amaranth
+- Font Title: Labrada
 - Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/amaranth/v18/KtkuALODe433f0j1zPnCF9GqwnzW.ttf
+- Font Source: https://fonts.gstatic.com/s/labrada/v2/ieVh2Y9HLWefIpOyF1Vi3ZqDss1Px9X6TAM4QPdUej17.ttf
 - Font License: undefined)
