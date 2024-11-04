@@ -112,7 +112,7 @@ a.reversefootnote {
 
   &:focus,
   &:hover {
-    background-color: var(--color-button);
+    background-color: var(--color-border);
     color: var(--color-text);
     border: solid 1px var(--color-text);
   }
