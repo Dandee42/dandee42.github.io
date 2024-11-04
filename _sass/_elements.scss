@@ -100,3 +100,15 @@ a.reversefootnote {
     border: none;
   }
 }
+
+.button {
+  color: var(--color-text);
+  background-color: var(--color-button);
+  border: solid 1px var(--color-border);
+  &:focus,
+  &:hover {
+    border: inherit;
+    color: inherit;
+    background-color: var(--color-background);
+  }
+}
