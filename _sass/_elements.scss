@@ -108,12 +108,11 @@ a.reversefootnote {
   border-radius: 12px;
   padding: 8px 10px 8px 10px;
   text-decoration: none;
-  transition: all 0.1s ease;
+  transition: box-shadow 0.2s ease;
 
   &:focus,
   &:hover {
-    border: solid 3px var(--color-text);
-    font-weight: bold;
+    box-shadow: 0 0 0 1px var(--color-text);
   }
 }
 
