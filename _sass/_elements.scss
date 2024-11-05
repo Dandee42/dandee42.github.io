@@ -101,7 +101,7 @@ a.reversefootnote {
   }
 }
 
-a .button {
+.button {
   background-color: var(--color-background);
   color: var(--color-text);
   border: solid 2px var(--color-text);
@@ -113,9 +113,10 @@ a .button {
 
   &:focus,
   &:hover {
+    border: solid 2px var(--color-text);
+    color: var(--color-text);
     box-shadow: 0 0 0 2px var(--color-text);
     z-index: 1;
-    text-decoration: none;
   }
 }
 
