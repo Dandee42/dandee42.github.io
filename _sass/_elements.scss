@@ -113,6 +113,7 @@ a.reversefootnote {
   &:focus,
   &:hover {
     box-shadow: 0 0 0 1px var(--color-text);
+    text-decoration: none;
   }
 }
 
