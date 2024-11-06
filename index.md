@@ -2,6 +2,10 @@
 layout: home
 title: Home
 ---
+<p class="text-center">
+<a href="mailto:info@daniel-hladik.cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" class="button">Kontaktovat emailem</a>
+</p>
+<!--
 # About
 
 <ul>
@@ -9,9 +13,6 @@ title: Home
     <li><a href="{{ site.baseurl }}/cv">CV</a></li>
 </ul>
 
-<a href="mailto:info@daniel-hladik.cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" class="button">Kontaktovat emailem</a>
-
-<!--
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 This is the home page. It can be used for a short introduction. [Click here](cv) to see the full CV, and [here](assets/files/cv.pdf) to download a print version. The theme also ships with a blog: [click here](posts) to scroll posts from the most recent. Finally, [click here](404) to see a page that can't be found.
