@@ -19,8 +19,13 @@ phone: +1 234 567 890
 
 # social media links
 social:
-  github: dandee42
+  github:
   linkedin: daniel-hladik
+  facebook:
+  instagram:
+  x:
+  stackoverflow:
+
 
 # build settings
 permalink: pretty
