@@ -115,11 +115,13 @@ a.reversefootnote {
   &:hover {
     border: solid 2px var(--color-text);
     color: var(--color-text);
-    box-shadow: 0 0 0 2px var(--color-text);
+    box-shadow: 0 0 0 1px var(--color-text);
     z-index: 1;
   }
 }
 
-.header-background {
+.icon-background {
   background-color: var(--oc-gray-9);
+  max-width: 100%;
+  height: auto;
 }
