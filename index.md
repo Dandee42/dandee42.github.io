@@ -13,7 +13,7 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 - ✅ SQL
 - ✅ Python
 - ✅ Základy JavaScriptu
-- loading<span class="dots"></span>
+- <div>loading<span class="dots"></span></div>
 
 Více detailů najdete v mém CV.
 
