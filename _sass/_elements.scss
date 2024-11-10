@@ -119,3 +119,29 @@ a.reversefootnote {
     z-index: 1;
   }
 }
+
+.loading-text {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.dots::after {
+  content: '.';
+  animation: dot-blink 1.5s infinite steps(1, end);
+}
+
+@keyframes dot-blink {
+  0% {
+    content: '.';
+  }
+  33% {
+    content: '..';
+  }
+  66% {
+    content: '...';
+  }
+  100% {
+    content: '.';
+  }
+}
