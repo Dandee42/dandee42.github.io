@@ -120,28 +120,29 @@ a.reversefootnote {
   }
 }
 
-.loading-text {
-  font-size: 24px;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-.dots::after {
-  content: '.';
+.dots {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
   animation: dot-blink 1.5s infinite steps(1, end);
 }
 
 @keyframes dot-blink {
   0% {
-    content: '.';
+    content: '';
+    width: 0;
   }
   33% {
-    content: '..';
+    content: '.';
+    width: 0.5em; /* První tečka */
   }
   66% {
-    content: '...';
+    content: '..';
+    width: 1em; /* Dvě tečky */
   }
   100% {
-    content: '.';
+    content: '...';
+    width: 1.5em; /* Tři tečky */
   }
 }

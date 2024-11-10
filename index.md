@@ -15,6 +15,8 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 ✅ Základy JavaScriptu
 loading<span class="dots"></span>
 
+Více detailů najdete v mém CV.
+
 Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
 
 <p class="text-center">
