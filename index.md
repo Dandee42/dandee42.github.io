@@ -2,7 +2,20 @@
 layout: home
 title: Home
 ---
+
+
+# Můžete mi říkat Dan.
+Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z online markeťáka do IT světa. Mým cílem je zaměřit se na pozice junior QA testera webových aplikací, junior vývojáře webových aplikací v Pythonu, nebo podobné role, kde bych mohl využít Python jako programovací jazyk. Mám již zkušenosti s testováním a vývojem e-shopu, které mi poskytly solidní základy pro tuto změnu kariéry.
+
+## Co ovládám?
+✅ HTML5, CSS3
+✅ SQL
+✅ Python
+✅ Základy JavaScriptu
+ ...loading
+
 <p class="text-center">
+Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
 <a href="mailto:info@daniel-hladik.cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" class="button">Kontaktovat emailem</a>
 </p>
 
