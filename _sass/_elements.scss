@@ -120,29 +120,23 @@ a.reversefootnote {
   }
 }
 
-.dots {
-  display: inline-block;
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
+.dots::after {
+  content: '';
   animation: dot-blink 1.5s infinite steps(1, end);
 }
 
+/* Animation of dot-blinking */
 @keyframes dot-blink {
   0% {
     content: '';
-    width: 0;
   }
   33% {
     content: '.';
-    width: 0.5em; /* První tečka */
   }
   66% {
     content: '..';
-    width: 1em; /* Dvě tečky */
   }
   100% {
     content: '...';
-    width: 1.5em; /* Tři tečky */
   }
 }

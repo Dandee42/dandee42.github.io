@@ -8,12 +8,12 @@ title: Home
 Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z online markeťáka do IT světa. Mým cílem je zaměřit se na pozice junior QA testera webových aplikací, junior vývojáře webových aplikací v Pythonu, nebo podobné role, kde bych mohl využít Python jako programovací jazyk. Mám již zkušenosti s testováním a vývojem e-shopu, které mi poskytly solidní základy pro tuto změnu kariéry.
 
 ## Co ovládám?
-✅ HTML5
-✅ CSS3
-✅ SQL
-✅ Python
-✅ Základy JavaScriptu
-loading<span class="dots"></span>
+- ✅ HTML5
+- ✅ CSS3
+- ✅ SQL
+- ✅ Python
+- ✅ Základy JavaScriptu
+- loading<span class="dots"></span>
 
 Více detailů najdete v mém CV.
 
