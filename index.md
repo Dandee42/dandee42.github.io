@@ -14,8 +14,9 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 ✅ Základy JavaScriptu
  ...loading
 
-<p class="text-center">
 Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
+
+<p class="text-center">
 <a href="mailto:info@daniel-hladik.cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" class="button">Kontaktovat emailem</a>
 </p>
 
