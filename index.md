@@ -35,12 +35,11 @@ Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kon
   <button type="submit">Odeslat</button>
 </form>
 
-<!--> 
+<!--
 <p class="text-center">
 <a href="mailto:info@daniel-hladik.cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" class="button">Kontaktovat emailem</a>
 </p>
 -->
-
 <!--
 # About
 
