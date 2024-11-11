@@ -20,6 +20,7 @@ html[data-theme="light"] {
   --color-mark: var(--oc-yellow-3);
   --color-border: var(--oc-gray-4);
   --color-button: var(--oc-gray-6);
+  --color-form: white;
 }
 
 html[data-theme="dark"] {
@@ -31,4 +32,5 @@ html[data-theme="dark"] {
   --color-mark: var(--oc-gray-8);
   --color-border: var(--oc-gray-7);
   --color-button: var(--oc-gray-7);
+  --color-form: var(--oc-gray-1);
 }
