@@ -1,7 +1,7 @@
 title: Daniel Hladík
 description: Daniel HLadík - Online markeťák asimilující do světa IT
 baseurl: ""
-url: https://daniel-hladik.cz
+url: daniel-hladik.cz
 
 remote_theme: piazzai/cvless
 
@@ -15,7 +15,7 @@ author:
   email: info@daniel-hladik.cz
 photo: assets/files/photo.png
 address: Praha 6
-phone: +1 234 567 890
+phone: +420 735 585 383
 
 # social media links
 social:
