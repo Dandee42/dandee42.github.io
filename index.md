@@ -32,6 +32,7 @@ Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kon
     <textarea name="message"></textarea>
   </label>
   <!-- your other form fields go here -->
+  <input type="hidden" name="_redirect" value="{{ site.url }}/form-success/">
   <button type="submit">Odeslat</button>
 </form>
 
