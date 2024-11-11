@@ -24,7 +24,7 @@ Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kon
   method="POST"
 >
   <label>
-    Email:
+    Váš email:
     <input type="email" name="email">
   </label>
   <label>
