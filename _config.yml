@@ -3,7 +3,7 @@ description: Daniel HLadík - Online markeťák asimilující do světa IT
 baseurl: ""
 url: https://daniel-hladik.cz
 
-remote_theme: piazzai/cvless
+theme: cvless
 
 # site settings
 taglong: Online markeťák asimilující do světa IT
@@ -43,3 +43,17 @@ pagination:
   sort_reverse: true
   permalink: /:num/
   title: ":title &middot; Page :num"
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+  sourcemap: never
+
+feed:
+  path: atom.xml

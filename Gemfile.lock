@@ -103,6 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   cvless (~> 2.2)
+  jekyll-seo-tag
 
 BUNDLED WITH
    2.5.22
