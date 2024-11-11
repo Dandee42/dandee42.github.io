@@ -18,6 +18,22 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
 
 Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
+
+<form
+  action="https://formspree.io/f/xkgnbbwo"
+  method="POST"
+>
+  <label>
+    Email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Zpráva:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Odeslat</button>
+</form>
   
 <p class="text-center">
 <a href="mailto:info@daniel-hladik.cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" class="button">Kontaktovat emailem</a>
