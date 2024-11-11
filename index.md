@@ -18,7 +18,7 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
 
 Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
-
+</br>
 <p class="text-center">
 <a href="mailto:info@daniel-hladik.cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" class="button">Kontaktovat emailem</a>
 </p>
