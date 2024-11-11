@@ -15,7 +15,7 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 - ✅ Základy JavaScriptu
 - <div>loading<span class="dots"></span></div>
 
-Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).<span class="li-icon"><a href="https://flowcv.com/resume/osrniic0ww">{% include svg/open-new-window.svg %}</a></span>
+Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).<span class="li-icon"><a href="https://flowcv.com/resume/osrniic0ww" target="_blank" rel="noopener noreferrer">{% include svg/open-new-window.svg %}</a></span>
 
 Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
   
