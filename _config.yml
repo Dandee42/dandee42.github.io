@@ -3,7 +3,7 @@ description: Daniel HLadík - Online markeťák asimilující do světa IT
 baseurl: ""
 url: https://daniel-hladik.cz
 
-theme: cvless
+remote_theme: piazzai/cvless
 
 # site settings
 taglong: Online markeťák asimilující do světa IT
