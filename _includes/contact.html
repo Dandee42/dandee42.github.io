@@ -2,10 +2,7 @@
   <h2>Contact</h2>
   <ul>
     <li>Ing. Daniel Hladík</li>
-    <li>
-      {% if site.tagshort %}
-      {{ site.tagshort }}
-    </li>
+    <li>{% if site.tagshort %}{{ site.tagshort }}</li>
     <li><span class="li-icon">{% include svg/pin-alt.svg %}</span><span>{{ site.address }}</span></li>
     <li><span class="li-icon">{% include svg/phone.svg %}</span><span>{{ site.phone }}</span></li>
     <li><span class="li-icon">{% include svg/mail.svg %}</span><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
