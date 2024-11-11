@@ -1,6 +1,7 @@
 ---
 layout: cv
 title: CV
+published: false
 ---
 
 # Curriculum Vitæ
