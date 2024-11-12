@@ -23,7 +23,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
     <div class="contact-intro">
         <h2>Zanechte mi zprávu</h2>
         <p class="contact-description">
-        Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
+            Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
         </p>
     </div>
 
@@ -66,7 +66,6 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
                     Prosím vyplňte pole se zprávou.
                 </div>
             </div>
-            <div class="h-captcha" data-captcha="true"></div>
 
             <!-- Tlačítko Odeslat -->
             <div class="form-group">
@@ -79,7 +78,6 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
 </section>
 
 <script src="/assets/js/contact-form.js" defer></script>
-<script src="https://web3forms.com/client/script.js" async defer></script>
 
 <!--
 <p class="text-center">
