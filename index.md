@@ -52,7 +52,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
             Prosím vyplňte svou emailovou adresu.
         </div>
         <div class="invalid-feedback text-red-400 text-sm mt-1">
-            Váš email není validní. Prosím poskytněte validní emailovou adresu.
+            Možná to byl jen překlep, ale Váš email není validní pro odeslání. Dodržte prosím formát: "email@domena.cz"
         </div>
       </div>
 
