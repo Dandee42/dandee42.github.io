@@ -19,7 +19,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
 
 <section class="contact-section">
   <div class="contact-intro">
-    <h2 class="contact-title">Napište mi</h2>
+    <h2>Zanechte mi zprávu</h2>
     <p class="contact-description">
       Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
     </p>
