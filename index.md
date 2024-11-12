@@ -17,13 +17,11 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 
 Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
 
-Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
-
 <section class="contact-section">
   <div class="contact-intro">
-    <h2 class="contact-title">Get in Touch</h2>
+    <h2 class="contact-title">Napište mi</h2>
     <p class="contact-description">
-      Fill out the form below and we'll get back to you as soon as possible.
+      Pokud Vás zaujala má cesta nebo máte zájem o spolupráci, neváhejte mě kontaktovat.
     </p>
   </div>
 
