@@ -53,6 +53,8 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
   </form>
 
 </section>
+<script src="/assets/js/contact-form.js" defer></script>
+
 
 <!--
 <p class="text-center">
