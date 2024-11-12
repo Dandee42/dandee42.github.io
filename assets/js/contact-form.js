@@ -1,13 +1,8 @@
 (function () {
     "use strict";
-    /*
-     * Form Validation
-     */
   
-    // Fetch all the forms we want to apply custom validation styles to
     const forms = document.querySelectorAll(".needs-validation");
-    const result = document.getElementById("result");
-    // Loop over them and prevent submission
+  
     Array.prototype.slice.call(forms).forEach(function (form) {
       form.addEventListener(
         "submit",
@@ -15,13 +10,9 @@
           if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
-  
             form.querySelectorAll(":invalid")[0].focus();
           } else {
-            /*
-             * Form Submission using fetch()
-             */
-  
+            // Zpracování odeslání formuláře přes fetch()
             const formData = new FormData(form);
             event.preventDefault();
             event.stopPropagation();
@@ -30,7 +21,6 @@
               object[key] = value;
             });
             const json = JSON.stringify(object);
-            result.innerHTML = "Odesílá se...";
   
             fetch("https://api.web3forms.com/submit", {
               method: "POST",
@@ -41,28 +31,21 @@
               body: json
             })
               .then(async (response) => {
-                let json = await response.json();
                 if (response.status == 200) {
-                  result.innerHTML = json.message;
-                  result.classList.remove("text-gray-500");
-                  result.classList.add("text-green-500");
+                  // Přesměrování na specifikovanou stránku po úspěšném odeslání
+                  window.location.href = "https://daniel-hladik.cz/form-success/";
                 } else {
                   console.log(response);
-                  result.innerHTML = json.message;
-                  result.classList.remove("text-gray-500");
-                  result.classList.add("text-red-500");
+                  alert("Odeslání formuláře selhalo. Zkuste to prosím znovu.");
                 }
               })
               .catch((error) => {
                 console.log(error);
-                result.innerHTML = "Něco se nepovedlo!";
+                alert("Něco se nepovedlo! Zkuste to prosím později.");
               })
-              .then(function () {
+              .finally(() => {
                 form.reset();
                 form.classList.remove("was-validated");
-                setTimeout(() => {
-                  result.style.display = "none";
-                }, 5000);
               });
           }
           form.classList.add("was-validated");
