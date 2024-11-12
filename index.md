@@ -25,34 +25,56 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
     </p>
   </div>
 
-  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
+  <!-- Formulář pro odeslání zprávy -->
+  <form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <!-- Skryté hodnoty pro Web3Forms -->
     <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
     <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář" />
     <input type="hidden" name="from_name" value="daniel-hladik.cz" />
-    <input type="hidden" name="redirect" value="{{ site.url }}/form-success/">
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-    <div class="h-captcha" data-captcha="true"></div>
-    <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+    <input type="hidden" name="redirect" value="{{ site.url }}/form-success/" />
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
     <div class="form-group-container">
+      <!-- Jméno -->
       <div class="form-group">
         <label for="name" class="form-label">Jméno</label>
-        <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" />
+        <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" required />
+        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+          Prosím napište svoje jméno, abych věděl, s kým mám tu čest :)
+        </div>
       </div>
+
+      <!-- Email -->
       <div class="form-group">
         <label for="email" class="form-label">Email</label>
-        <input id="email" name="email" class="form-input" placeholder="Váš email" type="email" />
+        <input id="email" name="email" class="form-input" placeholder="Váš email" type="email" required />
+        <div class="empty-feedback text-red-400 text-sm mt-1">
+            Prosím napište svou emailovou adresu.
+        </div>
+        <div class="invalid-feedback text-red-400 text-sm mt-1">
+            Prosím poskytněte validní emailovou adresu.
+        </div>
       </div>
+
+      <!-- Zpráva -->
       <div class="form-group">
         <label for="message" class="form-label">Zpráva</label>
-        <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem"></textarea>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
+      </div>
+        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+            Prosím vyplňte pole se zprávou.
+        </div>
+
+      <!-- Tlačítko Odeslat -->
+      <div class="form-group">
+        <button class="form-submit" type="submit">Odeslat</button>
       </div>
     </div>
-    <button class="form-submit" type="submit">Odeslat</button>
-  </form>
 
+    <p class="text-center text-gray-500 mt-4" id="result"></p>
+  </form>
 </section>
+
 <script src="/assets/js/contact-form.js" defer></script>
 
 
