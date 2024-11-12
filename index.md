@@ -17,7 +17,7 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 
 Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
 
-</br>
+<p>&nbsp;<p>
 
 <section class="contact-section">
   <div class="contact-intro">
@@ -74,7 +74,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
       </div>
     </div>
 
-    <p class="text-center text-gray-500 mt-4" id="result"></p>
+    <p class="text-center" id="result"></p>
   </form>
 </section>
 
