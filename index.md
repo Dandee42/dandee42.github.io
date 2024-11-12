@@ -60,10 +60,11 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
       <div class="form-group">
         <label for="message" class="form-label">Zpráva</label>
         <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
-      </div>
         <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
             Prosím vyplňte pole se zprávou.
         </div>
+      </div>
+
 
       <!-- Tlačítko Odeslat -->
       <div class="form-group">
