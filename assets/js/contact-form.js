@@ -30,7 +30,7 @@
               object[key] = value;
             });
             const json = JSON.stringify(object);
-            result.innerHTML = "Please wait...";
+            result.innerHTML = "Odesílá se...";
   
             fetch("https://api.web3forms.com/submit", {
               method: "POST",
@@ -55,7 +55,7 @@
               })
               .catch((error) => {
                 console.log(error);
-                result.innerHTML = "Something went wrong!";
+                result.innerHTML = "Něco se nepovedlo!";
               })
               .then(function () {
                 form.reset();
@@ -71,4 +71,3 @@
       );
     });
   })();
-  
