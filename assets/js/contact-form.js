@@ -41,7 +41,7 @@
               })
               .catch((error) => {
                 console.log(error);
-                alert("Něco se nepovedlo! Zkuste to prosím později.");
+                alert("Něco se nepovedlo! Zkontrolujte Vaše připojení k internetu a zkuste to prosím později.");
               })
               .finally(() => {
                 form.reset();

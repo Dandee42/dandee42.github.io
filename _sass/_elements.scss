@@ -236,3 +236,11 @@ a.reversefootnote {
 .was-validated :invalid {
   border-color: #dc3545;
 }
+
+.custom-feedback, 
+.empty-feedback, 
+.invalid-feedback {
+    color: #f87171;       
+    font-size: 0.875rem;  
+    margin-top: 0.25rem;
+}

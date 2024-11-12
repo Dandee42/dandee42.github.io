@@ -39,7 +39,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
       <div class="form-group">
         <label for="name" class="form-label">Jméno</label>
         <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" required />
-        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        <div class="empty-feedback invalid-feedback">
           Prosím zadejte svoje jméno, abych věděl, jak Vás příště oslovit :)
         </div>
       </div>
@@ -48,10 +48,10 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
       <div class="form-group">
         <label for="email" class="form-label">Email</label>
         <input id="email" name="email" class="form-input" placeholder="napiste@email.cz" type="email" required />
-        <div class="empty-feedback text-red-400 text-sm mt-1">
+        <div class="empty-feedback">
             Prosím vyplňte svou emailovou adresu.
         </div>
-        <div class="invalid-feedback text-red-400 text-sm mt-1">
+        <div class="invalid-feedback">
             Možná to byl jen překlep, ale Váš email není validní pro odeslání. Dodržte prosím formát: "email@domena.cz"
         </div>
       </div>
@@ -60,7 +60,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
       <div class="form-group">
         <label for="message" class="form-label">Zpráva</label>
         <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
-        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        <div class="empty-feedback invalid-feedback">
             Prosím vyplňte pole se zprávou.
         </div>
       </div>
