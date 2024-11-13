@@ -49,7 +49,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
             <!-- Email -->
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" class="form-input" placeholder="napiste@email.cz" type="email" required />
+                <input id="email" name="email" class="form-input" placeholder="napiste.vas@email.cz" type="email" required />
                 <div class="empty-feedback">
                     Prosím vyplňte svou emailovou adresu.
                 </div>
