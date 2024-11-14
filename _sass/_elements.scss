@@ -192,7 +192,7 @@ a.reversefootnote {
 
 .form-input::placeholder,
 .form-textarea:focus-visible {
-  color: #6b7280;
+  color: var(--color-form-placeholder);
 }
 
 .form-input:focus-visible,

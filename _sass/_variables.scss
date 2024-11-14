@@ -21,6 +21,7 @@ html[data-theme="light"] {
   --color-border: var(--oc-gray-4);
   --color-button: var(--oc-gray-6);
   --color-form: white;
+  --color-form-placeholder: var(--oc-gray-4);
 }
 
 html[data-theme="dark"] {
@@ -33,4 +34,5 @@ html[data-theme="dark"] {
   --color-border: var(--oc-gray-7);
   --color-button: var(--oc-gray-7);
   --color-form: var(--oc-gray-8);
+  --color-form-placeholder: var(--oc-gray-1);
 }
