@@ -1,5 +1,5 @@
 title: Daniel Hladík
-description: Daniel HLadík - Online markeťák asimilující do světa IT
+description: Propojuji zkušenosti z online marektingu s IT světem
 baseurl: ""
 url: https://daniel-hladik.cz
 
@@ -45,7 +45,6 @@ pagination:
   title: ":title &middot; Page :num"
 
 plugins:
-  - jekyll-feed
   - jekyll-gist
   - jekyll-paginate-v2
   - jekyll-seo-tag
@@ -54,6 +53,3 @@ plugins:
 sass:
   style: compressed
   sourcemap: never
-
-feed:
-  path: atom.xml
