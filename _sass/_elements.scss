@@ -182,6 +182,7 @@ a.reversefootnote {
   padding: 0.5rem;
   border: 1px solid #e5e7eb;
   background-color: var(--color-form);
+  color: var(--color-text);
   display: flex;
   height: 2.5rem;
   width: 100%;
@@ -203,7 +204,7 @@ a.reversefootnote {
 
 .form-textarea {
   min-height: 120px;
-  color: var(--color-form-placeholder);
+  color: var(--color-text);
 }
 
 .form-submit {
