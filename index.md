@@ -42,7 +42,7 @@ Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
                 <label for="name" class="form-label">Jméno</label>
                 <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" required />
                 <div class="empty-feedback invalid-feedback">
-                    Prosím zadejte svoje jméno, abych věděl, jak Vás příště oslovit :)
+                    Prosím zadejte svoje jméno, abych věděl, jak Vás oslovit :)
                 </div>
             </div>
 
