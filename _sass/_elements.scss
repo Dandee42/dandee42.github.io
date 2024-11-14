@@ -203,7 +203,7 @@ a.reversefootnote {
 
 .form-textarea {
   min-height: 120px;
-  var(--color-form-placeholder);
+  color: var(--color-form-placeholder);
 }
 
 .form-submit {
