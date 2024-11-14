@@ -1,5 +1,5 @@
 ---
 layout: default
-title: "Form success"
+title: Form success
 permalink: /form-success/
 ---
