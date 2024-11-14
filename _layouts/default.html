@@ -7,7 +7,7 @@
 
   {% if page.layout == "home" %}{% include particles-home.html %}{% endif %}
   {% if page.title == "404" %}{% include particles-404.html %}{% endif %}
-  {% if page.title == "Form success" %}{% include particles-form-success.html %}{% endif %}
+  {% if page.type == "form success" %}{% include particles-form-success.html %}{% endif %}
 
   <div class="container">
     <div class="row justify-content-center">
@@ -17,10 +17,10 @@
     </div>
   </div>
   <script src="{{ '/assets/js/bootstrap.min.js' | prepend: site.url }}"></script>
-  {% if page.title != "404" or page.title != "Form success" %}
+  {% if page.title != "404" or page.type == "form success" %}
   <script src="{{ '/assets/js/darkmode.js' | prepend: site.url }}"></script>
   {% endif %}
-  {% if page.layout == "home" or page.title == "404" or page.title == "Form success" %}
+  {% if page.layout == "home" or page.title == "404" or page.type == "form success" %}
   <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/main.js"></script>
   {% endif %}
