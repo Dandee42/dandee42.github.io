@@ -10,12 +10,12 @@ Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z on
 ## Co ovládám?
 - ✅ HTML5
 - ✅ CSS3
-- ✅ SQL
-- ✅ Python
+- ✅ Základy OOP v Pythonu
+- ✅ Základy SQL
 - ✅ Základy JavaScriptu
 - <div>loading<span class="dots"></span></div>
 
-Více detailů najdete v [mém CVčku](https://flowcv.com/resume/osrniic0ww).
+Více detailů najdete na mém [LinkedIn účtu](https://www.linkedin.com/in/daniel-hladik/).
 
 <p>&nbsp;<p>
 
