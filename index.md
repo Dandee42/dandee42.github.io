@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Home
+title: Daniel Hladík - online markeťák v IT světě
+description: Propojuji zkušenosti z online marketingu s IT světem
 ---
 
 # Můžete mi říkat Dan.
