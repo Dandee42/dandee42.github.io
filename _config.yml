@@ -2,6 +2,7 @@ title: Daniel Hladík
 description: Propojuji zkušenosti z online marektingu s IT světem
 baseurl: ""
 url: https://daniel-hladik.cz
+locale: cs_CZ
 
 remote_theme: piazzai/cvless
 
