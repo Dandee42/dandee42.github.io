@@ -8,12 +8,12 @@ title: Home
 Od začátku roku 2024 procházím intenzivním rekvalifikačním přerodem z online markeťáka do IT světa. Mým cílem je zaměřit se na pozice junior QA testera webových aplikací, junior vývojáře webových aplikací v Pythonu, nebo podobné role, kde bych mohl využít Python jako programovací jazyk. Mám již zkušenosti s testováním a vývojem e-shopu, které mi poskytly solidní základy pro tuto změnu kariéry.
 
 ## Co ovládám?
-✅ HTML5
-✅ CSS3
-✅ Základy OOP v Pythonu
-✅ Základy SQL
-✅ Základy JavaScriptu
-<div>loading<span class="dots"></span></div>
+- ✅ HTML5
+- ✅ CSS3
+- ✅ Základy OOP v Pythonu
+- ✅ Základy SQL
+- ✅ Základy JavaScriptu
+- <div>loading<span class="dots"></span></div>
 
 Více detailů najdete na mém [LinkedIn účtu](https://www.linkedin.com/in/daniel-hladik/).
 
