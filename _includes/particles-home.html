@@ -16,7 +16,7 @@
       <a class="particles-icon" href="https://www.instagram.com/{{ site.social.instagram }}">{% include svg/instagram.svg %}</a>&nbsp;
       {% endif %}
       {% if site.social.linkedin %}
-      <a class="particles-icon" href="https://www.linkedin.com/in/{{ site.social.linkedin }}">{% include svg/linkedin.svg %}</a>&nbsp;
+      <a class="particles-icon" href="https://www.linkedin.com/in/{{ site.social.linkedin }}" aria-label="Přejít na můj LinkedIn účet">{% include svg/linkedin.svg %}</a>&nbsp;
       {% endif %}
       {% if site.social.stackoverflow %}
       <a class="particles-icon" href="https://stackoverflow.com/users/{{ site.social.stackoverflow }}">{% include svg/stackoverflow.svg %}</a>&nbsp;
@@ -28,6 +28,6 @@
     </div>
   </div>
   <div class="particles-scroll">
-    <a class="particles-icon" href="#scroll">{% include svg/nav-arrow-down.svg %}</a>
+    <a class="particles-icon" href="#scroll" aria-label="Přejít níže na stránku">{% include svg/nav-arrow-down.svg %}</a>
   </div>
 </div>
