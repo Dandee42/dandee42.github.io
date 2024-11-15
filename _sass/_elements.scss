@@ -250,3 +250,78 @@ a.reversefootnote {
     font-size: 0.875rem;  
     margin-top: 0.25rem;
 }
+
+.alert-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em 0.5em 1em;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  font-size: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.alert-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 2em;
+}
+
+.alert-text {
+  flex-grow: 1;
+}
+
+.alert-close {
+  margin-left: auto;
+  padding-left: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.alert-close:hover {
+  transform: scale(1.1);
+}
+
+.alert-notice {
+  background-color: var(--color-alert-background);
+  color: var(--color-text);
+}
+
+.alert-warning {
+  background-color: #fbebd1;
+  color: #e65100;
+}
+
+.alert-error {
+  background-color: #ffd8de;
+  color: #b71c1c;
+}
+
+/* Non-dismissible banners */
+[data-non-dismissible] .alert-close {
+  display: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.hidden {
+  display: none !important;
+}

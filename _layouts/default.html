@@ -4,7 +4,7 @@
 {% include head.html %}
 
 <body>
-
+  {% include alert-banner.html %}
   {% if page.layout == "home" %}{% include particles-home.html %}{% endif %}
   {% if page.title == "404" %}{% include particles-404.html %}{% endif %}
   {% if page.type == "form success" %}{% include particles-form-success.html %}{% endif %}

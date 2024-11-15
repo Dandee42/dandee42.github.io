@@ -24,7 +24,7 @@ Co mi chybí z IT praxe, doženu učenlivostí, vytrvalostí a "problem-solving 
 
 Více detailů najdete na mém [LinkedIn účtu](https://www.linkedin.com/in/daniel-hladik/).
 
-<p>&nbsp;<p>
+<p id="contact-form">&nbsp;<p>
 
 {% include contact-form.html %}
 
