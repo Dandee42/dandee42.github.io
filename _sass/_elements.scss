@@ -279,6 +279,16 @@ a.reversefootnote {
   flex-grow: 1;
 }
 
+.alert-text a {
+  color: var(--oc-blue-8);
+  text-decoration: none;
+}
+
+.alert-text a:hover {
+  color: var(--oc-blue-8);
+  text-decoration: dotted;
+}
+
 .alert-close {
   margin-left: auto;
   padding-left: 10px;
