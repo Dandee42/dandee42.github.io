@@ -14,11 +14,9 @@ tagshort: online markeťák v IT světě
 alert:
   enabled: true # Visibility of alert message (true/false)
   message: > # Message in the alert
-    Otevřen novým pracovním výzvám! <a class="alert-warning" href="#contact-form">Kontaktujte mě</a>
-  type: "warning" # Type of alert (notice, warning, error)
+    Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a>
+  type: "notice" # Type of alert (notice, warning, error)
   dismissable: true  # Possibility to hide alert by the user (true/false)
-  hide-on-pages: # Hide alert on specific pages by title
-    - "404" 
 
 # author settings
 author:
