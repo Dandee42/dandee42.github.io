@@ -13,7 +13,7 @@ Protože jsem od přírody zvídavé povahy a IT svět je vysoce dynamické pros
 ## Jakou roli hledám?
 - junior QA tester webových aplikací,
 - junior vývojář webových aplikací v Pythonu,
-- nebo jiná role, kde bych mohl uplatnit své znalosti Pythonu a dále rozvíjet své dovednosti.
+- nebo jiná role, kde bych mohl dále rozvíjet své dovednosti.
 
 ## Co ovládám?
 Mám základní zkušenosti s vývojem a testováním webových aplikací. Aktuálně postupuji kurzem na Automatizačního testera v Pythonu.
