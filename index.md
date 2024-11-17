@@ -4,7 +4,7 @@ title: Daniel Hladík - online markeťák v IT světě
 description: Propojuji zkušenosti z online marketingu s IT světem
 ---
 
-# Jmenuji se Dan a jsem začínající vývojář webových aplikací.
+# Jsem Dan, začínající vývojář webových aplikací
 Na začátku roku 2024 jsem se rozhodl pro zásadní změnu kariéry a začal intenzivně pracovat na přechodu z role online markeťáka do světa IT. V rámci této transformace jsem absolvoval několik vzdělávacích kurzů zaměřených na vývoj a testování webových aplikací, především s využitím Pythonu.
 
 ## Proč chci přejít do IT světa?
