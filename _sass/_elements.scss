@@ -119,30 +119,6 @@ a.reversefootnote {
   }
 }
 
-.dots::after {
-  content: '';
-  animation: dot-blink 2.0s infinite steps(1, end);
-}
-
-/* Animation of dot-blinking */
-@keyframes dot-blink {
-  0% {
-    content: '';
-  }
-  25% {
-    content: '.';
-  }
-  50% {
-    content: '..';
-  }
-  75% {
-    content: '...';
-  }
-  100% {
-    content: '....';
-  }
-}
-
 .contact-section {
   width: 100%;
   max-width: 40rem;
@@ -150,7 +126,7 @@ a.reversefootnote {
   margin-right: auto;
   padding: 0 1rem;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -334,4 +310,105 @@ a.reversefootnote {
 
 .hidden {
   display: none !important;
+}
+
+.progress-bar-container {
+  width: 100%;
+  max-width: 40rem;
+  margin: 15px auto 20px auto;
+  padding: 1rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.progress-bar-title {
+  padding-left: 8px;
+}
+
+.progress-bar-unit {
+  margin: 0 auto 10px auto;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-progress-bar-background);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: var(--color-background);
+  line-height: 30px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+  border-radius: 8px;
+}
+
+.progress-bar span:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+
+.progress-bar-one span {
+  background-color: var(--color-progress-bar);
+  color: var(--color-progress-bar-text);
+  width: 80%;
+}
+
+.progress-bar-two span {
+  background-color: var(--color-progress-bar);
+  color: var(--color-progress-bar-text);
+  width: 80%;
+}
+.progress-bar-three span {
+  background-color: var(--color-progress-bar);
+  color: var(--color-progress-bar-text);
+  width: 60%;
+}
+.progress-bar-four span {
+  background-color: var(--color-progress-bar);
+  color: var(--color-progress-bar-text);
+  width: 50%;
+}
+.progress-bar-five span {
+  background-color: var(--color-progress-bar);
+  color: var(--color-progress-bar-text);
+  width: 15%;
+}
+
+.dots::after {
+  content: '';
+  animation: dot-blink 2.0s infinite steps(1, end);
+}
+
+/* Animation of dot-blinking */
+@keyframes dot-blink {
+  0% {
+    content: '';
+  }
+  25% {
+    content: '.';
+  }
+  50% {
+    content: '..';
+  }
+  75% {
+    content: '...';
+  }
+  100% {
+    content: '....';
+  }
+}
+
+.loading {
+  padding-left: 10px;
 }

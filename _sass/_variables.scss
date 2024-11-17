@@ -24,6 +24,9 @@ html[data-theme="light"] {
   --color-form-placeholder: var(--oc-gray-6);
   --color-form-description: var(--oc-gray-6);
   --color-alert-background: var(--oc-gray-1);
+  --color-progress-bar-background: var(--oc-gray-3);
+  --color-progress-bar: var(--oc-gray-7);
+  --color-progress-bar-text: var(--oc-gray-7);
 }
 
 html[data-theme="dark"] {
@@ -39,4 +42,7 @@ html[data-theme="dark"] {
   --color-form-placeholder: var(--oc-gray-6);
   --color-form-description: var(--oc-gray-4);
   --color-alert-background: var(--oc-gray-8);
+  --color-progress-bar-background: var(--oc-gray-8);
+  --color-progress-bar: var(--oc-gray-6);
+  --color-progress-bar-text: var(--oc-gray-6);
 }
