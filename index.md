@@ -10,15 +10,22 @@ Na začátku roku 2024 jsem se rozhodl pro zásadní změnu kariéry a začal in
 ## Proč chci přejít do IT světa?
 Protože jsem od přírody zvídavé povahy a IT svět je vysoce dynamické prostředí, které skýtá plno výzev. V jedné ze svých pracovních pozic online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy. Myslím si, že právě tato zkušenost mi poskytla solidní základy pro změnu kariéry.
 
+<div class="start-side-image">
+    <div class="side-image left"></div>
+    <div class="side-image right"></div>
+</div>
+<script src="/assets/js/side-image.js" defer></script>
+
 ## Jakou roli hledám?
 - junior QA tester webových aplikací,
 - junior vývojář webových aplikací v Pythonu,
 - nebo jiná role, kde bych mohl dále rozvíjet své dovednosti.
-
+  
 ## Co ovládám?
 Mám základní zkušenosti s vývojem a testováním webových aplikací.
 
 Ovládám následující technologie a nástroje:
+
 {% include progress-bar.html %}
 
 Jsem připravený učit se dál, zlepšovat své dovednosti a přinášet hodnotu svému budoucímu týmu. Co neumím, to se naučím.
@@ -26,7 +33,6 @@ Jsem připravený učit se dál, zlepšovat své dovednosti a přinášet hodnot
 Více detailů najdete na mém [LinkedIn účtu](https://www.linkedin.com/in/daniel-hladik/).
 
 <p id="contact-form">&nbsp;<p>
-
 {% include contact-form.html %}
 
 <!--

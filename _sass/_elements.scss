@@ -427,3 +427,42 @@ a.reversefootnote {
 .loading {
   padding-left: 10px;
 }
+
+.start-side-image {
+  background-color: white;
+  position: relative;
+}
+
+.side-image {
+  position: absolute;
+  width: 50%;
+  height: 1600px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.side-image.left {
+  left: -55%;
+  top: 0;
+  transform: translateY(-30%);
+  background-image: url('/assets/files/road-left.jpg');
+}
+
+.side-image.right {
+  right: -55%;
+  top: 0;
+  transform: translateY(-30%);
+  background-image: url('/assets/files/road-right.jpg');
+}
+
+.start-side-image.visible .side-image {
+  opacity: 1;
+}
+
+/* Media query to hide side images on mobile devices */
+@media (max-width: 1400px) {
+  .side-image {
+    display: none;
+  }
+}
