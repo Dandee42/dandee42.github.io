@@ -16,12 +16,12 @@ Protože jsem od přírody zvídavé povahy a IT svět je vysoce dynamické pros
 - nebo jiná role, kde bych mohl dále rozvíjet své dovednosti.
 
 ## Co ovládám?
-Mám základní zkušenosti s vývojem a testováním webových aplikací. Aktuálně postupuji kurzem na Automatizačního testera v Pythonu.
+Mám základní zkušenosti s vývojem a testováním webových aplikací.
 
-Ovládám následující technologie:
+Ovládám následující technologie a nástroje:
 {% include progress-bar.html %}
 
-Jsem připravený učit se dál, zlepšovat své dovednosti a přinášet hodnotu svému budoucímu týmu.
+Jsem připravený učit se dál, zlepšovat své dovednosti a přinášet hodnotu svému budoucímu týmu. Co neumím, to se naučím.
 
 Více detailů najdete na mém [LinkedIn účtu](https://www.linkedin.com/in/daniel-hladik/).
 

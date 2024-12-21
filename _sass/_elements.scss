@@ -325,10 +325,11 @@ a.reversefootnote {
 
 .progress-bar-title {
   padding-left: 8px;
+  font-weight: bold;
 }
 
 .progress-bar-unit {
-  margin: 0 auto 10px auto;
+  margin: 15px auto 5px auto;
 }
 
 .progress-bar {
@@ -372,7 +373,7 @@ a.reversefootnote {
 .progress-bar-three span {
   background-color: var(--color-progress-bar);
   color: var(--color-progress-bar-text);
-  width: 40%;
+  width: 30%;
 }
 .progress-bar-four span {
   background-color: var(--color-progress-bar);
@@ -383,6 +384,21 @@ a.reversefootnote {
   background-color: var(--color-progress-bar);
   color: var(--color-progress-bar-text);
   width: 15%;
+}
+
+.tools span {
+	background: var(--color-progress-bar-tools-background);
+  color: var(--color-progress-bar-tools-text);
+  border: solid 2px var(--color-border);
+	border-radius: 8px;
+	margin: 5px 4px 5px 1px;
+	padding: 4px 8px;
+	display: inline-block;
+}
+
+.tools span:hover {
+  color: var(--color-text);
+	border: solid 2px var(--color-text);
 }
 
 .dots::after {
