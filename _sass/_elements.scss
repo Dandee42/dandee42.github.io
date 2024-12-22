@@ -440,6 +440,8 @@ a.reversefootnote {
   border-radius: 8px;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .side-image.left {
