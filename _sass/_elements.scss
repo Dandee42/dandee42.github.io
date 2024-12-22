@@ -429,7 +429,6 @@ a.reversefootnote {
 }
 
 .start-side-image {
-  background-color: white;
   position: relative;
 }
 
@@ -447,14 +446,14 @@ a.reversefootnote {
 .side-image.left {
   left: -55%;
   top: 0;
-  transform: translateY(-30%);
+  transform: translateY(-1%);
   background-image: url('/assets/files/road-left.jpg');
 }
 
 .side-image.right {
   right: -55%;
   top: 0;
-  transform: translateY(-30%);
+  transform: translateY(-1%);
   background-image: url('/assets/files/road-right.jpg');
 }
 
@@ -462,9 +461,21 @@ a.reversefootnote {
   opacity: 1;
 }
 
-/* Media query to hide side images on mobile devices */
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .side-image {
     display: none;
   }
 }
+
+@media (max-width: 1200px) {
+  .parallax {
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/assets/files/road-mountains-middle.jpg');
+    border-radius: 8px;
+  }
+}
+
