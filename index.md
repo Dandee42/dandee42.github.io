@@ -10,7 +10,7 @@ description: Propojuji zkušenosti z online marketingu s IT světem
 </div>
 <script src="/assets/js/side-image.js" defer></script>
 
-# Jsem Dan, začínající vývojář webových aplikací
+## Jsem Dan, začínající vývojář webových aplikací
 Na začátku roku 2024 jsem se rozhodl pro zásadní změnu kariéry a začal intenzivně pracovat na přechodu z role online markeťáka do světa IT. V rámci této transformace jsem absolvoval několik vzdělávacích kurzů zaměřených na vývoj a testování webových aplikací, především s využitím Pythonu.
 
 <div class="parallax"></div>
