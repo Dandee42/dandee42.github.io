@@ -38,9 +38,8 @@ Jsem připravený učit se dál, zlepšovat své dovednosti a přinášet hodnot
 
 Více detailů najdete na mém [LinkedIn účtu](https://www.linkedin.com/in/daniel-hladik/).
 
-<p id="contact-form">&nbsp;<p>
+<div id="contact-form">&nbsp;<div></div>
 {% include contact-form.html %}
-
 <!--
 {% include archive.html %}
 -->
