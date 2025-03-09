@@ -3,13 +3,13 @@
 # only main files contain this front matter, not partials.
 ---
 
-@import "fonts";
-@import "variables";
-@import "base";
-@import "code";
-@import "headings";
-@import "elements";
-@import "particles";
-@import "pulse";
-@import "pagination";
-@import "media";
+@use "fonts";
+@use "variables";
+@use "base";
+@use "code";
+@use "headings";
+@use "elements";
+@use "particles";
+@use "pulse";
+@use "pagination";
+@use "media";
