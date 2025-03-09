@@ -2,7 +2,6 @@
 layout: home
 title: Daniel Hladík - online markeťák v IT světě
 description: Propojuji zkušenosti z online marketingu s IT světem
-image: assets/files/photo.png
 ---
 
 <div class="start-side-image">

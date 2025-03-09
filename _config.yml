@@ -3,6 +3,7 @@ description: Propojuji zkušenosti z online marketingu s IT světem
 baseurl: ""
 url: https://daniel-hladik.cz
 locale: cs_CZ
+
 remote_theme: piazzai/cvless
 
 # site settings
