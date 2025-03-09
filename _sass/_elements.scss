@@ -343,7 +343,9 @@ a.reversefootnote {
 
 .progress-bar span {
   height: 100%;
-  display: block;
+  display: flex;
+  align-items: center; /* Vertikální zarovnání na střed */
+  justify-content: flex-end;
   width: 0;
   color: var(--color-background);
   line-height: 30px;
