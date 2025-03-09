@@ -184,8 +184,8 @@ a.reversefootnote {
 }
 
 .form-submit {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--color-button-background);
+  color: var(--color-button-text);
   border: solid 2px var(--color-text);
   border-radius: 12px;
   padding: 13px 5px;
@@ -196,7 +196,8 @@ a.reversefootnote {
   &:focus,
   &:hover {
     border: solid 2px var(--color-text);
-    color: var(--color-text);
+    color: var(--color-button-text-hover);
+    background-color: var(--color-button-background-hover);
     box-shadow: 0 0 0 1px var(--color-text);
   }
 }

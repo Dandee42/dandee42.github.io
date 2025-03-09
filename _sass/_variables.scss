@@ -19,7 +19,10 @@ html[data-theme="light"] {
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-yellow-3);
   --color-border: var(--oc-gray-4);
-  --color-button: var(--oc-gray-6);
+  --color-button-background: var(--oc-gray-1);
+  --color-button-text: var(--oc-gray-8);
+  --color-button-background-hover: var(--oc-gray-8);
+  --color-button-text-hover: var(--oc-gray-1);
   --color-form: white;
   --color-form-placeholder: var(--oc-gray-6);
   --color-form-description: var(--oc-gray-6);
@@ -39,7 +42,10 @@ html[data-theme="dark"] {
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-gray-8);
   --color-border: var(--oc-gray-7);
-  --color-button: var(--oc-gray-7);
+  --color-button-background: var(--oc-gray-9);
+  --color-button-text: var(--oc-gray-3);
+  --color-button-background-hover: var(--oc-gray-3);
+  --color-button-text-hover: var(--oc-gray-8);
   --color-form: var(--oc-gray-8);
   --color-form-placeholder: var(--oc-gray-6);
   --color-form-description: var(--oc-gray-4);
