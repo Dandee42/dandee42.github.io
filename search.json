@@ -1,4 +1,10 @@
----
-layout: search
-permalink: /search.json
----
+[
+
+  {
+    "title": "Template post",
+    "url": "/2023/09/01/post-template/",
+    "excerpt": "Vkládat obrázky ve velikosti 1200 × 630 px",
+    "tags": "jekyll, blog, tipy"
+  }
+
+]
