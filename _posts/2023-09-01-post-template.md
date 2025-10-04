@@ -6,7 +6,7 @@ description: A short post to demonstrate the layout description.
 reading_time: 8 min
 image: /assets/files/photo.png
 tags: [jekyll, blog, tipy]
-published: false
+published: true
 ---
 Vkládat obrázky ve velikosti 1200 × 630 px
 
