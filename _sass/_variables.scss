@@ -32,6 +32,7 @@ html[data-theme="light"] {
   --color-progress-bar-text: var(--oc-gray-7);
   --color-progress-bar-tools-background: var(--oc-gray-3);
   --color-progress-bar-tools-text: var(--oc-gray-8);
+  --color-post-reading-time: var(--oc-gray-6);
 }
 
 html[data-theme="dark"] {
@@ -55,4 +56,5 @@ html[data-theme="dark"] {
   --color-progress-bar-text: var(--oc-gray-6);
   --color-progress-bar-tools-background: var(--oc-gray-8);
   --color-progress-bar-tools-text: var(--oc-gray-4);
+  --color-post-reading-time: var(--oc-gray-6);
 }
