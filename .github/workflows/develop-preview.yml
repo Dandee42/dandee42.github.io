@@ -30,11 +30,6 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      - name: Add robots.txt to prevent indexing
-        run: |
-          echo "User-agent: *" > _site/robots.txt
-          echo "Disallow: /" >> _site/robots.txt
-
       # 5. Deploy na větev develop-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
