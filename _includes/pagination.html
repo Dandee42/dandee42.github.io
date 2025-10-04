@@ -1,7 +1,7 @@
 {% if paginator.previous_page or paginator.next_page %}
 <nav class="post-nav">
   {% if paginator.next_page %}
-    <a class="prev-post" href="{{ paginator.next_page_path | prepend: site.url }}">
+    <a class="prev-post" href="{{ paginator.next_page_path | prepend: site.baseurl }}">
       ← Starší články
     </a>
   {% endif %}
@@ -11,7 +11,7 @@
   </span>
 
   {% if paginator.previous_page %}
-    <a class="next-post" href="{{ paginator.previous_page_path | prepend: site.url }}">
+    <a class="next-post" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
       Novější články →
     </a>
   {% endif %}
