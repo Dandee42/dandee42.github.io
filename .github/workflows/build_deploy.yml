@@ -1,0 +1,64 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repozitáře
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Nastavení Ruby
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      # 3. Instalace Bundler a gemů
+      - name: Install dependencies
+        run: |
+          gem install bundler -v 2.5.22
+          bundle install --jobs 4 --retry 3
+
+      # 4. Build Jekyll webu podle branch
+      - name: Build Jekyll site
+        run: |
+          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
+            bundle exec jekyll build --config _config.yml
+          else
+            bundle exec jekyll build --config _config.yml
+          fi
+
+      # 5a. Deploy produkce (main)
+      - name: Deploy to GitHub Pages (Production)
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: main
+          commit_message: "Deploy production - ${{ github.sha }}"
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+      # 5b. Deploy preview (develop)
+      - name: Deploy to GitHub Pages (Preview)
+        if: github.ref == 'refs/heads/develop'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: develop-gh-pages
+          commit_message: "Deploy develop preview - ${{ github.sha }}"
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
