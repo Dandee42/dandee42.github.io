@@ -1,3 +1,198 @@
+// =========================
+// HEADING LINKS
+// =========================
+
+.heading-link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  visibility: hidden;
+}
+
+h2:hover .heading-link,
+h3:hover .heading-link,
+h4:hover .heading-link {
+  visibility: visible;
+}
+
+.heading-link img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease;
+}
+
+.heading-link img:hover {
+  transform: scale(1.15);
+}
+
+// =========================
+// BLOG COMPONENTS
+// =========================
+
+.blog-back a {
+  display: inline-block;
+  border-bottom: 2px dotted transparent;
+  transition: all 0.2s ease;
+}
+
+.blog-back a:hover {
+  border-color: var(--color-link);
+  transform: scale(1.05);
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.prev-post {
+  text-align: left;
+}
+
+.next-post {
+  text-align: right;
+}
+
+.post-nav a {
+  display: inline-block;
+  border-bottom: 2px dotted transparent;
+  transition: all 0.2s ease;
+}
+
+.post-nav a:hover {
+  border-color: var(--color-link);
+  transform: scale(1.05);
+}
+
+.post-nav .page-info {
+  font-size: 1rem;
+  color: var(--color-post-reading-time);
+}
+
+.post-tags {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--color-post-reading-time);
+  margin-bottom: 0;
+}
+
+.post-tags a {
+  text-decoration: none;
+  color: var(--color-link);
+  font-size: 1rem;
+}
+
+.back-to-top {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.back-to-top a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-link);
+  font-size: 1rem;
+  border-bottom: 2px dotted transparent;
+  transition: all 0.2s ease;
+}
+
+.back-to-top a:hover {
+  border-color: var(--color-link);
+  transform: scale(1.05);
+}
+
+.post-date {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.post-homepage-banner ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1rem 0;
+}
+
+.post-homepage-banner li {
+  margin-bottom: 0.5rem;
+}
+
+.post-homepage-banner a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+.post-homepage-banner .post-title {
+  font-size: 1.5rem;
+}
+
+.post-homepage-banner span {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.post-homepage-banner p {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.post-homepage-banner .reading-time {
+  font-size: 0.85rem;
+  color: var(--color-post-reading-time);
+  font-style: italic;
+}
+
+.all-posts-link {
+  margin-bottom: 2rem;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-list .post-item {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.blog-list .post-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.blog-list .post-title a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+.blog-list .post-lead {
+  margin: 0 0 0.5rem 0;
+  color: (--color-text);
+}
+
+.blog-list .reading-time {
+  font-size: 0.85rem;
+  color: var(--color-post-reading-time);
+  margin-bottom: 0.5rem;
+}
+
+.blog-list .post-date {
+  font-size: 0.85rem;
+  color: var(--color-post-reading-time);
+  float: right;
+}
+
 a.site-title {
   font-weight: 500;
   color: var(--color-heading);
@@ -8,6 +203,63 @@ a.site-title {
     color: inherit;
   }
 }
+
+.search-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1em;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: var(--color-form);
+  color: var(--color-text);
+  outline: none;
+}
+
+.search-input:focus {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: var(--color-background);
+}
+
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.search-results li a {
+  text-decoration: none;
+}
+
+
+.load-more {
+  margin-top: 10px;
+}
+
+// =========================
+// HOMEPAGE - TOGGLE & MESSAGES
+// =========================
 
 .toggle-bar {
   display: flex;
@@ -118,6 +370,10 @@ a.reversefootnote {
     box-shadow: 0 0 0 1px var(--color-text);
   }
 }
+
+// =========================
+// FORM STYLES
+// =========================
 
 .contact-section {
   width: 100%;
@@ -313,6 +569,10 @@ a.reversefootnote {
   display: none !important;
 }
 
+// =========================
+// PROGRESS BARS & TOOLS
+// =========================
+
 .progress-bar-container {
   width: 100%;
   max-width: 40rem;
@@ -431,6 +691,10 @@ a.reversefootnote {
 .loading {
   padding-left: 10px;
 }
+
+// =========================
+// SIDE IMAGES & PARALLAX
+// =========================
 
 .start-side-image {
   position: relative;
