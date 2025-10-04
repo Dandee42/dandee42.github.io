@@ -44,7 +44,17 @@ exclude:
   - README.md
 
 autopages:
-  enabled: false
+  enabled: true
+  tags:
+    enabled: true
+    layouts:
+      - 'autopage_tag.html'
+    title: "Články označené tagem :tag"
+    permalink: '/tag/:tag/'
+  categories:
+    enabled: false
+  collections:
+    enabled: false
 
 pagination:
   enabled: true

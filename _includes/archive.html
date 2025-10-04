@@ -1,4 +1,4 @@
-{% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
+{% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%m/%Y'" %}
 
 <div class="archive">
   {% for yearMonth in postsByYearMonth %}

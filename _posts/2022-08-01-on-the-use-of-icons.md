@@ -1,8 +1,12 @@
 ---
 layout: post
 title: On the use of icons
+description:
 lead: A very quick guide.
+reading_time: 5 min
 published: false
+image: /assets/files/photo.png
+tags: [jekyll]
 ---
 
 The icons used throughout this theme are partly custom-made, and partly come from the [Iconoir](https://iconoir.com/) library. More can be created or downloaded from the Iconoir website as svg files, and saved in `assets/svg` for use in your website.

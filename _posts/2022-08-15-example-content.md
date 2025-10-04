@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Example content
-lead: A long post that showcases style elements.
+lead: A long post
+reading_time: 7 min
 published: false
+image: /assets/files/photo.png
+tags: [jekyll]
 ---
 
 **Howdy!** This is an example blog post that shows several types of <abbr>html</abbr> content supported in this theme.
