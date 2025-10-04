@@ -10,7 +10,7 @@ remote_theme: piazzai/cvless
 taglong: Online markeťák v IT světě
 tagshort: online markeťák v IT světě
 
-# alert messages
+# alert message
 alert:
   enabled: false # Visibility of alert message (true/false)
   message: > # Message in the alert
