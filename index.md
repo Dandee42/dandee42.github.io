@@ -26,8 +26,6 @@ Online marketingu se nyní věnuji jen okrajově a do budoucna ho chci opustit �
 
 <div class="parallax"></div>
 
-{% comment %}
 {% include post-homepage-banner.html %}
-{% endcomment %}
 
 <div class="parallax"></div>
