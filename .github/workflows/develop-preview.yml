@@ -41,5 +41,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          destination_branch: develop-pages
+          publish_branch: develop-pages
           commit_message: "Deploy develop preview - ${{ github.sha }}"
