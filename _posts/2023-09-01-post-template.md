@@ -8,7 +8,7 @@ reading_time: 8 min
 image: /assets/files/photo.png
 category:
 tags: [jekyll, blog, tipy]
-published: true
+published: false
 ---
 Vkládat obrázky ve velikosti 1200 × 630 px
 
