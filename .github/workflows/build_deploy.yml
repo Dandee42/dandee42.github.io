@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - production
       - develop
 
 permissions:
@@ -33,26 +33,26 @@ jobs:
       # 4. Build Jekyll webu podle branch
       - name: Build Jekyll site
         run: |
-          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
+          if [[ "${GITHUB_REF##*/}" == "production" ]]; then
             bundle exec jekyll build --config _config.yml
           else
             bundle exec jekyll build --config _config.yml
           fi
 
-      # 5a. Deploy produkce (main)
-      - name: Deploy to GitHub Pages (Production)
-        if: github.ref == 'refs/heads/main'
+      # 5a. Deploy production branch to GitHub Pages
+      - name: Deploy to GitHub Pages (production)
+        if: github.ref == 'refs/heads/production'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: main
+          publish_branch: production-gh-pages
           commit_message: "Deploy production - ${{ github.sha }}"
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
-      # 5b. Deploy preview (develop)
-      - name: Deploy to GitHub Pages (Preview)
+      # 5b. Deploy develop branch to GitHub Pages
+      - name: Deploy to GitHub Pages (develop)
         if: github.ref == 'refs/heads/develop'
         uses: peaceiris/actions-gh-pages@v4
         with:
