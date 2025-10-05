@@ -79,13 +79,30 @@ h4:hover .heading-link {
   display: inline-block;
   font-size: 0.85rem;
   color: var(--color-post-reading-time);
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
+
+
 .post-tags a {
+  display: inline-block;
   text-decoration: none;
-  color: var(--color-link);
-  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  padding: 0.15rem 0.4rem;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-post-reading-time);
+  transition: all 0.1s ease;
+  margin-right: 0.3rem;
+}
+
+.post-tags a:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 .back-to-top {
@@ -204,6 +221,10 @@ a.site-title {
   }
 }
 
+// =========================
+// SEARCH COMPONENTS IN BLOG
+// =========================
+
 .search-container {
   max-width: 500px;
   width: 100%;
@@ -252,9 +273,15 @@ a.site-title {
   text-decoration: none;
 }
 
-
 .load-more {
   margin-top: 10px;
+}
+
+.no-results {
+  color: var(--color-text);
+  list-style: none;
+  font-style: italic;
+  font-size: 1rem;
 }
 
 // =========================

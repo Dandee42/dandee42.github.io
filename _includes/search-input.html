@@ -16,7 +16,7 @@
       const maxResults = 3;
       let allResults = [];
       let displayedCount = 0;
-      let fuse = new Fuse(data, { keys: ['title', 'excerpt', 'tags'], threshold: 0.3 });
+      const fuse = new Fuse(data, { keys: ['title', 'excerpt', 'tags'], threshold: 0.3 });
 
       function updateLoadMoreText() {
         const remaining = allResults.length - displayedCount;
@@ -33,11 +33,14 @@
           displayedCount = 0;
         }
 
+        // 🟡 Když není žádný výsledek
         if (!allResults || allResults.length === 0) {
+          resultsList.innerHTML = '<li class="no-results">Hledání bylo úspěšné… až na to, že nic nenašlo.</li>';
           loadMoreBtn.style.display = 'none';
           return;
         }
 
+        // 🟢 Jinak vykresli další dávku výsledků
         const nextBatch = allResults.slice(displayedCount, displayedCount + maxResults);
 
         resultsList.innerHTML += nextBatch
@@ -55,7 +58,16 @@
       }
 
       input.addEventListener('input', () => {
-        allResults = fuse.search(input.value);
+        const query = input.value.trim();
+
+        if (query.length === 0) {
+          // Když je pole prázdné → vyčisti výsledky
+          resultsList.innerHTML = '';
+          loadMoreBtn.style.display = 'none';
+          return;
+        }
+
+        allResults = fuse.search(query);
         renderResults(true);
       });
 
