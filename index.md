@@ -26,6 +26,6 @@ Online marketingu se nyní věnuji jen okrajově a do budoucna ho chci opustit �
 
 [Více o mně →](/cv/#continue)
 
-{% include post-homepage-banner.html %}
-
 <div class="parallax"></div>
+
+{% include post-homepage-banner.html %}
