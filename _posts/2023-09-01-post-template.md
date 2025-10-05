@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Template post
+slug: template-post-slug
 lead: A short post to demonstrate the layout.
 description: A short post to demonstrate the layout description.
 reading_time: 8 min
 image: /assets/files/photo.png
+category:
 tags: [jekyll, blog, tipy]
 published: true
 ---
