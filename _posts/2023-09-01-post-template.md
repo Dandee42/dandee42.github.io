@@ -10,7 +10,7 @@ category:
 tags: [jekyll, blog, tipy]
 published: false
 ---
-Vkládat obrázky ve velikosti 1200 × 630 px
+Vkládat obrázky ve velikosti 1200 × 630 px.
 
 - toc
 {: toc }
