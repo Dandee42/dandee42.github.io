@@ -76,127 +76,7 @@
 <script src="/assets/js/side-image.js" defer></script>
 <h1>Blog</h1>
 
-  <div class="search-container">
-  <input type="text" id="search-input" class="search-input" placeholder="Hledat v článcích...">
-  <ul id="search-results" class="search-results"></ul>
-  <button id="load-more" class="button load-more" style="display:none;">Zobrazit více výsledků</button>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-<script defer>
-  fetch('/search.json')
-    .then(response => response.json())
-    .then(data => {
-      const input = document.getElementById('search-input');
-      const resultsList = document.getElementById('search-results');
-      const loadMoreBtn = document.getElementById('load-more');
-
-      const maxResults = 3;
-      let allResults = [];
-      let displayedCount = 0;
-      const fuse = new Fuse(data, { keys: ['title', 'excerpt', 'tags'], threshold: 0.3 });
-
-      function updateLoadMoreText() {
-        const remaining = allResults.length - displayedCount;
-        if (remaining > 0) {
-          loadMoreBtn.textContent = `Zobrazit více výsledků (${remaining})`;
-        } else {
-          loadMoreBtn.textContent = `Zobrazit více výsledků`;
-        }
-      }
-
-      function renderResults(reset = false) {
-        if (reset) {
-          resultsList.innerHTML = '';
-          displayedCount = 0;
-        }
-
-        // 🟡 Když není žádný výsledek
-        if (!allResults || allResults.length === 0) {
-          resultsList.innerHTML = '<li class="no-results">Hledání bylo úspěšné… až na to, že nic nenašlo.</li>';
-          loadMoreBtn.style.display = 'none';
-          return;
-        }
-
-        // 🟢 Jinak vykresli další dávku výsledků
-        const nextBatch = allResults.slice(displayedCount, displayedCount + maxResults);
-
-        resultsList.innerHTML += nextBatch
-          .map(r => `<li><a href="${r.item.url}">${r.item.title}</a></li>`)
-          .join('');
-
-        displayedCount += nextBatch.length;
-
-        if (displayedCount < allResults.length) {
-          loadMoreBtn.style.display = 'block';
-          updateLoadMoreText();
-        } else {
-          loadMoreBtn.style.display = 'none';
-        }
-      }
-
-      input.addEventListener('input', () => {
-        const query = input.value.trim();
-
-        if (query.length === 0) {
-          // Když je pole prázdné → vyčisti výsledky
-          resultsList.innerHTML = '';
-          loadMoreBtn.style.display = 'none';
-          return;
-        }
-
-        allResults = fuse.search(query);
-        renderResults(true);
-      });
-
-      loadMoreBtn.addEventListener('click', () => {
-        renderResults(false);
-      });
-    });
-</script>
-  <div class="blog-list">
-  
-    <article class="post-item">
-      <h2 class="post-title">
-        <a href="/blog/template-post-slug/">Template post</a>
-      </h2>
-
-      
-        <p class="post-lead">A short post to demonstrate the layout.</p>
-      
-
-      <div class="post-meta">
-        
-          <span class="reading-time">8 min čtení</span>
-        
-        <time datetime="2023-09-01T00:00:00+00:00" class="post-date">
-          01.09.2023
-        </time>
-      </div>
-
-      
-        <p class="post-tags">
-          
-            <a href="/tag/jekyll/">jekyll</a>
-          
-            <a href="/tag/blog/">blog</a>
-          
-            <a href="/tag/tipy/">tipy</a>
-          
-        </p>
-      
-      
-      
-        <div class="post-hero-image">
-          <a href="/blog/template-post-slug/"><img src="/assets/files/photo.png" alt="Hero image for Template post" loading="lazy"></a>
-        </div>
-      
-
-    </article>
-  
-</div>
-
-  
+  <p>V tuto chvíli tu není nic, co by stálo za čtení. Zkuste později!</p>
 
   </main>
   <footer>
@@ -273,7 +153,7 @@
   </ul>
 </div>
 
-  <small>&copy; <time datetime="2025-10-05T18:36:40+00:00">2025</time>
+  <small>&copy; <time datetime="2025-10-05T18:53:06+00:00">2025</time>
     Daniel Hladík. All rights reserved.</small>
 </footer>
 
