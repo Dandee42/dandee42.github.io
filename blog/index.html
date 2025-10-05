@@ -94,7 +94,7 @@
       const maxResults = 3;
       let allResults = [];
       let displayedCount = 0;
-      let fuse = new Fuse(data, { keys: ['title', 'excerpt', 'tags'], threshold: 0.3 });
+      const fuse = new Fuse(data, { keys: ['title', 'excerpt', 'tags'], threshold: 0.3 });
 
       function updateLoadMoreText() {
         const remaining = allResults.length - displayedCount;
@@ -111,11 +111,14 @@
           displayedCount = 0;
         }
 
+        // 🟡 Když není žádný výsledek
         if (!allResults || allResults.length === 0) {
+          resultsList.innerHTML = '<li class="no-results">Hledání bylo úspěšné… až na to, že nic nenašlo.</li>';
           loadMoreBtn.style.display = 'none';
           return;
         }
 
+        // 🟢 Jinak vykresli další dávku výsledků
         const nextBatch = allResults.slice(displayedCount, displayedCount + maxResults);
 
         resultsList.innerHTML += nextBatch
@@ -133,7 +136,16 @@
       }
 
       input.addEventListener('input', () => {
-        allResults = fuse.search(input.value);
+        const query = input.value.trim();
+
+        if (query.length === 0) {
+          // Když je pole prázdné → vyčisti výsledky
+          resultsList.innerHTML = '';
+          loadMoreBtn.style.display = 'none';
+          return;
+        }
+
+        allResults = fuse.search(query);
         renderResults(true);
       });
 
@@ -146,7 +158,7 @@
   
     <article class="post-item">
       <h2 class="post-title">
-        <a href="/2023/09/01/post-template/">Template post</a>
+        <a href="/blog/template-post-slug/">Template post</a>
       </h2>
 
       
@@ -164,11 +176,10 @@
 
       
         <p class="post-tags">
-          Tagy:
           
-            <a href="/tag/jekyll/">jekyll</a>, 
+            <a href="/tag/jekyll/">jekyll</a>
           
-            <a href="/tag/blog/">blog</a>, 
+            <a href="/tag/blog/">blog</a>
           
             <a href="/tag/tipy/">tipy</a>
           
@@ -177,7 +188,7 @@
       
       
         <div class="post-hero-image">
-          <a href="/2023/09/01/post-template/"><img src="/assets/files/photo.png" alt="Hero image for Template post"></a>
+          <a href="/blog/template-post-slug/"><img src="/assets/files/photo.png" alt="Hero image for Template post" loading="lazy"></a>
         </div>
       
 
@@ -262,7 +273,7 @@
   </ul>
 </div>
 
-  <small>&copy; <time datetime="2025-10-04T20:50:43+00:00">2025</time>
+  <small>&copy; <time datetime="2025-10-05T18:36:40+00:00">2025</time>
     Daniel Hladík. All rights reserved.</small>
 </footer>
 
