@@ -1,9 +1,11 @@
 ---
 layout: page
 title: Blog
+permalink: /blog/
 description:
 pagination:
   enabled: true
+published: true
 ---
 
 {% include side-images.html %}
