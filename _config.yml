@@ -35,13 +35,13 @@ social:
   x:
   stackoverflow:
 
-
 # build settings
-permalink: pretty
 exclude:
   - docker-compose.yml
   - LICENSE
   - README.md
+
+permalink: /blog/:slug/
 
 autopages:
   enabled: true
@@ -52,7 +52,11 @@ autopages:
     title: "Články označené tagem :tag"
     permalink: '/tag/:tag/'
   categories:
-    enabled: false
+    enabled: true
+    layouts:
+      - 'autopage_category.html'
+    title: "Články v kategorii :cat"
+    permalink: '/kategorie/:cat/'
   collections:
     enabled: false
 
@@ -61,7 +65,7 @@ pagination:
   per_page: 1
   sort_reverse: true
   permalink: /:num/
-  title: ":title &middot; Page :num"
+  title: ":title &middot; Strana :num"
 
 plugins:
   - jekyll-gist
