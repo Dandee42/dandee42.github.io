@@ -1,3 +1,9 @@
 date_format: "%B %d, %Y"
 locale: "en_US"
 lang_name: "English"
+
+
+page-not-found:
+  title: "404"
+  subtitle: "... and the page is gone!"
+  paragraph: "It seems that the page has wandered into the unknown.<br>Please return to the home page and try your luck elsewhere :)"

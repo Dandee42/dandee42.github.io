@@ -1,3 +1,8 @@
 date_format: "%d.%m.%Y"
 locale: "cs_CZ"
 lang_name: "Čeština"
+
+page-not-found:
+  title: "404"
+  subtitle: "... a stránka je fuč!"
+  paragraph: "Zdá se, že se stránka zatoulala do neznáma.<br>Vraťte se prosím na domovskou stránku a zkuste štěstí jinde :)"
