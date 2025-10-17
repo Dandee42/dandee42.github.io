@@ -1,0 +1,32 @@
+{% assign trans = site.data[site.active_lang] %}
+
+<article>
+  <main>
+    {% include side-images.html %}
+    <p class="blog-back"><a href="{{ '/blog/' | relative_url }}">{{ trans.blog.all_posts_link }}</a></p>
+    {% if page.tags and page.tags != empty %}
+      <p class="post-tags">
+        {% for tag in page.tags %}
+          <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %} {% endunless %}
+        {% endfor %}
+      </p>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+
+    {% if page.image %}
+      <div class="post-hero-image">
+        <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}" loading="lazy">
+      </div>
+    {% endif %}
+    <br>
+    {{ content }}
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: trans.general.date_format }}</time>
+    <p class="back-to-top">
+      <a href="#top">{{ trans.blog.back_to_top}}</a>
+    </p>
+    {% include pagination-post.html %}
+  </main>
+</article>
+<script src="/assets/js/heading-links.js" defer></script>
+<script src="/assets/js/add-img-lazy-loading.js" defer></script>

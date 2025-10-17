@@ -1,0 +1,13 @@
+---
+layout: default
+pagination:
+  enabled: true
+sitemap: false
+---
+{% assign trans = site.data[site.active_lang] %}
+
+{% include header.html %}
+{% include side-images.html %}
+{% include tag-list.html %}
+{% include pagination.html %}
+{% include footer.html %}

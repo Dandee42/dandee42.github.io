@@ -1,0 +1,88 @@
+<div class="search-container">
+  <input type="text" id="search-input" class="search-input" placeholder="{{ site.data[page.lang].search.placeholder }}">
+  <ul id="search-results" class="search-results"></ul>
+  <button id="load-more" class="button load-more" style="display:none;">{{ site.data[page.lang].search.load_more }}</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script defer>
+  // 🔹 Zjisti jazyk aktuální stránky
+  const currentLang = document.documentElement.lang || 'cs';
+  
+  // 🔹 Načti překlady z Jekyll dat
+  const translations = {
+    placeholder: "{{ site.data[page.lang].search.placeholder | escape }}",
+    noResults: "{{ site.data[page.lang].search.no_results | escape }}",
+    loadMore: "{{ site.data[page.lang].search.load_more | escape }}"
+  };
+
+  // 🔹 Vyber správný JSON podle jazyka
+  const searchFile = currentLang === 'en' ? '/en/search-en.json' : '/search-cs.json';
+
+  const input = document.getElementById('search-input');
+  const resultsList = document.getElementById('search-results');
+  const loadMoreBtn = document.getElementById('load-more');
+
+  fetch(searchFile)
+    .then(response => response.json())
+    .then(data => {
+      const maxResults = 3;
+      let allResults = [];
+      let displayedCount = 0;
+      const fuse = new Fuse(data, { keys: ['title', 'excerpt', 'lead', 'tags'], threshold: 0.3 });
+
+      function updateLoadMoreText() {
+        const remaining = allResults.length - displayedCount;
+        if (remaining > 0) {
+          loadMoreBtn.textContent = `${translations.loadMore} (${remaining})`;
+        } else {
+          loadMoreBtn.textContent = translations.loadMore;
+        }
+      }
+
+      function renderResults(reset = false) {
+        if (reset) {
+          resultsList.innerHTML = '';
+          displayedCount = 0;
+        }
+
+        if (!allResults || allResults.length === 0) {
+          resultsList.innerHTML = `<li class="no-results">${translations.noResults}</li>`;
+          loadMoreBtn.style.display = 'none';
+          return;
+        }
+
+        const nextBatch = allResults.slice(displayedCount, displayedCount + maxResults);
+
+        resultsList.innerHTML += nextBatch
+          .map(r => `<li><a href="${r.item.url}">${r.item.title}</a></li>`)
+          .join('');
+
+        displayedCount += nextBatch.length;
+
+        if (displayedCount < allResults.length) {
+          loadMoreBtn.style.display = 'block';
+          updateLoadMoreText();
+        } else {
+          loadMoreBtn.style.display = 'none';
+        }
+      }
+
+      input.addEventListener('input', () => {
+        const query = input.value.trim();
+        if (query.length === 0) {
+          resultsList.innerHTML = '';
+          loadMoreBtn.style.display = 'none';
+          return;
+        }
+
+        allResults = fuse.search(query);
+        renderResults(true);
+      });
+
+      loadMoreBtn.addEventListener('click', () => {
+        renderResults(false);
+      });
+    })
+    .catch(err => console.error('Chyba při načítání vyhledávání:', err));
+</script>

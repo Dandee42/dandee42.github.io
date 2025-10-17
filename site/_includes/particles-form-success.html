@@ -1,0 +1,10 @@
+{% assign trans = site.data[site.active_lang] %}
+
+<div id="particles-js" class="fullscreen">
+  <div class="jumbotron text-center">
+    <h1 class="particles-title">{{ trans.contact.success_page.title }}</h1>
+    <h1 class="particles-subtitle">{{ trans.contact.success_page.subtitle }}</h1>
+    <p style="color: white;">{{ trans.contact.success_page.paragraph }}</p>
+    <a class="particles-icon" href="{{ trans.contact.success_page.back_to_home_url }}">{% include svg/arrow-left-circled.svg %}</a>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+{% assign trans = site.data[site.active_lang] %}
+
+<section class="contact-section">
+    <div class="contact-intro">
+        <h2>{{ trans.contact.form.title }}</h2>
+        <p class="contact-description">
+            {{ trans.contact.form.subtitle }}
+        </p>
+    </div>
+
+    <!-- Formulář pro odeslání zprávy -->
+    <form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <!-- Skryté hodnoty pro Web3Forms -->
+        <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
+        <input type="hidden" name="subject" value="{{ trans.contact.form.email_subject }}" />
+        <input type="hidden" name="from_name" value="{{ trans.contact.form.from_name }}" />
+        <input type="hidden" name="redirect" value="{{ site.url }}{{ trans.contact.form.success_page_url }}" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+        <div class="form-group-container">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name" class="form-label">{{ trans.contact.form.name_label }}</label>
+                <input id="name" name="name" class="form-input" placeholder="{{ trans.contact.form.name_placeholder }}" type="text" autocomplete="name" required />
+                <div class="empty-feedback invalid-feedback">
+                    {{ trans.contact.form.error_msg_empty_name }}
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email" class="form-label">{{ trans.contact.form.email_label }}</label>
+                <input id="email" name="email" class="form-input" placeholder="{{ trans.contact.form.email_placeholder }}" type="email" autocomplete="email" required />
+                <div class="empty-feedback">
+                    {{ trans.contact.form.error_msg_empty_email }}
+                </div>
+                <div class="invalid-feedback">
+                    {{ trans.contact.form.error_msg_invalid_email }}
+                </div>
+            </div>
+
+            <!-- Messsage -->
+            <div class="form-group">
+                <label for="message" class="form-label">{{ trans.contact.form.message_label }}</label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="{{ trans.contact.form.message_placeholder }}" required></textarea>
+                <div class="empty-feedback invalid-feedback">
+                    {{ trans.contact.form.error_msg_empty_message }}
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <button class="form-submit" type="submit">{{ trans.contact.form.submit_button }}</button>
+            </div>
+        </div>
+
+        <p class="text-center" id="result"></p>
+    </form>
+</section>
+
+<script src="/assets/js/contact-form.js" defer></script>

@@ -1,16 +1,45 @@
-title: Daniel Hladík
-description: Propojuji zkušenosti z online marketingu s IT světem
+# ----------------------------------------------------------
+# SITE SETTINGS
+# ----------------------------------------------------------
+source: site
+title:
+  cs: Daniel Hladík CS
+  en: Daniel Hladík EN
+description:
+  cs: Propojuji zkušenosti z online marketingu s IT světem
+  en: I connect online marketing experience with the IT world
+taglong:
+  cs: Online markeťák v IT světě
+  en: Online marketer in the IT world
+tagshort:
+  cs: online markeťák v IT světě
+  en: online marketer in the IT world
+
 baseurl: ""
 url: https://daniel-hladik.cz
-locale: cs_CZ
 
 remote_theme: piazzai/cvless
 
-# site settings
-taglong: Online markeťák v IT světě
-tagshort: online markeťák v IT světě
+# ----------------------------------------------------------
+# POLYGLOT SETTINGS
+# ----------------------------------------------------------
 
-# alert message
+languages: ["cs", "en"]
+default_lang: "cs"
+exclude_from_localization:
+  - assets/
+  - sitemap.xml
+  - feed.xml
+  - robots.txt
+  - CNAME
+  - docker.compose.yml
+
+parallel_localization: false # set to true if you have a lot of posts/pages (doesn't work on Windows)
+
+# ----------------------------------------------------------
+# ALERT MESSAGE
+# ----------------------------------------------------------
+
 alert:
   enabled: false # Visibility of alert message (true/false)
   message: > # Message in the alert
@@ -18,7 +47,10 @@ alert:
   type: "notice" # Type of alert (notice, warning, error)
   dismissable: false  # Possibility to hide alert by the user (true/false)
 
-# author settings
+# ----------------------------------------------------------
+# AUTHOR INFO
+# ----------------------------------------------------------
+
 author:
   name: Daniel Hladík
   email: info&#64;daniel-hladik&#46;cz
@@ -26,7 +58,10 @@ photo: assets/files/photo.png
 address: Praha 6
 phone:
 
-# social media links
+# ----------------------------------------------------------
+# SOCIAL SITES
+# ----------------------------------------------------------
+
 social:
   github:
   linkedin: daniel-hladik
@@ -35,7 +70,10 @@ social:
   x:
   stackoverflow:
 
-# build settings
+# ----------------------------------------------------------
+# BUILD SETTINGS
+# ----------------------------------------------------------
+
 exclude:
   - docker-compose.yml
   - LICENSE
@@ -43,35 +81,52 @@ exclude:
 
 permalink: /blog/:slug/
 
+# ----------------------------------------------------------
+# AUTOPAGES (CATEGORIES, TAGS)
+# ----------------------------------------------------------
+
 autopages:
   enabled: true
   tags:
     enabled: true
     layouts:
       - 'autopage_tag.html'
-    title: "Články označené tagem :tag"
+    title: "#:tag"
     permalink: '/tag/:tag/'
+  
   categories:
     enabled: true
     layouts:
       - 'autopage_category.html'
-    title: "Články v kategorii :cat"
-    permalink: '/kategorie/:cat/'
+    title: ":cat"
+    permalink: '/:cat/'
   collections:
     enabled: false
+
+# ----------------------------------------------------------
+# PAGINATION
+# ----------------------------------------------------------
 
 pagination:
   enabled: true
   per_page: 1
   sort_reverse: true
   permalink: /:num/
-  title: ":title &middot; Strana :num"
+  title: ":title &middot; :num"
+
+# ----------------------------------------------------------
+# PLUGINS
+# ----------------------------------------------------------
 
 plugins:
   - jekyll-gist
   - jekyll-paginate-v2
-  - jekyll-seo-tag
-  - jekyll-sitemap
+  - jekyll-polyglot
+  - jekyll-last-modified-at
+
+# ----------------------------------------------------------
+# STYLE
+# ----------------------------------------------------------
 
 sass:
   style: compressed

@@ -1,0 +1,31 @@
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign latest_posts = site.posts | where: "lang", lang | sort: "date" | reverse | slice: 0,3 %}
+{% assign trans = site.data[site.active_lang].home %}
+
+{% if latest_posts.size > 0 %}
+<div class="post-homepage-banner">
+  <h2 class="post-homepage-banner-title">{{ trans.latest_posts_title }}</h2>
+
+  <ul class="latest-posts">
+    {% for post in latest_posts %}
+      <li class="latest-post">
+        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.lead %}
+          <span class="post-lead">
+            {{ post.lead }}
+            {% if post.reading_time %}
+              &mdash; <span class="reading-time">{{ post.reading_time }} {{ trans.reading_time_label }}</span>
+            {% endif %}
+          </span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="all-posts-link">
+    <a href="{% if lang != site.default_lang %}/{{ lang }}/blog/{% else %}/blog/{% endif %}">
+      {{ trans.all_posts_link }}
+    </a>
+  </p>
+</div>
+{% endif %}

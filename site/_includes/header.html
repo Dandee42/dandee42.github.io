@@ -1,0 +1,16 @@
+{% assign lang = site.active_lang | default: site.default_lang %}
+
+<header>
+  <div>
+    <!--<a class="particles-icon icon-link" href="{{ site.url }}">{% include svg/arrow-left-circled.svg %}</a>-->
+    <a class="site-title" href="{{ site.url }}/">{{ site.title[lang] }}</a>
+    <small>
+    {% if site.tagshort[lang] %}
+      {{ site.tagshort[lang] }}
+    {% else %}
+      {{ site.taglong[lang] }}
+    {% endif %}
+    </small>
+  </div>
+  <a id="theme-toggle" class="toggle-icon" onclick="modeSwitcher()"></a>
+</header>
