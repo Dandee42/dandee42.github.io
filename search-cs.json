@@ -1,0 +1,30 @@
+
+
+
+[
+
+  {
+    "title": "Template post 3",
+    "url": "/blog/template-post-slug-3/",
+    "excerpt": "Vkládat obrázky ve velikosti 1200 × 630 px",
+    "lead": "A short post to demonstrate the layout.",
+    "tags": "jekyll, blog, tipy"
+  },
+
+  {
+    "title": "Template post 2",
+    "url": "/blog/template-post-slug-2/",
+    "excerpt": "Vkládat obrázky ve velikosti 1200 × 630 px",
+    "lead": "A short post to demonstrate the layout.",
+    "tags": "jekyll, blog, tipy"
+  },
+
+  {
+    "title": "Template post CS",
+    "url": "/blog/template-post-slug/",
+    "excerpt": "Vkládat obrázky ve velikosti 1200 × 630 px",
+    "lead": "A short post to demonstrate the layout.",
+    "tags": "jekyll, blog, tipy"
+  }
+
+]

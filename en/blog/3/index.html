@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 
 
@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-    Blog &middot; Daniel Hladík CS
+    Blog EN &middot; 3 &middot; Daniel Hladík EN
     
   </title>
   
@@ -20,21 +20,21 @@
 
 <!-- Cannonical url START -->
 
-<link rel="canonical" href="https:/daniel-hladik.cz/blog/">
+<link rel="canonical" href="https:/daniel-hladik.cz/en/blog/3/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
   
-  <link rel="alternate" hreflang="cs" href="https:/daniel-hladik.cz/blog/">
+  <link rel="alternate" hreflang="cs" href="https:/daniel-hladik.cz/blog/3/">
 
   
-  <link rel="alternate" hreflang="en" href="https:/daniel-hladik.cz/en/blog/">
+  <link rel="alternate" hreflang="en" href="https:/daniel-hladik.cz/en/blog/3/">
 
-<link rel="alternate" hreflang="x-default" href="https://daniel-hladik.cz/">
+<link rel="alternate" hreflang="x-default" href="https://daniel-hladik.cz/en/">
 <!-- Alternate Href lang END -->
 
-<meta http-equiv="Content-Language" content="cs_CZ">
+<meta http-equiv="Content-Language" content="en_US">
 
 
   <!-- PAGE -->
@@ -43,31 +43,31 @@
   
 
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="Blog">
-  <meta name="author" content="Daniel Hladík CS">
-  <meta property="og:locale" content="cs_CZ">
-  <meta name="description" content="CS description">
-  <meta property="og:description" content="CS description">
-  <meta property="og:url" content="https://daniel-hladik.cz/blog/">
-  <meta property="og:site_name" content="Daniel Hladík CS">
+  <meta property="og:title" content="Blog EN &middot; 3">
+  <meta name="author" content="Daniel Hladík EN">
+  <meta property="og:locale" content="en_US">
+  <meta name="description" content="EN description">
+  <meta property="og:description" content="EN description">
+  <meta property="og:url" content="https://daniel-hladik.cz/en/blog/3/">
+  <meta property="og:site_name" content="Daniel Hladík EN">
   
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Blog">
-  <meta name="twitter:description" content="CS description">
+  <meta property="twitter:title" content="Blog EN &middot; 3">
+  <meta name="twitter:description" content="EN description">
 
   <!-- JSON-LD PAGE START -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Blog",
-    "url": "https://daniel-hladik.cz/blog/",
-    "description": "CS description",
-    "inLanguage": "cs_CZ",
+    "name": "Blog EN &middot; 3",
+    "url": "https://daniel-hladik.cz/en/blog/3/",
+    "description": "EN description",
+    "inLanguage": "en_US",
     "author": {
       "@type": "Person",
-      "name": "Daniel Hladík CS"
+      "name": "Daniel Hladík EN"
     }
   }
   </script>
@@ -88,7 +88,7 @@
   
   <!-- Stylesheets, icons -->
   
-  <link rel="alternate" type="application/atom+xml" title="Daniel Hladík CS" href="https://daniel-hladik.cz/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Daniel Hladík EN" href="https://daniel-hladik.cz/en/atom.xml" />
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
 </head>
@@ -111,10 +111,10 @@
   <div>
     <!--<a class="particles-icon icon-link" href="https://daniel-hladik.cz"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8m0 0l3.5 3.5M8 12l3.5-3.5M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </a>-->
-    <a class="site-title" href="https://daniel-hladik.cz/">Daniel Hladík CS</a>
+    <a class="site-title" href="https://daniel-hladik.cz/en/">Daniel Hladík EN</a>
     <small>
     
-      online markeťák v IT světě
+      online marketer in the IT world
     
     </small>
   </div>
@@ -127,12 +127,12 @@
     <div class="side-image right"></div>
 </div>
 <script src="/assets/js/side-image.js" defer></script>
-<h1>Blog</h1>
+<h1>Blog EN</h1>
 
   <div class="search-container">
-  <input type="text" id="search-input" class="search-input" placeholder="Hledat v článcích...">
+  <input type="text" id="search-input" class="search-input" placeholder="Search in articles...">
   <ul id="search-results" class="search-results"></ul>
-  <button id="load-more" class="button load-more" style="display:none;">Zobrazit více výsledků</button>
+  <button id="load-more" class="button load-more" style="display:none;">Show more results</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
@@ -142,9 +142,9 @@
   
   // 🔹 Načti překlady z Jekyll dat
   const translations = {
-    placeholder: "Hledat v článcích...",
-    noResults: "Hledání bylo úspěšné… až na to, že nic nenašlo.",
-    loadMore: "Zobrazit více výsledků"
+    placeholder: "Search in articles...",
+    noResults: "Search completed… but nothing was found.",
+    loadMore: "Show more results"
   };
 
   // 🔹 Vyber správný JSON podle jazyka
@@ -223,7 +223,7 @@
   
     <article class="post-item">
       <h2 class="post-title">
-        <a href="/blog/template-post-slug-3/">Template post 3</a>
+        <a href="/en/blog/template-post-slug/">Template post EN</a>
       </h2>
 
       
@@ -232,28 +232,28 @@
 
       <div class="post-meta">
         
-          <span class="reading-time">8 min čtení</span>
+          <span class="reading-time">8 min read</span>
         
         <time datetime="2023-09-01T00:00:00+00:00" class="post-date">
-          01.09.2023
+          September 01, 2023
         </time>
       </div>
 
       
         <p class="post-tags">
           
-            <a href="/tag/jekyll/">jekyll</a>
+            <a href="/en/tag/jekyll-en/">jekyll-en</a>
           
-            <a href="/tag/blog/">blog</a>
+            <a href="/en/tag/blog-en/">blog-en</a>
           
-            <a href="/tag/tipy/">tipy</a>
+            <a href="/en/tag/tips/">tips</a>
           
         </p>
       
       
       
         <div class="post-hero-image">
-          <a href="/blog/template-post-slug-3/"><img src="/assets/files/photo.png" alt="Úvodní obrázek pro Template post 3" loading="lazy"></a>
+          <a href="/en/blog/template-post-slug/"><img src="/assets/files/photo.png" alt="Hero image for Template post EN" loading="lazy"></a>
         </div>
       
 
@@ -265,15 +265,15 @@
 
 <nav class="post-nav">
   
-    <a class="prev-post" href="/blog/2/">
-      ← Starší články
-    </a>
-  
 
   <span class="page-info">
-    Stránka 1 z 3
+    Page 3 from 3
   </span>
 
+  
+    <a class="next-post" href="/en/blog/2/">
+      Newer posts →
+    </a>
   
 </nav>
 
@@ -285,9 +285,9 @@
 
 <section class="contact-section">
     <div class="contact-intro">
-        <h2>Zanechte mi zprávu</h2>
+        <h2>Leave me a message</h2>
         <p class="contact-description">
-            Pokud máte zájem o spolupráci, neváhejte mě kontaktovat.
+            If you're interested in working with me, don’t hesitate to contact me.
         </p>
     </div>
 
@@ -295,45 +295,45 @@
     <form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <!-- Skryté hodnoty pro Web3Forms -->
         <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
-        <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - CS" />
+        <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - EN" />
         <input type="hidden" name="from_name" value="daniel-hladik.cz" />
-        <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
+        <input type="hidden" name="redirect" value="https://daniel-hladik.cz/en/form-success/" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
         <div class="form-group-container">
             <!-- Name -->
             <div class="form-group">
-                <label for="name" class="form-label">Jméno</label>
-                <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" autocomplete="name" required />
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="name" class="form-input" placeholder="Your name" type="text" autocomplete="name" required />
                 <div class="empty-feedback invalid-feedback">
-                    Prosím zadejte svoje jméno, abych věděl, jak Vás oslovit :)
+                    Please enter your name so I know how to call you :)
                 </div>
             </div>
 
             <!-- Email -->
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" class="form-input" placeholder="napiste.vas@email.cz" type="email" autocomplete="email" required />
+                <input id="email" name="email" class="form-input" placeholder="write.your@email.com" type="email" autocomplete="email" required />
                 <div class="empty-feedback">
-                    Prosím vyplňte svou emailovou adresu.
+                    Please fill in your email address.
                 </div>
                 <div class="invalid-feedback">
-                    Možná to byl jen překlep, ale Váš email není validní pro odeslání. Dodržte prosím formát: "email@domena.cz"
+                    Maybe just a typo, but your email isn’t valid for sending. Please use the format: "email@domain.com"
                 </div>
             </div>
 
             <!-- Messsage -->
             <div class="form-group">
-                <label for="message" class="form-label">Zpráva</label>
-                <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="Write your message here" required></textarea>
                 <div class="empty-feedback invalid-feedback">
-                    Prosím vyplňte pole se zprávou.
+                    Please fill in the message field.
                 </div>
             </div>
 
             <!-- Submit button -->
             <div class="form-group">
-                <button class="form-submit" type="submit">Odeslat</button>
+                <button class="form-submit" type="submit">Send</button>
             </div>
         </div>
 
@@ -346,23 +346,23 @@
 
 
 <div class="contact">
-  <h2>Kontakt na mě, kdyby něco...</h2>
+  <h2>Contact me if anything...</h2>
   <ul>
-    <li>Daniel Hladík CS 
+    <li>Daniel Hladík EN 
       <small>
-        online markeťák v IT světě
+        online marketer in the IT world
       </small>
     </li> 
     <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </span><span>Praha 6</span></li>
     <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
-</span><a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)">info&#64;daniel-hladik&#46;cz</a></li>
+</span><a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Attention! This email contains 100% good news&body=Let me know what's on your mind :)">info&#64;daniel-hladik&#46;cz</a></li>
     <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10M13 2.05S16 6 16 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 21.95S8 18 8 12c0-6 3-9.95 3-9.95M2.63 15.5H12M2.63 8.5h18.74" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path clip-rule="evenodd" d="M21.879 17.917c.494.304.463 1.043-.045 1.101l-2.567.291-1.151 2.312c-.228.459-.933.234-1.05-.334l-1.255-6.116c-.099-.48.333-.782.75-.525l5.318 3.271z" stroke="#000000" stroke-width="1.5"></path></svg>
 </span><a href="https://daniel-hladik.cz">daniel-hladik.cz</a></li>
   </ul>
 </div>
 
-  <small>&copy; <time datetime="2025-10-17T21:51:11+00:00">2025</time>
+  <small>&copy; <time datetime="2025-10-17T21:51:12+00:00">2025</time>
     Daniel Hladík. All rights reserved.</small>
   
 <div class="language-switcher">
@@ -370,15 +370,15 @@
     
     
     
-<span class="lang-active">Čeština</span>
+        
+<a class="lang-link" href=" /blog/3/">Čeština</a>
+        
     
 
     
     
     
-        
-<a class="lang-link" href="/en/blog/">English</a>
-        
+<span class="lang-active">English</span>
     
 
 </div>
