@@ -9,6 +9,7 @@ pagination:
   enabled: true
 published: true
 ---
+{% assign trans = site.data[site.active_lang].blog %}
 
 {% include side-images.html %}
 <h1>Blog</h1>
@@ -17,5 +18,5 @@ published: true
   {% include post-list.html %}
   {% include pagination.html %}
 {% else %}
-  <p>V tuto chvíli tu není nic, co by stálo za čtení. Zkuste později!</p>
+  <p>{{ trans.empty_blog }}</p>
 {% endif %}
