@@ -4,51 +4,11 @@
 [
 
   {
-    "title": "Jak zůstat aktivní při práci z domova",
-    "url": "/blog/test-translations-3/",
-    "excerpt": "Úvodník",
-    "lead": "Praktické tipy a cvičení, která můžete dělat přímo u svého pracovního stolu.",
-    "tags": "zdraví, pohyb, home-office, tipy"
-  },
-
-  {
-    "title": "Jak pěstovat bylinky doma",
-    "url": "/blog/test-translations/",
-    "excerpt": "Na úvod",
-    "lead": "Naučte se, jak si snadno vypěstovat čerstvé bylinky přímo doma.",
-    "tags": "bylinky, domácí-zahrada, tipy"
-  },
-
-  {
-    "title": "5 tipů, jak zlepšit svou produktivitu doma",
-    "url": "/blog/test-translations-2/",
-    "excerpt": "Úvodník",
-    "lead": "Objevte jednoduché strategie, jak být produktivnější a méně stresovaný při home office.",
-    "tags": "produktivita, home-office, tipy"
-  },
-
-  {
-    "title": "Template post 3",
-    "url": "/blog/template-post-slug-3/",
-    "excerpt": "Vkládat obrázky ve velikosti 1200 × 630 px",
-    "lead": "A short post to demonstrate the layout.",
-    "tags": "jekyll, blog, tipy"
-  },
-
-  {
-    "title": "Template post 2",
-    "url": "/blog/template-post-slug-2/",
-    "excerpt": "Vkládat obrázky ve velikosti 1200 × 630 px",
-    "lead": "A short post to demonstrate the layout.",
-    "tags": "jekyll, blog, tipy"
-  },
-
-  {
     "title": "Template post CS",
     "url": "/blog/template-post-slug/",
     "excerpt": "Vkládat obrázky ve velikosti 1200 × 630 px",
     "lead": "A short post to demonstrate the layout.",
-    "tags": "jekyll, blog, tipy"
+    "tags": "jekyll, template-tag, tipy"
   }
 
 ]
