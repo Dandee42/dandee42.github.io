@@ -9,7 +9,7 @@ description: Naučte se jednoduché způsoby, jak být aktivní a pečovat o sv�
 reading_time: 8 min
 image: /assets/files/photo.png
 category:
-tags: [zdraví, pohyb, home office, tipy]
+tags: [zdraví, pohyb, home-office, tipy]
 published: true
 ---
 ## Úvodník

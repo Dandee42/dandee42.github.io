@@ -9,7 +9,7 @@ slug: test-translations-2
 reading_time: 8 min
 image: /assets/files/photo.png
 category: 
-tags: [productivity, home office, tips]
+tags: [productivity, home-office, tips]
 published: true
 ---
 

@@ -9,7 +9,7 @@ slug: test-translations
 reading_time: 8 min
 image: /assets/files/photo.png
 category: 
-tags: [herbs, home garden, tips]
+tags: [herbs, home-garden, tips]
 published: true
 ---
 

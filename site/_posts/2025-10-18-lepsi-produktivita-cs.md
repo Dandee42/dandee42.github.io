@@ -9,7 +9,7 @@ description: Praktické rady pro efektivnější práci a organizaci času při 
 reading_time: 8 min
 image: /assets/files/photo.png
 category:
-tags: [produktivita, home office, tipy]
+tags: [produktivita, home-office, tipy]
 published: true
 ---
 ## Úvodník

@@ -9,7 +9,7 @@ slug: test-translations-3
 reading_time: 8 min
 image: /assets/files/photo.png
 category: 
-tags: [health, movement, home office, tips]
+tags: [health, movement, home-office, tips]
 published: true
 ---
 
