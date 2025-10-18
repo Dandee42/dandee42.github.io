@@ -1,0 +1,17 @@
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+<div class="contact">
+  <h2>{{ trans.contact.title }}</h2>
+  <ul>
+    <li>{{ site.title[lang] }} 
+      <small>
+        {{ site.tagshort[lang] }}
+      </small>
+    </li> 
+    <li><span class="li-icon">{% include svg/pin-alt.svg %}</span><span>{{ site.address }}</span></li>
+    <li><span class="li-icon">{% include svg/mail.svg %}</span><a href="mailto:{{ site.author.email }}?subject={{ trans.contact.form.mailto_subject }}">{{ site.author.email }}</a></li>
+    <li><span class="li-icon">{% include svg/linkedin.svg %}</span><a href="{{ trans.cv.lindkedIn }}">daniel-hladik</a></li>
+    <li><span class="li-icon">{% include svg/internet.svg %}</span><a href="{{ site.url }}">daniel-hladik.cz</a></li>
+  </ul>
+</div>

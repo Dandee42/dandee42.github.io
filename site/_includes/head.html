@@ -1,0 +1,15 @@
+{% assign lang = site.active_lang | default: site.default_lang %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {% if page.layout == "home" %}
+    {{ site.title[lang] }} &middot; {{ site.tagshort[lang] }}
+    {% else %}
+    {{ page.title }} &middot; {{ site.title[lang] }}
+    {% endif %}
+  </title>
+  {% include head-seo-lang.html %}
+  {% include head-links.html %}
+</head>

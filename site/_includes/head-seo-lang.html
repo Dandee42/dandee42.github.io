@@ -1,0 +1,132 @@
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign clean_url = page.url | replace: 'index.html', '' | replace: '//', '/' %}
+{% if lang == site.default_lang %}
+  {% assign full_url = site.url | append: clean_url %}
+{% else %}
+  {% assign full_url = site.url | append: '/' | append: lang | append: clean_url %}
+{% endif %}
+{% assign trans = site.data[site.active_lang] %}
+
+<!-- Cannonical url START -->
+{% if lang == site.default_lang %}
+  {% assign canonical_url = site.url | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+{% else %}
+  {% assign canonical_url = site.url | append: '/' | append: lang | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+{% endif %}
+<link rel="canonical" href="{{ canonical_url }}">
+<!-- Cannonical url END -->
+
+<!-- Alternate Href lang START -->
+{% for l in site.languages %}
+  {% if l == site.default_lang %}
+    {% assign alt_url = site.url | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+  {% else %}
+    {% assign alt_url = site.url | append: '/' | append: l | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+  {% endif %}
+  <link rel="alternate" hreflang="{{ l }}" href="{{ alt_url }}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="https://daniel-hladik.cz/">
+<!-- Alternate Href lang END -->
+
+<meta http-equiv="Content-Language" content="{{ trans.general.locale }}">
+
+{% if page.layout == "post" %}
+  <!-- BLOG POST -->
+
+  {% assign og_description = page.description | default: site.description[lang] %}
+  {% assign og_type = "article" %}
+  {% assign og_published_time = page.date | date_to_xmlschema %}
+
+  <!-- OG / Twitter meta tagy -->
+  <meta property="og:title" content="{{ page.title }}">
+  <meta name="author" content="{{ site.title[lang] }}">
+  <meta property="og:locale" content="{{ trans.general.locale }}">
+  <meta name="description" content="{{ og_description }}">
+  <meta property="og:description" content="{{ og_description }}">
+  <meta property="og:url" content="{{ full_url }}">
+  <meta property="og:site_name" content="{{ site.title[lang] }}">
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta property="twitter:image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
+  <meta property="og:type" content="{{ og_type }}">
+  {% if og_published_time %}
+  <meta property="article:published_time" content="{{ og_published_time }}">
+  {% endif %}
+  {% if paginator %}
+    {% if paginator.previous_page %}
+    <link rel="prev" href="{{ paginator.previous_page_path }}">
+    {% endif %}
+    {% if paginator.next_page %}
+    <link rel="next" href="{{ paginator.next_page_path }}">
+    {% endif %}
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ og_description }}">
+
+  <!-- JSON-LD POST START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.title[lang] }}"
+    }{% if page.date %},
+    "datePublished": "{{ page.date | date_to_xmlschema }}"{% endif %}{% if page.last_modified_at %},
+    "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"{% endif %},
+    "description": "{{ og_description }}",
+    "inLanguage": "{{ trans.general.locale }}",
+    "headline": "{{ page.title }}"{% if page.image %},
+    "image": "{{ site.url }}{{ page.image }}"{% endif %},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ full_url }}"
+    },
+    "url": "{{ full_url }}"
+  }
+  </script>
+  <!-- JSON-LD POST END -->
+
+{% else %}
+  <!-- PAGE -->
+
+  {% assign og_description = page.description | default: site.description[lang] %}
+  {% assign og_type = "website" %}
+
+  <!-- OG / Twitter meta tagy -->
+  <meta property="og:title" content="{{ page.title }}">
+  <meta name="author" content="{{ site.title[lang] }}">
+  <meta property="og:locale" content="{{ trans.general.locale }}">
+  <meta name="description" content="{{ og_description }}">
+  <meta property="og:description" content="{{ og_description }}">
+  <meta property="og:url" content="{{ full_url }}">
+  <meta property="og:site_name" content="{{ site.title[lang] }}">
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta property="twitter:image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
+  <meta property="og:type" content="{{ og_type }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ og_description }}">
+
+  <!-- JSON-LD PAGE START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ page.title }}",
+    "url": "{{ full_url }}",
+    "description": "{{ og_description }}",
+    "inLanguage": "{{ trans.general.locale }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.title[lang] }}"
+    }
+  }
+  </script>
+  <!-- JSON-LD PAGE END -->
+
+{% endif %}

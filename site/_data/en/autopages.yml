@@ -1,0 +1,8 @@
+reading_time: "read"
+back_to_all_posts: "← All blog posts"
+
+tags:
+  title: "Posts with tag "
+
+categories:
+  title: "Posts in category "

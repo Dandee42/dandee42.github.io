@@ -1,0 +1,17 @@
+---
+layout: null
+---
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign posts_in_lang = site.posts | where: "lang", lang %}
+
+[
+{% for post in posts_in_lang %}
+  {
+    "title": "{{ post.title | escape }}",
+    "url": "{% if lang != site.default_lang %}/{{ lang }}{{ post.url }}{% else %}{{ post.url }}{% endif %}",
+    "excerpt": "{{ post.excerpt | strip_html | strip_newlines | escape }}",
+    "lead": "{{ post.lead | strip_html | strip_newlines | escape }}",
+    "tags": "{{ post.tags | join: ', ' }}"
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

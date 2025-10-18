@@ -1,0 +1,10 @@
+{% assign trans = site.data[site.active_lang].general.page-not-found %}
+
+<div id="particles-js" class="fullscreen">
+  <div class="jumbotron text-center">
+    <h1 class="particles-title">{{ trans.title }}</h1>
+    <h2 class="particles-subtitle">{{ trans.subtitle }}</h2>
+    <p style="color: white;">{{ trans.paragraph }}</p>
+    <a class="particles-icon" href="{{ site.url }}">{% include svg/arrow-left-circled.svg %}</a>
+  </div>
+</div>

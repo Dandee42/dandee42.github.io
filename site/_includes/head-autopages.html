@@ -1,0 +1,14 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {% if page.layout == "home" %}
+    {{ site.title }} &middot; {{ site.tagshort[page.lang] }}
+    {% else %}
+    {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+  {% include head-seo.html %}
+  {% seo title=false %}
+  {% include head-links.html %}
+</head>
