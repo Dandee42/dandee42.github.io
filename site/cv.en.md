@@ -9,26 +9,26 @@ published: true
 ---
 
 # About me
-Na začátku roku 2024 jsem se rozhodl pro zásadní změnu kariéry a začal intenzivně pracovat na přechodu z role online markeťáka do světa IT. V rámci této transformace jsem absolvoval několik vzdělávacích kurzů zaměřených na **vývoj a testování webových aplikací**, zejména s využitím Pythonu.
+At the beginning of 2024, I decided to make a major career change and began working intensively on transitioning from an online marketer to the world of IT. As part of this transformation, I completed several training courses focused on **web application development and testing**, particularly using Python.
 
-Postupně jsem se naučil nejen manuálně testovat, ale i automatizovat testy pomocí **Playwrightu** a Selenia, vytvářet jednoduché aplikace v platformě Django a později objevovat potenciál automatizace procesů pomocí n8n.
+Gradually, I learned not only how to test manually, but also how to automate tests using **Playwright** and Selenium, create simple applications in the **Django** platform, and later discover the potential of process automation using **n8n**.
 
-## Proč jsem přešel do IT světa?
-V jedné ze svých pracovních pozic online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy. Myslím si, že právě tato zkušenost mi poskytla solidní základy pro změnu kariéry.
+## Why did I switch to the IT world?
+In one of my positions as an online marketer, I was lucky enough to get a glimpse behind the scenes of programmers developing an e-shop, which opened up a whole new world for me. I enjoyed being involved in the development of the e-shop step by step, coming up with new functionalities, testing, and proposing suitable solutions to current problems. I believe that this experience provided me with a solid foundation for a career change.
 
 <div id="continue"></div>
-## Kam aktuálně směřuji a co vám můžu nabídnout
-Zkušenosti z **e-commerce** a online marketingu mi stále pomáhají lépe chápat souvislosti při testování eshopů. V současnosti se zaměřuji především na automatizaci testů pomocí **Playwrightu** a dalších nástrojů, automatizaci procesů pomocí **n8n**, která mě svými možnostmi nadchla, a dále na vývoj webových aplikací.
+## Where I am currently headed and what I can offer you
+My experience in **e-commerce** and online marketing continues to help me better understand the context when testing e-shops. Currently, I focus primarily on test automation using **Playwright** and other tools, process automation using **n8n**, which has impressed me with its capabilities, and web application development.
 
-Online marketingu se nyní věnuji jen okrajově a do budoucna ho chci opustit úplně.
+I am now only marginally involved in online marketing and want to leave it completely in the future.
 
-## Co ovládám?
-Mám základní zkušenosti s vývojem a testováním webových aplikací.
+## What do I know?
+I have basic experience in developing and testing web applications.
 
-Ovládám následující technologie a nástroje:
+I am proficient in the following technologies and tools:
 
 {% include progress-bar.html %}
 
-Jsem připravený učit se dál, zlepšovat své dovednosti a přinášet hodnotu svému budoucímu týmu. Co neumím, to se naučím.
+I am ready to continue learning, improving my skills, and bringing value to my future team. What I don't know, I will learn.
 
-Více detailů najdete na mém [LinkedIn účtu](https://www.linkedin.com/in/daniel-hladik/).
+You can find more details on my [LinkedIn account](https://www.linkedin.com/in/daniel-hladik/?locale=en_US).

@@ -2,9 +2,9 @@
 layout: page
 page_id: blog
 lang: en
-title: Blog EN
+title: Blog
 permalink: /blog/
-description: EN description
+description: "Practical tips, inspiration, and advice from the world of technology, productivity, and personal development—for anyone who wants to improve their skills and lifestyle."
 pagination:
   enabled: true
 published: true

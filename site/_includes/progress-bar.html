@@ -1,3 +1,5 @@
+{% assign trans = site.data[site.active_lang] %}
+
 <div class="progress-bar-container">
     <div class="progress-bar-unit">
         <small><span class="progress-bar-title">HTML5</span></small>
@@ -19,7 +21,7 @@
     <div class="tools">
         <span><small>Flexbox</small></span>
         <span><small>Grid</small></span>
-        <span><small>Animace</small></span>
+        <span><small>{{ trans.cv.animations }}</small></span>
         <span><small>Bootstrap</small></span>
         <span><small>&nbsp;...&nbsp;</small></span>
     </div>
@@ -64,7 +66,7 @@
     </div>
     <br>
     <div class="progress-bar-unit">
-        <small><span class="progress-bar-title">Ostatní nástroje a programy</span></small>
+        <small><span class="progress-bar-title">{{ trans.cv.other_tools }}</span></small>
         <div class="tools">
             <span><small>Visual Studio Code</small></span>
             <span><small>Pycharm</small></span>
@@ -73,12 +75,11 @@
             <span><small>GitHub Desktop</small></span>
             <span><small>Git Extensions</small></span>
             <span><small>PuTTY</small></span>
-            <span><small>SSH klíče</small></span>
             <span><small>Jira</small></span>
             <span><small>Asana</small></span>
             <span><small>Freelo</small></span>
             <span><small>REST API</small></span>
-            <span><small>HTTP metody</small></span>
+            <span><small>{{ trans.cv.http_methods }}</small></span>
             <span><small>Postman</small></span>
             <span><small>&nbsp;...&nbsp;</small></span>
         </div>
