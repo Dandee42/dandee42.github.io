@@ -9,7 +9,7 @@ slug: test-translations
 reading_time: 8 min
 image: /assets/files/photo.png
 category: 
-tags: bylinky, domácí zahrada, tipy
+tags: 
 published: true
 ---
 
