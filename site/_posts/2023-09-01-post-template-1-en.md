@@ -9,7 +9,7 @@ slug: template-post-slug
 reading_time: 8 min
 image: /assets/files/photo.png
 category: 
-tags: [jekyll, template-tag, tips".]
+tags: [jekyll, template-tag, tips]
 published: true
 ---
 
