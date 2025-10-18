@@ -7,9 +7,9 @@
 <!--<span class="lang-active">{{ lang_name }}</span>-->
     {% else %}
         {% if lang == site.default_lang %}
-<a class="lang-link" href=" {{ clean_url }}">{{ lang_name }}</a>
+<a class="lang-link" href=" {{ clean_url }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
         {% else %}
-<a class="lang-link" href="/{{ lang }}{{ clean_url }}">{{ lang_name }}</a>
+<a class="lang-link" href="/{{ lang }}{{ clean_url }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
         {% endif %}
     {% endif %}
 {% endfor %}

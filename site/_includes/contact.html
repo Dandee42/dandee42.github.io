@@ -10,8 +10,8 @@
       </small>
     </li> 
     <li><span class="li-icon">{% include svg/pin-alt.svg %}</span><span>{{ site.address }}</span></li>
-    <li><span class="li-icon">{% include svg/mail.svg %}</span><a href="mailto:{{ site.author.email }}?subject={{ trans.contact.form.mailto_subject }}">{{ site.author.email }}</a></li>
-    <li><span class="li-icon">{% include svg/linkedin.svg %}</span><a href="{{ trans.cv.lindkedIn }}">daniel-hladik</a></li>
-    <li><span class="li-icon">{% include svg/internet.svg %}</span><a href="{{ site.url }}">daniel-hladik.cz</a></li>
+    <li><span class="li-icon">{% include svg/mail.svg %}</span><a href="mailto:{{ site.author.email }}?subject={{ trans.contact.form.mailto_subject }}" aria-label="{{ site.author.email }}">{{ site.author.email }}</a></li>
+    <li><span class="li-icon">{% include svg/linkedin.svg %}</span><a href="{{ trans.cv.lindkedIn }}" aria-label="LinkedIn">daniel-hladik</a></li>
+    <li><span class="li-icon">{% include svg/internet.svg %}</span><a href="{{ site.url }}" aria-label="daniel-hladik.cz">daniel-hladik.cz</a></li>
   </ul>
 </div>

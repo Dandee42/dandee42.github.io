@@ -1,4 +1,5 @@
 {% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
 
 <div id="particles-js" class="fullscreen">
   <div class="jumbotron text-center">
@@ -9,27 +10,27 @@
     <h1 class="particles-subtitle">{{ site.taglong[lang] }}</h1>
     <div class="nowrap">
       {% if site.social.facebook %}
-      <a class="particles-icon" href="https://www.facebook.com/{{ site.social.facebook }}">{% include svg/facebook.svg %}</a>&nbsp;
+      <a class="particles-icon" href="https://www.facebook.com/{{ site.social.facebook }}" aria-label="Facebook">{% include svg/facebook.svg %}</a>&nbsp;
       {% endif %}
       {% if site.social.x %}
-      <a class="particles-icon" href="https://twitter.com/{{ site.social.x }}">{% include svg/x.svg %}</a>&nbsp;
+      <a class="particles-icon" href="https://twitter.com/{{ site.social.x }}" aria-label="X (Twitter)">{% include svg/x.svg %}</a>&nbsp;
       {% endif %}
       {% if site.social.instagram %}      
-      <a class="particles-icon" href="https://www.instagram.com/{{ site.social.instagram }}">{% include svg/instagram.svg %}</a>&nbsp;
+      <a class="particles-icon" href="https://www.instagram.com/{{ site.social.instagram }}" aria-label="Instagram">{% include svg/instagram.svg %}</a>&nbsp;
       {% endif %}
       {% if site.social.linkedin %}
-      <a class="particles-icon" href="https://www.linkedin.com/in/{{ site.social.linkedin }}" aria-label="Přejít na můj LinkedIn účet">{% include svg/linkedin.svg %}</a>&nbsp;
+      <a class="particles-icon" href="https://www.linkedin.com/in/{{ site.social.linkedin }}" aria-label="LinkedIn">{% include svg/linkedin.svg %}</a>&nbsp;
       {% endif %}
       {% if site.social.stackoverflow %}
-      <a class="particles-icon" href="https://stackoverflow.com/users/{{ site.social.stackoverflow }}">{% include svg/stackoverflow.svg %}</a>&nbsp;
+      <a class="particles-icon" href="https://stackoverflow.com/users/{{ site.social.stackoverflow }}" aria-label="Stack Overflow">{% include svg/stackoverflow.svg %}</a>&nbsp;
       {% endif %}
       {% if site.social.github %}
-      <a class="particles-icon" href="https://github.com/{{ site.social.github }}">{% include svg/github.svg %}</a>&nbsp;
+      <a class="particles-icon" href="https://github.com/{{ site.social.github }}" aria-label="GitHub">{% include svg/github.svg %}</a>&nbsp;
       {% endif %}
-      <a class="particles-icon" href="{{ site.url }}/cv">{% include svg/cv-circled.svg %}</a>&nbsp;
+      <a class="particles-icon" href="{{ site.url }}/cv" aria-label="Curriculum vitae">{% include svg/cv-circled.svg %}</a>&nbsp;
     </div>
   </div>
   <div class="particles-scroll">
-    <a class="particles-icon" href="#scroll" aria-label="Přejít níže na stránku">{% include svg/nav-arrow-down.svg %}</a>
+    <a class="particles-icon" href="#scroll"  aria-label="Scroll down">{% include svg/nav-arrow-down.svg %}</a>
   </div>
 </div>
