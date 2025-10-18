@@ -9,9 +9,9 @@
 
 <!-- Cannonical url START -->
 {% if lang == site.default_lang %}
-  {% assign canonical_url = site.url | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+  {% assign canonical_url = site.url | append: page.url | replace: 'index.html', '' %}
 {% else %}
-  {% assign canonical_url = site.url | append: '/' | append: lang | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+  {% assign canonical_url = site.url | append: '/' | append: lang | append: page.url | replace: 'index.html', '' %}
 {% endif %}
 <link rel="canonical" href="{{ canonical_url }}">
 <!-- Cannonical url END -->
@@ -19,9 +19,9 @@
 <!-- Alternate Href lang START -->
 {% for l in site.languages %}
   {% if l == site.default_lang %}
-    {% assign alt_url = site.url | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+    {% assign alt_url = site.url | append: page.url | replace: 'index.html', '' %}
   {% else %}
-    {% assign alt_url = site.url | append: '/' | append: l | append: page.url | replace: 'index.html', '' | replace: '//', '/' %}
+    {% assign alt_url = site.url | append: '/' | append: l | append: page.url | replace: 'index.html', '' %}
   {% endif %}
   <link rel="alternate" hreflang="{{ l }}" href="{{ alt_url }}">
 {% endfor %}

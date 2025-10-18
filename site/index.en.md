@@ -4,7 +4,7 @@ page_id: home
 lang: en
 title: Daniel Hladik - online marketer in the IT world
 description: I connect online marketing experience with the IT world
-image: assets/files/photo.png
+image: /assets/files/photo.png
 permalink: /
 canonical: false
 ---
