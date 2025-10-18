@@ -3,20 +3,4 @@
 
 [
 
-  {
-    "title": "How to grow herbs",
-    "url": "/en/blog/template-post-slug-2/",
-    "excerpt": "How to start home growing herbs",
-    "lead": "Short lead of the blog article.",
-    "tags": "garden, tips"
-  },
-
-  {
-    "title": "Template post EN",
-    "url": "/en/blog/template-post-slug/",
-    "excerpt": "Insert images in size 1200 × 630 px",
-    "lead": "A short post to demonstrate the layout.",
-    "tags": "jekyll, template-tag, tips"
-  }
-
 ]
