@@ -4,14 +4,6 @@
 [
 
   {
-    "title": "Template post EN",
-    "url": "/en/blog/template-post-slug/",
-    "excerpt": "EN Vkládat obrázky ve velikosti 1200 × 630 px",
-    "lead": "A short post to demonstrate the layout.",
-    "tags": "jekyll-en, blog-en, tips"
-  },
-
-  {
     "title": "Template post EN 3",
     "url": "/en/blog/template-post-slug-3/",
     "excerpt": "EN Vkládat obrázky ve velikosti 1200 × 630 px",
@@ -25,6 +17,14 @@
     "excerpt": "EN Vkládat obrázky ve velikosti 1200 × 630 px",
     "lead": "A short post to demonstrate the layout.",
     "tags": "jekyll-en, blog-en, tips"
+  },
+
+  {
+    "title": "Template post CS",
+    "url": "/en/blog/template-post-slug/",
+    "excerpt": "Insert images in size 1200 × 630 px",
+    "lead": "A short post to demonstrate the layout.",
+    "tags": "jekyll,, blog,, tipy"
   }
 
 ]
