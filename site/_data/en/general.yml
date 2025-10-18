@@ -12,3 +12,14 @@ alert:
   message: 'Open to new work opportunities! <a href="#contact-form">Contact me</a>'
 
 copyLink: "Link copied to clipboard!"
+
+go_to_social: "Go to my "
+scroll_down: "Scroll down the page"
+
+go_home: "Home"
+go_to: "Go to "
+
+change_language: "Change language to"
+lang_name_small: "english"
+
+send_email: "Send an email to "
