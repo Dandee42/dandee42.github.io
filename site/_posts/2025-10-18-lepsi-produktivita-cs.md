@@ -12,7 +12,7 @@ category:
 tags: [produktivita, home office, tipy]
 published: true
 ---
-## Úvod
+## Úvodník
 
 Práce z domova přináší mnoho výhod, ale také výzev. Abychom byli efektivní, je důležité zavést pár jednoduchých pravidel a návyků.
 
