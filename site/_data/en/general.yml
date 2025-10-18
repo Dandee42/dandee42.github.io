@@ -7,3 +7,8 @@ page-not-found:
   title: "404"
   subtitle: "... and the page is gone!"
   paragraph: "It seems that the page has wandered into the unknown.<br>Please return to the home page and try your luck elsewhere :)"
+
+alert:
+  message: 'Open to new work opportunities! <a href="#contact-form">Contact me</a>'
+
+copyLink: "Link copied to clipboard!"

@@ -6,3 +6,8 @@ page-not-found:
   title: "404"
   subtitle: "... a stránka je fuč!"
   paragraph: "Zdá se, že se stránka zatoulala do neznáma.<br>Vraťte se prosím na domovskou stránku a zkuste štěstí jinde :)"
+
+alert:
+  message: 'Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a>'
+
+copyLink: "Odkaz zkopírován do schránky!"

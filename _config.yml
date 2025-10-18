@@ -3,8 +3,8 @@
 # ----------------------------------------------------------
 source: site
 title:
-  cs: Daniel Hladík CS
-  en: Daniel Hladík EN
+  cs: Daniel Hladík
+  en: Daniel Hladík
 description:
   cs: Propojuji zkušenosti z online marketingu s IT světem
   en: I connect online marketing experience with the IT world
@@ -40,12 +40,10 @@ parallel_localization: false # set to true if you have a lot of posts/pages (doe
 # ALERT MESSAGE
 # ----------------------------------------------------------
 
-alert:
-  enabled: false # Visibility of alert message (true/false)
-  message: > # Message in the alert
-    Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a>
+alert: # Message in the alert has to be setup in the language files (_data)
+  enabled: false # Visibility of alert message (true/false) 
   type: "notice" # Type of alert (notice, warning, error)
-  dismissable: false  # Possibility to hide alert by the user (true/false)
+  dismissable: true  # Possibility to hide alert by the user (true/false)
 
 # ----------------------------------------------------------
 # AUTHOR INFO
