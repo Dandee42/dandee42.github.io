@@ -4,7 +4,7 @@ page_id: home
 lang: cs
 title: Daniel Hladík - online markeťák v IT světě
 description: Propojuji zkušenosti z online marketingu s IT světem
-image: assets/files/photo.png
+image: /assets/files/photo.png
 permalink: /
 canonical: false
 ---
