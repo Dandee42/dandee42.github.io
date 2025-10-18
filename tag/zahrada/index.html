@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-    Blog &middot; Daniel Hladík
+    #zahrada &middot; Daniel Hladík
     
   </title>
   
@@ -20,16 +20,16 @@
 
 <!-- Cannonical url START -->
 
-<link rel="canonical" href="https:/daniel-hladik.cz/blog/">
+<link rel="canonical" href="https:/daniel-hladik.cz/tag/zahrada/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
   
-  <link rel="alternate" hreflang="cs" href="https:/daniel-hladik.cz/blog/">
+  <link rel="alternate" hreflang="cs" href="https:/daniel-hladik.cz/tag/zahrada/">
 
   
-  <link rel="alternate" hreflang="en" href="https:/daniel-hladik.cz/en/blog/">
+  <link rel="alternate" hreflang="en" href="https:/daniel-hladik.cz/en/tag/zahrada/">
 
 <link rel="alternate" hreflang="x-default" href="https://daniel-hladik.cz/">
 <!-- Alternate Href lang END -->
@@ -43,27 +43,27 @@
   
 
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="Blog">
+  <meta property="og:title" content="#zahrada">
   <meta name="author" content="Daniel Hladík">
   <meta property="og:locale" content="cs_CZ">
-  <meta name="description" content="Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.">
-  <meta property="og:description" content="Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.">
-  <meta property="og:url" content="https://daniel-hladik.cz/blog/">
+  <meta name="description" content="Propojuji zkušenosti z online marketingu s IT světem">
+  <meta property="og:description" content="Propojuji zkušenosti z online marketingu s IT světem">
+  <meta property="og:url" content="https://daniel-hladik.cz/tag/zahrada/">
   <meta property="og:site_name" content="Daniel Hladík">
   
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Blog">
-  <meta name="twitter:description" content="Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.">
+  <meta property="twitter:title" content="#zahrada">
+  <meta name="twitter:description" content="Propojuji zkušenosti z online marketingu s IT světem">
 
   <!-- JSON-LD PAGE START -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Blog",
-    "url": "https://daniel-hladik.cz/blog/",
-    "description": "Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.",
+    "name": "#zahrada",
+    "url": "https://daniel-hladik.cz/tag/zahrada/",
+    "description": "Propojuji zkušenosti z online marketingu s IT světem",
     "inLanguage": "cs_CZ",
     "author": {
       "@type": "Person",
@@ -106,8 +106,9 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-sm-10 col-md-8 col-lg-6">
-        <article>
-  
+        
+
+
 
 <header>
   <div>
@@ -123,105 +124,15 @@
   <a id="theme-toggle" class="toggle-icon" onclick="modeSwitcher()"></a>
 </header>
 
-  <main>
-    
-
 <div class="start-side-image">
     <div class="side-image left"></div>
     <div class="side-image right"></div>
 </div>
 <script src="/assets/js/side-image.js" defer></script>
-<h1>Blog</h1>
+<p class="blog-back"><a href="/blog/">← Všechny články</a></p>
+<h1>Články s tagem "zahrada"</h1>
+<br>
 
-  <div class="search-container">
-  <input type="text" id="search-input" class="search-input" placeholder="Hledat v článcích...">
-  <ul id="search-results" class="search-results"></ul>
-  <button id="load-more" class="button load-more" style="display:none;">Zobrazit více výsledků</button>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-<script defer>
-  // 🔹 Zjisti jazyk aktuální stránky
-  const currentLang = document.documentElement.lang || 'cs';
-  
-  // 🔹 Načti překlady z Jekyll dat
-  const translations = {
-    placeholder: "Hledat v článcích...",
-    noResults: "Hledání bylo úspěšné… až na to, že nic nenašlo.",
-    loadMore: "Zobrazit více výsledků"
-  };
-
-  // 🔹 Vyber správný JSON podle jazyka
-  const searchFile = currentLang === 'en' ? '/en/search-en.json' : '/search-cs.json';
-
-  const input = document.getElementById('search-input');
-  const resultsList = document.getElementById('search-results');
-  const loadMoreBtn = document.getElementById('load-more');
-
-  fetch(searchFile)
-    .then(response => response.json())
-    .then(data => {
-      const maxResults = 3;
-      let allResults = [];
-      let displayedCount = 0;
-      const fuse = new Fuse(data, { keys: ['title', 'excerpt', 'lead', 'tags'], threshold: 0.3 });
-
-      function updateLoadMoreText() {
-        const remaining = allResults.length - displayedCount;
-        if (remaining > 0) {
-          loadMoreBtn.textContent = `${translations.loadMore} (${remaining})`;
-        } else {
-          loadMoreBtn.textContent = translations.loadMore;
-        }
-      }
-
-      function renderResults(reset = false) {
-        if (reset) {
-          resultsList.innerHTML = '';
-          displayedCount = 0;
-        }
-
-        if (!allResults || allResults.length === 0) {
-          resultsList.innerHTML = `<li class="no-results">${translations.noResults}</li>`;
-          loadMoreBtn.style.display = 'none';
-          return;
-        }
-
-        const nextBatch = allResults.slice(displayedCount, displayedCount + maxResults);
-
-        resultsList.innerHTML += nextBatch
-          .map(r => `<li><a href="${r.item.url}">${r.item.title}</a></li>`)
-          .join('');
-
-        displayedCount += nextBatch.length;
-
-        if (displayedCount < allResults.length) {
-          loadMoreBtn.style.display = 'block';
-          updateLoadMoreText();
-        } else {
-          loadMoreBtn.style.display = 'none';
-        }
-      }
-
-      input.addEventListener('input', () => {
-        const query = input.value.trim();
-        if (query.length === 0) {
-          resultsList.innerHTML = '';
-          loadMoreBtn.style.display = 'none';
-          return;
-        }
-
-        allResults = fuse.search(query);
-        renderResults(true);
-      });
-
-      loadMoreBtn.addEventListener('click', () => {
-        renderResults(false);
-      });
-    })
-    .catch(err => console.error('Chyba při načítání vyhledávání:', err));
-</script>
-  
 
 <div class="blog-list">
   
@@ -261,51 +172,11 @@
 
     </article>
   
-    <article class="post-item">
-      <h2 class="post-title">
-        <a href="/blog/template-post-slug/">Template post CS</a>
-      </h2>
-
-      
-        <p class="post-lead">A short post to demonstrate the layout.</p>
-      
-
-      <div class="post-meta">
-        
-          <span class="reading-time">8 min čtení</span>
-        
-        <time datetime="2025-10-18T00:00:00+00:00" class="post-date">
-          18.10.2025
-        </time>
-      </div>
-
-      
-        <p class="post-tags">
-          
-            <a href="/tag/jekyll/">jekyll</a>
-          
-            <a href="/tag/template-tag/">template-tag</a>
-          
-            <a href="/tag/tips/">tips</a>
-          
-        </p>
-      
-      
-      
-        <div class="post-hero-image">
-          <a href="/blog/template-post-slug/"><img src="/assets/files/photo.png" alt="Úvodní obrázek pro Template post CS" loading="lazy"></a>
-        </div>
-      
-
-    </article>
-  
 </div>
 
-  
 
 
-  </main>
-  <footer>
+<footer>
   <div id="contact-form">&nbsp;</div>
   
 
@@ -398,24 +269,6 @@
     <a href="/blog/">Blog</a>
 </p>
   
-<div class="language-switcher">
-
-    
-    
-    
-<!--<span class="lang-active">Čeština</span>-->
-    
-
-    
-    
-    
-        
-<a class="lang-link" href="/en/blog/">English</a>
-        
-    
-
-</div>
-
 
   </div>
   <small>&copy; <time datetime="2025-10-18T18:31:19+00:00">2025</time>
@@ -423,7 +276,6 @@
   </small>
 </footer>
 
-</article>
       </div>
     </div>
   </div>

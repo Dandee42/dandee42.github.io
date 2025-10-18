@@ -4,6 +4,14 @@
 [
 
   {
+    "title": "Jak na pěstování bylinek",
+    "url": "/blog/template-post-slug-2/",
+    "excerpt": "Jak začít s domácím pěstováním bylinek",
+    "lead": "Krátký lead blogového článku.",
+    "tags": "zahrada, tipy"
+  },
+
+  {
     "title": "Template post CS",
     "url": "/blog/template-post-slug/",
     "excerpt": "Insert images in size 1200 × 630 px",

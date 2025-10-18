@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-    Blog &middot; Daniel Hladík
+    Jak na pěstování bylinek &middot; Daniel Hladík
     
   </title>
   
@@ -20,16 +20,16 @@
 
 <!-- Cannonical url START -->
 
-<link rel="canonical" href="https:/daniel-hladik.cz/blog/">
+<link rel="canonical" href="https:/daniel-hladik.cz/blog/template-post-slug-2/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
   
-  <link rel="alternate" hreflang="cs" href="https:/daniel-hladik.cz/blog/">
+  <link rel="alternate" hreflang="cs" href="https:/daniel-hladik.cz/blog/template-post-slug-2/">
 
   
-  <link rel="alternate" hreflang="en" href="https:/daniel-hladik.cz/en/blog/">
+  <link rel="alternate" hreflang="en" href="https:/daniel-hladik.cz/en/blog/template-post-slug-2/">
 
 <link rel="alternate" hreflang="x-default" href="https://daniel-hladik.cz/">
 <!-- Alternate Href lang END -->
@@ -37,41 +37,56 @@
 <meta http-equiv="Content-Language" content="cs_CZ">
 
 
-  <!-- PAGE -->
+  <!-- BLOG POST -->
 
+  
   
   
 
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="Blog">
+  <meta property="og:title" content="Jak na pěstování bylinek">
   <meta name="author" content="Daniel Hladík">
   <meta property="og:locale" content="cs_CZ">
-  <meta name="description" content="Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.">
-  <meta property="og:description" content="Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.">
-  <meta property="og:url" content="https://daniel-hladik.cz/blog/">
+  <meta name="description" content="Krátký popisek článku.">
+  <meta property="og:description" content="Krátký popisek článku.">
+  <meta property="og:url" content="https://daniel-hladik.cz/blog/template-post-slug-2/">
   <meta property="og:site_name" content="Daniel Hladík">
   
-  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://daniel-hladik.cz/assets/files/photo.png">
+  <meta property="twitter:image" content="https://daniel-hladik.cz/assets/files/photo.png">
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="article:published_time" content="2025-10-18T00:00:00+00:00">
+  
+  
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Blog">
-  <meta name="twitter:description" content="Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.">
+  <meta property="twitter:title" content="Jak na pěstování bylinek">
+  <meta name="twitter:description" content="Krátký popisek článku.">
 
-  <!-- JSON-LD PAGE START -->
+  <!-- JSON-LD POST START -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Blog",
-    "url": "https://daniel-hladik.cz/blog/",
-    "description": "Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl.",
-    "inLanguage": "cs_CZ",
+    "@type": "BlogPosting",
     "author": {
       "@type": "Person",
       "name": "Daniel Hladík"
-    }
+    },
+    "datePublished": "2025-10-18T00:00:00+00:00",
+    "dateModified": "2025-10-18T18:30:38+00:00",
+    "description": "Krátký popisek článku.",
+    "inLanguage": "cs_CZ",
+    "headline": "Jak na pěstování bylinek",
+    "image": "https://daniel-hladik.cz/assets/files/photo.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://daniel-hladik.cz/blog/template-post-slug-2/"
+    },
+    "url": "https://daniel-hladik.cz/blog/template-post-slug-2/"
   }
   </script>
-  <!-- JSON-LD PAGE END -->
+  <!-- JSON-LD POST END -->
 
 
     
@@ -106,8 +121,8 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-sm-10 col-md-8 col-lg-6">
-        <article>
-  
+        <div id="top"></div>
+
 
 <header>
   <div>
@@ -123,189 +138,156 @@
   <a id="theme-toggle" class="toggle-icon" onclick="modeSwitcher()"></a>
 </header>
 
-  <main>
-    
 
-<div class="start-side-image">
+
+<article>
+  <main>
+    <div class="start-side-image">
     <div class="side-image left"></div>
     <div class="side-image right"></div>
 </div>
 <script src="/assets/js/side-image.js" defer></script>
-<h1>Blog</h1>
-
-  <div class="search-container">
-  <input type="text" id="search-input" class="search-input" placeholder="Hledat v článcích...">
-  <ul id="search-results" class="search-results"></ul>
-  <button id="load-more" class="button load-more" style="display:none;">Zobrazit více výsledků</button>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-<script defer>
-  // 🔹 Zjisti jazyk aktuální stránky
-  const currentLang = document.documentElement.lang || 'cs';
-  
-  // 🔹 Načti překlady z Jekyll dat
-  const translations = {
-    placeholder: "Hledat v článcích...",
-    noResults: "Hledání bylo úspěšné… až na to, že nic nenašlo.",
-    loadMore: "Zobrazit více výsledků"
-  };
-
-  // 🔹 Vyber správný JSON podle jazyka
-  const searchFile = currentLang === 'en' ? '/en/search-en.json' : '/search-cs.json';
-
-  const input = document.getElementById('search-input');
-  const resultsList = document.getElementById('search-results');
-  const loadMoreBtn = document.getElementById('load-more');
-
-  fetch(searchFile)
-    .then(response => response.json())
-    .then(data => {
-      const maxResults = 3;
-      let allResults = [];
-      let displayedCount = 0;
-      const fuse = new Fuse(data, { keys: ['title', 'excerpt', 'lead', 'tags'], threshold: 0.3 });
-
-      function updateLoadMoreText() {
-        const remaining = allResults.length - displayedCount;
-        if (remaining > 0) {
-          loadMoreBtn.textContent = `${translations.loadMore} (${remaining})`;
-        } else {
-          loadMoreBtn.textContent = translations.loadMore;
-        }
-      }
-
-      function renderResults(reset = false) {
-        if (reset) {
-          resultsList.innerHTML = '';
-          displayedCount = 0;
-        }
-
-        if (!allResults || allResults.length === 0) {
-          resultsList.innerHTML = `<li class="no-results">${translations.noResults}</li>`;
-          loadMoreBtn.style.display = 'none';
-          return;
-        }
-
-        const nextBatch = allResults.slice(displayedCount, displayedCount + maxResults);
-
-        resultsList.innerHTML += nextBatch
-          .map(r => `<li><a href="${r.item.url}">${r.item.title}</a></li>`)
-          .join('');
-
-        displayedCount += nextBatch.length;
-
-        if (displayedCount < allResults.length) {
-          loadMoreBtn.style.display = 'block';
-          updateLoadMoreText();
-        } else {
-          loadMoreBtn.style.display = 'none';
-        }
-      }
-
-      input.addEventListener('input', () => {
-        const query = input.value.trim();
-        if (query.length === 0) {
-          resultsList.innerHTML = '';
-          loadMoreBtn.style.display = 'none';
-          return;
-        }
-
-        allResults = fuse.search(query);
-        renderResults(true);
-      });
-
-      loadMoreBtn.addEventListener('click', () => {
-        renderResults(false);
-      });
-    })
-    .catch(err => console.error('Chyba při načítání vyhledávání:', err));
-</script>
-  
-
-<div class="blog-list">
-  
-    <article class="post-item">
-      <h2 class="post-title">
-        <a href="/blog/template-post-slug-2/">Jak na pěstování bylinek</a>
-      </h2>
-
-      
-        <p class="post-lead">Krátký lead blogového článku.</p>
-      
-
-      <div class="post-meta">
+    <p class="blog-back"><a href="/blog/">← Všechny články</a></p>
+    
+      <p class="post-tags">
         
-          <span class="reading-time">10 min čtení</span>
+          <a href="/tag/zahrada/">zahrada</a>
         
-        <time datetime="2025-10-18T00:00:00+00:00" class="post-date">
-          18.10.2025
-        </time>
+          <a href="/tag/tipy/">tipy</a>
+        
+      </p>
+    
+    <h1 class="post-title">Jak na pěstování bylinek</h1>
+    <p class="lead">Krátký lead blogového článku.</p>
+
+    
+      <div class="post-hero-image">
+        <img src="/assets/files/photo.png" alt="Úvodní obrázek pro Jak na pěstování bylinek" loading="lazy">
       </div>
+    
+    <br>
+    <h2 id="jak-začít-s-domácím-pěstováním-bylinek">Jak začít s domácím pěstováním bylinek</h2>
 
-      
-        <p class="post-tags">
-          
-            <a href="/tag/zahrada/">zahrada</a>
-          
-            <a href="/tag/tipy/">tipy</a>
-          
-        </p>
-      
-      
-      
-        <div class="post-hero-image">
-          <a href="/blog/template-post-slug-2/"><img src="/assets/files/photo.png" alt="Úvodní obrázek pro Jak na pěstování bylinek" loading="lazy"></a>
-        </div>
-      
+<p>Domácí pěstování bylinek je skvělý způsob, jak mít čerstvé ingredience po ruce a zároveň si zpříjemnit interiér. Tento článek vám ukáže, jak začít, aniž byste potřebovali zahradu.</p>
 
-    </article>
-  
-    <article class="post-item">
-      <h2 class="post-title">
-        <a href="/blog/template-post-slug/">Template post CS</a>
-      </h2>
+<h2 id="výběr-bylinek">Výběr bylinek</h2>
 
-      
-        <p class="post-lead">A short post to demonstrate the layout.</p>
-      
+<p>Nejprve si vyberte bylinky, které chcete pěstovat. Některé jsou vhodné i pro začátečníky:</p>
 
-      <div class="post-meta">
-        
-          <span class="reading-time">8 min čtení</span>
-        
-        <time datetime="2025-10-18T00:00:00+00:00" class="post-date">
-          18.10.2025
-        </time>
-      </div>
+<ul>
+  <li><strong>Bazalka</strong> – miluje slunce a pravidelnou zálivku.</li>
+  <li><strong>Pažitka</strong> – roste rychle a vydrží i v menších květináčích.</li>
+  <li><strong>Máta</strong> – roste téměř sama, ale doporučuje se pěstovat ji odděleně, protože se rychle rozrůstá.</li>
+</ul>
 
-      
-        <p class="post-tags">
-          
-            <a href="/tag/jekyll/">jekyll</a>
-          
-            <a href="/tag/template-tag/">template-tag</a>
-          
-            <a href="/tag/tips/">tips</a>
-          
-        </p>
-      
-      
-      
-        <div class="post-hero-image">
-          <a href="/blog/template-post-slug/"><img src="/assets/files/photo.png" alt="Úvodní obrázek pro Template post CS" loading="lazy"></a>
-        </div>
-      
+<h2 id="co-budete-potřebovat">Co budete potřebovat</h2>
 
-    </article>
-  
-</div>
+<ul>
+  <li>Květináče s drenážními otvory</li>
+  <li>Kvalitní zeminu pro bylinky</li>
+  <li>Světelné místo (ideálně parapet na jih)</li>
+  <li>Malou konvičku na zalévání</li>
+</ul>
 
-  
+<h2 id="péče-o-bylinky">Péče o bylinky</h2>
 
+<ol>
+  <li><strong>Zalévání</strong> – bylinky potřebují pravidelnou, ale ne přemíru vody. Zemina by měla být vlhká, ne mokrá.</li>
+  <li><strong>Hnojení</strong> – jednou za měsíc přidejte hnojivo pro bylinky.</li>
+  <li><strong>Stříhání</strong> – pravidelně stříhejte listy, aby rostliny zůstaly bujné a zdravé.</li>
+</ol>
 
+<h2 id="výhody-domácího-pěstování">Výhody domácího pěstování</h2>
+
+<ul>
+  <li>Čerstvé a chutné ingredience po ruce</li>
+  <li>Snížení spotřeby plastových obalů z obchodu</li>
+  <li>Příjemný relaxační koníček</li>
+</ul>
+
+<h2 id="závěr">Závěr</h2>
+
+<p>Začít s domácím pěstováním bylinek je snadné a přínosné. Stačí pár květináčů, trochu péče a brzy budete mít čerstvé bylinky pro vaše pokrmy.</p>
+
+    <time datetime="2025-10-18T00:00:00+00:00" class="post-date">18.10.2025</time>
+    <p class="back-to-top">
+      <a href="#top">↑ Zpět na začátek</a>
+    </p>
+    <nav class="post-nav">
+    
+    <a class="prev-post" href="/blog/template-post-slug/">
+        ← Template post CS
+    </a>
+    
+
+    
+</nav>
   </main>
-  <footer>
+</article>
+
+
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+  const headings = document.querySelectorAll("h2, h3, h4");
+
+  headings.forEach(heading => {
+    if (heading.id) {
+      const link = document.createElement("a");
+      link.href = `#${heading.id}`;
+      link.className = "heading-link";
+      link.innerHTML = `<img src="/assets/files/images/link-45deg.svg" alt="Odkaz na nadpis" width="16" height="16">`;
+
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const url = window.location.origin + window.location.pathname + `#${heading.id}`;
+        navigator.clipboard.writeText(url).then(() => {
+          showCopyMessage("Odkaz zkopírován do schránky!");
+        });
+      });
+
+      heading.appendChild(link);
+    }
+  });
+
+  function showCopyMessage(message) {
+    const msg = document.createElement("div");
+    msg.textContent = message;
+    msg.style.position = "fixed";
+    msg.style.bottom = "20px";
+    msg.style.right = "20px";
+    msg.style.backgroundColor = "#333";
+    msg.style.color = "#fff";
+    msg.style.padding = "10px 15px";
+    msg.style.borderRadius = "5px";
+    msg.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+    msg.style.zIndex = 1000;
+    msg.style.opacity = 0;
+    msg.style.transition = "opacity 0.3s";
+
+    document.body.appendChild(msg);
+
+    requestAnimationFrame(() => {
+      msg.style.opacity = 1;
+    });
+
+    setTimeout(() => {
+      msg.style.opacity = 0;
+      msg.addEventListener("transitionend", () => msg.remove());
+    }, 2000);
+  }
+});
+</script>
+<script src="/assets/js/add-img-lazy-loading.js" defer></script>
+
+
+
+
+
+  
+
+
+
+<footer>
   <div id="contact-form">&nbsp;</div>
   
 
@@ -410,7 +392,7 @@
     
     
         
-<a class="lang-link" href="/en/blog/">English</a>
+<a class="lang-link" href="/en/blog/template-post-slug-2/">English</a>
         
     
 
@@ -423,7 +405,8 @@
   </small>
 </footer>
 
-</article>
+
+
       </div>
     </div>
   </div>
