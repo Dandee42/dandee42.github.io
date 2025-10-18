@@ -2,7 +2,7 @@
 layout: post
 lang: en
 page_id: template-post
-title: Template post CS
+title: Template post EN
 description: A short post to demonstrate the layout description.
 lead: A short post to demonstrate the layout.
 slug: template-post-slug

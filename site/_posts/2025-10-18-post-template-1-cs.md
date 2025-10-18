@@ -3,57 +3,58 @@ layout: post
 lang: cs
 page_id: template-post
 title: Template post CS
-slug: template-post-slug
-lead: A short post to demonstrate the layout.
 description: A short post to demonstrate the layout description.
+lead: A short post to demonstrate the layout.
+slug: template-post-slug
 reading_time: 8 min
 image: /assets/files/photo.png
-category:
-tags: [jekyll, template-tag, tipy]
+category: 
+tags: [jekyll, template-tag, tips]
 published: true
 ---
-Vkládat obrázky ve velikosti 1200 × 630 px
+
+Insert images in size 1200 × 630 px
 
 - toc
 {: toc }
 
-<!-- Toto je HTML komentář, vygeneruje se do HTML -->
 
-{% comment %}
-Toto je Jekyll (Liquid) komentář, který se vůbec nevygeneruje.
-{% endcomment %}
 
-Úvodní odstavec textu. Tady můžeš psát normálně česky, **tučně**, _kurzíva_ nebo i [odkazy](https://example.com).
 
----
+This is a Jekyll (Liquid) comment that is not generated at all.
 
-## Podnadpis (úroveň 2)
 
-Tady můžeš pokračovat v textu. Například seznam:
-
-- První položka
-- Druhá položka
-- Třetí položka
-
-Nebo očíslovaný seznam:
-
-1. Krok první
-2. Krok druhý
-3. Krok třetí
+Introductory paragraph of text. Here you can write in normal Czech, **fat**, _cursive_ or even [links](https://example.com).
 
 ---
 
-## Citace
+## Subtitle (level 2)
 
-> „Toto je ukázková citace.“
+Here you can continue the text. For example, a list:
+
+- First entry
+- Second item
+- Third item
+
+Or a numbered list:
+
+1. Step One
+2. Step two
+3. Step three
 
 ---
 
-## Obrázek
+## Quote
 
-![Popisek obrázku](/assets/files/images/photo..png)
+> "This is a sample quote."
 
 ---
 
-### Inline kód
-Text obsahuje `krátký_kód`.
+## Image
+
+![Image caption](/assets/files/images/photo..png)
+
+---
+
+### Inline code
+The text contains `short_code`.
