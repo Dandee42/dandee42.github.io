@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: en
-page_id: template-post
+page_id: template-post-2
 title: How to grow herbs
 description: Short description of the article.
 lead: Short lead of the blog article.

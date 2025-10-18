@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: cs
-page_id: template-post
+page_id: template-post-2
 title: Jak na pěstování bylinek
 description: Krátký popisek článku.
 lead: Krátký lead blogového článku.
