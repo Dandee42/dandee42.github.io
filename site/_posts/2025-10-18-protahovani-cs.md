@@ -12,7 +12,7 @@ category:
 tags: [zdraví, pohyb, home office, tipy]
 published: true
 ---
-## Úvodník
+## Úvodníček
 
 Práce z domova často znamená dlouhé hodiny sezení, což může negativně ovlivnit zdraví. Malé změny v denním režimu vám pomohou zůstat aktivní.
 
