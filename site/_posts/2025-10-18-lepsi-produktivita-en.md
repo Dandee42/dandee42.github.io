@@ -9,7 +9,7 @@ slug: test-translations-2
 reading_time: 8 min
 image: /assets/files/photo.png
 category: 
-tags: produktivita, home office, tipy
+tags: 
 published: true
 ---
 
