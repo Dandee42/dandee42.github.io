@@ -1,3 +1,10 @@
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
 // =========================
 // HEADING LINKS
 // =========================
@@ -34,16 +41,49 @@ h4:hover .heading-link {
 // =========================
 
 .language-switcher {
-  margin-top: 1em;
+  margin-top: 0;
 }
 .language-switcher .lang-link {
-  margin-right: 0.5em;
+  margin-left: 0.5em;
   text-decoration: none;
 }
-.language-switcher .lang-link.current {
-  text-decoration: underline;
+
+.language-switcher .lang-link::after {
+  content: "|";
+  margin-left: 0.5em;
 }
 
+.language-switcher .lang-active::after {
+  content: "|";
+  margin-left: 0.5em;
+}
+
+// =========================
+// FOOTER LINKS
+// =========================
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  margin-left: 0.5em;
+}
+
+.footer-links a::after {
+  content: "|";
+  margin-left: 0.5em;
+}
 
 // =========================
 // BLOG COMPONENTS
