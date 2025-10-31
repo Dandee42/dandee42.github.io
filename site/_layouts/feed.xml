@@ -1,0 +1,41 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign localized_posts = site.posts | where: "lang", lang %}
+{% capture post_url %}{{ site.url }}{{ site.baseurl }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}{% endcapture %}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title[lang] }} - {{ site.tagshort[lang] }}</title>
+    <link>{{ site.url }}{{ site.baseurl }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>{{ site.description[lang] }}</description>
+    <language>{{ lang }}</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% if site.photo %}
+    <image>
+      <url>{{ site.url }}{{ site.baseurl }}/{{ site.photo }}</url>
+      <title>{{ site.title[lang] }}</title>
+      <link>{{ site.url }}</link>
+    </image>
+    {% endif %}
+    {% for post in localized_posts %}
+    <item>
+      <title>{{ post.title | escape }}</title>
+      <link>{{ post_url }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ post_url }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      {% if post.categories %}
+      {% for category in post.categories %}
+      <category>{{ category | xml_escape }}</category>
+      {% endfor %}
+      {% endif %}
+      <description><![CDATA[
+        {% if post.description %}{{ post.description }}{% else %}{{ post.lead | strip_html | truncatewords: 50 }}{% endif %}]]
+      ]]></description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

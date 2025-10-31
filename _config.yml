@@ -29,7 +29,6 @@ default_lang: "cs"
 exclude_from_localization:
   - assets/
   - sitemap.xml
-  - feed.xml
   - robots.txt
   - CNAME
   - docker.compose.yml
@@ -121,6 +120,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-polyglot
   - jekyll-last-modified-at
+  - jekyll-redirect-from
 
 # ----------------------------------------------------------
 # STYLE

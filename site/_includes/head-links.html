@@ -1,19 +1,18 @@
-  {% assign lang = site.active_lang | default: site.default_lang %}
-  <!-- Stylesheets, icons -->
-  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/assets/css/open-color.min.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | prepend: site.baseurl }}">
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | prepend: site.baseurl }}" >
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | prepend: site.baseurl }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | prepend: site.baseurl }}">
-  <link rel="manifest" href="{{ '/assets/site.webmanifest' | prepend: site.baseurl }}">
-  
-  <!-- Stylesheets, icons -->
-  {% if lang == site.default_lang %}
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title[lang] }}" href="{{ '/atom.xml' | absolute_url }}" />
-  {% else %}
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title[lang] }}" href="{{ '/' | append: lang | append: '/atom.xml' | absolute_url }}" />
-  {% endif %}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+{% assign lang = site.active_lang | default: site.default_lang %}
+<!-- Stylesheets, icons -->
+<link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ '/assets/css/open-color.min.css' | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ '/assets/css/syntax.css' | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | prepend: site.baseurl }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | prepend: site.baseurl }}">
+<link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | prepend: site.baseurl }}" >
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | prepend: site.baseurl }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | prepend: site.baseurl }}">
+<link rel="manifest" href="{{ '/assets/site.webmanifest' | prepend: site.baseurl }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+<!-- RSS Feed -->
+{% if lang == site.default_lang %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title[lang] }}" href="{{ '/feed.xml' | absolute_url }}" />
+{% else %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title[lang] }}" href="{{ '/' | append: lang | append: '/feed.xml' | absolute_url }}" />
+{% endif %}
