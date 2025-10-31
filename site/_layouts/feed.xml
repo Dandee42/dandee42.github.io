@@ -17,7 +17,7 @@ layout: null
     {% if site.photo %}
     <image>
       <url>{{ site.url }}{{ site.baseurl }}/{{ site.photo }}</url>
-      <title>{{ site.title[lang] }}</title>
+      <title>{{ site.title[lang] }} - {{ site.tagshort[lang] }}</title>
       <link>{{ site.url }}</link>
     </image>
     {% endif %}
@@ -33,7 +33,7 @@ layout: null
       {% endfor %}
       {% endif %}
       <description><![CDATA[
-        {% if post.description %}{{ post.description }}{% else %}{{ post.lead | strip_html | truncatewords: 50 }}{% endif %}]]
+        {% if post.lead %}{{ post.lead }}{% else %}{{ post.description | strip_html | truncatewords: 50 }}{% endif %}]]
       ]]></description>
     </item>
     {% endfor %}
