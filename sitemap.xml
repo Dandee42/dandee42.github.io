@@ -1,166 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-
-
-  
-    
-      
-    
-  
-    
-      
-        
-        <url>
-          
-            <loc>https://daniel-hladik.cz/cv/</loc>
-          
-          
-            <lastmod>2025-10-31T20:49:24+00:00</lastmod>
-          
-        </url>
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-        
-        <url>
-          
-            <loc>https://daniel-hladik.cz/</loc>
-          
-          
-            <lastmod>2025-10-31T20:49:24+00:00</lastmod>
-          
-        </url>
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-        
-        <url>
-          
-            <loc>https://daniel-hladik.cz/blog/</loc>
-          
-          
-            <lastmod>2025-10-31T20:49:24+00:00</lastmod>
-          
-        </url>
-      
-    
   
 
   
-    
+    <sitemap>
+      
+        <loc>https://daniel-hladik.cz/sitemap_cs.xml</loc>
+      
+      <lastmod>2025-11-01T14:00:33+00:00</lastmod>
+    </sitemap>
+  
+    <sitemap>
+      
+        <loc>https://daniel-hladik.cz/sitemap_en.xml</loc>
+      
+      <lastmod>2025-11-01T14:00:33+00:00</lastmod>
+    </sitemap>
   
 
-
-
-  
-    
-      
-    
-  
-    
-      
-        
-        <url>
-          
-            <loc>https://daniel-hladik.cz/en/cv/</loc>
-          
-          
-            <lastmod>2025-10-31T20:49:24+00:00</lastmod>
-          
-        </url>
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-        
-        <url>
-          
-            <loc>https://daniel-hladik.cz/en/</loc>
-          
-          
-            <lastmod>2025-10-31T20:49:24+00:00</lastmod>
-          
-        </url>
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-        
-        <url>
-          
-            <loc>https://daniel-hladik.cz/en/blog/</loc>
-          
-          
-            <lastmod>2025-10-31T20:49:24+00:00</lastmod>
-          
-        </url>
-      
-    
-  
-
-  
-    
-  
-
-
-
-</urlset>
+</sitemapindex>
