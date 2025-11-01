@@ -5,7 +5,7 @@ page_id: template-post
 title: Template post CS
 description: A short post to demonstrate the layout description.
 lead: A short post to demonstrate the layout.
-slug: template-post-slug
+slug: /template-post-slug
 reading_time: 8 min
 image: /assets/files/photo.png
 category: 
