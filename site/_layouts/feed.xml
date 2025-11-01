@@ -3,7 +3,7 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 {% assign lang = page.lang | default: site.default_lang %}
-{% assign localized_posts = site.posts | where: "lang", lang %}
+{% assign localized_posts = site.posts | where: "lang", lang | sort: "date" | reverse | slice: 0, 10 %}
 {% capture post_url %}{{ site.url }}{{ site.baseurl }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}{% endcapture %}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
