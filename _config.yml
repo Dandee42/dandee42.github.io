@@ -6,14 +6,14 @@ title:
   cs: Daniel Hladík
   en: Daniel Hladik
 description:
-  cs: Propojuji zkušenosti z online marketingu s IT světem
-  en: I connect online marketing experience with the IT world
+  cs: Automatizuji svět kolem sebe – od testů po firemní procesy.
+  en: I automate the world around me – from tests to business processes.
 taglong:
-  cs: Online markeťák v IT světě
-  en: Online marketer in the IT world
+  cs: Automation Engineer
+  en: Automation Engineer
 tagshort:
-  cs: online markeťák v IT světě
-  en: online marketer in the IT world
+  cs: automation engineer
+  en: automation engineer
 
 baseurl: ""
 url: https://daniel-hladik.cz
@@ -29,6 +29,8 @@ default_lang: "cs"
 exclude_from_localization:
   - assets/
   - sitemap.xml
+  - sitemap_cs.xml
+  - sitemap_en.xml
   - robots.txt
   - CNAME
   - docker.compose.yml

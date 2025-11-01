@@ -13,17 +13,20 @@ At the beginning of 2024, I decided to make a major career change and began work
 
 Gradually, I learned not only how to test manually, but also how to automate tests using **Playwright** and Selenium, create simple applications in the **Django** platform, and later discover the potential of process automation using **n8n**.
 
-## Why did I switch to the IT world?
-In one of my positions as an online marketer, I was lucky enough to get a glimpse behind the scenes of programmers developing an e-shop, which opened up a whole new world for me. I enjoyed being involved in the development of the e-shop step by step, coming up with new functionalities, testing, and proposing suitable solutions to current problems. I believe that this experience provided me with a solid foundation for a career change.
+## Why IT and automation
+In one of my positions as an online marketer, I was fortunate enough to be able to look over the shoulders of programmers developing an e-shop, which opened up a whole new world for me. I enjoyed participating in the development of the e-shop step by step, coming up with new functionalities, testing, and proposing suitable solutions to current problems.
+
+This experience inspired me to switch to IT and laid the foundation for my current career path – **test automation and business workflow automation**.
 
 <div id="continue"></div>
-## Where I am currently headed and what I can offer you
-My experience in **e-commerce** and online marketing continues to help me better understand the context when testing e-shops. Currently, I focus primarily on test automation using **Playwright** and other tools, process automation using **n8n**, which has impressed me with its capabilities, and web application development.
 
-I am now only marginally involved in online marketing and want to leave it completely in the future.
+## Where I am currently headed and what I can offer you
+My experience in **e-commerce** and online marketing continues to help me better understand the context of e-shop testing. Currently, I focus primarily on test automation using **Playwright**, but also on process automation using **n8n**, which has impressed me with its capabilities.
+
+My goal is to create solutions that save time, minimize errors, and simplify work for teams and companies.
 
 ## What do I know?
-I have basic experience in developing and testing web applications.
+I have experience in developing and testing web applications.
 
 I am proficient in the following technologies and tools:
 
