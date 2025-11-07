@@ -52,7 +52,7 @@ Or a numbered list:
 
 ## Image
 
-![Image caption](/assets/files/images/photo..png)
+![Image caption](/assets/files/photo.png)
 
 ---
 
