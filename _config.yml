@@ -34,6 +34,8 @@ exclude_from_localization:
   - robots.txt
   - CNAME
   - docker.compose.yml
+  - service.html
+  - business_sector.html
 
 parallel_localization: false # set to true if you have a lot of posts/pages (doesn't work on Windows)
 
@@ -81,6 +83,26 @@ exclude:
 permalink: /blog/:slug/
 
 # ----------------------------------------------------------
+# COLLECTIONS
+# ----------------------------------------------------------
+
+collections:
+  pages:
+    output: true
+
+# ----------------------------------------------------------
+# DATA PAGES GENERATOR
+# ----------------------------------------------------------
+page_gen-dirs: true
+
+page_gen:
+  - data: 'services_cs'
+    template: 'service'
+    name: 'id'
+    dir: 'services'
+    filter: 'published'
+
+# ----------------------------------------------------------
 # AUTOPAGES (CATEGORIES, TAGS)
 # ----------------------------------------------------------
 
@@ -123,6 +145,7 @@ plugins:
   - jekyll-polyglot
   - jekyll-last-modified-at
   - jekyll-redirect-from
+  - jekyll-datapage-generator
 
 # ----------------------------------------------------------
 # STYLE

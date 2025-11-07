@@ -1,0 +1,8 @@
+- id: facturation-automation
+  published: true
+  title: "Automatizace fakturace test"
+  description: "Propojíme váš fakturační systém s bankou a e-mailem."
+- id: marketing-automation
+  published: false
+  title: "Marketingová automatizace"
+  description: "Nastavíme automatické e-maily a kampaně."
