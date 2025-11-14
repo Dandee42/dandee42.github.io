@@ -16,7 +16,7 @@ form:
   email_subject: "Nová zpráva přes kontaktní formulář - CS"
   mailto_subject: "Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)"
   from_name: "daniel-hladik.cz"
-  success_page_url: "/form-success/"
+  success_page_url: "https://daniel-hladik.cz/form-success/"
 success_page:
   title: "Úspěšně<br>odesláno"
   subtitle: "...a teď už zbývá jen<br>čekat na odpověď."
