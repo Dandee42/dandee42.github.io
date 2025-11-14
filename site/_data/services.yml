@@ -1,4 +1,5 @@
 - page_id: marketing-automation
+  type: service
   slug: marketing-automation
   published: true
   show_in_list: true
@@ -22,6 +23,7 @@
       free_consultation: "I want a free consultation"
 
 - page_id: marketing-automation-2
+  type: service
   slug: marketing-automation-2
   published: true
   show_in_list: true

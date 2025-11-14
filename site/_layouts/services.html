@@ -1,17 +1,11 @@
 ---
-layout: services
-page_id: services
-lang: cs
-permalink: /services/
-title: Služby
-description: Nabízím automatizace do každé firmy
-published: true
+layout: page
 ---
-
-
-# Jaké jsou moje služby?
-
 {% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+<h1>{{ trans.datapages_services.h1 }}</h1>
+
 <ul>
 {% for service in site.data.services %}
   {% if service.published and service.show_in_list %}

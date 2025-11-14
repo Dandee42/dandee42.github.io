@@ -86,7 +86,7 @@
   </script>
   <!-- JSON-LD POST END -->
 
-{% else if layout == "service" %}
+{% elsif page.type == "service" %}
   <!-- SERVICE PAGE -->
   {% assign og_title = page.lang[lang].title | default: page.title %}
   {% assign og_description = page.lang[lang].description | default: site.description[lang] %}
@@ -165,7 +165,5 @@
   }
   </script>
   <!-- JSON-LD PAGE END -->
-
-
 
 {% endif %}
