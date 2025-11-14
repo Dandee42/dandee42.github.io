@@ -1,7 +1,13 @@
 ---
 layout: page
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.description }}</p>
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
 
-<p><a href="/kontakt/">Chci konzultaci zdarma</a></p>
+<p class="blog-back"><a href="{{ '/services/' | relative_url }}">{{ trans.datapages_services.all_services_link }}</a></p>
+
+<h1>{{ page.lang[lang].title }}</h1>
+<p>{{ page.lang[lang].lead }}</p>
+{{ page.lang[lang].text }}
+
+<p><a href="#contact-form">{{ page.lang[lang].free_consultation }}</a></p>

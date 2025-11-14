@@ -1,0 +1,45 @@
+- page_id: marketing-automation
+  slug: marketing-automation
+  published: true
+  show_in_list: true
+  image:
+  lang:
+    cs:
+      title: "Marketingová automatizace"
+      description: "Nastavíme automatické e-maily a kampaně."
+      lead: "Zefektivněte svůj marketing pomocí automatizace."
+      text: |
+        <h2>Vítejte u Marketingové automatizace</h2>
+        <p>Nastavíme automatické e-maily, kampaně a sledování výsledků.</p>
+      free_consultation: "Chci konzultaci zdarma"
+    en:
+      title: "Marketing Automation"
+      description: "We will set up automated email campaigns."
+      lead: "Streamline your marketing with automation."
+      text: |
+        <h2>Welcome to Marketing Automation</h2>
+        <p>We will configure automated emails, campaigns, and performance tracking.</p>
+      free_consultation: "I want a free consultation"
+
+- page_id: marketing-automation-2
+  slug: marketing-automation-2
+  published: true
+  show_in_list: true
+  image:
+  lang:
+    cs:
+      title: "Marketingová automatizace 2"
+      description: "Nastavíme automatické e-maily a kampaně."
+      lead: "Zefektivněte svůj marketing pomocí automatizace."
+      text: |
+        <h2>Vítejte u Marketingové automatizace 2</h2>
+        <p>Nastavíme automatické e-maily, kampaně a sledování výsledků.</p>
+      free_consultation: "Chci konzultaci zdarma"
+    en:
+      title: "Marketing Automation 2"
+      description: "We will set up automated email campaigns."
+      lead: "Streamline your marketing with automation."
+      text: |
+        <h2>Welcome to Marketing Automation 2</h2>
+        <p>We will configure automated emails, campaigns, and performance tracking.</p>
+      free_consultation: "I want a free consultation"

@@ -6,7 +6,9 @@
   <title>
     {% if page.layout == "home" %}
     {{ site.title[lang] }} &middot; {{ site.tagshort[lang] }}
-    {% else %}
+    {% else if page.layout == "service" %}
+    {{ page.lang[lang].title }} &middot; {{ site.title[lang] }}
+    {% else if %}
     {{ page.title }} &middot; {{ site.title[lang] }}
     {% endif %}
   </title>
