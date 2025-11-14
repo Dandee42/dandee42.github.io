@@ -1,5 +1,5 @@
 ---
-layout: cv
+layout: page
 page_id: cv
 lang: en
 permalink: /cv/

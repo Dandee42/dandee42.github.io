@@ -11,7 +11,6 @@ published: true
 ---
 {% assign trans = site.data[site.active_lang].blog %}
 
-{% include side-images.html %}
 <h1>Blog</h1>
 {% if site.posts.size > 0 %}
   {% include search-input.html %}
