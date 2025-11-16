@@ -8,6 +8,11 @@ layout: page
 
 <h1>{{ page.lang[lang].title }}</h1>
 <p>{{ page.lang[lang].lead }}</p>
+{% if page.image %}
+    <div class="post-hero-image">
+    <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}" loading="lazy">
+    </div>
+{% endif %}
 {{ page.lang[lang].text }}
 
 <p><a href="#contact-form">{{ page.lang[lang].free_consultation }}</a></p>

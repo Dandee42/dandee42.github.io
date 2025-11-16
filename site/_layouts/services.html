@@ -6,7 +6,7 @@ layout: page
 
 <h1>{{ trans.datapages_services.h1 }}</h1>
 
-<ul>
+<ul class="services-list">
 {% for service in site.data.services %}
   {% if service.published and service.show_in_list %}
     {% if lang == site.default_lang %}
@@ -14,10 +14,15 @@ layout: page
     {% else %}
         {% assign full_url = site.url | append: '/' | append: lang | append: clean_url %}
     {% endif %}
-    <li>
-      <a href="{{ full_url }}/services/{{ service.slug }}"><h2>{{ service.lang[lang].title }}</h2></a>
-      <p>{{ service.lang[lang].description }}</p>
-      <a href="{{ full_url }}/services/{{ service.slug }}">Zjistit více</a>
+    <li class="service-item">
+      <span class="material-symbols-outlined service-icon">{{ service.icon }}</span>
+      <a class="service-title" href="{{ full_url }}/services/{{ service.slug }}">
+        <h2>{{ service.lang[lang].title }}</h2>
+      </a>
+      <p class="service-description">{{ service.lang[lang].description }}</p>
+      <a class="service-link" href="{{ full_url }}/services/{{ service.slug }}">
+        {{ trans.datapages_services.service_link }}
+      </a>
     </li>
   {% endif %}
 {% endfor %}
