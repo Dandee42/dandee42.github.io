@@ -6,6 +6,8 @@ layout: page
 
 <h1>{{ trans.datapages_services.h1 }}</h1>
 
+{% include schedule-meeting-link.html %}
+
 <ul class="services-list">
 {% for service in site.data.services %}
   {% if service.published and service.show_in_list %}

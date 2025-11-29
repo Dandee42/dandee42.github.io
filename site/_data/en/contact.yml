@@ -22,3 +22,14 @@ success_page:
   subtitle: "...and now all that’s left<br>is to wait for a reply."
   paragraph: "I’ll get back to you as soon as possible.<br><br>You can return to the home page."
   back_to_home_url: "/en/"
+scheduled_meeting:
+  title: "Schedule a consultation with me"
+  subtitle: "Choose a time that suits you."
+  paragraph: "Click the button below and choose a consultation date.<br><br>Looking forward to our cooperation!"
+  submit_button: "Arrange FREE consultation"
+  link: "https://calendly.com/daniel-hladik/30min"
+scheduled_meeting_success_page:
+  title: "Sent<br>successfully"
+  subtitle: "...you will soon receive<br>an confirmation email"
+  paragraph: "Please confirm your attendance in your calendar<br>so that I know I can count on you.<br><br>If you have not received an email, please check your spam folder first.<br>Alternatively, contact me and I will send you an invitation. <br><br>...and now all that's left is to look forward to the meeting :)<br><br>You can return to the home page."
+  back_to_home_url: "/en/"
