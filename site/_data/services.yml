@@ -1,6 +1,7 @@
 - page_id: marketing-automation
   type: service
   slug: marketing-automation
+  date: 2025-11-28 +01:00
   published: true
   show_in_list: true
   image: /assets/files/photo.png
@@ -26,6 +27,7 @@
 - page_id: marketing-automation-2
   type: service
   slug: marketing-automation-2
+  date: 2025-11-28 +01:00
   published: true
   show_in_list: true
   image:

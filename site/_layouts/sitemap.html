@@ -4,59 +4,93 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-{% for lang in site.languages %}
-{% unless lang == page.unless_lang %}
+{% assign lang = page.lang %}
 
-  {% for node in site.pages %}
+{% if lang == "cs" %}
+  {% for node in site.html_pages %}
     {% unless site.exclude_from_localization contains node.path %}
-      {% if node.layout and node.sitemap != false and node.published != false %}
-        {% assign clean_url = node.url | replace: 'index.html', '' %}
-        <url>
-          {% if lang == site.default_lang %}
+      {% if node.sitemap != false %}
+          {% assign clean_url = node.url | replace: 'index.html', '' %}
+          <url>
             <loc>{{ clean_url | absolute_url }}</loc>
-          {% else %}
-            <loc>{{ '/' | append: lang | append: clean_url | absolute_url }}</loc>
-          {% endif %}
-          {% if node.last_modified_at and node.last_modified_at != node.date %}
-            <lastmod>{{ node.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
-          {% elsif node.date %}
-            <lastmod>{{ node.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
-          {% endif %}
-          {% if clean_url == '/' or clean_url == '/en/' %}
-            <changefreq>weekly</changefreq>
-            <priority>1.0</priority>
-          {% elsif clean_url contains '/blog/' and clean_url.size == 6 %}
-            <changefreq>weekly</changefreq>
-            <priority>0.9</priority>
-          {% elsif clean_url contains '/blog/' %}
-            <changefreq>monthly</changefreq>
-            <priority>0.7</priority>
-          {% else %}
-            <changefreq>monthly</changefreq>
-            <priority>0.8</priority>
-          {% endif %}
-        </url>
+            {% if node.last_modified_at %}
+              <lastmod>{{ node.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+            {% elsif node.date %}
+              <lastmod>{{ node.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+            {% elsif clean_url contains '/services/' %}
+              <lastmod>{{ "now" | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+            {% endif %}
+            {% if clean_url == '/' or clean_url == '/en/' %}
+              <changefreq>weekly</changefreq>
+              <priority>1.0</priority>
+            {% elsif clean_url == '/blog/' %}
+              <changefreq>weekly</changefreq>
+              <priority>0.9</priority>
+            {% elsif clean_url == '/services/' %}
+              <changefreq>monthly</changefreq>
+              <priority>0.9</priority>
+            {% else %}
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            {% endif %}
+          </url>
       {% endif %}
     {% endunless %}
   {% endfor %}
 
-  {% assign posts = site.posts %}
-  {% for post in posts %}
-      {% assign post_link = post.url %}
+  {% for post in site.posts %}
+    {% assign post_lang = post.lang | default: site.default_lang %}
       <url>
-        {% if lang == site.default_lang %}
-          <loc>{{ post_link | absolute_url }}</loc>
-        {% else %}
-          <loc>{{ '/' | append: lang | append: post_link | absolute_url }}</loc>
-        {% endif %}
+        <loc>{{ post.url | absolute_url }}</loc>
         <lastmod>{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
       </url>
   {% endfor %}
 
-{% endunless %}
+{% elsif lang == "en" %}
+    {% for node in site.html_pages %}
+        {% assign clean_url = node.url | replace: 'index.html', '' %}
+        {% assign full_url = site.url | append: '/' | append: lang | append: clean_url %}
+    {% unless site.exclude_from_localization contains node.path %}
+      {% if node.sitemap != false %}
+          <url>
+            <loc>{{ full_url | absolute_url }}</loc>
+            {% if node.last_modified_at %}
+              <lastmod>{{ node.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+            {% elsif node.date %}
+              <lastmod>{{ node.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+            {% elsif clean_url contains '/services/' %}
+              <lastmod>{{ "now" | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+            {% endif %}
+            {% if clean_url == '/' or clean_url == '/en/' %}
+              <changefreq>weekly</changefreq>
+              <priority>1.0</priority>
+            {% elsif clean_url == '/blog/' %}
+              <changefreq>weekly</changefreq>
+              <priority>0.9</priority>
+            {% elsif clean_url == '/services/' %}
+              <changefreq>monthly</changefreq>
+              <priority>0.9</priority>
+            {% else %}
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            {% endif %}
+          </url>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
 
-{% endfor %}
-
+  {% for post in site.posts %}
+      {% assign clean_url = post.url | replace: 'index.html', '' %}
+      {% assign full_url = site.url | append: '/' | append: lang | append: clean_url %}
+      <url>
+        <loc>{{ full_url | absolute_url }}</loc>
+        <lastmod>{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+  {% endfor %}
+{% else%}
+{% endif %}
 </urlset>
