@@ -16,3 +16,29 @@ pre,code {
     padding: 0;
   }
 }
+
+code {
+  font-family: var(--type-mono);
+  padding: 0.15em 0.35em;
+  border-radius: 0.35em;
+
+  font-size: 0.8em;
+  background: var(--alert-border);
+  color: var(--color-text);
+}
+
+pre {
+  font-family: var(--type-mono);
+  font-size: 0.75em;
+  line-height: 1.5;
+
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+
+  background: var(--code-block-bg);
+  color: var(--color-text);
+  
+  border: 1px solid var(--code-block-border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
