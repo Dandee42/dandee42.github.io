@@ -79,7 +79,7 @@ Protože jednotlivé měsíce mají rozdílný počet dní, je vhodné buňky od
 
 Výsledný přehled může potom vypadat takto:
 
-![Image caption](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05.jpg)
+![Výsledný přehled se zaznamenanými spánkovými údaji](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05.jpg)
 
 Pokud bychom chtěli **sledovat data mezi jednotlivými roky**, založíme si nový list s přehledovou tabulkou a jen změníme na požadovaný rok v buňce `A1`.
 
@@ -106,9 +106,9 @@ Nezapomeň prosím vyplnit dnešní formulář:&lt;br&gt;&lt;br&gt;
 
 V Google Apps Script **nastavíme spouštěč** dané funkce na příslušnou ranní hodinu, kdy chceme dostávat notifikaci.
 
-Připomínku si nemusíme posílat pouze emailem, ale můžeme například vložit odkaz do **Google Keeps** nebo do **Google kalendáře** a nastavit si pravidelnou upomínku. Záleží, co jsme zvyklí používat a podle toho zvolíme nástroj, který nám pomůže připomenout si každé ráno zápis do formuláře.
+![Google Apps Script a nastavení automatických emailových upomínek](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06.jpg)
 
-![Image caption](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06.jpg)
+Připomínku si nemusíme posílat pouze emailem, ale můžeme například vložit odkaz do **Google Keeps** nebo do **Google kalendáře** a nastavit si pravidelnou upomínku. Záleží, co jsme zvyklí používat a podle toho zvolíme nástroj, který nám pomůže připomenout si každé ráno zápis do formuláře.
 
 A máme hotovo! :)
 
@@ -117,5 +117,5 @@ A máme hotovo! :)
 {: .alert .alert-idea }
 
 > **Potřebujete pomoct s touto či jinou automatizací?**
-> _<a href="#contact-form">Napište mi zprávu</a> nebo si se mnou domluvte <a href="#contact-details">30 min konzultaci ZDARMA</a>._
+> _<a href="#contact-form">Napište mi zprávu</a> nebo si se mnou domluvte <a href="https://zapti.me/daniel-hladik/konzultace-zdarma">30 min konzultaci ZDARMA</a>._
 {: .alert .alert-info }

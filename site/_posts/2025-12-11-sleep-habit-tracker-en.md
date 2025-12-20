@@ -53,7 +53,7 @@ For better context, anyone can add other parameters as they wish, e.g.: a note f
 
 ![Entering form fields](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02.jpg)
 
-Let's send the first **test record by filling in the form**. The values will be automatically written to the `sleep_tracking_data` sheet. We add a new column in the second position after the timestamp and insert the formula `=DATE(YEAR(A2);MONTH(A2);DAY(A2))` to **clean the date with the timestamp**. This is so that the function will always find the exact date for us to look up the value. In the last column (for my example, column `G`), we add a **calculated sleep duration** column by simply the difference between the time of going to sleep and the time of waking up.
+Let's send the first **test record by filling in the form**. The values will be automatically written to the `sleep_tracking_data` sheet. We add a new column in the second position after the timestamp and insert the formula `=DATE(YEAR(A2), MONTH(A2), DAY(A2))` to **clean the date with the timestamp**. This is so that the function will always find the exact date for us to look up the value. In the last column (for my example, column `G`), we add a **calculated sleep duration** column by simply the difference between the time of going to sleep and the time of waking up.
 
 ![Google Sheets table with data from Google Forms](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03.jpg)
 
@@ -66,7 +66,7 @@ In the overview table on the `sleep_calendar` sheet we create the month numbers 
 To see the total sleep duration for a specific recorded day, we write the following formula in cell `B2` and copy it to all the fields in our matrix:
 
 <pre><code>
-=XLOOKUP(DATUM($A$1; A$1; $A2); sleep_tracking_data!$B$2:$B$999; sleep_tracking_data!$G$2:$G$999; "")
+=XLOOKUP(DATE($A$1, A$1, $A2), sleep_tracking_data!$B$2:$B$999, sleep_tracking_data!$G$2:$G$999,"")
 </code></pre>
 
 The format of the cells will need to be modified as `HH:mm` so that it displays nicely formatted as time, otherwise we'll just see some number that doesn't say anything.
@@ -79,7 +79,7 @@ Since the months have different number of days, it is useful to colour the cells
 
 The resulting report can then look like this:
 
-![Image caption](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05.jpg)
+![The resulting report with tracked sleep data](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05.jpg)
 
 If we wanted to **track data between years**, we'd create a new sheet with a spreadsheet and just change to the desired year in cell `A1`.
 
@@ -106,9 +106,9 @@ Please remember to fill out today's form:&lt;br&gt;&lt;br&gt;
 
 In Google Apps Script, **set the trigger** of the function to the appropriate time in the morning when we want to receive the notification.
 
-We don't have to send a reminder just by email, but we can, for example, put a link to **Google Keeps** or **Google Calendar** and set up a regular reminder. It depends on what we're used to using, and we'll choose a tool to help us remind ourselves every morning to enter the form.
+![Google apps Script setting the automatic email notifications](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06.jpg)
 
-![Image caption](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06.jpg)
+We don't have to send a reminder just by email, but we can, for example, put a link to **Google Keeps** or **Google Calendar** and set up a regular reminder. It depends on what we're used to using, and we'll choose a tool to help us remind ourselves every morning to enter the form.
 
 And we're done! :)
 
@@ -117,5 +117,5 @@ And we're done! :)
 {: .alert .alert-idea }
 
 > **Need help with this or other automation?**
-> _ <a href="#contact-form">Email me</a> or schedule a FREE <a href="#contact-details">30 min consultation</a>._
+> _<a href="#contact-form">Email me</a> or schedule a <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">FREE 30 min consultation</a>._
 {: .alert .alert-info }
