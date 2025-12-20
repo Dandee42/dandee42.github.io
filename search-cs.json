@@ -3,4 +3,12 @@
 
 [
 
+  {
+    "title": "Jak sledovat svůj spánek pomocí Google nástrojů",
+    "url": "/blog/sleep-habit-tracker/",
+    "excerpt": "Chcete sledovat svůj spánek bez nutnosti používat specializované aplikace nebo drahé wearables? V tomto článku se podělím o to, jak jsem si vytvořil vlastní spánkový tracker přímo v Google Sheets a rozšířil ho o emailovou notifikaci pomocí Google Apps Scriptu.",
+    "lead": "Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí nástrojů, ke kterým má každý přístup zdarma v rámci svého Google účtu.",
+    "tags": "life-hacks, google-sheets, google-apps-script, gmail"
+  }
+
 ]
