@@ -117,5 +117,5 @@ A máme hotovo! :)
 {: .alert .alert-idea }
 
 > **Potřebujete pomoct s touto či jinou automatizací?**
-> _<a href="#contact-form">Napište mi zprávu</a> nebo si se mnou domluvte <a href="https://zapti.me/daniel-hladik/konzultace-zdarma">30 min konzultaci ZDARMA</a>._
+> _[Napište mi zprávu](#contact-form) nebo si se mnou domluvte [30 min konzultaci ZDARMA](https://zapti.me/daniel-hladik/konzultace-zdarma)._
 {: .alert .alert-info }

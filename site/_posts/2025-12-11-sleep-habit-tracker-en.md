@@ -117,5 +117,5 @@ And we're done! :)
 {: .alert .alert-idea }
 
 > **Need help with this or other automation?**
-> _<a href="#contact-form">Email me</a> or schedule a <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">FREE 30 min consultation</a>._
+> _[Email me](#contact-form) or schedule a <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">FREE 30 min consultation</a>._
 {: .alert .alert-info }
