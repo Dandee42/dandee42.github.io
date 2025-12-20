@@ -1,0 +1,49 @@
+<div class="tags-slider-wrapper">
+  <button class="tags-prev">{% include svg/nav-arrow-left.svg %}</button>
+  <div class="tags-slider">
+    {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq %}
+    {% for tag in all_tags %}
+      <div class="post-tags">
+        <a href="/tag/{{ tag | slugify }}/">
+          {{ tag }} ({{ site.posts | where_exp:"p","p.tags contains tag" | size }})
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="tags-next">{% include svg/nav-arrow-right.svg %}</button>
+</div>
+
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+  const sliderWrapper = document.querySelector(".tags-slider-wrapper");
+  const slider = sliderWrapper.querySelector(".tags-slider");
+  const prevBtn = sliderWrapper.querySelector(".tags-prev");
+  const nextBtn = sliderWrapper.querySelector(".tags-next");
+
+  function updateArrows() {
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    prevBtn.style.display = slider.scrollLeft > 0 ? "inline-flex" : "none";
+    nextBtn.style.display = slider.scrollLeft < maxScroll ? "inline-flex" : "none";
+  }
+
+  prevBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: -slider.clientWidth,
+      behavior: "smooth"
+    });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: slider.clientWidth,
+      behavior: "smooth"
+    });
+  });
+
+  slider.addEventListener("scroll", updateArrows);
+  window.addEventListener("resize", updateArrows);
+
+  updateArrows();
+});
+</script>
