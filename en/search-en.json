@@ -3,4 +3,12 @@
 
 [
 
+  {
+    "title": "How to track your sleep using Google tools",
+    "url": "/en/blog/sleep-habit-tracker/",
+    "excerpt": "Want to track your sleep without the need for specialized apps or expensive wearables? In this article, I’ll share how I created my own sleep tracker right in Google Sheets and extended it with email notification using Google Apps Script.",
+    "lead": "I&#39;ll show you how to track your sleep routine using tools that everyone can access for free within their Google account.",
+    "tags": "life-hacks, google-sheets, google-apps-script, gmail"
+  }
+
 ]
