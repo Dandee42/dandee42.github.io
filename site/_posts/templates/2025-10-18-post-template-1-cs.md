@@ -79,7 +79,7 @@ Or a numbered list:
 ### Inline code
 The text contains `short_code`.
 
-<pre>
+<pre><code>
 // Funkce, která generuje náhodné číslo mezi min a max
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -104,4 +104,4 @@ async function simulateWait(seconds) {
   await simulateWait(2);
   console.log("Hotovo!");
 })();
-</pre>
+</code></pre>
