@@ -13,42 +13,28 @@ tags: [jekyll, template-tag, tips]
 published: false
 ---
 
-Insert images in size 1200 × 630 px
+Insert HERO images in ratio 16:9 (1600×900 px) - 400–600 KB
+
+LinkedIn feed images in ratio 1.91:1 (1200 × 627px) - ≤300 KB
+
+Facebook feed images in ratio 1.91:1 (1200 × 630px) - ≤300 KB
 
 - toc
 {: toc }
 
 
-> **Pozor**
-> Tohle je varování pro čtenáře.
-{: .alert .alert-warning }
-
-> **Info**
-> Nějaká doplňující informace.
-{: .alert .alert-info }
-
-> **Nápad**
-> Zajímavý tip nebo myšlenka.
-{: .alert .alert-idea }
-
-
-> **Úspěch**
-> Něco se povedlo.
-{: .alert .alert-success }
-
-> **Chyba**
-> Tohle je chyba.
-{: .alert .alert-error }
-
-
 This is a Jekyll (Liquid) comment that is not generated at all.
 
+## Typography examples:
+Introductory paragraph of text. Here you can write in normal Czech, **fat**, _cursive_.
 
-Introductory paragraph of text. Here you can write in normal Czech, **fat**, _cursive_ or even [links](https://example.com).
+## Links 
+[Click here](https://example.com).
 
 ---
 
 ## Subtitle (level 2)
+### Subtitle (level 3)
 
 Here you can continue the text. For example, a list:
 
@@ -64,21 +50,48 @@ Or a numbered list:
 
 ---
 
-## Quote
+## Quotes and alerts
 
-> "This is a sample quote."
+> "_This is a sample quote._"
+
+> **Pozor**
+> _Tohle je varování pro čtenáře._
+{: .alert .alert-warning }
+
+> **Info**
+> _Nějaká doplňující informace._
+{: .alert .alert-info }
+
+> **Nápad**
+> _Zajímavý tip nebo myšlenka._
+{: .alert .alert-idea }
+
+
+> **Úspěch**
+> _Něco se povedlo._
+{: .alert .alert-success }
+
+> **Chyba**
+> _Tohle je chyba._
+{: .alert .alert-error }
 
 ---
 
-## Image
+## Images
 
-![Image caption](/assets/files/images/photo..png)
+- Insert post images in ratio 4:3 - width 800–1200px - 100–300 KB
 
+This is image with light box effect.
+![Image caption](/assets/files/photo.png){: .post-image }
+
+This is image without light box effect.
+![Image caption](/assets/files/photo.png)
 ---
 
-### Inline code
+## Inline code
 The text contains `short_code`.
 
+## Code block
 <pre><code>
 // Funkce, která generuje náhodné číslo mezi min a max
 function getRandomNumber(min, max) {
