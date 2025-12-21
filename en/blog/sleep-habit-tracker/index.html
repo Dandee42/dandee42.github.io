@@ -70,7 +70,7 @@
       "name": "Daniel Hladik"
     },
     "datePublished": "2025-12-11T00:00:00+00:00",
-    "dateModified": "2025-12-20T23:40:52+00:00",
+    "dateModified": "2025-12-21T14:14:28+00:00",
     "description": "I'll show you how to track your sleep routine using Google Sheets for free. Without apps and wearables - with Google Form and automatic reminders.",
     "inLanguage": "en_US",
     "headline": "How to track your sleep using Google tools",
@@ -201,7 +201,7 @@
 <p>Let’s open a new Google sheets file. Rename sheet 1 to e.g. <code class="language-plaintext highlighter-rouge">sleep_calendar</code>. We will connect a form to the table, through which we will enter sleep data every day.
 We can find the form creation in the top menu under the <code class="language-plaintext highlighter-rouge">Tools</code> tab and then click on <code class="language-plaintext highlighter-rouge">Create new form</code>. This will open a form in Google Forms where we define what we want to track. At the same time, a new sheet will be created in Google Sheets with records linked to the data from the completed form. We will name this sheet for example <code class="language-plaintext highlighter-rouge">sleep_tracking_data</code>.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-01.jpg" alt="Creating a new form via Google Forms" /></p>
+<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-01-a.jpg" alt="Creating a new form via Google Forms" class="post-image" /></p>
 
 <p>Since I’m not able to count to ten in the morning, I’ll write down the time I went to bed the night before and the time I woke up. I will then have the resulting time automatically calculated via a formula from the difference of these values.</p>
 
@@ -215,11 +215,11 @@ We can find the form creation in the top menu under the <code class="language-pl
 
 <p>For better context, anyone can add other parameters as they wish, e.g.: a note field or whether you stopped drinking and eating an hour and a half before bedtime, etc.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02.jpg" alt="Entering form fields" /></p>
+<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02-a.jpg" alt="Entering form fields" class="post-image" /></p>
 
 <p>Let’s send the first <strong>test record by filling in the form</strong>. The values will be automatically written to the <code class="language-plaintext highlighter-rouge">sleep_tracking_data</code> sheet. We add a new column in the second position after the timestamp and insert the formula <code class="language-plaintext highlighter-rouge">=DATE(YEAR(A2), MONTH(A2), DAY(A2))</code> to <strong>clean the date with the timestamp</strong>. This is so that the function will always find the exact date for us to look up the value. In the last column (for my example, column <code class="language-plaintext highlighter-rouge">G</code>), we add a <strong>calculated sleep duration</strong> column by simply the difference between the time of going to sleep and the time of waking up.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03.jpg" alt="Google Sheets table with data from Google Forms" /></p>
+<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03-a.jpg" alt="Google Sheets table with data from Google Forms" class="post-image" /></p>
 
 <p>Once we have the parameters defined, let’s move on to creating the summary table.</p>
 
@@ -243,7 +243,7 @@ We can find the form creation in the top menu under the <code class="language-pl
 
 <p>The resulting report can then look like this:</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05.jpg" alt="The resulting report with tracked sleep data" /></p>
+<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05-a.jpg" alt="The resulting report with tracked sleep data" class="post-image" /></p>
 
 <p>If we wanted to <strong>track data between years</strong>, we’d create a new sheet with a spreadsheet and just change to the desired year in cell <code class="language-plaintext highlighter-rouge">A1</code>.</p>
 
@@ -270,7 +270,7 @@ Please remember to fill out today's form:&lt;br&gt;&lt;br&gt;
 
 <p>In Google Apps Script, <strong>set the trigger</strong> of the function to the appropriate time in the morning when we want to receive the notification.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06.jpg" alt="Google apps Script setting the automatic email notifications" /></p>
+<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06-a.jpg" alt="Google apps Script setting the automatic email notifications" class="post-image" /></p>
 
 <p>We don’t have to send a reminder just by email, but we can, for example, put a link to <strong>Google Keeps</strong> or <strong>Google Calendar</strong> and set up a regular reminder. It depends on what we’re used to using, and we’ll choose a tool to help us remind ourselves every morning to enter the form.</p>
 
@@ -428,6 +428,112 @@ document.querySelectorAll('pre').forEach(pre => {
   });
 });
 </script>
+<div id="lightbox" class="lightbox">
+  <button class="prev">‹</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+  <button class="next">›</button>
+  <button class="close">×</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [...document.querySelectorAll(".post-image")];
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const caption = document.getElementById("lightbox-caption");
+
+  let current = 0;
+  let zoomed = false;
+  let startX = 0;
+  let endX = 0;
+
+  images.forEach((img, index) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => open(index));
+  });
+
+  function open(index) {
+    current = index;
+    updateImage();
+    resetZoom();
+    lightbox.classList.add("open");
+  }
+
+  function close() {
+    lightbox.classList.remove("open");
+    resetZoom();
+    lightboxImg.src = "";
+    caption.textContent = "";
+  }
+
+  function updateImage() {
+    const img = images[current];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || "";
+    caption.textContent = img.alt || "";
+  }
+
+  function move(step) {
+    if (zoomed) return;
+    current = (current + step + images.length) % images.length;
+    updateImage();
+    resetZoom();
+  }
+
+  document.querySelector(".prev").onclick = () => move(-1);
+  document.querySelector(".next").onclick = () => move(1);
+  document.querySelector(".close").onclick = close;
+
+  lightboxImg.addEventListener("click", e => {
+    zoomed = !zoomed;
+
+    if (zoomed) {
+      const rect = lightboxImg.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      lightboxImg.style.transformOrigin = `${x}% ${y}%`;
+      lightboxImg.classList.add("zoomed");
+    } else {
+      resetZoom();
+    }
+  });
+
+  function resetZoom() {
+    zoomed = false;
+    lightboxImg.classList.remove("zoomed");
+    lightboxImg.style.transform = "";
+    lightboxImg.style.transformOrigin = "";
+  }
+
+  document.addEventListener("keydown", e => {
+    if (!lightbox.classList.contains("open")) return;
+    if (e.key === "ArrowRight") move(1);
+    if (e.key === "ArrowLeft") move(-1);
+    if (e.key === "Escape") close();
+  });
+
+  lightbox.addEventListener("touchstart", e => {
+    if (zoomed) return;
+    startX = e.changedTouches[0].screenX;
+  });
+
+  lightbox.addEventListener("touchend", e => {
+    if (zoomed) return;
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const threshold = 50;
+    if (startX - endX > threshold) move(1);
+    if (endX - startX > threshold) move(-1);
+  }
+});
+</script>
 
 
 
@@ -455,6 +561,9 @@ document.querySelectorAll('pre').forEach(pre => {
         <input type="hidden" name="from_name" value="daniel-hladik.cz" />
         <input type="hidden" name="redirect" value="https://daniel-hladik.cz/en/form-success/" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+        <input type="hidden" name="title" value="How to track your sleep using Google tools">
+        <input type="hidden" name="url" value="https://daniel-hladik.cz/blog/sleep-habit-tracker/">
+        <input type="hidden" name="lang" value="en">
 
         <div class="form-group-container">
             <!-- Name -->
@@ -559,7 +668,7 @@ document.querySelectorAll('pre').forEach(pre => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2025-12-20T23:41:53+00:00">2025</time>
+  <small>&copy; <time datetime="2025-12-21T14:15:36+00:00">2025</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
