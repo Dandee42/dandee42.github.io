@@ -39,7 +39,7 @@ Pojďme se vrhnout na samotný proces tvorby aplikace.
 Otevřeme si nový Google sheets soubor. List 1 přejmenujeme na např. `sleep_calendar`. K tabulce napojíme formulář, přes který budeme každý den zadávat údaje o spánku.
 Tvorbu formuláře najdeme v horním menu na záložce `Nástroje` a poté klikneme na `Vytvořit nový formulář`. Otevře se nám formulář v Google Forms, kde si nadefinujeme, co chceme sledovat. Zároveň se nám v Google Sheets vytvoří nový list se záznamy napojenými na data z vyplněného formuláře. Pojmenujeme tento list např. `sleep_tracking_data`.
 
-![Vytvoření nového formuláře přes Google Forms](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-01.jpg)
+![Vytvoření nového formuláře přes Google Forms](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-01-a.jpg){: .post-image }
 
 Protože ráno nejsem schopný napočítat do desíti, budu si psát čas, v kolik hodin jsem šel spát večer předtím a čas, v kolik jsem se probudil. Poté si výsledný čas nechám automaticky spočítat přes vzorec z rozdílu těchto hodnot.
 
@@ -51,11 +51,11 @@ Já osobně tedy chci znát:
 
 Pro lepší kontext si každý může doplnit další parametry dle své potřeby, např.: pole s poznámkou nebo zda jste přestali pít a jíst hodinu a půl před spaním apod.
 
-![Zadání polí pro formulář](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02.jpg)
+![Zadání polí pro formulář](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02-a.jpg){: .post-image }
 
 Pošleme si první **zkušební záznam vyplněním formuláře**. Hodnoty se nám automaticky propíšou do listu `sleep_tracking_data`. Přidáme si nový sloupec na druhou pozici za časovou značku a dosadíme vzorcem `=DATUM(ROK(A2);MĚSÍC(A2);DEN(A2))` pro **očištění datumu o časový údaj**. Důvodem je, aby nám funkce pro vyhledání hodnoty vždy našla přesný údaj. Do posledního sloupce (u mě na příkladu sloupec `G`) přidáme **počítaný sloupec s délkou spánku** prostým rozdílem času ulehnutí ke spánku a času probuzení.
 
-![Google Sheets tabulka s daty z Google Forms](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03.jpg)
+![Google Sheets tabulka s daty z Google Forms](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03-a.jpg){: .post-image }
 
 Jakmile máme parametry nadefinované přejdeme na tvorbu přehledové tabulky.
 
@@ -79,7 +79,7 @@ Protože jednotlivé měsíce mají rozdílný počet dní, je vhodné buňky od
 
 Výsledný přehled může potom vypadat takto:
 
-![Výsledný přehled se zaznamenanými spánkovými údaji](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05.jpg)
+![Výsledný přehled se zaznamenanými spánkovými údaji](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05-a.jpg){: .post-image }
 
 Pokud bychom chtěli **sledovat data mezi jednotlivými roky**, založíme si nový list s přehledovou tabulkou a jen změníme na požadovaný rok v buňce `A1`.
 
@@ -106,7 +106,7 @@ Nezapomeň prosím vyplnit dnešní formulář:&lt;br&gt;&lt;br&gt;
 
 V Google Apps Script **nastavíme spouštěč** dané funkce na příslušnou ranní hodinu, kdy chceme dostávat notifikaci.
 
-![Google Apps Script a nastavení automatických emailových upomínek](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06.jpg)
+![Google Apps Script a nastavení automatických emailových upomínek](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06-a.jpg){: .post-image }
 
 Připomínku si nemusíme posílat pouze emailem, ale můžeme například vložit odkaz do **Google Keeps** nebo do **Google kalendáře** a nastavit si pravidelnou upomínku. Záleží, co jsme zvyklí používat a podle toho zvolíme nástroj, který nám pomůže připomenout si každé ráno zápis do formuláře.
 
