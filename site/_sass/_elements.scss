@@ -405,6 +405,70 @@ a.site-title {
   margin-right: 0.4rem;
 }
 
+.post-image {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  touch-action: pan-y;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+}
+
+.lightbox img.zoomed {
+  cursor: grab;
+  transform: scale(2);
+}
+
+.lightbox button {
+  position: absolute;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+.close { top: 20px; right: 20px; }
+
+.lightbox-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+}
+
+#lightbox-caption {
+  margin-top: 0.75rem;
+  color: #ddd;
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 100%;
+  line-height: 1.4;
+}
+
+#lightbox-caption:empty {
+  display: none;
+}
+
 // =========================
 // SEARCH COMPONENTS IN BLOG
 // =========================
