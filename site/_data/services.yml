@@ -1,62 +1,11 @@
-- page_id: marketing-automation
+- page_id: intelligent-automation
   type: service
-  slug: marketing-automation
-  date: 2025-11-28 +01:00
-  published: true
-  show_in_list: true
-  image: /assets/files/photo.png
-  icon: all_inclusive
-  lang:
-    cs:
-      title: "Marketingová automatizace"
-      description: "Nastavíme automatické e-maily a kampaně."
-      lead: "Zefektivněte svůj marketing pomocí automatizace."
-      text: |
-        <h2>Vítejte u Marketingové automatizace</h2>
-        <p>Nastavíme automatické e-maily, kampaně a sledování výsledků.</p>
-      contact_link: "Kontaktujte mě"
-    en:
-      title: "Marketing Automation"
-      description: "We will set up automated email campaigns."
-      lead: "Streamline your marketing with automation."
-      text: |
-        <h2>Welcome to Marketing Automation</h2>
-        <p>We will configure automated emails, campaigns, and performance tracking.</p>
-      contact_link: "Contact me"
-
-- page_id: marketing-automation-2
-  type: service
-  slug: marketing-automation-2
-  date: 2025-11-28 +01:00
-  published: true
-  show_in_list: true
-  image:
-  icon: thumbs_up_double
-  lang:
-    cs:
-      title: "Marketingová automatizace do vaší firmy"
-      description: "Nastavíme automatické e-maily a kampaně. Nastavíme automatické e-maily a kampaně."
-      lead: "Zefektivněte svůj marketing pomocí automatizace."
-      text: |
-        <h2>Vítejte u Marketingové automatizace 2</h2>
-        <p>Nastavíme automatické e-maily, kampaně a sledování výsledků.</p>
-      contact_link: "Kontaktujte mě"
-    en:
-      title: "Marketing Automation 2"
-      description: "We will set up automated email campaigns."
-      lead: "Streamline your marketing with automation."
-      text: |
-        <h2>Welcome to Marketing Automation 2</h2>
-        <p>We will configure automated emails, campaigns, and performance tracking.</p>
-      contact_link: "Contact me"
-
-- page_id: inteligentni-automatizace
-  type: service
-  slug: inteligentni-automatizace
+  slug: intelligent-automation
   date: 2026-01-25 +01:00
   published: true
   show_in_list: true
-  icon: hub
+  image:
+  icon: all_inclusive
   lang:
     cs:
       title: "Inteligentní automatizace (n8n & AI)"
@@ -87,12 +36,13 @@
         </ul>
       contact_link: "Let's automate"
 
-- page_id: automatizovane-testovani-qa
+- page_id: automation-testing-qa
   type: service
-  slug: automatizovane-testovani-qa
+  slug: automation-testing-qa
   date: 2026-01-25 +01:00
   published: true
   show_in_list: true
+  image:
   icon: verified_user
   lang:
     cs:
@@ -124,12 +74,13 @@
         </ul>
       contact_link: "Improve my quality"
 
-- page_id: vyvoj-webovych-aplikaci
+- page_id: web-app-development
   type: service
-  slug: vyvoj-webovych-aplikaci
+  slug: web-app-development
   date: 2026-01-25 +01:00
   published: true
   show_in_list: true
+  image:
   icon: terminal
   lang:
     cs:
