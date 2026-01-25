@@ -6,7 +6,7 @@ title: BodyLog - Jak jsem si vytvořil svou první fitness apku
 description: Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.
 lead: Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.
 slug: /bodylog-app
-reading_time: 8 min
+reading_time: 6 min
 image: \assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg
 category: 
 tags: [my-projects, web-app]
