@@ -426,9 +426,10 @@ a.site-title {
 
 .lightbox img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: min(90vh, 800px);
   cursor: zoom-in;
   transition: transform 0.25s ease;
+  object-fit: contain;
 }
 
 .lightbox img.zoomed {
