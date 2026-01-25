@@ -19,6 +19,7 @@
           <li><strong>Propojení nepropojitelného:</strong> Synchronizace dat mezi platformami, které nemají nativní integraci.</li>
           <li><strong>AI Agenti v praxi:</strong> Automatické třídění e-mailů, analýza dokumentů nebo generování personalizovaných odpovědí.</li>
           <li><strong>Zpracování dat:</strong> Automatizovaný reporting a čištění dat bez nutnosti ručních exportů.</li>
+          <li><strong>Cokoliv dalšího, co si vymyslíte:</strong>Navrhu řešení automatizace na míru</li>
         </ul>
       contact_link: "Chci automatizovat"
     en:
@@ -33,6 +34,7 @@
           <li><strong>Custom Integrations:</strong> Syncing data between platforms without native connections.</li>
           <li><strong>AI Agents:</strong> Automatic email sorting, document analysis, or generating personalized responses.</li>
           <li><strong>Data Processing:</strong> Automated reporting and data cleaning without manual exports.</li>
+          <li><strong>Anything else you can imagine:</strong> Designing custom automation solutions.</li>
         </ul>
       contact_link: "Let's automate"
 
@@ -85,7 +87,7 @@
   lang:
     cs:
       title: "Vývoj webových aplikací na míru"
-      description: "Stavím robustní backendová řešení a interní nástroje v Pythonu."
+      description: "Stavím spolehlivá řešení a interní nástroje v Pythonu."
       lead: "Když no-code narazí na své limity, přichází na řadu kód na míru."
       text: |
         <h2>Aplikace, které se přizpůsobí vám, ne naopak</h2>
@@ -99,7 +101,7 @@
       contact_link: "Poptat vývoj"
     en:
       title: "Custom Web Development"
-      description: "Building robust backend solutions and internal tools in Python."
+      description: "Building reliable backend solutions and internal tools in Python."
       lead: "When no-code hits its limits, custom code takes over."
       text: |
         <h2>Apps that adapt to you, not the other way around</h2>
