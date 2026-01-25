@@ -15,7 +15,7 @@
           <url>
             <loc>https://daniel-hladik.cz/contact/</loc>
             
-              <lastmod>2025-12-21T14:14:28+00:00</lastmod>
+              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
             
             
               <changefreq>monthly</changefreq>
@@ -31,7 +31,7 @@
           <url>
             <loc>https://daniel-hladik.cz/cv/</loc>
             
-              <lastmod>2025-12-21T14:14:28+00:00</lastmod>
+              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
             
             
               <changefreq>monthly</changefreq>
@@ -51,7 +51,7 @@
           <url>
             <loc>https://daniel-hladik.cz/</loc>
             
-              <lastmod>2025-12-21T14:14:28+00:00</lastmod>
+              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
             
             
               <changefreq>weekly</changefreq>
@@ -71,7 +71,7 @@
           <url>
             <loc>https://daniel-hladik.cz/services/</loc>
             
-              <lastmod>2025-12-21T14:14:28+00:00</lastmod>
+              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
             
             
               <changefreq>monthly</changefreq>
@@ -119,7 +119,7 @@
           <url>
             <loc>https://daniel-hladik.cz/blog/</loc>
             
-              <lastmod>2025-12-21T14:14:28+00:00</lastmod>
+              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
             
             
               <changefreq>weekly</changefreq>
@@ -145,7 +145,23 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
+  
+    
+      <url>
+        <loc>https://daniel-hladik.cz/blog/bodylog-app/</loc>
+        <lastmod>2026-01-16T00:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
   
     
       <url>

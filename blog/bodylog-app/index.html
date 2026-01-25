@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-      Jak sledovat svůj spánek pomocí Google nástrojů &middot; Daniel Hladík &#124; Automation Engineer
+      BodyLog - Jak jsem si vytvořil svou první fitness apku &middot; Daniel Hladík &#124; Automation Engineer
     
   </title>
   
@@ -20,16 +20,16 @@
 
 <!-- Cannonical url START -->
 
-<link rel="canonical" href="https://daniel-hladik.cz/blog/sleep-habit-tracker/">
+<link rel="canonical" href="https://daniel-hladik.cz/blog/bodylog-app/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
   
-  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/sleep-habit-tracker/">
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/bodylog-app/">
 
   
-  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/sleep-habit-tracker/">
+  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/bodylog-app/">
 
 <!-- Alternate Href lang END -->
 
@@ -40,25 +40,25 @@
   
   
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="Jak sledovat svůj spánek pomocí Google nástrojů">
+  <meta property="og:title" content="BodyLog - Jak jsem si vytvořil svou první fitness apku">
   <meta name="author" content="Daniel Hladík">
   <meta property="og:locale" content="cs_CZ">
-  <meta name="description" content="Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.">
-  <meta property="og:description" content="Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.">
-  <meta property="og:url" content="https://daniel-hladik.cz/blog/sleep-habit-tracker/">
+  <meta name="description" content="Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.">
+  <meta property="og:description" content="Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.">
+  <meta property="og:url" content="https://daniel-hladik.cz/blog/bodylog-app/">
   <meta property="og:site_name" content="Daniel Hladík">
   
-  <meta property="og:image" content="https://daniel-hladik.cz\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg">
-  <meta property="twitter:image" content="https://daniel-hladik.cz\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg">
+  <meta property="og:image" content="https://daniel-hladik.cz\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg">
+  <meta property="twitter:image" content="https://daniel-hladik.cz\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg">
   
   <meta property="og:type" content="article">
   
-  <meta property="article:published_time" content="2025-12-11T00:00:00+00:00">
+  <meta property="article:published_time" content="2026-01-16T00:00:00+00:00">
   
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Jak sledovat svůj spánek pomocí Google nástrojů">
-  <meta name="twitter:description" content="Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.">
+  <meta property="twitter:title" content="BodyLog - Jak jsem si vytvořil svou první fitness apku">
+  <meta name="twitter:description" content="Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.">
 
   <!-- JSON-LD POST START -->
   <script type="application/ld+json">
@@ -69,17 +69,17 @@
       "@type": "Person",
       "name": "Daniel Hladík"
     },
-    "datePublished": "2025-12-11T00:00:00+00:00",
+    "datePublished": "2026-01-16T00:00:00+00:00",
     "dateModified": "2026-01-25T19:20:13+00:00",
-    "description": "Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.",
+    "description": "Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.",
     "inLanguage": "cs_CZ",
-    "headline": "Jak sledovat svůj spánek pomocí Google nástrojů",
-    "image": "https://daniel-hladik.cz\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg",
+    "headline": "BodyLog - Jak jsem si vytvořil svou první fitness apku",
+    "image": "https://daniel-hladik.cz\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://daniel-hladik.cz/blog/sleep-habit-tracker/"
+      "@id": "https://daniel-hladik.cz/blog/bodylog-app/"
     },
-    "url": "https://daniel-hladik.cz/blog/sleep-habit-tracker/"
+    "url": "https://daniel-hladik.cz/blog/bodylog-app/"
   }
   </script>
   <!-- JSON-LD POST END -->
@@ -146,147 +146,133 @@
     
       <p class="post-tags">
         
-          <a href="/tag/life-hacks/">life-hacks</a>
+          <a href="/tag/my-projects/">my-projects</a>
         
-          <a href="/tag/google-sheets/">google-sheets</a>
-        
-          <a href="/tag/google-apps-script/">google-apps-script</a>
-        
-          <a href="/tag/gmail/">gmail</a>
+          <a href="/tag/web-app/">web-app</a>
         
       </p>
     
-    <h1 class="post-title">Jak sledovat svůj spánek pomocí Google nástrojů</h1>
-    <p class="lead">Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí nástrojů, ke kterým má každý přístup zdarma v rámci svého Google účtu.</p>
+    <h1 class="post-title">BodyLog - Jak jsem si vytvořil svou první fitness apku</h1>
+    <p class="lead">Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.</p>
 
     
       <div class="post-hero-image">
-        <img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg" alt="Úvodní obrázek pro Jak sledovat svůj spánek pomocí Google nástrojů" loading="lazy">
+        <img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg" alt="Úvodní obrázek pro BodyLog - Jak jsem si vytvořil svou první fitness apku" loading="lazy">
       </div>
     
     <br>
-    <p>Chcete sledovat svůj spánek bez nutnosti používat specializované aplikace nebo drahé wearables? V tomto článku se podělím o to, jak jsem si vytvořil vlastní <strong>spánkový tracker</strong> přímo v <strong>Google Sheets</strong> a rozšířil ho o emailovou notifikaci pomocí Google Apps Scriptu.</p>
+    <p>Nevystudoval jsem IT obor, ale vždy mě lákalo si vytvořit svoji vlastní aplikaci. Chtěl jsem něco, co bude mít reálný přínos pro můj život a nebude to jen další „cvičný“ projekt do šuplíku. A tak vznikla <a href="https://bodylog.daniel-hladik.cz">BodyLog App</a>.</p>
 
 <p>Obsah článku:</p>
 <ul id="markdown-toc">
-  <li><a href="#proč-sledovat-svůj-spánek" id="markdown-toc-proč-sledovat-svůj-spánek">Proč sledovat svůj spánek?</a></li>
-  <li><a href="#použité-nástroje-od-google" id="markdown-toc-použité-nástroje-od-google">Použité nástroje od Google</a></li>
-  <li><a href="#jak-vytvořit-vlastní-aplikaci-na-sledování-spánku" id="markdown-toc-jak-vytvořit-vlastní-aplikaci-na-sledování-spánku">Jak vytvořit vlastní aplikaci na sledování spánku</a>    <ul>
-      <li><a href="#krok-1-nová-tabulka-a-formulář" id="markdown-toc-krok-1-nová-tabulka-a-formulář">Krok 1. Nová tabulka a formulář</a></li>
-      <li><a href="#krok-2-přehledný-kalendář-se-záznamy-spánku" id="markdown-toc-krok-2-přehledný-kalendář-se-záznamy-spánku">Krok 2. Přehledný kalendář se záznamy spánku</a></li>
-      <li><a href="#krok-3-automatická-notifikace-na-email" id="markdown-toc-krok-3-automatická-notifikace-na-email">Krok 3. Automatická notifikace na email</a></li>
+  <li><a href="#proč-právě-apka-na-sledování-tělesných-měr" id="markdown-toc-proč-právě-apka-na-sledování-tělesných-měr">Proč právě apka na sledování tělesných měr</a>    <ul>
+      <li><a href="#co-neměříš-to-neřídíš" id="markdown-toc-co-neměříš-to-neřídíš"><em>„Co neměříš, to neřídíš.“</em></a></li>
     </ul>
   </li>
+  <li><a href="#šel-jsem-na-to-s-rozmyslem" id="markdown-toc-šel-jsem-na-to-s-rozmyslem">Šel jsem na to s rozmyslem</a></li>
+  <li><a href="#s-čím-jsem-nejvíc-bojoval-a-co-jsem-se-naučil" id="markdown-toc-s-čím-jsem-nejvíc-bojoval-a-co-jsem-se-naučil">S čím jsem nejvíc bojoval a co jsem se naučil</a></li>
+  <li><a href="#ai---učitel-na-zavolání" id="markdown-toc-ai---učitel-na-zavolání">AI - Učitel na zavolání</a></li>
+  <li><a href="#co-aplikace-umí" id="markdown-toc-co-aplikace-umí">Co aplikace umí?</a></li>
 </ul>
 
-<h2 id="proč-sledovat-svůj-spánek">Proč sledovat svůj spánek?</h2>
-<p>Spánkem trávíme přibližně třetinu života a jeho kvalita výrazně ovlivňuje naši regeneraci, soustředění i celkovou produktivitu. Proto bychom mu měli věnovat svoji pozornost. Někdo má problém usnout, někdo zase vstát na první zazvonění budíku. Ať už je váš důvod jakýkoliv, vlastní <strong>spánkový deník</strong> vám může pomoct najít vzorce, odhalit problémové dny a lépe porozumět svým návykům.</p>
+<h2 id="proč-právě-apka-na-sledování-tělesných-měr">Proč právě apka na sledování tělesných měr</h2>
 
-<p>Já osobně se snažím <strong>chodit spát a vstávat ve stejnou dobu</strong> — ale upřímně, ne vždy se mi to daří. Právě proto jsem si začal spánek zaznamenávat, abych mohl zpětně vyhodnotit, jak jsem v jednotlivých dnech, týdnech či měsících dodržel svůj režim.</p>
+<p>Posledních 8 let jsem si vedl záznamy o své postavě v Excelu. Ne že bych byl profesionální bodybuilder, ale vždy mě zajímalo, jak se moje tělo s časem mění. Razím totiž heslo: „Co neměříš, to neřídíš.“ Jenže tabulka s čísly bez kontextu je po čase nepřehledná a chyběla mi v ní ta správná vizualizace „evoluce“ těla v čase – i když co si budeme povídat, ty přibývající roky (a kila) jsou na některých partiích vidět i bez grafu.</p>
 
-<h2 id="použité-nástroje-od-google">Použité nástroje od Google</h2>
+<p>Právě tento letitý Excel se stal ideálním kandidátem na mou první aplikaci. I když je fitness aplikací na trhu nespočet, nechtěl jsem jim konkurovat. Chtěl jsem si postavit vlastní řešení na míru a hlavně se na něm naučit, co všechno obnáší vývoj – od prvního návrhu databáze až po nasazení na produkční server.</p>
+
+<blockquote>
+  <h3 id="co-neměříš-to-neřídíš"><em>„Co neměříš, to neřídíš.“</em></h3>
+</blockquote>
+
+<p>Když jsem se před přibližně rokem a půl začínal učit programovat, řekl jsem si, že bych mohl vytvořit aplikaci a udělat něco praktického, co bych sám využil. Z toho vznikla aplikace, kterou jsem pracovním názvem pojmenoval BodyLog.</p>
+
+<h2 id="šel-jsem-na-to-s-rozmyslem">Šel jsem na to s rozmyslem</h2>
+
+<p>Navrhnul jsem si databázové modely, tabulku po tabulce a jejich vzájemné vazby. V té době jsem ještě nepoužíval AI ve velkém, takže jsem hezky po staru nejdříve na papír navrhnul entity, které jsem pospojoval do logického celku. Pomocí nástroje draw.io jsem si načrtnul, jaké stránky budou v aplikaci figurovat. Vypsal jsem si je také do Excelu a připsal si k nim slug URL, title a descriptions (kde to mělo význam).</p>
+
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-01.jpg" alt="Diagram mappingu stránek v aplikaci" class="post-image" /></p>
+
+<p>Jakmile jsem měl základní architekturu aplikace připravenou, vrhnul jsem se na vizuál. Vytvořil jsem si v jedné online aplikaci design, ke kterému jsem poté směřoval při vývoji aplikace.</p>
+
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-03.jpg" alt="Původní grafický návrh nástěnky" class="post-image" /></p>
+
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-02.jpg" alt="Style Guide se základními UI prvky" class="post-image" /></p>
+
+<p>Aplikaci jsem v základu za pár týdnů vytvořil, ale používal jsem ji pouze na svém lokálním počítači. Neměla překlady ani převody jednotek. Téměř rok jsem ji nepustil do produkčního světa. Tedy až do teď.</p>
+
+<p>Některé věci jsem předělal, vylepšil, ale základ zůstal více méně stejný. Nejde o složitou aplikaci, takže změny jsem si ani nemusel nikam systematicky zaznamenávat, ale rovnou jsem na nich postupně pracoval.</p>
+
+<blockquote class="alert alert-warning">
+  <p><strong>Proč symbol mrkve v brandingu?</strong>
+<em>Protože. Je to klišé. Jez mrkvičku a budeš zdravý jako řípa, říkává se (nebo jsem to popletl?). Nemá to logický důvod. Byla to první věc, která mě napadla.</em></p>
+</blockquote>
+
+<h2 id="s-čím-jsem-nejvíc-bojoval-a-co-jsem-se-naučil">S čím jsem nejvíc bojoval a co jsem se naučil</h2>
+
+<p>Vyzkoušel jsem si postupně tyto role:</p>
+<ul>
+  <li><strong>Softwarový architekt a analytik</strong>: Ještě než jsem napsal první řádek kódu, musel jsem si ujasnit, co přesně stavím. Navrhl jsem datový model, aby spolu jednotlivé entity (uživatel, záznam, jednotka) správně mluvily, a rozkreslil jsem si tok dat aplikací.</li>
+  <li><strong>Grafický designer</strong>: Zjistil jsem, že návrh vizuální podoby aplikace nebyl jen o barvách a nastylovaných tlačítkách (UI), ale i o tom, jak se uživateli bude používat (UX).</li>
+  <li><strong>Backend developer</strong>: Musel jsem vyvinout logiku, která převádí jednotky, hlídá oprávnění uživatelů a stará se o to, aby se správná data poslala na správné místo.</li>
+  <li><strong>Frontend developer</strong>: Převedl jsem design do reality pomocí HTML, CSS (převážně Bootstrap) a Javascriptu tak, aby aplikace vypadala a chovala se skvěle na desktopu i na displeji telefonu.</li>
+  <li><strong>Tester</strong>: Testerská role mi byla sice zkušenostmi nejbližší, ale upřímně jsem ji asi nejvíc odflákl. Samozřejmě jsem si zkoušel aplikaci proklikat, ale podrobnější testování jsem nechal na kamarádech.</li>
+  <li><strong>Projektový manažer</strong>: Musel jsem se naučit říct „ne“ novým funkcím, abych tu základní verzi (MVP) konečně dostal k uživatelům. A že těch nápadů bylo a stále je v backlogu hromada.</li>
+</ul>
+
+<p>Naučil jsem se:</p>
 
 <ul>
-  <li><strong>Google Sheets</strong> - hlavní databáze a přehled výsledků</li>
-  <li><strong>Google Forms</strong> - jednoduché rozhraní pro zapisování spánku</li>
-  <li><strong>Apps Script</strong> - automatická notifikace emailem s odkazem na formulář</li>
+  <li><strong>Tvorba wireframe modelu</strong>: Pochopil jsem, že začít kódovat bez rozmyšleného nákresu a logiky aplikace je cesta do pekel. Dobré plánování a příprava na začátku projektu mi ušetřilo desítky hodin přepisování kódu.</li>
+  <li><strong>Práce s databází a vztahy (ORM)</strong>: Naučil jsem se, jak typovat proměnné a efektivně propojovat tabulky.</li>
+  <li><strong>Lokalizace (i18n)</strong>: Implementoval jsem systém, díky kterému aplikace mluví česky i anglicky a správně pracuje s formáty data a času v různých regionech.</li>
+  <li><strong>Git a GitHub</strong>: Ovládl jsem verzování kódu. Už se nebojím v aplikaci něco „rozbít“, protože se díky Gitu můžu kdykoliv vrátit k funkční verzi.</li>
+  <li><strong>Docker</strong>: Naučil jsem se aplikaci „zabalit“ do kontejneru. Díky tomu běží naprosto stejně na mém notebooku i na serveru.</li>
+  <li><strong>Architektura MVC / MVT</strong>: Pochopil jsem, jak oddělit data od vzhledu a logiky. To je klíč k tomu, aby kód zůstal přehledný i s tím, jak aplikace roste.</li>
+  <li><strong>Automatický deployment přes Github Actions</strong>: Nastavil jsem proces, kdy se po každé změně v kódu aplikace automaticky otestuje a sama nahraje na server.</li>
+  <li><strong>Správa serveru</strong>: Vyzkoušel jsem si konfiguraci produkčního prostředí, práci v terminálu přes SSH a zabezpečení aplikace tak, aby byla připravena na reálný provoz.</li>
 </ul>
 
-<h2 id="jak-vytvořit-vlastní-aplikaci-na-sledování-spánku">Jak vytvořit vlastní aplikaci na sledování spánku</h2>
+<h2 id="ai---učitel-na-zavolání">AI - Učitel na zavolání</h2>
+<p>Jakožto začátečník v programování byla pro mě AI nekonečnou studnicí vědomostí s mentorem v jednom. Místo hodin strávených pročítání Stack Overflow jsem se jí ptal na konkrétní koncepty. Připadal jsem si jako malé dítě, které objevuje svět a neustále se ptá “Proč to tak funguje?”.</p>
 
-<p>Pojďme se vrhnout na samotný proces tvorby aplikace.</p>
+<p>Nadruhou stranu, i když mi AI hodně pomohla, několikrát mě poslala do slepé uličky s neexistujícími knihovnami. Naučilo mě to nejdůležitější pravidlo: Důvěřuj, ale prověřuj. Každý řádek, který mi AI navrhla, jsem musel pochopit a validovat, než jsem ho v projektu nechal.</p>
 
-<h3 id="krok-1-nová-tabulka-a-formulář">Krok 1. Nová tabulka a formulář</h3>
+<p>Dnes už dokáže AI napsat jednoduchou webovou aplikaci sama a nepotřebujete ani vědět, jak programovat. Stačí vědět, co chcete a umět to správně formulovat.</p>
 
-<p>Otevřeme si nový Google sheets soubor. List 1 přejmenujeme na např. <code class="language-plaintext highlighter-rouge">sleep_calendar</code>. K tabulce napojíme formulář, přes který budeme každý den zadávat údaje o spánku.
-Tvorbu formuláře najdeme v horním menu na záložce <code class="language-plaintext highlighter-rouge">Nástroje</code> a poté klikneme na <code class="language-plaintext highlighter-rouge">Vytvořit nový formulář</code>. Otevře se nám formulář v Google Forms, kde si nadefinujeme, co chceme sledovat. Zároveň se nám v Google Sheets vytvoří nový list se záznamy napojenými na data z vyplněného formuláře. Pojmenujeme tento list např. <code class="language-plaintext highlighter-rouge">sleep_tracking_data</code>.</p>
+<h2 id="co-aplikace-umí">Co aplikace umí?</h2>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-01-a.jpg" alt="Vytvoření nového formuláře přes Google Forms" class="post-image" /></p>
+<p>Dost už okecávání, přejdu k tomu, co vás, čtenáře, zajímá. K čemu vám ta apka bude? BodyLog App jsem stavěl tak, aby byla minimalistická, responzivní, dalo se ni dívat a používala se intuitivně.</p>
 
-<p>Protože ráno nejsem schopný napočítat do desíti, budu si psát čas, v kolik hodin jsem šel spát večer předtím a čas, v kolik jsem se probudil. Poté si výsledný čas nechám automaticky spočítat přes vzorec z rozdílu těchto hodnot.</p>
+<p>Přibližný soupis toho, co umí:</p>
 
-<p>Já osobně tedy chci znát:</p>
 <ul>
-  <li>svoji ranní náladu,</li>
-  <li>čas, kdy jsem šel spát,</li>
-  <li>čas probuzení,</li>
-  <li>a jestli jsem vstal na první zazvonění budíku.</li>
+  <li><strong>Záznam 15+ tělesných měr:</strong> Od klasiky jako váha, pas a hrudník až po detaily jako levé/pravé předloktí nebo lýtka. Máte tak kompletní mapu své postavy.</li>
+  <li><strong>Automatický výpočet metrik:</strong> Pro každý záznam měření se počítá BMI, % tělesného tuku a WHR.</li>
+  <li><strong>Definice osobních cílů a jejich deadline</strong> Řeknete si: “Chci do léta zhubnout do plavek.”, nastavíte si termín 30. června a pak už “jen” děláte něco pro to,aby se tak stalo a v čase sledujete, zda se vám to daří či nikoliv.</li>
+  <li><strong>Chytré přepínání jednotek:</strong> Aplikace se vám přizpůsobí. Pokud preferujete centimetry a kilogramy, používáte je. Pokud jste zvyklí na imperiální jednotky, jedním kliknutím v profilu přepnete celou aplikaci (včetně historie) do palců a liber.</li>
+  <li><strong>Interaktivní grafy a trendy:</strong> Čísla v tabulce jsou fajn, ale graf s dlouhodovými trendy vám ukáže pravdu. Okamžitě vidíte, jestli křivka pasu klesá, zatímco biceps roste. Nebo, jak vám kolísá váha během roku, ať už z důvodu jojo efektu, nebo přirozeného cyklu ročních období.</li>
+  <li><strong>Poznámky ke každému dni:</strong> Ke každému měření si můžete připsat, jak jste se cítili, jestli jste byli po tréninku, nebo jestli byl ten den „cheat meal“ a nacpali jste si pupek k prasknutí. Kontext je totiž u dat klíčový.</li>
+  <li><strong>Bezpečný přístup k vašim datům:</strong> Každý uživatel má svůj vlastní profil. Vaše míry vidíte jen vy.</li>
 </ul>
 
-<p>Pro lepší kontext si každý může doplnit další parametry dle své potřeby, např.: pole s poznámkou nebo zda jste přestali pít a jíst hodinu a půl před spaním apod.</p>
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-04.jpg" alt="Hotová aplikace - přihlašovací stránka" class="post-image" /></p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02-a.jpg" alt="Zadání polí pro formulář" class="post-image" /></p>
+<p>Pokud zjistím, že je o BodyLog zájem, třeba aplikaci přesunu na samostatnou doménu a vymyslím lepší název. Mám v hlavě už teď seznam funkcí, které bych rád přidal. Nejdříve chci ale znát zpětnou vazbu od vás :)</p>
 
-<p>Pošleme si první <strong>zkušební záznam vyplněním formuláře</strong>. Hodnoty se nám automaticky propíšou do listu <code class="language-plaintext highlighter-rouge">sleep_tracking_data</code>. Přidáme si nový sloupec na druhou pozici za časovou značku a dosadíme vzorcem <code class="language-plaintext highlighter-rouge">=DATUM(ROK(A2);MĚSÍC(A2);DEN(A2))</code> pro <strong>očištění datumu o časový údaj</strong>. Důvodem je, aby nám funkce pro vyhledání hodnoty vždy našla přesný údaj. Do posledního sloupce (u mě na příkladu sloupec <code class="language-plaintext highlighter-rouge">G</code>) přidáme <strong>počítaný sloupec s délkou spánku</strong> prostým rozdílem času ulehnutí ke spánku a času probuzení.</p>
-
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03-a.jpg" alt="Google Sheets tabulka s daty z Google Forms" class="post-image" /></p>
-
-<p>Jakmile máme parametry nadefinované přejdeme na tvorbu přehledové tabulky.</p>
-
-<h3 id="krok-2-přehledný-kalendář-se-záznamy-spánku">Krok 2. Přehledný kalendář se záznamy spánku</h3>
-
-<p>V přehledové tabulce na listu <code class="language-plaintext highlighter-rouge">sleep_calendar</code> si vytvoříme čísla měsíců (1 až 12) do sloupců a čísla dnů v měsíci (1 až 31) do řádků. Abychom věděli, o jaký rok jde, do buňky <code class="language-plaintext highlighter-rouge">A1</code> vložíme aktuální rok. Rok se nám bude také hodit i pro vzorec, který vyhledá konkrétní záznam z <code class="language-plaintext highlighter-rouge">sleep_tracking_data</code> a přiřadí ho konkrétnímu datu v přehledové tabulce.</p>
-
-<p>Pro zobrazení celkové délky spánku ke konkrétnímu zaznamenanému dni napíšeme do buňky <code class="language-plaintext highlighter-rouge">B2</code> následujicí vzorec a rozkopírujeme ho do všech polí v naší matici:</p>
-
-<pre><code>
-=XLOOKUP(DATUM($A$1; A$1; $A2); sleep_tracking_data!$B$2:$B$999; sleep_tracking_data!$G$2:$G$999; "")
-</code></pre>
-
-<p>Formát buněk bude potřeba upravit jako <code class="language-plaintext highlighter-rouge">HH:mm</code>, aby se nám zobrazoval hezky naformátovaný jako čas, jinak uvidíme pouze nějaké nic neříkající číslo.</p>
-
-<p><strong>Podmíněné formátování</strong> můžeme využít k přehlednému zvýraznění hodnot podle vlastních pravidel. U délky spánku si například můžeme nastavit barevnou škálu, kde se výrazně odchýlené hodnoty zobrazí červeně a hodnoty blízké ideálu zeleně.</p>
-
-<p>Další možností je zduplikovat tabulku a do kopie zaznamenávat subjektivní pocity po probuzení (např. dobře, špatně, aj). Jednotlivým hodnotám pak přiřadíme barvy, které se následně propíší jako pozadí do tabulky s časovými údaji. Zduplikovanou tabulku můžeme skrýt a ponechat si pouze hlavní přehled s časovými hodnotami podbarvenými podle toho, jak dobře jsme se ráno cítili.</p>
-
-<p>Protože jednotlivé měsíce mají rozdílný počet dní, je vhodné buňky odpovídající neexistujícím datům zabarvit tmavou barvou, aby bylo na první pohled jasné, že zde žádná hodnota nemůže vzniknout. Stejným způsobem si můžeme zvýraznit i víkendy, například světle šedou barvou.</p>
-
-<p>Výsledný přehled může potom vypadat takto:</p>
-
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05-a.jpg" alt="Výsledný přehled se zaznamenanými spánkovými údaji" class="post-image" /></p>
-
-<p>Pokud bychom chtěli <strong>sledovat data mezi jednotlivými roky</strong>, založíme si nový list s přehledovou tabulkou a jen změníme na požadovaný rok v buňce <code class="language-plaintext highlighter-rouge">A1</code>.</p>
-
-<h3 id="krok-3-automatická-notifikace-na-email">Krok 3. Automatická notifikace na email</h3>
-
-<p>Abychom ráno nezapomněli, že máme vyplnit svoje údaje o spánku, budeme si každé ráno <strong>posílat notifikaci emailem</strong> přes <strong>Google Apps Script</strong>. V horním menu Google Sheets klikneme na záložku <code class="language-plaintext highlighter-rouge">Rozšíření</code>, kde najdeme položku <code class="language-plaintext highlighter-rouge">Apps Script</code>. Vytvoříme skript s kódem pro odeslání zprávy z našeho <strong>Gmail účtu</strong> a povolíme potřebné autorizace.</p>
-
-<pre><code>
-function sendEmailReminder() {
-  const EMAIL = "your@gmail.com"; 
-  const FORM_URL = "https://forms.gle/abcdefgh"; 
-  const SUBJECT = "Zaznamenej si spánek";
-  const BODY = `Ahoj!\n\nNezapomeň prosím vyplnit dnešní formulář:\n${FORM_URL}`;
-  const SENDER_NAME = "Osobní asistent";
-
-  GmailApp.sendEmail(EMAIL, SUBJECT, BODY, {
-    name: SENDER_NAME,
-    htmlBody: `Ahoj!&lt;br&gt;&lt;br&gt;
-Nezapomeň prosím vyplnit dnešní formulář:&lt;br&gt;&lt;br&gt;
-&lt;a href=&quot;${FORM_URL}&quot;&gt;SLEEP TRACKER FORM&lt;/a&gt;`
-  });
-}
-</code></pre>
-
-<p>V Google Apps Script <strong>nastavíme spouštěč</strong> dané funkce na příslušnou ranní hodinu, kdy chceme dostávat notifikaci.</p>
-
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06-a.jpg" alt="Google Apps Script a nastavení automatických emailových upomínek" class="post-image" /></p>
-
-<p>Připomínku si nemusíme posílat pouze emailem, ale můžeme například vložit odkaz do <strong>Google Keeps</strong> nebo do <strong>Google kalendáře</strong> a nastavit si pravidelnou upomínku. Záleží, co jsme zvyklí používat a podle toho zvolíme nástroj, který nám pomůže připomenout si každé ráno zápis do formuláře.</p>
-
-<p>A máme hotovo! :)</p>
+<p>P.S.: Počítám s tím, že apka má nějaké mouchy a může spadnout do neošetřené chyby serveru 500. Mně se to tedy zatím nepovedlo. Pokud by ale takový případ nastal, budu rád za nahlášení chyby na můj email <a href="#contact-form">info@daniel-hladik.cz</a>. Díky :)</p>
 
 <blockquote class="alert alert-idea">
-  <p><strong>Tip na závěr</strong>
-<em>Aplikaci můžete mimo jiné využít i jako snář, kdy si hned ráno budete zaznamenávat sny, které se vám během spánku zdály. Stejně tak ji lze využít jako jednoduché sledování návyků, na které se chcete soustředit.</em></p>
+  <p><strong>Budu rád za zpětnou vazbu</strong>
+<em>Aplikace je dostupná na mé subdoméně <a href="https://bodylog.daniel-hladik.cz">bodylog.daniel-hladik.cz</a>. Pokud vás zajímá, jak jsem se se svou vůbec první webovou aplikací popral a chcete sledovat svoje tělesné míry, zaregistrujte se a vyzkoušejte si ji. Je plně zdarma a bez reklam.</em></p>
 </blockquote>
 
 <blockquote class="alert alert-info">
-  <p><strong>Potřebujete pomoct s touto či jinou automatizací?</strong>
+  <p><strong>Potřebujete pomoct s automatizací svých každodenních úkolů?</strong>
 <em><a href="#contact-form">Napište mi zprávu</a> nebo si se mnou domluvte <a href="https://zapti.me/daniel-hladik/konzultace-zdarma">30 min konzultaci ZDARMA</a>.</em></p>
 </blockquote>
 
-    <time datetime="2025-12-11T00:00:00+00:00" class="post-date">11.12.2025</time>
+    <time datetime="2026-01-16T00:00:00+00:00" class="post-date">16.01.2026</time>
     <p class="back-to-top">
       <a href="#top">↑ Zpět na začátek</a>
     </p>
@@ -342,11 +328,11 @@ Nezapomeň prosím vyplnit dnešní formulář:&lt;br&gt;&lt;br&gt;
 
     <nav class="post-nav">
     
-
-    
-    <a class="next-post" href="/blog/bodylog-app/">
-       <span>BodyLog - Jak jsem si vytvořil svou první fitness apku →</span>
+    <a class="prev-post" href="/blog/sleep-habit-tracker/">
+        <span>← Jak sledovat svůj spánek pomocí Google nástrojů</span>
     </a>
+    
+
     
 </nav>
   </main>
@@ -567,8 +553,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <input type="hidden" name="from_name" value="daniel-hladik.cz" />
         <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-        <input type="hidden" name="title" value="Jak sledovat svůj spánek pomocí Google nástrojů">
-        <input type="hidden" name="url" value="https://daniel-hladik.cz/blog/sleep-habit-tracker/">
+        <input type="hidden" name="title" value="BodyLog - Jak jsem si vytvořil svou první fitness apku">
+        <input type="hidden" name="url" value="https://daniel-hladik.cz/blog/bodylog-app/">
         <input type="hidden" name="lang" value="cs">
 
         <div class="form-group-container">
@@ -663,7 +649,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     
         
-<a class="lang-link" href="/en/blog/sleep-habit-tracker/" aria-label="English">English</a>
+<a class="lang-link" href="/en/blog/bodylog-app/" aria-label="English">English</a>
         
     
 

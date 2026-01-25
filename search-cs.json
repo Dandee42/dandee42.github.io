@@ -4,6 +4,14 @@
 [
 
   {
+    "title": "BodyLog - Jak jsem si vytvořil svou první fitness apku",
+    "url": "/blog/bodylog-app/",
+    "excerpt": "Nevystudoval jsem IT obor, ale vždy mě lákalo si vytvořit svoji vlastní aplikaci. Chtěl jsem něco, co bude mít reálný přínos pro můj život a nebude to jen další „cvičný“ projekt do šuplíku. A tak vznikla BodyLog App.",
+    "lead": "Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.",
+    "tags": "my-projects, web-app"
+  },
+
+  {
     "title": "Jak sledovat svůj spánek pomocí Google nástrojů",
     "url": "/blog/sleep-habit-tracker/",
     "excerpt": "Chcete sledovat svůj spánek bez nutnosti používat specializované aplikace nebo drahé wearables? V tomto článku se podělím o to, jak jsem si vytvořil vlastní spánkový tracker přímo v Google Sheets a rozšířil ho o emailovou notifikaci pomocí Google Apps Scriptu.",
