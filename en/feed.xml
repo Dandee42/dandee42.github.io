@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daniel Hladik - automation engineer</title>
+    <link>https://daniel-hladik.cz/en</link>
+    <atom:link href="https://daniel-hladik.cz/en/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>I help companies and individuals get rid of routines that don't add value |AI & Automation | QA | Building web apps</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Jan 2026 22:33:37 +0000</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+    <image>
+      <url>https://daniel-hladik.cz/assets/files/photo.png</url>
+      <title>Daniel Hladik - automation engineer</title>
+      <link>https://daniel-hladik.cz</link>
+    </image>
+    
+    
+    <item>
+      <title>BodyLog - How I created my first fitness app</title>
+      <link>https://daniel-hladik.cz/en/blog/bodylog-app/</link>
+      <guid isPermaLink="true">https://daniel-hladik.cz/en/blog/bodylog-app/</guid>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
+      
+      
+      
+      <description><![CDATA[
+        The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.]]
+      ]]></description>
+    </item>
+    
+    <item>
+      <title>How to track your sleep using Google tools</title>
+      <link>https://daniel-hladik.cz/en/blog/sleep-habit-tracker/</link>
+      <guid isPermaLink="true">https://daniel-hladik.cz/en/blog/sleep-habit-tracker/</guid>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+      
+      
+      
+      <description><![CDATA[
+        I'll show you how to track your sleep routine using tools that everyone can access for free within their Google account.]]
+      ]]></description>
+    </item>
+    
+  </channel>
+</rss>

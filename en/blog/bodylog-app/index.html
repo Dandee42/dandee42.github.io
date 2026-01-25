@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    
+      BodyLog - How I created my first fitness app &middot; Daniel Hladik &#124; Automation Engineer
+    
+  </title>
+  
+
+
+
+
+<!-- Cannonical url START -->
+
+<link rel="canonical" href="https://daniel-hladik.cz/en/blog/bodylog-app/">
+<!-- Cannonical url END -->
+
+<!-- Alternate Href lang START -->
+
+  
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/bodylog-app/">
+
+  
+  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/bodylog-app/">
+
+<!-- Alternate Href lang END -->
+
+<meta http-equiv="Content-Language" content="en_US">
+
+
+  <!-- BLOG POST -->
+  
+  
+  <!-- OG / Twitter meta tagy -->
+  <meta property="og:title" content="BodyLog - How I created my first fitness app">
+  <meta name="author" content="Daniel Hladik">
+  <meta property="og:locale" content="en_US">
+  <meta name="description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
+  <meta property="og:description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
+  <meta property="og:url" content="https://daniel-hladik.cz/en/blog/bodylog-app/">
+  <meta property="og:site_name" content="Daniel Hladik">
+  
+  <meta property="og:image" content="https://daniel-hladik.cz\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg">
+  <meta property="twitter:image" content="https://daniel-hladik.cz\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg">
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="article:published_time" content="2026-01-16T00:00:00+00:00">
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="BodyLog - How I created my first fitness app">
+  <meta name="twitter:description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
+
+  <!-- JSON-LD POST START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Hladik"
+    },
+    "datePublished": "2026-01-16T00:00:00+00:00",
+    "dateModified": "2026-01-25T22:28:16+00:00",
+    "description": "The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.",
+    "inLanguage": "en_US",
+    "headline": "BodyLog - How I created my first fitness app",
+    "image": "https://daniel-hladik.cz\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://daniel-hladik.cz/en/blog/bodylog-app/"
+    },
+    "url": "https://daniel-hladik.cz/en/blog/bodylog-app/"
+  }
+  </script>
+  <!-- JSON-LD POST END -->
+
+
+  
+<!-- Stylesheets, icons -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/open-color.min.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+<link rel="stylesheet" href="/assets/css/styles.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" >
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+<!-- RSS Feed -->
+
+<link rel="alternate" type="application/rss+xml" title="Daniel Hladik - RSS (en)" href="https://daniel-hladik.cz/en/feed.xml" />
+
+</head>
+
+
+<body>
+  
+
+
+
+  
+  
+  
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-sm-10 col-md-8 col-lg-6">
+        <div id="top"></div>
+
+
+<header>
+  <div>
+    <!--<a class="particles-icon icon-link" href="https://daniel-hladik.cz"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8m0 0l3.5 3.5M8 12l3.5-3.5M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>-->
+    <a class="site-title" href="https://daniel-hladik.cz/en/">Daniel Hladik</a>
+    <small>
+    
+      automation engineer
+    
+    </small>
+  </div>
+  <a id="theme-toggle" class="toggle-icon" onclick="modeSwitcher()"></a>
+</header>
+
+
+
+<article>
+  <main>
+    <div class="start-side-image">
+    <div class="side-image left"></div>
+    <div class="side-image right"></div>
+</div>
+<script src="/assets/js/side-image.js" defer></script>
+    <p class="blog-back"><a href="/en/blog/">← All blog posts</a></p>
+    
+      <p class="post-tags">
+        
+          <a href="/en/tag/my-projects/">my-projects</a>
+        
+          <a href="/en/tag/web-app/">web-app</a>
+        
+      </p>
+    
+    <h1 class="post-title">BodyLog - How I created my first fitness app</h1>
+    <p class="lead">The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.</p>
+
+    
+      <div class="post-hero-image">
+        <img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg" alt="Hero image for BodyLog - How I created my first fitness app" loading="lazy">
+      </div>
+    
+    <br>
+    <p>I didn’t study IT, but I’ve always been tempted to create my own application. I wanted something that would have a real impact on my life and not just be another “practice” project that would end up in a drawer. And that’s how <a href="https://bodylog.daniel-hladik.cz">BodyLog App</a> came about.</p>
+
+<p>Article content:</p>
+<ul id="markdown-toc">
+  <li><a href="#why-did-i-choose-an-app-for-tracking-body-measurements" id="markdown-toc-why-did-i-choose-an-app-for-tracking-body-measurements">Why did I choose an app for tracking body measurements</a>    <ul>
+      <li><a href="#if-you-dont-measure-it-you-cant-manage-it" id="markdown-toc-if-you-dont-measure-it-you-cant-manage-it"><em>„If you don’t measure it, you can’t manage it.“</em></a></li>
+    </ul>
+  </li>
+  <li><a href="#i-approached-it-with-caution" id="markdown-toc-i-approached-it-with-caution">I approached it with caution</a></li>
+  <li><a href="#what-i-struggled-with-most-and-what-i-learned" id="markdown-toc-what-i-struggled-with-most-and-what-i-learned">What I struggled with most and what I learned</a></li>
+  <li><a href="#ai---teacher-on-call" id="markdown-toc-ai---teacher-on-call">AI - Teacher on call</a></li>
+  <li><a href="#what-can-the-app-do" id="markdown-toc-what-can-the-app-do">What can the app do</a></li>
+</ul>
+
+<h2 id="why-did-i-choose-an-app-for-tracking-body-measurements">Why did I choose an app for tracking body measurements</h2>
+
+<p>For the past eight years, I have been keeping records of my physique in Excel. Not that I am a professional bodybuilder, but I have always been interested in how my body changes over time. My motto is: “If you don’t measure it, you can’t manage it.” However, a table of numbers without context becomes confusing over time, and I felt it lacked the right visualization of the “evolution” of the body over time—although, let’s be honest, the passing years (and pounds) are visible in some areas even without a graph.</p>
+
+<p>This old Excel spreadsheet became the ideal candidate for my first app. Although there are countless fitness apps on the market, I didn’t want to compete with them. I wanted to build my own customized solution and, above all, learn everything that development entails – from the initial database design to deployment on a production server.</p>
+
+<blockquote>
+  <h3 id="if-you-dont-measure-it-you-cant-manage-it"><em>„If you don’t measure it, you can’t manage it.“</em></h3>
+</blockquote>
+
+<p>When I started learning programming about a year and a half ago, I thought I could create an application and do something practical that I could use myself. This resulted in an application that I named BodyLog as a working title.</p>
+
+<h2 id="i-approached-it-with-caution">I approached it with caution</h2>
+
+<p>I designed database models, table by table, and their mutual connections. At that time, I wasn’t using AI on a large scale yet, so I designed the entities the old-fashioned way, first on paper, and then connected them into a logical whole. Using the draw.io tool, I sketched out what pages would appear in the application. I also listed them in Excel and added slug URLs, titles, and descriptions (where relevant).</p>
+
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-01.jpg" alt="Site mapping diagram in the application" class="post-image" /></p>
+
+<p>Once I had the basic architecture of the application ready, I threw myself into the visuals. I created a design in an online application, which I then used as a guide during the development of the application.</p>
+
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-03.jpg" alt="Original graphic design of the bulletin board" class="post-image" /></p>
+
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-02.jpg" alt="Style Guide with basic UI elements" class="post-image" /></p>
+
+<p>I created the application in a few weeks, but I only used it on my local computer. It didn’t have translations or unit conversions. I didn’t release it into the production world for almost a year. Until now, that is.</p>
+
+<p>I redesigned and improved some things, but the basics remained more or less the same. It’s not a complicated application, so I didn’t even have to systematically record the changes anywhere; I just worked on them gradually.</p>
+
+<blockquote class="alert alert-warning">
+  <p><strong>Why did I use the carrot symbol in app branding?</strong>
+<em>Because. It’s a cliché. Eat carrots and you’ll be as healthy as a horse, they say (or did I get that wrong?). There’s no logical reason for it. It was just the first thing that came to mind.</em></p>
+</blockquote>
+
+<h2 id="what-i-struggled-with-most-and-what-i-learned">What I struggled with most and what I learned</h2>
+
+<p>What roles I gradually tried out:</p>
+<ul>
+  <li><strong>Software architect and analyst</strong>: Before I wrote the first line of code, I had to figure out exactly what I was building. I designed a data model so that the individual entities (user, record, unit) would communicate correctly, and I drew up the application data flow.</li>
+  <li><strong>Graphic designer</strong>: I discovered that designing the visual appearance of the application was not just about colors and stylish buttons (UI), but also about how the user would use it (UX).</li>
+  <li><strong>Backend developer</strong>: I had to develop logic that converts units, monitors user permissions, and ensures that the right data is sent to the right place.</li>
+  <li><strong>Frontend developer</strong>: I translated the design into reality using HTML, CSS (mostly Bootstrap), and JavaScript so that the application would look and behave great on both desktop and mobile displays.</li>
+  <li><strong>Tester</strong>: The tester role was closest to my experience, but honestly, I probably slacked off the most. Of course, I tried clicking through the application, but I left the more detailed testing to my friends.</li>
+  <li><strong>Project manager</strong>: I had to learn to say “no” to new features in order to finally get the basic version (MVP) to users. And there were, and still are, a lot of ideas in the backlog.</li>
+</ul>
+
+<p>What I learned:</p>
+
+<ul>
+  <li><strong>Wireframe model creation</strong>: I realized that starting to code without a well-thought-out sketch and application logic is a road to hell. Good planning and preparation at the beginning of the project saved me dozens of hours of rewriting code.</li>
+  <li><strong>Working with databases and relationships (ORM)</strong>: I learned how to type variables and effectively link tables.</li>
+  <li><strong>Localization (i18n)</strong>: I implemented a system that allows the application to speak Czech and English and correctly work with date and time formats in different regions.</li>
+  <li><strong>Git and GitHub</strong>: I mastered code versioning. I am no longer afraid of “breaking” something in the application because, thanks to Git, I can always revert to a working version.</li>
+  <li><strong>Docker</strong>: I learned how to “package” the application into a container. Thanks to this, it runs exactly the same on my laptop and on the server.</li>
+  <li><strong>MVC / MVT architecture</strong>: I understand how to separate data from appearance and logic. This is key to keeping the code clear as the application grows.</li>
+  <li><strong>Automatic deployment via GitHub Actions</strong>: I set up a process where the application is automatically tested and uploaded to the server after every change in the code.</li>
+  <li><strong>Server administration</strong>: I tried configuring the production environment, working in the terminal via SSH, and securing the application so that it was ready for real-world operation.</li>
+</ul>
+
+<h2 id="ai---teacher-on-call">AI - Teacher on call</h2>
+<p>As a beginner in programming, AI was an endless source of knowledge and a mentor all in one for me. Instead of spending hours reading Stack Overflow, I asked it about specific concepts. I felt like a small child discovering the world and constantly asking, “Why does it work that way?”</p>
+
+<p>On the other hand, even though AI helped me a lot, it sent me down a dead end several times with non-existent libraries. It taught me the most important rule: Trust, but verify. I had to understand and validate every line that AI suggested before I left it in the project.</p>
+
+<p>Today, AI can write a simple web application on its own, and you don’t even need to know how to program. You just need to know what you want and be able to formulate it correctly.</p>
+
+<h2 id="what-can-the-app-do">What can the app do</h2>
+
+<p>Enough talk, let’s get to what you, the reader, are interested in. What can you use this app for?</p>
+
+<p>I built the BodyLog App to be minimalistic, responsive, visually appealing, and intuitive to use. Here’s a rough list of what it can do:</p>
+
+<ul>
+  <li><strong>Recording of 15+ body measurements:</strong> From the classics such as weight, waist, and chest to details such as left/right forearm or calves. This gives you a complete map of your body.</li>
+  <li><strong>Automatic calculation of metrics:</strong> BMI, % body fat, and WHR are calculated for each measurement record.</li>
+  <li><strong>Definition of personal goals and their deadlines</strong> You say to yourself, “I want to lose weight for my swimsuit by summer,” set a deadline of June 30, and then “just” do something to make it happen and monitor whether you are succeeding or not.</li>
+  <li><strong>Smart unit switching:</strong> The app adapts to you. If you prefer centimeters and kilograms, you use them. If you’re used to imperial units, with one click in your profile you can switch the entire app (including history) to inches and pounds.</li>
+  <li><strong>Interactive graphs and trends:</strong> Numbers in a table are fine, but a graph with long-term trends shows you the truth. You can immediately see if your waistline is shrinking while your biceps are growing. Or how your weight fluctuates throughout the year, whether due to the yo-yo effect or the natural cycle of the seasons.</li>
+  <li><strong>Notes for each day:</strong> For each measurement, you can add a note about how you felt, whether you had just finished a workout, or if it was a “cheat meal” day and you stuffed yourself to bursting. Context is key when it comes to data.</li>
+  <li><strong>Secure access to your data:</strong> Each user has their own profile. Only you can see your measurements.</li>
+</ul>
+
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-04.jpg" alt="Finished application - login page" class="post-image" /></p>
+
+<p>If I find that there is interest in BodyLog, I may move the application to a separate domain and come up with a better name. I already have a list of features in mind that I would like to add. But first, I want to hear your feedback :)</p>
+
+<p>P.S.: I expect that the app has some bugs and may crash due to an unhandled 500 server error. I haven’t managed to do that yet. However, if such a case occurs, I would appreciate it if you reported the error to my email address <a href="#contact-form">info@daniel-hladik.cz</a>. Thanks :)</p>
+
+<blockquote class="alert alert-idea">
+  <p><strong>I would appreciate your feedback</strong>
+<em>The application is available on my subdomain <a href="https://bodylog.daniel-hladik.cz">bodylog.daniel-hladik.cz</a>. If you are interested in how I got on with my very first web application and want to track your body measurements, sign up and try it out. It is completely free and ad-free.</em></p>
+</blockquote>
+
+<blockquote class="alert alert-info">
+  <p><strong>Need help automating your daily tasks?</strong>
+<em><a href="#contact-form">Email me</a> or schedule a <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">FREE 30 min consultation</a>.</em></p>
+</blockquote>
+
+    <time datetime="2026-01-16T00:00:00+00:00" class="post-date">January 16, 2026</time>
+    <p class="back-to-top">
+      <a href="#top">↑ Back to top</a>
+    </p>
+    
+
+<p class="share-button-container">
+  Did this post help you?<br>Share it with others.<br>
+<button id="shareBtn" class="share-button">
+  <span class="material-symbols-outlined">share</span>
+  Share this post
+</button>
+</p>
+
+<script defer>
+  const currentLang = document.documentElement.lang || 'en';
+
+  const translations = {
+    cs: {
+      shareText: 'Přečti si tento článek',
+      copied: 'Odkaz byl zkopírován do schránky!',
+      copyError: 'Nepodařilo se zkopírovat odkaz. Zkopírujte ho ručně: '
+    },
+    en: {
+      shareText: 'Check out this article',
+      copied: 'Link copied to clipboard!',
+      copyError: 'Could not copy the link. Please copy it manually: '
+    }
+  };
+
+  const t = translations[currentLang] || translations.cs;
+
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          text: t.shareText,
+          url: window.location.href
+        });
+      } catch(err) {
+        console.error('Chyba při sdílení:', err);
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert(t.copied);
+      } catch (err) {
+        alert(t.copyError + window.location.href);
+      }
+    }
+  });
+</script>
+
+    <nav class="post-nav">
+    
+    <a class="prev-post" href="/en/blog/sleep-habit-tracker/">
+        <span>← How to track your sleep using Google tools</span>
+    </a>
+    
+
+    
+</nav>
+  </main>
+</article>
+
+
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+  const headings = document.querySelectorAll("h2, h3, h4");
+
+  headings.forEach(heading => {
+    if (heading.id) {
+      const link = document.createElement("a");
+      link.href = `#${heading.id}`;
+      link.className = "heading-link";
+      link.innerHTML = `<img src="/assets/files/icons/link-45deg.svg" alt="Odkaz na nadpis" width="16" height="16">`;
+
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const url = window.location.origin + window.location.pathname + `#${heading.id}`;
+        navigator.clipboard.writeText(url).then(() => {
+          showCopyMessage("Link copied to clipboard!");
+        });
+      });
+
+      heading.appendChild(link);
+    }
+  });
+
+  function showCopyMessage(message) {
+    const msg = document.createElement("div");
+    msg.textContent = message;
+    msg.style.position = "fixed";
+    msg.style.bottom = "20px";
+    msg.style.right = "20px";
+    msg.style.backgroundColor = "#333";
+    msg.style.color = "#fff";
+    msg.style.padding = "10px 15px";
+    msg.style.borderRadius = "5px";
+    msg.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+    msg.style.zIndex = 1000;
+    msg.style.opacity = 0;
+    msg.style.transition = "opacity 0.3s";
+
+    document.body.appendChild(msg);
+
+    requestAnimationFrame(() => {
+      msg.style.opacity = 1;
+    });
+
+    setTimeout(() => {
+      msg.style.opacity = 0;
+      msg.addEventListener("transitionend", () => msg.remove());
+    }, 2000);
+  }
+});
+</script>
+<script src="/assets/js/add-img-lazy-loading.js" defer></script>
+
+
+
+<script defer>
+document.querySelectorAll('pre').forEach(pre => {
+  const button = document.createElement('button');
+  button.className = 'copy-btn';
+
+  button.innerHTML = '<span class="material-symbols-outlined">content_copy</span>';
+  button.setAttribute('aria-label', 'Copy code');
+
+  pre.appendChild(button);
+
+  button.addEventListener('click', () => {
+    const code = pre.querySelector('code');
+    if (!code) return;
+
+    navigator.clipboard.writeText(code.textContent).then(() => {
+      button.innerHTML = '<span class="material-symbols-outlined">check</span> Code copied!';
+      
+      setTimeout(() => {
+        button.innerHTML = '<span class="material-symbols-outlined">content_copy</span>';
+      }, 1500);
+    }).catch(err => console.error('Error copying code', err));
+  });
+});
+</script>
+<div id="lightbox" class="lightbox">
+  <button class="prev">‹</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+  <button class="next">›</button>
+  <button class="close">×</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [...document.querySelectorAll(".post-image")];
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const caption = document.getElementById("lightbox-caption");
+
+  let current = 0;
+  let zoomed = false;
+  let startX = 0;
+  let endX = 0;
+
+  images.forEach((img, index) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => open(index));
+  });
+
+  function open(index) {
+    current = index;
+    updateImage();
+    resetZoom();
+    lightbox.classList.add("open");
+  }
+
+  function close() {
+    lightbox.classList.remove("open");
+    resetZoom();
+    lightboxImg.src = "";
+    caption.textContent = "";
+  }
+
+  function updateImage() {
+    const img = images[current];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || "";
+    caption.textContent = img.alt || "";
+  }
+
+  function move(step) {
+    if (zoomed) return;
+    current = (current + step + images.length) % images.length;
+    updateImage();
+    resetZoom();
+  }
+
+  document.querySelector(".prev").onclick = () => move(-1);
+  document.querySelector(".next").onclick = () => move(1);
+  document.querySelector(".close").onclick = close;
+
+  lightboxImg.addEventListener("click", e => {
+    zoomed = !zoomed;
+
+    if (zoomed) {
+      const rect = lightboxImg.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      lightboxImg.style.transformOrigin = `${x}% ${y}%`;
+      lightboxImg.classList.add("zoomed");
+    } else {
+      resetZoom();
+    }
+  });
+
+  function resetZoom() {
+    zoomed = false;
+    lightboxImg.classList.remove("zoomed");
+    lightboxImg.style.transform = "";
+    lightboxImg.style.transformOrigin = "";
+  }
+
+  document.addEventListener("keydown", e => {
+    if (!lightbox.classList.contains("open")) return;
+    if (e.key === "ArrowRight") move(1);
+    if (e.key === "ArrowLeft") move(-1);
+    if (e.key === "Escape") close();
+  });
+
+  lightbox.addEventListener("touchstart", e => {
+    if (zoomed) return;
+    startX = e.changedTouches[0].screenX;
+  });
+
+  lightbox.addEventListener("touchend", e => {
+    if (zoomed) return;
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const threshold = 50;
+    if (startX - endX > threshold) move(1);
+    if (endX - startX > threshold) move(-1);
+  }
+});
+</script>
+
+
+
+
+
+  
+
+
+
+<footer>
+  <div id="contact-form">&nbsp;</div>
+  
+
+<section class="contact-section">
+    <div class="contact-intro">
+        <h2>Leave me a message</h2>
+        <p class="contact-description">
+            If you're interested in working with me, don’t hesitate to contact me.
+        </p>
+    </div>
+
+    <!-- Formulář pro odeslání zprávy -->
+    <form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <!-- Skryté hodnoty pro Web3Forms -->
+        <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
+        <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - EN" />
+        <input type="hidden" name="from_name" value="daniel-hladik.cz" />
+        <input type="hidden" name="redirect" value="https://daniel-hladik.cz/en/form-success/" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+        <input type="hidden" name="title" value="BodyLog - How I created my first fitness app">
+        <input type="hidden" name="url" value="https://daniel-hladik.cz/blog/bodylog-app/">
+        <input type="hidden" name="lang" value="en">
+
+        <div class="form-group-container">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="name" class="form-input" placeholder="Your name" type="text" autocomplete="name" required />
+                <div class="empty-feedback invalid-feedback">
+                    Please enter your name so I know how to call you :)
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" class="form-input" placeholder="write.your@email.com" type="email" autocomplete="email" required />
+                <div class="empty-feedback">
+                    Please fill in your email address.
+                </div>
+                <div class="invalid-feedback">
+                    Maybe just a typo, but your email isn’t valid for sending. Please use the format: "email@domain.com"
+                </div>
+            </div>
+
+            <!-- Messsage -->
+            <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="Write your message here" required></textarea>
+                <div class="empty-feedback invalid-feedback">
+                    Please fill in the message field.
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <button class="form-submit" type="submit">Send</button>
+            </div>
+        </div>
+
+        <p class="text-center" id="result"></p>
+    </form>
+</section>
+
+<script src="/assets/js/contact-form.js" defer></script>
+  
+
+
+<div class="contact" id="contact-details">
+  <h2>Contact me if anything...</h2>
+  <ul>
+    <li>Daniel Hladik 
+      <small>
+        automation engineer
+      </small>
+    </li> 
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span><span>Praha 6</span></li>
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
+</span><a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Attention! This email contains 100% good news&body=Let me know what's on your mind :)" aria-label="info&#64;daniel-hladik&#46;cz">info&#64;daniel-hladik&#46;cz</a></li>
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span><a href="https://www.linkedin.com/in/daniel-hladik/?locale=en_US" aria-label="LinkedIn">daniel-hladik</a></li>
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10M13 2.05S16 6 16 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 21.95S8 18 8 12c0-6 3-9.95 3-9.95M2.63 15.5H12M2.63 8.5h18.74" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path clip-rule="evenodd" d="M21.879 17.917c.494.304.463 1.043-.045 1.101l-2.567.291-1.151 2.312c-.228.459-.933.234-1.05-.334l-1.255-6.116c-.099-.48.333-.782.75-.525l5.318 3.271z" stroke="#000000" stroke-width="1.5"></path></svg>
+</span><a href="https://daniel-hladik.cz" aria-label="daniel-hladik.cz">daniel-hladik.cz</a></li>
+  </ul>
+  
+
+
+
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<p><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">Arrange FREE consultation</a></p>
+<!-- Calendly link widget end -->
+
+</div>
+
+  <div class="divider"></div>
+  <div class="footer-bottom">
+  
+<p class="footer-links">
+    <a href="/en/"  aria-label="LinkedIn">Home</a>
+    <a href="/en/cv/" aria-label="Curriculum vitae">CV</a>
+    <a href="/en/services/" aria-label="Services">Services</a>
+    <a href="/en/blog/" aria-label="Blog">Blog</a>
+</p>
+  
+<div class="language-switcher">
+
+    
+    
+    
+        
+<a class="lang-link" href=" /blog/bodylog-app/" aria-label="Čeština">Čeština</a>
+        
+    
+
+    
+    
+    
+<!--<span class="lang-active">English</span>-->
+    
+
+</div>
+
+  </div>
+  <small>&copy; <time datetime="2026-01-25T22:33:37+00:00">2026</time>
+    Daniel Hladík. All rights reserved.
+  </small>
+</footer>
+
+
+
+      </div>
+    </div>
+  </div>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  
+  <script src="/assets/js/darkmode.js"></script>
+  
+  
+</body>
+
+</html>
