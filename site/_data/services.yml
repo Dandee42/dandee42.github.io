@@ -87,7 +87,7 @@
   lang:
     cs:
       title: "Vývoj webových aplikací na míru"
-      description: "Stavím spolehlivá řešení a interní nástroje v Pythonu."
+      description: "Když no-code narazí na své limity, přichází na řadu kód na míru. Stavím spolehlivá řešení a interní nástroje v Pythonu."
       lead: "Když no-code narazí na své limity, přichází na řadu kód na míru."
       text: |
         <h2>Aplikace, které se přizpůsobí vám, ne naopak</h2>
@@ -101,7 +101,7 @@
       contact_link: "Poptat vývoj"
     en:
       title: "Custom Web Development"
-      description: "Building reliable backend solutions and internal tools in Python."
+      description: "When no-code hits its limits, custom code takes over. I build reliable web app solutions and internal tools in Python."
       lead: "When no-code hits its limits, custom code takes over."
       text: |
         <h2>Apps that adapt to you, not the other way around</h2>
