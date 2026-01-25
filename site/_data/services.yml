@@ -1,0 +1,113 @@
+- page_id: intelligent-automation
+  type: service
+  slug: intelligent-automation
+  date: 2026-01-25 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: all_inclusive
+  lang:
+    cs:
+      title: "Inteligentní automatizace (n8n & AI)"
+      description: "Propojím vaše aplikace a zapojím AI agenty do vašich procesů."
+      lead: "Zbavte se rutiny a nechte systémy, aby spolu mluvily a samy se rozhodovaly."
+      text: |
+        <h2>Změňte chaos v efektivní ekosystém</h2>
+        <p>Většina firem používá desítky nástrojů, které spolu nekomunikují. Moje řešení staví mosty mezi CRM, e-mailem, tabulkami a vaším interním systémem. Díky n8n a integraci AI dokážu vytvořit workflow, která nejsou jen tupými spoji, ale inteligentními pomocníky.</p>
+        <h3>Co pro vás mohu zajistit:</h3>
+        <ul>
+          <li><strong>Propojení nepropojitelného:</strong> Synchronizace dat mezi platformami, které nemají nativní integraci.</li>
+          <li><strong>AI Agenti v praxi:</strong> Automatické třídění e-mailů, analýza dokumentů nebo generování personalizovaných odpovědí.</li>
+          <li><strong>Zpracování dat:</strong> Automatizovaný reporting a čištění dat bez nutnosti ručních exportů.</li>
+        </ul>
+      contact_link: "Chci automatizovat"
+    en:
+      title: "Intelligent Automation (n8n & AI)"
+      description: "Connect your apps and integrate AI agents into your workflows."
+      lead: "Stop doing the routine work. Let your systems communicate and decide on their own."
+      text: |
+        <h2>Turn chaos into an efficient ecosystem</h2>
+        <p>Most companies use dozens of tools that don't talk to each other. My solutions build bridges between CRM, email, sheets, and your internal systems. Using n8n and AI, I create workflows that are intelligent assistants, not just simple pipes.</p>
+        <h3>What I can do for you:</h3>
+        <ul>
+          <li><strong>Custom Integrations:</strong> Syncing data between platforms without native connections.</li>
+          <li><strong>AI Agents:</strong> Automatic email sorting, document analysis, or generating personalized responses.</li>
+          <li><strong>Data Processing:</strong> Automated reporting and data cleaning without manual exports.</li>
+        </ul>
+      contact_link: "Let's automate"
+
+- page_id: automation-testing-qa
+  type: service
+  slug: automation-testing-qa
+  date: 2026-01-25 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: verified_user
+  lang:
+    cs:
+      title: "Automatizované testování (QA)"
+      description: "Zajišťuji, aby váš software fungoval bezchybně při každém vydání."
+      lead: "Odhalte chyby dříve, než je najdou vaši zákazníci."
+      text: |
+        <h2>Konec stresu z pátkových releasů</h2>
+        <p>Manuální testování je pomalé a náchylné k chybám. Pomocí moderního frameworku <strong>Playwright</strong> píšu automatizované testy, které simulují reálné chování uživatele. Váš web nebo aplikace budou pod neustálým dohledem.</p>
+        <h3>Jak vám pomohu zvýšit kvalitu:</h3>
+        <ul>
+          <li><strong>E-commerce testování:</strong> Automatické ověření košíku, platební brány a registrací.</li>
+          <li><strong>Regresní testy:</strong> Jistota, že nová funkce nerozbila ty stávající.</li>
+          <li><strong>CI/CD integrace:</strong> Testy se spustí automaticky při každé změně v kódu.</li>
+        </ul>
+      contact_link: "Chci bezchybný web"
+    en:
+      title: "Automated Testing (QA)"
+      description: "Ensuring your software works flawlessly with every release."
+      lead: "Catch bugs before your customers do."
+      text: |
+        <h2>No more Friday deployment stress</h2>
+        <p>Manual testing is slow and error-prone. Using <strong>Playwright</strong>, I build automated tests that simulate real user behavior. Your web or app will be under constant supervision.</p>
+        <h3>How I improve your quality:</h3>
+        <ul>
+          <li><strong>E-commerce testing:</strong> Automated verification of cart, payments, and registration.</li>
+          <li><strong>Regression testing:</strong> Ensuring new features don't break existing ones.</li>
+          <li><strong>CI/CD integration:</strong> Tests run automatically with every code change.</li>
+        </ul>
+      contact_link: "Improve my quality"
+
+- page_id: web-app-development
+  type: service
+  slug: web-app-development
+  date: 2026-01-25 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: terminal
+  lang:
+    cs:
+      title: "Vývoj webových aplikací na míru"
+      description: "Stavím robustní backendová řešení a interní nástroje v Pythonu."
+      lead: "Když no-code narazí na své limity, přichází na řadu kód na míru."
+      text: |
+        <h2>Aplikace, které se přizpůsobí vám, ne naopak</h2>
+        <p>Někdy hotové nástroje prostě nestačí. V Pythonu stavím efektivní aplikace, které řeší specifické problémy vašeho podnikání. Od databázových návrhů až po API, která propojí váš svět.</p>
+        <h3>V čem vám mohu pomoci:</h3>
+        <ul>
+          <li><strong>Interní nástroje:</strong> Dashboardy, správa zakázek nebo specifické databáze.</li>
+          <li><strong>Mikroslužby:</strong> Malé, rychlé aplikace, které vykonávají konkrétní úkol v rámci vašeho systému.</li>
+          <li><strong>Rozšíření existujících systémů:</strong> Doplnění funkcí tam, kde krabicové řešení končí.</li>
+        </ul>
+      contact_link: "Poptat vývoj"
+    en:
+      title: "Custom Web Development"
+      description: "Building robust backend solutions and internal tools in Python."
+      lead: "When no-code hits its limits, custom code takes over."
+      text: |
+        <h2>Apps that adapt to you, not the other way around</h2>
+        <p>Sometimes off-the-shelf tools just aren't enough. I build efficient Python applications to solve your specific business challenges. From database design to APIs that connect your world.</p>
+        <h3>Where I can help:</h3>
+        <ul>
+          <li><strong>Internal Tools:</strong> Dashboards, order management, or specialized databases.</li>
+          <li><strong>Microservices:</strong> Small, fast applications performing specific tasks within your system.</li>
+          <li><strong>System Extensions:</strong> Adding features where standard software stops.</li>
+        </ul>
+      contact_link: "Get a quote"

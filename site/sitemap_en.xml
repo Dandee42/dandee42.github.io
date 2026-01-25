@@ -1,0 +1,7 @@
+---
+layout: sitemap
+permalink: /sitemap_en.xml
+sitemap: false
+lang: en
+unless_lang: cs
+---

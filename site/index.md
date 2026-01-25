@@ -2,8 +2,8 @@
 layout: home
 page_id: home
 lang: cs
-title: Daniel Hladík - online markeťák v IT světě
-description: Propojuji zkušenosti z online marketingu s IT světem
+title: Daniel Hladík - Automation Engineer | Dávám automatizacím smysl
+description: Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI & Automation | QA | Tvorba webových aplikací
 image: /assets/files/photo.png
 permalink: /
 canonical: false
@@ -11,24 +11,41 @@ canonical: false
 
 {% include side-images.html %}
 
-## Jsem Dan, začínající vývojář webových aplikací a automatizační architekt
-Na začátku roku 2024 jsem se rozhodl pro zásadní změnu kariéry a začal intenzivně pracovat na přechodu z role online markeťáka do světa IT. V rámci této transformace jsem absolvoval několik vzdělávacích kurzů zaměřených na **vývoj a testování webových aplikací**, zejména s využitím Pythonu.
+## Jsem Dan a dávám automatizacím smysl
+Moje cesta k IT nevedla skrze univerzitní auly, ale skrze reálnou praxi v e-commerce a online marketingu. Právě tam jsem pochopil, že největší brzdou růstu není nedostatek nápadů, ale utápění se v rutinních úkolech.
 
-Postupně jsem se naučil nejen manuálně testovat, ale i automatizovat testy pomocí **Playwrightu** a Selenia, vytvářet jednoduché aplikace v platformě **Django** a později objevovat potenciál automatizace procesů pomocí **n8n**.
-
-<div class="parallax"></div>
-
-## Proč jsem přešel do IT světa?
-V jedné ze svých pracovních pozic online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy. Myslím si, že právě tato zkušenost mi poskytla solidní základy pro změnu kariéry.
+Dnes tyto brzdy odstraňuji. Kombinuji analytické myšlení s technickými dovednostmi, abych tvořil systémy, které pracují za vás.
 
 <div class="parallax"></div>
 
-## Kam aktuálně směřuji a co vám můžu nabídnout
-Zkušenosti z **e-commerce** a online marketingu mi stále pomáhají lépe chápat souvislosti při testování eshopů. V současnosti se zaměřuji především na automatizaci testů pomocí **Playwrightu** a dalších nástrojů, automatizaci procesů pomocí **n8n**, která mě svými možnostmi nadchla, a dále na **vývoj webových aplikací**. 
+## Proč právě IT a automatizace
+V jedné ze svých pracovních pozic online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy.
 
-Online marketingu se nyní věnuji jen okrajově a do budoucna ho chci opustit úplně.
+Tato zkušenost mě inspirovala k přechodu do IT a položila základy k mé současné dráze – **automatizaci testů i firemních workflow**.
 
-[Více o mně →](/cv/#continue)
+[Více o mně →](/cv/)
+
+<div class="parallax"></div>
+
+<br>
+
+> ## _„Chytrá řešení začínají u myšlenky, ne u kódu.“_
+
+<br>
+
+<div class="parallax"></div>
+
+## Jaké služby vám mohu nabídnout
+
+Věřím, že nejdůležitější není otázka „jak“ něco vytvořit, ale „co“ a „proč“ tvoříme. Samotná cesta a výběr nástrojů pak přirozeně vyplynou z hledání cesty k cíli. Každý problém může mít mnoho řešení a mým úkolem je najít takové, které bude nejlépe vyhovovat právě vašim potřebám.
+
+- **Inteligentní automatizace (n8n & AI)**: Propojuji aplikace, které spolu dříve nemluvily. Stavím n8n workflow obohacená o AI agenty, která šetří hodiny lidské práce týdně.
+
+- **Automatizované testování (QA)**: Zajišťuji, aby váš software fungoval bezchybně. Pomocí Playwrightu píšu testy, které odhalí chyby dříve než vaši zákazníci.
+
+- **Vývoj webových aplikací**: Když no-code nástroje narazí na své limity, stavím vlastní řešení na míru v Pythonu. Od databáze až po funkční rozhraní.
+
+[Více o službách →](/services/)
 
 <div class="parallax"></div>
 

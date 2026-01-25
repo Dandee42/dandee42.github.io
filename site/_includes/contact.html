@@ -1,7 +1,7 @@
 {% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
 
-<div class="contact">
+<div class="contact" id="contact-details">
   <h2>{{ trans.contact.title }}</h2>
   <ul>
     <li>{{ site.title[lang] }} 
@@ -14,4 +14,5 @@
     <li><span class="li-icon">{% include svg/linkedin.svg %}</span><a href="{{ trans.cv.lindkedIn }}" aria-label="LinkedIn">daniel-hladik</a></li>
     <li><span class="li-icon">{% include svg/internet.svg %}</span><a href="{{ site.url }}" aria-label="daniel-hladik.cz">daniel-hladik.cz</a></li>
   </ul>
+  {% include schedule-meeting-link.html %}
 </div>

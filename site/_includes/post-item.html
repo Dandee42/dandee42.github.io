@@ -25,8 +25,11 @@
     <p class="back-to-top">
       <a href="#top">{{ trans.blog.back_to_top}}</a>
     </p>
+    {% include share-button.html %}
     {% include pagination-post.html %}
   </main>
 </article>
 {% include heading-links.html %}
 <script src="/assets/js/add-img-lazy-loading.js" defer></script>
+{% include code-copy-button.html %}
+{% include lightbox-gallery.html %}

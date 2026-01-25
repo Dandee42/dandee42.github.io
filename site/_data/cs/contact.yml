@@ -16,9 +16,20 @@ form:
   email_subject: "Nová zpráva přes kontaktní formulář - CS"
   mailto_subject: "Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)"
   from_name: "daniel-hladik.cz"
-  success_page_url: "/form-success/"
+  success_page_url: "https://daniel-hladik.cz/form-success/"
 success_page:
   title: "Úspěšně<br>odesláno"
   subtitle: "...a teď už zbývá jen<br>čekat na odpověď."
   paragraph: "Kontaktuji vás, jakmile to bude možné.<br><br>Můžete se vrátit na domovskou stránku."
+  back_to_home_url: "/"
+scheduled_meeting:
+  title: "Naplánujte si se mnou konzultaci"
+  subtitle: "Vyberte si čas, který Vám vyhovuje."
+  paragraph: "Klikněte na tlačítko níže a vyberte si termín konzultace.<br><br>Těším se na naši spolupráci!"
+  submit_button: "Chci konzultaci ZDARMA"
+  link: "https://calendly.com/daniel-hladik/30min"
+scheduled_meeting_success_page:
+  title: "Úspěšně<br>odesláno"
+  subtitle: "...brzy Vám přijde email<br>s potvrzením termínu"
+  paragraph: "Prosím potvrďte mi účast ve svém kalendáři,<br>abych věděl, že s Vámi mohu počítat.<br><br>Pokud vám žádný email nepřišel, zkontrolujte si nejdříve složku SPAM.<br>Případně mě kontaktuje a pošlu Vám pozvánku.<br><br>...a teď už zbývá jen těšit se na schůzku :)<br><br>Můžete se vrátit na domovskou stránku."
   back_to_home_url: "/"

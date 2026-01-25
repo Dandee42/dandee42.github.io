@@ -1,0 +1,49 @@
+{% assign trans = site.data[site.active_lang] %}
+
+<p class="share-button-container">
+  {{ trans.blog.share_text_question | escape }}<br>{{ trans.blog.share_text_answer | escape }}<br>
+<button id="shareBtn" class="share-button">
+  <span class="material-symbols-outlined">share</span>
+  {{ trans.blog.share_button | escape }}
+</button>
+</p>
+
+<script defer>
+  const currentLang = document.documentElement.lang || '{{ site.active_lang | default: "cs" }}';
+
+  const translations = {
+    cs: {
+      shareText: 'Přečti si tento článek',
+      copied: 'Odkaz byl zkopírován do schránky!',
+      copyError: 'Nepodařilo se zkopírovat odkaz. Zkopírujte ho ručně: '
+    },
+    en: {
+      shareText: 'Check out this article',
+      copied: 'Link copied to clipboard!',
+      copyError: 'Could not copy the link. Please copy it manually: '
+    }
+  };
+
+  const t = translations[currentLang] || translations.cs;
+
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          text: t.shareText,
+          url: window.location.href
+        });
+      } catch(err) {
+        console.error('Chyba při sdílení:', err);
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert(t.copied);
+      } catch (err) {
+        alert(t.copyError + window.location.href);
+      }
+    }
+  });
+</script>

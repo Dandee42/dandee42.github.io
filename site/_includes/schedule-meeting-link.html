@@ -1,0 +1,12 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+{% if lang == "cs" %}
+<p><a href="https://zapti.me/daniel-hladik/konzultace-zdarma">{{ trans.contact.scheduled_meeting.submit_button }}</a></p>
+{% else %}
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<p><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">{{ trans.contact.scheduled_meeting.submit_button }}</a></p>
+<!-- Calendly link widget end -->
+{% endif %}

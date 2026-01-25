@@ -6,35 +6,19 @@ title:
   cs: Daniel Hladík
   en: Daniel Hladik
 description:
-  cs: Propojuji zkušenosti z online marketingu s IT světem
-  en: I connect online marketing experience with the IT world
+  cs: Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI & Automation | QA | Tvorba webových aplikací
+  en: I help companies and individuals get rid of routines that don't add value |AI & Automation | QA | Building web apps
 taglong:
-  cs: Online markeťák v IT světě
-  en: Online marketer in the IT world
+  cs: Automation Engineer
+  en: Automation Engineer
 tagshort:
-  cs: online markeťák v IT světě
-  en: online marketer in the IT world
+  cs: automation engineer
+  en: automation engineer
 
 baseurl: ""
 url: https://daniel-hladik.cz
 
 remote_theme: piazzai/cvless
-
-# ----------------------------------------------------------
-# POLYGLOT SETTINGS
-# ----------------------------------------------------------
-
-languages: ["cs", "en"]
-default_lang: "cs"
-exclude_from_localization:
-  - assets/
-  - sitemap.xml
-  - feed.xml
-  - robots.txt
-  - CNAME
-  - docker.compose.yml
-
-parallel_localization: false # set to true if you have a lot of posts/pages (doesn't work on Windows)
 
 # ----------------------------------------------------------
 # ALERT MESSAGE
@@ -80,6 +64,44 @@ exclude:
 permalink: /blog/:slug/
 
 # ----------------------------------------------------------
+# COLLECTIONS
+# ----------------------------------------------------------
+
+collections:
+  pages:
+    output: true
+
+# ----------------------------------------------------------
+# POLYGLOT SETTINGS
+# ----------------------------------------------------------
+
+languages: ["cs", "en"]
+default_lang: "cs"
+# lang_from_path: false
+exclude_from_localization:
+  - assets/
+  - sitemap.xml
+  - sitemap_cs.xml
+  - sitemap_en.xml
+  - robots.txt
+  - CNAME
+  - docker.compose.yml
+parallel_localization: false # set to true if you have a lot of posts/pages (doesn't work on Windows)
+
+# ----------------------------------------------------------
+# DATA PAGES GENERATOR
+# ----------------------------------------------------------
+page_gen-dirs: true
+
+page_gen:
+  - data: 'services'
+    template: 'service'
+    name: 'slug'
+    dir: 'services'
+    filter: published
+    lang: lang
+
+# ----------------------------------------------------------
 # AUTOPAGES (CATEGORIES, TAGS)
 # ----------------------------------------------------------
 
@@ -121,6 +143,8 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-polyglot
   - jekyll-last-modified-at
+  - jekyll-redirect-from
+  - jekyll-datapage-generator
 
 # ----------------------------------------------------------
 # STYLE

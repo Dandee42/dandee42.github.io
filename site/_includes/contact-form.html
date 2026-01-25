@@ -16,6 +16,9 @@
         <input type="hidden" name="from_name" value="{{ trans.contact.form.from_name }}" />
         <input type="hidden" name="redirect" value="{{ trans.contact.form.success_page_url }}" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+        <input type="hidden" name="title" value="{{ page.lang[site.active_lang].title | default: page.title }}">
+        <input type="hidden" name="url" value="{{ site.url }}{{ page.url }}">
+        <input type="hidden" name="lang" value="{{ site.active_lang | default: page.lang }}">
 
         <div class="form-group-container">
             <!-- Name -->
