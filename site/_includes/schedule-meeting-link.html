@@ -1,4 +1,4 @@
-{% assign lang = page.lang | default: site.default_lang %}
+{% assign lang = site.active_lang | default: page.lang %}
 {% assign trans = site.data[site.active_lang] %}
 
 {% if lang == "cs" %}
