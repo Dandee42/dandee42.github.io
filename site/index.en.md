@@ -2,8 +2,8 @@
 layout: home
 page_id: home
 lang: en
-title: Daniel Hladik - Automation Engineer
-description: I automate the world around me – from tests to business processes.
+title: Daniel Hladík - Automation Engineer | I make automation meaningful
+description: I help companies and individuals get rid of routines that don't add value | AI & Automation | QA | Web application development
 image: /assets/files/photo.png
 permalink: /
 canonical: false
@@ -11,26 +11,41 @@ canonical: false
 
 {% include side-images.html %}
 
-## I'm Daniel, Automation Engineer with E-commerce Experience
-At the beginning of 2024, I decided to make a major career shift and began working intensively on transitioning from an online marketer to the world of IT. As part of this transformation, I completed several training courses focused on **web application development and testing**, particularly using Python.
+## I'm Daniel, and I make automation meaningful
+My path to the world of IT did not lead through university lecture halls, but through real-world experience in e-commerce and online marketing. It was there that I realized that the biggest obstacle to growth is not a lack of ideas, but getting bogged down in routine tasks.
 
-Gradually, I learned not only how to test manually, but also how to automate tests using **Playwright** and Selenium, create simple applications in the **Django** platform, and later discover the potential of process automation using **n8n**.
+These days, I remove these obstacles. I combine analytical thinking with technical skills to create systems that work for you.
 
 <div class="parallax"></div>
 
 ## Why IT and automation
-In one of my positions as an online marketer, I was fortunate enough to be able to look over the shoulders of programmers developing an e-shop, which opened up a whole new world for me. I enjoyed participating in the development of the e-shop step by step, coming up with new functionalities, testing, and proposing suitable solutions to current problems.
+In one of my positions as an online marketer, I was fortunate enough to be able to look over the shoulders of programmers as they developed an e-shop, opening up a whole new world to me. I enjoyed being involved in the development of the e-shop step by step, coming up with new features, testing, and proposing suitable solutions to current problems.
 
-This experience inspired me to switch to IT and laid the foundation for my current career path – **test automation and business workflow automation**.
+This experience inspired me to switch to IT and laid the foundation for my current career path—**test automation and business workflow automation**.
+
+[More about me →](/cv/)
 
 <div class="parallax"></div>
 
-## Where I am headed and what I can offer you
-My experience in **e-commerce** and online marketing continues to help me better understand the context of e-shop testing. Currently, I focus primarily on test automation using **Playwright**, but also on process automation using **n8n**, which has impressed me with its capabilities.
+<br>
 
-My goal is to create solutions that save time, minimize errors, and simplify work for teams and companies.
+> ## _„Smart solutions start with an idea, not code.“_
 
-[More about me →](/cv/#continue)
+<br>
+
+<div class="parallax"></div>
+
+## What services can I offer you?
+
+I believe that the most important question is not "how" to create something, but "what" and "why" we create. The path itself and the choice of tools will then naturally follow from the search for the path to the goal. Every problem have many solutions, and my job is to find the one that best suits your needs.
+
+- **Intelligent automation (n8n & AI)**: I connect applications that previously did not communicate with each other. I build n8n workflows enriched with AI agents that save hours of human labor per week.
+
+- **Automated testing (QA)**: I ensure that your software works flawlessly. Using Playwright, I write tests that detect errors before your customers do.
+
+- **Web application development**: When no-code tools reach their limits, I build custom solutions in Python. From databases to functional interfaces.
+
+[More about my services →](/services/)
 
 <div class="parallax"></div>
 
