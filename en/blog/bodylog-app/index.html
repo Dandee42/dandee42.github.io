@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-      BodyLog - Jak jsem si vytvořil svou první fitness apku &middot; Daniel Hladik &#124; Automation Engineer
+      BodyLog - How I created my first fitness app &middot; Daniel Hladik &#124; Automation Engineer
     
   </title>
   
@@ -40,11 +40,11 @@
   
   
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="BodyLog - Jak jsem si vytvořil svou první fitness apku">
+  <meta property="og:title" content="BodyLog - How I created my first fitness app">
   <meta name="author" content="Daniel Hladik">
   <meta property="og:locale" content="en_US">
-  <meta name="description" content="Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.">
-  <meta property="og:description" content="Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.">
+  <meta name="description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
+  <meta property="og:description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
   <meta property="og:url" content="https://daniel-hladik.cz/en/blog/bodylog-app/">
   <meta property="og:site_name" content="Daniel Hladik">
   
@@ -57,8 +57,8 @@
   
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="BodyLog - Jak jsem si vytvořil svou první fitness apku">
-  <meta name="twitter:description" content="Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.">
+  <meta property="twitter:title" content="BodyLog - How I created my first fitness app">
+  <meta name="twitter:description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
 
   <!-- JSON-LD POST START -->
   <script type="application/ld+json">
@@ -70,10 +70,10 @@
       "name": "Daniel Hladik"
     },
     "datePublished": "2026-01-16T00:00:00+00:00",
-    "dateModified": "2026-01-25T19:20:13+00:00",
-    "description": "Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.",
+    "dateModified": "2026-01-25T22:01:19+00:00",
+    "description": "The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.",
     "inLanguage": "en_US",
-    "headline": "BodyLog - Jak jsem si vytvořil svou první fitness apku",
+    "headline": "BodyLog - How I created my first fitness app",
     "image": "https://daniel-hladik.cz\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -152,124 +152,124 @@
         
       </p>
     
-    <h1 class="post-title">BodyLog - Jak jsem si vytvořil svou první fitness apku</h1>
-    <p class="lead">Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.</p>
+    <h1 class="post-title">BodyLog - How I created my first fitness app</h1>
+    <p class="lead">The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.</p>
 
     
       <div class="post-hero-image">
-        <img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg" alt="Hero image for BodyLog - Jak jsem si vytvořil svou první fitness apku" loading="lazy">
+        <img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg" alt="Hero image for BodyLog - How I created my first fitness app" loading="lazy">
       </div>
     
     <br>
-    <p>Nevystudoval jsem IT obor, ale vždy mě lákalo si vytvořit svoji vlastní aplikaci. Chtěl jsem něco, co bude mít reálný přínos pro můj život a nebude to jen další „cvičný“ projekt do šuplíku. A tak vznikla <a href="https://bodylog.daniel-hladik.cz">BodyLog App</a>.</p>
+    <p>I didn’t study IT, but I’ve always been tempted to create my own application. I wanted something that would have a real impact on my life and not just be another “practice” project that would end up in a drawer. And that’s how <a href="https://bodylog.daniel-hladik.cz">BodyLog App</a> came about.</p>
 
-<p>Obsah článku:</p>
+<p>Article content:</p>
 <ul id="markdown-toc">
-  <li><a href="#proč-právě-apka-na-sledování-tělesných-měr" id="markdown-toc-proč-právě-apka-na-sledování-tělesných-měr">Proč právě apka na sledování tělesných měr</a>    <ul>
-      <li><a href="#co-neměříš-to-neřídíš" id="markdown-toc-co-neměříš-to-neřídíš"><em>„Co neměříš, to neřídíš.“</em></a></li>
+  <li><a href="#why-did-i-choose-an-app-for-tracking-body-measurements" id="markdown-toc-why-did-i-choose-an-app-for-tracking-body-measurements">Why did I choose an app for tracking body measurements</a>    <ul>
+      <li><a href="#if-you-dont-measure-it-you-cant-manage-it" id="markdown-toc-if-you-dont-measure-it-you-cant-manage-it"><em>„If you don’t measure it, you can’t manage it.“</em></a></li>
     </ul>
   </li>
-  <li><a href="#šel-jsem-na-to-s-rozmyslem" id="markdown-toc-šel-jsem-na-to-s-rozmyslem">Šel jsem na to s rozmyslem</a></li>
-  <li><a href="#s-čím-jsem-nejvíc-bojoval-a-co-jsem-se-naučil" id="markdown-toc-s-čím-jsem-nejvíc-bojoval-a-co-jsem-se-naučil">S čím jsem nejvíc bojoval a co jsem se naučil</a></li>
-  <li><a href="#ai---učitel-na-zavolání" id="markdown-toc-ai---učitel-na-zavolání">AI - Učitel na zavolání</a></li>
-  <li><a href="#co-aplikace-umí" id="markdown-toc-co-aplikace-umí">Co aplikace umí?</a></li>
+  <li><a href="#i-approached-it-with-caution" id="markdown-toc-i-approached-it-with-caution">I approached it with caution</a></li>
+  <li><a href="#what-i-struggled-with-most-and-what-i-learned" id="markdown-toc-what-i-struggled-with-most-and-what-i-learned">What I struggled with most and what I learned</a></li>
+  <li><a href="#ai---teacher-on-call" id="markdown-toc-ai---teacher-on-call">AI - Teacher on call</a></li>
+  <li><a href="#what-can-the-app-do" id="markdown-toc-what-can-the-app-do">What can the app do</a></li>
 </ul>
 
-<h2 id="proč-právě-apka-na-sledování-tělesných-měr">Proč právě apka na sledování tělesných měr</h2>
+<h2 id="why-did-i-choose-an-app-for-tracking-body-measurements">Why did I choose an app for tracking body measurements</h2>
 
-<p>Posledních 8 let jsem si vedl záznamy o své postavě v Excelu. Ne že bych byl profesionální bodybuilder, ale vždy mě zajímalo, jak se moje tělo s časem mění. Razím totiž heslo: „Co neměříš, to neřídíš.“ Jenže tabulka s čísly bez kontextu je po čase nepřehledná a chyběla mi v ní ta správná vizualizace „evoluce“ těla v čase – i když co si budeme povídat, ty přibývající roky (a kila) jsou na některých partiích vidět i bez grafu.</p>
+<p>For the past eight years, I have been keeping records of my physique in Excel. Not that I am a professional bodybuilder, but I have always been interested in how my body changes over time. My motto is: “If you don’t measure it, you can’t manage it.” However, a table of numbers without context becomes confusing over time, and I felt it lacked the right visualization of the “evolution” of the body over time—although, let’s be honest, the passing years (and pounds) are visible in some areas even without a graph.</p>
 
-<p>Právě tento letitý Excel se stal ideálním kandidátem na mou první aplikaci. I když je fitness aplikací na trhu nespočet, nechtěl jsem jim konkurovat. Chtěl jsem si postavit vlastní řešení na míru a hlavně se na něm naučit, co všechno obnáší vývoj – od prvního návrhu databáze až po nasazení na produkční server.</p>
+<p>This old Excel spreadsheet became the ideal candidate for my first app. Although there are countless fitness apps on the market, I didn’t want to compete with them. I wanted to build my own customized solution and, above all, learn everything that development entails – from the initial database design to deployment on a production server.</p>
 
 <blockquote>
-  <h3 id="co-neměříš-to-neřídíš"><em>„Co neměříš, to neřídíš.“</em></h3>
+  <h3 id="if-you-dont-measure-it-you-cant-manage-it"><em>„If you don’t measure it, you can’t manage it.“</em></h3>
 </blockquote>
 
-<p>Když jsem se před přibližně rokem a půl začínal učit programovat, řekl jsem si, že bych mohl vytvořit aplikaci a udělat něco praktického, co bych sám využil. Z toho vznikla aplikace, kterou jsem pracovním názvem pojmenoval BodyLog.</p>
+<p>When I started learning programming about a year and a half ago, I thought I could create an application and do something practical that I could use myself. This resulted in an application that I named BodyLog as a working title.</p>
 
-<h2 id="šel-jsem-na-to-s-rozmyslem">Šel jsem na to s rozmyslem</h2>
+<h2 id="i-approached-it-with-caution">I approached it with caution</h2>
 
-<p>Navrhnul jsem si databázové modely, tabulku po tabulce a jejich vzájemné vazby. V té době jsem ještě nepoužíval AI ve velkém, takže jsem hezky po staru nejdříve na papír navrhnul entity, které jsem pospojoval do logického celku. Pomocí nástroje draw.io jsem si načrtnul, jaké stránky budou v aplikaci figurovat. Vypsal jsem si je také do Excelu a připsal si k nim slug URL, title a descriptions (kde to mělo význam).</p>
+<p>I designed database models, table by table, and their mutual connections. At that time, I wasn’t using AI on a large scale yet, so I designed the entities the old-fashioned way, first on paper, and then connected them into a logical whole. Using the draw.io tool, I sketched out what pages would appear in the application. I also listed them in Excel and added slug URLs, titles, and descriptions (where relevant).</p>
 
-<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-01.jpg" alt="Diagram mappingu stránek v aplikaci" class="post-image" /></p>
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-01.jpg" alt="Site mapping diagram in the application" class="post-image" /></p>
 
-<p>Jakmile jsem měl základní architekturu aplikace připravenou, vrhnul jsem se na vizuál. Vytvořil jsem si v jedné online aplikaci design, ke kterému jsem poté směřoval při vývoji aplikace.</p>
+<p>Once I had the basic architecture of the application ready, I threw myself into the visuals. I created a design in an online application, which I then used as a guide during the development of the application.</p>
 
-<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-03.jpg" alt="Původní grafický návrh nástěnky" class="post-image" /></p>
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-03.jpg" alt="Original graphic design of the bulletin board" class="post-image" /></p>
 
-<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-02.jpg" alt="Style Guide se základními UI prvky" class="post-image" /></p>
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-02.jpg" alt="Style Guide with basic UI elements" class="post-image" /></p>
 
-<p>Aplikaci jsem v základu za pár týdnů vytvořil, ale používal jsem ji pouze na svém lokálním počítači. Neměla překlady ani převody jednotek. Téměř rok jsem ji nepustil do produkčního světa. Tedy až do teď.</p>
+<p>I created the application in a few weeks, but I only used it on my local computer. It didn’t have translations or unit conversions. I didn’t release it into the production world for almost a year. Until now, that is.</p>
 
-<p>Některé věci jsem předělal, vylepšil, ale základ zůstal více méně stejný. Nejde o složitou aplikaci, takže změny jsem si ani nemusel nikam systematicky zaznamenávat, ale rovnou jsem na nich postupně pracoval.</p>
+<p>I redesigned and improved some things, but the basics remained more or less the same. It’s not a complicated application, so I didn’t even have to systematically record the changes anywhere; I just worked on them gradually.</p>
 
 <blockquote class="alert alert-warning">
-  <p><strong>Proč symbol mrkve v brandingu?</strong>
-<em>Protože. Je to klišé. Jez mrkvičku a budeš zdravý jako řípa, říkává se (nebo jsem to popletl?). Nemá to logický důvod. Byla to první věc, která mě napadla.</em></p>
+  <p><strong>Why did I use the carrot symbol in app branding?</strong>
+<em>Because. It’s a cliché. Eat carrots and you’ll be as healthy as a horse, they say (or did I get that wrong?). There’s no logical reason for it. It was just the first thing that came to mind.</em></p>
 </blockquote>
 
-<h2 id="s-čím-jsem-nejvíc-bojoval-a-co-jsem-se-naučil">S čím jsem nejvíc bojoval a co jsem se naučil</h2>
+<h2 id="what-i-struggled-with-most-and-what-i-learned">What I struggled with most and what I learned</h2>
 
-<p>Vyzkoušel jsem si postupně tyto role:</p>
+<p>What roles I gradually tried out:</p>
 <ul>
-  <li><strong>Softwarový architekt a analytik</strong>: Ještě než jsem napsal první řádek kódu, musel jsem si ujasnit, co přesně stavím. Navrhl jsem datový model, aby spolu jednotlivé entity (uživatel, záznam, jednotka) správně mluvily, a rozkreslil jsem si tok dat aplikací.</li>
-  <li><strong>Grafický designer</strong>: Zjistil jsem, že návrh vizuální podoby aplikace nebyl jen o barvách a nastylovaných tlačítkách (UI), ale i o tom, jak se uživateli bude používat (UX).</li>
-  <li><strong>Backend developer</strong>: Musel jsem vyvinout logiku, která převádí jednotky, hlídá oprávnění uživatelů a stará se o to, aby se správná data poslala na správné místo.</li>
-  <li><strong>Frontend developer</strong>: Převedl jsem design do reality pomocí HTML, CSS (převážně Bootstrap) a Javascriptu tak, aby aplikace vypadala a chovala se skvěle na desktopu i na displeji telefonu.</li>
-  <li><strong>Tester</strong>: Testerská role mi byla sice zkušenostmi nejbližší, ale upřímně jsem ji asi nejvíc odflákl. Samozřejmě jsem si zkoušel aplikaci proklikat, ale podrobnější testování jsem nechal na kamarádech.</li>
-  <li><strong>Projektový manažer</strong>: Musel jsem se naučit říct „ne“ novým funkcím, abych tu základní verzi (MVP) konečně dostal k uživatelům. A že těch nápadů bylo a stále je v backlogu hromada.</li>
+  <li><strong>Software architect and analyst</strong>: Before I wrote the first line of code, I had to figure out exactly what I was building. I designed a data model so that the individual entities (user, record, unit) would communicate correctly, and I drew up the application data flow.</li>
+  <li><strong>Graphic designer</strong>: I discovered that designing the visual appearance of the application was not just about colors and stylish buttons (UI), but also about how the user would use it (UX).</li>
+  <li><strong>Backend developer</strong>: I had to develop logic that converts units, monitors user permissions, and ensures that the right data is sent to the right place.</li>
+  <li><strong>Frontend developer</strong>: I translated the design into reality using HTML, CSS (mostly Bootstrap), and JavaScript so that the application would look and behave great on both desktop and mobile displays.</li>
+  <li><strong>Tester</strong>: The tester role was closest to my experience, but honestly, I probably slacked off the most. Of course, I tried clicking through the application, but I left the more detailed testing to my friends.</li>
+  <li><strong>Project manager</strong>: I had to learn to say “no” to new features in order to finally get the basic version (MVP) to users. And there were, and still are, a lot of ideas in the backlog.</li>
 </ul>
 
-<p>Naučil jsem se:</p>
+<p>What I learned:</p>
 
 <ul>
-  <li><strong>Tvorba wireframe modelu</strong>: Pochopil jsem, že začít kódovat bez rozmyšleného nákresu a logiky aplikace je cesta do pekel. Dobré plánování a příprava na začátku projektu mi ušetřilo desítky hodin přepisování kódu.</li>
-  <li><strong>Práce s databází a vztahy (ORM)</strong>: Naučil jsem se, jak typovat proměnné a efektivně propojovat tabulky.</li>
-  <li><strong>Lokalizace (i18n)</strong>: Implementoval jsem systém, díky kterému aplikace mluví česky i anglicky a správně pracuje s formáty data a času v různých regionech.</li>
-  <li><strong>Git a GitHub</strong>: Ovládl jsem verzování kódu. Už se nebojím v aplikaci něco „rozbít“, protože se díky Gitu můžu kdykoliv vrátit k funkční verzi.</li>
-  <li><strong>Docker</strong>: Naučil jsem se aplikaci „zabalit“ do kontejneru. Díky tomu běží naprosto stejně na mém notebooku i na serveru.</li>
-  <li><strong>Architektura MVC / MVT</strong>: Pochopil jsem, jak oddělit data od vzhledu a logiky. To je klíč k tomu, aby kód zůstal přehledný i s tím, jak aplikace roste.</li>
-  <li><strong>Automatický deployment přes Github Actions</strong>: Nastavil jsem proces, kdy se po každé změně v kódu aplikace automaticky otestuje a sama nahraje na server.</li>
-  <li><strong>Správa serveru</strong>: Vyzkoušel jsem si konfiguraci produkčního prostředí, práci v terminálu přes SSH a zabezpečení aplikace tak, aby byla připravena na reálný provoz.</li>
+  <li><strong>Wireframe model creation</strong>: I realized that starting to code without a well-thought-out sketch and application logic is a road to hell. Good planning and preparation at the beginning of the project saved me dozens of hours of rewriting code.</li>
+  <li><strong>Working with databases and relationships (ORM)</strong>: I learned how to type variables and effectively link tables.</li>
+  <li><strong>Localization (i18n)</strong>: I implemented a system that allows the application to speak Czech and English and correctly work with date and time formats in different regions.</li>
+  <li><strong>Git and GitHub</strong>: I mastered code versioning. I am no longer afraid of “breaking” something in the application because, thanks to Git, I can always revert to a working version.</li>
+  <li><strong>Docker</strong>: I learned how to “package” the application into a container. Thanks to this, it runs exactly the same on my laptop and on the server.</li>
+  <li><strong>MVC / MVT architecture</strong>: I understand how to separate data from appearance and logic. This is key to keeping the code clear as the application grows.</li>
+  <li><strong>Automatic deployment via GitHub Actions</strong>: I set up a process where the application is automatically tested and uploaded to the server after every change in the code.</li>
+  <li><strong>Server administration</strong>: I tried configuring the production environment, working in the terminal via SSH, and securing the application so that it was ready for real-world operation.</li>
 </ul>
 
-<h2 id="ai---učitel-na-zavolání">AI - Učitel na zavolání</h2>
-<p>Jakožto začátečník v programování byla pro mě AI nekonečnou studnicí vědomostí s mentorem v jednom. Místo hodin strávených pročítání Stack Overflow jsem se jí ptal na konkrétní koncepty. Připadal jsem si jako malé dítě, které objevuje svět a neustále se ptá “Proč to tak funguje?”.</p>
+<h2 id="ai---teacher-on-call">AI - Teacher on call</h2>
+<p>As a beginner in programming, AI was an endless source of knowledge and a mentor all in one for me. Instead of spending hours reading Stack Overflow, I asked it about specific concepts. I felt like a small child discovering the world and constantly asking, “Why does it work that way?”</p>
 
-<p>Nadruhou stranu, i když mi AI hodně pomohla, několikrát mě poslala do slepé uličky s neexistujícími knihovnami. Naučilo mě to nejdůležitější pravidlo: Důvěřuj, ale prověřuj. Každý řádek, který mi AI navrhla, jsem musel pochopit a validovat, než jsem ho v projektu nechal.</p>
+<p>On the other hand, even though AI helped me a lot, it sent me down a dead end several times with non-existent libraries. It taught me the most important rule: Trust, but verify. I had to understand and validate every line that AI suggested before I left it in the project.</p>
 
-<p>Dnes už dokáže AI napsat jednoduchou webovou aplikaci sama a nepotřebujete ani vědět, jak programovat. Stačí vědět, co chcete a umět to správně formulovat.</p>
+<p>Today, AI can write a simple web application on its own, and you don’t even need to know how to program. You just need to know what you want and be able to formulate it correctly.</p>
 
-<h2 id="co-aplikace-umí">Co aplikace umí?</h2>
+<h2 id="what-can-the-app-do">What can the app do</h2>
 
-<p>Dost už okecávání, přejdu k tomu, co vás, čtenáře, zajímá. K čemu vám ta apka bude? BodyLog App jsem stavěl tak, aby byla minimalistická, responzivní, dalo se ni dívat a používala se intuitivně.</p>
+<p>Enough talk, let’s get to what you, the reader, are interested in. What can you use this app for?</p>
 
-<p>Přibližný soupis toho, co umí:</p>
+<p>I built the BodyLog App to be minimalistic, responsive, visually appealing, and intuitive to use. Here’s a rough list of what it can do:</p>
 
 <ul>
-  <li><strong>Záznam 15+ tělesných měr:</strong> Od klasiky jako váha, pas a hrudník až po detaily jako levé/pravé předloktí nebo lýtka. Máte tak kompletní mapu své postavy.</li>
-  <li><strong>Automatický výpočet metrik:</strong> Pro každý záznam měření se počítá BMI, % tělesného tuku a WHR.</li>
-  <li><strong>Definice osobních cílů a jejich deadline</strong> Řeknete si: “Chci do léta zhubnout do plavek.”, nastavíte si termín 30. června a pak už “jen” děláte něco pro to,aby se tak stalo a v čase sledujete, zda se vám to daří či nikoliv.</li>
-  <li><strong>Chytré přepínání jednotek:</strong> Aplikace se vám přizpůsobí. Pokud preferujete centimetry a kilogramy, používáte je. Pokud jste zvyklí na imperiální jednotky, jedním kliknutím v profilu přepnete celou aplikaci (včetně historie) do palců a liber.</li>
-  <li><strong>Interaktivní grafy a trendy:</strong> Čísla v tabulce jsou fajn, ale graf s dlouhodovými trendy vám ukáže pravdu. Okamžitě vidíte, jestli křivka pasu klesá, zatímco biceps roste. Nebo, jak vám kolísá váha během roku, ať už z důvodu jojo efektu, nebo přirozeného cyklu ročních období.</li>
-  <li><strong>Poznámky ke každému dni:</strong> Ke každému měření si můžete připsat, jak jste se cítili, jestli jste byli po tréninku, nebo jestli byl ten den „cheat meal“ a nacpali jste si pupek k prasknutí. Kontext je totiž u dat klíčový.</li>
-  <li><strong>Bezpečný přístup k vašim datům:</strong> Každý uživatel má svůj vlastní profil. Vaše míry vidíte jen vy.</li>
+  <li><strong>Recording of 15+ body measurements:</strong> From the classics such as weight, waist, and chest to details such as left/right forearm or calves. This gives you a complete map of your body.</li>
+  <li><strong>Automatic calculation of metrics:</strong> BMI, % body fat, and WHR are calculated for each measurement record.</li>
+  <li><strong>Definition of personal goals and their deadlines</strong> You say to yourself, “I want to lose weight for my swimsuit by summer,” set a deadline of June 30, and then “just” do something to make it happen and monitor whether you are succeeding or not.</li>
+  <li><strong>Smart unit switching:</strong> The app adapts to you. If you prefer centimeters and kilograms, you use them. If you’re used to imperial units, with one click in your profile you can switch the entire app (including history) to inches and pounds.</li>
+  <li><strong>Interactive graphs and trends:</strong> Numbers in a table are fine, but a graph with long-term trends shows you the truth. You can immediately see if your waistline is shrinking while your biceps are growing. Or how your weight fluctuates throughout the year, whether due to the yo-yo effect or the natural cycle of the seasons.</li>
+  <li><strong>Notes for each day:</strong> For each measurement, you can add a note about how you felt, whether you had just finished a workout, or if it was a “cheat meal” day and you stuffed yourself to bursting. Context is key when it comes to data.</li>
+  <li><strong>Secure access to your data:</strong> Each user has their own profile. Only you can see your measurements.</li>
 </ul>
 
-<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-04.jpg" alt="Hotová aplikace - přihlašovací stránka" class="post-image" /></p>
+<p><img src="\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-04.jpg" alt="Finished application - login page" class="post-image" /></p>
 
-<p>Pokud zjistím, že je o BodyLog zájem, třeba aplikaci přesunu na samostatnou doménu a vymyslím lepší název. Mám v hlavě už teď seznam funkcí, které bych rád přidal. Nejdříve chci ale znát zpětnou vazbu od vás :)</p>
+<p>If I find that there is interest in BodyLog, I may move the application to a separate domain and come up with a better name. I already have a list of features in mind that I would like to add. But first, I want to hear your feedback :)</p>
 
-<p>P.S.: Počítám s tím, že apka má nějaké mouchy a může spadnout do neošetřené chyby serveru 500. Mně se to tedy zatím nepovedlo. Pokud by ale takový případ nastal, budu rád za nahlášení chyby na můj email <a href="#contact-form">info@daniel-hladik.cz</a>. Díky :)</p>
+<p>P.S.: I expect that the app has some bugs and may crash due to an unhandled 500 server error. I haven’t managed to do that yet. However, if such a case occurs, I would appreciate it if you reported the error to my email address <a href="#contact-form">info@daniel-hladik.cz</a>. Thanks :)</p>
 
 <blockquote class="alert alert-idea">
-  <p><strong>Budu rád za zpětnou vazbu</strong>
-<em>Aplikace je dostupná na mé subdoméně <a href="https://bodylog.daniel-hladik.cz">bodylog.daniel-hladik.cz</a>. Pokud vás zajímá, jak jsem se se svou vůbec první webovou aplikací popral a chcete sledovat svoje tělesné míry, zaregistrujte se a vyzkoušejte si ji. Je plně zdarma a bez reklam.</em></p>
+  <p><strong>I would appreciate your feedback</strong>
+<em>The application is available on my subdomain <a href="https://bodylog.daniel-hladik.cz">bodylog.daniel-hladik.cz</a>. If you are interested in how I got on with my very first web application and want to track your body measurements, sign up and try it out. It is completely free and ad-free.</em></p>
 </blockquote>
 
 <blockquote class="alert alert-info">
-  <p><strong>Potřebujete pomoct s automatizací svých každodenních úkolů?</strong>
-<em><a href="#contact-form">Napište mi zprávu</a> nebo si se mnou domluvte <a href="https://zapti.me/daniel-hladik/konzultace-zdarma">30 min konzultaci ZDARMA</a>.</em></p>
+  <p><strong>Need help automating your daily tasks?</strong>
+<em><a href="#contact-form">Email me</a> or schedule a <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">FREE 30 min consultation</a>.</em></p>
 </blockquote>
 
     <time datetime="2026-01-16T00:00:00+00:00" class="post-date">January 16, 2026</time>
@@ -553,9 +553,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <input type="hidden" name="from_name" value="daniel-hladik.cz" />
         <input type="hidden" name="redirect" value="https://daniel-hladik.cz/en/form-success/" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-        <input type="hidden" name="title" value="BodyLog - Jak jsem si vytvořil svou první fitness apku">
+        <input type="hidden" name="title" value="BodyLog - How I created my first fitness app">
         <input type="hidden" name="url" value="https://daniel-hladik.cz/blog/bodylog-app/">
-        <input type="hidden" name="lang" value="cs">
+        <input type="hidden" name="lang" value="en">
 
         <div class="form-group-container">
             <!-- Name -->
@@ -623,7 +623,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<p><a href="https://zapti.me/daniel-hladik/konzultace-zdarma">Arrange FREE consultation</a></p>
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<p><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">Arrange FREE consultation</a></p>
+<!-- Calendly link widget end -->
 
 </div>
 
@@ -656,7 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-01-25T19:21:11+00:00">2026</time>
+  <small>&copy; <time datetime="2026-01-25T22:02:08+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

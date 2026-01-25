@@ -4,6 +4,14 @@
 [
 
   {
+    "title": "BodyLog - How I created my first fitness app",
+    "url": "/en/blog/bodylog-app/",
+    "excerpt": "I didn’t study IT, but I’ve always been tempted to create my own application. I wanted something that would have a real impact on my life and not just be another “practice” project that would end up in a drawer. And that’s how BodyLog App came about.",
+    "lead": "The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.",
+    "tags": "my-projects, web-app"
+  },
+
+  {
     "title": "How to track your sleep using Google tools",
     "url": "/en/blog/sleep-habit-tracker/",
     "excerpt": "Want to track your sleep without the need for specialized apps or expensive wearables? In this article, I’ll share how I created my own sleep tracker right in Google Sheets and extended it with email notification using Google Apps Script.",

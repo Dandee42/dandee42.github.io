@@ -15,7 +15,7 @@
           <url>
             <loc>https://daniel-hladik.cz/contact/</loc>
             
-              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
+              <lastmod>2026-01-25T22:01:19+00:00</lastmod>
             
             
               <changefreq>monthly</changefreq>
@@ -31,7 +31,7 @@
           <url>
             <loc>https://daniel-hladik.cz/cv/</loc>
             
-              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
+              <lastmod>2026-01-25T22:01:19+00:00</lastmod>
             
             
               <changefreq>monthly</changefreq>
@@ -51,7 +51,7 @@
           <url>
             <loc>https://daniel-hladik.cz/</loc>
             
-              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
+              <lastmod>2026-01-25T22:01:19+00:00</lastmod>
             
             
               <changefreq>weekly</changefreq>
@@ -71,7 +71,7 @@
           <url>
             <loc>https://daniel-hladik.cz/services/</loc>
             
-              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
+              <lastmod>2026-01-25T22:01:19+00:00</lastmod>
             
             
               <changefreq>monthly</changefreq>
@@ -117,9 +117,57 @@
       
           
           <url>
+            <loc>https://daniel-hladik.cz/services/inteligentni-automatizace/</loc>
+            
+              <lastmod>2026-01-25T01:00:00+00:00</lastmod>
+            
+            
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            
+          </url>
+      
+    
+  
+    
+      
+          
+          <url>
+            <loc>https://daniel-hladik.cz/services/automatizovane-testovani-qa/</loc>
+            
+              <lastmod>2026-01-25T01:00:00+00:00</lastmod>
+            
+            
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            
+          </url>
+      
+    
+  
+    
+      
+          
+          <url>
+            <loc>https://daniel-hladik.cz/services/vyvoj-webovych-aplikaci/</loc>
+            
+              <lastmod>2026-01-25T01:00:00+00:00</lastmod>
+            
+            
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            
+          </url>
+      
+    
+  
+    
+      
+          
+          <url>
             <loc>https://daniel-hladik.cz/blog/</loc>
             
-              <lastmod>2026-01-25T19:20:13+00:00</lastmod>
+              <lastmod>2026-01-25T22:01:19+00:00</lastmod>
             
             
               <changefreq>weekly</changefreq>

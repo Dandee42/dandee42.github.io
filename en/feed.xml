@@ -9,7 +9,7 @@
     <atom:link href="https://daniel-hladik.cz/en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>I help companies and individuals get rid of routines that don't add value |AI & Automation | QA | Building web apps</description>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Jan 2026 19:21:11 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Jan 2026 22:02:08 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
     <image>
@@ -18,6 +18,19 @@
       <link>https://daniel-hladik.cz</link>
     </image>
     
+    
+    <item>
+      <title>BodyLog - How I created my first fitness app</title>
+      <link>https://daniel-hladik.cz/en/blog/bodylog-app/</link>
+      <guid isPermaLink="true">https://daniel-hladik.cz/en/blog/bodylog-app/</guid>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
+      
+      
+      
+      <description><![CDATA[
+        The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.]]
+      ]]></description>
+    </item>
     
     <item>
       <title>How to track your sleep using Google tools</title>
