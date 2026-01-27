@@ -19,7 +19,7 @@
           <li><strong>Propojení nepropojitelného:</strong> Synchronizace dat mezi platformami, které nemají nativní integraci.</li>
           <li><strong>AI Agenti v praxi:</strong> Automatické třídění e-mailů, analýza dokumentů nebo generování personalizovaných odpovědí.</li>
           <li><strong>Zpracování dat:</strong> Automatizovaný reporting a čištění dat bez nutnosti ručních exportů.</li>
-          <li><strong>Cokoliv dalšího, co si vymyslíte:</strong>Navrhu řešení automatizace na míru</li>
+          <li><strong>Cokoliv dalšího, co si vymyslíte:</strong>Navrhnu řešení automatizace na míru</li>
         </ul>
       contact_link: "Chci automatizovat"
     en:
@@ -49,14 +49,14 @@
   lang:
     cs:
       title: "Automatizované testování (QA)"
-      description: "Zajišťuji, aby váš software fungoval bezchybně při každém vydání."
+      description: "Zajišťuji, aby váš software fungoval bezchybně při každém release nových funkcionalit."
       lead: "Odhalte chyby dříve, než je najdou vaši zákazníci."
       text: |
         <h2>Konec stresu z pátkových releasů</h2>
         <p>Manuální testování je pomalé a náchylné k chybám. Pomocí moderního frameworku <strong>Playwright</strong> píšu automatizované testy, které simulují reálné chování uživatele. Váš web nebo aplikace budou pod neustálým dohledem.</p>
         <h3>Jak vám pomohu zvýšit kvalitu:</h3>
         <ul>
-          <li><strong>E-commerce testování:</strong> Automatické ověření košíku, platební brány a registrací.</li>
+          <li><strong>E-commerce testování:</strong> Automatické ověření průchodu objednávkou od registrace po zaplacení.</li>
           <li><strong>Regresní testy:</strong> Jistota, že nová funkce nerozbila ty stávající.</li>
           <li><strong>CI/CD integrace:</strong> Testy se spustí automaticky při každé změně v kódu.</li>
         </ul>
@@ -70,7 +70,7 @@
         <p>Manual testing is slow and error-prone. Using <strong>Playwright</strong>, I build automated tests that simulate real user behavior. Your web or app will be under constant supervision.</p>
         <h3>How I improve your quality:</h3>
         <ul>
-          <li><strong>E-commerce testing:</strong> Automated verification of cart, payments, and registration.</li>
+          <li><strong>E-commerce testing:</strong> Automatic verification of order flow from registration to payment.</li>
           <li><strong>Regression testing:</strong> Ensuring new features don't break existing ones.</li>
           <li><strong>CI/CD integration:</strong> Tests run automatically with every code change.</li>
         </ul>
@@ -87,11 +87,11 @@
   lang:
     cs:
       title: "Vývoj webových aplikací na míru"
-      description: "Když no-code narazí na své limity, přichází na řadu kód na míru. Stavím spolehlivá řešení a interní nástroje v Pythonu."
+      description: "Když no-code narazí na své limity, přichází na řadu kód na míru. Stavím spolehlivá řešení v podobě menších aplikací a interní nástroje v Pythonu."
       lead: "Když no-code narazí na své limity, přichází na řadu kód na míru."
       text: |
         <h2>Aplikace, které se přizpůsobí vám, ne naopak</h2>
-        <p>Někdy hotové nástroje prostě nestačí. V Pythonu stavím efektivní aplikace, které řeší specifické problémy vašeho podnikání. Od databázových návrhů až po API, která propojí váš svět.</p>
+        <p>Někdy hotové nástroje prostě nestačí. Stavím efektivní aplikace, které řeší specifické problémy vašeho podnikání. Od databázových návrhů až po API, která propojí váš svět.</p>
         <h3>V čem vám mohu pomoci:</h3>
         <ul>
           <li><strong>Interní nástroje:</strong> Dashboardy, správa zakázek nebo specifické databáze.</li>
@@ -100,12 +100,12 @@
         </ul>
       contact_link: "Poptat vývoj"
     en:
-      title: "Custom Web Development"
+      title: "Custom Web Apps Development"
       description: "When no-code hits its limits, custom code takes over. I build reliable web app solutions and internal tools in Python."
       lead: "When no-code hits its limits, custom code takes over."
       text: |
         <h2>Apps that adapt to you, not the other way around</h2>
-        <p>Sometimes off-the-shelf tools just aren't enough. I build efficient Python applications to solve your specific business challenges. From database design to APIs that connect your world.</p>
+        <p>Sometimes off-the-shelf tools just aren't enough. I build efficient small web applications to solve your specific business challenges. From database design to APIs that connect your world.</p>
         <h3>Where I can help:</h3>
         <ul>
           <li><strong>Internal Tools:</strong> Dashboards, order management, or specialized databases.</li>
