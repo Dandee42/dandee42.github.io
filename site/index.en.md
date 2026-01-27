@@ -39,11 +39,11 @@ This experience inspired me to switch to IT and laid the foundation for my curre
 
 I believe that the most important question is not "how" to create something, but "what" and "why" we create. The path itself and the choice of tools will then naturally follow from the search for the path to the goal. Every problem have many solutions, and my job is to find the one that best suits your needs.
 
-- **Intelligent automation (n8n & AI)**: I connect applications that previously did not communicate with each other. I build n8n workflows enriched with AI agents that save hours of human labor per week.
+- **[Intelligent automation (n8n & AI)](/services/intelligent-automation/)**: I connect applications that previously did not communicate with each other. I build n8n workflows enriched with AI agents that save hours of human labor per week.
 
-- **Automated testing (QA)**: I ensure that your software works flawlessly. Using Playwright, I write tests that detect errors before your customers do.
+- **[Automated testing (QA)](/services/automation-testing-qa/)**: I ensure that your software works flawlessly. Using Playwright, I write tests that detect errors before your customers do.
 
-- **Web application development**: When no-code tools reach their limits, I build custom solutions in Python. From databases to functional interfaces.
+- **[Web application development](/services/web-app-development/)**: When no-code tools reach their limits, I build custom solutions in Python. From databases to functional interfaces.
 
 [More about my services →](/services/)
 

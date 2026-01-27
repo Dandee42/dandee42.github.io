@@ -19,7 +19,7 @@ Dnes tyto brzdy odstraňuji. Kombinuji analytické myšlení s technickými dove
 <div class="parallax"></div>
 
 ## Proč právě IT a automatizace
-V jedné ze svých pracovních pozic online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy.
+V rámci jedné zkušenosti v pozici online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy.
 
 Tato zkušenost mě inspirovala k přechodu do IT a položila základy k mé současné dráze – **automatizaci testů i firemních workflow**.
 
@@ -39,11 +39,11 @@ Tato zkušenost mě inspirovala k přechodu do IT a položila základy k mé sou
 
 Věřím, že nejdůležitější není otázka „jak“ něco vytvořit, ale „co“ a „proč“ tvoříme. Samotná cesta a výběr nástrojů pak přirozeně vyplynou z hledání cesty k cíli. Každý problém může mít mnoho řešení a mým úkolem je najít takové, které bude nejlépe vyhovovat právě vašim potřebám.
 
-- **Inteligentní automatizace (n8n & AI)**: Propojuji aplikace, které spolu dříve nemluvily. Stavím n8n workflow obohacená o AI agenty, která šetří hodiny lidské práce týdně.
+- **[Inteligentní automatizace (n8n & AI)](/services/intelligent-automation/)**: Propojuji aplikace, které spolu dříve nemluvily. Stavím n8n workflow obohacená o AI agenty, která šetří hodiny lidské práce týdně.
 
-- **Automatizované testování (QA)**: Zajišťuji, aby váš software fungoval bezchybně. Pomocí Playwrightu píšu testy, které odhalí chyby dříve než vaši zákazníci.
+- **[Automatizované testování (QA)](/services/automation-testing-qa/)**: Zajišťuji, aby váš software fungoval bezchybně. Pomocí Playwrightu píšu testy, které odhalí chyby dříve než vaši zákazníci.
 
-- **Vývoj webových aplikací**: Když no-code nástroje narazí na své limity, stavím vlastní řešení na míru v Pythonu. Od databáze až po funkční rozhraní.
+- **[Vývoj webových aplikací](/services/web-app-development/)**: Když no-code nástroje narazí na své limity, stavím vlastní řešení na míru v Pythonu. Od databáze až po funkční rozhraní.
 
 [Více o službách →](/services/)
 

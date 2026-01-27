@@ -24,7 +24,7 @@ Zkušenosti z **e-commerce** a online marketingu mi stále pomáhají lépe chá
 Mým cílem je tvořit řešení, která nejenom šetří čas, ale i dávají smysl.
 
 ## Co ovládám?
-Mám zkušenosti s vývojem a testováním webových aplikací. Stejně tak mě baví vymýšlet automatizace procesů, ať už pro zlepšní procesů firemních, tak i v osobním životě.
+Mám zkušenosti s vývojem a testováním webových aplikací. Stejně tak mě baví vymýšlet automatizace procesů, ať už pro zlepšení procesů firemních, tak i v osobním životě.
 
 Mám praktické zkušenosti s následujícími technologiemi a nástroji:
 

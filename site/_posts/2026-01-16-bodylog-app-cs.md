@@ -23,11 +23,11 @@ Obsah článku:
 
 Posledních 8 let jsem si vedl záznamy o své postavě v Excelu. Ne že bych byl profesionální bodybuilder, ale vždy mě zajímalo, jak se moje tělo s časem mění. Razím totiž heslo: „Co neměříš, to neřídíš.“ Jenže tabulka s čísly bez kontextu je po čase nepřehledná a chyběla mi v ní ta správná vizualizace „evoluce“ těla v čase – i když co si budeme povídat, ty přibývající roky (a kila) jsou na některých partiích vidět i bez grafu.
 
-Právě tento letitý Excel se stal ideálním kandidátem na mou první aplikaci. I když je fitness aplikací na trhu nespočet, nechtěl jsem jim konkurovat. Chtěl jsem si postavit vlastní řešení na míru a hlavně se na něm naučit, co všechno obnáší vývoj – od prvního návrhu databáze až po nasazení na produkční server.
+Právě tento letitý Excel se stal ideálním kandidátem na mou první aplikaci. Chtěl jsem si postavit vlastní řešení na míru a hlavně se na něm naučit, co všechno obnáší vývoj – od prvního návrhu databáze až po nasazení na produkční server.
 
 > ### _„Co neměříš, to neřídíš.“_
 
-Když jsem se před přibližně rokem a půl začínal učit programovat, řekl jsem si, že bych mohl vytvořit aplikaci a udělat něco praktického, co bych sám využil. Z toho vznikla aplikace, kterou jsem pracovním názvem pojmenoval BodyLog.
+Když jsem se před přibližně rokem a půl začínal učit programovat, řekl jsem si, že bych mohl vytvořit aplikaci, kterou bych sám pravidelně využíval. Z toho vznikla aplikace s pracovním názvem BodyLog.
 
 ## Šel jsem na to s rozmyslem
 
@@ -54,7 +54,7 @@ Některé věci jsem předělal, vylepšil, ale základ zůstal více méně ste
 Vyzkoušel jsem si postupně tyto role:
 - **Softwarový architekt a analytik**: Ještě než jsem napsal první řádek kódu, musel jsem si ujasnit, co přesně stavím. Navrhl jsem datový model, aby spolu jednotlivé entity (uživatel, záznam, jednotka) správně mluvily, a rozkreslil jsem si tok dat aplikací.
 - **Grafický designer**: Zjistil jsem, že návrh vizuální podoby aplikace nebyl jen o barvách a nastylovaných tlačítkách (UI), ale i o tom, jak se uživateli bude používat (UX).
-- **Backend developer**: Musel jsem vyvinout logiku, která převádí jednotky, hlídá oprávnění uživatelů a stará se o to, aby se správná data poslala na správné místo.
+- **Backend developer**: Musel jsem vyvinout logiku, která převádí jednotky, hlídá oprávnění uživatelů a stará se o to, aby aby data tekla přesně tam, kam mají.
 - **Frontend developer**: Převedl jsem design do reality pomocí HTML, CSS (převážně Bootstrap) a Javascriptu tak, aby aplikace vypadala a chovala se skvěle na desktopu i na displeji telefonu.
 - **Tester**: Testerská role mi byla sice zkušenostmi nejbližší, ale upřímně jsem ji asi nejvíc odflákl. Samozřejmě jsem si zkoušel aplikaci proklikat, ale podrobnější testování jsem nechal na kamarádech.
 - **Projektový manažer**: Musel jsem se naučit říct „ne“ novým funkcím, abych tu základní verzi (MVP) konečně dostal k uživatelům. A že těch nápadů bylo a stále je v backlogu hromada.
@@ -70,24 +70,24 @@ Naučil jsem se:
 - **Automatický deployment přes Github Actions**: Nastavil jsem proces, kdy se po každé změně v kódu aplikace automaticky otestuje a sama nahraje na server.
 - **Správa serveru**: Vyzkoušel jsem si konfiguraci produkčního prostředí, práci v terminálu přes SSH a zabezpečení aplikace tak, aby byla připravena na reálný provoz.
 
-## AI - Učitel na zavolání
-Jakožto začátečník v programování byla pro mě AI nekonečnou studnicí vědomostí s mentorem v jednom. Místo hodin strávených pročítání Stack Overflow jsem se jí ptal na konkrétní koncepty. Připadal jsem si jako malé dítě, které objevuje svět a neustále se ptá "Proč to tak funguje?".
+## AI jako učitel, který nikdy nespí
+Jakožto začátečník v programování byla pro mě AI nekonečnou studnicí vědomostí s mentorem v jednom. Místo hodin strávených pročítáním Stack Overflow jsem se jí ptal na konkrétní koncepty. Připadal jsem si jako malé dítě, které objevuje svět a neustále se ptá "Proč to tak funguje?".
 
-Nadruhou stranu, i když mi AI hodně pomohla, několikrát mě poslala do slepé uličky s neexistujícími knihovnami. Naučilo mě to nejdůležitější pravidlo: Důvěřuj, ale prověřuj. Každý řádek, který mi AI navrhla, jsem musel pochopit a validovat, než jsem ho v projektu nechal.
+Na druhou stranu, i když mi AI hodně pomohla, několikrát mě poslala do slepé uličky s neexistujícími knihovnami. Naučilo mě to nejdůležitější pravidlo: Důvěřuj, ale prověřuj. Každý řádek, který mi AI navrhla, jsem musel pochopit a validovat, než jsem ho v projektu nechal.
 
 Dnes už dokáže AI napsat jednoduchou webovou aplikaci sama a nepotřebujete ani vědět, jak programovat. Stačí vědět, co chcete a umět to správně formulovat.
 
 ## Co aplikace umí?
 
-Dost už okecávání, přejdu k tomu, co vás, čtenáře, zajímá. K čemu vám ta apka bude? BodyLog App jsem stavěl tak, aby byla minimalistická, responzivní, dalo se ni dívat a používala se intuitivně.
+Dost už okecávání, přejdu k tomu, co vás, čtenáře, zajímá. K čemu vám ta apka bude? BodyLog App jsem stavěl tak, aby byla minimalistická, responzivní, dalo se na ni dívat a používala se intuitivně.
 
 Přibližný soupis toho, co umí:
 
 * **Záznam 15+ tělesných měr:** Od klasiky jako váha, pas a hrudník až po detaily jako levé/pravé předloktí nebo lýtka. Máte tak kompletní mapu své postavy.
 * **Automatický výpočet metrik:** Pro každý záznam měření se počítá BMI, % tělesného tuku a WHR.
-* **Definice osobních cílů a jejich deadline** Řeknete si: "Chci do léta zhubnout do plavek.", nastavíte si termín 30. června a pak už "jen" děláte něco pro to,aby se tak stalo a v čase sledujete, zda se vám to daří či nikoliv.
+* **Definice osobních cílů a jejich deadline:** Řeknete si: "Chci do léta zhubnout do plavek.", nastavíte si termín 30. června a pak už "jen" děláte něco pro to,aby se tak stalo a v čase sledujete, zda se vám to daří či nikoliv.
 * **Chytré přepínání jednotek:** Aplikace se vám přizpůsobí. Pokud preferujete centimetry a kilogramy, používáte je. Pokud jste zvyklí na imperiální jednotky, jedním kliknutím v profilu přepnete celou aplikaci (včetně historie) do palců a liber.
-* **Interaktivní grafy a trendy:** Čísla v tabulce jsou fajn, ale graf s dlouhodovými trendy vám ukáže pravdu. Okamžitě vidíte, jestli křivka pasu klesá, zatímco biceps roste. Nebo, jak vám kolísá váha během roku, ať už z důvodu jojo efektu, nebo přirozeného cyklu ročních období.
+* **Interaktivní grafy a trendy:** Čísla v tabulce jsou fajn, ale graf s dlouhodobými trendy vám ukáže pravdu. Okamžitě vidíte, jestli křivka pasu klesá, zatímco biceps roste. Nebo, jak vám kolísá váha během roku, ať už z důvodu jojo efektu, nebo přirozeného cyklu ročních období.
 * **Poznámky ke každému dni:** Ke každému měření si můžete připsat, jak jste se cítili, jestli jste byli po tréninku, nebo jestli byl ten den „cheat meal“ a nacpali jste si pupek k prasknutí. Kontext je totiž u dat klíčový.
 * **Bezpečný přístup k vašim datům:** Každý uživatel má svůj vlastní profil. Vaše míry vidíte jen vy.
 
