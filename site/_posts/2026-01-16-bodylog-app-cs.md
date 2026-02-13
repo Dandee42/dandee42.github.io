@@ -7,7 +7,7 @@ description: Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu
 lead: Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.
 slug: /bodylog-app
 reading_time: 6 min
-image: \assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg
+image: /assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero.jpg
 category: 
 tags: [my-projects, web-app]
 published: true
@@ -33,13 +33,13 @@ Když jsem se před přibližně rokem a půl začínal učit programovat, řekl
 
 Navrhnul jsem si databázové modely, tabulku po tabulce a jejich vzájemné vazby. V té době jsem ještě nepoužíval AI ve velkém, takže jsem hezky po staru nejdříve na papír navrhnul entity, které jsem pospojoval do logického celku. Pomocí nástroje draw.io jsem si načrtnul, jaké stránky budou v aplikaci figurovat. Vypsal jsem si je také do Excelu a připsal si k nim slug URL, title a descriptions (kde to mělo význam).
 
-![Diagram mappingu stránek v aplikaci](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-01.jpg){: .post-image }
+![Diagram mappingu stránek v aplikaci](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-01.jpg){: .post-image }
 
 Jakmile jsem měl základní architekturu aplikace připravenou, vrhnul jsem se na vizuál. Vytvořil jsem si v jedné online aplikaci design, ke kterému jsem poté směřoval při vývoji aplikace.
 
-![Původní grafický návrh nástěnky](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-03.jpg){: .post-image }
+![Původní grafický návrh nástěnky](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-03.jpg){: .post-image }
 
-![Style Guide se základními UI prvky](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-02.jpg){: .post-image }
+![Style Guide se základními UI prvky](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-02.jpg){: .post-image }
 
 Aplikaci jsem v základu za pár týdnů vytvořil, ale používal jsem ji pouze na svém lokálním počítači. Neměla překlady ani převody jednotek. Téměř rok jsem ji nepustil do produkčního světa. Tedy až do teď.
 
@@ -91,7 +91,7 @@ Přibližný soupis toho, co umí:
 * **Poznámky ke každému dni:** Ke každému měření si můžete připsat, jak jste se cítili, jestli jste byli po tréninku, nebo jestli byl ten den „cheat meal“ a nacpali jste si pupek k prasknutí. Kontext je totiž u dat klíčový.
 * **Bezpečný přístup k vašim datům:** Každý uživatel má svůj vlastní profil. Vaše míry vidíte jen vy.
 
-![Hotová aplikace - přihlašovací stránka](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-04.jpg){: .post-image }
+![Hotová aplikace - přihlašovací stránka](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-04.jpg){: .post-image }
 
 Pokud zjistím, že je o BodyLog zájem, třeba aplikaci přesunu na samostatnou doménu a vymyslím lepší název. Mám v hlavě už teď seznam funkcí, které bych rád přidal. Nejdříve chci ale znát zpětnou vazbu od vás :)
 
