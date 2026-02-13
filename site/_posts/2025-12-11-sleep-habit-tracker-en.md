@@ -7,7 +7,7 @@ description: I'll show you how to track your sleep routine using Google Sheets f
 lead: I'll show you how to track your sleep routine using tools that everyone can access for free within their Google account.
 slug: /sleep-habit-tracker
 reading_time: 8 min
-image: \assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg
+image: /assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-hero.jpg
 category: 
 tags: [life-hacks, google-sheets, google-apps-script, gmail]
 published: true
@@ -39,7 +39,7 @@ Let's dive into the actual process of creating the app.
 Let's open a new Google sheets file. Rename sheet 1 to e.g. `sleep_calendar`. We will connect a form to the table, through which we will enter sleep data every day.
 We can find the form creation in the top menu under the `Tools` tab and then click on `Create new form`. This will open a form in Google Forms where we define what we want to track. At the same time, a new sheet will be created in Google Sheets with records linked to the data from the completed form. We will name this sheet for example `sleep_tracking_data`.
 
-![Creating a new form via Google Forms](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-01-a.jpg){: .post-image }
+![Creating a new form via Google Forms](/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-01-a.jpg){: .post-image }
 
 Since I'm not able to count to ten in the morning, I'll write down the time I went to bed the night before and the time I woke up. I will then have the resulting time automatically calculated via a formula from the difference of these values.
 
@@ -51,11 +51,11 @@ So I personally want to know:
 
 For better context, anyone can add other parameters as they wish, e.g.: a note field or whether you stopped drinking and eating an hour and a half before bedtime, etc.
 
-![Entering form fields](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02-a.jpg){: .post-image }
+![Entering form fields](/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-02-a.jpg){: .post-image }
 
 Let's send the first **test record by filling in the form**. The values will be automatically written to the `sleep_tracking_data` sheet. We add a new column in the second position after the timestamp and insert the formula `=DATE(YEAR(A2), MONTH(A2), DAY(A2))` to **clean the date with the timestamp**. This is so that the function will always find the exact date for us to look up the value. In the last column (for my example, column `G`), we add a **calculated sleep duration** column by simply the difference between the time of going to sleep and the time of waking up.
 
-![Google Sheets table with data from Google Forms](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03-a.jpg){: .post-image }
+![Google Sheets table with data from Google Forms](/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-03-a.jpg){: .post-image }
 
 Once we have the parameters defined, let's move on to creating the summary table.
 
@@ -79,7 +79,7 @@ Since the months have different number of days, it is useful to colour the cells
 
 The resulting report can then look like this:
 
-![The resulting report with tracked sleep data](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05-a.jpg){: .post-image }
+![The resulting report with tracked sleep data](/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-05-a.jpg){: .post-image }
 
 If we wanted to **track data between years**, we'd create a new sheet with a spreadsheet and just change to the desired year in cell `A1`.
 
@@ -106,7 +106,7 @@ Please remember to fill out today's form:&lt;br&gt;&lt;br&gt;
 
 In Google Apps Script, **set the trigger** of the function to the appropriate time in the morning when we want to receive the notification.
 
-![Google apps Script setting the automatic email notifications](\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06-a.jpg){: .post-image }
+![Google apps Script setting the automatic email notifications](/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-06-a.jpg){: .post-image }
 
 We don't have to send a reminder just by email, but we can, for example, put a link to **Google Keeps** or **Google Calendar** and set up a regular reminder. It depends on what we're used to using, and we'll choose a tool to help us remind ourselves every morning to enter the form.
 

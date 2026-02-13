@@ -7,7 +7,7 @@ description: The story of how, after 8 years of recording data in Excel, I wrote
 lead: The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.
 slug: /bodylog-app
 reading_time: 6 min
-image: \assets\files\images\posts\2026-01-16-bodylog-app\bodylog_hero.jpg
+image: /assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero.jpg
 category: 
 tags: [my-projects, web-app]
 published: true
@@ -33,13 +33,13 @@ When I started learning programming about a year and a half ago, I thought I cou
 
 I designed database models, table by table, and their mutual connections. At that time, I wasn't using AI on a large scale yet, so I designed the entities the old-fashioned way, first on paper, and then connected them into a logical whole. Using the draw.io tool, I sketched out what pages would appear in the application. I also listed them in Excel and added slug URLs, titles, and descriptions (where relevant).
 
-![Site mapping diagram in the application](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-01.jpg){: .post-image }
+![Site mapping diagram in the application](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-01.jpg){: .post-image }
 
 Once I had the basic architecture of the application ready, I threw myself into the visuals. I created a design in an online application, which I then used as a guide during the development of the application.
 
-![Original graphic design of the bulletin board](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-03.jpg){: .post-image }
+![Original graphic design of the bulletin board](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-03.jpg){: .post-image }
 
-![Style Guide with basic UI elements](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-02.jpg){: .post-image }
+![Style Guide with basic UI elements](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-02.jpg){: .post-image }
 
 I created the application in a few weeks, but I only used it on my local computer. It didn't have translations or unit conversions. I didn't release it into the production world for almost a year. Until now, that is.
 
@@ -92,7 +92,7 @@ I built the BodyLog App to be minimalistic, responsive, visually appealing, and 
 * **Secure access to your data:** Each user has their own profile. Only you can see your measurements.
 
 
-![Finished application - login page](\assets\files\images\posts\2026-01-16-bodylog-app\bodylog-04.jpg){: .post-image }
+![Finished application - login page](/assets/files/images/posts/2026-01-16-bodylog-app/bodylog-04.jpg){: .post-image }
 
 If I find that there is interest in BodyLog, I may move the application to a separate domain and come up with a better name. I already have a list of features in mind that I would like to add. But first, I want to hear your feedback :)
 
