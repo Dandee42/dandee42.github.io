@@ -48,8 +48,8 @@
   <meta property="og:url" content="https://daniel-hladik.cz/blog/sleep-habit-tracker/">
   <meta property="og:site_name" content="Daniel Hladík">
   
-  <meta property="og:image" content="https://daniel-hladik.cz\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg">
-  <meta property="twitter:image" content="https://daniel-hladik.cz\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg">
+  <meta property="og:image" content="https://daniel-hladik.cz/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-hero.jpg">
+  <meta property="twitter:image" content="https://daniel-hladik.cz/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-hero.jpg">
   
   <meta property="og:type" content="article">
   
@@ -70,11 +70,11 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2025-12-11T00:00:00+00:00",
-    "dateModified": "2026-01-27T20:45:42+00:00",
+    "dateModified": "2026-02-13T12:35:25+00:00",
     "description": "Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.",
     "inLanguage": "cs_CZ",
     "headline": "Jak sledovat svůj spánek pomocí Google nástrojů",
-    "image": "https://daniel-hladik.cz\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg",
+    "image": "https://daniel-hladik.cz/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-hero.jpg",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://daniel-hladik.cz/blog/sleep-habit-tracker/"
@@ -161,7 +161,7 @@
 
     
       <div class="post-hero-image">
-        <img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-hero.jpg" alt="Úvodní obrázek pro Jak sledovat svůj spánek pomocí Google nástrojů" loading="lazy">
+        <img src="/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-hero.jpg" alt="Úvodní obrázek pro Jak sledovat svůj spánek pomocí Google nástrojů" loading="lazy">
       </div>
     
     <br>
@@ -201,7 +201,7 @@
 <p>Otevřeme si nový Google sheets soubor. List 1 přejmenujeme na např. <code class="language-plaintext highlighter-rouge">sleep_calendar</code>. K tabulce napojíme formulář, přes který budeme každý den zadávat údaje o spánku.
 Tvorbu formuláře najdeme v horním menu na záložce <code class="language-plaintext highlighter-rouge">Nástroje</code> a poté klikneme na <code class="language-plaintext highlighter-rouge">Vytvořit nový formulář</code>. Otevře se nám formulář v Google Forms, kde si nadefinujeme, co chceme sledovat. Zároveň se nám v Google Sheets vytvoří nový list se záznamy napojenými na data z vyplněného formuláře. Pojmenujeme tento list např. <code class="language-plaintext highlighter-rouge">sleep_tracking_data</code>.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-01-a.jpg" alt="Vytvoření nového formuláře přes Google Forms" class="post-image" /></p>
+<p><img src="/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-01-a.jpg" alt="Vytvoření nového formuláře přes Google Forms" class="post-image" /></p>
 
 <p>Protože ráno nejsem schopný napočítat do desíti, budu si psát čas, v kolik hodin jsem šel spát večer předtím a čas, v kolik jsem se probudil. Poté si výsledný čas nechám automaticky spočítat přes vzorec z rozdílu těchto hodnot.</p>
 
@@ -215,11 +215,11 @@ Tvorbu formuláře najdeme v horním menu na záložce <code class="language-pla
 
 <p>Pro lepší kontext si každý může doplnit další parametry dle své potřeby, např.: pole s poznámkou nebo zda jste přestali pít a jíst hodinu a půl před spaním apod.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-02-a.jpg" alt="Zadání polí pro formulář" class="post-image" /></p>
+<p><img src="/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-02-a.jpg" alt="Zadání polí pro formulář" class="post-image" /></p>
 
 <p>Pošleme si první <strong>zkušební záznam vyplněním formuláře</strong>. Hodnoty se nám automaticky propíšou do listu <code class="language-plaintext highlighter-rouge">sleep_tracking_data</code>. Přidáme si nový sloupec na druhou pozici za časovou značku a dosadíme vzorcem <code class="language-plaintext highlighter-rouge">=DATUM(ROK(A2);MĚSÍC(A2);DEN(A2))</code> pro <strong>očištění datumu o časový údaj</strong>. Důvodem je, aby nám funkce pro vyhledání hodnoty vždy našla přesný údaj. Do posledního sloupce (u mě na příkladu sloupec <code class="language-plaintext highlighter-rouge">G</code>) přidáme <strong>počítaný sloupec s délkou spánku</strong> prostým rozdílem času ulehnutí ke spánku a času probuzení.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-03-a.jpg" alt="Google Sheets tabulka s daty z Google Forms" class="post-image" /></p>
+<p><img src="/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-03-a.jpg" alt="Google Sheets tabulka s daty z Google Forms" class="post-image" /></p>
 
 <p>Jakmile máme parametry nadefinované přejdeme na tvorbu přehledové tabulky.</p>
 
@@ -243,7 +243,7 @@ Tvorbu formuláře najdeme v horním menu na záložce <code class="language-pla
 
 <p>Výsledný přehled může potom vypadat takto:</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-05-a.jpg" alt="Výsledný přehled se zaznamenanými spánkovými údaji" class="post-image" /></p>
+<p><img src="/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-05-a.jpg" alt="Výsledný přehled se zaznamenanými spánkovými údaji" class="post-image" /></p>
 
 <p>Pokud bychom chtěli <strong>sledovat data mezi jednotlivými roky</strong>, založíme si nový list s přehledovou tabulkou a jen změníme na požadovaný rok v buňce <code class="language-plaintext highlighter-rouge">A1</code>.</p>
 
@@ -270,7 +270,7 @@ Nezapomeň prosím vyplnit dnešní formulář:&lt;br&gt;&lt;br&gt;
 
 <p>V Google Apps Script <strong>nastavíme spouštěč</strong> dané funkce na příslušnou ranní hodinu, kdy chceme dostávat notifikaci.</p>
 
-<p><img src="\assets\files\images\posts\2025-12-11-sleep-habit-tracker\sleep-habit_tracker-06-a.jpg" alt="Google Apps Script a nastavení automatických emailových upomínek" class="post-image" /></p>
+<p><img src="/assets/files/images/posts/2025-12-11-sleep-habit-tracker/sleep-habit_tracker-06-a.jpg" alt="Google Apps Script a nastavení automatických emailových upomínek" class="post-image" /></p>
 
 <p>Připomínku si nemusíme posílat pouze emailem, ale můžeme například vložit odkaz do <strong>Google Keeps</strong> nebo do <strong>Google kalendáře</strong> a nastavit si pravidelnou upomínku. Záleží, co jsme zvyklí používat a podle toho zvolíme nástroj, který nám pomůže připomenout si každé ráno zápis do formuláře.</p>
 
@@ -670,7 +670,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-01-27T20:46:43+00:00">2026</time>
+  <small>&copy; <time datetime="2026-02-13T12:36:22+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
