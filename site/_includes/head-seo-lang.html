@@ -91,7 +91,7 @@
   {% assign og_title = page.lang[lang].title | default: page.title %}
   {% assign og_description = page.lang[lang].description | default: site.description[lang] %}
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:title" content="{{ og_title }} · {{ site.title[lang] }}">
   <meta name="author" content="{{ site.title[lang] }}">
   <meta property="og:locale" content="{{ trans.general.locale }}">
   <meta name="description" content="{{ og_description }}">
@@ -102,7 +102,7 @@
   <meta property="twitter:image" content="{{ site.url }}{{ og_image }}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="{{ og_title }}">
+  <meta property="twitter:title" content="{{ og_title }} · {{ site.title[lang] }}">
   <meta name="twitter:description" content="{{ og_description }}">
 
   <!-- JSON-LD PAGE START -->
@@ -130,8 +130,13 @@
 {% else %}
   <!-- PAGE -->
   {% assign og_description = page.description | default: site.description[lang] %}
+  {% if page.layout == "home" %}
+    {% assign og_page_title = page.title %}
+  {% else %}
+    {% capture og_page_title %}{{ page.title }} · {{ site.title[lang] }}{% endcapture %}
+  {% endif %}
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:title" content="{{ og_page_title }}">
   <meta name="author" content="{{ site.title[lang] }}">
   <meta property="og:locale" content="{{ trans.general.locale }}">
   <meta name="description" content="{{ og_description }}">
@@ -142,7 +147,7 @@
   <meta property="twitter:image" content="{{ site.url }}{{ og_image }}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="{{ page.title }}">
+  <meta property="twitter:title" content="{{ og_page_title }}">
   <meta name="twitter:description" content="{{ og_description }}">
   <!-- JSON-LD PAGE START -->
   <script type="application/ld+json">
