@@ -113,3 +113,123 @@
           <li><strong>System Extensions:</strong> Adding features where standard software stops.</li>
         </ul>
       contact_link: "Get a quote"
+
+- page_id: ai-agents
+  type: service
+  slug: ai-agents
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: smart_toy
+  lang:
+    cs:
+      title: "AI Agenti na míru"
+      description: "Stavím autonomní AI agenty a multi-agentní systémy, které myslí, plánují a jednají za vás."
+      lead: "Postavte si tým digitálních zaměstnanců, kteří pracují 24/7 bez přestávky."
+      text: |
+        <h2>AI, která nejen odpovídá, ale také koná</h2>
+        <p>Běžné chatboty odpovídají na otázky. AI agenti jdou dál — sami si vyhledají informace, zavolají API, zapíší do databáze a rozhodnou se, co dělat jako další. Stavím agentní systémy na míru pomocí frameworků jako LangChain, LangGraph nebo CrewAI.</p>
+        <h3>Co pro vás mohu postavit:</h3>
+        <ul>
+          <li><strong>Autonomní agenti:</strong> Agent, který sám projde váš inbox, vypracuje shrnutí a naplánuje úkoly.</li>
+          <li><strong>Multi-agentní týmy:</strong> Více specializovaných agentů, kteří spolupracují na složitém úkolu.</li>
+          <li><strong>Agenti s pamětí:</strong> Systémy, které si pamatují kontext a učí se z předchozích interakcí.</li>
+          <li><strong>Nástroje a integrace:</strong> Agenti napojení na vaše interní systémy, databáze nebo webové služby.</li>
+        </ul>
+      contact_link: "Chci svého AI agenta"
+    en:
+      title: "Custom AI Agents"
+      description: "I build autonomous AI agents and multi-agent systems that think, plan, and act on your behalf."
+      lead: "Build a team of digital employees that work around the clock without a break."
+      text: |
+        <h2>AI that doesn't just answer — it acts</h2>
+        <p>Regular chatbots answer questions. AI agents go further — they search for information, call APIs, write to databases, and decide what to do next. I build custom agent systems using frameworks like LangChain, LangGraph, or CrewAI.</p>
+        <h3>What I can build for you:</h3>
+        <ul>
+          <li><strong>Autonomous agents:</strong> An agent that browses your inbox, creates summaries, and schedules tasks on its own.</li>
+          <li><strong>Multi-agent teams:</strong> Multiple specialized agents collaborating on complex tasks.</li>
+          <li><strong>Agents with memory:</strong> Systems that remember context and learn from past interactions.</li>
+          <li><strong>Tools & integrations:</strong> Agents connected to your internal systems, databases, or web services.</li>
+        </ul>
+      contact_link: "I want my AI agent"
+
+- page_id: rag-systems
+  type: service
+  slug: rag-systems
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: manage_search
+  lang:
+    cs:
+      title: "RAG systémy — AI nad vašimi daty"
+      description: "Vytvořím inteligentní vyhledávání a chatboty nad vašimi interními dokumenty, databázemi a znalostní bází."
+      lead: "Dejte svým datům hlas. Ptejte se firemní dokumentace jako člověka."
+      text: |
+        <h2>Vaše data jako nejchytřejší kolega</h2>
+        <p>RAG (Retrieval-Augmented Generation) je technika, která propojí velký jazykový model s vašimi vlastními daty. Výsledkem je AI, která odpovídá přesně a fakticky — nikoliv z obecných znalostí, ale přímo z vašich PDF, interních wiki, smluv nebo databází.</p>
+        <h3>Kdy se RAG hodí:</h3>
+        <ul>
+          <li><strong>Interní znalostní báze:</strong> Zaměstnanci se ptají systému místo procházení stohu dokumentů.</li>
+          <li><strong>Zákaznická podpora:</strong> Chatbot, který odpovídá z vašich manuálů a FAQ s přesností a zdrojem.</li>
+          <li><strong>Analýza dokumentů:</strong> Rychlé hledání v právních smlouvách, technické dokumentaci nebo výzkumných zprávách.</li>
+          <li><strong>Vektorové databáze:</strong> Implementace Qdrant, Chroma nebo Pinecone pro efektivní sémantické vyhledávání.</li>
+        </ul>
+      contact_link: "Chci AI nad svými daty"
+    en:
+      title: "RAG Systems — AI Over Your Data"
+      description: "I build intelligent search and chatbots over your internal documents, databases, and knowledge base."
+      lead: "Give your data a voice. Ask your company knowledge base like a person."
+      text: |
+        <h2>Your data as your smartest colleague</h2>
+        <p>RAG (Retrieval-Augmented Generation) connects a large language model to your own data. The result is an AI that answers accurately and factually — not from general knowledge, but directly from your PDFs, internal wikis, contracts, or databases.</p>
+        <h3>When RAG is the right fit:</h3>
+        <ul>
+          <li><strong>Internal knowledge base:</strong> Employees ask the system instead of digging through stacks of documents.</li>
+          <li><strong>Customer support:</strong> A chatbot that answers from your manuals and FAQ with accuracy and source citations.</li>
+          <li><strong>Document analysis:</strong> Fast search through legal contracts, technical documentation, or research reports.</li>
+          <li><strong>Vector databases:</strong> Implementation of Qdrant, Chroma, or Pinecone for efficient semantic search.</li>
+        </ul>
+      contact_link: "I want AI over my data"
+
+- page_id: vibecoding
+  type: service
+  slug: vibecoding
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: electric_bolt
+  lang:
+    cs:
+      title: "Vibecoding — Rapidní vývoj s AI"
+      description: "Využívám AI nástroje jako Claude Code a Cursor k vývoji funkčních prototypů a MVP v zlomku obvyklého času."
+      lead: "Od nápadu k fungujícímu prototypu za dny, ne měsíce."
+      text: |
+        <h2>Vývoj, který drží krok s vašimi nápady</h2>
+        <p>Vibecoding je přístup k vývoji, kde AI nástroje přebírají rutinní části kódování a vývojář řídí architekturu a byznysovou logiku. Výsledkem je dramaticky vyšší rychlost — bez kompromisů v kvalitě. Ideální pro startupy, interní nástroje a MVP.</p>
+        <h3>Jak to funguje v praxi:</h3>
+        <ul>
+          <li><strong>Rychlé prototypy:</strong> Funkční demo vaší myšlenky připravené k prezentaci investorům nebo zákazníkům.</li>
+          <li><strong>MVP k otestování trhu:</strong> Základní verze produktu nasazená v reálném provozu co nejdříve.</li>
+          <li><strong>Interní nástroje:</strong> Dashboardy, formuláře a automatizace postavené rychle bez drahého development týmu.</li>
+          <li><strong>Iterace a rozšiřování:</strong> Rychlé přidávání funkcí na základě zpětné vazby z trhu.</li>
+        </ul>
+      contact_link: "Chci rychlý prototyp"
+    en:
+      title: "Vibecoding — Rapid AI-Assisted Development"
+      description: "I use AI tools like Claude Code and Cursor to build working prototypes and MVPs in a fraction of the usual time."
+      lead: "From idea to working prototype in days, not months."
+      text: |
+        <h2>Development that keeps up with your ideas</h2>
+        <p>Vibecoding is a development approach where AI tools take over the repetitive parts of coding while the developer directs architecture and business logic. The result is dramatically faster delivery — without sacrificing quality. Ideal for startups, internal tools, and MVPs.</p>
+        <h3>How it works in practice:</h3>
+        <ul>
+          <li><strong>Fast prototypes:</strong> A working demo of your idea ready to present to investors or customers.</li>
+          <li><strong>Market-testing MVP:</strong> A basic version of your product deployed in real production as soon as possible.</li>
+          <li><strong>Internal tools:</strong> Dashboards, forms, and automation built quickly without an expensive dev team.</li>
+          <li><strong>Iteration and expansion:</strong> Rapidly adding features based on market feedback.</li>
+        </ul>
+      contact_link: "I want a fast prototype"
