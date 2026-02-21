@@ -32,11 +32,15 @@ These days, I remove these obstacles. I combine analytical thinking with technic
 
 I believe that the most important question is not "how" to create something, but "what" and "why" we create. The path itself and the choice of tools will then naturally follow from the search for the path to the goal. Every problem have many solutions, and my job is to find the one that best suits your needs.
 
-- **[Intelligent automation (n8n & AI)](/services/intelligent-automation/)**: I connect applications that previously did not communicate with each other. I build n8n workflows enriched with AI agents that save hours of human labor per week.
+- **[Intelligent Automation (n8n & AI)](/services/intelligent-automation/)**: I connect applications that previously did not communicate. I build n8n workflows enriched with AI agents that save hours of human labor every week.
 
-- **[Automated testing (QA)](/services/automation-testing-qa/)**: I ensure that your software works flawlessly. Using Playwright, I write tests that detect errors before your customers do.
+- **[Custom AI Agents](/services/ai-agents/)**: I build autonomous agents that search for information, call APIs, and decide what to do next — without waiting for a human.
 
-- **[Web application development](/services/web-app-development/)**: When no-code tools reach their limits, I build custom solutions in Python. From databases to functional interfaces.
+- **[RAG Systems — AI Over Your Data](/services/rag-systems/)**: I connect a large language model to your documents, databases, or wiki. The result is AI that answers accurately from your own data.
+
+- **[Vibecoding — Rapid AI-Assisted Development](/services/vibecoding/)**: I use AI tools to build working prototypes and MVPs in a fraction of the usual time. From idea to demo in days.
+
+- **[Custom Web App Development](/services/web-app-development/)**: When no-code tools reach their limits, I build custom solutions in Python. From databases to functional interfaces.
 
 [More about my services →](/services/)
 

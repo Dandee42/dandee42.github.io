@@ -1,0 +1,801 @@
+- page_id: invoice-processing
+  type: use-case
+  slug: invoice-processing
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: receipt_long
+  lang:
+    cs:
+      title: "Automatizace zpracování faktur"
+      description: "Zbavte se ručního přepisování faktur. Pomocí AI a automatizace zpracuji příchozí faktury, ověřím údaje a zapíšu je do vašeho účetního systému."
+      lead: "Konec ručního přepisování faktur — AI to zvládne za vás rychleji a bez chyb."
+      text: |
+        <h2>Faktury, které se zpracují samy</h2>
+        <p>Příchozí faktury v PDF, e-mailu nebo datové schránce — ruční zpracování je pomalé, náchylné k chybám a zbytečně drahé. Pomocí kombinace OCR, AI extrakce dat a automatizačních nástrojů (n8n) vytvořím systém, který faktury přijme, přečte, ověří a zapíše do vašeho účetnictví bez lidského zásahu.</p>
+        <h3>Co systém zvládne:</h3>
+        <ul>
+          <li><strong>Příjem faktur:</strong> Z e-mailu, datové schránky nebo sdíleného úložiště.</li>
+          <li><strong>Extrakce dat pomocí AI:</strong> Číslo faktury, dodavatel, částka, datum splatnosti — bez ručního přepisování.</li>
+          <li><strong>Ověření a párování:</strong> Porovnání s objednávkami nebo dodavateli v CRM.</li>
+          <li><strong>Zápis do účetnictví:</strong> Integrace s Pohodou, Money S3, Fakturoid, iDoklad nebo jiným systémem.</li>
+          <li><strong>Notifikace výjimek:</strong> Pokud něco nesedí, dostanete upozornění — jinak běží vše automaticky.</li>
+        </ul>
+      contact_link: "Chci automatizovat faktury"
+    en:
+      title: "Invoice Processing Automation"
+      description: "Stop manually entering invoices. Using AI and automation, I process incoming invoices, verify data, and write them to your accounting system."
+      lead: "No more manual invoice entry — AI handles it faster and without errors."
+      text: |
+        <h2>Invoices that process themselves</h2>
+        <p>Incoming invoices via PDF, email, or postal inbox — manual processing is slow, error-prone, and unnecessarily expensive. Using a combination of OCR, AI data extraction, and automation tools (n8n), I build a system that receives, reads, verifies, and records invoices into your accounting system without human intervention.</p>
+        <h3>What the system handles:</h3>
+        <ul>
+          <li><strong>Invoice ingestion:</strong> From email, data mailbox, or shared storage.</li>
+          <li><strong>AI data extraction:</strong> Invoice number, supplier, amount, due date — no manual typing.</li>
+          <li><strong>Verification and matching:</strong> Cross-referencing with orders or suppliers in CRM.</li>
+          <li><strong>Accounting integration:</strong> Connecting to your accounting system (QuickBooks, Xero, Fakturoid, etc.).</li>
+          <li><strong>Exception alerts:</strong> If something doesn't match, you get notified — otherwise everything runs automatically.</li>
+        </ul>
+      contact_link: "Automate my invoices"
+
+- page_id: customer-support-chatbot
+  type: use-case
+  slug: customer-support-chatbot
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: support_agent
+  lang:
+    cs:
+      title: "AI Chatbot pro zákaznickou podporu"
+      description: "Chatbot, který odpovídá z vašich reálných dat — manuálů, FAQ a historie objednávek. Bez halucinací, s přesnými zdroji."
+      lead: "Zákaznická podpora, která funguje 24/7 a odpovídá přesně z vašich dat."
+      text: |
+        <h2>Podpora, která nikdy nespí a nikdy neodpovídá špatně</h2>
+        <p>Generické chatboty odpoví cokoliv — správně nebo ne. Chatbot postavený na RAG (Retrieval-Augmented Generation) čerpá výhradně z vašich dat: produktových manuálů, FAQ, obchodních podmínek a historie zákazníka. Výsledek je přesná odpověď s odkazem na zdroj.</p>
+        <h3>Co chatbot umí:</h3>
+        <ul>
+          <li><strong>Odpovídat z vašich dokumentů:</strong> PDF manuály, FAQ stránky, znalostní báze.</li>
+          <li><strong>Pracovat s historií zákazníka:</strong> Stav objednávky, reklamace, předchozí komunikace.</li>
+          <li><strong>Eskalovat na člověka:</strong> Pokud si neví rady, předá konverzaci živému operátorovi.</li>
+          <li><strong>Vícejazyčný provoz:</strong> Zákazník píše česky, anglicky nebo slovensky — chatbot rozumí.</li>
+          <li><strong>Integrace na web nebo Slack:</strong> Nasazení tam, kde vaši zákazníci nebo tým už jsou.</li>
+        </ul>
+      contact_link: "Chci chatbot pro podporu"
+    en:
+      title: "AI Chatbot for Customer Support"
+      description: "A chatbot that answers from your real data — manuals, FAQ, and order history. No hallucinations, with precise sources."
+      lead: "Customer support that works 24/7 and answers accurately from your own data."
+      text: |
+        <h2>Support that never sleeps and never answers incorrectly</h2>
+        <p>Generic chatbots will answer anything — right or wrong. A chatbot built on RAG (Retrieval-Augmented Generation) draws exclusively from your data: product manuals, FAQ, terms of service, and customer history. The result is a precise answer with a source reference.</p>
+        <h3>What the chatbot can do:</h3>
+        <ul>
+          <li><strong>Answer from your documents:</strong> PDF manuals, FAQ pages, knowledge bases.</li>
+          <li><strong>Work with customer history:</strong> Order status, complaints, previous communication.</li>
+          <li><strong>Escalate to a human:</strong> If it can't help, it hands off the conversation to a live agent.</li>
+          <li><strong>Multilingual support:</strong> Customers write in any language — the chatbot understands.</li>
+          <li><strong>Web or Slack integration:</strong> Deployed where your customers or team already are.</li>
+        </ul>
+      contact_link: "I want a support chatbot"
+
+- page_id: automated-reporting
+  type: use-case
+  slug: automated-reporting
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: bar_chart
+  lang:
+    cs:
+      title: "Automatický reporting z dat"
+      description: "Pravidelné reporty z Google Analytics, CRM, databáze nebo tabulek — připravené a odeslané automaticky bez ručního kopírování dat."
+      lead: "Report, který se napíše sám — každý týden ve vaší schránce bez jediného kliknutí."
+      text: |
+        <h2>Reporty, které na vás nečekají — vy nečekáte na ně</h2>
+        <p>Manuální tvorba reportů je jednou z nejčastějších ztrát času ve firmách. Každý týden nebo měsíc někdo stahuje data, kopíruje do Excelu, formátuje a posílá. Celý tento proces lze plně automatizovat — od sběru dat přes výpočty až po odeslání hotového reportu.</p>
+        <h3>Co automatizace reportingu zahrnuje:</h3>
+        <ul>
+          <li><strong>Sběr dat ze zdrojů:</strong> Google Analytics, Search Console, CRM, databáze, tabulky.</li>
+          <li><strong>Výpočty a agregace:</strong> KPI, trendy, srovnání s předchozím obdobím.</li>
+          <li><strong>Formátování výstupu:</strong> PDF report, Excel, e-mail nebo Slack zpráva.</li>
+          <li><strong>Pravidelná rozesílka:</strong> Denně, týdně nebo měsíčně — vždy ve správný čas správným lidem.</li>
+          <li><strong>AI komentář:</strong> Volitelně přidat AI shrnutí klíčových změn a doporučení.</li>
+        </ul>
+      contact_link: "Chci automatický reporting"
+    en:
+      title: "Automated Data Reporting"
+      description: "Regular reports from Google Analytics, CRM, databases, or spreadsheets — prepared and sent automatically without manual data copying."
+      lead: "A report that writes itself — delivered to your inbox every week without a single click."
+      text: |
+        <h2>Reports that don't wait for you — you don't wait for them</h2>
+        <p>Manual report creation is one of the most common time-wasters in companies. Every week or month, someone downloads data, copies it to Excel, formats it, and sends it. This entire process can be fully automated — from data collection through calculations to sending the finished report.</p>
+        <h3>What reporting automation includes:</h3>
+        <ul>
+          <li><strong>Data collection:</strong> Google Analytics, Search Console, CRM, databases, spreadsheets.</li>
+          <li><strong>Calculations and aggregation:</strong> KPIs, trends, period-over-period comparisons.</li>
+          <li><strong>Output formatting:</strong> PDF report, Excel, email, or Slack message.</li>
+          <li><strong>Scheduled delivery:</strong> Daily, weekly, or monthly — always at the right time to the right people.</li>
+          <li><strong>AI commentary:</strong> Optionally add an AI summary of key changes and recommendations.</li>
+        </ul>
+      contact_link: "I want automated reporting"
+
+- page_id: ai-email-management
+  type: use-case
+  slug: ai-email-management
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: mark_email_read
+  lang:
+    cs:
+      title: "AI správa a třídění e-mailů"
+      description: "AI agent, který čte váš inbox, třídí e-maily podle priority a tématu, navrhuje odpovědi a předává úkoly do vašeho systému."
+      lead: "Inbox pod kontrolou — AI přečte, roztřídí a navrhne odpovědi ještě před tím, než vy otevřete schránku."
+      text: |
+        <h2>Inbox, který se spravuje skoro sám</h2>
+        <p>Průměrný pracovník stráví přes hodinu denně vyřizováním e-mailů. Velkou část z toho tvoří třídění, předávání a odpovídání na rutinní zprávy. AI agent dokáže tento čas dramaticky zkrátit — automaticky rozpozná typ zprávy, přiřadí prioritu a připraví návrh odpovědi.</p>
+        <h3>Co AI agent zvládne:</h3>
+        <ul>
+          <li><strong>Klasifikace e-mailů:</strong> Poptávka, reklamace, spam, faktura, interní komunikace — automaticky.</li>
+          <li><strong>Přiřazení priority:</strong> Urgentní zprávy označeny a vyzdviženy jako první.</li>
+          <li><strong>Návrh odpovědi:</strong> AI připraví draft odpovědi na základě kontextu a vašich pravidel.</li>
+          <li><strong>Vytvoření úkolu:</strong> Z e-mailu automaticky vznikne úkol v Notion, Jira nebo jiném nástroji.</li>
+          <li><strong>Notifikace na Slack:</strong> Důležité e-maily okamžitě přeposlány do správného kanálu.</li>
+        </ul>
+      contact_link: "Chci AI pro e-maily"
+    en:
+      title: "AI Email Management and Sorting"
+      description: "An AI agent that reads your inbox, sorts emails by priority and topic, drafts replies, and forwards tasks to your system."
+      lead: "Inbox under control — AI reads, sorts, and drafts replies before you even open it."
+      text: |
+        <h2>An inbox that practically manages itself</h2>
+        <p>The average worker spends over an hour a day on emails. Much of that is sorting, forwarding, and replying to routine messages. An AI agent can dramatically reduce this time — automatically recognizing message type, assigning priority, and preparing a reply draft.</p>
+        <h3>What the AI agent handles:</h3>
+        <ul>
+          <li><strong>Email classification:</strong> Inquiry, complaint, spam, invoice, internal — automatically.</li>
+          <li><strong>Priority assignment:</strong> Urgent messages flagged and surfaced first.</li>
+          <li><strong>Reply drafting:</strong> AI prepares a draft reply based on context and your rules.</li>
+          <li><strong>Task creation:</strong> Email automatically becomes a task in Notion, Jira, or another tool.</li>
+          <li><strong>Slack notifications:</strong> Important emails instantly forwarded to the right channel.</li>
+        </ul>
+      contact_link: "I want AI for my emails"
+
+- page_id: crm-automation
+  type: use-case
+  slug: crm-automation
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: contacts
+  lang:
+    cs:
+      title: "CRM automatizace a lead enrichment"
+      description: "Automatické doplňování CRM dat, scoring leadů a notifikace obchodníků — bez ručního zadávání a procházení LinkedIn."
+      lead: "Váš CRM plný přesných dat bez toho, aby je někdo ručně hledal a zadával."
+      text: |
+        <h2>CRM, které se plní samo</h2>
+        <p>Prázdná nebo neúplná pole v CRM jsou záhuba obchodního týmu. Ruční vyhledávání dat o firmách a kontaktech stojí hodiny týdně. Automatizací tohoto procesu zajistím, že každý lead bude obohacen o relevantní data okamžitě po přidání.</p>
+        <h3>Co automatizace CRM zahrnuje:</h3>
+        <ul>
+          <li><strong>Lead enrichment:</strong> Automatické doplnění firmy, oboru, velikosti a kontaktů z veřejných zdrojů.</li>
+          <li><strong>Lead scoring:</strong> Bodování leadů podle předem definovaných kritérií pro obchodníky.</li>
+          <li><strong>Notifikace obchodníků:</strong> Při splnění podmínek (nový lead, aktivita) okamžité upozornění.</li>
+          <li><strong>Synchronizace s e-mailem:</strong> Komunikace automaticky zapsaná k příslušnému kontaktu.</li>
+          <li><strong>Pravidelné čištění dat:</strong> Duplicity, neplatné e-maily a zastaralé záznamy automaticky označeny.</li>
+        </ul>
+      contact_link: "Chci automatizovat CRM"
+    en:
+      title: "CRM Automation and Lead Enrichment"
+      description: "Automatic CRM data enrichment, lead scoring, and sales rep notifications — no manual entry or LinkedIn browsing."
+      lead: "Your CRM filled with accurate data without anyone manually searching and entering it."
+      text: |
+        <h2>A CRM that fills itself</h2>
+        <p>Empty or incomplete CRM fields are the bane of any sales team. Manually looking up company and contact data costs hours every week. By automating this process, every lead will be enriched with relevant data the moment it's added.</p>
+        <h3>What CRM automation includes:</h3>
+        <ul>
+          <li><strong>Lead enrichment:</strong> Automatic company, industry, size, and contact data from public sources.</li>
+          <li><strong>Lead scoring:</strong> Scoring leads against predefined criteria for your sales team.</li>
+          <li><strong>Sales rep notifications:</strong> Instant alerts when conditions are met (new lead, activity).</li>
+          <li><strong>Email sync:</strong> Communication automatically logged to the relevant contact.</li>
+          <li><strong>Regular data cleaning:</strong> Duplicates, invalid emails, and outdated records automatically flagged.</li>
+        </ul>
+      contact_link: "Automate my CRM"
+
+- page_id: internal-documentation-chatbot
+  type: use-case
+  slug: internal-documentation-chatbot
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: menu_book
+  lang:
+    cs:
+      title: "Chatbot pro interní dokumentaci a firemní wiki"
+      description: "AI chatbot, který odpoví zaměstnancům z vašich interních dokumentů, směrnic, příruček a wiki — okamžitě a přesně."
+      lead: "Zaměstnanci se přestanou ptát kolegů a začnou se ptát AI, která zná všechny firemní dokumenty."
+      text: |
+        <h2>Firemní znalosti dostupné okamžitě komukoliv</h2>
+        <p>Kde je ta směrnice? Jak se vyplňuje žádanka o dovolenou? Co je postup při reklamaci? Tyto otázky padají denně — a kolegové, kteří znají odpovědi, tráví čas hledáním v dokumentech místo vlastní práce. Chatbot postavený na RAG technologii zná obsah všech vašich dokumentů a okamžitě odpoví s odkazem na zdroj.</p>
+        <h3>Co chatbot zvládne:</h3>
+        <ul>
+          <li><strong>Napojení na dokumenty:</strong> SharePoint, Confluence, Google Drive, Notion nebo PDF složka.</li>
+          <li><strong>Přesné odpovědi se zdrojem:</strong> Neodpovídá obecně — cituje konkrétní dokument a stránku.</li>
+          <li><strong>Aktualizace v reálném čase:</strong> Změníte dokument — chatbot to ví automaticky.</li>
+          <li><strong>Přístupová práva:</strong> Různé skupiny zaměstnanců vidí jen dokumenty, ke kterým mají přístup.</li>
+          <li><strong>Integrace do Slacku nebo Teams:</strong> Dotaz přímo v nástroji, který tým používá.</li>
+        </ul>
+      contact_link: "Chci chatbot pro dokumentaci"
+    en:
+      title: "Chatbot for Internal Documentation and Company Wiki"
+      description: "An AI chatbot that answers employees from your internal documents, policies, handbooks, and wiki — instantly and accurately."
+      lead: "Employees stop asking colleagues and start asking AI that knows all company documents."
+      text: |
+        <h2>Company knowledge instantly available to everyone</h2>
+        <p>Where's that policy? How do I fill in a vacation request? What's the complaints procedure? These questions come up daily — and colleagues who know the answers spend their time searching through documents instead of doing their own work. A chatbot built on RAG technology knows the content of all your documents and responds instantly with a source reference.</p>
+        <h3>What the chatbot handles:</h3>
+        <ul>
+          <li><strong>Document connections:</strong> SharePoint, Confluence, Google Drive, Notion, or a PDF folder.</li>
+          <li><strong>Precise answers with sources:</strong> Doesn't answer generically — cites the specific document and page.</li>
+          <li><strong>Real-time updates:</strong> You update a document — the chatbot knows automatically.</li>
+          <li><strong>Access rights:</strong> Different employee groups only see documents they have access to.</li>
+          <li><strong>Slack or Teams integration:</strong> Ask directly in the tool your team already uses.</li>
+        </ul>
+      contact_link: "I want a documentation chatbot"
+
+- page_id: quote-generation
+  type: use-case
+  slug: quote-generation
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: description
+  lang:
+    cs:
+      title: "Automatické generování nabídek a smluv"
+      description: "AI agent, který sestaví cenovou nabídku nebo smlouvu z dat v CRM nebo formuláře — v minutách místo hodin."
+      lead: "Od poptávky k odeslané nabídce za minuty, ne hodiny."
+      text: |
+        <h2>Nabídky, které se píší samy</h2>
+        <p>Tvorba nabídek je časově náročná a opakující se práce — kopírování údajů z CRM, přizpůsobení šablony, výpočet ceny, formátování PDF a odeslání. Celý tento proces lze automatizovat: od příchozí poptávky přes vygenerování dokumentu až po odeslání zákazníkovi.</p>
+        <h3>Jak automatizace funguje:</h3>
+        <ul>
+          <li><strong>Vstupní data z formuláře nebo CRM:</strong> Zákazník vyplní formulář nebo obchodník zadá parametry.</li>
+          <li><strong>AI sestaví obsah nabídky:</strong> Na základě šablony a ceníku vygeneruje personalizovaný text.</li>
+          <li><strong>Automatické formátování do PDF:</strong> Profesionálně vypadající dokument připravený k odeslání.</li>
+          <li><strong>Odeslání zákazníkovi:</strong> E-mailem automaticky, s možností online podpisu.</li>
+          <li><strong>Zápis do CRM:</strong> Nabídka evidovaná u příslušné příležitosti automaticky.</li>
+        </ul>
+      contact_link: "Chci automatizovat nabídky"
+    en:
+      title: "Automated Quote and Contract Generation"
+      description: "An AI agent that assembles a price quote or contract from CRM data or a form — in minutes instead of hours."
+      lead: "From inquiry to sent quote in minutes, not hours."
+      text: |
+        <h2>Quotes that write themselves</h2>
+        <p>Creating quotes is time-consuming, repetitive work — copying data from CRM, adapting a template, calculating price, formatting PDF, sending. This entire process can be automated: from the incoming inquiry through document generation to delivery to the customer.</p>
+        <h3>How the automation works:</h3>
+        <ul>
+          <li><strong>Input from form or CRM:</strong> Customer fills in a form, or a sales rep enters parameters.</li>
+          <li><strong>AI assembles the quote content:</strong> Based on your template and price list, generates personalized text.</li>
+          <li><strong>Automatic PDF formatting:</strong> A professional-looking document ready to send.</li>
+          <li><strong>Customer delivery:</strong> Sent automatically by email, with optional online signature.</li>
+          <li><strong>CRM logging:</strong> Quote recorded against the relevant opportunity automatically.</li>
+        </ul>
+      contact_link: "Automate my quotes"
+
+- page_id: employee-onboarding
+  type: use-case
+  slug: employee-onboarding
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: person_add
+  lang:
+    cs:
+      title: "Automatizace onboardingu zaměstnanců"
+      description: "Digitální onboarding, který nového zaměstnance provede od podpisu smlouvy po první pracovní den — bez zbytečného papírování a ručního předávání informací."
+      lead: "Nový zaměstnanec má první den vše připravené — bez toho, aby to někdo musel ručně zařizovat."
+      text: |
+        <h2>Onboarding bez chaosu a zapomenutých kroků</h2>
+        <p>Přijetí nového zaměstnance obnáší desítky úkolů — vytvoření e-mailového účtu, přístupy do systémů, zaslání dokumentů, plán prvního týdne, představení týmu. Většina z toho se dá automatizovat tak, aby se nic nezapomnělo a HR tým mohl věnovat čas skutečně důležitým věcem.</p>
+        <h3>Co automatizace onboardingu pokryje:</h3>
+        <ul>
+          <li><strong>Spouštěcí událost:</strong> Podpis smlouvy nebo zápis do HR systému spustí celý proces automaticky.</li>
+          <li><strong>Zřízení účtů a přístupů:</strong> Notifikace IT s přesným seznamem potřebných oprávnění.</li>
+          <li><strong>Uvítací e-maily a dokumenty:</strong> Zaměstnanec dostane vše potřebné automaticky v správný čas.</li>
+          <li><strong>Checklist pro manažera:</strong> Automatický úkolník s tím, co je potřeba stihnout před nástupem.</li>
+          <li><strong>Připomínky a sledování:</strong> Systém hlídá, co bylo splněno a co ještě zbývá.</li>
+        </ul>
+      contact_link: "Chci automatizovat onboarding"
+    en:
+      title: "Employee Onboarding Automation"
+      description: "A digital onboarding process that guides a new employee from contract signing to day one — without paperwork and manual handoffs."
+      lead: "New employee has everything ready on day one — without anyone having to manually arrange it."
+      text: |
+        <h2>Onboarding without chaos and forgotten steps</h2>
+        <p>Hiring a new employee involves dozens of tasks — creating an email account, system access, sending documents, planning the first week, team introductions. Most of this can be automated so nothing gets forgotten and the HR team can focus on what actually matters.</p>
+        <h3>What onboarding automation covers:</h3>
+        <ul>
+          <li><strong>Trigger event:</strong> Contract signing or HR system entry automatically kicks off the entire process.</li>
+          <li><strong>Account and access provisioning:</strong> IT notification with a precise list of required permissions.</li>
+          <li><strong>Welcome emails and documents:</strong> Employee receives everything they need automatically at the right time.</li>
+          <li><strong>Manager checklist:</strong> Automatic task list of what needs to happen before the start date.</li>
+          <li><strong>Reminders and tracking:</strong> System monitors what's been completed and what's still pending.</li>
+        </ul>
+      contact_link: "Automate my onboarding"
+
+- page_id: feedback-analysis
+  type: use-case
+  slug: feedback-analysis
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: reviews
+  lang:
+    cs:
+      title: "AI analýza zákaznické zpětné vazby"
+      description: "Automatická analýza recenzí, hodnocení a zákaznických průzkumů pomocí AI — s přehledem trendů, sentimentu a konkrétních problémů."
+      lead: "Víte, co si zákazníci opravdu myslí — bez ručního procházení stovek recenzí."
+      text: |
+        <h2>Zákaznická zpětná vazba jako strategický zdroj dat</h2>
+        <p>Recenze na Google, Heurece, průzkumy spokojenosti, e-maily s připomínkami — firmy sbírají obrovské množství zpětné vazby, ale nemají kapacitu ji systematicky analyzovat. AI dokáže přečíst stovky nebo tisíce zpráv, rozpoznat opakující se témata, změřit sentiment a upozornit na problémy dříve, než eskalují.</p>
+        <h3>Co analýza zahrnuje:</h3>
+        <ul>
+          <li><strong>Sběr zpětné vazby:</strong> Google recenze, Heureka, průzkumy, e-maily nebo formuláře — vše na jednom místě.</li>
+          <li><strong>Sentiment analýza:</strong> Pozitivní, negativní nebo neutrální — automaticky a v reálném čase.</li>
+          <li><strong>Témata a kategorie:</strong> AI rozpozná, o čem zákazníci píší nejčastěji (doprava, cena, produkt, podpora).</li>
+          <li><strong>Alerting na problémy:</strong> Nárůst negativních recenzí na konkrétní téma = okamžité upozornění.</li>
+          <li><strong>Pravidelný report:</strong> Týdenní nebo měsíční přehled trendů ve zpětné vazbě.</li>
+        </ul>
+      contact_link: "Chci analyzovat zpětnou vazbu"
+    en:
+      title: "AI Customer Feedback Analysis"
+      description: "Automatic analysis of reviews, ratings, and customer surveys using AI — with trend overviews, sentiment, and specific issue detection."
+      lead: "Know what customers really think — without manually reading through hundreds of reviews."
+      text: |
+        <h2>Customer feedback as a strategic data source</h2>
+        <p>Google reviews, Trustpilot, surveys, satisfaction emails, comment forms — companies collect enormous amounts of feedback but lack the capacity to analyze it systematically. AI can read hundreds or thousands of messages, identify recurring themes, measure sentiment, and flag problems before they escalate.</p>
+        <h3>What the analysis includes:</h3>
+        <ul>
+          <li><strong>Feedback collection:</strong> Google reviews, Trustpilot, surveys, emails, or forms — all in one place.</li>
+          <li><strong>Sentiment analysis:</strong> Positive, negative, or neutral — automatically and in real time.</li>
+          <li><strong>Topics and categories:</strong> AI identifies what customers write about most (delivery, price, product, support).</li>
+          <li><strong>Issue alerting:</strong> Spike in negative reviews on a specific topic = immediate notification.</li>
+          <li><strong>Regular report:</strong> Weekly or monthly overview of feedback trends.</li>
+        </ul>
+      contact_link: "I want to analyze feedback"
+
+# -------------------------------------------------------
+# SEO — GEOGRAFICKÉ VARIANTY: PRAHA
+# -------------------------------------------------------
+
+- page_id: invoice-processing-praha
+  type: use-case
+  slug: invoice-processing-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: receipt_long
+  lang:
+    cs:
+      title: "Automatizace zpracování faktur — Praha"
+      description: "Automatické zpracování faktur pomocí AI a n8n pro firmy v Praze. Konec ručního přepisování — faktury se zpracují samy a zapíší do vašeho účetního systému."
+      lead: "Konec ručního přepisování faktur — AI to zvládne za vás rychleji a bez chyb."
+      text: |
+        <h2>Faktury, které se zpracují samy — řešení pro pražské firmy</h2>
+        <p>Příchozí faktury v PDF, e-mailu nebo datové schránce — ruční zpracování je pomalé, náchylné k chybám a zbytečně drahé. Pomocí kombinace OCR, AI extrakce dat a automatizačních nástrojů (n8n) vytvořím systém, který faktury přijme, přečte, ověří a zapíše do vašeho účetnictví bez lidského zásahu. Pracuji s firmami v Praze osobně i vzdáleně.</p>
+        <h3>Co systém zvládne:</h3>
+        <ul>
+          <li><strong>Příjem faktur:</strong> Z e-mailu, datové schránky nebo sdíleného úložiště.</li>
+          <li><strong>Extrakce dat pomocí AI:</strong> Číslo faktury, dodavatel, částka, datum splatnosti — bez ručního přepisování.</li>
+          <li><strong>Ověření a párování:</strong> Porovnání s objednávkami nebo dodavateli v CRM.</li>
+          <li><strong>Zápis do účetnictví:</strong> Integrace s Pohodou, Money S3, Fakturoid, iDoklad nebo jiným systémem.</li>
+          <li><strong>Notifikace výjimek:</strong> Pokud něco nesedí, dostanete upozornění — jinak běží vše automaticky.</li>
+        </ul>
+      contact_link: "Chci automatizovat faktury"
+    en:
+      title: "Invoice Processing Automation — Prague"
+      description: "Automatic invoice processing using AI and n8n for companies in Prague. No more manual entry — invoices process themselves and are written to your accounting system."
+      lead: "No more manual invoice entry — AI handles it faster and without errors."
+      text: |
+        <h2>Invoices that process themselves — solution for Prague businesses</h2>
+        <p>Incoming invoices via PDF, email, or postal inbox — manual processing is slow, error-prone, and unnecessarily expensive. Using a combination of OCR, AI data extraction, and automation tools (n8n), I build a system that receives, reads, verifies, and records invoices without human intervention. I work with companies in Prague in person and remotely.</p>
+        <h3>What the system handles:</h3>
+        <ul>
+          <li><strong>Invoice ingestion:</strong> From email, data mailbox, or shared storage.</li>
+          <li><strong>AI data extraction:</strong> Invoice number, supplier, amount, due date — no manual typing.</li>
+          <li><strong>Verification and matching:</strong> Cross-referencing with orders or suppliers in CRM.</li>
+          <li><strong>Accounting integration:</strong> Connecting to Pohoda, Money S3, Fakturoid, or any other system.</li>
+          <li><strong>Exception alerts:</strong> If something doesn't match, you get notified — otherwise everything runs automatically.</li>
+        </ul>
+      contact_link: "Automate my invoices"
+
+- page_id: customer-support-chatbot-praha
+  type: use-case
+  slug: customer-support-chatbot-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: support_agent
+  lang:
+    cs:
+      title: "AI Chatbot pro zákaznickou podporu — Praha"
+      description: "Vývoj AI chatbotu pro zákaznickou podporu pro firmy v Praze. Chatbot odpovídá z vašich dat 24/7 — bez hallucinations, s přesnými zdroji."
+      lead: "Zákaznická podpora, která funguje 24/7 a odpovídá přesně z vašich dat."
+      text: |
+        <h2>AI chatbot pro zákaznickou podporu — pro pražské firmy</h2>
+        <p>Generické chatboty odpoví cokoliv — správně nebo ne. Chatbot postavený na RAG technologii čerpá výhradně z vašich dat: produktových manuálů, FAQ, obchodních podmínek a historie zákazníka. Výsledek je přesná odpověď s odkazem na zdroj. Implementuji chatboty pro firmy v Praze i po celé ČR.</p>
+        <h3>Co chatbot umí:</h3>
+        <ul>
+          <li><strong>Odpovídat z vašich dokumentů:</strong> PDF manuály, FAQ stránky, znalostní báze.</li>
+          <li><strong>Pracovat s historií zákazníka:</strong> Stav objednávky, reklamace, předchozí komunikace.</li>
+          <li><strong>Eskalovat na člověka:</strong> Pokud si neví rady, předá konverzaci živému operátorovi.</li>
+          <li><strong>Vícejazyčný provoz:</strong> Zákazník píše česky, anglicky nebo slovensky — chatbot rozumí.</li>
+          <li><strong>Integrace na web nebo Slack:</strong> Nasazení tam, kde vaši zákazníci nebo tým už jsou.</li>
+        </ul>
+      contact_link: "Chci chatbot pro podporu"
+    en:
+      title: "AI Chatbot for Customer Support — Prague"
+      description: "AI customer support chatbot development for companies in Prague. The chatbot answers from your data 24/7 — no hallucinations, with precise sources."
+      lead: "Customer support that works 24/7 and answers accurately from your own data."
+      text: |
+        <h2>AI customer support chatbot — for Prague businesses</h2>
+        <p>Generic chatbots will answer anything — right or wrong. A chatbot built on RAG technology draws exclusively from your data: product manuals, FAQ, terms of service, and customer history. The result is a precise answer with a source reference. I implement chatbots for companies in Prague and across the Czech Republic.</p>
+        <h3>What the chatbot can do:</h3>
+        <ul>
+          <li><strong>Answer from your documents:</strong> PDF manuals, FAQ pages, knowledge bases.</li>
+          <li><strong>Work with customer history:</strong> Order status, complaints, previous communication.</li>
+          <li><strong>Escalate to a human:</strong> If it can't help, it hands off the conversation to a live agent.</li>
+          <li><strong>Multilingual support:</strong> Customers write in any language — the chatbot understands.</li>
+          <li><strong>Web or Slack integration:</strong> Deployed where your customers or team already are.</li>
+        </ul>
+      contact_link: "I want a support chatbot"
+
+- page_id: eshop-accounting-integration-praha
+  type: use-case
+  slug: eshop-accounting-integration-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: sync_alt
+  lang:
+    cs:
+      title: "Propojení e-shopu s účetnictvím — Praha"
+      description: "Automatická synchronizace e-shopu s Pohodou, Fakturoidem nebo Money S3 pro e-shopy v Praze. Každá objednávka automaticky v účetnictví."
+      lead: "Každá objednávka automaticky v účetnictví — žádné ruční přepisování, žádné chyby."
+      text: |
+        <h2>Propojení e-shopu s účetnictvím pro pražské e-shopy</h2>
+        <p>Příchozí objednávka na e-shopu by neměla znamenat další hodinu práce v účetním programu. Propojím váš Shopify, WooCommerce nebo jiný e-shop s Pohodou, Fakturoidem, Money S3 nebo jiným systémem tak, aby data tekla automaticky oběma směry. Spolupracuji s e-shopy v Praze i po celé ČR.</p>
+        <h3>Co propojení zajistí:</h3>
+        <ul>
+          <li><strong>Automatické faktury:</strong> Každá objednávka = faktura vystavená a odeslaná bez zásahu.</li>
+          <li><strong>Synchronizace skladu:</strong> Stav zásob aktuální v reálném čase na obou stranách.</li>
+          <li><strong>Zákaznická data:</strong> Nový zákazník z e-shopu automaticky v CRM nebo adresáři.</li>
+          <li><strong>Stavové notifikace:</strong> Zákazník dostane e-mail ve správnou chvíli automaticky.</li>
+          <li><strong>Reporting:</strong> Denní přehled objednávek, tržeb a skladových pohybů.</li>
+        </ul>
+      contact_link: "Chci propojit e-shop s účetnictvím"
+    en:
+      title: "E-shop to Accounting Integration — Prague"
+      description: "Automatic e-shop synchronization with accounting systems for Prague-based online stores. Every order automatically recorded in your accounting."
+      lead: "Every order automatically in your accounting system — no manual entry, no errors."
+      text: |
+        <h2>E-shop to accounting integration for Prague online stores</h2>
+        <p>An incoming order on your e-shop shouldn't mean another hour of work in your accounting software. I'll connect your Shopify, WooCommerce, or other platform with Pohoda, Fakturoid, Money S3, or any other system so data flows automatically in both directions. I work with e-shops in Prague and across the Czech Republic.</p>
+        <h3>What the integration handles:</h3>
+        <ul>
+          <li><strong>Automatic invoices:</strong> Every order = invoice issued and sent without intervention.</li>
+          <li><strong>Inventory sync:</strong> Stock levels updated in real time on both sides.</li>
+          <li><strong>Customer data:</strong> New customer from the e-shop automatically added to CRM or address book.</li>
+          <li><strong>Status notifications:</strong> Customer receives emails at the right time, automatically.</li>
+          <li><strong>Reporting:</strong> Daily overview of orders, revenue, and inventory movements.</li>
+        </ul>
+      contact_link: "Connect my e-shop to accounting"
+
+- page_id: automated-reporting-praha
+  type: use-case
+  slug: automated-reporting-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: bar_chart
+  lang:
+    cs:
+      title: "Automatický reporting z dat — Praha"
+      description: "Automatizace reportingu pro firmy v Praze — pravidelné reporty z Google Analytics, CRM nebo databáze bez ručního kopírování dat."
+      lead: "Report, který se napíše sám — každý týden ve vaší schránce bez jediného kliknutí."
+      text: |
+        <h2>Automatický reporting pro pražské firmy</h2>
+        <p>Manuální tvorba reportů je jednou z nejčastějších ztrát času ve firmách. Každý týden nebo měsíc někdo stahuje data, kopíruje do Excelu, formátuje a posílá. Celý tento proces lze plně automatizovat — od sběru dat přes výpočty až po odeslání hotového reportu. Implementuji automatizovaný reporting pro firmy v Praze i vzdáleně.</p>
+        <h3>Co automatizace reportingu zahrnuje:</h3>
+        <ul>
+          <li><strong>Sběr dat ze zdrojů:</strong> Google Analytics, Search Console, CRM, databáze, tabulky.</li>
+          <li><strong>Výpočty a agregace:</strong> KPI, trendy, srovnání s předchozím obdobím.</li>
+          <li><strong>Formátování výstupu:</strong> PDF report, Excel, e-mail nebo Slack zpráva.</li>
+          <li><strong>Pravidelná rozesílka:</strong> Denně, týdně nebo měsíčně — vždy ve správný čas správným lidem.</li>
+          <li><strong>AI komentář:</strong> Volitelně přidat AI shrnutí klíčových změn a doporučení.</li>
+        </ul>
+      contact_link: "Chci automatický reporting"
+    en:
+      title: "Automated Data Reporting — Prague"
+      description: "Reporting automation for companies in Prague — regular reports from Google Analytics, CRM, or databases without manual data copying."
+      lead: "A report that writes itself — delivered to your inbox every week without a single click."
+      text: |
+        <h2>Automated reporting for Prague businesses</h2>
+        <p>Manual report creation is one of the most common time-wasters in companies. Every week or month, someone downloads data, copies it to Excel, formats it, and sends it. This entire process can be fully automated. I implement automated reporting for companies in Prague and remotely.</p>
+        <h3>What reporting automation includes:</h3>
+        <ul>
+          <li><strong>Data collection:</strong> Google Analytics, Search Console, CRM, databases, spreadsheets.</li>
+          <li><strong>Calculations and aggregation:</strong> KPIs, trends, period-over-period comparisons.</li>
+          <li><strong>Output formatting:</strong> PDF report, Excel, email, or Slack message.</li>
+          <li><strong>Scheduled delivery:</strong> Daily, weekly, or monthly — always at the right time to the right people.</li>
+          <li><strong>AI commentary:</strong> Optionally add an AI summary of key changes and recommendations.</li>
+        </ul>
+      contact_link: "I want automated reporting"
+
+- page_id: ai-email-management-praha
+  type: use-case
+  slug: ai-email-management-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: mark_email_read
+  lang:
+    cs:
+      title: "AI správa a třídění e-mailů — Praha"
+      description: "AI agent pro správu e-mailů pro firmy v Praze — automatické třídění, návrhy odpovědí a předávání úkolů do vašeho systému."
+      lead: "Inbox pod kontrolou — AI přečte, roztřídí a navrhne odpovědi ještě před tím, než vy otevřete schránku."
+      text: |
+        <h2>AI správa e-mailů pro pražské firmy</h2>
+        <p>Průměrný pracovník stráví přes hodinu denně vyřizováním e-mailů. Velkou část z toho tvoří třídění, předávání a odpovídání na rutinní zprávy. AI agent dokáže tento čas dramaticky zkrátit. Nasazuji AI e-mailové agenty pro firmy v Praze i vzdáleně po celé ČR.</p>
+        <h3>Co AI agent zvládne:</h3>
+        <ul>
+          <li><strong>Klasifikace e-mailů:</strong> Poptávka, reklamace, spam, faktura, interní komunikace — automaticky.</li>
+          <li><strong>Přiřazení priority:</strong> Urgentní zprávy označeny a vyzdviženy jako první.</li>
+          <li><strong>Návrh odpovědi:</strong> AI připraví draft odpovědi na základě kontextu a vašich pravidel.</li>
+          <li><strong>Vytvoření úkolu:</strong> Z e-mailu automaticky vznikne úkol v Notion, Jira nebo jiném nástroji.</li>
+          <li><strong>Notifikace na Slack:</strong> Důležité e-maily okamžitě přeposlány do správného kanálu.</li>
+        </ul>
+      contact_link: "Chci AI pro e-maily"
+    en:
+      title: "AI Email Management and Sorting — Prague"
+      description: "AI email management agent for companies in Prague — automatic sorting, reply drafting, and task forwarding to your system."
+      lead: "Inbox under control — AI reads, sorts, and drafts replies before you even open it."
+      text: |
+        <h2>AI email management for Prague businesses</h2>
+        <p>The average worker spends over an hour a day on emails. Much of that is sorting, forwarding, and replying to routine messages. An AI agent can dramatically reduce this time. I deploy AI email agents for companies in Prague and remotely across the Czech Republic.</p>
+        <h3>What the AI agent handles:</h3>
+        <ul>
+          <li><strong>Email classification:</strong> Inquiry, complaint, spam, invoice, internal — automatically.</li>
+          <li><strong>Priority assignment:</strong> Urgent messages flagged and surfaced first.</li>
+          <li><strong>Reply drafting:</strong> AI prepares a draft reply based on context and your rules.</li>
+          <li><strong>Task creation:</strong> Email automatically becomes a task in Notion, Jira, or another tool.</li>
+          <li><strong>Slack notifications:</strong> Important emails instantly forwarded to the right channel.</li>
+        </ul>
+      contact_link: "I want AI for my emails"
+
+- page_id: crm-automation-praha
+  type: use-case
+  slug: crm-automation-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: contacts
+  lang:
+    cs:
+      title: "CRM automatizace a lead enrichment — Praha"
+      description: "Automatizace CRM pro firmy v Praze — lead enrichment, scoring a notifikace obchodníků bez ručního zadávání dat."
+      lead: "Váš CRM plný přesných dat bez toho, aby je někdo ručně hledal a zadával."
+      text: |
+        <h2>CRM automatizace pro pražské obchodní týmy</h2>
+        <p>Prázdná nebo neúplná pole v CRM jsou záhuba obchodního týmu. Ruční vyhledávání dat o firmách a kontaktech stojí hodiny týdně. Automatizací tohoto procesu zajistím, že každý lead bude obohacen o relevantní data okamžitě po přidání. Pracuji s obchodními týmy v Praze i vzdáleně.</p>
+        <h3>Co automatizace CRM zahrnuje:</h3>
+        <ul>
+          <li><strong>Lead enrichment:</strong> Automatické doplnění firmy, oboru, velikosti a kontaktů z veřejných zdrojů.</li>
+          <li><strong>Lead scoring:</strong> Bodování leadů podle předem definovaných kritérií pro obchodníky.</li>
+          <li><strong>Notifikace obchodníků:</strong> Při splnění podmínek (nový lead, aktivita) okamžité upozornění.</li>
+          <li><strong>Synchronizace s e-mailem:</strong> Komunikace automaticky zapsaná k příslušnému kontaktu.</li>
+          <li><strong>Pravidelné čištění dat:</strong> Duplicity, neplatné e-maily a zastaralé záznamy automaticky označeny.</li>
+        </ul>
+      contact_link: "Chci automatizovat CRM"
+    en:
+      title: "CRM Automation and Lead Enrichment — Prague"
+      description: "CRM automation for companies in Prague — lead enrichment, scoring, and sales rep notifications without manual data entry."
+      lead: "Your CRM filled with accurate data without anyone manually searching and entering it."
+      text: |
+        <h2>CRM automation for Prague sales teams</h2>
+        <p>Empty or incomplete CRM fields are the bane of any sales team. Manually looking up company and contact data costs hours every week. By automating this process, every lead will be enriched with relevant data the moment it's added. I work with sales teams in Prague and remotely.</p>
+        <h3>What CRM automation includes:</h3>
+        <ul>
+          <li><strong>Lead enrichment:</strong> Automatic company, industry, size, and contact data from public sources.</li>
+          <li><strong>Lead scoring:</strong> Scoring leads against predefined criteria for your sales team.</li>
+          <li><strong>Sales rep notifications:</strong> Instant alerts when conditions are met (new lead, activity).</li>
+          <li><strong>Email sync:</strong> Communication automatically logged to the relevant contact.</li>
+          <li><strong>Regular data cleaning:</strong> Duplicates, invalid emails, and outdated records automatically flagged.</li>
+        </ul>
+      contact_link: "Automate my CRM"
+
+- page_id: internal-documentation-chatbot-praha
+  type: use-case
+  slug: internal-documentation-chatbot-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: menu_book
+  lang:
+    cs:
+      title: "Chatbot pro interní dokumentaci — Praha"
+      description: "AI chatbot nad firemní wiki a interními dokumenty pro firmy v Praze. Zaměstnanci se ptají systému místo procházení složek."
+      lead: "Zaměstnanci se přestanou ptát kolegů a začnou se ptát AI, která zná všechny firemní dokumenty."
+      text: |
+        <h2>Chatbot pro firemní dokumentaci — řešení pro pražské firmy</h2>
+        <p>Kde je ta směrnice? Jak se vyplňuje žádanka o dovolenou? Tyto otázky padají denně. Chatbot postavený na RAG technologii zná obsah všech vašich dokumentů a okamžitě odpoví s odkazem na zdroj. Implementuji chatboty pro interní dokumentaci pro firmy v Praze i vzdáleně.</p>
+        <h3>Co chatbot zvládne:</h3>
+        <ul>
+          <li><strong>Napojení na dokumenty:</strong> SharePoint, Confluence, Google Drive, Notion nebo PDF složka.</li>
+          <li><strong>Přesné odpovědi se zdrojem:</strong> Neodpovídá obecně — cituje konkrétní dokument a stránku.</li>
+          <li><strong>Aktualizace v reálném čase:</strong> Změníte dokument — chatbot to ví automaticky.</li>
+          <li><strong>Přístupová práva:</strong> Různé skupiny zaměstnanců vidí jen dokumenty, ke kterým mají přístup.</li>
+          <li><strong>Integrace do Slacku nebo Teams:</strong> Dotaz přímo v nástroji, který tým používá.</li>
+        </ul>
+      contact_link: "Chci chatbot pro dokumentaci"
+    en:
+      title: "Internal Documentation Chatbot — Prague"
+      description: "AI chatbot over company wiki and internal documents for Prague businesses. Employees ask the system instead of browsing folders."
+      lead: "Employees stop asking colleagues and start asking AI that knows all company documents."
+      text: |
+        <h2>Internal documentation chatbot — solution for Prague businesses</h2>
+        <p>Where's that policy? How do I fill in a vacation request? These questions come up daily. A chatbot built on RAG technology knows the content of all your documents and responds instantly with a source reference. I implement documentation chatbots for companies in Prague and remotely.</p>
+        <h3>What the chatbot handles:</h3>
+        <ul>
+          <li><strong>Document connections:</strong> SharePoint, Confluence, Google Drive, Notion, or a PDF folder.</li>
+          <li><strong>Precise answers with sources:</strong> Doesn't answer generically — cites the specific document and page.</li>
+          <li><strong>Real-time updates:</strong> You update a document — the chatbot knows automatically.</li>
+          <li><strong>Access rights:</strong> Different employee groups only see documents they have access to.</li>
+          <li><strong>Slack or Teams integration:</strong> Ask directly in the tool your team already uses.</li>
+        </ul>
+      contact_link: "I want a documentation chatbot"
+
+- page_id: quote-generation-praha
+  type: use-case
+  slug: quote-generation-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: description
+  lang:
+    cs:
+      title: "Automatické generování nabídek a smluv — Praha"
+      description: "Automatizace tvorby nabídek a smluv pro firmy v Praze — AI agent sestaví nabídku z CRM nebo formuláře v minutách."
+      lead: "Od poptávky k odeslané nabídce za minuty, ne hodiny."
+      text: |
+        <h2>Automatické nabídky pro pražské obchodní týmy</h2>
+        <p>Tvorba nabídek je časově náročná a opakující se práce — kopírování údajů z CRM, přizpůsobení šablony, výpočet ceny, formátování PDF a odeslání. Celý tento proces lze automatizovat. Nasazuji systémy pro automatické generování nabídek pro firmy v Praze i vzdáleně.</p>
+        <h3>Jak automatizace funguje:</h3>
+        <ul>
+          <li><strong>Vstupní data z formuláře nebo CRM:</strong> Zákazník vyplní formulář nebo obchodník zadá parametry.</li>
+          <li><strong>AI sestaví obsah nabídky:</strong> Na základě šablony a ceníku vygeneruje personalizovaný text.</li>
+          <li><strong>Automatické formátování do PDF:</strong> Profesionálně vypadající dokument připravený k odeslání.</li>
+          <li><strong>Odeslání zákazníkovi:</strong> E-mailem automaticky, s možností online podpisu.</li>
+          <li><strong>Zápis do CRM:</strong> Nabídka evidovaná u příslušné příležitosti automaticky.</li>
+        </ul>
+      contact_link: "Chci automatizovat nabídky"
+    en:
+      title: "Automated Quote and Contract Generation — Prague"
+      description: "Quote and contract automation for companies in Prague — AI agent assembles a quote from CRM or a form in minutes."
+      lead: "From inquiry to sent quote in minutes, not hours."
+      text: |
+        <h2>Automated quotes for Prague sales teams</h2>
+        <p>Creating quotes is time-consuming, repetitive work — copying data from CRM, adapting a template, calculating price, formatting PDF, sending. This entire process can be automated. I deploy automated quote generation systems for companies in Prague and remotely.</p>
+        <h3>How the automation works:</h3>
+        <ul>
+          <li><strong>Input from form or CRM:</strong> Customer fills in a form, or a sales rep enters parameters.</li>
+          <li><strong>AI assembles the quote content:</strong> Based on your template and price list, generates personalized text.</li>
+          <li><strong>Automatic PDF formatting:</strong> A professional-looking document ready to send.</li>
+          <li><strong>Customer delivery:</strong> Sent automatically by email, with optional online signature.</li>
+          <li><strong>CRM logging:</strong> Quote recorded against the relevant opportunity automatically.</li>
+        </ul>
+      contact_link: "Automate my quotes"
+
+- page_id: employee-onboarding-praha
+  type: use-case
+  slug: employee-onboarding-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: person_add
+  lang:
+    cs:
+      title: "Automatizace onboardingu zaměstnanců — Praha"
+      description: "Digitální onboarding pro firmy v Praze — automatické zřízení přístupů, uvítací e-maily a checklist pro manažera od prvního dne."
+      lead: "Nový zaměstnanec má první den vše připravené — bez toho, aby to někdo musel ručně zařizovat."
+      text: |
+        <h2>Automatizovaný onboarding pro pražské firmy</h2>
+        <p>Přijetí nového zaměstnance obnáší desítky úkolů — vytvoření e-mailového účtu, přístupy do systémů, zaslání dokumentů, plán prvního týdne. Většina z toho se dá automatizovat tak, aby se nic nezapomnělo. Nasazuji automatizovaný onboarding pro firmy v Praze i vzdáleně po celé ČR.</p>
+        <h3>Co automatizace onboardingu pokryje:</h3>
+        <ul>
+          <li><strong>Spouštěcí událost:</strong> Podpis smlouvy nebo zápis do HR systému spustí celý proces automaticky.</li>
+          <li><strong>Zřízení účtů a přístupů:</strong> Notifikace IT s přesným seznamem potřebných oprávnění.</li>
+          <li><strong>Uvítací e-maily a dokumenty:</strong> Zaměstnanec dostane vše potřebné automaticky v správný čas.</li>
+          <li><strong>Checklist pro manažera:</strong> Automatický úkolník s tím, co je potřeba stihnout před nástupem.</li>
+          <li><strong>Připomínky a sledování:</strong> Systém hlídá, co bylo splněno a co ještě zbývá.</li>
+        </ul>
+      contact_link: "Chci automatizovat onboarding"
+    en:
+      title: "Employee Onboarding Automation — Prague"
+      description: "Digital onboarding for companies in Prague — automatic account setup, welcome emails, and manager checklist from day one."
+      lead: "New employee has everything ready on day one — without anyone having to manually arrange it."
+      text: |
+        <h2>Automated onboarding for Prague businesses</h2>
+        <p>Hiring a new employee involves dozens of tasks — creating an email account, system access, sending documents, planning the first week. Most of this can be automated so nothing gets forgotten. I deploy automated onboarding for companies in Prague and remotely across the Czech Republic.</p>
+        <h3>What onboarding automation covers:</h3>
+        <ul>
+          <li><strong>Trigger event:</strong> Contract signing or HR system entry automatically kicks off the entire process.</li>
+          <li><strong>Account and access provisioning:</strong> IT notification with a precise list of required permissions.</li>
+          <li><strong>Welcome emails and documents:</strong> Employee receives everything they need automatically at the right time.</li>
+          <li><strong>Manager checklist:</strong> Automatic task list of what needs to happen before the start date.</li>
+          <li><strong>Reminders and tracking:</strong> System monitors what's been completed and what's still pending.</li>
+        </ul>
+      contact_link: "Automate my onboarding"
+
+- page_id: feedback-analysis-praha
+  type: use-case
+  slug: feedback-analysis-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: reviews
+  lang:
+    cs:
+      title: "AI analýza zákaznické zpětné vazby — Praha"
+      description: "Automatická AI analýza recenzí a zpětné vazby pro firmy v Praze — sentiment, trendy a alerting na problémy v reálném čase."
+      lead: "Víte, co si zákazníci opravdu myslí — bez ručního procházení stovek recenzí."
+      text: |
+        <h2>AI analýza zpětné vazby pro pražské firmy</h2>
+        <p>Recenze na Google, Heurece, průzkumy spokojenosti, e-maily s připomínkami — firmy v Praze sbírají obrovské množství zpětné vazby, ale nemají kapacitu ji systematicky analyzovat. AI dokáže přečíst stovky nebo tisíce zpráv, rozpoznat opakující se témata, změřit sentiment a upozornit na problémy dříve, než eskalují.</p>
+        <h3>Co analýza zahrnuje:</h3>
+        <ul>
+          <li><strong>Sběr zpětné vazby:</strong> Google recenze, Heureka, průzkumy, e-maily nebo formuláře — vše na jednom místě.</li>
+          <li><strong>Sentiment analýza:</strong> Pozitivní, negativní nebo neutrální — automaticky a v reálném čase.</li>
+          <li><strong>Témata a kategorie:</strong> AI rozpozná, o čem zákazníci píší nejčastěji (doprava, cena, produkt, podpora).</li>
+          <li><strong>Alerting na problémy:</strong> Nárůst negativních recenzí na konkrétní téma = okamžité upozornění.</li>
+          <li><strong>Pravidelný report:</strong> Týdenní nebo měsíční přehled trendů ve zpětné vazbě.</li>
+        </ul>
+      contact_link: "Chci analyzovat zpětnou vazbu"
+    en:
+      title: "AI Customer Feedback Analysis — Prague"
+      description: "Automatic AI analysis of reviews and feedback for companies in Prague — sentiment, trends, and real-time issue alerting."
+      lead: "Know what customers really think — without manually reading through hundreds of reviews."
+      text: |
+        <h2>AI feedback analysis for Prague businesses</h2>
+        <p>Google reviews, Heureka, satisfaction surveys, comment emails — companies in Prague collect enormous amounts of feedback but lack the capacity to analyze it systematically. AI can read hundreds or thousands of messages, identify recurring themes, measure sentiment, and flag problems before they escalate.</p>
+        <h3>What the analysis includes:</h3>
+        <ul>
+          <li><strong>Feedback collection:</strong> Google reviews, Trustpilot, surveys, emails, or forms — all in one place.</li>
+          <li><strong>Sentiment analysis:</strong> Positive, negative, or neutral — automatically and in real time.</li>
+          <li><strong>Topics and categories:</strong> AI identifies what customers write about most (delivery, price, product, support).</li>
+          <li><strong>Issue alerting:</strong> Spike in negative reviews on a specific topic = immediate notification.</li>
+          <li><strong>Regular report:</strong> Weekly or monthly overview of feedback trends.</li>
+        </ul>
+      contact_link: "I want to analyze feedback"

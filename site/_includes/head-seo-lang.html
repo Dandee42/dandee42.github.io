@@ -86,8 +86,8 @@
   </script>
   <!-- JSON-LD POST END -->
 
-{% elsif page.type == "service" %}
-  <!-- SERVICE PAGE -->
+{% elsif page.type == "service" or page.type == "use-case" %}
+  <!-- SERVICE / USE-CASE PAGE -->
   {% assign og_title = page.lang[lang].title | default: page.title %}
   {% assign og_description = page.lang[lang].description | default: site.description[lang] %}
   <!-- OG / Twitter meta tagy -->

@@ -43,7 +43,7 @@
   slug: automation-testing-qa
   date: 2026-01-25 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: verified_user
   lang:
@@ -113,3 +113,365 @@
           <li><strong>System Extensions:</strong> Adding features where standard software stops.</li>
         </ul>
       contact_link: "Get a quote"
+
+- page_id: ai-agents
+  type: service
+  slug: ai-agents
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: smart_toy
+  lang:
+    cs:
+      title: "AI Agenti na míru"
+      description: "Stavím autonomní AI agenty a multi-agentní systémy, které myslí, plánují a jednají za vás."
+      lead: "Postavte si tým digitálních zaměstnanců, kteří pracují 24/7 bez přestávky."
+      text: |
+        <h2>AI, která nejen odpovídá, ale také koná</h2>
+        <p>Běžné chatboty odpovídají na otázky. AI agenti jdou dál — sami si vyhledají informace, zavolají API, zapíší do databáze a rozhodnou se, co dělat jako další. Stavím agentní systémy na míru pomocí frameworků jako LangChain, LangGraph nebo CrewAI.</p>
+        <h3>Co pro vás mohu postavit:</h3>
+        <ul>
+          <li><strong>Autonomní agenti:</strong> Agent, který sám projde váš inbox, vypracuje shrnutí a naplánuje úkoly.</li>
+          <li><strong>Multi-agentní týmy:</strong> Více specializovaných agentů, kteří spolupracují na složitém úkolu.</li>
+          <li><strong>Agenti s pamětí:</strong> Systémy, které si pamatují kontext a učí se z předchozích interakcí.</li>
+          <li><strong>Nástroje a integrace:</strong> Agenti napojení na vaše interní systémy, databáze nebo webové služby.</li>
+        </ul>
+      contact_link: "Chci svého AI agenta"
+    en:
+      title: "Custom AI Agents"
+      description: "I build autonomous AI agents and multi-agent systems that think, plan, and act on your behalf."
+      lead: "Build a team of digital employees that work around the clock without a break."
+      text: |
+        <h2>AI that doesn't just answer — it acts</h2>
+        <p>Regular chatbots answer questions. AI agents go further — they search for information, call APIs, write to databases, and decide what to do next. I build custom agent systems using frameworks like LangChain, LangGraph, or CrewAI.</p>
+        <h3>What I can build for you:</h3>
+        <ul>
+          <li><strong>Autonomous agents:</strong> An agent that browses your inbox, creates summaries, and schedules tasks on its own.</li>
+          <li><strong>Multi-agent teams:</strong> Multiple specialized agents collaborating on complex tasks.</li>
+          <li><strong>Agents with memory:</strong> Systems that remember context and learn from past interactions.</li>
+          <li><strong>Tools & integrations:</strong> Agents connected to your internal systems, databases, or web services.</li>
+        </ul>
+      contact_link: "I want my AI agent"
+
+- page_id: rag-systems
+  type: service
+  slug: rag-systems
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: manage_search
+  lang:
+    cs:
+      title: "RAG systémy — AI nad vašimi daty"
+      description: "Vytvořím inteligentní vyhledávání a chatboty nad vašimi interními dokumenty, databázemi a znalostní bází."
+      lead: "Dejte svým datům hlas. Ptejte se firemní dokumentace jako člověka."
+      text: |
+        <h2>Vaše data jako nejchytřejší kolega</h2>
+        <p>RAG (Retrieval-Augmented Generation) je technika, která propojí velký jazykový model s vašimi vlastními daty. Výsledkem je AI, která odpovídá přesně a fakticky — nikoliv z obecných znalostí, ale přímo z vašich PDF, interních wiki, smluv nebo databází.</p>
+        <h3>Kdy se RAG hodí:</h3>
+        <ul>
+          <li><strong>Interní znalostní báze:</strong> Zaměstnanci se ptají systému místo procházení stohu dokumentů.</li>
+          <li><strong>Zákaznická podpora:</strong> Chatbot, který odpovídá z vašich manuálů a FAQ s přesností a zdrojem.</li>
+          <li><strong>Analýza dokumentů:</strong> Rychlé hledání v právních smlouvách, technické dokumentaci nebo výzkumných zprávách.</li>
+          <li><strong>Vektorové databáze:</strong> Implementace Qdrant, Chroma nebo Pinecone pro efektivní sémantické vyhledávání.</li>
+        </ul>
+      contact_link: "Chci AI nad svými daty"
+    en:
+      title: "RAG Systems — AI Over Your Data"
+      description: "I build intelligent search and chatbots over your internal documents, databases, and knowledge base."
+      lead: "Give your data a voice. Ask your company knowledge base like a person."
+      text: |
+        <h2>Your data as your smartest colleague</h2>
+        <p>RAG (Retrieval-Augmented Generation) connects a large language model to your own data. The result is an AI that answers accurately and factually — not from general knowledge, but directly from your PDFs, internal wikis, contracts, or databases.</p>
+        <h3>When RAG is the right fit:</h3>
+        <ul>
+          <li><strong>Internal knowledge base:</strong> Employees ask the system instead of digging through stacks of documents.</li>
+          <li><strong>Customer support:</strong> A chatbot that answers from your manuals and FAQ with accuracy and source citations.</li>
+          <li><strong>Document analysis:</strong> Fast search through legal contracts, technical documentation, or research reports.</li>
+          <li><strong>Vector databases:</strong> Implementation of Qdrant, Chroma, or Pinecone for efficient semantic search.</li>
+        </ul>
+      contact_link: "I want AI over my data"
+
+- page_id: vibecoding
+  type: service
+  slug: vibecoding
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: electric_bolt
+  lang:
+    cs:
+      title: "Vibecoding — Rapidní vývoj s AI"
+      description: "Využívám AI nástroje jako Claude Code a Cursor k vývoji funkčních prototypů a MVP v zlomku obvyklého času."
+      lead: "Od nápadu k fungujícímu prototypu za dny, ne měsíce."
+      text: |
+        <h2>Vývoj, který drží krok s vašimi nápady</h2>
+        <p>Vibecoding je přístup k vývoji, kde AI nástroje přebírají rutinní části kódování a vývojář řídí architekturu a byznysovou logiku. Výsledkem je dramaticky vyšší rychlost — bez kompromisů v kvalitě. Ideální pro startupy, interní nástroje a MVP.</p>
+        <h3>Jak to funguje v praxi:</h3>
+        <ul>
+          <li><strong>Rychlé prototypy:</strong> Funkční demo vaší myšlenky připravené k prezentaci investorům nebo zákazníkům.</li>
+          <li><strong>MVP k otestování trhu:</strong> Základní verze produktu nasazená v reálném provozu co nejdříve.</li>
+          <li><strong>Interní nástroje:</strong> Dashboardy, formuláře a automatizace postavené rychle bez drahého development týmu.</li>
+          <li><strong>Iterace a rozšiřování:</strong> Rychlé přidávání funkcí na základě zpětné vazby z trhu.</li>
+        </ul>
+      contact_link: "Chci rychlý prototyp"
+    en:
+      title: "Vibecoding — Rapid AI-Assisted Development"
+      description: "I use AI tools like Claude Code and Cursor to build working prototypes and MVPs in a fraction of the usual time."
+      lead: "From idea to working prototype in days, not months."
+      text: |
+        <h2>Development that keeps up with your ideas</h2>
+        <p>Vibecoding is a development approach where AI tools take over the repetitive parts of coding while the developer directs architecture and business logic. The result is dramatically faster delivery — without sacrificing quality. Ideal for startups, internal tools, and MVPs.</p>
+        <h3>How it works in practice:</h3>
+        <ul>
+          <li><strong>Fast prototypes:</strong> A working demo of your idea ready to present to investors or customers.</li>
+          <li><strong>Market-testing MVP:</strong> A basic version of your product deployed in real production as soon as possible.</li>
+          <li><strong>Internal tools:</strong> Dashboards, forms, and automation built quickly without an expensive dev team.</li>
+          <li><strong>Iteration and expansion:</strong> Rapidly adding features based on market feedback.</li>
+        </ul>
+      contact_link: "I want a fast prototype"
+
+# -------------------------------------------------------
+# SEO — GEOGRAFICKÉ VARIANTY: PRAHA
+# -------------------------------------------------------
+
+- page_id: intelligent-automation-praha
+  type: service
+  slug: intelligent-automation-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: all_inclusive
+  lang:
+    cs:
+      title: "Inteligentní automatizace (n8n & AI) — Praha"
+      description: "Automatizace firemních procesů pomocí n8n a AI agentů pro firmy v Praze. Propojím vaše aplikace a ušetřím vám hodiny rutinní práce týdně."
+      lead: "Zbavte se rutiny a nechte systémy, aby spolu mluvily a samy se rozhodovaly."
+      text: |
+        <h2>Automatizace pro pražské firmy a startupy</h2>
+        <p>Většina firem v Praze používá desítky nástrojů, které spolu nekomunikují. Moje řešení staví mosty mezi CRM, e-mailem, tabulkami a vaším interním systémem. Díky n8n a integraci AI dokážu vytvořit workflow, která nejsou jen tupými spoji, ale inteligentními pomocníky.</p>
+        <p>Jako freelancer se sídlem v Praze nabízím osobní konzultaci přímo u vás nebo online — vždy s důrazem na řešení, které dává smysl pro váš konkrétní byznys.</p>
+        <h3>Co pro vás mohu zajistit:</h3>
+        <ul>
+          <li><strong>Propojení nepropojitelného:</strong> Synchronizace dat mezi platformami, které nemají nativní integraci.</li>
+          <li><strong>AI Agenti v praxi:</strong> Automatické třídění e-mailů, analýza dokumentů nebo generování personalizovaných odpovědí.</li>
+          <li><strong>Zpracování dat:</strong> Automatizovaný reporting a čištění dat bez nutnosti ručních exportů.</li>
+          <li><strong>Cokoliv dalšího, co si vymyslíte:</strong> Navrhnu řešení automatizace na míru.</li>
+        </ul>
+      contact_link: "Chci automatizovat"
+    en:
+      title: "Intelligent Automation (n8n & AI) — Prague"
+      description: "Business process automation using n8n and AI agents for companies in Prague. I connect your apps and save you hours of routine work every week."
+      lead: "Stop doing the routine work. Let your systems communicate and decide on their own."
+      text: |
+        <h2>Automation for Prague-based businesses and startups</h2>
+        <p>Most companies in Prague use dozens of tools that don't talk to each other. My solutions build bridges between CRM, email, sheets, and your internal systems. Using n8n and AI, I create workflows that are intelligent assistants, not just simple pipes.</p>
+        <p>As a freelancer based in Prague, I offer in-person consultations at your office or online — always focused on solutions that make sense for your specific business.</p>
+        <h3>What I can do for you:</h3>
+        <ul>
+          <li><strong>Custom Integrations:</strong> Syncing data between platforms without native connections.</li>
+          <li><strong>AI Agents:</strong> Automatic email sorting, document analysis, or generating personalized responses.</li>
+          <li><strong>Data Processing:</strong> Automated reporting and data cleaning without manual exports.</li>
+          <li><strong>Anything else you can imagine:</strong> Designing custom automation solutions.</li>
+        </ul>
+      contact_link: "Let's automate"
+
+- page_id: automation-testing-qa-praha
+  type: service
+  slug: automation-testing-qa-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: verified_user
+  lang:
+    cs:
+      title: "Automatizované testování (QA) — Praha"
+      description: "QA automatizace a Playwright testy pro firmy v Praze. Zajišťuji, aby váš software fungoval bezchybně při každém release."
+      lead: "Odhalte chyby dříve, než je najdou vaši zákazníci."
+      text: |
+        <h2>QA automatizace pro pražské vývojové týmy</h2>
+        <p>Manuální testování je pomalé a náchylné k chybám. Pomocí moderního frameworku <strong>Playwright</strong> píšu automatizované testy, které simulují reálné chování uživatele. Spolupracuji s vývojovými týmy v Praze i na dálku — váš web nebo aplikace budou pod neustálým dohledem.</p>
+        <h3>Jak vám pomohu zvýšit kvalitu:</h3>
+        <ul>
+          <li><strong>E-commerce testování:</strong> Automatické ověření průchodu objednávkou od registrace po zaplacení.</li>
+          <li><strong>Regresní testy:</strong> Jistota, že nová funkce nerozbila ty stávající.</li>
+          <li><strong>CI/CD integrace:</strong> Testy se spustí automaticky při každé změně v kódu.</li>
+        </ul>
+      contact_link: "Chci bezchybný web"
+    en:
+      title: "Automated Testing (QA) — Prague"
+      description: "QA automation and Playwright tests for companies in Prague. Ensuring your software works flawlessly with every release."
+      lead: "Catch bugs before your customers do."
+      text: |
+        <h2>QA automation for Prague-based development teams</h2>
+        <p>Manual testing is slow and error-prone. Using <strong>Playwright</strong>, I build automated tests that simulate real user behavior. I work with development teams in Prague and remotely — your web or app will be under constant supervision.</p>
+        <h3>How I improve your quality:</h3>
+        <ul>
+          <li><strong>E-commerce testing:</strong> Automatic verification of order flow from registration to payment.</li>
+          <li><strong>Regression testing:</strong> Ensuring new features don't break existing ones.</li>
+          <li><strong>CI/CD integration:</strong> Tests run automatically with every code change.</li>
+        </ul>
+      contact_link: "Improve my quality"
+
+- page_id: web-app-development-praha
+  type: service
+  slug: web-app-development-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: terminal
+  lang:
+    cs:
+      title: "Vývoj webových aplikací na míru — Praha"
+      description: "Vývoj webových aplikací a interních nástrojů v Pythonu pro firmy v Praze. Když no-code narazí na své limity, přichází na řadu kód na míru."
+      lead: "Když no-code narazí na své limity, přichází na řadu kód na míru."
+      text: |
+        <h2>Aplikace na míru pro pražské firmy</h2>
+        <p>Někdy hotové nástroje prostě nestačí. Stavím efektivní aplikace, které řeší specifické problémy vašeho podnikání. Pracuji s firmami v Praze i vzdáleně — od databázových návrhů až po API, která propojí váš svět.</p>
+        <h3>V čem vám mohu pomoci:</h3>
+        <ul>
+          <li><strong>Interní nástroje:</strong> Dashboardy, správa zakázek nebo specifické databáze.</li>
+          <li><strong>Mikroslužby:</strong> Malé, rychlé aplikace, které vykonávají konkrétní úkol v rámci vašeho systému.</li>
+          <li><strong>Rozšíření existujících systémů:</strong> Doplnění funkcí tam, kde krabicové řešení končí.</li>
+        </ul>
+      contact_link: "Poptat vývoj"
+    en:
+      title: "Custom Web App Development — Prague"
+      description: "Web application and internal tool development in Python for companies in Prague. When no-code hits its limits, custom code takes over."
+      lead: "When no-code hits its limits, custom code takes over."
+      text: |
+        <h2>Custom apps for Prague-based businesses</h2>
+        <p>Sometimes off-the-shelf tools just aren't enough. I build efficient applications that solve specific business challenges. I work with companies in Prague and remotely — from database design to APIs that connect your world.</p>
+        <h3>Where I can help:</h3>
+        <ul>
+          <li><strong>Internal Tools:</strong> Dashboards, order management, or specialized databases.</li>
+          <li><strong>Microservices:</strong> Small, fast applications performing specific tasks within your system.</li>
+          <li><strong>System Extensions:</strong> Adding features where standard software stops.</li>
+        </ul>
+      contact_link: "Get a quote"
+
+- page_id: ai-agents-praha
+  type: service
+  slug: ai-agents-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: smart_toy
+  lang:
+    cs:
+      title: "AI Agenti na míru — Praha"
+      description: "Vývoj autonomních AI agentů a multi-agentních systémů pro firmy v Praze. Agenti, kteří myslí, plánují a jednají za vás 24/7."
+      lead: "Postavte si tým digitálních zaměstnanců, kteří pracují 24/7 bez přestávky."
+      text: |
+        <h2>AI agenti pro pražské firmy a startupy</h2>
+        <p>Běžné chatboty odpovídají na otázky. AI agenti jdou dál — sami si vyhledají informace, zavolají API, zapíší do databáze a rozhodnou se, co dělat jako další. Stavím agentní systémy na míru pomocí frameworků jako LangChain, LangGraph nebo CrewAI pro firmy v Praze i po celé ČR.</p>
+        <h3>Co pro vás mohu postavit:</h3>
+        <ul>
+          <li><strong>Autonomní agenti:</strong> Agent, který sám projde váš inbox, vypracuje shrnutí a naplánuje úkoly.</li>
+          <li><strong>Multi-agentní týmy:</strong> Více specializovaných agentů, kteří spolupracují na složitém úkolu.</li>
+          <li><strong>Agenti s pamětí:</strong> Systémy, které si pamatují kontext a učí se z předchozích interakcí.</li>
+          <li><strong>Nástroje a integrace:</strong> Agenti napojení na vaše interní systémy, databáze nebo webové služby.</li>
+        </ul>
+      contact_link: "Chci svého AI agenta"
+    en:
+      title: "Custom AI Agents — Prague"
+      description: "Development of autonomous AI agents and multi-agent systems for companies in Prague. Agents that think, plan, and act on your behalf 24/7."
+      lead: "Build a team of digital employees that work around the clock without a break."
+      text: |
+        <h2>AI agents for Prague-based businesses and startups</h2>
+        <p>Regular chatbots answer questions. AI agents go further — they search for information, call APIs, write to databases, and decide what to do next. I build custom agent systems using LangChain, LangGraph, or CrewAI for companies in Prague and across the Czech Republic.</p>
+        <h3>What I can build for you:</h3>
+        <ul>
+          <li><strong>Autonomous agents:</strong> An agent that browses your inbox, creates summaries, and schedules tasks on its own.</li>
+          <li><strong>Multi-agent teams:</strong> Multiple specialized agents collaborating on complex tasks.</li>
+          <li><strong>Agents with memory:</strong> Systems that remember context and learn from past interactions.</li>
+          <li><strong>Tools & integrations:</strong> Agents connected to your internal systems, databases, or web services.</li>
+        </ul>
+      contact_link: "I want my AI agent"
+
+- page_id: rag-systems-praha
+  type: service
+  slug: rag-systems-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: manage_search
+  lang:
+    cs:
+      title: "RAG systémy — AI nad vašimi daty | Praha"
+      description: "Vývoj RAG systémů a AI chatbotů nad firemními dokumenty pro firmy v Praze. Inteligentní vyhledávání ve vašich datech bez hallucinations."
+      lead: "Dejte svým datům hlas. Ptejte se firemní dokumentace jako člověka."
+      text: |
+        <h2>RAG systémy pro pražské firmy</h2>
+        <p>RAG (Retrieval-Augmented Generation) propojí velký jazykový model s vašimi vlastními daty. Výsledkem je AI, která odpovídá přesně a fakticky — nikoliv z obecných znalostí, ale přímo z vašich PDF, interních wiki, smluv nebo databází. Pracuji s firmami v Praze osobně i vzdáleně po celé ČR.</p>
+        <h3>Kdy se RAG hodí:</h3>
+        <ul>
+          <li><strong>Interní znalostní báze:</strong> Zaměstnanci se ptají systému místo procházení stohu dokumentů.</li>
+          <li><strong>Zákaznická podpora:</strong> Chatbot, který odpovídá z vašich manuálů a FAQ s přesností a zdrojem.</li>
+          <li><strong>Analýza dokumentů:</strong> Rychlé hledání v právních smlouvách, technické dokumentaci nebo výzkumných zprávách.</li>
+          <li><strong>Vektorové databáze:</strong> Implementace Qdrant, Chroma nebo Pinecone pro efektivní sémantické vyhledávání.</li>
+        </ul>
+      contact_link: "Chci AI nad svými daty"
+    en:
+      title: "RAG Systems — AI Over Your Data | Prague"
+      description: "RAG system and AI chatbot development over company documents for businesses in Prague. Intelligent search in your data without hallucinations."
+      lead: "Give your data a voice. Ask your company knowledge base like a person."
+      text: |
+        <h2>RAG systems for Prague-based businesses</h2>
+        <p>RAG (Retrieval-Augmented Generation) connects a large language model to your own data. The result is an AI that answers accurately and factually — not from general knowledge, but directly from your PDFs, internal wikis, contracts, or databases. I work with companies in Prague in person and remotely across the Czech Republic.</p>
+        <h3>When RAG is the right fit:</h3>
+        <ul>
+          <li><strong>Internal knowledge base:</strong> Employees ask the system instead of digging through stacks of documents.</li>
+          <li><strong>Customer support:</strong> A chatbot that answers from your manuals and FAQ with accuracy and source citations.</li>
+          <li><strong>Document analysis:</strong> Fast search through legal contracts, technical documentation, or research reports.</li>
+          <li><strong>Vector databases:</strong> Implementation of Qdrant, Chroma, or Pinecone for efficient semantic search.</li>
+        </ul>
+      contact_link: "I want AI over my data"
+
+- page_id: vibecoding-praha
+  type: service
+  slug: vibecoding-praha
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: false
+  image:
+  icon: electric_bolt
+  lang:
+    cs:
+      title: "Vibecoding — Rapidní vývoj s AI | Praha"
+      description: "Rychlý vývoj prototypů a MVP pomocí AI nástrojů pro startupy a firmy v Praze. Od nápadu k fungující aplikaci za dny."
+      lead: "Od nápadu k fungujícímu prototypu za dny, ne měsíce."
+      text: |
+        <h2>Rychlý vývoj pro pražské startupy a firmy</h2>
+        <p>Vibecoding je přístup k vývoji, kde AI nástroje přebírají rutinní části kódování a vývojář řídí architekturu a byznysovou logiku. Výsledkem je dramaticky vyšší rychlost — bez kompromisů v kvalitě. Ideální pro pražské startupy, interní nástroje a MVP, které potřebujete co nejdříve.</p>
+        <h3>Jak to funguje v praxi:</h3>
+        <ul>
+          <li><strong>Rychlé prototypy:</strong> Funkční demo vaší myšlenky připravené k prezentaci investorům nebo zákazníkům.</li>
+          <li><strong>MVP k otestování trhu:</strong> Základní verze produktu nasazená v reálném provozu co nejdříve.</li>
+          <li><strong>Interní nástroje:</strong> Dashboardy, formuláře a automatizace postavené rychle bez drahého development týmu.</li>
+          <li><strong>Iterace a rozšiřování:</strong> Rychlé přidávání funkcí na základě zpětné vazby z trhu.</li>
+        </ul>
+      contact_link: "Chci rychlý prototyp"
+    en:
+      title: "Vibecoding — Rapid AI-Assisted Development | Prague"
+      description: "Fast prototype and MVP development using AI tools for startups and companies in Prague. From idea to working app in days."
+      lead: "From idea to working prototype in days, not months."
+      text: |
+        <h2>Rapid development for Prague startups and businesses</h2>
+        <p>Vibecoding is a development approach where AI tools take over the repetitive parts of coding while the developer directs architecture and business logic. The result is dramatically faster delivery — without sacrificing quality. Ideal for Prague startups, internal tools, and MVPs you need as soon as possible.</p>
+        <h3>How it works in practice:</h3>
+        <ul>
+          <li><strong>Fast prototypes:</strong> A working demo of your idea ready to present to investors or customers.</li>
+          <li><strong>Market-testing MVP:</strong> A basic version of your product deployed in real production as soon as possible.</li>
+          <li><strong>Internal tools:</strong> Dashboards, forms, and automation built quickly without an expensive dev team.</li>
+          <li><strong>Iteration and expansion:</strong> Rapidly adding features based on market feedback.</li>
+        </ul>
+      contact_link: "I want a fast prototype"
