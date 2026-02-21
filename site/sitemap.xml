@@ -9,11 +9,7 @@ sitemap: false
 
   {% for lang in site.languages %}
     <sitemap>
-      {% if lang == site.default_lang %}
-        <loc>{{ site.url }}{{ site.baseurl }}/sitemap_cs.xml</loc>
-      {% elsif lang == "en" %}
-        <loc>{{ site.url }}{{ site.baseurl }}/sitemap_en.xml</loc>
-      {% endif %}
+      <loc>{{ site.url }}{{ site.baseurl }}/sitemap_{{ lang }}.xml</loc>
       <lastmod>{{ build_time }}</lastmod>
     </sitemap>
   {% endfor %}

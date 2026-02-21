@@ -27,6 +27,11 @@
 {% endfor %}
 <!-- Alternate Href lang END -->
 
+{% if paginator %}
+  {% if paginator.previous_page %}<link rel="prev" href="{{ paginator.previous_page_path }}">{% endif %}
+  {% if paginator.next_page %}<link rel="next" href="{{ paginator.next_page_path }}">{% endif %}
+{% endif %}
+
 <meta http-equiv="Content-Language" content="{{ trans.general.locale }}">
 
 {% if page.layout == "post" %}
@@ -48,14 +53,6 @@
   <meta property="og:type" content="article">
   {% if og_published_time %}
   <meta property="article:published_time" content="{{ og_published_time }}">
-  {% endif %}
-  {% if paginator %}
-    {% if paginator.previous_page %}
-    <link rel="prev" href="{{ paginator.previous_page_path }}">
-    {% endif %}
-    {% if paginator.next_page %}
-    <link rel="next" href="{{ paginator.next_page_path }}">
-    {% endif %}
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="{{ page.title }}">
@@ -101,7 +98,7 @@
   <meta property="og:image" content="{{ site.url }}{{ page.image }}">
   <meta property="twitter:image" content="{{ site.url }}{{ page.image }}">
   {% endif %}
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="{{ og_title }}">
   <meta name="twitter:description" content="{{ og_description }}">
@@ -123,7 +120,7 @@
     "name": "{{ og_title | escape }}",
     "url": "{{ full_url }}",
     "description": "{{ og_description }}",
-    "inLanguage": "{{ trans.general.locale }}",
+    "inLanguage": "{{ trans.general.locale }}"
   }
   </script>
   <!-- JSON-LD PAGE END -->
@@ -143,11 +140,10 @@
   <meta property="og:image" content="{{ site.url }}{{ page.image }}">
   <meta property="twitter:image" content="{{ site.url }}{{ page.image }}">
   {% endif %}
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="{{ page.title }}">
   <meta name="twitter:description" content="{{ og_description }}">
-
   <!-- JSON-LD PAGE START -->
   <script type="application/ld+json">
   {

@@ -34,7 +34,11 @@ layout: null
   {%- for post in site.posts -%}
     <url>
       <loc>{{ post.url | absolute_url }}</loc>
-      <lastmod>{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {%- if post.last_modified_at -%}
+        <lastmod>{{ post.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {%- else -%}
+        <lastmod>{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {%- endif -%}
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -72,7 +76,11 @@ layout: null
     {%- assign full_url = site.url | append: '/' | append: lang | append: clean_url -%}
     <url>
       <loc>{{ full_url | replace: '//en', '/en' }}</loc>
-      <lastmod>{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {%- if post.last_modified_at -%}
+        <lastmod>{{ post.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {%- else -%}
+        <lastmod>{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {%- endif -%}
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
