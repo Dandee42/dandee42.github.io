@@ -4,7 +4,7 @@ page_id: cv
 lang: cs
 permalink: /cv/
 title: Něco o mně
-description: Něco o mně ve zkratce
+description: Automation engineer se zaměřením na automatizaci procesů (n8n & AI) a vývoj v Pythonu. Background v online marketingu a e-commerce.
 published: true
 ---
 

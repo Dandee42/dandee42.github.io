@@ -2,8 +2,8 @@
 layout: home
 page_id: home
 lang: en
-title: Daniel Hladík - Automation Engineer | I make automation meaningful
-description: I help companies and individuals get rid of routines that don't add value | AI & Automation | QA | Web application development
+title: Daniel Hladík - Automation Engineer
+description: I make automation meaningful. I help companies and individuals get rid of routines that don't add value | AI & Automation | Web application development
 image: /assets/files/photo.png
 permalink: /
 canonical: false
@@ -15,13 +15,6 @@ canonical: false
 My path to the world of IT did not lead through university lecture halls, but through real-world experience in e-commerce and online marketing. It was there that I realized that the biggest obstacle to growth is not a lack of ideas, but getting bogged down in routine tasks.
 
 These days, I remove these obstacles. I combine analytical thinking with technical skills to create systems that work for you.
-
-<div class="parallax"></div>
-
-## Why IT and automation
-In one of my positions as an online marketer, I was fortunate enough to be able to look over the shoulders of programmers as they developed an e-shop, opening up a whole new world to me. I enjoyed being involved in the development of the e-shop step by step, coming up with new features, testing, and proposing suitable solutions to current problems.
-
-This experience inspired me to switch to IT and laid the foundation for my current career path—**test automation and business workflow automation**.
 
 [More about me →](/cv/)
 
