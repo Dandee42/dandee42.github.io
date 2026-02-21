@@ -4,7 +4,7 @@ page_id: cv
 lang: en
 permalink: /cv/
 title: About me
-description: Something about me
+description:  Automation engineer focused on process automation (n8n & AI) and Python web development. Background in e-commerce and online marketing.
 published: true
 ---
 

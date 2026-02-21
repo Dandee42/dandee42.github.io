@@ -4,7 +4,7 @@ page_id: contact
 lang: en
 permalink: /contact/
 title: Contact
-description: If you are interested in my services, just leave me an message.
+description: Interested in process automation or custom web app development? Drop me a message using the form below or schedule a free 30-minute consultation.
 published: true
 ---
 {% include contact.html %}

@@ -8,6 +8,7 @@
     {% else %}
         {% if lang == site.default_lang %}
 <a class="lang-link" href=" {{ clean_url }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
+        {%- comment -%}The leading space prevents jekyll-polyglot from rewriting this href with a language prefix.{%- endcomment -%}
         {% else %}
 <a class="lang-link" href="/{{ lang }}{{ clean_url }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
         {% endif %}

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     {% if page.layout == "home" %}
-      {{ page.title }}
+    {{ page.title }}
     {% elsif page.type == "service" %}
-      {{ page.lang[lang].title }} &middot; {{ site.title[lang] }}
+    {{ page.lang[lang].title }} &middot; {{ site.title[lang] }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title[lang] }} &#124; {{ site.taglong[lang] }}
+    {{ page.title }} &middot; {{ site.title[lang] }}
     {% endif %}
   </title>
   {% include head-seo-lang.html %}
