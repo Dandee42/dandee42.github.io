@@ -16,13 +16,6 @@ My path to the world of IT did not lead through university lecture halls, but th
 
 These days, I remove these obstacles. I combine analytical thinking with technical skills to create systems that work for you.
 
-<div class="parallax"></div>
-
-## Why IT and automation
-In one of my positions as an online marketer, I was fortunate enough to be able to look over the shoulders of programmers as they developed an e-shop, opening up a whole new world to me. I enjoyed being involved in the development of the e-shop step by step, coming up with new features, testing, and proposing suitable solutions to current problems.
-
-This experience inspired me to switch to IT and laid the foundation for my current career path—**test automation and business workflow automation**.
-
 [More about me →](/cv/)
 
 <div class="parallax"></div>

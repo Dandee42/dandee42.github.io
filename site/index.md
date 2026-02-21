@@ -16,13 +16,6 @@ Moje cesta k IT nevedla skrze univerzitní auly, ale skrze reálnou praxi v e-co
 
 Dnes tyto brzdy odstraňuji. Kombinuji analytické myšlení s technickými dovednostmi, abych tvořil systémy, které pracují za vás.
 
-<div class="parallax"></div>
-
-## Proč právě IT a automatizace
-V rámci jedné zkušenosti v pozici online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy.
-
-Tato zkušenost mě inspirovala k přechodu do IT a položila základy k mé současné dráze – **automatizaci testů i firemních workflow**.
-
 [Více o mně →](/cv/)
 
 <div class="parallax"></div>
