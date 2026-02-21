@@ -101,6 +101,12 @@ page_gen:
     dir: 'services'
     filter: published
     lang: lang
+  - data: 'use_cases'
+    template: 'use-case'
+    name: 'slug'
+    dir: 'use-cases'
+    filter: published
+    lang: lang
 
 # ----------------------------------------------------------
 # AUTOPAGES (CATEGORIES, TAGS)

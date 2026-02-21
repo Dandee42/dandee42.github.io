@@ -34,7 +34,11 @@ Věřím, že nejdůležitější není otázka „jak“ něco vytvořit, ale �
 
 - **[Inteligentní automatizace (n8n & AI)](/services/intelligent-automation/)**: Propojuji aplikace, které spolu dříve nemluvily. Stavím n8n workflow obohacená o AI agenty, která šetří hodiny lidské práce týdně.
 
-- **[Automatizované testování (QA)](/services/automation-testing-qa/)**: Zajišťuji, aby váš software fungoval bezchybně. Pomocí Playwrightu píšu testy, které odhalí chyby dříve než vaši zákazníci.
+- **[AI Agenti na míru](/services/ai-agents/)**: Stavím autonomní agenty, kteří sami vyhledávají informace, volají API a rozhodují se, co dělat dál — bez čekání na člověka.
+
+- **[RAG systémy — AI nad vašimi daty](/services/rag-systems/)**: Propojím velký jazykový model s vašimi dokumenty, databázemi nebo wiki. Výsledkem je AI, která odpovídá přesně z vašich dat.
+
+- **[Vibecoding — Rapidní vývoj s AI](/services/vibecoding/)**: Využívám AI nástroje k vývoji funkčních prototypů a MVP v zlomku obvyklého času. Od nápadu k demo verzi za dny.
 
 - **[Vývoj webových aplikací](/services/web-app-development/)**: Když no-code nástroje narazí na své limity, stavím vlastní řešení na míru v Pythonu. Od databáze až po funkční rozhraní.
 

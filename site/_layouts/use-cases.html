@@ -1,0 +1,38 @@
+---
+layout: page
+---
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+<p class="blog-back"><a href="{{ '/services/' | relative_url }}">{{ trans.datapages_services.all_services_link }}</a></p>
+
+<h1>{{ trans.datapages_use_cases.h1 }}</h1>
+
+<p>
+{{ trans.datapages_use_cases.lead }}
+</p>
+
+{% include schedule-meeting-link.html %}
+
+<ul class="services-list">
+{% for use_case in site.data.use_cases %}
+  {% if use_case.published and use_case.show_in_list %}
+    {% assign clean_url = '' %}
+    {% if lang == site.default_lang %}
+        {% assign full_url = site.url %}
+    {% else %}
+        {% assign full_url = site.url | append: '/' | append: lang %}
+    {% endif %}
+    <li class="service-item">
+      <span class="material-symbols-outlined service-icon">{{ use_case.icon }}</span>
+      <a class="service-title" href="{{ full_url }}/use-cases/{{ use_case.slug }}">
+        <h2>{{ use_case.lang[lang].title }}</h2>
+      </a>
+      <p class="service-description">{{ use_case.lang[lang].description }}</p>
+      <a class="service-link" href="{{ full_url }}/use-cases/{{ use_case.slug }}">
+        {{ trans.datapages_use_cases.use_case_link }}
+      </a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
