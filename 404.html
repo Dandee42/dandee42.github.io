@@ -155,17 +155,21 @@
         chatInputKey: 'chatInput',
         chatSessionKey: 'sessionId',
         loadPreviousSession: true,
-        metadata: {},
+        metadata: {
+            current_url: window.location.href,
+            page_path: window.location.pathname,
+            page_title: document.title
+        },
         showWelcomeScreen: false,
         defaultLanguage: 'cs',
         initialMessages: [
-            'Ahoj!👋', 'Jmenuji se Danka. Jak vám mohu dnes pomoci?',
+            'Dobrý den👋', 'Jmenuji se Danka. Co pro vás mohu udělat?',
         ],
         i18n: {
             cs: {
                 title: 'Danka - virtuální asistentka',
                 subtitle: "",
-                footer: 'Daniel Hladík',
+                footer: '',
                 getStarted: 'Nová konverzace',
                 inputPlaceholder: 'Pište sem...',
             },
