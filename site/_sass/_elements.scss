@@ -1143,3 +1143,388 @@ a.reversefootnote {
 .alert-error::before {
   mask-image: var(--alert-icon-svg);
 }
+
+// =========================
+// N8N CHAT WIDGET
+// =========================
+
+// Global settings (theme-independent)
+:root {
+  --chat--border-radius: 0.5rem;
+  --chat--window--width: 380px;
+  --chat--window--height: 580px;
+  --chat--window--border-radius: 0.75rem;
+  --chat--message--font-size: 1rem;
+  --chat--message--border-radius: 0.75rem;
+  --chat--input--font-size: 1rem;
+  --chat--input--border-radius: 1.25rem;
+
+  // Toggle bubble — black in both themes
+  --chat--toggle--size: 54px;
+  --chat--toggle--border-radius: 50%;
+  --chat--toggle--background: #000000;
+  --chat--toggle--hover--background: #212529;
+  --chat--toggle--active--background: #343a40;
+  --chat--toggle--color: #ffffff;
+
+  // Send button — black in both themes
+  --chat--input--send--button--background: #000000;
+  --chat--input--send--button--color: #ffffff;
+  --chat--input--send--button--background-hover: #343a40;
+  --chat--input--send--button--color-hover: #ffffff;
+}
+
+// Light theme
+html,
+html[data-theme="light"] {
+  --chat--color--primary: #000000;
+  --chat--color--primary-shade-50: #000000;
+  --chat--color--primary--shade-100: #155997;
+  --chat--color--secondary: #339af0;
+  --chat--color-secondary-shade-50: #228be6;
+  --chat--color-white: #ffffff;
+  --chat--color-light: #f8f9fa;
+  --chat--color-light-shade-50: #f1f3f5;
+  --chat--color-light-shade-100: #dee2e6;
+  --chat--color-medium: #ced4da;
+  --chat--color-dark: #343a40;
+  --chat--color-disabled: #ced4da;
+  --chat--color-typing: #495057;
+
+  // Header
+  --chat--header--background: #1971c2;
+  --chat--header--color: #ffffff;
+
+  // Body & footer
+  --chat--body--background: #f8f9fa;
+  --chat--footer--background: #f1f3f5;
+  --chat--footer--color: #495057;
+
+  // Message bubbles
+  --chat--message--bot--background: #f1f3f5;
+  --chat--message--bot--color: #343a40;
+  --chat--message--user--background: #1971c2;
+  --chat--message--user--color: #ffffff;
+
+  // Input/textarea
+  --chat--input--background: #ffffff;
+  --chat--input--text-color: #343a40;
+  --chat--input--border: 1px solid #e9ecef;
+
+  // Send button
+  --chat--input--send--button--background: #1971c2;
+  --chat--input--send--button--background-hover: #1864a8;
+}
+
+// Dark theme
+html[data-theme="dark"] {
+  --chat--color--primary: #339af0;
+  --chat--color--primary-shade-50: #228be6;
+  --chat--color--primary--shade-100: #1c7ed6;
+  --chat--color--secondary: #74c0fc;
+  --chat--color-secondary-shade-50: #4dabf7;
+  --chat--color-white: #ffffff;
+  --chat--color-light: #2c3033;
+  --chat--color-light-shade-50: #343a40;
+  --chat--color-light-shade-100: #495057;
+  --chat--color-medium: #495057;
+  --chat--color-dark: #dee2e6;
+  --chat--color-disabled: #495057;
+  --chat--color-typing: #adb5bd;
+
+  // Header
+  --chat--header--background: #1971c2;
+  --chat--header--color: #dee2e6;
+
+  // Body & footer
+  --chat--body--background: #212529;
+  --chat--footer--background: #2c3033;
+  --chat--footer--color: #adb5bd;
+
+  // Message bubbles
+  --chat--message--bot--background: #343a40;
+  --chat--message--bot--color: #dee2e6;
+  --chat--message--user--background: #339af0;
+  --chat--message--user--color: #ffffff;
+
+  // Input/textarea
+  --chat--input--background: #2c3033;
+  --chat--input--text-color: #dee2e6;
+  --chat--input--border: 1px solid #343a40;
+}
+
+// Direct class overrides — minimal, only what CSS variables cannot do
+
+.chat-window {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+// Header — compact
+.chat-header {
+  padding: 0.6rem 1rem !important;
+}
+
+.chat-heading {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.chat-heading h1 {
+  font-size: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.chat-header p {
+  font-size: 0.85rem !important;
+  margin: 0.2rem 0 0 !important;
+  padding: 0 !important;
+  line-height: 1.3 !important;
+}
+
+@keyframes chat-bubble-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes chat-bubble-ring-light {
+  0%   { box-shadow: 0 0 0 0   rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.3); }
+  70%  { box-shadow: 0 0 0 12px rgba(0, 0, 0, 0),   0 4px 16px rgba(0, 0, 0, 0.3); }
+  100% { box-shadow: 0 0 0 0   rgba(0, 0, 0, 0),   0 4px 16px rgba(0, 0, 0, 0.3); }
+}
+
+@keyframes chat-bubble-ring-dark {
+  0%   { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0.4),  0 4px 16px rgba(255, 255, 255, 0.15); }
+  70%  { box-shadow: 0 0 0 12px rgba(255, 255, 255, 0),   0 4px 16px rgba(255, 255, 255, 0.15); }
+  100% { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0),   0 4px 16px rgba(255, 255, 255, 0.15); }
+}
+
+// Toggle bubble — animated, white (light) / white (dark)
+.chat-window-toggle {
+  background: #ffffff !important;
+  animation:
+    chat-bubble-bounce 3s ease-in-out infinite,
+    chat-bubble-ring-light 2.5s ease-out infinite !important;
+
+  svg {
+    display: none !important;
+  }
+
+  &::after {
+    content: '♾️';
+    font-size: 1.7rem;
+    line-height: 1;
+    display: block;
+  }
+
+  &:hover {
+    animation: none !important;
+    transform: scale(1.08) !important;
+    background: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+  }
+}
+
+html[data-theme="dark"] .chat-window-toggle {
+  background: #ffffff !important;
+  animation:
+    chat-bubble-bounce 3s ease-in-out infinite,
+    chat-bubble-ring-dark 2.5s ease-out infinite !important;
+
+  &:hover {
+    animation: none !important;
+    background: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2) !important;
+  }
+}
+
+// Chat je OTEVŘENÝ — Vue skryje .chat-window přidáním display:none
+// Když chat-window NEMÁ display:none → okno je otevřené
+.chat-window-wrapper:not(:has(.chat-window[style*="display: none"])) {
+  .chat-window-toggle {
+    animation: none !important;
+
+    &::after {
+      content: '✕';
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1971c2;
+    }
+  }
+}
+
+html[data-theme="dark"] .chat-window-wrapper:not(:has(.chat-window[style*="display: none"])) {
+  .chat-window-toggle::after {
+    color: #339af0;
+  }
+}
+
+// Footer padding — gives textarea small margin from edges
+.chat-layout .chat-footer {
+  padding: 0.5rem 0.75rem;
+}
+
+// Textarea + send button side by side
+.chat-inputs {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 0.4rem !important;
+  position: static !important;
+}
+
+.chat-inputs-controls {
+  position: static !important;
+  flex-shrink: 0;
+  margin-bottom: 3px;
+}
+
+.chat-inputs textarea {
+  flex: 1 !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  box-sizing: border-box !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 1.25rem !important;
+  font-size: 1rem !important;
+  background: #ffffff !important;
+  color: #343a40 !important;
+  outline: none !important;
+  overflow: hidden !important;
+  resize: none !important;
+
+  &:focus {
+    border-color: #adb5bd !important;
+  }
+}
+
+html[data-theme="dark"] .chat-inputs textarea {
+  border-color: #343a40 !important;
+  background: #2c3033 !important;
+  color: #dee2e6 !important;
+
+  &:focus {
+    border-color: #495057 !important;
+  }
+}
+
+// Send button — round, centered icon, fits inside textarea corner
+.chat-input-send-button {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  min-width: 2.25rem !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  transition: background-color 0.2s ease, border 0.2s ease !important;
+
+  svg {
+    display: block;
+    width: 16px !important;
+    height: 16px !important;
+    color: black !important;
+    fill: black !important;
+    stroke: black !important;
+  }
+}
+
+// Light mode: empty → white bg + blue icon; filled → blue bg + white icon
+html .chat-inputs textarea:placeholder-shown ~ .chat-inputs-controls .chat-input-send-button,
+html[data-theme="light"] .chat-inputs textarea:placeholder-shown ~ .chat-inputs-controls .chat-input-send-button {
+  background-color: #ffffff !important;
+  border: 1px solid #1971c2 !important;
+
+  svg {
+    color: #1971c2 !important;
+    fill: #1971c2 !important;
+    stroke: #1971c2 !important;
+  }
+}
+
+html .chat-inputs textarea:not(:placeholder-shown) ~ .chat-inputs-controls .chat-input-send-button,
+html[data-theme="light"] .chat-inputs textarea:not(:placeholder-shown) ~ .chat-inputs-controls .chat-input-send-button {
+  background-color: #1971c2 !important;
+  border: none !important;
+
+  svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+}
+
+// Dark mode: empty → black bg + white icon; filled → white bg + black icon
+html[data-theme="dark"] .chat-inputs textarea:placeholder-shown ~ .chat-inputs-controls .chat-input-send-button {
+  background-color: #000000 !important;
+  border: 1px solid #8b8989 !important;
+
+  svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+}
+
+html[data-theme="dark"] .chat-inputs textarea:not(:placeholder-shown) ~ .chat-inputs-controls .chat-input-send-button {
+  background-color: #339af0 !important;
+  border: none !important;
+
+  svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+}
+
+// Chat hint bubble — wrapper must not clip the bubble
+.chat-window-wrapper {
+  overflow: visible !important;
+}
+
+.chat-bubble-hint {
+  position: absolute;
+  bottom: calc(var(--chat--toggle--size, 54px) + 1rem);
+  right: 0;
+  background: #ffffff;
+  color: #343a40;
+  padding: 0.65rem 1rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 30px;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+html[data-theme="dark"] .chat-bubble-hint {
+  background: #343a40;
+  color: #dee2e6;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  &::after {
+    background: #343a40;
+  }
+}
