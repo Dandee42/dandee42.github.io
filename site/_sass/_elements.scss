@@ -1334,7 +1334,7 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="dark"] .chat-window-toggle {
-  background: #ffffff !important;
+  background: #3c4145 !important;
   animation:
     chat-bubble-bounce 3s ease-in-out infinite,
     chat-bubble-ring-dark 2.5s ease-out infinite !important;
@@ -1345,7 +1345,7 @@ html[data-theme="dark"] .chat-window-toggle {
 
   &:hover {
     animation: none !important;
-    background: #ffffff !important;
+    background: #343a40 !important;
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2) !important;
   }
 }
