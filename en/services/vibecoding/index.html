@@ -82,6 +82,7 @@
 
   
 <!-- Stylesheets, icons -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/css/open-color.min.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
@@ -96,6 +97,17 @@
 
 <link rel="alternate" type="application/rss+xml" title="Daniel Hladik - RSS (en)" href="https://daniel-hladik.cz/en/feed.xml" />
 
+
+  <script>
+    (function () {
+      var theme = sessionStorage.getItem('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
 
 
@@ -289,7 +301,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-21T13:40:55+00:00">2026</time>
+  <small>&copy; <time datetime="2026-02-27T16:39:25+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -302,6 +314,11 @@
   <script src="/assets/js/darkmode.js"></script>
   
   
+  
+
+
+
+
 </body>
 
 </html>
