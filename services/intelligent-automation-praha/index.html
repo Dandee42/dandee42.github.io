@@ -82,6 +82,7 @@
 
   
 <!-- Stylesheets, icons -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/css/open-color.min.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
@@ -96,6 +97,17 @@
 
 <link rel="alternate" type="application/rss+xml" title="Daniel Hladík - RSS (cs)" href="https://daniel-hladik.cz/feed.xml" />
 
+
+  <script>
+    (function () {
+      var theme = sessionStorage.getItem('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
 
 
@@ -283,7 +295,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-21T13:42:38+00:00">2026</time>
+  <small>&copy; <time datetime="2026-02-27T16:41:11+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -296,6 +308,86 @@
   <script src="/assets/js/darkmode.js"></script>
   
   
+  
+
+
+
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+        webhookUrl: 'https://n8n.daniel-hladik.cz/webhook/c84ece32-c094-454b-920c-b34138ab3a82/chat',
+        target: '#n8n-chat',
+        mode: 'window',
+        chatInputKey: 'chatInput',
+        chatSessionKey: 'sessionId',
+        loadPreviousSession: true,
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: 'cs',
+        initialMessages: [
+            'Ahoj!👋', 'Jmenuji se Danka. Jak vám mohu dnes pomoci?',
+        ],
+        i18n: {
+            cs: {
+                title: 'Danka - virtuální asistentka',
+                subtitle: "",
+                footer: 'Daniel Hladík',
+                getStarted: 'Nová konverzace',
+                inputPlaceholder: 'Pište sem...',
+            },
+        },
+        enableStreaming: true,
+    });
+
+</script>
+
+<script>
+(function () {
+    var observer = new MutationObserver(function () {
+        var wrapper = document.querySelector('.chat-window-wrapper');
+        if (!wrapper || wrapper.dataset.hintWired) return;
+        wrapper.dataset.hintWired = '1';
+
+        var bubble = document.createElement('div');
+        bubble.className = 'chat-bubble-hint';
+        bubble.textContent = 'Hledáte něco? Pomůžu Vám!';
+        wrapper.appendChild(bubble);
+
+        var timer = localStorage.getItem('chatOpened') ? null : setTimeout(function () {
+            bubble.classList.add('visible');
+            try {
+                var ctx = new (window.AudioContext || window.webkitAudioContext)();
+                ctx.resume().then(function () {
+                    var osc = ctx.createOscillator();
+                    var gain = ctx.createGain();
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(880, ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(660, ctx.currentTime + 0.12);
+                    gain.gain.setValueAtTime(0.25, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+                    osc.start(ctx.currentTime);
+                    osc.stop(ctx.currentTime + 0.4);
+                });
+            } catch (e) {}
+        }, 3000);
+
+        var toggle = wrapper.querySelector('.chat-window-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function () {
+                bubble.classList.remove('visible');
+                clearTimeout(timer);
+                localStorage.setItem('chatOpened', '1');
+            });
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
 </body>
 
 </html>
