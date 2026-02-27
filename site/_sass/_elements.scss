@@ -1208,6 +1208,7 @@ html[data-theme="light"] {
 
   // Input/textarea
   --chat--input--background: #ffffff;
+  --chat--input--container--background: #f1f3f5;
   --chat--input--text-color: #343a40;
   --chat--input--border: 1px solid #e9ecef;
 
@@ -1249,6 +1250,7 @@ html[data-theme="dark"] {
 
   // Input/textarea
   --chat--input--background: #2c3033;
+  --chat--input--container--background: #2c3033;
   --chat--input--text-color: #dee2e6;
   --chat--input--border: 1px solid #343a40;
 }
@@ -1397,11 +1399,11 @@ html[data-theme="dark"] .chat-window-wrapper:not(:has(.chat-window[style*="displ
   padding-right: 1rem !important;
   padding-left: 1rem !important;
   box-sizing: border-box !important;
-  border: 1px solid #e9ecef !important;
+  border: var(--chat--input--border) !important;
   border-radius: 1.25rem !important;
   font-size: 1rem !important;
-  background: #ffffff !important;
-  color: #343a40 !important;
+  background: var(--chat--input--background) !important;
+  color: var(--chat--input--text-color) !important;
   outline: none !important;
   overflow: hidden !important;
   resize: none !important;
@@ -1412,10 +1414,6 @@ html[data-theme="dark"] .chat-window-wrapper:not(:has(.chat-window[style*="displ
 }
 
 html[data-theme="dark"] .chat-inputs textarea {
-  border-color: #343a40 !important;
-  background: #2c3033 !important;
-  color: #dee2e6 !important;
-
   &:focus {
     border-color: #495057 !important;
   }
