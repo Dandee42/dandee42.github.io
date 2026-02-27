@@ -1304,6 +1304,9 @@ html[data-theme="dark"] {
 // Toggle bubble — animated, white (light) / white (dark)
 .chat-window-toggle {
   background: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   animation:
     chat-bubble-bounce 3s ease-in-out infinite,
     chat-bubble-ring-light 2.5s ease-out infinite !important;
@@ -1313,10 +1316,13 @@ html[data-theme="dark"] {
   }
 
   &::after {
-    content: '♾️';
+    content: 'all_inclusive';
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-feature-settings: 'liga' 1;
     font-size: 1.7rem;
     line-height: 1;
-    display: block;
+    color: #1971c2;
   }
 
   &:hover {
@@ -1333,6 +1339,10 @@ html[data-theme="dark"] .chat-window-toggle {
     chat-bubble-bounce 3s ease-in-out infinite,
     chat-bubble-ring-dark 2.5s ease-out infinite !important;
 
+  &::after {
+    color: #339af0;
+  }
+
   &:hover {
     animation: none !important;
     background: #ffffff !important;
@@ -1347,9 +1357,11 @@ html[data-theme="dark"] .chat-window-toggle {
     animation: none !important;
 
     &::after {
-      content: '✕';
-      font-size: 1.6rem;
-      font-weight: 700;
+      content: 'close';
+      font-family: 'Material Symbols Outlined';
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      font-feature-settings: 'liga' 1;
+      font-size: 2rem;
       color: #1971c2;
     }
   }
