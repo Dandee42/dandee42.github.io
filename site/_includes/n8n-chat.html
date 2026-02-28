@@ -81,5 +81,25 @@
     observer.observe(document.body, { childList: true, subtree: true });
 })();
 </script>
+
+<script>
+(function () {
+    var chatWindow = null;
+    var styleObserver = new MutationObserver(function () {
+        document.body.classList.toggle('chat-open', chatWindow && chatWindow.style.display !== 'none');
+    });
+
+    var domObserver = new MutationObserver(function () {
+        var win = document.querySelector('.chat-window');
+        if (win && win !== chatWindow) {
+            chatWindow = win;
+            styleObserver.observe(chatWindow, { attributes: true, attributeFilter: ['style'] });
+            document.body.classList.toggle('chat-open', chatWindow.style.display !== 'none');
+        }
+    });
+
+    domObserver.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
 {% else %}
 {% endif %}
