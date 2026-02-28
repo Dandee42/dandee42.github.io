@@ -70,7 +70,7 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2026-01-16T00:00:00+00:00",
-    "dateModified": "2026-02-27T21:37:52+00:00",
+    "dateModified": "2026-02-28T16:57:08+00:00",
     "description": "Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.",
     "inLanguage": "cs_CZ",
     "headline": "BodyLog - Jak jsem si vytvořil svou první fitness apku",
@@ -673,7 +673,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-27T21:38:31+00:00">2026</time>
+  <small>&copy; <time datetime="2026-02-28T16:57:57+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -769,6 +769,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+<script>
+(function () {
+    var chatWindow = null;
+    var styleObserver = new MutationObserver(function () {
+        document.body.classList.toggle('chat-open', chatWindow && chatWindow.style.display !== 'none');
+    });
+
+    var domObserver = new MutationObserver(function () {
+        var win = document.querySelector('.chat-window');
+        if (win && win !== chatWindow) {
+            chatWindow = win;
+            styleObserver.observe(chatWindow, { attributes: true, attributeFilter: ['style'] });
+            document.body.classList.toggle('chat-open', chatWindow.style.display !== 'none');
+        }
+    });
+
+    domObserver.observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 
