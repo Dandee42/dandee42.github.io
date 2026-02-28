@@ -296,7 +296,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-27T21:37:27+00:00">2026</time>
+  <small>&copy; <time datetime="2026-02-28T16:55:30+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -390,6 +390,26 @@
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+<script>
+(function () {
+    var chatWindow = null;
+    var styleObserver = new MutationObserver(function () {
+        document.body.classList.toggle('chat-open', chatWindow && chatWindow.style.display !== 'none');
+    });
+
+    var domObserver = new MutationObserver(function () {
+        var win = document.querySelector('.chat-window');
+        if (win && win !== chatWindow) {
+            chatWindow = win;
+            styleObserver.observe(chatWindow, { attributes: true, attributeFilter: ['style'] });
+            document.body.classList.toggle('chat-open', chatWindow.style.display !== 'none');
+        }
+    });
+
+    domObserver.observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 

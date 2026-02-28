@@ -70,7 +70,7 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2025-12-11T00:00:00+00:00",
-    "dateModified": "2026-02-27T21:36:46+00:00",
+    "dateModified": "2026-02-28T16:54:49+00:00",
     "description": "Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.",
     "inLanguage": "cs_CZ",
     "headline": "Jak sledovat svůj spánek pomocí Google nástrojů",
@@ -687,7 +687,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-27T21:37:27+00:00">2026</time>
+  <small>&copy; <time datetime="2026-02-28T16:55:30+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -783,6 +783,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+<script>
+(function () {
+    var chatWindow = null;
+    var styleObserver = new MutationObserver(function () {
+        document.body.classList.toggle('chat-open', chatWindow && chatWindow.style.display !== 'none');
+    });
+
+    var domObserver = new MutationObserver(function () {
+        var win = document.querySelector('.chat-window');
+        if (win && win !== chatWindow) {
+            chatWindow = win;
+            styleObserver.observe(chatWindow, { attributes: true, attributeFilter: ['style'] });
+            document.body.classList.toggle('chat-open', chatWindow.style.display !== 'none');
+        }
+    });
+
+    domObserver.observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 
