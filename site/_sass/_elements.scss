@@ -1538,3 +1538,21 @@ html[data-theme="dark"] .chat-bubble-hint {
     background: #343a40;
   }
 }
+
+// Blur overlay when chat window is open
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.chat-open::before {
+  opacity: 1;
+}
