@@ -1,0 +1,21 @@
+<script defer>
+  document.querySelectorAll('abbr[title]').forEach(el => {
+    if (!el.getAttribute('data-tooltip')) {
+      el.setAttribute('data-tooltip', el.getAttribute('title'));
+    }
+    el.setAttribute('aria-label', el.getAttribute('title'));
+    el.removeAttribute('title');
+  });
+
+  document.querySelectorAll('abbr[data-tooltip]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      this.classList.toggle('tooltip-visible');
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('abbr.tooltip-visible')
+      .forEach(el => el.classList.remove('tooltip-visible'));
+  });
+</script>
