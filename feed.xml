@@ -9,7 +9,7 @@
     <atom:link href="https://daniel-hladik.cz/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI &amp; Automation | QA | Tvorba webových aplikací</description>
     <language>cs</language>
-    <lastBuildDate>Sat, 28 Feb 2026 16:55:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 18:50:19 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
     <image>
@@ -18,6 +18,19 @@
       <link>https://daniel-hladik.cz</link>
     </image>
     
+    
+    <item>
+      <title>Jak přidat agentního AI chatbota na svůj web (RAG návod)</title>
+      <link>https://daniel-hladik.cz/blog/rag-ai-agent-in-website/</link>
+      <guid isPermaLink="true">https://daniel-hladik.cz/blog/rag-ai-agent-in-website/</guid>
+      <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
+      
+      
+      
+      <description><![CDATA[
+        Chcete si na svůj web přidat chatbota, který posílá emaily, domlouvá schůzky a zná celý váš web nazpaměť? Přečtěte si více v článku.]]
+      ]]></description>
+    </item>
     
     <item>
       <title>BodyLog - Jak jsem si vytvořil svou první fitness apku</title>

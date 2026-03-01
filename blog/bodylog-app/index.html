@@ -70,7 +70,7 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2026-01-16T00:00:00+00:00",
-    "dateModified": "2026-02-28T16:54:49+00:00",
+    "dateModified": "2026-03-01T18:49:37+00:00",
     "description": "Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.",
     "inLanguage": "cs_CZ",
     "headline": "BodyLog - Jak jsem si vytvořil svou první fitness apku",
@@ -351,6 +351,10 @@
     
 
     
+    <a class="next-post" href="/blog/rag-ai-agent-in-website/">
+       <span>Jak přidat agentního AI chatbota na svůj web (RAG návod) →</span>
+    </a>
+    
 </nav>
   </main>
 </article>
@@ -541,10 +545,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+<script defer>
+  document.querySelectorAll('abbr[title]').forEach(el => {
+    if (!el.getAttribute('data-tooltip')) {
+      el.setAttribute('data-tooltip', el.getAttribute('title'));
+    }
+    el.setAttribute('aria-label', el.getAttribute('title'));
+    el.removeAttribute('title');
+  });
+
+  document.querySelectorAll('abbr[data-tooltip]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      this.classList.toggle('tooltip-visible');
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('abbr.tooltip-visible')
+      .forEach(el => el.classList.remove('tooltip-visible'));
+  });
+</script>
 
 
 
 
+
+  
 
   
 
@@ -673,7 +700,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-28T16:55:30+00:00">2026</time>
+  <small>&copy; <time datetime="2026-03-01T18:50:19+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
