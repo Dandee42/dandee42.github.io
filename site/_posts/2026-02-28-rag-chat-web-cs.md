@@ -26,7 +26,7 @@ Zkratka **RAG (Retrieval-Augmented Generation)** se překládá do češtiny jak
 
 ![Srovnání položení dotazu na běžný AI model a RAG AI model](/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-01.jpg){: .post-image }
 
-Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. Když se ho zeptáte na něco z interní dokumentace, nebude vědět a může si i vymýšlet. Pokud tomu samému člověku dáte do ruky vaše materiály — ceník, dokumentaci, články, FAQ — a řeknete mu: _"Odpovídej pouze na základě toho, co zde najdeš."_, najde tu správnou odpověď. Takto velmi zjednodušeně funguje RAG AI Model.
+Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. Když se ho zeptáte na něco z interní dokumentace, nebude vědět a může si i vymýšlet. Pokud tomu samému člověku dáte do ruky vaše materiály (ceník, dokumentaci, články, FAQ) a řeknete mu: _"Odpovídej pouze na základě toho, co zde najdeš."_, najde tu správnou odpověď. Takto velmi zjednodušeně funguje RAG AI Model.
 
 Jak RAG proces vypadá v praxi:
 
