@@ -6,7 +6,7 @@
   {
     "title": "How to add an AI chatbot agent to your website (RAG tutorial)",
     "url": "/en/blog/rag-ai-agent-in-website/",
-    "excerpt": "Do you want a chatbot on your website that really knows your products, services, price lists, or documentation and doesn&#39;t just respond with general phrases? In this article, I will guide you through the creation of an &quot;agent&quot; chatbot built using the n8n tool. We will show you how to use the RAG method to connect AI with your website data and how to enable the agent to perform actions such as sending emails or arranging meetings.",
+    "excerpt": "Do you want a chatbot on your website that really knows your products, services, price lists, or documentation and doesn’t just respond with general phrases? In this article, I will guide you through the creation of an “agent” chatbot built using the n8n tool. We will show you how to use the RAG method to connect AI with your website data and how to enable the agent to perform actions such as sending emails or arranging meetings.",
     "lead": "Would you like to add a chatbot to your website that sends emails, arranges meetings, and knows your entire website by heart? Read more in the article.",
     "tags": "ai-chat, rag, agentic-ai, n8n, llm"
   },
