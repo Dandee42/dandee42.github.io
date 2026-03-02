@@ -4,6 +4,14 @@
 [
 
   {
+    "title": "Jak přidat agentního AI chatbota na svůj web (RAG návod)",
+    "url": "/blog/rag-ai-agent-in-website/",
+    "excerpt": "Chcete na webu chatbota, který skutečně zná vaše produkty, služby, ceníky nebo dokumentaci a neodpovídá jen obecné fráze? V tomto článku vás provedu tvorbou “agentního” chatbota sestrojeného pomocí nástroje n8n. Ukážeme si, jak využít metodu RAG k propojení AI s vašimi daty z webu a jak agentovi umožnit provádět akce, jako je odesílání e-mailů či domlouvání schůzek.",
+    "lead": "Chcete si na svůj web přidat chatbota, který posílá emaily, domlouvá schůzky a zná celý váš web nazpaměť? Přečtěte si více v článku.",
+    "tags": "ai-chat, rag, agentic-ai, n8n, llm"
+  },
+
+  {
     "title": "BodyLog - Jak jsem si vytvořil svou první fitness apku",
     "url": "/blog/bodylog-app/",
     "excerpt": "Nevystudoval jsem IT obor, ale vždy mě lákalo si vytvořit svoji vlastní aplikaci. Chtěl jsem něco, co bude mít reálný přínos pro můj život a nebude to jen další „cvičný“ projekt do šuplíku. A tak vznikla BodyLog App.",

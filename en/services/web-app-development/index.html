@@ -105,6 +105,8 @@
         document.documentElement.setAttribute('data-theme', theme);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
@@ -300,7 +302,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-28T16:57:58+00:00">2026</time>
+  <small>&copy; <time datetime="2026-03-02T19:19:39+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

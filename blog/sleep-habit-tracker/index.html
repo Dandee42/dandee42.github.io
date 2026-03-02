@@ -70,7 +70,7 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2025-12-11T00:00:00+00:00",
-    "dateModified": "2026-02-28T16:57:08+00:00",
+    "dateModified": "2026-03-02T19:18:47+00:00",
     "description": "Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.",
     "inLanguage": "cs_CZ",
     "headline": "Jak sledovat svůj spánek pomocí Google nástrojů",
@@ -115,6 +115,8 @@
         document.documentElement.setAttribute('data-theme', theme);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
@@ -555,10 +557,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+<script defer>
+  document.querySelectorAll('abbr[title]').forEach(el => {
+    if (!el.getAttribute('data-tooltip')) {
+      el.setAttribute('data-tooltip', el.getAttribute('title'));
+    }
+    el.setAttribute('aria-label', el.getAttribute('title'));
+    el.removeAttribute('title');
+  });
+
+  document.querySelectorAll('abbr[data-tooltip]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      this.classList.toggle('tooltip-visible');
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('abbr.tooltip-visible')
+      .forEach(el => el.classList.remove('tooltip-visible'));
+  });
+</script>
 
 
 
 
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
 
   
 
@@ -687,7 +724,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-28T16:57:57+00:00">2026</time>
+  <small>&copy; <time datetime="2026-03-02T19:19:38+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

@@ -99,6 +99,8 @@
         document.documentElement.setAttribute('data-theme', theme);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
@@ -206,6 +208,18 @@
   <h2 class="post-homepage-banner-title">Přečtěte si moje poslední příspěvky</h2>
 
   <ul class="latest-posts">
+    
+      <li class="latest-post">
+        <a class="post-title" href="/blog/rag-ai-agent-in-website/">Jak přidat agentního AI chatbota na svůj web (RAG návod)</a>
+        
+          <span class="post-lead">
+            Chcete si na svůj web přidat chatbota, který posílá emaily, domlouvá schůzky a zná celý váš web nazpaměť? Přečtěte si více v článku.
+            
+              &mdash; <span class="reading-time">7 min čtení</span>
+            
+          </span>
+        
+      </li>
     
       <li class="latest-post">
         <a class="post-title" href="/blog/bodylog-app/">BodyLog - Jak jsem si vytvořil svou první fitness apku</a>
@@ -363,7 +377,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-02-28T16:57:57+00:00">2026</time>
+  <small>&copy; <time datetime="2026-03-02T19:19:38+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
