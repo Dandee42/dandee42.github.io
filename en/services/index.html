@@ -99,6 +99,8 @@
         document.documentElement.setAttribute('data-theme', theme);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
@@ -379,7 +381,7 @@ I believe that the most important question is not 'how' to create something, but
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-02T18:22:05+00:00">2026</time>
+  <small>&copy; <time datetime="2026-03-02T18:28:51+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
