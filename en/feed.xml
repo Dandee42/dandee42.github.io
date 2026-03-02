@@ -9,7 +9,7 @@
     <atom:link href="https://daniel-hladik.cz/en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>I help companies and individuals get rid of routines that don&apos;t add value |AI &amp; Automation | QA | Building web apps</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Mar 2026 18:02:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 18:03:26 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
     <image>
@@ -18,19 +18,6 @@
       <link>https://daniel-hladik.cz</link>
     </image>
     
-    
-    <item>
-      <title>How to add an AI chatbot agent to your website (RAG tutorial)</title>
-      <link>https://daniel-hladik.cz/en/blog/rag-ai-agent-in-website/</link>
-      <guid isPermaLink="true">https://daniel-hladik.cz/en/blog/rag-ai-agent-in-website/</guid>
-      <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
-      
-      
-      
-      <description><![CDATA[
-        Would you like to add a chatbot to your website that sends emails, arranges meetings, and knows your entire website by heart? Read more in the article.]]
-      ]]></description>
-    </item>
     
     <item>
       <title>BodyLog - How I created my first fitness app</title>
