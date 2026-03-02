@@ -110,7 +110,7 @@ Interakce s AI agentem bude probíhat pomocí chatovacího okna, které umístí
 
 V momentě, kdy uživatel odešle dotaz, proběhne v n8n tento řetězec událostí:
 
-1. **Analýza záměru**: AI zjistí, zda se uživatel ptá na informaci, nebo chce něco zařídit (např. odeslat vzkaz či domluvit schůzku).
+1. **Analýza záměru**: AI zjistí, zda se uživatel ptá na informaci, nebo chce něco zařídit, např. odeslat vzkaz či domluvit schůzku.
 2. Pokud jde o dotaz na znalostní databázi:
   - **Vyhledání**: Agent prohledá vektorovou databázi.
   - **Zpřesnění**: Vybere ty nejrelevantnější kousky informací.
