@@ -50,6 +50,10 @@ Or a numbered list:
 
 ---
 
+## Abbreviation
+
+**<abbr title="Retrieval-Augmented Generation – metoda dodávající AI vaše data.">RAG</abbr>**
+
 ## Quotes and alerts
 
 > "_This is a sample quote._"

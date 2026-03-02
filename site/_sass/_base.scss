@@ -44,15 +44,14 @@ small {
   font-weight: 300;
 }
 
-abbr {
-  text-transform: lowercase;
-  font-family: var(--type-caps);
-}
-
 blockquote {
   padding-left: 1em;
   border-left: 0.1em solid var(--color-border);
   font-weight: 300;
+}
+
+[data-theme="dark"] strong {
+  color: var(--oc-gray-2);
 }
 
 mark {
@@ -75,4 +74,54 @@ img {
 
 table.table {
   color: var(--color-text);
+}
+
+abbr[data-tooltip] {
+  position: relative;
+  text-decoration: underline dotted var(--color-link);
+  color: var(--color-link);
+  cursor: help;
+  font-style: normal;
+  text-transform: none;
+  font-family: inherit;
+}
+
+abbr[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-text);
+  color: var(--color-background);
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-style: italic;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.4rem;
+  min-width: 180px;
+  max-width: min(260px, 80vw);
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  abbr[data-tooltip]:hover::after,
+  abbr[data-tooltip]:focus::after {
+    opacity: 1;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  abbr[data-tooltip].tooltip-visible::after {
+    opacity: 1;
+    left: 0;
+    transform: translateX(0);
+    right: auto;
+  }
 }
