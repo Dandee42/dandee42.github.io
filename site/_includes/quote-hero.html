@@ -1,0 +1,14 @@
+{% assign lang = site.active_lang | default: page.lang %}
+<div class="quote-hero">
+  {% if lang == 'en' %}
+    <img src="/assets/files/road-mountains-middle.jpg" alt="A road leading to the mountains" loading="lazy">
+    <div class="quote-overlay">
+      <p>"Smart solutions start with an idea, not code."</p>
+    </div>
+  {% else %}
+    <img src="/assets/files/road-mountains-middle.jpg" alt="Cesta vedoucí k horám" loading="lazy">
+    <div class="quote-overlay">
+      <p>„Chytrá řešení začínají u myšlenky, ne u kódu."</p>
+    </div>
+  {% endif %}
+</div>

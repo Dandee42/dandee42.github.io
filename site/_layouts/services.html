@@ -22,13 +22,11 @@ layout: page
     {% endif %}
     <li class="service-item">
       <span class="material-symbols-outlined service-icon">{{ service.icon }}</span>
-      <a class="service-title" href="{{ full_url }}/services/{{ service.slug }}">
-        <h2>{{ service.lang[lang].title }}</h2>
-      </a>
+      <div class="service-title">
+        <h2><a href="{{ full_url }}/services/{{ service.slug }}">{{ service.lang[lang].title }}</a></h2>
+      </div>
       <p class="service-description">{{ service.lang[lang].description }}</p>
-      <a class="service-link" href="{{ full_url }}/services/{{ service.slug }}">
-        {{ trans.datapages_services.service_link }}
-      </a>
+      <a class="service-link" href="{{ full_url }}/services/{{ service.slug }}">{{ trans.datapages_services.service_link }}</a>
     </li>
   {% endif %}
 {% endfor %}
