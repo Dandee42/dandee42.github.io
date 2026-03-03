@@ -70,7 +70,7 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2025-12-11T00:00:00+00:00",
-    "dateModified": "2026-03-02T19:18:47+00:00",
+    "dateModified": "2026-03-03T16:01:21+00:00",
     "description": "Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí Google Sheets zdarma. Bez aplikací a wearables – s Google Formulářem a automatickou připomínkou.",
     "inLanguage": "cs_CZ",
     "headline": "Jak sledovat svůj spánek pomocí Google nástrojů",
@@ -558,7 +558,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 <script defer>
-  document.querySelectorAll('abbr[title]').forEach(el => {
+  // 1. Convert title → data-tooltip
+  document.querySelectorAll('abbr[title]').forEach(function(el) {
     if (!el.getAttribute('data-tooltip')) {
       el.setAttribute('data-tooltip', el.getAttribute('title'));
     }
@@ -566,18 +567,72 @@ document.addEventListener("DOMContentLoaded", () => {
     el.removeAttribute('title');
   });
 
-  document.querySelectorAll('abbr[data-tooltip]').forEach(el => {
-    el.addEventListener('click', function (e) {
+  // 2. Create bottom sheet elements (for touch devices)
+  var backdrop = document.createElement('div');
+  backdrop.className = 'abbr-sheet-backdrop';
+  backdrop.setAttribute('aria-hidden', 'true');
+
+  var sheet = document.createElement('div');
+  sheet.className = 'abbr-sheet';
+  sheet.setAttribute('role', 'dialog');
+  sheet.setAttribute('aria-modal', 'true');
+  sheet.innerHTML =
+    '<div class="abbr-sheet-handle-bar"></div>' +
+    '<div class="abbr-sheet-header">' +
+      '<span class="abbr-sheet-term"></span>' +
+      '<button class="abbr-sheet-close" aria-label="Zavřít">&times;</button>' +
+    '</div>' +
+    '<p class="abbr-sheet-desc"></p>';
+
+  document.body.appendChild(backdrop);
+  document.body.appendChild(sheet);
+
+  var termEl = sheet.querySelector('.abbr-sheet-term');
+  var descEl = sheet.querySelector('.abbr-sheet-desc');
+  var closeBtn = sheet.querySelector('.abbr-sheet-close');
+
+  function openSheet(abbr) {
+    termEl.textContent = abbr.textContent;
+    descEl.textContent = abbr.getAttribute('data-tooltip');
+    backdrop.classList.add('open');
+    sheet.classList.add('open');
+  }
+
+  function closeSheet() {
+    backdrop.classList.remove('open');
+    sheet.classList.remove('open');
+  }
+
+  var isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+  // 3. Bind abbr clicks
+  document.querySelectorAll('abbr[data-tooltip]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
       e.stopPropagation();
-      this.classList.toggle('tooltip-visible');
+      if (isTouch) {
+        openSheet(this);
+      } else {
+        this.classList.toggle('tooltip-visible');
+      }
     });
   });
 
-  document.addEventListener('click', () => {
-    document.querySelectorAll('abbr.tooltip-visible')
-      .forEach(el => el.classList.remove('tooltip-visible'));
+  // 4. Close on backdrop click, close button, or Escape key
+  backdrop.addEventListener('click', closeSheet);
+  closeBtn.addEventListener('click', closeSheet);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSheet();
+  });
+
+  // 5. Desktop: close tooltip on outside click
+  document.addEventListener('click', function() {
+    if (!isTouch) {
+      document.querySelectorAll('abbr.tooltip-visible')
+        .forEach(function(el) { el.classList.remove('tooltip-visible'); });
+    }
   });
 </script>
+
 
 
 
@@ -724,7 +779,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-02T19:19:38+00:00">2026</time>
+  <small>&copy; <time datetime="2026-03-03T16:02:13+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
