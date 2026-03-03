@@ -243,7 +243,6 @@ h4:hover .heading-link {
 
 .post-homepage-banner p {
   margin-top: 1rem;
-  text-align: center;
 }
 
 .post-homepage-banner .reading-time {
@@ -1011,18 +1010,104 @@ a.reversefootnote {
   }
 }
 
+.only-mobile {
+  display: none;
+}
+
 @media (max-width: 1200px) {
-  .parallax {
-    height: 200px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('/assets/files/road-mountains-middle.jpg');
-    border-radius: 8px;
+  .only-mobile {
+    display: block;
   }
 }
 
+// =========================
+// QUOTE HERO
+// =========================
+
+.quote-hero {
+  position: relative;
+  margin: 2.5rem 0;
+
+  img {
+    display: none;
+    width: 100%;
+    margin: 0;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    max-height: 280px;
+  }
+
+  .quote-overlay {
+    position: relative;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px var(--shadow-service);
+
+    &::before {
+      content: '\201C';
+      position: absolute;
+      top: -0.5rem;
+      left: 1.25rem;
+      font-size: 4.5em;
+      line-height: 1;
+      font-family: var(--type-serif);
+      color: var(--color-border);
+      pointer-events: none;
+    }
+
+    p {
+      font-size: 1.35em;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--color-heading);
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    img {
+      display: block;
+    }
+
+    .quote-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 78%;
+      text-align: center;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.75rem;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: none;
+
+      &::before {
+        display: none;
+      }
+
+      p {
+        color: #1a1a1a;
+      }
+    }
+  }
+}
+
+html[data-theme="dark"] .quote-hero {
+  @media (max-width: 1200px) {
+    .quote-overlay {
+      background: rgba(25, 25, 25, 0.78);
+      border-color: rgba(255, 255, 255, 0.1);
+
+      p {
+        color: #e9ecef;
+      }
+    }
+  }
+}
 
 .services-list {
   list-style: none;
@@ -1039,6 +1124,23 @@ a.reversefootnote {
   padding: 1.5rem;
   box-shadow: 0 4px 16px var(--shadow-service);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-title h2 a::after,
+.service-title h3 a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.service-link {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  position: relative;
+  z-index: 1;
 }
 
 .service-item:hover {
@@ -1046,9 +1148,24 @@ a.reversefootnote {
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-.service-title h2 {
+.service-title h2,
+.service-title h3 {
   margin: 0 0 0.75rem;
+  font-size: 1.25em;
+  font-weight: 500;
+  font-family: var(--type-serif);
+  text-transform: none;
+  letter-spacing: normal;
   color: var(--color-link);
+}
+
+.service-title h2 a,
+.service-title h3 a,
+.service-link {
+  &:hover,
+  &:focus {
+    border-bottom: none;
+  }
 }
 
 .service-description {
@@ -1555,6 +1672,28 @@ body::before {
 
 body.chat-open::before {
   opacity: 1;
+}
+
+// =========================
+// TYPEWRITER
+// =========================
+
+.tw {
+  color: var(--color-link);
+  border-right: 2px solid currentColor;
+  padding-right: 2px;
+  animation: tw-cursor 0.75s step-end infinite;
+}
+
+@keyframes tw-cursor {
+  0%, 100% { border-color: currentColor; }
+  50%       { border-color: transparent; }
+}
+
+@media (max-width: 576px) {
+  .tw-wrap {
+    display: block;
+  }
 }
 
 // =========================
