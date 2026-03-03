@@ -118,10 +118,7 @@ abbr[data-tooltip]::after {
 }
 
 @media (hover: none) and (pointer: coarse) {
-  abbr[data-tooltip].tooltip-visible::after {
-    opacity: 1;
-    left: 0;
-    transform: translateX(0);
-    right: auto;
+  abbr[data-tooltip]::after {
+    display: none;
   }
 }

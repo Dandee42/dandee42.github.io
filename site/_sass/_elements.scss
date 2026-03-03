@@ -1556,3 +1556,99 @@ body::before {
 body.chat-open::before {
   opacity: 1;
 }
+
+// =========================
+// ABBR BOTTOM SHEET (mobile)
+// =========================
+
+.abbr-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.abbr-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: var(--color-background);
+  border-top: 1px solid var(--color-border);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 1.25rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+  max-height: 60vh;
+  overflow-y: auto;
+
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+html[data-theme="dark"] .abbr-sheet {
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.45);
+}
+
+.abbr-sheet-handle-bar {
+  width: 40px;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  margin: 0.75rem auto 1.25rem;
+}
+
+.abbr-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 0.75rem;
+}
+
+.abbr-sheet-term {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-link);
+}
+
+.abbr-sheet-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    border-bottom: none;
+  }
+}
+
+.abbr-sheet-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  font-weight: 300;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
