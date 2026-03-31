@@ -4,7 +4,7 @@ page_id: blog
 lang: en
 title: Blog
 permalink: /blog/
-description: "Practical tips, inspiration, and advice from the world of technology, productivity, and personal development—for anyone who wants to improve their skills and lifestyle."
+description: "Personal blog of Daniel Hladik. Practical tips, inspiration, and advice from the world of technology, productivity, and personal development—for anyone who wants to improve their skills and lifestyle."
 pagination:
   enabled: true
 published: true

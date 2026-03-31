@@ -4,7 +4,7 @@ page_id: blog
 lang: cs
 title: Blog
 permalink: /blog/
-description: "Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl."
+description: "Osobní blog Daniela Hladíka. Praktické tipy, inspirace a rady ze světa technologií, produktivity a osobního rozvoje – pro každého, kdo chce zlepšit své dovednosti a životní styl."
 pagination:
   enabled: true
 published: true
