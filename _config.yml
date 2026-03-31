@@ -6,14 +6,14 @@ title:
   cs: Daniel Hladík
   en: Daniel Hladik
 description:
-  cs: Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI & Automation | QA | Tvorba webových aplikací
-  en: I help companies and individuals get rid of routines that don't add value |AI & Automation | QA | Building web apps
+  cs: Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI & Automation | n8n | Tvorba webových aplikací
+  en: I help companies and individuals get rid of routines that don't add value | AI & Automation | n8n | Building web apps
 taglong:
-  cs: Automation Engineer
-  en: Automation Engineer
+  cs: AI Automation Engineer
+  en: AI Automation Engineer
 tagshort:
-  cs: automation engineer
-  en: automation engineer
+  cs: AI Automation Engineer
+  en: AI Automation Engineer
 
 baseurl: ""
 url: https://daniel-hladik.cz
@@ -25,7 +25,7 @@ remote_theme: piazzai/cvless
 # ----------------------------------------------------------
 
 alert: # Message in the alert has to be setup in the language files (_data)
-  enabled: false # Visibility of alert message (true/false) 
+  enabled: true # Visibility of alert message (true/false) 
   type: "notice" # Type of alert (notice, warning, error)
   dismissable: true  # Possibility to hide alert by the user (true/false)
 
