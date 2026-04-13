@@ -3,7 +3,7 @@ layout: home
 page_id: home
 lang: en
 title: Daniel Hladík - AI Automation Engineer
-description: I make automation meaningful. I help companies and individuals get rid of routines that don't add value | AI & Automation | n8n | Web application development
+description: I make automation meaningful. I help companies and individuals get rid of routines that don't add value | AI & Automation | n8n |
 image: /assets/files/photo.png
 permalink: /
 canonical: false

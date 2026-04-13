@@ -3,7 +3,7 @@ layout: home
 page_id: home
 lang: cs
 title: Daniel Hladík - AI Automation Engineer
-description: Dávám automatizacím smysl. Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI & Automation | n8n | Tvorba webových aplikací
+description: Dávám automatizacím smysl. Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI & Automation | n8n |
 image: /assets/files/photo.png
 permalink: /
 canonical: false
