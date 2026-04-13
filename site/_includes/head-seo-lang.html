@@ -209,6 +209,11 @@
   <meta name="twitter:description" content="{{ og_description }}">
   <!-- JSON-LD PAGE START -->
   {% if page.layout == "home" %}
+  {% if lang == site.default_lang %}
+    {% assign home_url = site.url | append: '/' %}
+  {% else %}
+    {% assign home_url = site.url | append: '/' | append: lang | append: '/' %}
+  {% endif %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -227,6 +232,33 @@
       "https://www.linkedin.com/in/{{ site.social.linkedin }}"
     ],
     "knowsAbout": ["AI", "n8n", "automation", "RAG", "web development", "AI agents", "QA testing"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title[lang] }}",
+    "url": "{{ home_url }}",
+    "inLanguage": "{{ trans.general.locale }}"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": [
+      "{{ trans.footer.services }}",
+      "{{ trans.footer.use_cases }}",
+      "{{ trans.footer.blog }}",
+      "{{ trans.footer.contact }}"
+    ],
+    "url": [
+      "{{ home_url }}services/",
+      "{{ home_url }}use-cases/",
+      "{{ home_url }}blog/",
+      "{{ home_url }}contact/"
+    ]
   }
   </script>
   {% else %}
