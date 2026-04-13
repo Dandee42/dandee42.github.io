@@ -57,16 +57,23 @@
   <meta property="twitter:title" content="Employee Onboarding Automation · Daniel Hladik">
   <meta name="twitter:description" content="A digital onboarding process that guides a new employee from contract signing to day one — without paperwork and manual handoffs.">
 
-  <!-- JSON-LD PAGE START -->
+  <!-- JSON-LD SERVICE START -->
+  
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Employee Onboarding Automation",
     "provider": {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "name": "Daniel Hladik",
-      "url": "https://daniel-hladik.cz",
+      "url": "https://daniel-hladik.cz/en/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Praha 6",
+        "addressCountry": "CZ"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/daniel-hladik"
       ]
@@ -74,10 +81,28 @@
     "name": "Employee Onboarding Automation",
     "url": "https://daniel-hladik.cz/en/use-cases/employee-onboarding/",
     "description": "A digital onboarding process that guides a new employee from contract signing to day one — without paperwork and manual handoffs.",
-    "inLanguage": "en_US"
+    "inLanguage": "en_US",
+    "areaServed": {
+      "@type": "Country",
+      "name": "CZ"
+    }
   }
   </script>
-  <!-- JSON-LD PAGE END -->
+  <!-- JSON-LD SERVICE END -->
+
+  <!-- JSON-LD BREADCRUMB START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://daniel-hladik.cz/en/" },
+      { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://daniel-hladik.cz/en/use-cases/" },
+      { "@type": "ListItem", "position": 3, "name": "Employee Onboarding Automation" }
+    ]
+  }
+  </script>
+  <!-- JSON-LD BREADCRUMB END -->
 
 
   
@@ -324,7 +349,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-13T10:03:27+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T11:02:34+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
