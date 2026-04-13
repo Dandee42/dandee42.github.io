@@ -123,6 +123,163 @@
 <link rel="alternate" type="application/rss+xml" title="Daniel Hladík - RSS (cs)" href="https://daniel-hladik.cz/feed.xml" />
 
 
+  
+
+
+<!-- Google Consent Mode v2: výchozí stav = zamítnuto -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-5FNL9M65H0', { 'anonymize_ip': true });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FNL9M65H0"></script>
+
+<!-- Cookie modal -->
+<style>
+  #cookie-overlay {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10001;
+    width: calc(100% - 2rem);
+    max-width: 600px;
+  }
+  #cookie-overlay.d-none { display: none !important; }
+
+  #cookie-banner {
+    font-family: var(--type-serif);
+    background: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+  #cookie-banner h2 {
+    font-family: var(--type-serif);
+    color: var(--color-heading);
+    font-size: var(--type-size);
+    font-weight: 600;
+    margin: 0 0 .6rem;
+  }
+  #cookie-banner p {
+    margin: 0 0 1.25rem;
+    font-size: var(--type-size);
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+  #cookie-banner a {
+    color: var(--color-text);
+    font-weight: bold;
+  }
+  #cookie-banner a:hover {
+    border-bottom: none;
+  }
+
+  #cookie-banner .link-policy {
+    display: block;
+    text-align: right;
+    margin-top: .5rem;
+    font-size: calc(var(--type-size) * 0.85);
+    color: var(--color-text);
+  }
+
+  #cookie-banner .cookie-actions {
+    display: flex;
+    gap: .5rem;
+  }
+  #cookie-banner .cookie-actions button {
+    flex: 1;
+  }
+  #cookie-banner button {
+    font-family: var(--type-serif);
+    font-size: var(--type-size);
+    padding: .4rem 1.5rem;
+    border-radius: 12px;
+    border: solid 2px var(--color-text);
+    cursor: pointer;
+    transition: background-color .15s, color .15s, box-shadow .15s;
+  }
+  #cookie-decline {
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+  }
+  #cookie-decline:hover {
+    background: var(--color-button-background-hover);
+    color: var(--color-button-text-hover);
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+  #cookie-accept {
+    background: var(--color-button-background-hover);
+    color: var(--color-button-text-hover);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+  #cookie-accept:hover {
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+</style>
+
+<div id="cookie-overlay" class="d-none">
+  <div id="cookie-banner">
+    <h2>🍪 Pár slov o cookies</a></h2>
+    <p>
+      
+        Tento web používá soubory <a href="/cookie-policy/">cookies</a> k analýze návštěvnosti a zlepšování uživatelského zážitku. Data o tom, jak web používáte, mi pomáhají dělat ho lepším. Cookies jsou nastaveny pouze s vaším souhlasem.
+      
+    </p>
+    <div class="cookie-actions">
+      <button id="cookie-decline">Odmítnout</button>
+      <button id="cookie-accept">Souhlasím</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var COOKIE_KEY = 'ga_consent';
+    var overlay = document.getElementById('cookie-overlay');
+    var consent = localStorage.getItem(COOKIE_KEY);
+
+    function showBanner() {
+      overlay.classList.remove('d-none');
+    }
+
+    function hideBanner() {
+      overlay.classList.add('d-none');
+    }
+
+    function grantConsent() {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      localStorage.setItem(COOKIE_KEY, 'granted');
+      hideBanner();
+    }
+
+    function denyConsent() {
+      gtag('consent', 'update', { 'analytics_storage': 'denied' });
+      localStorage.setItem(COOKIE_KEY, 'denied');
+      hideBanner();
+    }
+
+    if (consent === 'granted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    } else if (consent === null) {
+      showBanner();
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', grantConsent);
+    document.getElementById('cookie-decline').addEventListener('click', denyConsent);
+  })();
+</script>
+
+
   <script>
     (function () {
       var theme = sessionStorage.getItem('theme');
@@ -374,7 +531,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-13T11:31:15+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T13:43:15+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
