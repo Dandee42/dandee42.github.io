@@ -58,6 +58,13 @@
   <meta name="twitter:description" content="{{ og_description }}">
 
   <!-- JSON-LD POST START -->
+  {% if lang == site.default_lang %}
+    {% assign home_url = site.url | append: '/' %}
+    {% assign blog_url = site.url | append: '/blog/' %}
+  {% else %}
+    {% assign home_url = site.url | append: '/' | append: lang | append: '/' %}
+    {% assign blog_url = site.url | append: '/' | append: lang | append: '/blog/' %}
+  {% endif %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -80,11 +87,25 @@
     "publisher": {
       "@type": "Organization",
       "name": "{{ site.title[lang] }}",
-      "url": "{{ site.url }}"
+      "url": "{{ home_url }}"
     }
   }
   </script>
   <!-- JSON-LD POST END -->
+
+  <!-- JSON-LD BREADCRUMB START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "{{ trans.footer.home }}", "item": "{{ home_url }}" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ blog_url }}" },
+      { "@type": "ListItem", "position": 3, "name": "{{ page.title | escape }}" }
+    ]
+  }
+  </script>
+  <!-- JSON-LD BREADCRUMB END -->
 
 {% elsif page.type == "service" or page.type == "use-case" %}
   <!-- SERVICE / USE-CASE PAGE -->
@@ -105,16 +126,35 @@
   <meta property="twitter:title" content="{{ og_title }} · {{ site.title[lang] }}">
   <meta name="twitter:description" content="{{ og_description }}">
 
-  <!-- JSON-LD PAGE START -->
+  <!-- JSON-LD SERVICE START -->
+  {% if page.type == "service" %}
+    {% assign section_name = trans.footer.services %}
+    {% assign section_path = '/services/' %}
+  {% else %}
+    {% assign section_name = trans.footer.use_cases %}
+    {% assign section_path = '/use-cases/' %}
+  {% endif %}
+  {% if lang == site.default_lang %}
+    {% assign home_url = site.url | append: '/' %}
+    {% assign section_url = site.url | append: section_path %}
+  {% else %}
+    {% assign home_url = site.url | append: '/' | append: lang | append: '/' %}
+    {% assign section_url = site.url | append: '/' | append: lang | append: section_path %}
+  {% endif %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "{{ og_title | escape }}",
     "provider": {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "name": "{{ site.title[lang] | escape }}",
-      "url": "{{ site.url | append: site.baseurl }}",
+      "url": "{{ home_url }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ site.address }}",
+        "addressCountry": "CZ"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/{{ site.social.linkedin }}"
       ]
@@ -122,10 +162,28 @@
     "name": "{{ og_title | escape }}",
     "url": "{{ full_url }}",
     "description": "{{ og_description }}",
-    "inLanguage": "{{ trans.general.locale }}"
+    "inLanguage": "{{ trans.general.locale }}",
+    "areaServed": {
+      "@type": "Country",
+      "name": "CZ"
+    }
   }
   </script>
-  <!-- JSON-LD PAGE END -->
+  <!-- JSON-LD SERVICE END -->
+
+  <!-- JSON-LD BREADCRUMB START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "{{ trans.footer.home }}", "item": "{{ home_url }}" },
+      { "@type": "ListItem", "position": 2, "name": "{{ section_name | escape }}", "item": "{{ section_url }}" },
+      { "@type": "ListItem", "position": 3, "name": "{{ og_title | escape }}" }
+    ]
+  }
+  </script>
+  <!-- JSON-LD BREADCRUMB END -->
 
 {% else %}
   <!-- PAGE -->
@@ -150,6 +208,28 @@
   <meta property="twitter:title" content="{{ og_page_title }}">
   <meta name="twitter:description" content="{{ og_description }}">
   <!-- JSON-LD PAGE START -->
+  {% if page.layout == "home" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "{{ site.title[lang] }}",
+    "url": "{{ full_url }}",
+    "description": "{{ site.description[lang] | escape }}",
+    "image": "{{ site.url }}/{{ site.photo }}",
+    "email": "{{ site.author.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.address }}",
+      "addressCountry": "CZ"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/{{ site.social.linkedin }}"
+    ],
+    "knowsAbout": ["AI", "n8n", "automation", "RAG", "web development", "AI agents", "QA testing"]
+  }
+  </script>
+  {% else %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -164,6 +244,7 @@
     }
   }
   </script>
+  {% endif %}
   <!-- JSON-LD PAGE END -->
 
 {% endif %}
