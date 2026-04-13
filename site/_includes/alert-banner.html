@@ -2,6 +2,7 @@
 
 {% if site.alert.enabled and page.title != "404" and page.type != "form success" %}
   <div class="alert-banner alert-{{ site.alert.type }}" {% unless site.alert.dismissable %}data-non-dismissible{% endunless %}>
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         {% if site.alert.type == "notice" %}
@@ -16,7 +17,7 @@
     <span class="alert-text">{{ trans.general.alert.message }}</span>
 
     {% if site.alert.dismissable %}
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     {% endif %}
