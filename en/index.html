@@ -112,6 +112,7 @@
 
 
   <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         
@@ -122,7 +123,7 @@
     <span class="alert-text">Open to new work opportunities! <a href="#contact-form">Contact me</a></span>
 
     
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     
@@ -178,6 +179,7 @@
 <script src="/assets/js/side-image.js" defer=""></script>
 
 <h2 id="im-daniel-and-i-make-automation-meaningful">I’m Daniel, and I make automation meaningful</h2>
+
 <p>My path to the world of IT did not lead through university lecture halls, but through real-world <strong>experience in e-commerce</strong> and <strong>online marketing</strong>. It was there that I realized that the biggest obstacle to growth is not a lack of ideas, but getting bogged down in routine tasks.</p>
 
 <p>These days, I remove these obstacles. I combine analytical thinking with technical skills to <strong>create systems that work for you</strong>.</p>
@@ -214,27 +216,7 @@
   
 
   
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">terminal</span>
-      <div class="service-title">
-        <h3><a href="/en/services/web-app-development/">Custom Web Apps Development</a></h3>
-      </div>
-      <p class="service-description">When no-code hits its limits, custom code takes over. I build reliable web app solutions and internal tools in Python.</p>
-      <a class="service-link" href="/en/services/web-app-development/">Find out more</a>
-    </li>
-  
 
-  
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">smart_toy</span>
-      <div class="service-title">
-        <h3><a href="/en/services/ai-agents/">Custom AI Agents</a></h3>
-      </div>
-      <p class="service-description">I build autonomous AI agents and multi-agent systems that think, plan, and act on your behalf.</p>
-      <a class="service-link" href="/en/services/ai-agents/">Find out more</a>
-    </li>
   
 
   
@@ -249,16 +231,6 @@
     </li>
   
 
-  
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">electric_bolt</span>
-      <div class="service-title">
-        <h3><a href="/en/services/vibecoding/">Vibecoding — Rapid AI-Assisted Development</a></h3>
-      </div>
-      <p class="service-description">I use AI tools like Claude Code and Cursor to build working prototypes and MVPs in a fraction of the usual time.</p>
-      <a class="service-link" href="/en/services/vibecoding/">Find out more</a>
-    </li>
   
 
   
@@ -275,7 +247,9 @@
 
 </ul>
 
-<p><a href="/en/services/">More about my services →</a></p>
+<!--
+[More about my services →](/services/)
+-->
 
 <div class="post-homepage-banner">
   <h2 class="post-homepage-banner-title">Read my latest posts</h2>
@@ -454,7 +428,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-31T19:41:04+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T09:38:15+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

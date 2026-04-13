@@ -112,6 +112,7 @@
 
 
   <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         
@@ -122,7 +123,7 @@
     <span class="alert-text">Open to new work opportunities! <a href="#contact-form">Contact me</a></span>
 
     
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     
@@ -197,27 +198,7 @@ I believe that the most important question is not 'how' to create something, but
   
 
   
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">terminal</span>
-      <div class="service-title">
-        <h2><a href="https://daniel-hladik.cz/en/services/web-app-development">Custom Web Apps Development</a></h2>
-      </div>
-      <p class="service-description">When no-code hits its limits, custom code takes over. I build reliable web app solutions and internal tools in Python.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/services/web-app-development">Find out more</a>
-    </li>
-  
 
-  
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">smart_toy</span>
-      <div class="service-title">
-        <h2><a href="https://daniel-hladik.cz/en/services/ai-agents">Custom AI Agents</a></h2>
-      </div>
-      <p class="service-description">I build autonomous AI agents and multi-agent systems that think, plan, and act on your behalf.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/services/ai-agents">Find out more</a>
-    </li>
   
 
   
@@ -233,16 +214,6 @@ I believe that the most important question is not 'how' to create something, but
   
 
   
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">electric_bolt</span>
-      <div class="service-title">
-        <h2><a href="https://daniel-hladik.cz/en/services/vibecoding">Vibecoding — Rapid AI-Assisted Development</a></h2>
-      </div>
-      <p class="service-description">I use AI tools like Claude Code and Cursor to build working prototypes and MVPs in a fraction of the usual time.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/services/vibecoding">Find out more</a>
-    </li>
-  
 
   
 
@@ -257,10 +228,11 @@ I believe that the most important question is not 'how' to create something, but
   
 
 </ul>
-
+<!--
 <hr>
 <p>Services describe what I do. But curious how it looks in practice? I've put together a list of specific business problems — with a description of exactly what I automate and what impact it has.</p>
 <p><a href="/en/use-cases/">Browse specific solutions</a></p>
+-->
   </main>
 </article>
 <footer>
@@ -389,7 +361,7 @@ I believe that the most important question is not 'how' to create something, but
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-31T19:41:04+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T09:38:15+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

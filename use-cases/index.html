@@ -112,6 +112,7 @@
 
 
   <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         
@@ -122,7 +123,7 @@
     <span class="alert-text">Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a></span>
 
     
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     
@@ -181,138 +182,21 @@ Každá firma má jiné procesy, ale problémy se opakují. Tady najdete konkré
 <ul class="services-list">
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">receipt_long</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/invoice-processing">
-        <h2>Automatizace zpracování faktur</h2>
-      </a>
-      <p class="service-description">Zbavte se ručního přepisování faktur. Pomocí AI a automatizace zpracuji příchozí faktury, ověřím údaje a zapíšu je do vašeho účetního systému.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/invoice-processing">
-        Zjistit více
-      </a>
-    </li>
+
   
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">support_agent</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/customer-support-chatbot">
-        <h2>AI Chatbot pro zákaznickou podporu</h2>
-      </a>
-      <p class="service-description">Chatbot, který odpovídá z vašich reálných dat — manuálů, FAQ a historie objednávek. Bez halucinací, s přesnými zdroji.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/customer-support-chatbot">
-        Zjistit více
-      </a>
-    </li>
+
   
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">bar_chart</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/automated-reporting">
-        <h2>Automatický reporting z dat</h2>
-      </a>
-      <p class="service-description">Pravidelné reporty z Google Analytics, CRM, databáze nebo tabulek — připravené a odeslané automaticky bez ručního kopírování dat.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/automated-reporting">
-        Zjistit více
-      </a>
-    </li>
+
   
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">mark_email_read</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/ai-email-management">
-        <h2>AI správa a třídění e-mailů</h2>
-      </a>
-      <p class="service-description">AI agent, který čte váš inbox, třídí e-maily podle priority a tématu, navrhuje odpovědi a předává úkoly do vašeho systému.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/ai-email-management">
-        Zjistit více
-      </a>
-    </li>
-  
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">contacts</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/crm-automation">
-        <h2>CRM automatizace a lead enrichment</h2>
-      </a>
-      <p class="service-description">Automatické doplňování CRM dat, scoring leadů a notifikace obchodníků — bez ručního zadávání a procházení LinkedIn.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/crm-automation">
-        Zjistit více
-      </a>
-    </li>
-  
 
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">menu_book</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/internal-documentation-chatbot">
-        <h2>Chatbot pro interní dokumentaci a firemní wiki</h2>
-      </a>
-      <p class="service-description">AI chatbot, který odpoví zaměstnancům z vašich interních dokumentů, směrnic, příruček a wiki — okamžitě a přesně.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/internal-documentation-chatbot">
-        Zjistit více
-      </a>
-    </li>
-  
-
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">description</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/quote-generation">
-        <h2>Automatické generování nabídek a smluv</h2>
-      </a>
-      <p class="service-description">AI agent, který sestaví cenovou nabídku nebo smlouvu z dat v CRM nebo formuláře — v minutách místo hodin.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/quote-generation">
-        Zjistit více
-      </a>
-    </li>
-  
-
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">person_add</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/employee-onboarding">
-        <h2>Automatizace onboardingu zaměstnanců</h2>
-      </a>
-      <p class="service-description">Digitální onboarding, který nového zaměstnance provede od podpisu smlouvy po první pracovní den — bez zbytečného papírování a ručního předávání informací.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/employee-onboarding">
-        Zjistit více
-      </a>
-    </li>
-  
-
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">reviews</span>
-      <a class="service-title" href="https://daniel-hladik.cz/use-cases/feedback-analysis">
-        <h2>AI analýza zákaznické zpětné vazby</h2>
-      </a>
-      <p class="service-description">Automatická analýza recenzí, hodnocení a zákaznických průzkumů pomocí AI — s přehledem trendů, sentimentu a konkrétních problémů.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/use-cases/feedback-analysis">
-        Zjistit více
-      </a>
-    </li>
   
 
   
@@ -462,7 +346,7 @@ Každá firma má jiné procesy, ale problémy se opakují. Tady najdete konkré
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-31T19:41:03+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T09:38:14+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

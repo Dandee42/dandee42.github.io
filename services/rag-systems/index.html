@@ -118,6 +118,7 @@
 
 
   <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         
@@ -128,7 +129,7 @@
     <span class="alert-text">Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a></span>
 
     
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     
@@ -181,7 +182,6 @@
   <li><strong>Interní znalostní báze:</strong> Zaměstnanci se ptají systému místo procházení stohu dokumentů.</li>
   <li><strong>Zákaznická podpora:</strong> Chatbot, který odpovídá z vašich manuálů a FAQ s přesností a zdrojem.</li>
   <li><strong>Analýza dokumentů:</strong> Rychlé hledání v právních smlouvách, technické dokumentaci nebo výzkumných zprávách.</li>
-  <li><strong>Vektorové databáze:</strong> Implementace Qdrant, Chroma nebo Pinecone pro efektivní sémantické vyhledávání.</li>
 </ul>
 
 
@@ -189,6 +189,41 @@
 <p><a href="https://zapti.me/daniel-hladik/konzultace-zdarma">Chci konzultaci ZDARMA</a></p>
 
 <p><a href="#contact-form">Chci AI nad svými daty</a></p>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+    <div class="post-homepage-banner">
+      <h2 class="post-homepage-banner-title">Související články</h2>
+      <ul class="latest-posts">
+        
+          <li class="latest-post">
+            <a class="post-title" href="/blog/rag-ai-agent-in-website/">Jak přidat agentního AI chatbota na svůj web (RAG návod)</a>
+            
+              <span class="post-lead">
+                Chcete si na svůj web přidat chatbota, který posílá emaily, domlouvá schůzky a zná celý váš web nazpaměť? Přečtěte si více v článku.
+                
+                  &mdash; <span class="reading-time">7 min čtení</span>
+                
+              </span>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+
+
   </main>
 </article>
 <footer>
@@ -314,7 +349,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-31T19:41:03+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T09:38:14+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
