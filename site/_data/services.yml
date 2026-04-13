@@ -6,6 +6,8 @@
   show_in_list: true
   image:
   icon: all_inclusive
+  related_posts:
+  related_use_cases:
   lang:
     cs:
       title: "Inteligentní automatizace (n8n & AI)"
@@ -46,6 +48,8 @@
   show_in_list: false
   image:
   icon: verified_user
+  related_posts:
+  related_use_cases:
   lang:
     cs:
       title: "Automatizované testování (QA)"
@@ -81,9 +85,12 @@
   slug: web-app-development
   date: 2026-01-25 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: terminal
+  related_posts:
+    - bodylog-app
+  related_use_cases:
   lang:
     cs:
       title: "Vývoj webových aplikací na míru"
@@ -119,9 +126,11 @@
   slug: ai-agents
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: smart_toy
+  related_posts:
+  related_use_cases:
   lang:
     cs:
       title: "AI Agenti na míru"
@@ -162,6 +171,9 @@
   show_in_list: true
   image:
   icon: manage_search
+  related_posts:
+    - rag-chat-web
+  related_use_cases:
   lang:
     cs:
       title: "RAG systémy — AI nad vašimi daty"
@@ -175,7 +187,6 @@
           <li><strong>Interní znalostní báze:</strong> Zaměstnanci se ptají systému místo procházení stohu dokumentů.</li>
           <li><strong>Zákaznická podpora:</strong> Chatbot, který odpovídá z vašich manuálů a FAQ s přesností a zdrojem.</li>
           <li><strong>Analýza dokumentů:</strong> Rychlé hledání v právních smlouvách, technické dokumentaci nebo výzkumných zprávách.</li>
-          <li><strong>Vektorové databáze:</strong> Implementace Qdrant, Chroma nebo Pinecone pro efektivní sémantické vyhledávání.</li>
         </ul>
       contact_link: "Chci AI nad svými daty"
     en:
@@ -190,7 +201,6 @@
           <li><strong>Internal knowledge base:</strong> Employees ask the system instead of digging through stacks of documents.</li>
           <li><strong>Customer support:</strong> A chatbot that answers from your manuals and FAQ with accuracy and source citations.</li>
           <li><strong>Document analysis:</strong> Fast search through legal contracts, technical documentation, or research reports.</li>
-          <li><strong>Vector databases:</strong> Implementation of Qdrant, Chroma, or Pinecone for efficient semantic search.</li>
         </ul>
       contact_link: "I want AI over my data"
 
@@ -199,9 +209,12 @@
   slug: vibecoding
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: electric_bolt
+  related_posts:
+    - bodylog-app
+  related_use_cases:
   lang:
     cs:
       title: "Vibecoding — Rapidní vývoj s AI"
@@ -246,6 +259,8 @@
   show_in_list: false
   image:
   icon: all_inclusive
+  related_posts:
+  related_use_cases:
   lang:
     cs:
       title: "Inteligentní automatizace (n8n & AI) — Praha"
@@ -288,6 +303,8 @@
   show_in_list: false
   image:
   icon: verified_user
+  related_posts:
+  related_use_cases:
   lang:
     cs:
       title: "Automatizované testování (QA) — Praha"
@@ -326,6 +343,9 @@
   show_in_list: false
   image:
   icon: terminal
+  related_posts:
+    - bodylog-app
+  related_use_cases:
   lang:
     cs:
       title: "Vývoj webových aplikací na míru — Praha"
@@ -364,6 +384,8 @@
   show_in_list: false
   image:
   icon: smart_toy
+  related_posts:
+  related_use_cases:
   lang:
     cs:
       title: "AI Agenti na míru — Praha"
@@ -404,6 +426,9 @@
   show_in_list: false
   image:
   icon: manage_search
+  related_posts:
+    - rag-chat-web
+  related_use_cases:
   lang:
     cs:
       title: "RAG systémy — AI nad vašimi daty | Praha"
@@ -444,6 +469,9 @@
   show_in_list: false
   image:
   icon: electric_bolt
+  related_posts:
+    - bodylog-app
+  related_use_cases:
   lang:
     cs:
       title: "Vibecoding — Rapidní vývoj s AI | Praha"

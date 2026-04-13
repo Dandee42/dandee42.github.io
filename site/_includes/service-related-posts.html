@@ -1,0 +1,32 @@
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+{% if page.related_posts and page.related_posts.size > 0 %}
+  {% assign matched_posts = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.lang == lang and page.related_posts contains post.page_id %}
+      {% assign matched_posts = matched_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+
+  {% if matched_posts.size > 0 %}
+    <div class="post-homepage-banner">
+      <h2 class="post-homepage-banner-title">{{ trans.blog.related_posts }}</h2>
+      <ul class="latest-posts">
+        {% for post in matched_posts %}
+          <li class="latest-post">
+            <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% if post.lead %}
+              <span class="post-lead">
+                {{ post.lead }}
+                {% if post.reading_time %}
+                  &mdash; <span class="reading-time">{{ post.reading_time }} {{ trans.blog.reading_time }}</span>
+                {% endif %}
+              </span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endif %}
