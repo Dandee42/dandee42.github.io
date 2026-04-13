@@ -71,7 +71,7 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2026-01-16T00:00:00+00:00",
-    "dateModified": "2026-04-13T13:48:02+00:00",
+    "dateModified": "2026-04-13T14:06:51+00:00",
     "description": "Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.",
     "inLanguage": "cs_CZ",
     "headline": "BodyLog - Jak jsem si vytvořil svou první fitness apku",
@@ -948,7 +948,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-13T13:48:51+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T14:07:35+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -1050,8 +1050,17 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 (function () {
     var chatWindow = null;
+    var chatWasOpen = false;
     var styleObserver = new MutationObserver(function () {
-        document.body.classList.toggle('chat-open', chatWindow && chatWindow.style.display !== 'none');
+        var isOpen = chatWindow && chatWindow.style.display !== 'none';
+        document.body.classList.toggle('chat-open', isOpen);
+        if (isOpen && !chatWasOpen && typeof gtag === 'function') {
+            gtag('event', 'chat_opened', {
+                event_category: 'engagement',
+                event_label: 'n8n chat'
+            });
+        }
+        chatWasOpen = isOpen;
     });
 
     var domObserver = new MutationObserver(function () {
