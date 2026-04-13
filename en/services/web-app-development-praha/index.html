@@ -118,6 +118,7 @@
 
 
   <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         
@@ -128,7 +129,7 @@
     <span class="alert-text">Open to new work opportunities! <a href="#contact-form">Contact me</a></span>
 
     
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     
@@ -192,6 +193,41 @@
 <!-- Calendly link widget end -->
 
 <p><a href="#contact-form">Get a quote</a></p>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+    <div class="post-homepage-banner">
+      <h2 class="post-homepage-banner-title">Related posts</h2>
+      <ul class="latest-posts">
+        
+          <li class="latest-post">
+            <a class="post-title" href="/en/blog/bodylog-app/">BodyLog - How I created my first fitness app</a>
+            
+              <span class="post-lead">
+                The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.
+                
+                  &mdash; <span class="reading-time">6 min read</span>
+                
+              </span>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+
+
   </main>
 </article>
 <footer>
@@ -320,7 +356,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-31T19:42:55+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T09:48:40+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

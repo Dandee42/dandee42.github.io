@@ -112,6 +112,7 @@
 
 
   <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         
@@ -122,7 +123,7 @@
     <span class="alert-text">Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a></span>
 
     
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     
@@ -178,6 +179,7 @@
 <script src="/assets/js/side-image.js" defer=""></script>
 
 <h2 id="jsem-dan-a-dávám-automatizacím-smysl">Jsem Dan a dávám automatizacím smysl</h2>
+
 <p>Moje cesta k IT nevedla skrze univerzitní auly, ale skrze reálnou <strong>praxi v e-commerce</strong> a <strong>online marketingu</strong>. Právě tam jsem pochopil, že největší brzdou růstu není nedostatek nápadů, ale utápění se v rutinních úkolech.</p>
 
 <p>Dnes tyto brzdy odstraňuji. Kombinuji analytické myšlení s technickými dovednostmi, abych <strong>tvořil systémy, které pracují za vás</strong>.</p>
@@ -214,27 +216,7 @@
   
 
   
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">terminal</span>
-      <div class="service-title">
-        <h3><a href="/services/web-app-development/">Vývoj webových aplikací na míru</a></h3>
-      </div>
-      <p class="service-description">Když no-code narazí na své limity, přichází na řadu kód na míru. Stavím spolehlivá řešení v podobě menších aplikací a interní nástroje v Pythonu.</p>
-      <a class="service-link" href="/services/web-app-development/">Zjistit více</a>
-    </li>
-  
 
-  
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">smart_toy</span>
-      <div class="service-title">
-        <h3><a href="/services/ai-agents/">AI Agenti na míru</a></h3>
-      </div>
-      <p class="service-description">Stavím autonomní AI agenty a multi-agentní systémy, které myslí, plánují a jednají za vás.</p>
-      <a class="service-link" href="/services/ai-agents/">Zjistit více</a>
-    </li>
   
 
   
@@ -249,16 +231,6 @@
     </li>
   
 
-  
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">electric_bolt</span>
-      <div class="service-title">
-        <h3><a href="/services/vibecoding/">Vibecoding — Rapidní vývoj s AI</a></h3>
-      </div>
-      <p class="service-description">Využívám AI nástroje jako Claude Code a Cursor k vývoji funkčních prototypů a MVP v zlomku obvyklého času.</p>
-      <a class="service-link" href="/services/vibecoding/">Zjistit více</a>
-    </li>
   
 
   
@@ -275,7 +247,9 @@
 
 </ul>
 
-<p><a href="/services/">Více o službách →</a></p>
+<!--
+[Více o službách →](/services/)
+-->
 
 <div class="post-homepage-banner">
   <h2 class="post-homepage-banner-title">Přečtěte si moje poslední příspěvky</h2>
@@ -450,7 +424,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-31T19:42:55+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T09:48:39+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

@@ -112,6 +112,7 @@
 
 
   <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
     
     <span class="alert-icon">
         
@@ -122,7 +123,7 @@
     <span class="alert-text">Open to new work opportunities! <a href="#contact-form">Contact me</a></span>
 
     
-      <button class="alert-close" onclick="this.parentElement.style.display='none'">
+      <button class="alert-close">
         <span class="material-symbols-outlined">cancel</span>
       </button>
     
@@ -185,138 +186,21 @@ Every company has different processes, but the problems repeat. Here you'll find
 <ul class="services-list">
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">receipt_long</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/invoice-processing">
-        <h2>Invoice Processing Automation</h2>
-      </a>
-      <p class="service-description">Stop manually entering invoices. Using AI and automation, I process incoming invoices, verify data, and write them to your accounting system.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/invoice-processing">
-        Find out more
-      </a>
-    </li>
+
   
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">support_agent</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/customer-support-chatbot">
-        <h2>AI Chatbot for Customer Support</h2>
-      </a>
-      <p class="service-description">A chatbot that answers from your real data — manuals, FAQ, and order history. No hallucinations, with precise sources.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/customer-support-chatbot">
-        Find out more
-      </a>
-    </li>
+
   
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">bar_chart</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/automated-reporting">
-        <h2>Automated Data Reporting</h2>
-      </a>
-      <p class="service-description">Regular reports from Google Analytics, CRM, databases, or spreadsheets — prepared and sent automatically without manual data copying.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/automated-reporting">
-        Find out more
-      </a>
-    </li>
+
   
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">mark_email_read</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/ai-email-management">
-        <h2>AI Email Management and Sorting</h2>
-      </a>
-      <p class="service-description">An AI agent that reads your inbox, sorts emails by priority and topic, drafts replies, and forwards tasks to your system.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/ai-email-management">
-        Find out more
-      </a>
-    </li>
-  
 
   
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">contacts</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/crm-automation">
-        <h2>CRM Automation and Lead Enrichment</h2>
-      </a>
-      <p class="service-description">Automatic CRM data enrichment, lead scoring, and sales rep notifications — no manual entry or LinkedIn browsing.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/crm-automation">
-        Find out more
-      </a>
-    </li>
-  
 
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">menu_book</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/internal-documentation-chatbot">
-        <h2>Chatbot for Internal Documentation and Company Wiki</h2>
-      </a>
-      <p class="service-description">An AI chatbot that answers employees from your internal documents, policies, handbooks, and wiki — instantly and accurately.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/internal-documentation-chatbot">
-        Find out more
-      </a>
-    </li>
-  
-
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">description</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/quote-generation">
-        <h2>Automated Quote and Contract Generation</h2>
-      </a>
-      <p class="service-description">An AI agent that assembles a price quote or contract from CRM data or a form — in minutes instead of hours.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/quote-generation">
-        Find out more
-      </a>
-    </li>
-  
-
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">person_add</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/employee-onboarding">
-        <h2>Employee Onboarding Automation</h2>
-      </a>
-      <p class="service-description">A digital onboarding process that guides a new employee from contract signing to day one — without paperwork and manual handoffs.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/employee-onboarding">
-        Find out more
-      </a>
-    </li>
-  
-
-  
-    
-    
-    <li class="service-item">
-      <span class="material-symbols-outlined service-icon">reviews</span>
-      <a class="service-title" href="https://daniel-hladik.cz/en/use-cases/feedback-analysis">
-        <h2>AI Customer Feedback Analysis</h2>
-      </a>
-      <p class="service-description">Automatic analysis of reviews, ratings, and customer surveys using AI — with trend overviews, sentiment, and specific issue detection.</p>
-      <a class="service-link" href="https://daniel-hladik.cz/en/use-cases/feedback-analysis">
-        Find out more
-      </a>
-    </li>
   
 
   
@@ -469,7 +353,7 @@ Every company has different processes, but the problems repeat. Here you'll find
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-03-31T19:42:55+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T09:48:40+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
