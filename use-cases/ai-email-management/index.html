@@ -57,16 +57,23 @@
   <meta property="twitter:title" content="AI správa a třídění e-mailů · Daniel Hladík">
   <meta name="twitter:description" content="AI agent, který čte váš inbox, třídí e-maily podle priority a tématu, navrhuje odpovědi a předává úkoly do vašeho systému.">
 
-  <!-- JSON-LD PAGE START -->
+  <!-- JSON-LD SERVICE START -->
+  
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "AI správa a třídění e-mailů",
     "provider": {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "name": "Daniel Hladík",
-      "url": "https://daniel-hladik.cz",
+      "url": "https://daniel-hladik.cz/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Praha 6",
+        "addressCountry": "CZ"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/daniel-hladik"
       ]
@@ -74,10 +81,28 @@
     "name": "AI správa a třídění e-mailů",
     "url": "https://daniel-hladik.cz/use-cases/ai-email-management/",
     "description": "AI agent, který čte váš inbox, třídí e-maily podle priority a tématu, navrhuje odpovědi a předává úkoly do vašeho systému.",
-    "inLanguage": "cs_CZ"
+    "inLanguage": "cs_CZ",
+    "areaServed": {
+      "@type": "Country",
+      "name": "CZ"
+    }
   }
   </script>
-  <!-- JSON-LD PAGE END -->
+  <!-- JSON-LD SERVICE END -->
+
+  <!-- JSON-LD BREADCRUMB START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://daniel-hladik.cz/" },
+      { "@type": "ListItem", "position": 2, "name": "Řešení", "item": "https://daniel-hladik.cz/use-cases/" },
+      { "@type": "ListItem", "position": 3, "name": "AI správa a třídění e-mailů" }
+    ]
+  }
+  </script>
+  <!-- JSON-LD BREADCRUMB END -->
 
 
   
@@ -317,7 +342,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-13T10:02:45+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T11:01:35+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
