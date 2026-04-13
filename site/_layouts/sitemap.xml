@@ -18,7 +18,9 @@ layout: null
           {%- elsif clean_url contains '/services/' -%}
             <lastmod>{{ "now" | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
           {%- endif -%}
-          {%- if clean_url == '/' or clean_url == '/en/' -%}
+          {%- if node.sitemap_priority -%}
+            <changefreq>monthly</changefreq><priority>{{ node.sitemap_priority }}</priority>
+          {%- elsif clean_url == '/' or clean_url == '/en/' -%}
             <changefreq>weekly</changefreq><priority>1.0</priority>
           {%- elsif clean_url == '/blog/' -%}
             <changefreq>weekly</changefreq><priority>0.9</priority>
@@ -58,7 +60,9 @@ layout: null
           {%- elsif clean_url contains '/services/' -%}
             <lastmod>{{ "now" | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
           {%- endif -%}
-          {%- if clean_url == '/' or clean_url == '/en/' -%}
+          {%- if node.sitemap_priority -%}
+            <changefreq>monthly</changefreq><priority>{{ node.sitemap_priority }}</priority>
+          {%- elsif clean_url == '/' or clean_url == '/en/' -%}
             <changefreq>weekly</changefreq><priority>1.0</priority>
           {%- elsif clean_url == '/blog/' -%}
             <changefreq>weekly</changefreq><priority>0.9</priority>
