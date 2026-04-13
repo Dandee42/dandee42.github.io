@@ -3,7 +3,7 @@
   slug: invoice-processing
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: receipt_long
   lang:
@@ -45,7 +45,7 @@
   slug: customer-support-chatbot
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: support_agent
   lang:
@@ -87,7 +87,7 @@
   slug: automated-reporting
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: bar_chart
   lang:
@@ -129,7 +129,7 @@
   slug: ai-email-management
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: mark_email_read
   lang:
@@ -171,7 +171,7 @@
   slug: crm-automation
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: contacts
   lang:
@@ -213,7 +213,7 @@
   slug: internal-documentation-chatbot
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: menu_book
   lang:
@@ -255,7 +255,7 @@
   slug: quote-generation
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: description
   lang:
@@ -297,7 +297,7 @@
   slug: employee-onboarding
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: person_add
   lang:
@@ -339,7 +339,7 @@
   slug: feedback-analysis
   date: 2026-02-21 +01:00
   published: true
-  show_in_list: true
+  show_in_list: false
   image:
   icon: reviews
   lang:

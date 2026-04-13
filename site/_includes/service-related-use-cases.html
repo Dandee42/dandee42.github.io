@@ -1,0 +1,27 @@
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+{% if page.related_use_cases and page.related_use_cases.size > 0 %}
+  {% assign matched_use_cases = "" | split: "" %}
+  {% for use_case in site.data.use_cases %}
+    {% if page.related_use_cases contains use_case.page_id %}
+      {% assign matched_use_cases = matched_use_cases | push: use_case %}
+    {% endif %}
+  {% endfor %}
+
+  {% if matched_use_cases.size > 0 %}
+    <div class="post-homepage-banner">
+      <h2 class="post-homepage-banner-title">{{ trans.datapages_use_cases.related_use_cases }}</h2>
+      <ul class="latest-posts">
+        {% for use_case in matched_use_cases %}
+          <li class="latest-post">
+            <a class="post-title" href="{{ '/use-cases/' | append: use_case.slug | append: '/' | relative_url }}">{{ use_case.lang[lang].title }}</a>
+            {% if use_case.lang[lang].description %}
+              <span class="post-lead">{{ use_case.lang[lang].description }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endif %}
