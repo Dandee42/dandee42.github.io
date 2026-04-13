@@ -617,7 +617,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-13T13:47:59+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-13T14:05:17+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -761,8 +761,17 @@
 <script>
 (function () {
     var chatWindow = null;
+    var chatWasOpen = false;
     var styleObserver = new MutationObserver(function () {
-        document.body.classList.toggle('chat-open', chatWindow && chatWindow.style.display !== 'none');
+        var isOpen = chatWindow && chatWindow.style.display !== 'none';
+        document.body.classList.toggle('chat-open', isOpen);
+        if (isOpen && !chatWasOpen && typeof gtag === 'function') {
+            gtag('event', 'chat_opened', {
+                event_category: 'engagement',
+                event_label: 'n8n chat'
+            });
+        }
+        chatWasOpen = isOpen;
     });
 
     var domObserver = new MutationObserver(function () {
