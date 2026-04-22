@@ -6,7 +6,7 @@
   <title>
     {% if page.layout == "home" %}
     {{ page.title }}
-    {% elsif page.type == "service" or page.type == "use-case" %}
+    {% elsif page.type == "service" or page.type == "use-case" or page.type == "glossary" %}
     {{ page.lang[lang].title }} &middot; {{ site.title[lang] }}
     {% else %}
     {{ page.title }} &middot; {{ site.title[lang] }}

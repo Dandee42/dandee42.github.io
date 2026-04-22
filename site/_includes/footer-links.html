@@ -1,7 +1,8 @@
 {% assign trans = site.data[site.active_lang] %}
 <p class="footer-links">
-    <a href="{{ '/' | relative_url }}"  aria-label="Home">{{ trans.footer.home }}</a>
-    <a href="{{ '/cv/' | relative_url }}" aria-label="Curriculum vitae">CV</a>
-    <a href="{{ '/services/' | relative_url }}" aria-label="{{ trans.footer.services }}">{{ trans.footer.services }}</a>
-    <a href="{{ '/blog/' | relative_url }}" aria-label="Blog">Blog</a>
+  <a href="{{ '/' | relative_url }}" aria-label="Home">{{ trans.footer.home }}</a>
+  <a href="{{ '/cv/' | relative_url }}" aria-label="Curriculum vitae">CV</a>
+  <a href="{{ '/services/' | relative_url }}" aria-label="{{ trans.footer.services }}">{{ trans.footer.services }}</a>
+  <a href="{{ '/glossary/' | relative_url }}" aria-label="{{ trans.footer.glossary }}">{{ trans.footer.glossary }}</a>
+  <a href="{{ '/blog/' | relative_url }}" aria-label="Blog">Blog</a>
 </p>

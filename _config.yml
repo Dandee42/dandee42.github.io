@@ -107,6 +107,12 @@ page_gen:
     dir: 'use-cases'
     filter: published
     lang: lang
+  - data: 'glossary'
+    template: 'glossary-term'
+    name: 'slug'
+    dir: 'glossary'
+    filter: published
+    lang: lang
 
 # ----------------------------------------------------------
 # AUTOPAGES (CATEGORIES, TAGS)
