@@ -1,0 +1,185 @@
+---
+layout: page
+---
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+<h1>{{ trans.datapages_glossary.h1 }}</h1>
+<p>{{ trans.datapages_glossary.lead }}</p>
+
+<!-- Search input -->
+<div class="glossary-search">
+  <input type="text" id="glossary-search-input"
+         class="glossary-search-input"
+         placeholder="{{ trans.datapages_glossary.search_placeholder }}">
+</div>
+
+<!-- Category filter -->
+{% assign all_categories = site.data.glossary | map: "categories" | join: "," | split: "," | uniq | sort %}
+<div class="glossary-category-bar">
+  <button class="glossary-category-btn active" data-category="all">
+    {{ trans.datapages_glossary.all_categories }}
+  </button>
+  {% for cat in all_categories %}
+    {% assign cat_key = cat | strip %}
+    {% if cat_key != "" %}
+    <button class="glossary-category-btn glossary-category-btn--{{ cat_key }}" data-category="{{ cat_key }}">
+      {{ trans.datapages_glossary.categories[cat_key] }}
+    </button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<!-- Alphabetical filter bar -->
+<div class="tags-slider-wrapper">
+  <button class="tags-prev" id="glossary-alpha-prev">{% include svg/nav-arrow-left.svg %}</button>
+  <div class="tags-slider glossary-alpha-bar" id="glossary-alpha-bar">
+    <button class="glossary-alpha-btn active" data-letter="all">
+      {{ trans.datapages_glossary.all_letters }}
+    </button>
+  </div>
+  <button class="tags-next" id="glossary-alpha-next">{% include svg/nav-arrow-right.svg %}</button>
+</div>
+
+<!-- Term list -->
+{% assign sorted_glossary = site.data.glossary | sort: "term" %}
+<ul class="glossary-list" id="glossary-list">
+{% for item in sorted_glossary %}
+  {% if item.published %}
+    {% if lang == site.default_lang %}
+      {% assign full_url = site.url %}
+    {% else %}
+      {% assign full_url = site.url | append: '/' | append: lang %}
+    {% endif %}
+    <li class="glossary-item" data-term="{{ item.lang[lang].title }}"
+        data-letter="{{ item.lang[lang].title | slice: 0 | upcase }}"
+        data-categories="{{ item.categories | join: ',' }}">
+      <div class="glossary-category-tags">
+        {% for cat in item.categories %}
+        <button class="glossary-category-btn glossary-category-tag" data-category="{{ cat }}">
+          {{ trans.datapages_glossary.categories[cat] }}
+        </button>
+        {% endfor %}
+      </div>
+      <span class="material-symbols-outlined glossary-icon">{{ item.icon }}</span>
+      <div class="glossary-title">
+        <h2><a href="{{ full_url }}/glossary/{{ item.slug }}">{{ item.lang[lang].title }}</a></h2>
+      </div>
+      <p class="glossary-description">{{ item.lang[lang].short_definition }}</p>
+      <a class="glossary-link" href="{{ full_url }}/glossary/{{ item.slug }}">
+        {{ trans.datapages_glossary.term_link }}
+      </a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+<p class="glossary-no-results" id="glossary-no-results" style="display:none">
+  {{ trans.datapages_glossary.no_results }}
+</p>
+
+<script defer>
+(function() {
+  var items = document.querySelectorAll('.glossary-item');
+  var searchInput = document.getElementById('glossary-search-input');
+  var alphaBar = document.getElementById('glossary-alpha-bar');
+  var prevBtn = document.getElementById('glossary-alpha-prev');
+  var nextBtn = document.getElementById('glossary-alpha-next');
+  var categoryBar = document.querySelector('.glossary-category-bar');
+  var noResults = document.getElementById('glossary-no-results');
+  var activeLetter = 'all';
+  var activeCategory = 'all';
+
+  function normalizeLetter(l) {
+    return l.normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  // Build A–Z buttons; disable those with no matching terms
+  var usedLetters = new Set();
+  items.forEach(function(item) {
+    usedLetters.add(normalizeLetter(item.getAttribute('data-letter')));
+  });
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(function(letter) {
+    var btn = document.createElement('button');
+    btn.className = 'glossary-alpha-btn';
+    btn.setAttribute('data-letter', letter);
+    btn.textContent = letter;
+    if (!usedLetters.has(letter)) {
+      btn.disabled = true;
+      btn.classList.add('glossary-alpha-btn--empty');
+    }
+    alphaBar.appendChild(btn);
+  });
+
+  // Slider arrows
+  function updateAlphaArrows() {
+    var maxScroll = alphaBar.scrollWidth - alphaBar.clientWidth;
+    prevBtn.style.display = alphaBar.scrollLeft > 0 ? 'inline-flex' : 'none';
+    nextBtn.style.display = alphaBar.scrollLeft < maxScroll ? 'inline-flex' : 'none';
+  }
+  prevBtn.addEventListener('click', function() {
+    alphaBar.scrollBy({ left: -alphaBar.clientWidth, behavior: 'smooth' });
+  });
+  nextBtn.addEventListener('click', function() {
+    alphaBar.scrollBy({ left: alphaBar.clientWidth, behavior: 'smooth' });
+  });
+  alphaBar.addEventListener('scroll', updateAlphaArrows);
+  window.addEventListener('resize', updateAlphaArrows);
+  updateAlphaArrows();
+
+  function filterItems() {
+    var query = searchInput.value.trim().toLowerCase();
+    var visibleCount = 0;
+    items.forEach(function(item) {
+      var term = item.getAttribute('data-term').toLowerCase();
+      var categories = item.getAttribute('data-categories').split(',');
+      var matchesLetter = (activeLetter === 'all' || normalizeLetter(item.getAttribute('data-letter')) === activeLetter);
+      var matchesSearch = (!query || term.indexOf(query) !== -1);
+      var matchesCategory = (activeCategory === 'all' || categories.indexOf(activeCategory) !== -1);
+      if (matchesLetter && matchesSearch && matchesCategory) {
+        item.style.display = '';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    noResults.style.display = visibleCount === 0 ? '' : 'none';
+  }
+
+  searchInput.addEventListener('input', filterItems);
+
+  alphaBar.addEventListener('click', function(e) {
+    var btn = e.target.closest('.glossary-alpha-btn');
+    if (!btn) return;
+    activeLetter = btn.getAttribute('data-letter');
+    alphaBar.querySelectorAll('.glossary-alpha-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    filterItems();
+  });
+
+  function activateCategory(cat) {
+    activeCategory = cat;
+    categoryBar.querySelectorAll('.glossary-category-btn').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-category') === cat);
+    });
+    filterItems();
+  }
+
+  categoryBar.addEventListener('click', function(e) {
+    var btn = e.target.closest('.glossary-category-btn');
+    if (!btn) return;
+    activateCategory(btn.getAttribute('data-category'));
+  });
+
+  document.getElementById('glossary-list').addEventListener('click', function(e) {
+    var btn = e.target.closest('.glossary-category-tag');
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    activateCategory(btn.getAttribute('data-category'));
+    document.querySelector('.glossary-category-bar').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+})();
+</script>

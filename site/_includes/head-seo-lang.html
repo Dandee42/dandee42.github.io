@@ -111,8 +111,8 @@
   </script>
   <!-- JSON-LD BREADCRUMB END -->
 
-{% elsif page.type == "service" or page.type == "use-case" %}
-  <!-- SERVICE / USE-CASE PAGE -->
+{% elsif page.type == "service" or page.type == "use-case" or page.type == "glossary" %}
+  <!-- SERVICE / USE-CASE / GLOSSARY PAGE -->
   {% assign og_title = page.lang[lang].title | default: page.title %}
   {% assign og_description = page.lang[lang].description | default: site.description[lang] %}
   <!-- OG / Twitter meta tagy -->
@@ -130,13 +130,16 @@
   <meta property="twitter:title" content="{{ og_title }} · {{ site.title[lang] }}">
   <meta name="twitter:description" content="{{ og_description }}">
 
-  <!-- JSON-LD SERVICE START -->
+  <!-- JSON-LD STRUCTURED DATA START -->
   {% if page.type == "service" %}
     {% assign section_name = trans.footer.services %}
     {% assign section_path = '/services/' %}
-  {% else %}
+  {% elsif page.type == "use-case" %}
     {% assign section_name = trans.footer.use_cases %}
     {% assign section_path = '/use-cases/' %}
+  {% elsif page.type == "glossary" %}
+    {% assign section_name = trans.footer.glossary %}
+    {% assign section_path = '/glossary/' %}
   {% endif %}
   {% if lang == site.default_lang %}
     {% assign home_url = site.url | append: '/' %}
@@ -145,6 +148,23 @@
     {% assign home_url = site.url | append: '/' | append: lang | append: '/' %}
     {% assign section_url = site.url | append: '/' | append: lang | append: section_path %}
   {% endif %}
+  {% if page.type == "glossary" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": "{{ og_title | escape }}",
+    "description": "{{ og_description | escape }}",
+    "url": "{{ full_url }}",
+    "inLanguage": "{{ trans.general.locale }}",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "{{ section_name | escape }}",
+      "url": "{{ section_url }}"
+    }
+  }
+  </script>
+  {% else %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -173,7 +193,8 @@
     }
   }
   </script>
-  <!-- JSON-LD SERVICE END -->
+  {% endif %}
+  <!-- JSON-LD STRUCTURED DATA END -->
 
   <!-- JSON-LD BREADCRUMB START -->
   <script type="application/ld+json">
@@ -254,12 +275,14 @@
     "name": [
       "{{ trans.footer.services }}",
       "{{ trans.footer.use_cases }}",
+      "{{ trans.footer.glossary }}",
       "{{ trans.footer.blog }}",
       "{{ trans.footer.contact }}"
     ],
     "url": [
       "{{ home_url }}services/",
       "{{ home_url }}use-cases/",
+      "{{ home_url }}glossary/",
       "{{ home_url }}blog/",
       "{{ home_url }}contact/"
     ]

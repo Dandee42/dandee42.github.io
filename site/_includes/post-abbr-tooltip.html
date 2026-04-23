@@ -8,7 +8,7 @@
     el.removeAttribute('title');
   });
 
-  // 2. Create bottom sheet elements (for touch devices)
+  // 2. Create bottom sheet elements (for touch devices and glossary terms)
   var backdrop = document.createElement('div');
   backdrop.className = 'abbr-sheet-backdrop';
   backdrop.setAttribute('aria-hidden', 'true');
@@ -23,7 +23,8 @@
       '<span class="abbr-sheet-term"></span>' +
       '<button class="abbr-sheet-close" aria-label="Zavřít">&times;</button>' +
     '</div>' +
-    '<p class="abbr-sheet-desc"></p>';
+    '<p class="abbr-sheet-desc"></p>' +
+    '<a class="abbr-sheet-link" href="#" style="display:none"></a>';
 
   document.body.appendChild(backdrop);
   document.body.appendChild(sheet);
@@ -31,10 +32,22 @@
   var termEl = sheet.querySelector('.abbr-sheet-term');
   var descEl = sheet.querySelector('.abbr-sheet-desc');
   var closeBtn = sheet.querySelector('.abbr-sheet-close');
+  var linkEl = sheet.querySelector('.abbr-sheet-link');
+  var glossaryLinkLabel = '{{ site.data[site.active_lang].datapages_glossary.read_more | default: "Read more →" }}';
 
   function openSheet(abbr) {
     termEl.textContent = abbr.textContent;
     descEl.textContent = abbr.getAttribute('data-tooltip');
+    var glossarySlug = abbr.getAttribute('data-glossary');
+    if (glossarySlug) {
+      var lang = document.documentElement.lang || 'cs';
+      var prefix = (lang === 'cs') ? '' : '/' + lang;
+      linkEl.href = prefix + '/glossary/' + glossarySlug;
+      linkEl.textContent = glossaryLinkLabel;
+      linkEl.style.display = '';
+    } else {
+      linkEl.style.display = 'none';
+    }
     backdrop.classList.add('open');
     sheet.classList.add('open');
   }
@@ -50,7 +63,7 @@
   document.querySelectorAll('abbr[data-tooltip]').forEach(function(el) {
     el.addEventListener('click', function(e) {
       e.stopPropagation();
-      if (isTouch) {
+      if (isTouch || this.hasAttribute('data-glossary')) {
         openSheet(this);
       } else {
         this.classList.toggle('tooltip-visible');
