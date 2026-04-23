@@ -1,0 +1,1705 @@
+
+
+<!DOCTYPE html>
+<html lang="cs">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    
+    AI Slovník &middot; Daniel Hladík
+    
+  </title>
+  
+
+
+
+
+
+<!-- Cannonical url START -->
+
+<link rel="canonical" href="https://daniel-hladik.cz/glossary/">
+<!-- Cannonical url END -->
+
+<!-- Alternate Href lang START -->
+
+  
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/glossary/">
+
+  
+  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/">
+
+<!-- Alternate Href lang END -->
+
+
+
+<meta http-equiv="Content-Language" content="cs_CZ">
+
+
+  <!-- PAGE -->
+  
+  
+  <!-- OG / Twitter meta tagy -->
+  <meta property="og:title" content="AI Slovník · Daniel Hladík">
+  <meta name="author" content="Daniel Hladík">
+  <meta property="og:locale" content="cs_CZ">
+  <meta name="description" content="Naučte se AI rychleji díky srozumitelnému slovníku pojmů z oblasti AI a automatizace, od LLM a RAG po bezpečnost a datové formáty.">
+  <meta property="og:description" content="Naučte se AI rychleji díky srozumitelnému slovníku pojmů z oblasti AI a automatizace, od LLM a RAG po bezpečnost a datové formáty.">
+  <meta property="og:url" content="https://daniel-hladik.cz/glossary/">
+  <meta property="og:site_name" content="Daniel Hladík">
+  <meta property="og:image" content="https://daniel-hladik.czassets/files/photo.png">
+  <meta property="twitter:image" content="https://daniel-hladik.czassets/files/photo.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="AI Slovník · Daniel Hladík">
+  <meta name="twitter:description" content="Naučte se AI rychleji díky srozumitelnému slovníku pojmů z oblasti AI a automatizace, od LLM a RAG po bezpečnost a datové formáty.">
+  <!-- JSON-LD PAGE START -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AI Slovník",
+    "url": "https://daniel-hladik.cz/glossary/",
+    "description": "Naučte se AI rychleji díky srozumitelnému slovníku pojmů z oblasti AI a automatizace, od LLM a RAG po bezpečnost a datové formáty.",
+    "inLanguage": "cs_CZ",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Hladík"
+    }
+  }
+  </script>
+  
+  <!-- JSON-LD PAGE END -->
+
+
+  
+<!-- Stylesheets, icons -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/open-color.min.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+<link rel="stylesheet" href="/assets/css/styles.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" >
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+<!-- RSS Feed -->
+
+<link rel="alternate" type="application/rss+xml" title="Daniel Hladík - RSS (cs)" href="https://daniel-hladik.cz/feed.xml" />
+
+
+  
+
+
+<!-- Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-5FNL9M65H0', { 'anonymize_ip': true });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FNL9M65H0"></script>
+
+<!-- Cookie modal -->
+<style>
+  #cookie-overlay {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10001;
+    width: calc(100% - 2rem);
+    max-width: 600px;
+  }
+  #cookie-overlay.d-none { display: none !important; }
+
+  #cookie-banner {
+    font-family: var(--type-serif);
+    background: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+  #cookie-banner h2 {
+    font-family: var(--type-serif);
+    color: var(--color-heading);
+    font-size: var(--type-size);
+    font-weight: 600;
+    margin: 0 0 .6rem;
+  }
+  #cookie-banner p {
+    margin: 0 0 1.25rem;
+    font-size: var(--type-size);
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+  #cookie-banner a {
+    color: var(--color-text);
+    font-weight: bold;
+  }
+  #cookie-banner a:hover {
+    border-bottom: none;
+  }
+
+  #cookie-banner .link-policy {
+    display: block;
+    text-align: right;
+    margin-top: .5rem;
+    font-size: calc(var(--type-size) * 0.85);
+    color: var(--color-text);
+  }
+
+  #cookie-banner .cookie-actions {
+    display: flex;
+    gap: .5rem;
+  }
+  #cookie-banner .cookie-actions button {
+    flex: 1;
+  }
+  #cookie-banner button {
+    font-family: var(--type-serif);
+    font-size: var(--type-size);
+    padding: .4rem 1.5rem;
+    border-radius: 12px;
+    border: solid 2px var(--color-text);
+    cursor: pointer;
+    transition: background-color .15s, color .15s, box-shadow .15s;
+  }
+  #cookie-decline {
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+  }
+  #cookie-decline:hover {
+    background: var(--color-button-background-hover);
+    color: var(--color-button-text-hover);
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+  #cookie-accept {
+    background: var(--color-button-background-hover);
+    color: var(--color-button-text-hover);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+  #cookie-accept:hover {
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+</style>
+
+<div id="cookie-overlay" class="d-none">
+  <div id="cookie-banner">
+    <h2>🍪 Pár slov o cookies</a></h2>
+    <p>
+      
+        Tento web používá soubory <a href="/cookie-policy/">cookies</a> k analýze návštěvnosti a zlepšování uživatelského zážitku. Data o tom, jak web používáte, mi pomáhají dělat ho lepším. Cookies jsou nastaveny pouze s vaším souhlasem.
+      
+    </p>
+    <div class="cookie-actions">
+      <button id="cookie-decline">Odmítnout</button>
+      <button id="cookie-accept">Souhlasím</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var COOKIE_KEY = 'ga_consent';
+    var overlay = document.getElementById('cookie-overlay');
+    var consent = localStorage.getItem(COOKIE_KEY);
+
+    function showBanner() {
+      overlay.classList.remove('d-none');
+    }
+
+    function hideBanner() {
+      overlay.classList.add('d-none');
+    }
+
+    function grantConsent() {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      localStorage.setItem(COOKIE_KEY, 'granted');
+      hideBanner();
+    }
+
+    function denyConsent() {
+      gtag('consent', 'update', { 'analytics_storage': 'denied' });
+      localStorage.setItem(COOKIE_KEY, 'denied');
+      hideBanner();
+    }
+
+    if (consent === 'granted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    } else if (consent === null) {
+      showBanner();
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', grantConsent);
+    document.getElementById('cookie-decline').addEventListener('click', denyConsent);
+  })();
+</script>
+
+
+  <script>
+    (function () {
+      var theme = sessionStorage.getItem('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+
+
+<body>
+  
+
+
+  <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
+    
+    <span class="alert-icon">
+        
+          <span class="material-symbols-outlined">info</span>
+        
+    </span>
+
+    <span class="alert-text">Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a></span>
+
+    
+      <button class="alert-close">
+        <span class="material-symbols-outlined">cancel</span>
+      </button>
+    
+  </div>
+  <script src="/assets/js/alert.js" defer></script>
+
+
+  
+  
+  
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-sm-10 col-md-8 col-lg-6">
+        
+
+<header>
+  <div>
+    <!--<a class="particles-icon icon-link" href="https://daniel-hladik.cz"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8m0 0l3.5 3.5M8 12l3.5-3.5M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>-->
+    <a class="site-title" href="https://daniel-hladik.cz/">Daniel Hladík</a>
+    <small>
+    
+      AI Automation Engineer
+    
+    </small>
+  </div>
+  <a id="theme-toggle" class="toggle-icon" onclick="modeSwitcher()"></a>
+</header>
+
+<article>
+  <main>
+    <div class="start-side-image">
+    <div class="side-image left"></div>
+    <div class="side-image right"></div>
+</div>
+<script src="/assets/js/side-image.js" defer></script>
+    
+
+
+<h1>AI Slovník</h1>
+<p>Přehled pojmů z oblasti umělé inteligence a automatizace.</p>
+
+<!-- Search input -->
+<div class="glossary-search">
+  <input type="text" id="glossary-search-input"
+         class="glossary-search-input"
+         placeholder="Hledat pojem...">
+</div>
+
+<!-- Category filter -->
+
+<div class="glossary-category-bar">
+  <button class="glossary-category-btn active" data-category="all">
+    Vše
+  </button>
+  
+    
+    
+    <button class="glossary-category-btn glossary-category-btn--automation" data-category="automation">
+      Automatizace
+    </button>
+    
+  
+    
+    
+    <button class="glossary-category-btn glossary-category-btn--data" data-category="data">
+      Data & Formáty
+    </button>
+    
+  
+    
+    
+    <button class="glossary-category-btn glossary-category-btn--llm" data-category="llm">
+      Jazykové modely
+    </button>
+    
+  
+    
+    
+    <button class="glossary-category-btn glossary-category-btn--rag" data-category="rag">
+      RAG
+    </button>
+    
+  
+    
+    
+    <button class="glossary-category-btn glossary-category-btn--security" data-category="security">
+      Bezpečnost
+    </button>
+    
+  
+    
+    
+    <button class="glossary-category-btn glossary-category-btn--web" data-category="web">
+      Web
+    </button>
+    
+  
+</div>
+
+<!-- Alphabetical filter bar -->
+<div class="tags-slider-wrapper">
+  <button class="tags-prev" id="glossary-alpha-prev"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M15 6l-6 6 6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+  <div class="tags-slider glossary-alpha-bar" id="glossary-alpha-bar">
+    <button class="glossary-alpha-btn active" data-letter="all">
+      Vše
+    </button>
+  </div>
+  <button class="tags-next" id="glossary-alpha-next"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M9 6l6 6-6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+
+<!-- Term list -->
+
+<ul class="glossary-list" id="glossary-list">
+
+  
+    
+    <li class="glossary-item" data-term="API (Application Programming Interface)"
+        data-letter="A"
+        data-categories="web">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">api</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/api">API (Application Programming Interface)</a></h2>
+      </div>
+      <p class="glossary-description">Rozhraní, které umožňuje dvěma aplikacím komunikovat a vyměňovat si data podle přesně daných pravidel.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/api">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="API klíč (API key)"
+        data-letter="A"
+        data-categories="web,security">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="security">
+          Bezpečnost
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">key</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/api-key">API klíč (API key)</a></h2>
+      </div>
+      <p class="glossary-description">Tajný identifikátor, který opravňuje vaši aplikaci k volání cizího API a umožňuje poskytovateli sledovat využití.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/api-key">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Agentní systémy (AI agenti)"
+        data-letter="A"
+        data-categories="llm,automation">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
+          Automatizace
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">smart_toy</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/agentni-systemy">Agentní systémy (AI agenti)</a></h2>
+      </div>
+      <p class="glossary-description">Pokročilé implementace AI, které samostatně rozhodují o postupu k dosažení stanoveného cíle.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/agentni-systemy">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="CORS (Cross-Origin Resource Sharing)"
+        data-letter="C"
+        data-categories="web,security">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="security">
+          Bezpečnost
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">security</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/cors">CORS (Cross-Origin Resource Sharing)</a></h2>
+      </div>
+      <p class="glossary-description">Bezpečnostní mechanismus v prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/cors">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Chunking"
+        data-letter="C"
+        data-categories="rag">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">view_module</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/chunking">Chunking</a></h2>
+      </div>
+      <p class="glossary-description">Proces rozdělení dlouhého textu na menší, logické celky (chunky) pro efektivní zpracování v RAG systémech.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/chunking">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Kontextové okno (Context window)"
+        data-letter="K"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">crop_free</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/context-window">Kontextové okno (Context window)</a></h2>
+      </div>
+      <p class="glossary-description">Maximální množství textu (v tokenech), které LLM model vidí a zpracuje najednou v jednom požadavku.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/context-window">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Embedding model"
+        data-letter="E"
+        data-categories="rag,llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">transform</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/embedding-model">Embedding model</a></h2>
+      </div>
+      <p class="glossary-description">Specializovaný typ AI, který převádí text na číselné vektory pro efektivní sémantické vyhledávání.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/embedding-model">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Endpoint (API endpoint)"
+        data-letter="E"
+        data-categories="web">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">electrical_services</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/endpoint">Endpoint (API endpoint)</a></h2>
+      </div>
+      <p class="glossary-description">Konkrétní URL adresa, na které API přijímá požadavky pro danou operaci nebo zdroj dat.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/endpoint">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="FAQ (Frequently Asked Questions)"
+        data-letter="F"
+        data-categories="data">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="data">
+          Data & Formáty
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">help_outline</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/faq">FAQ (Frequently Asked Questions)</a></h2>
+      </div>
+      <p class="glossary-description">Strukturovaný seznam často kladených otázek a odpovědí, které řeší nejběžnější nejasnosti uživatelů.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/faq">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Fine-tuning (doladění modelu)"
+        data-letter="F"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">tune</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/fine-tuning">Fine-tuning (doladění modelu)</a></h2>
+      </div>
+      <p class="glossary-description">Proces dalšího trénování předtrénovaného LLM modelu na vlastních datech pro specializaci na konkrétní úkol nebo styl.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/fine-tuning">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Guardrails (ochranné mantinely AI)"
+        data-letter="G"
+        data-categories="llm,security">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="security">
+          Bezpečnost
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">policy</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/guardrails">Guardrails (ochranné mantinely AI)</a></h2>
+      </div>
+      <p class="glossary-description">Ochranné mechanismy omezující chování AI systému a zabraňující nežádoucím, škodlivým nebo mimoscopovým výstupům.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/guardrails">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="HTML (HyperText Markup Language)"
+        data-letter="H"
+        data-categories="web,data">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="data">
+          Data & Formáty
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">code</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/html">HTML (HyperText Markup Language)</a></h2>
+      </div>
+      <p class="glossary-description">Standardní značkovací jazyk, který určuje strukturu a obsah webových stránek.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/html">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="HTTP Request (HTTP požadavek)"
+        data-letter="H"
+        data-categories="web">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">send</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/http-request">HTTP Request (HTTP požadavek)</a></h2>
+      </div>
+      <p class="glossary-description">Digitální zpráva, kterou jeden počítač posílá druhému pro získání nebo předání dat.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/http-request">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Halucinace AI (Hallucination)"
+        data-letter="H"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">psychology_alt</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/hallucination">Halucinace AI (Hallucination)</a></h2>
+      </div>
+      <p class="glossary-description">Jev, kdy AI model vygeneruje přesvědčivě znějící, ale fakticky chybnou nebo smyšlenou informaci.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/hallucination">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="JSON (JavaScript Object Notation)"
+        data-letter="J"
+        data-categories="data,web">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="data">
+          Data & Formáty
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">data_object</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/json">JSON (JavaScript Object Notation)</a></h2>
+      </div>
+      <p class="glossary-description">Univerzální a lehký datový formát pro přehledné ukládání a přenos informací mezi systémy.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/json">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="LLM (Large Language Model)"
+        data-letter="L"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">psychology</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/llm">LLM (Large Language Model)</a></h2>
+      </div>
+      <p class="glossary-description">Velký jazykový model - typ AI vytrénovaný na obrovském množství textu, který dokáže rozumět lidské řeči a generovat text.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/llm">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="LangChain"
+        data-letter="L"
+        data-categories="automation,llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
+          Automatizace
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">link</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/langchain">LangChain</a></h2>
+      </div>
+      <p class="glossary-description">Open-source framework s předpřipravenou architekturou pro AI agenty a integracemi pro jakýkoliv model nebo nástroj.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/langchain">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Lokální model (Local LLM)"
+        data-letter="L"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">computer</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/lokalni-model">Lokální model (Local LLM)</a></h2>
+      </div>
+      <p class="glossary-description">Velký jazykový model stažený a spuštěný přímo na vašem vlastním počítači nebo serveru bez odesílání dat třetím stranám.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/lokalni-model">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="MCP (Model Context Protocol)"
+        data-letter="M"
+        data-categories="llm,automation">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
+          Automatizace
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">hub</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/mcp">MCP (Model Context Protocol)</a></h2>
+      </div>
+      <p class="glossary-description">Otevřený protokol standardizující komunikaci AI modelů s externími nástroji, daty a službami.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/mcp">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Markdown"
+        data-letter="M"
+        data-categories="data">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="data">
+          Data & Formáty
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">edit_note</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/markdown">Markdown</a></h2>
+      </div>
+      <p class="glossary-description">Odlehčený značkovací jazyk pro úpravu prostého textu a jeho převod na formátovaný text pro web.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/markdown">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Metadata"
+        data-letter="M"
+        data-categories="data,rag">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="data">
+          Data & Formáty
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">label</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/metadata">Metadata</a></h2>
+      </div>
+      <p class="glossary-description">Doplňující informace o datech (data o datech), které pomáhají systému s organizací a kontextem.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/metadata">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Parsing (parsování dat)"
+        data-letter="P"
+        data-categories="data">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="data">
+          Data & Formáty
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">document_scanner</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/parsing">Parsing (parsování dat)</a></h2>
+      </div>
+      <p class="glossary-description">Proces analýzy a převodu textu nebo dat z jednoho formátu do strukturované podoby, se kterou může program pracovat.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/parsing">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Prompt"
+        data-letter="P"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">chat</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/prompt">Prompt</a></h2>
+      </div>
+      <p class="glossary-description">Textový vstup - instrukce nebo otázka - který uživatel nebo systém předá AI modelu ke zpracování.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/prompt">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Prompt Injection"
+        data-letter="P"
+        data-categories="security,llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="security">
+          Bezpečnost
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">shield</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/prompt-injection">Prompt Injection</a></h2>
+      </div>
+      <p class="glossary-description">Technika, při které se uživatel snaží obejít původní instrukce AI modelu pomocí speciálně formulovaného příkazu.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/prompt-injection">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="RAG (Retrieval-Augmented Generation)"
+        data-letter="R"
+        data-categories="rag,llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">manage_search</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/rag">RAG (Retrieval-Augmented Generation)</a></h2>
+      </div>
+      <p class="glossary-description">Proces, kdy si AI nejdříve přečte vaše dokumenty a až pak odpoví uživateli.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/rag">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Rate limit (omezení počtu požadavků)"
+        data-letter="R"
+        data-categories="web">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">speed</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/rate-limit">Rate limit (omezení počtu požadavků)</a></h2>
+      </div>
+      <p class="glossary-description">Maximální počet API požadavků, které lze odeslat za dané časové období, než server dočasně přeruší přístup.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/rate-limit">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Re-ranking"
+        data-letter="R"
+        data-categories="rag">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">sort</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/re-ranking">Re-ranking</a></h2>
+      </div>
+      <p class="glossary-description">Druhý filtr v RAG systému, který zpřesňuje výběr nejrelevantnějších výsledků z vektorového vyhledávání.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/re-ranking">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Sitemap (mapa stránek)"
+        data-letter="S"
+        data-categories="web,rag">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">map</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/sitemap">Sitemap (mapa stránek)</a></h2>
+      </div>
+      <p class="glossary-description">Soubor obsahující seznam všech důležitých URL adres webu, který pomáhá vyhledávačům efektivněji indexovat stránky.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/sitemap">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Systémový prompt (System prompt)"
+        data-letter="S"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">settings_suggest</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/system-prompt">Systémový prompt (System prompt)</a></h2>
+      </div>
+      <p class="glossary-description">Skrytý text, který nastavuje chování, roli a pravidla AI modelu před začátkem konverzace s uživatelem.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/system-prompt">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Temperature (teplota modelu)"
+        data-letter="T"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">thermometer</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/temperature">Temperature (teplota modelu)</a></h2>
+      </div>
+      <p class="glossary-description">Parametr ovlivňující míru náhodnosti a kreativity odpovědí AI modelu - od deterministických (0) po velmi kreativní (2).</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/temperature">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Token (v kontextu LLM)"
+        data-letter="T"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">toll</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/token">Token (v kontextu LLM)</a></h2>
+      </div>
+      <p class="glossary-description">Základní jednotka textu, se kterou pracují LLM modely - přibližně 3/4 anglického slova nebo 2–3 znaky.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/token">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Trigger (spouštěč workflow)"
+        data-letter="T"
+        data-categories="automation">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
+          Automatizace
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">bolt</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/trigger">Trigger (spouštěč workflow)</a></h2>
+      </div>
+      <p class="glossary-description">Událost nebo podmínka, která automaticky spustí workflow nebo automatizaci.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/trigger">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Vektor (v kontextu AI)"
+        data-letter="V"
+        data-categories="rag">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">scatter_plot</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/vektor">Vektor (v kontextu AI)</a></h2>
+      </div>
+      <p class="glossary-description">Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/vektor">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Vektorová databáze (Vector database)"
+        data-letter="V"
+        data-categories="rag">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">storage</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/vektorova-databaze">Vektorová databáze (Vector database)</a></h2>
+      </div>
+      <p class="glossary-description">Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/vektorova-databaze">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Web scraping (stahování dat z webu)"
+        data-letter="W"
+        data-categories="rag,web">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
+          RAG
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">travel_explore</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/web-scraping">Web scraping (stahování dat z webu)</a></h2>
+      </div>
+      <p class="glossary-description">Automatizovaný proces extrakce dat z webových stránek pro jejich další zpracování nebo uložení.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/web-scraping">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Webhook"
+        data-letter="W"
+        data-categories="web,automation">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="web">
+          Web
+        </button>
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
+          Automatizace
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">webhook</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/webhook">Webhook</a></h2>
+      </div>
+      <p class="glossary-description">Automatická notifikace, kterou jeden systém odešle druhému v okamžiku, kdy nastane určitá událost.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/webhook">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="Zero-shot a Few-shot prompting"
+        data-letter="Z"
+        data-categories="llm">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
+          Jazykové modely
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">filter_none</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/zero-shot">Zero-shot a Few-shot prompting</a></h2>
+      </div>
+      <p class="glossary-description">Techniky prompting - zero-shot zadá úkol bez příkladů, few-shot přiloží ukázkové vstupy a výstupy pro lepší výsledky.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/zero-shot">
+        Zjistit více
+      </a>
+    </li>
+  
+
+  
+    
+    <li class="glossary-item" data-term="n8n"
+        data-letter="N"
+        data-categories="automation">
+      <div class="glossary-category-tags">
+        
+        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
+          Automatizace
+        </button>
+        
+      </div>
+      <span class="material-symbols-outlined glossary-icon">account_tree</span>
+      <div class="glossary-title">
+        <h2><a href="https://daniel-hladik.cz/glossary/n8n">n8n</a></h2>
+      </div>
+      <p class="glossary-description">Low-code platforma pro automatizaci workflow, která propojuje stovky aplikací bez nutnosti složitého kódování.</p>
+      <a class="glossary-link" href="https://daniel-hladik.cz/glossary/n8n">
+        Zjistit více
+      </a>
+    </li>
+  
+
+</ul>
+
+<p class="glossary-no-results" id="glossary-no-results" style="display:none">
+  Žádný pojem nebyl nalezen.
+</p>
+
+<script defer>
+(function() {
+  var items = document.querySelectorAll('.glossary-item');
+  var searchInput = document.getElementById('glossary-search-input');
+  var alphaBar = document.getElementById('glossary-alpha-bar');
+  var prevBtn = document.getElementById('glossary-alpha-prev');
+  var nextBtn = document.getElementById('glossary-alpha-next');
+  var categoryBar = document.querySelector('.glossary-category-bar');
+  var noResults = document.getElementById('glossary-no-results');
+  var activeLetter = 'all';
+  var activeCategory = 'all';
+
+  function normalizeLetter(l) {
+    return l.normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  // Build A–Z buttons; disable those with no matching terms
+  var usedLetters = new Set();
+  items.forEach(function(item) {
+    usedLetters.add(normalizeLetter(item.getAttribute('data-letter')));
+  });
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(function(letter) {
+    var btn = document.createElement('button');
+    btn.className = 'glossary-alpha-btn';
+    btn.setAttribute('data-letter', letter);
+    btn.textContent = letter;
+    if (!usedLetters.has(letter)) {
+      btn.disabled = true;
+      btn.classList.add('glossary-alpha-btn--empty');
+    }
+    alphaBar.appendChild(btn);
+  });
+
+  // Slider arrows
+  function updateAlphaArrows() {
+    var maxScroll = alphaBar.scrollWidth - alphaBar.clientWidth;
+    prevBtn.style.display = alphaBar.scrollLeft > 0 ? 'inline-flex' : 'none';
+    nextBtn.style.display = alphaBar.scrollLeft < maxScroll ? 'inline-flex' : 'none';
+  }
+  prevBtn.addEventListener('click', function() {
+    alphaBar.scrollBy({ left: -alphaBar.clientWidth, behavior: 'smooth' });
+  });
+  nextBtn.addEventListener('click', function() {
+    alphaBar.scrollBy({ left: alphaBar.clientWidth, behavior: 'smooth' });
+  });
+  alphaBar.addEventListener('scroll', updateAlphaArrows);
+  window.addEventListener('resize', updateAlphaArrows);
+  updateAlphaArrows();
+
+  function filterItems() {
+    var query = searchInput.value.trim().toLowerCase();
+    var visibleCount = 0;
+    items.forEach(function(item) {
+      var term = item.getAttribute('data-term').toLowerCase();
+      var categories = item.getAttribute('data-categories').split(',');
+      var matchesLetter = (activeLetter === 'all' || normalizeLetter(item.getAttribute('data-letter')) === activeLetter);
+      var matchesSearch = (!query || term.indexOf(query) !== -1);
+      var matchesCategory = (activeCategory === 'all' || categories.indexOf(activeCategory) !== -1);
+      if (matchesLetter && matchesSearch && matchesCategory) {
+        item.style.display = '';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    noResults.style.display = visibleCount === 0 ? '' : 'none';
+  }
+
+  searchInput.addEventListener('input', filterItems);
+
+  alphaBar.addEventListener('click', function(e) {
+    var btn = e.target.closest('.glossary-alpha-btn');
+    if (!btn) return;
+    activeLetter = btn.getAttribute('data-letter');
+    alphaBar.querySelectorAll('.glossary-alpha-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    filterItems();
+  });
+
+  function activateCategory(cat) {
+    activeCategory = cat;
+    categoryBar.querySelectorAll('.glossary-category-btn').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-category') === cat);
+    });
+    filterItems();
+  }
+
+  categoryBar.addEventListener('click', function(e) {
+    var btn = e.target.closest('.glossary-category-btn');
+    if (!btn) return;
+    activateCategory(btn.getAttribute('data-category'));
+  });
+
+  document.getElementById('glossary-list').addEventListener('click', function(e) {
+    var btn = e.target.closest('.glossary-category-tag');
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    activateCategory(btn.getAttribute('data-category'));
+    document.querySelector('.glossary-category-bar').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+})();
+</script>
+
+  </main>
+</article>
+<footer>
+  <div id="contact-form">&nbsp;</div>
+  
+
+<section class="contact-section">
+    <div class="contact-intro">
+        <h2>Zanechte mi zprávu</h2>
+        <p class="contact-description">
+            Pokud máte zájem o spolupráci, neváhejte mě kontaktovat.
+        </p>
+    </div>
+
+    <!-- Formulář pro odeslání zprávy -->
+    <form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <!-- Skryté hodnoty pro Web3Forms -->
+        <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
+        <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - CS" />
+        <input type="hidden" name="from_name" value="daniel-hladik.cz" />
+        <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+        <input type="hidden" name="title" value="AI Slovník">
+        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/">
+        <input type="hidden" name="lang" value="cs">
+
+        <div class="form-group-container">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name" class="form-label">Jméno</label>
+                <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" autocomplete="name" required />
+                <div class="empty-feedback invalid-feedback">
+                    Prosím zadejte svoje jméno, abych věděl, jak Vás oslovit :)
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" class="form-input" placeholder="napiste.vas@email.cz" type="email" autocomplete="email" required />
+                <div class="empty-feedback">
+                    Prosím vyplňte svou emailovou adresu.
+                </div>
+                <div class="invalid-feedback">
+                    Možná to byl jen překlep, ale Váš email není validní pro odeslání. Dodržte prosím formát: "email@domena.cz"
+                </div>
+            </div>
+
+            <!-- Messsage -->
+            <div class="form-group">
+                <label for="message" class="form-label">Zpráva</label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
+                <div class="empty-feedback invalid-feedback">
+                    Prosím vyplňte pole se zprávou.
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <button class="form-submit" type="submit">Odeslat</button>
+            </div>
+        </div>
+
+        <p class="text-center" id="result"></p>
+    </form>
+</section>
+
+<script src="/assets/js/contact-form.js" defer></script>
+  
+
+
+<div class="contact" id="contact-details">
+  <h2>Kontakt na mě, kdyby něco...</h2>
+  <ul>
+    <li>Daniel Hladík 
+      <small>
+        AI Automation Engineer
+      </small>
+    </li> 
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span><span>Praha 6</span></li>
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
+</span><a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" aria-label="info&#64;daniel-hladik&#46;cz">info&#64;daniel-hladik&#46;cz</a></li>
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span><a href="https://www.linkedin.com/in/daniel-hladik/" aria-label="LinkedIn">daniel-hladik</a></li>
+    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10M13 2.05S16 6 16 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 21.95S8 18 8 12c0-6 3-9.95 3-9.95M2.63 15.5H12M2.63 8.5h18.74" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path clip-rule="evenodd" d="M21.879 17.917c.494.304.463 1.043-.045 1.101l-2.567.291-1.151 2.312c-.228.459-.933.234-1.05-.334l-1.255-6.116c-.099-.48.333-.782.75-.525l5.318 3.271z" stroke="#000000" stroke-width="1.5"></path></svg>
+</span><a href="https://daniel-hladik.cz" aria-label="daniel-hladik.cz">daniel-hladik.cz</a></li>
+  </ul>
+  
+
+
+
+<p><a href="https://zapti.me/daniel-hladik/konzultace-zdarma">Chci konzultaci ZDARMA</a></p>
+
+</div>
+
+  <div class="divider"></div>
+  <div class="footer-bottom">
+  
+<p class="footer-links">
+  <a href="/" aria-label="Home">Domů</a>
+  <a href="/cv/" aria-label="Curriculum vitae">CV</a>
+  <a href="/services/" aria-label="Služby">Služby</a>
+  <a href="/glossary/" aria-label="AI Slovník">AI Slovník</a>
+  <a href="/blog/" aria-label="Blog">Blog</a>
+</p>
+
+  
+<div class="language-switcher">
+
+    
+    
+    
+<!--<span class="lang-active">Čeština</span>-->
+    
+
+    
+    
+    
+        
+<a class="lang-link" href="/en/glossary/" aria-label="English">English</a>
+        
+    
+
+</div>
+
+  </div>
+  <small>&copy; <time datetime="2026-04-23T20:24:08+00:00">2026</time>
+    Daniel Hladík. All rights reserved.
+  </small>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  
+  <script src="/assets/js/darkmode.js"></script>
+  
+  
+  
+
+
+
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+        webhookUrl: 'https://n8n.daniel-hladik.cz/webhook/c84ece32-c094-454b-920c-b34138ab3a82/chat',
+        target: '#n8n-chat',
+        mode: 'window',
+        chatInputKey: 'chatInput',
+        chatSessionKey: 'sessionId',
+        loadPreviousSession: true,
+        metadata: {
+            current_url: window.location.href,
+            page_path: window.location.pathname,
+            page_title: document.title
+        },
+        showWelcomeScreen: false,
+        defaultLanguage: 'cs',
+        initialMessages: [
+            'Dobrý den👋', 'Jmenuji se Danka. Co pro vás mohu udělat?',
+        ],
+        i18n: {
+            cs: {
+                title: 'Danka - virtuální asistentka',
+                subtitle: "",
+                footer: '',
+                getStarted: 'Nová konverzace',
+                inputPlaceholder: 'Pište sem...',
+            },
+        },
+        enableStreaming: true,
+    });
+
+</script>
+
+<script>
+(function () {
+    var observer = new MutationObserver(function () {
+        var wrapper = document.querySelector('.chat-window-wrapper');
+        if (!wrapper || wrapper.dataset.hintWired) return;
+        wrapper.dataset.hintWired = '1';
+
+        var bubble = document.createElement('div');
+        bubble.className = 'chat-bubble-hint';
+        bubble.textContent = 'Hledáte něco? Pomůžu Vám!';
+        wrapper.appendChild(bubble);
+
+        var timer = localStorage.getItem('chatOpened') ? null : setTimeout(function () {
+            bubble.classList.add('visible');
+            try {
+                var ctx = new (window.AudioContext || window.webkitAudioContext)();
+                ctx.resume().then(function () {
+                    var osc = ctx.createOscillator();
+                    var gain = ctx.createGain();
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(880, ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(660, ctx.currentTime + 0.12);
+                    gain.gain.setValueAtTime(0.25, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+                    osc.start(ctx.currentTime);
+                    osc.stop(ctx.currentTime + 0.4);
+                });
+            } catch (e) {}
+        }, 3000);
+
+        var toggle = wrapper.querySelector('.chat-window-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function () {
+                bubble.classList.remove('visible');
+                clearTimeout(timer);
+                localStorage.setItem('chatOpened', '1');
+            });
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+<script>
+(function () {
+    var chatWindow = null;
+    var chatWasOpen = false;
+    var styleObserver = new MutationObserver(function () {
+        var isOpen = chatWindow && chatWindow.style.display !== 'none';
+        document.body.classList.toggle('chat-open', isOpen);
+        if (isOpen && !chatWasOpen && typeof gtag === 'function') {
+            gtag('event', 'chat_opened', {
+                event_category: 'engagement',
+                event_label: 'n8n chat'
+            });
+        }
+        chatWasOpen = isOpen;
+    });
+
+    var domObserver = new MutationObserver(function () {
+        var win = document.querySelector('.chat-window');
+        if (win && win !== chatWindow) {
+            chatWindow = win;
+            styleObserver.observe(chatWindow, { attributes: true, attributeFilter: ['style'] });
+            document.body.classList.toggle('chat-open', chatWindow.style.display !== 'none');
+        }
+    });
+
+    domObserver.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+</body>
+
+</html>
