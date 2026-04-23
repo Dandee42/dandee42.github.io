@@ -75,7 +75,7 @@
       "name": "Daniel Hladík"
     },
     "datePublished": "2026-02-28T00:00:00+00:00",
-    "dateModified": "2026-04-14T19:26:28+00:00",
+    "dateModified": "2026-04-22T20:26:57+00:00",
     "description": "Naučte se, jak pomocí n8n a RAG postavit AI agenta, který zná vaše služby, domlouvá schůzky a odesílá e-maily. Praktický návod pro váš web bez složitého kódování.",
     "inLanguage": "cs_CZ",
     "headline": "Jak přidat agentního AI chatbota na svůj web (RAG návod)",
@@ -399,27 +399,27 @@
 </ul>
 
 <h2 id="co-znamená-rag-a-proč-ho-chtít">Co znamená RAG a proč ho chtít</h2>
-<p>Ještě něž se dostaneme k samotné tvorbě, je potřeba pochopit klíčový koncept, bez kterého by nám model nedával relevantní odpovědi. Tím je <strong><abbr title="RAG (Retrieval-Augmented Generation, v překladu Generování rozšířené o vyhledávání ): Proces, kdy si AI nejdříve přečte vaše dokumenty a až pak odpoví uživateli.">RAG</abbr></strong>.</p>
+<p>Ještě něž se dostaneme k samotné tvorbě, je potřeba pochopit klíčový koncept, bez kterého by nám model nedával relevantní odpovědi. Tím je <strong><abbr title="RAG (Retrieval-Augmented Generation, v překladu Generování rozšířené o vyhledávání ): Proces, kdy si AI nejdříve přečte vaše dokumenty a až pak odpoví uživateli." data-glossary="rag">RAG</abbr></strong>.</p>
 
 <p>Zkratka <strong>RAG (Retrieval-Augmented Generation)</strong> se překládá do češtiny jako <em>generování rozšířené o vyhledávání</em>. Jedná se o koncept, díky kterému váš AI model “nehalucinuje” (nevymýšlí si), ale odpovědi generuje na základě nějaké znalostní databáze, kterou mu vy sami předložíte.</p>
 
 <p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-01.jpg" alt="Srovnání položení dotazu na běžný AI model a RAG AI model" class="post-image" /></p>
 
-<p>Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. Když se ho zeptáte na něco z interní dokumentace, nebude vědět a může si i vymýšlet. Pokud tomu samému člověku dáte do ruky vaše materiály (ceník, dokumentaci, články, <strong><abbr title="FAQ (Frequently Asked Questions - často kladené otázky) je strukturovaný seznam otázek a odpovědí, které řeší nejběžnější nejasnosti uživatelů.">FAQ</abbr></strong>) a řeknete mu: <em>“Odpovídej pouze na základě toho, co zde najdeš.”</em>, najde tu správnou odpověď. Takto velmi zjednodušeně funguje RAG AI Model.</p>
+<p>Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. Když se ho zeptáte na něco z interní dokumentace, nebude vědět a může si i vymýšlet. Pokud tomu samému člověku dáte do ruky vaše materiály (ceník, dokumentaci, články, <strong><abbr title="FAQ (Frequently Asked Questions - často kladené otázky) je strukturovaný seznam otázek a odpovědí, které řeší nejběžnější nejasnosti uživatelů." data-glossary="faq">FAQ</abbr></strong>) a řeknete mu: <em>“Odpovídej pouze na základě toho, co zde najdeš.”</em>, najde tu správnou odpověď. Takto velmi zjednodušeně funguje RAG AI Model.</p>
 
 <p>Jak RAG proces vypadá v praxi:</p>
 
 <ol>
-  <li><strong>Příprava dat</strong>: Dokumenty očištěné o duplicity a nepotřebný obsah se rozsekají na menší části. Tyto kousky se pomocí <strong><abbr title="Embedding model je specializovaný typ umělé inteligence, který slouží jako překladač mezi lidskou řečí a světem čísel. Jeho jedinou úlohou je vzít kus textu (slovo, větu nebo odstavec) a vypočítat pro něj jeho vektor. V rámci procesu RAG se při ukládání převádějí dokumenty na vektory, aby se daly uložit do vektorové databáze. Při dotazu se otázka uživatele převede na vektory, aby ji systém mohl porovnat s uloženými daty.">embedding modelu</abbr></strong> převedou na <strong><abbr title="V kontextu AI je vektor číselné vyjádření významu slova, věty nebo celého dokumentu. Protože počítače nerozumí textu tak jako lidé, používají k porovnávání informací dlouhé seznamy čísel (souřadnice). Tyto souřadnice určují přesnou polohu dané informace v pomyslném prostoru znalostí. Pokud mají dva texty podobný význam, leží jejich vektory v databázi blízko sebe. V rámci RAG umožňují systému bleskově najít souvislosti mezi otázkou uživatele a vašimi daty.">vektory</abbr></strong> a uloží do speciální vektorové databáze, kde v nich AI umí efektivně hledat dle kontextu.</li>
+  <li><strong>Příprava dat</strong>: Dokumenty očištěné o duplicity a nepotřebný obsah se rozsekají na menší části. Tyto kousky se pomocí <strong><abbr title="Embedding model je specializovaný typ umělé inteligence, který slouží jako překladač mezi lidskou řečí a světem čísel. Jeho jedinou úlohou je vzít kus textu (slovo, větu nebo odstavec) a vypočítat pro něj jeho vektor. V rámci procesu RAG se při ukládání převádějí dokumenty na vektory, aby se daly uložit do vektorové databáze. Při dotazu se otázka uživatele převede na vektory, aby ji systém mohl porovnat s uloženými daty." data-glossary="embedding-model">embedding modelu</abbr></strong> převedou na <strong><abbr title="V kontextu AI je vektor číselné vyjádření významu slova, věty nebo celého dokumentu. Protože počítače nerozumí textu tak jako lidé, používají k porovnávání informací dlouhé seznamy čísel (souřadnice). Tyto souřadnice určují přesnou polohu dané informace v pomyslném prostoru znalostí. Pokud mají dva texty podobný význam, leží jejich vektory v databázi blízko sebe. V rámci RAG umožňují systému bleskově najít souvislosti mezi otázkou uživatele a vašimi daty." data-glossary="vektor">vektory</abbr></strong> a uloží do speciální vektorové databáze, kde v nich AI umí efektivně hledat dle kontextu.</li>
   <li><strong>Zpracování dotazu</strong>: Když se uživatel zeptá, systém převede jeho dotaz pomocí stejného modelu na vektor a najde nejbližší kontextovou shodu v databázi. Vytáhne tak pouze ty odstavce, které s otázkou souvisí.</li>
-  <li><strong>Generování odpovědi</strong>: Tyto vybrané odstavce se přibalí k původní otázce a pošlou se <strong><abbr title="LLM (Large Language Model): Velký jazykový model je typ umělé inteligence (např. Chat GPT, Claude nebo Gemini) vytrénovaný na obrovském množství textu. Slouží jako „mozek“ celého systému, který dokáže rozumět lidské řeči, generovat text a logicky uvažovat.">LLM modelu</abbr></strong>, který z nich sestaví finální odpověď. Do odpovědi tedy nejsou zahrnuty pouze znalosti natrénované v LLM modelu, ale i nalezené informace.</li>
+  <li><strong>Generování odpovědi</strong>: Tyto vybrané odstavce se přibalí k původní otázce a pošlou se <strong><abbr title="LLM (Large Language Model): Velký jazykový model je typ umělé inteligence (např. Chat GPT, Claude nebo Gemini) vytrénovaný na obrovském množství textu. Slouží jako mozek celého systému, který dokáže rozumět lidské řeči, generovat text a logicky uvažovat." data-glossary="llm">LLM modelu</abbr></strong>, který z nich sestaví finální odpověď. Do odpovědi tedy nejsou zahrnuty pouze znalosti natrénované v LLM modelu, ale i nalezené informace.</li>
 </ol>
 
 <h2 id="jak-si-vytvořit-vlastního-chatbota-a-přidat-ho-na-svůj-web">Jak si vytvořit vlastního chatbota a přidat ho na svůj web</h2>
 
-<p>Způsobů, jak si sestrojit chytrý AI chat a umístit ho na vašem webu, je hned několik. Velmi jsem si oblíbil low-code automatizační nástroj <strong><abbr title="n8n: Low-code platforma pro automatizaci workflow, která propojuje stovky aplikací bez nutnosti složitého kódování.">n8n</abbr></strong>, kde můžete hezky vizuálně vidět, jak informace ve workflow putují z jednoho uzlu do druhého. Budu tedy popisovat implementaci právě s tímto nástrojem.</p>
+<p>Způsobů, jak si sestrojit chytrý AI chat a umístit ho na vašem webu, je hned několik. Velmi jsem si oblíbil low-code automatizační nástroj <strong><abbr title="n8n: Low-code platforma pro automatizaci workflow, která propojuje stovky aplikací bez nutnosti složitého kódování." data-glossary="n8n">n8n</abbr></strong>, kde můžete hezky vizuálně vidět, jak informace ve workflow putují z jednoho uzlu do druhého. Budu tedy popisovat implementaci právě s tímto nástrojem.</p>
 
-<p>Pro vás neznalé, n8n je taková virtuální stavebnice Merkur, jen pro <strong>automatizace</strong>. Má v sobě přímo integrované stavební bloky <strong><abbr title="LangChain je open-source framework s předpřipravenou architekturou pro agenty a integracemi pro jakýkoliv model nebo nástroj. Umožňuje stavět agenty, kteří se dokážou přizpůsobovat stejně rychle, jako se vyvíjí celý AI ekosystém.">LangChain</abbr></strong>, takže v něm lze vytvářet komplexní <strong><abbr title="Agentní systémy (nebo AI agenti) jsou pokročilé implementace umělé inteligence, které nefungují podle předem daného scénáře, ale samostatně rozhodují o postupu k dosažení stanoveného cíle.">agentní systémy</abbr></strong> bez napsání jediného řádku kódu.</p>
+<p>Pro vás neznalé, n8n je taková virtuální stavebnice Merkur, jen pro <strong>automatizace</strong>. Má v sobě přímo integrované stavební bloky <strong><abbr title="LangChain je open-source framework s předpřipravenou architekturou pro agenty a integracemi pro jakýkoliv model nebo nástroj. Umožňuje stavět agenty, kteří se dokážou přizpůsobovat stejně rychle, jako se vyvíjí celý AI ekosystém." data-glossary="langchain">LangChain</abbr></strong>, takže v něm lze vytvářet komplexní <strong><abbr title="Agentní systémy (nebo AI agenti) jsou pokročilé implementace umělé inteligence, které nefungují podle předem daného scénáře, ale samostatně rozhodují o postupu k dosažení stanoveného cíle." data-glossary="agentni-systemy">agentní systémy</abbr></strong> bez napsání jediného řádku kódu.</p>
 
 <p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-04-a.jpg" alt="AI Agent s řídícím mozkem n8n platformy" class="post-image" /></p>
 
@@ -442,9 +442,9 @@
 </blockquote>
 
 <h3 id="krok-1-příprava-dat-a-uložení-do-vektorové-databáze">Krok 1. Příprava dat a uložení do vektorové databáze</h3>
-<p>V mém případě chci, aby měl AI agent kontext celého webu. Musím tedy nějakým způsobem dostat informace z webu do vektorové databáze, odkud si bude LLM model brát informace ke zpracování odpovědí. Použijeme k tomu data ze <strong><abbr title="Sitemap (mapa stránek) je soubor, nejčastěji ve formátu .xml, který obsahuje seznam všech důležitých URL adres vašeho webu. Slouží primárně pro roboty vyhledávačů (Google, Seznam), kterým pomáhá efektivněji procházet a indexovat web, což zlepšuje SEO.">sitemapy</abbr></strong>. Stáhneme z ní url adresy stránek na webu, převedeme je z XML formátu do <strong><abbr title="Univerzální a lehký datový formát, který slouží k přehlednému ukládání a přenosu informací. V rámci n8n funguje jako hlavní komunikační jazyk.">JSONu</abbr></strong>.</p>
+<p>V mém případě chci, aby měl AI agent kontext celého webu. Musím tedy nějakým způsobem dostat informace z webu do vektorové databáze, odkud si bude LLM model brát informace ke zpracování odpovědí. Použijeme k tomu data ze <strong><abbr title="Sitemap (mapa stránek) je soubor, nejčastěji ve formátu .xml, který obsahuje seznam všech důležitých URL adres vašeho webu. Slouží primárně pro roboty vyhledávačů (Google, Seznam), kterým pomáhá efektivněji procházet a indexovat web, což zlepšuje SEO." data-glossary="sitemap">sitemapy</abbr></strong>. Stáhneme z ní url adresy stránek na webu, převedeme je z XML formátu do <strong><abbr title="Univerzální a lehký datový formát, který slouží k přehlednému ukládání a přenosu informací. V rámci n8n funguje jako hlavní komunikační jazyk." data-glossary="json">JSONu</abbr></strong>.</p>
 
-<p>Poté načteme obsah jednotlivých stránek přes GET <strong><abbr title="HTTP Request (HTTP požadavek) je digitální zpráva, kterou jeden počítač posílá druhému, aby od něj něco získal nebo mu něco předal.">HTTP požadavek</abbr></strong> a <strong>očistíme o přebytečný balast</strong>. Nepotřebujeme totiž celou strukturu webu jako je hlavička nebo patička. Nakonec převedeme výsledný <strong><abbr title="HTML (HyperText Markup Language) je standardní značkovací jazyk, který určuje strukturu a obsah webových stránek. Není to programovací jazyk, ale spíše soubor instrukcí (tagů), které říkají prohlížeči: „Tady je nadpis, tady odstavec a tady odkaz.“">HTML</abbr></strong> obsah do <strong><abbr title="Markdown je odlehčený značkovací jazyk, který slouží pro úpravu prostého textu a jeho následný převod na formátovaný text publikovatelný na webu, zejména ve formátu HTML. Umožňuje pomocí jednoduchých formátovacích značek vyznačit v textu nadpisy a seznamy, doplnit odkazy, obrázky atd. Cílem jazyka je, aby byl text dobře čitelný a publikovatelný i v původním formátu prostého textu.">Markdown</abbr></strong> formátu, kterému AI modely lépe rozumí. A máme vstupní data z webu připravená.</p>
+<p>Poté načteme obsah jednotlivých stránek přes GET <strong><abbr title="HTTP Request (HTTP požadavek) je digitální zpráva, kterou jeden počítač posílá druhému, aby od něj něco získal nebo mu něco předal." data-glossary="http-request">HTTP požadavek</abbr></strong> a <strong>očistíme o přebytečný balast</strong>. Nepotřebujeme totiž celou strukturu webu jako je hlavička nebo patička. Nakonec převedeme výsledný <strong><abbr title="HTML (HyperText Markup Language) je standardní značkovací jazyk, který určuje strukturu a obsah webových stránek. Není to programovací jazyk, ale spíše soubor instrukcí (tagů), které říkají prohlížeči: Tady je nadpis, tady odstavec a tady odkaz." data-glossary="html">HTML</abbr></strong> obsah do <strong><abbr title="Markdown je odlehčený značkovací jazyk, který slouží pro úpravu prostého textu a jeho následný převod na formátovaný text publikovatelný na webu, zejména ve formátu HTML. Umožňuje pomocí jednoduchých formátovacích značek vyznačit v textu nadpisy a seznamy, doplnit odkazy, obrázky atd. Cílem jazyka je, aby byl text dobře čitelný a publikovatelný i v původním formátu prostého textu." data-glossary="markdown">Markdown</abbr></strong> formátu, kterému AI modely lépe rozumí. A máme vstupní data z webu připravená.</p>
 
 <blockquote class="alert alert-info">
   <p><strong>Jaká další data můžete svému AI agentovi předhodit?</strong>
@@ -453,13 +453,13 @@
 
 <p>Nyní můžeme vyčištěná data uložit do vektorové databáze, odkud si bude AI agent brát informace pro sestavení relevantních odpovědí. Do vektorové databáze však nelze uložit text jen tak napřímo. Aby v něm AI mohla efektivně vyhledávat, musí být text nejdříve převeden na digitální otisk (vektor). K tomu slouží již výše zmíněné <strong><abbr title="Zatímco my lidé vnímáme svět ve 3 rozměrech, moderní embedding modely pracují v nepředstavitelném prostoru o několika stovkách až tisících dimenzí. Například model od OpenAI (text-embedding-3-small) používá standardně 1 536 dimenzí. Každý úsek textu tak dostane 1 536 souřadnic, které přesně definují jeho význam. Díky tomu pak AI agent dokáže v mžiku najít souvislosti mezi otázkou uživatele a našimi daty na základě jejich hlubokého významu, nikoliv jen shody klíčových slov.">embedding modely</abbr></strong>.</p>
 
-<p>Před finálním uložením do vektorové databáze se text ještě musí rozdělit na menší celky, tzv. “<strong><abbr title="Chunking je proces rozdělení dlouhého textu na menší, logické celky – tzv. chunky (kousky).">chunking</abbr></strong>”. Jde o to, aby se modelu ke zpracování nepředhodily 42-stránkové obchodní podmínky e-shopu (které stejně nikdo nečte) najednou, ale pouze její menší celky relevantní vůči dotazu. Tím se zásadně šetří kontextové okno modelu a s tím související náklady na tokeny, za jejichž spotřebu se platí.</p>
+<p>Před finálním uložením do vektorové databáze se text ještě musí rozdělit na menší celky, tzv. “<strong><abbr title="Chunking je proces rozdělení dlouhého textu na menší, logické celky – tzv. chunky (kousky)." data-glossary="chunking">chunking</abbr></strong>”. Jde o to, aby se modelu ke zpracování nepředhodily 42-stránkové obchodní podmínky e-shopu (které stejně nikdo nečte) najednou, ale pouze její menší celky relevantní vůči dotazu. Tím se zásadně šetří kontextové okno modelu a s tím související náklady na tokeny, za jejichž spotřebu se platí.</p>
 
 <p>Obvykle se velikost jednoho kousku (“chunku”) pohybuje mezi 500-1000 znaky s překryvem 10-20%. Tento překryv je klíčový, aby se při rozdělení textu neztratil kontext a myšlenka plynule navazovala i v dalším bloku. Samotné rozdělování pak probíhá podle logických pravidel, nejčastěji podle odstavců nebo nadpisů.</p>
 
 <p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-05.jpg" alt="Abstrakce převodu textu na vektory pomocí embedding modelu" class="post-image" /></p>
 
-<p>Do vektorové databáze tedy ukládáme data ideálně očištěná a rozsekaná na menší části. Abychom neztratili kontext, odkud data pocházejí, doplníme do <strong><abbr title="Metadata jsou „data o datech“. Jsou to doplňující informace, které AI model nevidí jako hlavní text k přečtení, ale které systému pomáhají s organizací.">metadat</abbr></strong> URL adresu a datum poslední aktualizace dané webové stránky. Agent pak může v odpovědi uvést odkaz, odkud čerpal, což zvyšuje jeho důvěryhodnost a dotazující si může odpovědi rovnou ověřit na konkrétním odkazu.</p>
+<p>Do vektorové databáze tedy ukládáme data ideálně očištěná a rozsekaná na menší části. Abychom neztratili kontext, odkud data pocházejí, doplníme do <strong><abbr title="Metadata jsou data o datech. Jsou to doplňující informace, které AI model nevidí jako hlavní text k přečtení, ale které systému pomáhají s organizací." data-glossary="metadata">metadat</abbr></strong> URL adresu a datum poslední aktualizace dané webové stránky. Agent pak může v odpovědi uvést odkaz, odkud čerpal, což zvyšuje jeho důvěryhodnost a dotazující si může odpovědi rovnou ověřit na konkrétním odkazu.</p>
 
 <h3 id="krok-2-sestavení-agenta-s-jeho-nástroji">Krok 2. Sestavení Agenta s jeho nástroji</h3>
 
@@ -473,7 +473,7 @@
 
 <p>Nejdůležitější částí je definice <strong>systémového promptu</strong>. Jde o sadu instrukcí, která definuje osobnost, cíle a mantinely agenta. Nesmíme zapomenout nadefinovat i to, jak má používat připojené nástroje. Jakmile jsme spokojení s pokyny pro AI Agenta, začneme testovat. Budeme testovat relevanci odpovědí a chování podle namyšlených scénářů.</p>
 
-<p>Když zjistíme, že agent odpovídá nepřesně, máme několik možností, co s tím udělat. Můžeme např. upravit systémový prompt, vyzkoušet jiný AI model nebo zpřesnit výběr dat z vektorové databáze pomocí tzv. <strong><abbr title="Re-ranking je proces, který zvyšuje přesnost odpovědí v systému RAG. Zatímco vektorové vyhledávání je jako knihovník, který z regálu přinese 10 knih na dané téma. Re-ranking je pak ten moment, kdy si těch 10 knih prolistujete a vyberete jen ty 3, které velmi pravděpodobně obsahují odpověď na vaši otázku. Je to tedy druhý filtr před předáním vstupních dat pro finalizaci odpovědi LLM modelem.">Re-rankingu</abbr></strong>.</p>
+<p>Když zjistíme, že agent odpovídá nepřesně, máme několik možností, co s tím udělat. Můžeme např. upravit systémový prompt, vyzkoušet jiný AI model nebo zpřesnit výběr dat z vektorové databáze pomocí tzv. <strong><abbr title="Re-ranking je proces, který zvyšuje přesnost odpovědí v systému RAG. Zatímco vektorové vyhledávání je jako knihovník, který z regálu přinese 10 knih na dané téma. Re-ranking je pak ten moment, kdy si těch 10 knih prolistujete a vyberete jen ty 3, které velmi pravděpodobně obsahují odpověď na vaši otázku. Je to tedy druhý filtr před předáním vstupních dat pro finalizaci odpovědi LLM modelem." data-glossary="re-ranking">Re-rankingu</abbr></strong>.</p>
 
 <p><strong>Re-ranking model</strong> funguje jako druhý, přísnější filtr. Znovu a důkladněji projde výsledky z databáze a seřadí je podle skutečné relevance k dotazu. Teprve ty nejlepší kousky informací pošle finálnímu modelu k vypracování odpovědi. V našem konkrétním případě však není re-ranking nezbytně nutný vzhledem k menšímu objemu vstupních dat, ale je dobré o něm vědět, jakmile váš systém začne růst.</p>
 
@@ -483,7 +483,7 @@
 <p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-02-a.jpg" alt="Low-code nástroj n8n a výsledné workflow AI agenta s RAG modelem" class="post-image" /></p>
 
 <h3 id="krok-5-přidání-chatovacího-okna-na-web">Krok 5. Přidání chatovacího okna na web</h3>
-<p>Interakce s AI agentem bude probíhat pomocí chatovacího okna, které umístíme do kódu na našem webu. Nativní chatovací okno má už v sobě <strong>n8n</strong> integrované, takže není nutné si psát vlastní chatovací rozhraní či používat aplikaci 3. strany. Vyzkoušíme, zda vše chodí, jak má. Nezapomeneme přidat svoji webovou stránku do <strong><abbr title="CORS (Cross-Origin Resource Sharing) je bezpečnostní mechanismus v internetových prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server.">CORS</abbr></strong>.</p>
+<p>Interakce s AI agentem bude probíhat pomocí chatovacího okna, které umístíme do kódu na našem webu. Nativní chatovací okno má už v sobě <strong>n8n</strong> integrované, takže není nutné si psát vlastní chatovací rozhraní či používat aplikaci 3. strany. Vyzkoušíme, zda vše chodí, jak má. Nezapomeneme přidat svoji webovou stránku do <strong><abbr title="CORS (Cross-Origin Resource Sharing) je bezpečnostní mechanismus v internetových prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server." data-glossary="cors">CORS</abbr></strong>.</p>
 
 <p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-03-a.jpg" alt="Chatovací okno na webu" class="post-image" /></p>
 
@@ -516,7 +516,7 @@
 
 <ul>
   <li><strong>Kvalita a zpracování vstupních dat</strong> - RAG je jen tak dobrý, jak dobrá jsou vaše zdrojová data. Mějte vždy data aktuální, dobře strukturovaná a ošetřená od duplicit či nepotřebných informací.</li>
-  <li><strong>Bezpečnost dat a soukromí</strong> - Nastavte agentovi jasné hranice, k jakým datům smí přistupovat. Vzhledem k citlivosti údajů je potřeba se zamyslet nad tím, odkud a kam data posíláte a kdo s nimi může nakládat (GDPR). Taky je potřeba mít na paměti, že většinou bezplatné LLM modely souvisí s trénováním modelu na vašich datech. V některých případech je potřeba zvážit, zda nepoužít svůj vlastní <strong><abbr title="Lokální modely jsou velké jazykové modely (LLM), které jsou staženy a spouštěny přímo na vašem vlastním počítači nebo firemním serveru. K jejich provozu nepotřebujete internetové připojení a žádná data neposíláte třetím stranám.">lokální model</abbr></strong> (např. přes Ollama), čímž zajistíte, že data nikdy neopustí váš vlastní server. Pokud nemá model v základu ochranu proti pokusům o zneužití přes tzv. <strong><abbr title="Prompt Injection je technika, při které se uživatel snaží přepsat nebo obejít původní instrukce AI modelu (systémový prompt) tím, že do chatu vloží speciálně zformulovaný příkaz. Cílem je donutit agenta, aby dělal něco, co nemá – například prozradil citlivá data, ignoroval bezpečnostní pravidla nebo se začal chovat jako úplně jiná postava.">prompt injection</abbr></strong>, implementujte tuto ochranu do systémového promptu.</li>
+  <li><strong>Bezpečnost dat a soukromí</strong> - Nastavte agentovi jasné hranice, k jakým datům smí přistupovat. Vzhledem k citlivosti údajů je potřeba se zamyslet nad tím, odkud a kam data posíláte a kdo s nimi může nakládat (GDPR). Taky je potřeba mít na paměti, že většinou bezplatné LLM modely souvisí s trénováním modelu na vašich datech. V některých případech je potřeba zvážit, zda nepoužít svůj vlastní <strong><abbr title="Lokální modely jsou velké jazykové modely (LLM), které jsou staženy a spouštěny přímo na vašem vlastním počítači nebo firemním serveru. K jejich provozu nepotřebujete internetové připojení a žádná data neposíláte třetím stranám." data-glossary="lokalni-model">lokální model</abbr></strong> (např. přes Ollama), čímž zajistíte, že data nikdy neopustí váš vlastní server. Pokud nemá model v základu ochranu proti pokusům o zneužití přes tzv. <strong><abbr title="Prompt Injection je technika, při které se uživatel snaží přepsat nebo obejít původní instrukce AI modelu (systémový prompt) tím, že do chatu vloží speciálně zformulovaný příkaz. Cílem je donutit agenta, aby dělal něco, co nemá – například prozradil citlivá data, ignoroval bezpečnostní pravidla nebo se začal chovat jako úplně jiná postava." data-glossary="prompt-injection">prompt injection</abbr></strong>, implementujte tuto ochranu do systémového promptu.</li>
   <li><strong>Cena a efektivita</strong> - Sledujte spotřebu tokenů. Pro agentní systémy jsou spolehlivější dražší modely, ale ne vždy je nutné střílet z kanonu na vrabce. Pro jednodušší úkoly můžete zkusit levnější modely a ušetřit tak značné náklady. Hlídejte si také limit iterací, aby se agent při hledání odpovědi nezacyklil a zbytečně nevyčerpal váš rozpočet.</li>
   <li><strong>Human-in-the-loop</strong> - U kritických akcí, jako je odesílání důležitých e-mailů nebo mazání dat v CRM, nenechávejte AI zcela o samotě. Přidejte schvalovací krok člověkem, abyste předešli nevratným chybám.</li>
   <li><strong>Logování a monitoring</strong> - Logování je váš nejlepší nástroj pro následnou optimalizaci systému.</li>
@@ -791,7 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el.removeAttribute('title');
   });
 
-  // 2. Create bottom sheet elements (for touch devices)
+  // 2. Create bottom sheet elements (for touch devices and glossary terms)
   var backdrop = document.createElement('div');
   backdrop.className = 'abbr-sheet-backdrop';
   backdrop.setAttribute('aria-hidden', 'true');
@@ -806,7 +806,8 @@ document.addEventListener("DOMContentLoaded", () => {
       '<span class="abbr-sheet-term"></span>' +
       '<button class="abbr-sheet-close" aria-label="Zavřít">&times;</button>' +
     '</div>' +
-    '<p class="abbr-sheet-desc"></p>';
+    '<p class="abbr-sheet-desc"></p>' +
+    '<a class="abbr-sheet-link" href="#" style="display:none"></a>';
 
   document.body.appendChild(backdrop);
   document.body.appendChild(sheet);
@@ -814,10 +815,22 @@ document.addEventListener("DOMContentLoaded", () => {
   var termEl = sheet.querySelector('.abbr-sheet-term');
   var descEl = sheet.querySelector('.abbr-sheet-desc');
   var closeBtn = sheet.querySelector('.abbr-sheet-close');
+  var linkEl = sheet.querySelector('.abbr-sheet-link');
+  var glossaryLinkLabel = 'Přečíst více v AI slovníku →';
 
   function openSheet(abbr) {
     termEl.textContent = abbr.textContent;
     descEl.textContent = abbr.getAttribute('data-tooltip');
+    var glossarySlug = abbr.getAttribute('data-glossary');
+    if (glossarySlug) {
+      var lang = document.documentElement.lang || 'cs';
+      var prefix = (lang === 'cs') ? '' : '/' + lang;
+      linkEl.href = prefix + '/glossary/' + glossarySlug;
+      linkEl.textContent = glossaryLinkLabel;
+      linkEl.style.display = '';
+    } else {
+      linkEl.style.display = 'none';
+    }
     backdrop.classList.add('open');
     sheet.classList.add('open');
   }
@@ -833,7 +846,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('abbr[data-tooltip]').forEach(function(el) {
     el.addEventListener('click', function(e) {
       e.stopPropagation();
-      if (isTouch) {
+      if (isTouch || this.hasAttribute('data-glossary')) {
         openSheet(this);
       } else {
         this.classList.toggle('tooltip-visible');
@@ -976,11 +989,13 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="footer-bottom">
   
 <p class="footer-links">
-    <a href="/"  aria-label="Home">Domů</a>
-    <a href="/cv/" aria-label="Curriculum vitae">CV</a>
-    <a href="/services/" aria-label="Služby">Služby</a>
-    <a href="/blog/" aria-label="Blog">Blog</a>
+  <a href="/" aria-label="Home">Domů</a>
+  <a href="/cv/" aria-label="Curriculum vitae">CV</a>
+  <a href="/services/" aria-label="Služby">Služby</a>
+  <a href="/glossary/" aria-label="AI Slovník">AI Slovník</a>
+  <a href="/blog/" aria-label="Blog">Blog</a>
 </p>
+
   
 <div class="language-switcher">
 
@@ -1001,7 +1016,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-14T19:27:56+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-23T12:56:04+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

@@ -75,7 +75,7 @@
       "name": "Daniel Hladik"
     },
     "datePublished": "2025-12-11T00:00:00+00:00",
-    "dateModified": "2026-04-14T19:26:28+00:00",
+    "dateModified": "2026-04-22T20:26:57+00:00",
     "description": "I'll show you how to track your sleep routine using Google Sheets for free. Without apps and wearables - with Google Form and automatic reminders.",
     "inLanguage": "en_US",
     "headline": "How to track your sleep using Google tools",
@@ -762,7 +762,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el.removeAttribute('title');
   });
 
-  // 2. Create bottom sheet elements (for touch devices)
+  // 2. Create bottom sheet elements (for touch devices and glossary terms)
   var backdrop = document.createElement('div');
   backdrop.className = 'abbr-sheet-backdrop';
   backdrop.setAttribute('aria-hidden', 'true');
@@ -777,7 +777,8 @@ document.addEventListener("DOMContentLoaded", () => {
       '<span class="abbr-sheet-term"></span>' +
       '<button class="abbr-sheet-close" aria-label="Zavřít">&times;</button>' +
     '</div>' +
-    '<p class="abbr-sheet-desc"></p>';
+    '<p class="abbr-sheet-desc"></p>' +
+    '<a class="abbr-sheet-link" href="#" style="display:none"></a>';
 
   document.body.appendChild(backdrop);
   document.body.appendChild(sheet);
@@ -785,10 +786,22 @@ document.addEventListener("DOMContentLoaded", () => {
   var termEl = sheet.querySelector('.abbr-sheet-term');
   var descEl = sheet.querySelector('.abbr-sheet-desc');
   var closeBtn = sheet.querySelector('.abbr-sheet-close');
+  var linkEl = sheet.querySelector('.abbr-sheet-link');
+  var glossaryLinkLabel = 'Read more in AI Glossary →';
 
   function openSheet(abbr) {
     termEl.textContent = abbr.textContent;
     descEl.textContent = abbr.getAttribute('data-tooltip');
+    var glossarySlug = abbr.getAttribute('data-glossary');
+    if (glossarySlug) {
+      var lang = document.documentElement.lang || 'cs';
+      var prefix = (lang === 'cs') ? '' : '/' + lang;
+      linkEl.href = prefix + '/glossary/' + glossarySlug;
+      linkEl.textContent = glossaryLinkLabel;
+      linkEl.style.display = '';
+    } else {
+      linkEl.style.display = 'none';
+    }
     backdrop.classList.add('open');
     sheet.classList.add('open');
   }
@@ -804,7 +817,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('abbr[data-tooltip]').forEach(function(el) {
     el.addEventListener('click', function(e) {
       e.stopPropagation();
-      if (isTouch) {
+      if (isTouch || this.hasAttribute('data-glossary')) {
         openSheet(this);
       } else {
         this.classList.toggle('tooltip-visible');
@@ -953,11 +966,13 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="footer-bottom">
   
 <p class="footer-links">
-    <a href="/en/"  aria-label="Home">Home</a>
-    <a href="/en/cv/" aria-label="Curriculum vitae">CV</a>
-    <a href="/en/services/" aria-label="Services">Services</a>
-    <a href="/en/blog/" aria-label="Blog">Blog</a>
+  <a href="/en/" aria-label="Home">Home</a>
+  <a href="/en/cv/" aria-label="Curriculum vitae">CV</a>
+  <a href="/en/services/" aria-label="Services">Services</a>
+  <a href="/en/glossary/" aria-label="AI Glossary">AI Glossary</a>
+  <a href="/en/blog/" aria-label="Blog">Blog</a>
 </p>
+
   
 <div class="language-switcher">
 
@@ -977,7 +992,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-14T19:27:57+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-23T12:56:05+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
