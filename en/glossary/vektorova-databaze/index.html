@@ -347,13 +347,13 @@
 <p>A specialized database optimized for storing and semantically searching vectors - numerical representations of text.</p>
 
 <h2>What is a vector database?</h2>
-<p>A <strong>vector database</strong> is a special type of database designed for storing and quickly searching <strong>vectors</strong> - numerical representations of text created by an embedding model. Unlike traditional databases that search for exact word matches, a vector database searches for <em>similarity of meaning</em>.</p>
+<p>A <strong>vector database</strong> is a special type of database designed for storing and quickly searching <strong><a href="/en/glossary/vektor/">vectors</a></strong> - numerical representations of text created by an <a href="/en/glossary/embedding-model/">embedding model</a>. Unlike traditional databases that search for exact word matches, a vector database searches for <em>similarity of meaning</em>.</p>
 <h3>How vector databases work in RAG</h3>
 <ol>
-  <li><strong>Indexing:</strong> Documents are split into chunks, converted to vectors, and stored in the database.</li>
+  <li><strong>Indexing:</strong> Documents are split into <a href="/en/glossary/chunking/">chunks</a>, converted to vectors, and stored in the database.</li>
   <li><strong>Query:</strong> The user's question is also converted to a vector.</li>
   <li><strong>Search:</strong> The database finds vectors (chunks) closest to the question vector.</li>
-  <li><strong>Result:</strong> The most relevant chunks are passed to the LLM to generate an answer.</li>
+  <li><strong>Result:</strong> The most relevant chunks are passed to the <a href="/en/glossary/llm/">LLM</a> to generate an answer.</li>
 </ol>
 <h3>Popular vector databases</h3>
 <ul>
@@ -494,7 +494,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-23T20:24:09+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-24T08:41:29+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

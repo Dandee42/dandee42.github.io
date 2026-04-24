@@ -347,18 +347,18 @@
 <p>Protective mechanisms that constrain AI system behavior and prevent unwanted, harmful, or out-of-scope outputs.</p>
 
 <h2>What are guardrails?</h2>
-<p><strong>Guardrails</strong> are mechanisms that monitor both the inputs and outputs of an AI system, preventing the model from responding in ways that are dangerous, out of scope, or otherwise undesirable. They are the rules, filters, and control layers wrapped around an LLM.</p>
+<p><strong>Guardrails</strong> are mechanisms that monitor both the inputs and outputs of an AI system, preventing the model from responding in ways that are dangerous, out of scope, or otherwise undesirable. They are the rules, filters, and control layers wrapped around an <a href="/en/glossary/llm/">LLM</a>.</p>
 <h3>Types of guardrails</h3>
 <ul>
   <li><strong>Input guardrails:</strong> Filter the user's query before it reaches the model - blocking inappropriate or dangerous requests.</li>
-  <li><strong>Output guardrails:</strong> Check the model's response before showing it to the user - catching hallucinations, sensitive data, or off-topic outputs.</li>
-  <li><strong>System prompt:</strong> The baseline level of guardrails - instructions embedded directly in the prompt.</li>
+  <li><strong>Output guardrails:</strong> Check the model's response before showing it to the user - catching <a href="/en/glossary/hallucination/">hallucinations</a>, sensitive data, or off-topic outputs.</li>
+  <li><strong><a href="/en/glossary/system-prompt/">System prompt</a>:</strong> The baseline level of guardrails - instructions embedded directly in the <a href="/en/glossary/prompt/">prompt</a>.</li>
 </ul>
 <h3>Example use cases</h3>
 <ul>
-  <li>A customer support chatbot must not discuss competitors → a guardrail redirects the query</li>
+  <li>A customer support <a href="/en/glossary/chatbot/">chatbot</a> must not discuss competitors → a guardrail redirects the query</li>
   <li>Detection of PII (personal data) in output → a guardrail anonymizes it before delivery</li>
-  <li>Blocking prompt injection attempts → an input guardrail filters suspicious patterns</li>
+  <li>Blocking <a href="/en/glossary/prompt-injection/">prompt injection</a> attempts → an input guardrail filters suspicious patterns</li>
 </ul>
 <h3>Tools for guardrails</h3>
 <p>Popular frameworks such as <strong>NeMo Guardrails</strong> (NVIDIA) and <strong>Guardrails AI</strong> allow you to define rules declaratively and integrate them into any LLM pipeline.</p>
@@ -494,7 +494,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-23T20:24:09+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-24T08:41:29+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
