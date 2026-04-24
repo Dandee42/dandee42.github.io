@@ -347,18 +347,18 @@
 <p>Ochranné mechanismy omezující chování AI systému a zabraňující nežádoucím, škodlivým nebo mimoscopovým výstupům.</p>
 
 <h2>Co jsou guardrails?</h2>
-<p><strong>Guardrails</strong> (ochranné mantinely) jsou mechanismy, které hlídají vstupy i výstupy AI systému a zabraňují tomu, aby model odpovídal způsobem, který je nebezpečný, mimoscopový nebo jinak nežádoucí. Jsou to pravidla, filtry a kontrolní vrstvy kolem LLM modelu.</p>
+<p><strong>Guardrails</strong> (ochranné mantinely) jsou mechanismy, které hlídají vstupy i výstupy AI systému a zabraňují tomu, aby model odpovídal způsobem, který je nebezpečný, mimoscopový nebo jinak nežádoucí. Jsou to pravidla, filtry a kontrolní vrstvy kolem <a href="/glossary/llm/">LLM modelu</a>.</p>
 <h3>Typy guardrails</h3>
 <ul>
   <li><strong>Vstupní guardrails:</strong> Filtrují uživatelský dotaz před odesláním do modelu - blokují nevhodné nebo nebezpečné požadavky.</li>
-  <li><strong>Výstupní guardrails:</strong> Kontrolují odpověď modelu před zobrazením uživateli - zachytávají halucinace, citlivá data nebo off-topic výstupy.</li>
-  <li><strong>Systémový prompt:</strong> Základní úroveň guardrails - instrukce přímo v promptu.</li>
+  <li><strong>Výstupní guardrails:</strong> Kontrolují odpověď modelu před zobrazením uživateli - zachytávají <a href="/glossary/hallucination/">halucinace</a>, citlivá data nebo off-topic výstupy.</li>
+  <li><strong><a href="/glossary/system-prompt/">Systémový prompt</a>:</strong> Základní úroveň guardrails - instrukce přímo v <a href="/glossary/prompt/">promptu</a>.</li>
 </ul>
 <h3>Příklady využití</h3>
 <ul>
-  <li>Chatbot zákaznické podpory nesmí diskutovat o konkurenci → guardrail přesměruje dotaz</li>
+  <li><a href="/glossary/chatbot/">Chatbot</a> zákaznické podpory nesmí diskutovat o konkurenci → guardrail přesměruje dotaz</li>
   <li>Detekce PII (osobních údajů) ve výstupu → guardrail je anonymizuje před odesláním</li>
-  <li>Blokování prompt injection pokusů → vstupní guardrail odfiltruje podezřelé vzory</li>
+  <li>Blokování <a href="/glossary/prompt-injection/">prompt injection</a> pokusů → vstupní guardrail odfiltruje podezřelé vzory</li>
 </ul>
 <h3>Nástroje pro guardrails</h3>
 <p>Populární frameworky jako <strong>NeMo Guardrails</strong> (NVIDIA) nebo <strong>Guardrails AI</strong> umožňují definovat pravidla deklarativně a integrovat je do libovolného LLM pipeline.</p>
@@ -491,7 +491,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-23T20:22:16+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-24T08:38:44+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

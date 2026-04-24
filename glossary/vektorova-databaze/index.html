@@ -347,13 +347,13 @@
 <p>Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.</p>
 
 <h2>Co je vektorová databáze?</h2>
-<p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong>vektorů</strong> - číselných reprezentací textu vytvořených embedding modelem. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
+<p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong><a href="/glossary/vektor/">vektorů</a></strong> - číselných reprezentací textu vytvořených <a href="/glossary/embedding-model/">embedding modelem</a>. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
 <h3>Jak vektorová databáze funguje v RAG</h3>
 <ol>
-  <li><strong>Indexace:</strong> Dokumenty se rozdělí na chunky, převedou na vektory a uloží do databáze.</li>
+  <li><strong>Indexace:</strong> Dokumenty se rozdělí na <a href="/glossary/chunking/">chunky</a>, převedou na vektory a uloží do databáze.</li>
   <li><strong>Dotaz:</strong> Uživatelova otázka se také převede na vektor.</li>
   <li><strong>Vyhledávání:</strong> Databáze najde vektory (chunky), které jsou nejblíže vektoru otázky.</li>
-  <li><strong>Výsledek:</strong> Nejrelevantnější chunky se předají LLM pro generování odpovědi.</li>
+  <li><strong>Výsledek:</strong> Nejrelevantnější chunky se předají <a href="/glossary/llm/">LLM</a> pro generování odpovědi.</li>
 </ol>
 <h3>Populární vektorové databáze</h3>
 <ul>
@@ -491,7 +491,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-23T20:22:16+00:00">2026</time>
+  <small>&copy; <time datetime="2026-04-24T08:38:44+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
