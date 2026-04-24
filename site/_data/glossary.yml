@@ -17,9 +17,9 @@
         <h3>Jak RAG funguje</h3>
         <p>Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. RAG tento problém řeší tak, že modelu v momentě dotazu předloží relevantní informace z vaší databáze.</p>
         <ol>
-          <li><strong>Příprava dat:</strong> Dokumenty se rozsekají na menší části a pomocí embedding modelu se převedou na vektory, které se uloží do vektorové databáze.</li>
+          <li><strong>Příprava dat:</strong> Dokumenty se rozsekají na menší části a pomocí <a href="/glossary/embedding-model/">embedding modelu</a> se převedou na <a href="/glossary/vektor/">vektory</a>, které se uloží do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</li>
           <li><strong>Zpracování dotazu:</strong> Když se uživatel zeptá, systém převede dotaz na vektor a najde nejbližší kontextovou shodu v databázi.</li>
-          <li><strong>Generování odpovědi:</strong> Nalezené odstavce se přibalí k otázce a pošlou LLM modelu, který z nich sestaví finální odpověď.</li>
+          <li><strong>Generování odpovědi:</strong> Nalezené odstavce se přibalí k otázce a pošlou <a href="/glossary/llm/">LLM modelu</a>, který z nich sestaví finální odpověď.</li>
         </ol>
         <h3>Kdy se RAG hodí</h3>
         <ul>
@@ -37,9 +37,9 @@
         <h3>How RAG works</h3>
         <p>A regular AI model is like a highly educated person who stopped following the news after a certain date and knows nothing about your specific business. RAG solves this problem by presenting relevant information from your database to the model at query time.</p>
         <ol>
-          <li><strong>Data preparation:</strong> Documents are split into smaller chunks and converted into vectors using an embedding model, then stored in a vector database.</li>
+          <li><strong>Data preparation:</strong> Documents are split into smaller <a href="/en/glossary/chunking/">chunks</a> and converted into vectors using an <a href="/en/glossary/embedding-model/">embedding model</a>, then stored in a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</li>
           <li><strong>Query processing:</strong> When a user asks a question, the system converts the query into a vector and finds the closest contextual match in the database.</li>
-          <li><strong>Answer generation:</strong> The found paragraphs are bundled with the question and sent to the LLM, which composes the final answer.</li>
+          <li><strong>Answer generation:</strong> The found paragraphs are bundled with the question and sent to the <a href="/en/glossary/llm/">LLM</a>, which composes the final answer.</li>
         </ol>
         <h3>When RAG is the right fit</h3>
         <ul>
@@ -105,18 +105,18 @@
       short_definition: "Low-code platforma pro automatizaci workflow, která propojuje stovky aplikací bez nutnosti složitého kódování."
       text: |
         <h2>Co je n8n?</h2>
-        <p><strong>n8n</strong> je open-source low-code platforma pro automatizaci workflow. Umožňuje vizuálně propojovat stovky aplikací a služeb bez nutnosti složitého kódování.</p>
+        <p><strong>n8n</strong> je open-source <a href="/glossary/low-code-no-code/">low-code</a> platforma pro automatizaci <a href="/glossary/workflow/">workflow</a>. Umožňuje vizuálně propojovat stovky aplikací a služeb bez nutnosti složitého kódování.</p>
         <h3>Klíčové vlastnosti</h3>
         <ul>
           <li><strong>Vizuální editor:</strong> Drag-and-drop rozhraní pro tvorbu automatizací</li>
-          <li><strong>400+ integrací:</strong> Propojení s CRM, e-mailem, databázemi, API a dalšími službami</li>
+          <li><strong>400+ integrací:</strong> Propojení s CRM, e-mailem, databázemi, <a href="/glossary/api/">API</a> a dalšími službami</li>
           <li><strong>Self-hosted:</strong> Možnost provozovat na vlastním serveru pro plnou kontrolu nad daty</li>
-          <li><strong>AI integrace:</strong> Nativní podpora pro LLM modely, RAG a AI agenty</li>
+          <li><strong>AI integrace:</strong> Nativní podpora pro <a href="/glossary/llm/">LLM modely</a>, <a href="/glossary/rag/">RAG</a> a <a href="/glossary/agentni-systemy/">AI agenty</a></li>
         </ul>
         <h3>Kdy se n8n hodí</h3>
         <ul>
           <li>Automatizace opakujících se úkolů mezi aplikacemi</li>
-          <li>Tvorba AI chatbotů a agentů</li>
+          <li>Tvorba AI <a href="/glossary/chatbot/">chatbotů</a> a agentů</li>
           <li>Zpracování dat a reporting</li>
           <li>Propojení systémů, které nemají nativní integraci</li>
         </ul>
@@ -126,18 +126,18 @@
       short_definition: "A low-code workflow automation platform that connects hundreds of apps without complex coding."
       text: |
         <h2>What is n8n?</h2>
-        <p><strong>n8n</strong> is an open-source low-code workflow automation platform. It allows you to visually connect hundreds of applications and services without complex coding.</p>
+        <p><strong>n8n</strong> is an open-source <a href="/en/glossary/low-code-no-code/">low-code</a> <a href="/en/glossary/workflow/">workflow</a> automation platform. It allows you to visually connect hundreds of applications and services without complex coding.</p>
         <h3>Key features</h3>
         <ul>
           <li><strong>Visual editor:</strong> Drag-and-drop interface for building automations</li>
-          <li><strong>400+ integrations:</strong> Connect with CRM, email, databases, APIs, and more</li>
+          <li><strong>400+ integrations:</strong> Connect with CRM, email, databases, <a href="/en/glossary/api/">APIs</a>, and more</li>
           <li><strong>Self-hosted:</strong> Run on your own server for full data control</li>
-          <li><strong>AI integration:</strong> Native support for LLM models, RAG, and AI agents</li>
+          <li><strong>AI integration:</strong> Native support for <a href="/en/glossary/llm/">LLM models</a>, <a href="/en/glossary/rag/">RAG</a>, and <a href="/en/glossary/agentni-systemy/">AI agents</a></li>
         </ul>
         <h3>When n8n is the right fit</h3>
         <ul>
           <li>Automating repetitive tasks between applications</li>
-          <li>Building AI chatbots and agents</li>
+          <li>Building AI <a href="/en/glossary/chatbot/">chatbots</a> and agents</li>
           <li>Data processing and reporting</li>
           <li>Connecting systems that lack native integration</li>
         </ul>
@@ -160,11 +160,11 @@
         <p><strong>Embedding model</strong> je specializovaný typ umělé inteligence, který slouží jako překladač mezi lidskou řečí a světem čísel. Jeho úlohou je vzít kus textu (slovo, větu nebo odstavec) a vypočítat pro něj jeho vektor - číselnou reprezentaci významu.</p>
         <h3>Jak embedding model funguje</h3>
         <p>Moderní embedding modely pracují v prostoru o stovkách až tisících dimenzí. Například model od OpenAI (text-embedding-3-small) používá 1 536 dimenzí. Každý úsek textu tak dostane 1 536 souřadnic, které přesně definují jeho význam.</p>
-        <h3>Využití v RAG</h3>
+        <h3>Využití v <a href="/glossary/rag/">RAG</a></h3>
         <ul>
-          <li>Při ukládání se dokumenty převádějí na vektory do vektorové databáze</li>
+          <li>Při ukládání se dokumenty převádějí na <a href="/glossary/vektor/">vektory</a> do <a href="/glossary/vektorova-databaze/">vektorové databáze</a></li>
           <li>Při dotazu se otázka uživatele převede na vektor pro porovnání s uloženými daty</li>
-          <li>Umožňuje sémantické vyhledávání - hledání podle významu, ne jen klíčových slov</li>
+          <li>Umožňuje <a href="/glossary/semanticke-vyhledavani/">sémantické vyhledávání</a> - hledání podle významu, ne jen klíčových slov</li>
         </ul>
     en:
       title: "Embedding Model"
@@ -172,14 +172,14 @@
       short_definition: "A specialized type of AI that converts text into numerical vectors for efficient semantic search."
       text: |
         <h2>What is an embedding model?</h2>
-        <p>An <strong>embedding model</strong> is a specialized type of artificial intelligence that serves as a translator between human speech and the world of numbers. Its task is to take a piece of text (a word, sentence, or paragraph) and calculate its vector - a numerical representation of meaning.</p>
+        <p>An <strong>embedding model</strong> is a specialized type of artificial intelligence that serves as a translator between human speech and the world of numbers. Its task is to take a piece of text (a word, sentence, or paragraph) and calculate its <a href="/en/glossary/vektor/">vector</a> - a numerical representation of meaning.</p>
         <h3>How embedding models work</h3>
         <p>Modern embedding models operate in a space with hundreds to thousands of dimensions. For example, the OpenAI model (text-embedding-3-small) uses 1,536 dimensions. Each section of text is assigned 1,536 coordinates that precisely define its meaning.</p>
-        <h3>Use in RAG</h3>
+        <h3>Use in <a href="/en/glossary/rag/">RAG</a></h3>
         <ul>
-          <li>When storing, documents are converted to vectors in a vector database</li>
+          <li>When storing, documents are converted to vectors in a <a href="/en/glossary/vektorova-databaze/">vector database</a></li>
           <li>When querying, the user's question is converted to a vector for comparison with stored data</li>
-          <li>Enables semantic search - searching by meaning, not just keywords</li>
+          <li>Enables <a href="/en/glossary/semanticke-vyhledavani/">semantic search</a> - searching by meaning, not just keywords</li>
         </ul>
 
 - page_id: vektor
@@ -201,9 +201,9 @@
         <p>Tyto souřadnice určují přesnou polohu dané informace v pomyslném prostoru znalostí. Pokud mají dva texty podobný význam, leží jejich vektory v databázi blízko sebe.</p>
         <h3>Proč jsou vektory důležité</h3>
         <ul>
-          <li>Umožňují sémantické vyhledávání - hledání podle významu, ne jen podle klíčových slov</li>
-          <li>Jsou základem RAG systémů a vektorových databází</li>
-          <li>Vytvářejí se pomocí embedding modelů</li>
+          <li>Umožňují <a href="/glossary/semanticke-vyhledavani/">sémantické vyhledávání</a> - hledání podle významu, ne jen podle klíčových slov</li>
+          <li>Jsou základem <a href="/glossary/rag/">RAG systémů</a> a <a href="/glossary/vektorova-databaze/">vektorových databází</a></li>
+          <li>Vytvářejí se pomocí <a href="/glossary/embedding-model/">embedding modelů</a></li>
         </ul>
     en:
       title: "Vector (in AI context)"
@@ -215,9 +215,9 @@
         <p>These coordinates determine the exact position of the information in a hypothetical knowledge space. If two texts have similar meanings, their vectors lie close to each other in the database.</p>
         <h3>Why vectors matter</h3>
         <ul>
-          <li>Enable semantic search - searching by meaning, not just keywords</li>
-          <li>Are the foundation of RAG systems and vector databases</li>
-          <li>Created using embedding models</li>
+          <li>Enable <a href="/en/glossary/semanticke-vyhledavani/">semantic search</a> - searching by meaning, not just keywords</li>
+          <li>Are the foundation of <a href="/en/glossary/rag/">RAG systems</a> and <a href="/en/glossary/vektorova-databaze/">vector databases</a></li>
+          <li>Created using <a href="/en/glossary/embedding-model/">embedding models</a></li>
         </ul>
 
 - page_id: faq
@@ -240,7 +240,7 @@
         <ul>
           <li>Snižuje zátěž zákaznické podpory</li>
           <li>Zlepšuje uživatelský zážitek - odpovědi jsou dostupné okamžitě</li>
-          <li>Slouží jako kvalitní vstupní data pro RAG systémy a AI chatboty</li>
+          <li>Slouží jako kvalitní vstupní data pro <a href="/glossary/rag/">RAG systémy</a> a AI <a href="/glossary/chatbot/">chatboty</a></li>
         </ul>
     en:
       title: "FAQ (Frequently Asked Questions)"
@@ -253,7 +253,7 @@
         <ul>
           <li>Reduces customer support workload</li>
           <li>Improves user experience - answers are available instantly</li>
-          <li>Serves as quality input data for RAG systems and AI chatbots</li>
+          <li>Serves as quality input data for <a href="/en/glossary/rag/">RAG systems</a> and AI <a href="/en/glossary/chatbot/">chatbots</a></li>
         </ul>
 
 - page_id: langchain
@@ -271,12 +271,12 @@
       short_definition: "Open-source framework s předpřipravenou architekturou pro AI agenty a integracemi pro jakýkoliv model nebo nástroj."
       text: |
         <h2>Co je LangChain?</h2>
-        <p><strong>LangChain</strong> je open-source framework pro vývoj aplikací poháněných velkými jazykovými modely (LLM). Poskytuje předpřipravenou architekturu pro agenty a integrace pro jakýkoliv model nebo nástroj.</p>
+        <p><strong>LangChain</strong> je open-source framework pro vývoj aplikací poháněných velkými jazykovými modely (<a href="/glossary/llm/">LLM</a>). Poskytuje předpřipravenou architekturu pro agenty a integrace pro jakýkoliv model nebo nástroj.</p>
         <h3>Klíčové vlastnosti</h3>
         <ul>
-          <li><strong>Řetězení:</strong> Propojování více LLM volání a nástrojů do komplexních workflow</li>
-          <li><strong>Agenti:</strong> Vytváření autonomních AI agentů, kteří se rozhodují na základě kontextu</li>
-          <li><strong>Integrace:</strong> Podpora stovek nástrojů, databází a API</li>
+          <li><strong>Řetězení:</strong> Propojování více LLM volání a nástrojů do komplexních <a href="/glossary/workflow/">workflow</a></li>
+          <li><strong>Agenti:</strong> Vytváření autonomních <a href="/glossary/agentni-systemy/">AI agentů</a>, kteří se rozhodují na základě kontextu</li>
+          <li><strong>Integrace:</strong> Podpora stovek nástrojů, databází a <a href="/glossary/api/">API</a></li>
           <li><strong>Paměť:</strong> Správa konverzační historie a kontextu</li>
         </ul>
     en:
@@ -285,12 +285,12 @@
       short_definition: "An open-source framework with ready-made architecture for AI agents and integrations for any model or tool."
       text: |
         <h2>What is LangChain?</h2>
-        <p><strong>LangChain</strong> is an open-source framework for developing applications powered by large language models (LLMs). It provides ready-made architecture for agents and integrations for any model or tool.</p>
+        <p><strong>LangChain</strong> is an open-source framework for developing applications powered by large language models (<a href="/en/glossary/llm/">LLMs</a>). It provides ready-made architecture for agents and integrations for any model or tool.</p>
         <h3>Key features</h3>
         <ul>
-          <li><strong>Chaining:</strong> Connecting multiple LLM calls and tools into complex workflows</li>
-          <li><strong>Agents:</strong> Creating autonomous AI agents that make decisions based on context</li>
-          <li><strong>Integrations:</strong> Support for hundreds of tools, databases, and APIs</li>
+          <li><strong>Chaining:</strong> Connecting multiple LLM calls and tools into complex <a href="/en/glossary/workflow/">workflows</a></li>
+          <li><strong>Agents:</strong> Creating autonomous <a href="/en/glossary/agentni-systemy/">AI agents</a> that make decisions based on context</li>
+          <li><strong>Integrations:</strong> Support for hundreds of tools, databases, and <a href="/en/glossary/api/">APIs</a></li>
           <li><strong>Memory:</strong> Managing conversation history and context</li>
         </ul>
 
@@ -312,8 +312,8 @@
         <p><strong>Agentní systémy</strong> (nebo AI agenti) jsou pokročilé implementace umělé inteligence, které nefungují podle předem daného scénáře, ale samostatně rozhodují o postupu k dosažení stanoveného cíle.</p>
         <h3>Rozdíl oproti běžným chatbotům</h3>
         <ul>
-          <li><strong>Chatbot:</strong> Odpovídá na otázky podle předem definovaných pravidel nebo znalostí</li>
-          <li><strong>AI agent:</strong> Sám vyhledává informace, volá API, zapisuje do databáze a rozhoduje se, co dělat jako další</li>
+          <li><strong><a href="/glossary/chatbot/">Chatbot</a>:</strong> Odpovídá na otázky podle předem definovaných pravidel nebo znalostí</li>
+          <li><strong>AI agent:</strong> Sám vyhledává informace, volá <a href="/glossary/api/">API</a>, zapisuje do databáze a rozhoduje se, co dělat jako další</li>
         </ul>
         <h3>Příklady využití</h3>
         <ul>
@@ -330,8 +330,8 @@
         <p><strong>Agent systems</strong> (or AI agents) are advanced implementations of artificial intelligence that do not operate according to a predetermined scenario, but independently decide on the steps to achieve a set goal.</p>
         <h3>Difference from regular chatbots</h3>
         <ul>
-          <li><strong>Chatbot:</strong> Answers questions based on predefined rules or knowledge</li>
-          <li><strong>AI agent:</strong> Independently searches for information, calls APIs, writes to databases, and decides what to do next</li>
+          <li><strong><a href="/en/glossary/chatbot/">Chatbot</a>:</strong> Answers questions based on predefined rules or knowledge</li>
+          <li><strong>AI agent:</strong> Independently searches for information, calls <a href="/en/glossary/api/">APIs</a>, writes to databases, and decides what to do next</li>
         </ul>
         <h3>Use cases</h3>
         <ul>
@@ -357,7 +357,7 @@
         <h2>Co je sitemap?</h2>
         <p><strong>Sitemap</strong> (mapa stránek) je soubor, nejčastěji ve formátu XML, který obsahuje seznam všech důležitých URL adres vašeho webu. Slouží primárně pro roboty vyhledávačů (Google, Seznam), kterým pomáhá efektivněji procházet a indexovat web.</p>
         <h3>Využití v automatizaci</h3>
-        <p>V kontextu RAG systémů slouží sitemap jako výchozí bod pro automatické stahování obsahu webu do vektorové databáze.</p>
+        <p>V kontextu <a href="/glossary/rag/">RAG systémů</a> slouží sitemap jako výchozí bod pro automatické stahování obsahu webu do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</p>
     en:
       title: "Sitemap"
       description: "What is a sitemap? A file containing a list of all important URLs on a website that helps search engines index pages more effectively."
@@ -366,7 +366,7 @@
         <h2>What is a sitemap?</h2>
         <p>A <strong>sitemap</strong> is a file, usually in XML format, that contains a list of all the important URLs on your website. It is primarily used by search engine robots (e.g., Google) to crawl and index your website more effectively.</p>
         <h3>Use in automation</h3>
-        <p>In the context of RAG systems, a sitemap serves as a starting point for automatically downloading website content into a vector database.</p>
+        <p>In the context of <a href="/en/glossary/rag/">RAG systems</a>, a sitemap serves as a starting point for automatically downloading website content into a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</p>
 
 - page_id: json
   type: glossary
@@ -386,8 +386,8 @@
         <p><strong>JSON (JavaScript Object Notation)</strong> je univerzální a lehký datový formát, který slouží k přehlednému ukládání a přenosu informací. Je snadno čitelný jak pro lidi, tak pro stroje.</p>
         <h3>Využití</h3>
         <ul>
-          <li>Komunikace mezi API a aplikacemi</li>
-          <li>Hlavní komunikační jazyk v rámci automatizačních nástrojů jako n8n</li>
+          <li>Komunikace mezi <a href="/glossary/api/">API</a> a aplikacemi</li>
+          <li>Hlavní komunikační jazyk v rámci automatizačních nástrojů jako <a href="/glossary/n8n/">n8n</a></li>
           <li>Ukládání konfiguračních dat</li>
         </ul>
     en:
@@ -399,8 +399,8 @@
         <p><strong>JSON (JavaScript Object Notation)</strong> is a universal and lightweight data format used for clear storage and transfer of information. It is easily readable by both humans and machines.</p>
         <h3>Use cases</h3>
         <ul>
-          <li>Communication between APIs and applications</li>
-          <li>Main communication language within automation tools like n8n</li>
+          <li>Communication between <a href="/en/glossary/api/">APIs</a> and applications</li>
+          <li>Main communication language within automation tools like <a href="/en/glossary/n8n/">n8n</a></li>
           <li>Storing configuration data</li>
         </ul>
 
@@ -483,7 +483,7 @@
         <h2>Co je Markdown?</h2>
         <p><strong>Markdown</strong> je odlehčený značkovací jazyk, který slouží pro úpravu prostého textu a jeho následný převod na formátovaný text publikovatelný na webu (HTML). Text je dobře čitelný i v původním formátu.</p>
         <h3>Využití v AI</h3>
-        <p>AI modely lépe rozumí textu ve formátu Markdown než surovému HTML, proto se při přípravě dat pro RAG systémy často převádí HTML obsah do Markdownu.</p>
+        <p>AI modely lépe rozumí textu ve formátu Markdown než surovému <a href="/glossary/html/">HTML</a>, proto se při přípravě dat pro <a href="/glossary/rag/">RAG systémy</a> často převádí HTML obsah do Markdownu.</p>
     en:
       title: "Markdown"
       description: "What is Markdown? A lightweight markup language for editing plain text and converting it to formatted web content."
@@ -492,7 +492,7 @@
         <h2>What is Markdown?</h2>
         <p><strong>Markdown</strong> is a lightweight markup language used to edit plain text and convert it into formatted text that can be published on the web (HTML). The text is easy to read even in its original format.</p>
         <h3>Use in AI</h3>
-        <p>AI models understand text in Markdown format better than raw HTML, which is why HTML content is often converted to Markdown when preparing data for RAG systems.</p>
+        <p>AI models understand text in Markdown format better than raw <a href="/en/glossary/html/">HTML</a>, which is why HTML content is often converted to Markdown when preparing data for <a href="/en/glossary/rag/">RAG systems</a>.</p>
 
 - page_id: chunking
   type: glossary
@@ -509,9 +509,9 @@
       short_definition: "Proces rozdělení dlouhého textu na menší, logické celky (chunky) pro efektivní zpracování v RAG systémech."
       text: |
         <h2>Co je chunking?</h2>
-        <p><strong>Chunking</strong> je proces rozdělení dlouhého textu na menší, logické celky - tzv. chunky (kousky). Jde o klíčový krok při přípravě dat pro RAG systémy.</p>
+        <p><strong>Chunking</strong> je proces rozdělení dlouhého textu na menší, logické celky - tzv. chunky (kousky). Jde o klíčový krok při přípravě dat pro <a href="/glossary/rag/">RAG systémy</a>.</p>
         <h3>Proč je chunking důležitý</h3>
-        <p>LLM modely mají omezené kontextové okno. Místo předhození celého dokumentu najednou se modelu předloží pouze relevantní kousky, čímž se šetří tokeny a zvyšuje přesnost odpovědí.</p>
+        <p><a href="/glossary/llm/">LLM modely</a> mají omezené <a href="/glossary/context-window/">kontextové okno</a>. Místo předhození celého dokumentu najednou se modelu předloží pouze relevantní kousky, čímž se šetří <a href="/glossary/token/">tokeny</a> a zvyšuje přesnost odpovědí.</p>
         <h3>Typické parametry</h3>
         <ul>
           <li><strong>Velikost chunku:</strong> 500–1 000 znaků</li>
@@ -524,9 +524,9 @@
       short_definition: "The process of dividing long text into smaller, logical units (chunks) for efficient processing in RAG systems."
       text: |
         <h2>What is chunking?</h2>
-        <p><strong>Chunking</strong> is the process of dividing a long text into smaller, logical units - called chunks. It is a key step when preparing data for RAG systems.</p>
+        <p><strong>Chunking</strong> is the process of dividing a long text into smaller, logical units - called chunks. It is a key step when preparing data for <a href="/en/glossary/rag/">RAG systems</a>.</p>
         <h3>Why chunking matters</h3>
-        <p>LLM models have a limited context window. Instead of presenting the entire document at once, only relevant chunks are passed to the model, saving tokens and increasing response accuracy.</p>
+        <p><a href="/en/glossary/llm/">LLM models</a> have a limited <a href="/en/glossary/context-window/">context window</a>. Instead of presenting the entire document at once, only relevant chunks are passed to the model, saving <a href="/en/glossary/token/">tokens</a> and increasing response accuracy.</p>
         <h3>Typical parameters</h3>
         <ul>
           <li><strong>Chunk size:</strong> 500–1,000 characters</li>
@@ -573,16 +573,16 @@
       short_definition: "Druhý filtr v RAG systému, který zpřesňuje výběr nejrelevantnějších výsledků z vektorového vyhledávání."
       text: |
         <h2>Co je re-ranking?</h2>
-        <p><strong>Re-ranking</strong> je proces, který zvyšuje přesnost odpovědí v RAG systému. Vektorové vyhledávání je jako knihovník, který přinese 10 knih na dané téma. Re-ranking je ten moment, kdy si těch 10 knih prolistujete a vyberete jen ty 3, které nejpravděpodobněji obsahují odpověď.</p>
-        <p>Je to druhý, přísnější filtr před předáním dat LLM modelu. Zvláště užitečný při velkém objemu vstupních dat.</p>
+        <p><strong>Re-ranking</strong> je proces, který zvyšuje přesnost odpovědí v <a href="/glossary/rag/">RAG systému</a>. <a href="/glossary/semanticke-vyhledavani/">Vektorové vyhledávání</a> je jako knihovník, který přinese 10 knih na dané téma. Re-ranking je ten moment, kdy si těch 10 knih prolistujete a vyberete jen ty 3, které nejpravděpodobněji obsahují odpověď.</p>
+        <p>Je to druhý, přísnější filtr před předáním dat <a href="/glossary/llm/">LLM modelu</a>. Zvláště užitečný při velkém objemu vstupních dat.</p>
     en:
       title: "Re-ranking"
       description: "What is re-ranking? A second filter in a RAG system that refines the selection of the most relevant results from vector search."
       short_definition: "A second filter in a RAG system that refines the selection of the most relevant results from vector search."
       text: |
         <h2>What is re-ranking?</h2>
-        <p><strong>Re-ranking</strong> is a process that increases the accuracy of responses in a RAG system. Vector search is like a librarian who brings 10 books on a given topic. Re-ranking is the moment when you flip through those 10 books and select only the 3 most likely to contain the answer.</p>
-        <p>It is a second, stricter filter before passing data to the LLM model. Especially useful with large volumes of input data.</p>
+        <p><strong>Re-ranking</strong> is a process that increases the accuracy of responses in a <a href="/en/glossary/rag/">RAG system</a>. <a href="/en/glossary/semanticke-vyhledavani/">Vector search</a> is like a librarian who brings 10 books on a given topic. Re-ranking is the moment when you flip through those 10 books and select only the 3 most likely to contain the answer.</p>
+        <p>It is a second, stricter filter before passing data to the <a href="/en/glossary/llm/">LLM model</a>. Especially useful with large volumes of input data.</p>
 
 - page_id: prompt-injection
   type: glossary
@@ -599,12 +599,12 @@
       short_definition: "Technika, při které se uživatel snaží obejít původní instrukce AI modelu pomocí speciálně formulovaného příkazu."
       text: |
         <h2>Co je prompt injection?</h2>
-        <p><strong>Prompt injection</strong> je technika, při které se uživatel snaží přepsat nebo obejít původní instrukce AI modelu (systémový prompt) tím, že do chatu vloží speciálně zformulovaný příkaz.</p>
+        <p><strong>Prompt injection</strong> je technika, při které se uživatel snaží přepsat nebo obejít původní instrukce AI modelu (<a href="/glossary/system-prompt/">systémový prompt</a>) tím, že do chatu vloží speciálně zformulovaný příkaz.</p>
         <h3>Cíl útočníka</h3>
         <p>Donutit agenta, aby dělal něco, co nemá - například prozradil citlivá data, ignoroval bezpečnostní pravidla nebo se začal chovat jinak, než bylo zamýšleno.</p>
         <h3>Jak se bránit</h3>
         <ul>
-          <li>Definovat jasná bezpečnostní pravidla v systémovém promptu</li>
+          <li>Definovat jasná bezpečnostní pravidla v <a href="/glossary/system-prompt/">systémovém promptu</a></li>
           <li>Validovat uživatelské vstupy</li>
           <li>Omezit přístup agenta pouze na potřebné nástroje a data</li>
         </ul>
@@ -614,12 +614,12 @@
       short_definition: "A technique where a user attempts to bypass the original instructions of an AI model using a specially crafted command."
       text: |
         <h2>What is prompt injection?</h2>
-        <p><strong>Prompt injection</strong> is a technique in which a user attempts to overwrite or bypass the original instructions of an AI model (system prompt) by entering a specially formulated command into the chat.</p>
+        <p><strong>Prompt injection</strong> is a technique in which a user attempts to overwrite or bypass the original instructions of an AI model (<a href="/en/glossary/system-prompt/">system prompt</a>) by entering a specially formulated command into the chat.</p>
         <h3>Attacker's goal</h3>
         <p>Force the agent to do something it is not supposed to - for example, reveal sensitive data, ignore security rules, or start behaving differently than intended.</p>
         <h3>How to defend</h3>
         <ul>
-          <li>Define clear security rules in the system prompt</li>
+          <li>Define clear security rules in the <a href="/en/glossary/system-prompt/">system prompt</a></li>
           <li>Validate user inputs</li>
           <li>Limit the agent's access to only necessary tools and data</li>
         </ul>
@@ -639,7 +639,7 @@
       short_definition: "Velký jazykový model stažený a spuštěný přímo na vašem vlastním počítači nebo serveru bez odesílání dat třetím stranám."
       text: |
         <h2>Co je lokální model?</h2>
-        <p><strong>Lokální modely</strong> jsou velké jazykové modely (LLM), které jsou staženy a spouštěny přímo na vašem vlastním počítači nebo firemním serveru. K jejich provozu nepotřebujete internetové připojení a žádná data neposíláte třetím stranám.</p>
+        <p><strong>Lokální modely</strong> jsou velké jazykové modely (<a href="/glossary/llm/">LLM</a>), které jsou staženy a spouštěny přímo na vašem vlastním počítači nebo firemním serveru. K jejich provozu nepotřebujete internetové připojení a žádná data neposíláte třetím stranám.</p>
         <h3>Výhody</h3>
         <ul>
           <li><strong>Soukromí dat:</strong> Data nikdy neopustí váš server</li>
@@ -654,7 +654,7 @@
       short_definition: "A large language model downloaded and run directly on your own computer or server without sending data to third parties."
       text: |
         <h2>What is a local model?</h2>
-        <p><strong>Local models</strong> are large language models (LLMs) that are downloaded and run directly on your own computer or company server. You don't need an internet connection to run them, and you don't send any data to third parties.</p>
+        <p><strong>Local models</strong> are large language models (<a href="/en/glossary/llm/">LLMs</a>) that are downloaded and run directly on your own computer or company server. You don't need an internet connection to run them, and you don't send any data to third parties.</p>
         <h3>Advantages</h3>
         <ul>
           <li><strong>Data privacy:</strong> Data never leaves your server</li>
@@ -681,7 +681,7 @@
         <h2>Co je CORS?</h2>
         <p><strong>CORS (Cross-Origin Resource Sharing)</strong> je bezpečnostní mechanismus v internetových prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server. Zabraňuje tomu, aby cizí webové stránky mohly bez povolení přistupovat k vašim datům.</p>
         <h3>Proč je CORS důležitý pro AI chatboty</h3>
-        <p>Pokud umísťujete chatovací okno (např. z n8n) na svůj web, musíte v nastavení serveru povolit vaši doménu v CORS, jinak prohlížeč požadavky zablokuje.</p>
+        <p>Pokud umísťujete chatovací okno (např. z <a href="/glossary/n8n/">n8n</a>) na svůj web, musíte v nastavení serveru povolit vaši doménu v CORS, jinak prohlížeč požadavky zablokuje.</p>
     en:
       title: "CORS (Cross-Origin Resource Sharing)"
       description: "What is CORS? A security mechanism in browsers that monitors where requests to your server can come from."
@@ -690,7 +690,7 @@
         <h2>What is CORS?</h2>
         <p><strong>CORS (Cross-Origin Resource Sharing)</strong> is a security mechanism in web browsers that monitors where requests to your server can come from. It prevents foreign websites from accessing your data without permission.</p>
         <h3>Why CORS matters for AI chatbots</h3>
-        <p>If you are placing a chat window (e.g., from n8n) on your website, you must allow your domain in the server's CORS settings, otherwise the browser will block the requests.</p>
+        <p>If you are placing a chat window (e.g., from <a href="/en/glossary/n8n/">n8n</a>) on your website, you must allow your domain in the server's CORS settings, otherwise the browser will block the requests.</p>
 
 - page_id: api
   type: glossary
@@ -710,14 +710,14 @@
         <p><strong>API (Application Programming Interface)</strong>, česky <em>rozhraní pro programování aplikací</em>, je sada pravidel a definic, pomocí nichž spolu mohou komunikovat dva různé softwarové systémy. Funguje jako číšník v restauraci: zákazník (vaše aplikace) si objednává u číšníka (API), který odnese objednávku do kuchyně (cizí systém) a přinese výsledek zpět.</p>
         <h3>Jak API funguje v praxi</h3>
         <ol>
-          <li>Vaše aplikace odešle <strong>HTTP požadavek</strong> na konkrétní URL adresu (endpoint) s potřebnými parametry.</li>
-          <li>Cizí server zpracuje požadavek a vrátí odpověď - nejčastěji ve formátu <strong>JSON</strong>.</li>
+          <li>Vaše aplikace odešle <a href="/glossary/http-request/"><strong>HTTP požadavek</strong></a> na konkrétní URL adresu (<a href="/glossary/endpoint/">endpoint</a>) s potřebnými parametry.</li>
+          <li>Cizí server zpracuje požadavek a vrátí odpověď - nejčastěji ve formátu <a href="/glossary/json/"><strong>JSON</strong></a>.</li>
           <li>Vaše aplikace odpověď zpracuje a využije výsledek.</li>
         </ol>
         <h3>Využití v AI automatizaci</h3>
         <ul>
-          <li>Volání LLM modelů (OpenAI, Anthropic, Google)</li>
-          <li>Propojování n8n workflows s externími službami</li>
+          <li>Volání <a href="/glossary/llm/">LLM modelů</a> (OpenAI, Anthropic, Google)</li>
+          <li>Propojování <a href="/glossary/n8n/">n8n</a> workflows s externími službami</li>
           <li>Čtení a zápis dat do CRM, databází nebo e-commerce platforem</li>
         </ul>
     en:
@@ -729,14 +729,14 @@
         <p>An <strong>API (Application Programming Interface)</strong> is a set of rules and definitions through which two different software systems can communicate. Think of it like a waiter in a restaurant: the customer (your app) places an order with the waiter (API), who takes it to the kitchen (the external system) and brings back the result.</p>
         <h3>How APIs work in practice</h3>
         <ol>
-          <li>Your application sends an <strong>HTTP request</strong> to a specific URL (endpoint) with the required parameters.</li>
-          <li>The remote server processes the request and returns a response - most commonly in <strong>JSON</strong> format.</li>
+          <li>Your application sends an <a href="/en/glossary/http-request/"><strong>HTTP request</strong></a> to a specific URL (<a href="/en/glossary/endpoint/">endpoint</a>) with the required parameters.</li>
+          <li>The remote server processes the request and returns a response - most commonly in <a href="/en/glossary/json/"><strong>JSON</strong></a> format.</li>
           <li>Your application processes the response and uses the result.</li>
         </ol>
         <h3>Use in AI automation</h3>
         <ul>
-          <li>Calling LLM models (OpenAI, Anthropic, Google)</li>
-          <li>Connecting n8n workflows to external services</li>
+          <li>Calling <a href="/en/glossary/llm/">LLM models</a> (OpenAI, Anthropic, Google)</li>
+          <li>Connecting <a href="/en/glossary/n8n/">n8n</a> workflows to external services</li>
           <li>Reading and writing data to CRM systems, databases, or e-commerce platforms</li>
         </ul>
 
@@ -755,12 +755,12 @@
       short_definition: "Automatická notifikace, kterou jeden systém odešle druhému v okamžiku, kdy nastane určitá událost."
       text: |
         <h2>Co je webhook?</h2>
-        <p><strong>Webhook</strong> je způsob, jak vás jeden systém automaticky upozorní, že se stalo něco důležitého - aniž byste se museli sami pravidelně ptát, zda nastala nová událost. Zatímco klasické API funguje na principu „zeptej se a dostaneš odpověď", webhook pracuje opačně: <em>cizí systém vám sám zavolá</em>, jakmile nastane událost.</p>
+        <p><strong>Webhook</strong> je způsob, jak vás jeden systém automaticky upozorní, že se stalo něco důležitého - aniž byste se museli sami pravidelně ptát, zda nastala nová událost. Zatímco klasické <a href="/glossary/api/">API</a> funguje na principu „zeptej se a dostaneš odpověď", webhook pracuje opačně: <em>cizí systém vám sám zavolá</em>, jakmile nastane událost.</p>
         <h3>Jak webhook funguje</h3>
         <ol>
-          <li>Zaregistrujete <strong>URL adresu</strong> (webhook endpoint) ve zdrojovém systému.</li>
+          <li>Zaregistrujete <strong>URL adresu</strong> (webhook <a href="/glossary/endpoint/">endpoint</a>) ve zdrojovém systému.</li>
           <li>Když nastane událost (např. nová platba, nový formulář), systém odešle HTTP POST na vaši URL.</li>
-          <li>Váš systém (např. n8n workflow) zprávu přijme a zpracuje.</li>
+          <li>Váš systém (např. <a href="/glossary/n8n/">n8n</a> <a href="/glossary/workflow/">workflow</a>) zprávu přijme a zpracuje.</li>
         </ol>
         <h3>Příklady využití</h3>
         <ul>
@@ -774,12 +774,12 @@
       short_definition: "An automatic notification that one system sends to another the moment a specific event occurs."
       text: |
         <h2>What is a webhook?</h2>
-        <p>A <strong>webhook</strong> is a way for one system to automatically notify another when something important happens - without you having to repeatedly ask whether a new event has occurred. While a classic API works on the principle of "ask and receive," a webhook works the other way around: <em>the external system calls you</em> as soon as an event occurs.</p>
+        <p>A <strong>webhook</strong> is a way for one system to automatically notify another when something important happens - without you having to repeatedly ask whether a new event has occurred. While a classic <a href="/en/glossary/api/">API</a> works on the principle of "ask and receive," a webhook works the other way around: <em>the external system calls you</em> as soon as an event occurs.</p>
         <h3>How webhooks work</h3>
         <ol>
-          <li>You register a <strong>URL address</strong> (webhook endpoint) in the source system.</li>
+          <li>You register a <strong>URL address</strong> (webhook <a href="/en/glossary/endpoint/">endpoint</a>) in the source system.</li>
           <li>When an event occurs (e.g., a new payment or form submission), the system sends an HTTP POST to your URL.</li>
-          <li>Your system (e.g., an n8n workflow) receives and processes the message.</li>
+          <li>Your system (e.g., an <a href="/en/glossary/n8n/">n8n</a> <a href="/en/glossary/workflow/">workflow</a>) receives and processes the message.</li>
         </ol>
         <h3>Example use cases</h3>
         <ul>
@@ -812,9 +812,9 @@
         </ul>
         <h3>Proč na tokenech záleží</h3>
         <ul>
-          <li><strong>Cena:</strong> API volání LLM modelů se platí za tokeny (vstupní + výstupní)</li>
-          <li><strong>Limity:</strong> Kontextové okno modelu je také vyjádřeno v tokenech</li>
-          <li><strong>Chunking:</strong> Při dělení dokumentů pro RAG se velikost chunku typicky měří v tokenech</li>
+          <li><strong>Cena:</strong> <a href="/glossary/api/">API</a> volání LLM modelů se platí za tokeny (vstupní + výstupní)</li>
+          <li><strong>Limity:</strong> <a href="/glossary/context-window/">Kontextové okno</a> modelu je také vyjádřeno v tokenech</li>
+          <li><strong>Chunking:</strong> Při dělení dokumentů pro <a href="/glossary/rag/">RAG</a> se velikost chunku typicky měří v tokenech</li>
         </ul>
     en:
       title: "Token (in LLM context)"
@@ -822,7 +822,7 @@
       short_definition: "The basic unit of text that LLM models work with - roughly 3/4 of an English word or 2–3 characters."
       text: |
         <h2>What is a token?</h2>
-        <p>A <strong>token</strong> is the smallest unit of text that large language models (LLMs) work with. It is not a whole word - the model first splits text into tokens (parts of words, whole words, or punctuation) and then processes them.</p>
+        <p>A <strong>token</strong> is the smallest unit of text that large language models (<a href="/en/glossary/llm/">LLMs</a>) work with. It is not a whole word - the model first splits text into tokens (parts of words, whole words, or punctuation) and then processes them.</p>
         <h3>How large is a token?</h3>
         <ul>
           <li>In English: approximately <strong>3/4 of a word</strong> (100 words ≈ 133 tokens)</li>
@@ -831,9 +831,9 @@
         </ul>
         <h3>Why tokens matter</h3>
         <ul>
-          <li><strong>Cost:</strong> LLM API calls are billed per token (input + output)</li>
-          <li><strong>Limits:</strong> The model's context window is also expressed in tokens</li>
-          <li><strong>Chunking:</strong> When splitting documents for RAG, chunk size is typically measured in tokens</li>
+          <li><strong>Cost:</strong> <a href="/en/glossary/llm/">LLM</a> <a href="/en/glossary/api/">API</a> calls are billed per token (input + output)</li>
+          <li><strong>Limits:</strong> The model's <a href="/en/glossary/context-window/">context window</a> is also expressed in tokens</li>
+          <li><strong>Chunking:</strong> When splitting documents for <a href="/en/glossary/rag/">RAG</a>, chunk size is typically measured in tokens</li>
         </ul>
 
 - page_id: system-prompt
@@ -857,10 +857,10 @@
           <li><strong>Role a persona:</strong> „Jsi zákaznický asistent firmy XY"</li>
           <li><strong>Pravidla chování:</strong> „Odpovídej pouze v češtině, buď stručný"</li>
           <li><strong>Omezení:</strong> „Neposkytuj právní ani lékařské rady"</li>
-          <li><strong>Kontext:</strong> Informace o produktu, FAQ nebo firemní procesy</li>
+          <li><strong>Kontext:</strong> Informace o produktu, <a href="/glossary/faq/">FAQ</a> nebo firemní procesy</li>
         </ul>
         <h3>Vztah k bezpečnosti</h3>
-        <p>Systémový prompt je cílem <strong>prompt injection</strong> útoků - útočník se snaží přimět model, aby ho ignoroval. Proto je důležité psát systémové prompty robustně.</p>
+        <p>Systémový prompt je cílem <a href="/glossary/prompt-injection/"><strong>prompt injection</strong></a> útoků - útočník se snaží přimět model, aby ho ignoroval. Proto je důležité psát systémové prompty robustně.</p>
     en:
       title: "System Prompt"
       description: "What is a system prompt? A hidden text that sets the behavior, role, and rules of an AI model before the conversation with the user begins."
@@ -873,10 +873,10 @@
           <li><strong>Role and persona:</strong> "You are a customer assistant for company XY"</li>
           <li><strong>Behavior rules:</strong> "Always respond in English, be concise"</li>
           <li><strong>Restrictions:</strong> "Do not provide legal or medical advice"</li>
-          <li><strong>Context:</strong> Product information, FAQs, or company processes</li>
+          <li><strong>Context:</strong> Product information, <a href="/en/glossary/faq/">FAQs</a>, or company processes</li>
         </ul>
         <h3>Relationship to security</h3>
-        <p>The system prompt is the target of <strong>prompt injection</strong> attacks - the attacker tries to make the model ignore it. This is why it is important to write system prompts robustly.</p>
+        <p>The system prompt is the target of <a href="/en/glossary/prompt-injection/"><strong>prompt injection</strong></a> attacks - the attacker tries to make the model ignore it. This is why it is important to write system prompts robustly.</p>
 
 - page_id: context-window
   type: glossary
@@ -893,30 +893,30 @@
       short_definition: "Maximální množství textu (v tokenech), které LLM model vidí a zpracuje najednou v jednom požadavku."
       text: |
         <h2>Co je kontextové okno?</h2>
-        <p><strong>Kontextové okno</strong> (anglicky <em>context window</em>) je maximální množství textu, které LLM model může přijmout a zpracovat najednou. Lze si ho představit jako pracovní plochu modelu - vše, co se na ni vejde, model vidí; co se nevejde, model neví.</p>
+        <p><strong>Kontextové okno</strong> (anglicky <em>context window</em>) je maximální množství textu, které <a href="/glossary/llm/">LLM model</a> může přijmout a zpracovat najednou. Lze si ho představit jako pracovní plochu modelu - vše, co se na ni vejde, model vidí; co se nevejde, model neví.</p>
         <h3>Velikosti kontextových oken</h3>
         <ul>
-          <li><strong>GPT-4o:</strong> 128 000 tokenů (přibližně 96 000 slov)</li>
+          <li><strong>GPT-4o:</strong> 128 000 <a href="/glossary/token/">tokenů</a> (přibližně 96 000 slov)</li>
           <li><strong>Claude 3.5 Sonnet:</strong> 200 000 tokenů</li>
           <li><strong>Gemini 1.5 Pro:</strong> 1 000 000 tokenů</li>
         </ul>
-        <h3>Proč je kontextové okno důležité pro RAG</h3>
-        <p>Pokud je dokument příliš velký, nevejde se celý do kontextového okna. Proto se dokumenty při RAG dělí na menší části (<strong>chunky</strong>) a do modelu se pošlou jen relevantní úseky - ne celý dokument.</p>
+        <h3>Proč je kontextové okno důležité pro <a href="/glossary/rag/">RAG</a></h3>
+        <p>Pokud je dokument příliš velký, nevejde se celý do kontextového okna. Proto se dokumenty při RAG dělí na menší části (<a href="/glossary/chunking/"><strong>chunky</strong></a>) a do modelu se pošlou jen relevantní úseky - ne celý dokument.</p>
     en:
       title: "Context Window"
       description: "What is a context window? The maximum amount of text in tokens that an LLM model processes at once in a single request."
       short_definition: "The maximum amount of text (in tokens) that an LLM model sees and processes at once in a single request."
       text: |
         <h2>What is a context window?</h2>
-        <p>A <strong>context window</strong> is the maximum amount of text that an LLM model can receive and process at once. Think of it as the model's working surface - everything that fits on it is visible to the model; anything that doesn't fit is invisible.</p>
+        <p>A <strong>context window</strong> is the maximum amount of text that an <a href="/en/glossary/llm/">LLM</a> model can receive and process at once. Think of it as the model's working surface - everything that fits on it is visible to the model; anything that doesn't fit is invisible.</p>
         <h3>Context window sizes</h3>
         <ul>
-          <li><strong>GPT-4o:</strong> 128,000 tokens (approximately 96,000 words)</li>
+          <li><strong>GPT-4o:</strong> 128,000 <a href="/en/glossary/token/">tokens</a> (approximately 96,000 words)</li>
           <li><strong>Claude 3.5 Sonnet:</strong> 200,000 tokens</li>
           <li><strong>Gemini 1.5 Pro:</strong> 1,000,000 tokens</li>
         </ul>
-        <h3>Why the context window matters for RAG</h3>
-        <p>If a document is too large to fit in the context window, only part of it can be processed. That is why RAG splits documents into smaller pieces (<strong>chunks</strong>) and sends only the relevant sections to the model - not the entire document.</p>
+        <h3>Why the context window matters for <a href="/en/glossary/rag/">RAG</a></h3>
+        <p>If a document is too large to fit in the context window, only part of it can be processed. That is why RAG splits documents into smaller pieces (<a href="/en/glossary/chunking/"><strong>chunks</strong></a>) and sends only the relevant sections to the model - not the entire document.</p>
 
 - page_id: hallucination
   type: glossary
@@ -942,9 +942,9 @@
         </ul>
         <h3>Jak halucinacím předejít</h3>
         <ul>
-          <li><strong>RAG:</strong> Model odpovídá pouze z ověřených dokumentů, které mu předložíte</li>
-          <li><strong>Systémový prompt:</strong> Instrukce jako „Pokud nevíš, řekni to"</li>
-          <li><strong>Nižší temperature:</strong> Menší kreativita = méně vymýšlení</li>
+          <li><strong><a href="/glossary/rag/">RAG</a>:</strong> Model odpovídá pouze z ověřených dokumentů, které mu předložíte</li>
+          <li><strong><a href="/glossary/system-prompt/">Systémový prompt</a>:</strong> Instrukce jako „Pokud nevíš, řekni to"</li>
+          <li><strong>Nižší <a href="/glossary/temperature/">temperature</a>:</strong> Menší kreativita = méně vymýšlení</li>
         </ul>
     en:
       title: "AI Hallucination"
@@ -961,9 +961,9 @@
         </ul>
         <h3>How to prevent hallucinations</h3>
         <ul>
-          <li><strong>RAG:</strong> The model only answers from verified documents you provide</li>
-          <li><strong>System prompt:</strong> Instructions like "If you don't know, say so"</li>
-          <li><strong>Lower temperature:</strong> Less creativity means less fabrication</li>
+          <li><strong><a href="/en/glossary/rag/">RAG</a>:</strong> The model only answers from verified documents you provide</li>
+          <li><strong><a href="/en/glossary/system-prompt/">System prompt</a>:</strong> Instructions like "If you don't know, say so"</li>
+          <li><strong>Lower <a href="/en/glossary/temperature/">temperature</a>:</strong> Less creativity means less fabrication</li>
         </ul>
 
 - page_id: vektorova-databaze
@@ -981,13 +981,13 @@
       short_definition: "Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu."
       text: |
         <h2>Co je vektorová databáze?</h2>
-        <p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong>vektorů</strong> - číselných reprezentací textu vytvořených embedding modelem. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
+        <p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong><a href="/glossary/vektor/">vektorů</a></strong> - číselných reprezentací textu vytvořených <a href="/glossary/embedding-model/">embedding modelem</a>. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
         <h3>Jak vektorová databáze funguje v RAG</h3>
         <ol>
-          <li><strong>Indexace:</strong> Dokumenty se rozdělí na chunky, převedou na vektory a uloží do databáze.</li>
+          <li><strong>Indexace:</strong> Dokumenty se rozdělí na <a href="/glossary/chunking/">chunky</a>, převedou na vektory a uloží do databáze.</li>
           <li><strong>Dotaz:</strong> Uživatelova otázka se také převede na vektor.</li>
           <li><strong>Vyhledávání:</strong> Databáze najde vektory (chunky), které jsou nejblíže vektoru otázky.</li>
-          <li><strong>Výsledek:</strong> Nejrelevantnější chunky se předají LLM pro generování odpovědi.</li>
+          <li><strong>Výsledek:</strong> Nejrelevantnější chunky se předají <a href="/glossary/llm/">LLM</a> pro generování odpovědi.</li>
         </ol>
         <h3>Populární vektorové databáze</h3>
         <ul>
@@ -1002,13 +1002,13 @@
       short_definition: "A specialized database optimized for storing and semantically searching vectors - numerical representations of text."
       text: |
         <h2>What is a vector database?</h2>
-        <p>A <strong>vector database</strong> is a special type of database designed for storing and quickly searching <strong>vectors</strong> - numerical representations of text created by an embedding model. Unlike traditional databases that search for exact word matches, a vector database searches for <em>similarity of meaning</em>.</p>
+        <p>A <strong>vector database</strong> is a special type of database designed for storing and quickly searching <strong><a href="/en/glossary/vektor/">vectors</a></strong> - numerical representations of text created by an <a href="/en/glossary/embedding-model/">embedding model</a>. Unlike traditional databases that search for exact word matches, a vector database searches for <em>similarity of meaning</em>.</p>
         <h3>How vector databases work in RAG</h3>
         <ol>
-          <li><strong>Indexing:</strong> Documents are split into chunks, converted to vectors, and stored in the database.</li>
+          <li><strong>Indexing:</strong> Documents are split into <a href="/en/glossary/chunking/">chunks</a>, converted to vectors, and stored in the database.</li>
           <li><strong>Query:</strong> The user's question is also converted to a vector.</li>
           <li><strong>Search:</strong> The database finds vectors (chunks) closest to the question vector.</li>
-          <li><strong>Result:</strong> The most relevant chunks are passed to the LLM to generate an answer.</li>
+          <li><strong>Result:</strong> The most relevant chunks are passed to the <a href="/en/glossary/llm/">LLM</a> to generate an answer.</li>
         </ol>
         <h3>Popular vector databases</h3>
         <ul>
@@ -1033,11 +1033,11 @@
       short_definition: "Událost nebo podmínka, která automaticky spustí workflow nebo automatizaci."
       text: |
         <h2>Co je trigger?</h2>
-        <p><strong>Trigger</strong> (spouštěč) je událost nebo podmínka, která automaticky spustí workflow nebo automatizaci. Je to vždy první krok v každém automatizovaném procesu - bez triggeru workflow čeká nečinně.</p>
+        <p><strong>Trigger</strong> (spouštěč) je událost nebo podmínka, která automaticky spustí <a href="/glossary/workflow/">workflow</a> nebo automatizaci. Je to vždy první krok v každém automatizovaném procesu - bez triggeru workflow čeká nečinně.</p>
         <h3>Typy triggerů v n8n</h3>
         <ul>
           <li><strong>Časový trigger:</strong> Workflow se spustí každý den ve stanovenou dobu (cron)</li>
-          <li><strong>Webhook trigger:</strong> Workflow se spustí, když přijde HTTP požadavek z jiného systému</li>
+          <li><strong><a href="/glossary/webhook/">Webhook</a> trigger:</strong> Workflow se spustí, když přijde <a href="/glossary/http-request/">HTTP požadavek</a> z jiného systému</li>
           <li><strong>E-mailový trigger:</strong> Workflow se spustí při příchodu nového e-mailu</li>
           <li><strong>Formulářový trigger:</strong> Workflow se spustí po odeslání formuláře</li>
           <li><strong>Manuální trigger:</strong> Workflow se spustí ručně kliknutím na tlačítko</li>
@@ -1045,7 +1045,7 @@
         <h3>Příklady z praxe</h3>
         <ul>
           <li>Zákazník odešle poptávkový formulář → trigger spustí AI zpracování a odeslání odpovědi</li>
-          <li>Každou noc ve 2:00 → trigger spustí stažení a aktualizaci dat v RAG databázi</li>
+          <li>Každou noc ve 2:00 → trigger spustí stažení a aktualizaci dat v <a href="/glossary/rag/">RAG</a> databázi</li>
         </ul>
     en:
       title: "Trigger (workflow trigger)"
@@ -1053,11 +1053,11 @@
       short_definition: "An event or condition that automatically starts a workflow or automation."
       text: |
         <h2>What is a trigger?</h2>
-        <p>A <strong>trigger</strong> is an event or condition that automatically starts a workflow or automation. It is always the first step in any automated process - without a trigger, the workflow sits idle.</p>
+        <p>A <strong>trigger</strong> is an event or condition that automatically starts a <a href="/en/glossary/workflow/">workflow</a> or automation. It is always the first step in any automated process - without a trigger, the workflow sits idle.</p>
         <h3>Types of triggers in n8n</h3>
         <ul>
           <li><strong>Schedule trigger:</strong> Workflow runs every day at a set time (cron)</li>
-          <li><strong>Webhook trigger:</strong> Workflow runs when an HTTP request arrives from another system</li>
+          <li><strong><a href="/en/glossary/webhook/">Webhook</a> trigger:</strong> Workflow runs when an <a href="/en/glossary/http-request/">HTTP request</a> arrives from another system</li>
           <li><strong>Email trigger:</strong> Workflow runs when a new email arrives</li>
           <li><strong>Form trigger:</strong> Workflow runs when a form is submitted</li>
           <li><strong>Manual trigger:</strong> Workflow runs when manually clicked</li>
@@ -1065,7 +1065,7 @@
         <h3>Real-world examples</h3>
         <ul>
           <li>Customer submits an inquiry form → trigger starts AI processing and sends a response</li>
-          <li>Every night at 2:00 AM → trigger starts downloading and updating data in the RAG database</li>
+          <li>Every night at 2:00 AM → trigger starts downloading and updating data in the <a href="/en/glossary/rag/">RAG</a> database</li>
         </ul>
 
 - page_id: api-key
@@ -1083,11 +1083,11 @@
       short_definition: "Tajný identifikátor, který opravňuje vaši aplikaci k volání cizího API a umožňuje poskytovateli sledovat využití."
       text: |
         <h2>Co je API klíč?</h2>
-        <p><strong>API klíč</strong> je jedinečný tajný řetězec znaků, který funguje jako heslo pro přístup k API. Při každém volání ho přikládáte k požadavku - cizí systém tak pozná, kdo žádá o data nebo operaci, a může přístupy sledovat a účtovat.</p>
+        <p><strong>API klíč</strong> je jedinečný tajný řetězec znaků, který funguje jako heslo pro přístup k <a href="/glossary/api/">API</a>. Při každém volání ho přikládáte k požadavku - cizí systém tak pozná, kdo žádá o data nebo operaci, a může přístupy sledovat a účtovat.</p>
         <h3>Jak API klíče fungují</h3>
         <ol>
           <li>Zaregistrujete se u poskytovatele API (např. OpenAI) a vygenerujete si klíč.</li>
-          <li>Klíč přikládáte ke každému HTTP požadavku v hlavičce (Authorization header).</li>
+          <li>Klíč přikládáte ke každému <a href="/glossary/http-request/">HTTP požadavku</a> v hlavičce (Authorization header).</li>
           <li>Server klíč ověří a buď žádost vyřídí, nebo zamítne.</li>
         </ol>
         <h3>Bezpečnost API klíčů</h3>
@@ -1103,11 +1103,11 @@
       short_definition: "A secret identifier that authorizes your application to call an external API and allows the provider to track usage."
       text: |
         <h2>What is an API key?</h2>
-        <p>An <strong>API key</strong> is a unique secret string of characters that acts as a password for accessing an API. You attach it to every request - the external system recognizes who is requesting data or an operation and can track and bill access accordingly.</p>
+        <p>An <strong>API key</strong> is a unique secret string of characters that acts as a password for accessing an <a href="/en/glossary/api/">API</a>. You attach it to every request - the external system recognizes who is requesting data or an operation and can track and bill access accordingly.</p>
         <h3>How API keys work</h3>
         <ol>
           <li>You register with an API provider (e.g., OpenAI) and generate a key.</li>
-          <li>You attach the key to every HTTP request in the header (Authorization header).</li>
+          <li>You attach the key to every <a href="/en/glossary/http-request/">HTTP request</a> in the header (Authorization header).</li>
           <li>The server verifies the key and either fulfills or rejects the request.</li>
         </ol>
         <h3>API key security</h3>
@@ -1133,11 +1133,11 @@
       short_definition: "Maximální počet API požadavků, které lze odeslat za dané časové období, než server dočasně přeruší přístup."
       text: |
         <h2>Co je rate limit?</h2>
-        <p><strong>Rate limit</strong> (omezení rychlosti) je maximální počet požadavků, které lze odeslat na API za dané časové období - nejčastěji za minutu nebo za den. Pokud limit překročíte, API vrátí chybu <strong>429 Too Many Requests</strong> a dočasně zablokuje přístup.</p>
+        <p><strong>Rate limit</strong> (omezení rychlosti) je maximální počet požadavků, které lze odeslat na <a href="/glossary/api/">API</a> za dané časové období - nejčastěji za minutu nebo za den. Pokud limit překročíte, API vrátí chybu <strong>429 Too Many Requests</strong> a dočasně zablokuje přístup.</p>
         <h3>Typické jednotky rate limitů</h3>
         <ul>
           <li><strong>RPM</strong> (Requests Per Minute) - počet volání za minutu</li>
-          <li><strong>TPM</strong> (Tokens Per Minute) - počet tokenů za minutu (u LLM API)</li>
+          <li><strong>TPM</strong> (Tokens Per Minute) - počet <a href="/glossary/token/">tokenů</a> za minutu (u <a href="/glossary/llm/">LLM</a> API)</li>
           <li><strong>RPD</strong> (Requests Per Day) - celkový denní limit</li>
         </ul>
         <h3>Jak rate limit řešit v automatizacích</h3>
@@ -1153,11 +1153,11 @@
       short_definition: "The maximum number of API requests that can be sent in a given time period before the server temporarily suspends access."
       text: |
         <h2>What is a rate limit?</h2>
-        <p>A <strong>rate limit</strong> is the maximum number of requests that can be sent to an API within a given time period - most commonly per minute or per day. If you exceed the limit, the API returns a <strong>429 Too Many Requests</strong> error and temporarily blocks access.</p>
+        <p>A <strong>rate limit</strong> is the maximum number of requests that can be sent to an <a href="/en/glossary/api/">API</a> within a given time period - most commonly per minute or per day. If you exceed the limit, the API returns a <strong>429 Too Many Requests</strong> error and temporarily blocks access.</p>
         <h3>Typical rate limit units</h3>
         <ul>
           <li><strong>RPM</strong> (Requests Per Minute) - number of calls per minute</li>
-          <li><strong>TPM</strong> (Tokens Per Minute) - number of tokens per minute (for LLM APIs)</li>
+          <li><strong>TPM</strong> (Tokens Per Minute) - number of <a href="/en/glossary/token/">tokens</a> per minute (for <a href="/en/glossary/llm/">LLM</a> APIs)</li>
           <li><strong>RPD</strong> (Requests Per Day) - total daily limit</li>
         </ul>
         <h3>How to handle rate limits in automations</h3>
@@ -1183,30 +1183,30 @@
       short_definition: "Konkrétní URL adresa, na které API přijímá požadavky pro danou operaci nebo zdroj dat."
       text: |
         <h2>Co je endpoint?</h2>
-        <p><strong>Endpoint</strong> je konkrétní URL adresa, na které API „naslouchá" a přijímá požadavky. Každý endpoint obvykle reprezentuje jednu operaci nebo zdroj dat. Celé API pak tvoří kolekce endpointů.</p>
+        <p><strong>Endpoint</strong> je konkrétní URL adresa, na které <a href="/glossary/api/">API</a> „naslouchá" a přijímá požadavky. Každý endpoint obvykle reprezentuje jednu operaci nebo zdroj dat. Celé API pak tvoří kolekce endpointů.</p>
         <h3>Příklad endpointů OpenAI API</h3>
         <ul>
           <li><code>/v1/chat/completions</code> - generování textu pomocí chat modelu</li>
-          <li><code>/v1/embeddings</code> - převod textu na vektory</li>
+          <li><code>/v1/embeddings</code> - převod textu na <a href="/glossary/vektor/">vektory</a></li>
           <li><code>/v1/models</code> - seznam dostupných modelů</li>
         </ul>
         <h3>Jak endpoint použít</h3>
-        <p>Na endpoint odešlete HTTP požadavek (GET, POST apod.) s potřebnými parametry a API klíčem. Endpoint vrátí odpověď - nejčastěji JSON s výsledkem operace.</p>
+        <p>Na endpoint odešlete <a href="/glossary/http-request/">HTTP požadavek</a> (GET, POST apod.) s potřebnými parametry a <a href="/glossary/api-key/">API klíčem</a>. Endpoint vrátí odpověď - nejčastěji <a href="/glossary/json/">JSON</a> s výsledkem operace.</p>
     en:
       title: "Endpoint (API endpoint)"
       description: "What is an endpoint? A specific URL where an API listens and accepts requests for a given operation or data resource."
       short_definition: "A specific URL where an API listens and accepts requests for a given operation or data resource."
       text: |
         <h2>What is an endpoint?</h2>
-        <p>An <strong>endpoint</strong> is a specific URL where an API "listens" and accepts requests. Each endpoint typically represents one operation or data resource. The entire API is then a collection of endpoints.</p>
+        <p>An <strong>endpoint</strong> is a specific URL where an <a href="/en/glossary/api/">API</a> "listens" and accepts requests. Each endpoint typically represents one operation or data resource. The entire API is then a collection of endpoints.</p>
         <h3>Example endpoints from the OpenAI API</h3>
         <ul>
           <li><code>/v1/chat/completions</code> - generating text using a chat model</li>
-          <li><code>/v1/embeddings</code> - converting text to vectors</li>
+          <li><code>/v1/embeddings</code> - converting text to <a href="/en/glossary/vektor/">vectors</a></li>
           <li><code>/v1/models</code> - listing available models</li>
         </ul>
         <h3>How to use an endpoint</h3>
-        <p>Send an HTTP request (GET, POST, etc.) to the endpoint with the required parameters and API key. The endpoint returns a response - most commonly a JSON with the result of the operation.</p>
+        <p>Send an <a href="/en/glossary/http-request/">HTTP request</a> (GET, POST, etc.) to the endpoint with the required parameters and <a href="/en/glossary/api-key/">API key</a>. The endpoint returns a response - most commonly a <a href="/en/glossary/json/">JSON</a> with the result of the operation.</p>
 
 - page_id: web-scraping
   type: glossary
@@ -1226,12 +1226,12 @@
         <p><strong>Web scraping</strong> (česky také <em>stahování dat z webu</em> nebo <em>sklízení dat</em>) je automatizovaný proces, při kterém software stahuje obsah webových stránek a extrahuje z nich strukturovaná data - texty, ceny, kontakty nebo jiné informace.</p>
         <h3>Jak web scraping funguje</h3>
         <ol>
-          <li>Robot načte HTML kód webové stránky (jako prohlížeč, ale bez zobrazení).</li>
-          <li>Parsuje HTML a extrahuje požadovaná data (nadpisy, odstavce, tabulky).</li>
-          <li>Data se uloží do strukturovaného formátu (JSON, CSV) nebo přímo do databáze.</li>
+          <li>Robot načte <a href="/glossary/html/">HTML</a> kód webové stránky (jako prohlížeč, ale bez zobrazení).</li>
+          <li><a href="/glossary/parsing/">Parsuje</a> HTML a extrahuje požadovaná data (nadpisy, odstavce, tabulky).</li>
+          <li>Data se uloží do strukturovaného formátu (<a href="/glossary/json/">JSON</a>, CSV) nebo přímo do databáze.</li>
         </ol>
         <h3>Využití v RAG systémech</h3>
-        <p>Scraping je klíčový nástroj při budování RAG znalostní báze - umožňuje automaticky stáhnout obsah celého webu (s využitím sitemapy), převést ho na Markdown a uložit do vektorové databáze.</p>
+        <p>Scraping je klíčový nástroj při budování <a href="/glossary/rag/">RAG</a> znalostní báze - umožňuje automaticky stáhnout obsah celého webu (s využitím <a href="/glossary/sitemap/">sitemapy</a>), převést ho na <a href="/glossary/markdown/">Markdown</a> a uložit do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</p>
         <h3>Právní aspekty</h3>
         <p>Před scrapingem vždy ověřte podmínky použití webu a soubor <code>robots.txt</code>. Některé weby scraping výslovně zakazují.</p>
     en:
@@ -1243,12 +1243,12 @@
         <p><strong>Web scraping</strong> (also known as <em>web harvesting</em> or <em>web data extraction</em>) is an automated process in which software downloads web page content and extracts structured data from it - texts, prices, contacts, or other information.</p>
         <h3>How web scraping works</h3>
         <ol>
-          <li>A bot loads the HTML code of a web page (like a browser, but without rendering).</li>
-          <li>It parses the HTML and extracts the required data (headings, paragraphs, tables).</li>
-          <li>The data is saved to a structured format (JSON, CSV) or directly into a database.</li>
+          <li>A bot loads the <a href="/en/glossary/html/">HTML</a> code of a web page (like a browser, but without rendering).</li>
+          <li>It <a href="/en/glossary/parsing/">parses</a> the HTML and extracts the required data (headings, paragraphs, tables).</li>
+          <li>The data is saved to a structured format (<a href="/en/glossary/json/">JSON</a>, CSV) or directly into a database.</li>
         </ol>
         <h3>Use in RAG systems</h3>
-        <p>Scraping is a key tool when building a RAG knowledge base - it allows you to automatically download the content of an entire website (using a sitemap), convert it to Markdown, and store it in a vector database.</p>
+        <p>Scraping is a key tool when building a <a href="/en/glossary/rag/">RAG</a> knowledge base - it allows you to automatically download the content of an entire website (using a <a href="/en/glossary/sitemap/">sitemap</a>), convert it to <a href="/en/glossary/markdown/">Markdown</a>, and store it in a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</p>
         <h3>Legal considerations</h3>
         <p>Always check the website's terms of service and <code>robots.txt</code> file before scraping. Some websites explicitly prohibit it.</p>
 
@@ -1267,32 +1267,32 @@
       short_definition: "Proces analýzy a převodu textu nebo dat z jednoho formátu do strukturované podoby, se kterou může program pracovat."
       text: |
         <h2>Co je parsing?</h2>
-        <p><strong>Parsing</strong> (parsování) je proces, při kterém program přečte vstupní data (text, JSON, HTML, PDF) a rozloží je do strukturované podoby, se kterou může dále pracovat. Je to jako přeložit rukopis do čitelně napsaného textu s jasnou strukturou.</p>
+        <p><strong>Parsing</strong> (parsování) je proces, při kterém program přečte vstupní data (text, <a href="/glossary/json/">JSON</a>, <a href="/glossary/html/">HTML</a>, PDF) a rozloží je do strukturované podoby, se kterou může dále pracovat. Je to jako přeložit rukopis do čitelně napsaného textu s jasnou strukturou.</p>
         <h3>Příklady parsování v AI automatizaci</h3>
         <ul>
-          <li><strong>Parsování JSON:</strong> Extrakce konkrétní hodnoty (e-mail, jméno) z API odpovědi</li>
-          <li><strong>Parsování HTML:</strong> Extrakce textu z webové stránky při web scrapingu</li>
-          <li><strong>Parsování PDF:</strong> Převod naskenovaného dokumentu na text pro RAG</li>
+          <li><strong>Parsování JSON:</strong> Extrakce konkrétní hodnoty (e-mail, jméno) z <a href="/glossary/api/">API</a> odpovědi</li>
+          <li><strong>Parsování HTML:</strong> Extrakce textu z webové stránky při <a href="/glossary/web-scraping/">web scrapingu</a></li>
+          <li><strong>Parsování PDF:</strong> Převod naskenovaného dokumentu na text pro <a href="/glossary/rag/">RAG</a></li>
           <li><strong>Parsování e-mailu:</strong> Extrakce objednávkových dat z příchozí zprávy</li>
         </ul>
         <h3>Parsování výstupu LLM</h3>
-        <p>LLM modely mohou vracet strukturovaný výstup (JSON), který je pak potřeba parsovat pro předání dalšímu kroku automatizace. Moderní modely podporují <em>structured outputs</em>, které zaručují validní formát.</p>
+        <p><a href="/glossary/llm/">LLM modely</a> mohou vracet <a href="/glossary/structured-output/">strukturovaný výstup</a> (JSON), který je pak potřeba parsovat pro předání dalšímu kroku automatizace. Moderní modely podporují <em>structured outputs</em>, které zaručují validní formát.</p>
     en:
       title: "Parsing"
       description: "What is parsing? The process of analyzing and converting text or data from one format into a structured form that a program can work with."
       short_definition: "The process of analyzing and converting text or data from one format into a structured form that a program can work with."
       text: |
         <h2>What is parsing?</h2>
-        <p><strong>Parsing</strong> is the process by which a program reads input data (text, JSON, HTML, PDF) and breaks it down into a structured form it can work with. Think of it as translating a handwritten note into a clearly written, well-structured document.</p>
+        <p><strong>Parsing</strong> is the process by which a program reads input data (text, <a href="/en/glossary/json/">JSON</a>, <a href="/en/glossary/html/">HTML</a>, PDF) and breaks it down into a structured form it can work with. Think of it as translating a handwritten note into a clearly written, well-structured document.</p>
         <h3>Examples of parsing in AI automation</h3>
         <ul>
-          <li><strong>JSON parsing:</strong> Extracting a specific value (email, name) from an API response</li>
-          <li><strong>HTML parsing:</strong> Extracting text from a web page during web scraping</li>
-          <li><strong>PDF parsing:</strong> Converting a scanned document to text for RAG</li>
+          <li><strong>JSON parsing:</strong> Extracting a specific value (email, name) from an <a href="/en/glossary/api/">API</a> response</li>
+          <li><strong>HTML parsing:</strong> Extracting text from a web page during <a href="/en/glossary/web-scraping/">web scraping</a></li>
+          <li><strong>PDF parsing:</strong> Converting a scanned document to text for <a href="/en/glossary/rag/">RAG</a></li>
           <li><strong>Email parsing:</strong> Extracting order data from an incoming message</li>
         </ul>
         <h3>Parsing LLM output</h3>
-        <p>LLM models can return structured output (JSON), which then needs to be parsed for passing to the next step of an automation. Modern models support <em>structured outputs</em>, which guarantee a valid format.</p>
+        <p><a href="/en/glossary/llm/">LLM models</a> can return <a href="/en/glossary/structured-output/">structured output</a> (JSON), which then needs to be parsed for passing to the next step of an automation. Modern models support <em>structured outputs</em>, which guarantee a valid format.</p>
 
 - page_id: prompt
   type: glossary
@@ -1312,16 +1312,16 @@
         <p><strong>Prompt</strong> je textový vstup, který předáte AI modelu - může to být otázka, instrukce, kontext nebo jejich kombinace. Kvalita promptu přímo určuje kvalitu výstupu: čím přesnější a strukturovanější prompt, tím lepší a předvídatelnější odpověď.</p>
         <h3>Typy promptů</h3>
         <ul>
-          <li><strong>Systémový prompt:</strong> Nastavuje roli a pravidla modelu (před konverzací)</li>
+          <li><strong><a href="/glossary/system-prompt/">Systémový prompt</a>:</strong> Nastavuje roli a pravidla modelu (před konverzací)</li>
           <li><strong>Uživatelský prompt:</strong> Konkrétní otázka nebo úkol od uživatele</li>
-          <li><strong>Few-shot prompt:</strong> Prompt s ukázkovými příklady vstupu a výstupu</li>
+          <li><strong><a href="/glossary/zero-shot/">Few-shot prompt</a>:</strong> Prompt s ukázkovými příklady vstupu a výstupu</li>
         </ul>
         <h3>Tipy pro efektivní prompty</h3>
         <ul>
           <li>Definujte roli: „Jsi expert na…"</li>
           <li>Buďte konkrétní: místo „napiš text" upřesněte délku, tón, cílovou skupinu</li>
           <li>Přidejte kontext: co model potřebuje vědět, aby odpověděl správně</li>
-          <li>Specifikujte formát výstupu: JSON, seznam, odstavec</li>
+          <li>Specifikujte formát výstupu: <a href="/glossary/json/">JSON</a>, seznam, odstavec</li>
         </ul>
     en:
       title: "Prompt"
@@ -1332,16 +1332,16 @@
         <p>A <strong>prompt</strong> is the text input you pass to an AI model - it can be a question, instruction, context, or a combination of these. The quality of the prompt directly determines the quality of the output: the more precise and structured the prompt, the better and more predictable the response.</p>
         <h3>Types of prompts</h3>
         <ul>
-          <li><strong>System prompt:</strong> Sets the model's role and rules (before the conversation)</li>
+          <li><strong><a href="/en/glossary/system-prompt/">System prompt</a>:</strong> Sets the model's role and rules (before the conversation)</li>
           <li><strong>User prompt:</strong> A specific question or task from the user</li>
-          <li><strong>Few-shot prompt:</strong> A prompt with example input-output pairs</li>
+          <li><strong><a href="/en/glossary/zero-shot/">Few-shot prompt</a>:</strong> A prompt with example input-output pairs</li>
         </ul>
         <h3>Tips for effective prompts</h3>
         <ul>
           <li>Define a role: "You are an expert in…"</li>
           <li>Be specific: instead of "write a text," specify length, tone, and target audience</li>
           <li>Add context: what the model needs to know to answer correctly</li>
-          <li>Specify the output format: JSON, list, paragraph</li>
+          <li>Specify the output format: <a href="/en/glossary/json/">JSON</a>, list, paragraph</li>
         </ul>
 
 - page_id: temperature
@@ -1359,30 +1359,30 @@
       short_definition: "Parametr ovlivňující míru náhodnosti a kreativity odpovědí AI modelu - od deterministických (0) po velmi kreativní (2)."
       text: |
         <h2>Co je temperature?</h2>
-        <p><strong>Temperature</strong> (teplota) je parametr, který nastavujete při volání LLM API a který určuje, jak „kreativní" nebo „deterministický" má model být při výběru dalšího slova. Hodnota se obvykle pohybuje na škále <strong>0 až 2</strong>.</p>
+        <p><strong>Temperature</strong> (teplota) je parametr, který nastavujete při volání <a href="/glossary/llm/">LLM</a> <a href="/glossary/api/">API</a> a který určuje, jak „kreativní" nebo „deterministický" má model být při výběru dalšího slova. Hodnota se obvykle pohybuje na škále <strong>0 až 2</strong>.</p>
         <h3>Jak temperature funguje</h3>
         <ul>
           <li><strong>Temperature 0:</strong> Model vždy vybere nejpravděpodobnější slovo. Výstupy jsou konzistentní a předvídatelné. Vhodné pro extrakci dat, klasifikaci nebo strukturovaný výstup.</li>
-          <li><strong>Temperature 0.5–0.8:</strong> Vyvážená kreativita. Vhodné pro chatboty a asistenty.</li>
+          <li><strong>Temperature 0.5–0.8:</strong> Vyvážená kreativita. Vhodné pro <a href="/glossary/chatbot/">chatboty</a> a asistenty.</li>
           <li><strong>Temperature 1–2:</strong> Vysoká náhodnost. Výstupy jsou variabilní a originální. Vhodné pro kreativní psaní, brainstorming.</li>
         </ul>
         <h3>Praktické doporučení</h3>
-        <p>Pro AI automatizace, kde potřebujete spolehlivý a strukturovaný výstup (JSON, extrakce dat), nastavte temperature na <strong>0 nebo 0.2</strong>. Pro konverzační chatboty použijte <strong>0.5–0.7</strong>.</p>
+        <p>Pro AI automatizace, kde potřebujete spolehlivý a <a href="/glossary/structured-output/">strukturovaný výstup</a> (<a href="/glossary/json/">JSON</a>, extrakce dat), nastavte temperature na <strong>0 nebo 0.2</strong>. Pro konverzační chatboty použijte <strong>0.5–0.7</strong>.</p>
     en:
       title: "Temperature (model temperature)"
       description: "What is LLM temperature? A parameter that controls the degree of randomness and creativity in AI model responses on a scale from 0 to 2."
       short_definition: "A parameter controlling the degree of randomness and creativity in AI model responses - from deterministic (0) to highly creative (2)."
       text: |
         <h2>What is temperature?</h2>
-        <p><strong>Temperature</strong> is a parameter you set when calling an LLM API that determines how "creative" or "deterministic" the model should be when choosing the next word. The value typically ranges on a scale of <strong>0 to 2</strong>.</p>
+        <p><strong>Temperature</strong> is a parameter you set when calling an <a href="/en/glossary/llm/">LLM</a> <a href="/en/glossary/api/">API</a> that determines how "creative" or "deterministic" the model should be when choosing the next word. The value typically ranges on a scale of <strong>0 to 2</strong>.</p>
         <h3>How temperature works</h3>
         <ul>
           <li><strong>Temperature 0:</strong> The model always picks the most probable word. Outputs are consistent and predictable. Best for data extraction, classification, or structured output.</li>
-          <li><strong>Temperature 0.5–0.8:</strong> Balanced creativity. Good for chatbots and assistants.</li>
+          <li><strong>Temperature 0.5–0.8:</strong> Balanced creativity. Good for <a href="/en/glossary/chatbot/">chatbots</a> and assistants.</li>
           <li><strong>Temperature 1–2:</strong> High randomness. Outputs are variable and original. Best for creative writing or brainstorming.</li>
         </ul>
         <h3>Practical recommendation</h3>
-        <p>For AI automations where you need reliable and structured output (JSON, data extraction), set temperature to <strong>0 or 0.2</strong>. For conversational chatbots, use <strong>0.5–0.7</strong>.</p>
+        <p>For AI automations where you need reliable and <a href="/en/glossary/structured-output/">structured output</a> (<a href="/en/glossary/json/">JSON</a>, data extraction), set temperature to <strong>0 or 0.2</strong>. For conversational chatbots, use <strong>0.5–0.7</strong>.</p>
 
 - page_id: fine-tuning
   type: glossary
@@ -1399,14 +1399,14 @@
       short_definition: "Proces dalšího trénování předtrénovaného LLM modelu na vlastních datech pro specializaci na konkrétní úkol nebo styl."
       text: |
         <h2>Co je fine-tuning?</h2>
-        <p><strong>Fine-tuning</strong> (doladění) je proces, při kterém vezmete již existující předtrénovaný LLM model (např. GPT-4o mini) a dále ho trénujete na svých vlastních datech, aby se specializoval na konkrétní úkol, styl nebo doménu.</p>
+        <p><strong>Fine-tuning</strong> (doladění) je proces, při kterém vezmete již existující předtrénovaný <a href="/glossary/llm/">LLM model</a> (např. GPT-4o mini) a dále ho trénujete na svých vlastních datech, aby se specializoval na konkrétní úkol, styl nebo doménu.</p>
         <h3>Fine-tuning vs. RAG</h3>
         <table>
           <tr><th>Fine-tuning</th><th>RAG</th></tr>
-          <tr><td>Znalosti jsou „zabudované" v modelu</td><td>Znalosti se načítají za běhu z databáze</td></tr>
-          <tr><td>Vhodný pro styl a chování</td><td>Vhodný pro aktuální a specifická fakta</td></tr>
-          <tr><td>Vyžaduje přetrénování při aktualizaci</td><td>Stačí aktualizovat databázi</td></tr>
-          <tr><td>Vyšší počáteční náklady</td><td>Nižší počáteční náklady</td></tr>
+          <tr><td>- Znalosti jsou „zabudované" v modelu</td><td>- Znalosti se načítají za běhu z databáze</td></tr>
+          <tr><td>- Vhodný pro styl a chování</td><td>- Vhodný pro aktuální a specifická fakta</td></tr>
+          <tr><td>- Vyžaduje přetrénování při aktualizaci</td><td>- Stačí aktualizovat databázi</td></tr>
+          <tr><td>- Vyšší počáteční náklady</td><td>- Nižší počáteční náklady</td></tr>
         </table>
         <h3>Kdy fine-tuning použít</h3>
         <ul>
@@ -1420,14 +1420,14 @@
       short_definition: "The process of further training a pre-trained LLM model on custom data to specialize it for a specific task or style."
       text: |
         <h2>What is fine-tuning?</h2>
-        <p><strong>Fine-tuning</strong> is the process of taking an existing pre-trained LLM model (e.g., GPT-4o mini) and further training it on your own data so that it specializes in a specific task, style, or domain.</p>
+        <p><strong>Fine-tuning</strong> is the process of taking an existing pre-trained <a href="/en/glossary/llm/">LLM model</a> (e.g., GPT-4o mini) and further training it on your own data so that it specializes in a specific task, style, or domain.</p>
         <h3>Fine-tuning vs. RAG</h3>
         <table>
           <tr><th>Fine-tuning</th><th>RAG</th></tr>
-          <tr><td>Knowledge is "baked into" the model</td><td>Knowledge is loaded at runtime from a database</td></tr>
-          <tr><td>Suitable for style and behavior</td><td>Suitable for current and specific facts</td></tr>
-          <tr><td>Requires retraining on updates</td><td>Just update the database</td></tr>
-          <tr><td>Higher upfront cost</td><td>Lower upfront cost</td></tr>
+          <tr><td>- Knowledge is "baked into" the model</td><td>- Knowledge is loaded at runtime from a database</td></tr>
+          <tr><td>- Suitable for style and behavior</td><td>- Suitable for current and specific facts</td></tr>
+          <tr><td>- Requires retraining on updates</td><td>- Just update the database</td></tr>
+          <tr><td>- Higher upfront cost</td><td>- Lower upfront cost</td></tr>
         </table>
         <h3>When to use fine-tuning</h3>
         <ul>
@@ -1451,7 +1451,7 @@
       short_definition: "Techniky prompting - zero-shot zadá úkol bez příkladů, few-shot přiloží ukázkové vstupy a výstupy pro lepší výsledky."
       text: |
         <h2>Co je zero-shot a few-shot prompting?</h2>
-        <p>Tyto pojmy popisují, kolik <strong>ukázkových příkladů</strong> přiložíte do promptu, aby model pochopil, co od něj chcete.</p>
+        <p>Tyto pojmy popisují, kolik <strong>ukázkových příkladů</strong> přiložíte do <a href="/glossary/prompt/">promptu</a>, aby model pochopil, co od něj chcete.</p>
         <h3>Zero-shot prompting</h3>
         <p>Modelu zadáte úkol bez jakýchkoli příkladů a spoléháte na jeho předtrénované schopnosti. Funguje dobře pro obecné úkoly, které model dobře zná.</p>
         <p><em>Příklad: „Přelož následující text do angličtiny: [text]"</em></p>
@@ -1459,14 +1459,14 @@
         <p>Do promptu přiložíte 2–5 ukázkových párů vstupu a výstupu. Model z nich pochopí požadovaný vzor a aplikuje ho na nový vstup. Výrazně zlepšuje výsledky u specifických nebo nestandardních formátů.</p>
         <p><em>Příklad: Ukážete modelu 3 příklady, jak má extrahovat data z e-mailu, a pak ho necháte zpracovat nový e-mail.</em></p>
         <h3>One-shot prompting</h3>
-        <p>Varianta few-shot s jediným příkladem - vhodná, pokud máte omezený prostor v kontextovém okně.</p>
+        <p>Varianta few-shot s jediným příkladem - vhodná, pokud máte omezený prostor v <a href="/glossary/context-window/">kontextovém okně</a>.</p>
     en:
       title: "Zero-shot and Few-shot Prompting"
       description: "What is zero-shot and few-shot prompting? Techniques for giving tasks to an AI model - without examples (zero-shot) or with a few samples (few-shot)."
       short_definition: "Prompting techniques - zero-shot gives the task without examples, few-shot includes sample inputs and outputs for better results."
       text: |
         <h2>What is zero-shot and few-shot prompting?</h2>
-        <p>These terms describe how many <strong>example samples</strong> you include in a prompt to help the model understand what you want.</p>
+        <p>These terms describe how many <strong>example samples</strong> you include in a <a href="/en/glossary/prompt/">prompt</a> to help the model understand what you want.</p>
         <h3>Zero-shot prompting</h3>
         <p>You give the model a task with no examples and rely on its pre-trained capabilities. Works well for general tasks the model knows well.</p>
         <p><em>Example: "Translate the following text into English: [text]"</em></p>
@@ -1474,7 +1474,7 @@
         <p>You include 2–5 sample input-output pairs in the prompt. The model learns the required pattern from them and applies it to new input. Significantly improves results for specific or non-standard formats.</p>
         <p><em>Example: You show the model 3 examples of how to extract data from an email, then let it process a new email.</em></p>
         <h3>One-shot prompting</h3>
-        <p>A variant of few-shot with a single example - suitable when you have limited space in the context window.</p>
+        <p>A variant of few-shot with a single example - suitable when you have limited space in the <a href="/en/glossary/context-window/">context window</a>.</p>
 
 - page_id: guardrails
   type: glossary
@@ -1491,18 +1491,18 @@
       short_definition: "Ochranné mechanismy omezující chování AI systému a zabraňující nežádoucím, škodlivým nebo mimoscopovým výstupům."
       text: |
         <h2>Co jsou guardrails?</h2>
-        <p><strong>Guardrails</strong> (ochranné mantinely) jsou mechanismy, které hlídají vstupy i výstupy AI systému a zabraňují tomu, aby model odpovídal způsobem, který je nebezpečný, mimoscopový nebo jinak nežádoucí. Jsou to pravidla, filtry a kontrolní vrstvy kolem LLM modelu.</p>
+        <p><strong>Guardrails</strong> (ochranné mantinely) jsou mechanismy, které hlídají vstupy i výstupy AI systému a zabraňují tomu, aby model odpovídal způsobem, který je nebezpečný, mimoscopový nebo jinak nežádoucí. Jsou to pravidla, filtry a kontrolní vrstvy kolem <a href="/glossary/llm/">LLM modelu</a>.</p>
         <h3>Typy guardrails</h3>
         <ul>
           <li><strong>Vstupní guardrails:</strong> Filtrují uživatelský dotaz před odesláním do modelu - blokují nevhodné nebo nebezpečné požadavky.</li>
-          <li><strong>Výstupní guardrails:</strong> Kontrolují odpověď modelu před zobrazením uživateli - zachytávají halucinace, citlivá data nebo off-topic výstupy.</li>
-          <li><strong>Systémový prompt:</strong> Základní úroveň guardrails - instrukce přímo v promptu.</li>
+          <li><strong>Výstupní guardrails:</strong> Kontrolují odpověď modelu před zobrazením uživateli - zachytávají <a href="/glossary/hallucination/">halucinace</a>, citlivá data nebo off-topic výstupy.</li>
+          <li><strong><a href="/glossary/system-prompt/">Systémový prompt</a>:</strong> Základní úroveň guardrails - instrukce přímo v <a href="/glossary/prompt/">promptu</a>.</li>
         </ul>
         <h3>Příklady využití</h3>
         <ul>
-          <li>Chatbot zákaznické podpory nesmí diskutovat o konkurenci → guardrail přesměruje dotaz</li>
+          <li><a href="/glossary/chatbot/">Chatbot</a> zákaznické podpory nesmí diskutovat o konkurenci → guardrail přesměruje dotaz</li>
           <li>Detekce PII (osobních údajů) ve výstupu → guardrail je anonymizuje před odesláním</li>
-          <li>Blokování prompt injection pokusů → vstupní guardrail odfiltruje podezřelé vzory</li>
+          <li>Blokování <a href="/glossary/prompt-injection/">prompt injection</a> pokusů → vstupní guardrail odfiltruje podezřelé vzory</li>
         </ul>
         <h3>Nástroje pro guardrails</h3>
         <p>Populární frameworky jako <strong>NeMo Guardrails</strong> (NVIDIA) nebo <strong>Guardrails AI</strong> umožňují definovat pravidla deklarativně a integrovat je do libovolného LLM pipeline.</p>
@@ -1512,18 +1512,18 @@
       short_definition: "Protective mechanisms that constrain AI system behavior and prevent unwanted, harmful, or out-of-scope outputs."
       text: |
         <h2>What are guardrails?</h2>
-        <p><strong>Guardrails</strong> are mechanisms that monitor both the inputs and outputs of an AI system, preventing the model from responding in ways that are dangerous, out of scope, or otherwise undesirable. They are the rules, filters, and control layers wrapped around an LLM.</p>
+        <p><strong>Guardrails</strong> are mechanisms that monitor both the inputs and outputs of an AI system, preventing the model from responding in ways that are dangerous, out of scope, or otherwise undesirable. They are the rules, filters, and control layers wrapped around an <a href="/en/glossary/llm/">LLM</a>.</p>
         <h3>Types of guardrails</h3>
         <ul>
           <li><strong>Input guardrails:</strong> Filter the user's query before it reaches the model - blocking inappropriate or dangerous requests.</li>
-          <li><strong>Output guardrails:</strong> Check the model's response before showing it to the user - catching hallucinations, sensitive data, or off-topic outputs.</li>
-          <li><strong>System prompt:</strong> The baseline level of guardrails - instructions embedded directly in the prompt.</li>
+          <li><strong>Output guardrails:</strong> Check the model's response before showing it to the user - catching <a href="/en/glossary/hallucination/">hallucinations</a>, sensitive data, or off-topic outputs.</li>
+          <li><strong><a href="/en/glossary/system-prompt/">System prompt</a>:</strong> The baseline level of guardrails - instructions embedded directly in the <a href="/en/glossary/prompt/">prompt</a>.</li>
         </ul>
         <h3>Example use cases</h3>
         <ul>
-          <li>A customer support chatbot must not discuss competitors → a guardrail redirects the query</li>
+          <li>A customer support <a href="/en/glossary/chatbot/">chatbot</a> must not discuss competitors → a guardrail redirects the query</li>
           <li>Detection of PII (personal data) in output → a guardrail anonymizes it before delivery</li>
-          <li>Blocking prompt injection attempts → an input guardrail filters suspicious patterns</li>
+          <li>Blocking <a href="/en/glossary/prompt-injection/">prompt injection</a> attempts → an input guardrail filters suspicious patterns</li>
         </ul>
         <h3>Tools for guardrails</h3>
         <p>Popular frameworks such as <strong>NeMo Guardrails</strong> (NVIDIA) and <strong>Guardrails AI</strong> allow you to define rules declaratively and integrate them into any LLM pipeline.</p>
@@ -1543,7 +1543,7 @@
       short_definition: "Otevřený protokol standardizující komunikaci AI modelů s externími nástroji, daty a službami."
       text: |
         <h2>Co je MCP?</h2>
-        <p><strong>MCP (Model Context Protocol)</strong> je otevřený protokol vyvinutý společností Anthropic, který definuje standardní způsob, jakým AI modely (jako Claude) komunikují s externími nástroji, databázemi, API a dalšími službami. Cílem je vytvořit univerzální „zástrčku" mezi AI a světem nástrojů - podobně jako USB-C sjednotil připojení fyzických zařízení.</p>
+        <p><strong>MCP (Model Context Protocol)</strong> je otevřený protokol vyvinutý společností Anthropic, který definuje standardní způsob, jakým AI modely (jako Claude) komunikují s externími nástroji, databázemi, <a href="/glossary/api/">API</a> a dalšími službami. Cílem je vytvořit univerzální „zástrčku" mezi AI a světem nástrojů - podobně jako USB-C sjednotil připojení fyzických zařízení.</p>
         <h3>Jak MCP funguje</h3>
         <p>MCP zavádí architekturu server–klient:</p>
         <ul>
@@ -1554,7 +1554,7 @@
         <ul>
           <li>Každý nástroj stačí implementovat jednou pro všechny kompatibilní AI modely</li>
           <li>Otevřený standard - MCP servery tvoří komunita a přibývají každý týden</li>
-          <li>Základ moderních AI agentů, kteří potřebují přístup k reálným datům a akcím</li>
+          <li>Základ moderních <a href="/glossary/agentni-systemy/">AI agentů</a>, kteří potřebují přístup k reálným datům a akcím</li>
         </ul>
         <h3>Příklady MCP serverů</h3>
         <ul>
@@ -1568,7 +1568,7 @@
       short_definition: "An open protocol standardizing how AI models communicate with external tools, data, and services."
       text: |
         <h2>What is MCP?</h2>
-        <p><strong>MCP (Model Context Protocol)</strong> is an open protocol developed by Anthropic that defines a standard way for AI models (like Claude) to communicate with external tools, databases, APIs, and other services. The goal is to create a universal "plug" between AI and the world of tools - similar to how USB-C standardized the connection of physical devices.</p>
+        <p><strong>MCP (Model Context Protocol)</strong> is an open protocol developed by Anthropic that defines a standard way for AI models (like Claude) to communicate with external tools, databases, <a href="/en/glossary/api/">APIs</a>, and other services. The goal is to create a universal "plug" between AI and the world of tools - similar to how USB-C standardized the connection of physical devices.</p>
         <h3>How MCP works</h3>
         <p>MCP introduces a server–client architecture:</p>
         <ul>
@@ -1579,7 +1579,7 @@
         <ul>
           <li>Each tool only needs to be implemented once for all compatible AI models</li>
           <li>Open standard - MCP servers are built by the community and new ones appear every week</li>
-          <li>The foundation of modern AI agents that need access to real data and actions</li>
+          <li>The foundation of modern <a href="/en/glossary/agentni-systemy/">AI agents</a> that need access to real data and actions</li>
         </ul>
         <h3>Examples of MCP servers</h3>
         <ul>
@@ -1587,3 +1587,611 @@
           <li>Integration with Slack, Google Drive, GitHub, or Notion</li>
           <li>Calling any REST API without writing custom code</li>
         </ul>
+
+- page_id: low-code-no-code
+  type: glossary
+  slug: low-code-no-code
+  term: Low-code / No-code
+  categories: [automation]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: extension
+  lang:
+    cs:
+      title: "Low-code / No-code"
+      description: "Co je low-code a no-code? Vývojové přístupy, které umožňují tvořit aplikace a automatizace s minimem nebo bez psaní kódu."
+      short_definition: "Vývojové přístupy, které umožňují tvořit aplikace a automatizace s minimem nebo úplně bez psaní kódu."
+      text: |
+        <h2>Co je low-code a no-code?</h2>
+        <p><strong>Low-code</strong> a <strong>no-code</strong> jsou přístupy k vývoji softwaru a automatizací, které nahrazují psaní kódu vizuálním rozhraním - drag-and-drop editorem, konfiguračními formuláři a předpřipravenými bloky. Cílem je umožnit tvorbu aplikací i lidem bez programátorských znalostí a zároveň výrazně zrychlit vývoj profesionálním vývojářům.</p>
+        <h3>Rozdíl mezi low-code a no-code</h3>
+        <ul>
+          <li><strong>No-code:</strong> Čistě vizuální tvorba bez jediného řádku kódu. Určeno pro business uživatele (marketing, HR, operations).</li>
+          <li><strong>Low-code:</strong> Vizuální základ, ale v případě potřeby lze doplnit vlastní kód (JavaScript, Python, SQL). Určeno pro pokročilé uživatele a vývojáře, kteří chtějí rychlý vývoj s možností dolaďovat detaily.</li>
+        </ul>
+        <h3>Typické nástroje</h3>
+        <ul>
+          <li><strong>Automatizace workflow:</strong> <a href="/glossary/n8n/">n8n</a>, Zapier, Make (dříve Integromat)</li>
+          <li><strong>Tvorba aplikací:</strong> Bubble, Webflow, Retool</li>
+          <li><strong>Databáze a správa dat:</strong> Airtable, Notion</li>
+        </ul>
+        <h3>Výhody a nevýhody</h3>
+        <ul>
+          <li><strong>Rychlost:</strong> Prototypy vznikají v hodinách, ne týdnech</li>
+          <li><strong>Dostupnost:</strong> Umožňuje automatizaci i netechnickým týmům</li>
+          <li><strong>Integrace:</strong> Stovky předpřipravených konektorů k <a href="/glossary/api/">API</a> a externím službám</li>
+          <li><strong>Omezení:</strong> Menší flexibilita než vlastní kód a závislost na dodavateli (vendor lock-in)</li>
+        </ul>
+    en:
+      title: "Low-code / No-code"
+      description: "What is low-code and no-code? Development approaches that let you build applications and automations with minimal or no coding at all."
+      short_definition: "Development approaches that let you build applications and automations with minimal or no coding at all."
+      text: |
+        <h2>What is low-code and no-code?</h2>
+        <p><strong>Low-code</strong> and <strong>no-code</strong> are approaches to software and automation development that replace traditional coding with a visual interface - drag-and-drop editors, configuration forms, and pre-built blocks. The goal is to enable non-programmers to build applications and at the same time significantly speed up development for professional developers.</p>
+        <h3>Difference between low-code and no-code</h3>
+        <ul>
+          <li><strong>No-code:</strong> Purely visual building with no code at all. Aimed at business users (marketing, HR, operations).</li>
+          <li><strong>Low-code:</strong> Visual foundation that can be extended with custom code (JavaScript, Python, SQL) when needed. Aimed at power users and developers who want rapid development with room to fine-tune details.</li>
+        </ul>
+        <h3>Common tools</h3>
+        <ul>
+          <li><strong>Workflow automation:</strong> <a href="/en/glossary/n8n/">n8n</a>, Zapier, Make (formerly Integromat)</li>
+          <li><strong>App builders:</strong> Bubble, Webflow, Retool</li>
+          <li><strong>Databases and data management:</strong> Airtable, Notion</li>
+        </ul>
+        <h3>Benefits and drawbacks</h3>
+        <ul>
+          <li><strong>Speed:</strong> Prototypes in hours, not weeks</li>
+          <li><strong>Accessibility:</strong> Opens up automation to non-technical teams</li>
+          <li><strong>Integrations:</strong> Hundreds of pre-built connectors to <a href="/en/glossary/api/">APIs</a> and external services</li>
+          <li><strong>Limitations:</strong> Less flexibility than custom code and vendor lock-in risk</li>
+        </ul>
+
+- page_id: chatbot
+  type: glossary
+  slug: chatbot
+  term: Chatbot
+  categories: [llm, automation]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: chat_bubble
+  lang:
+    cs:
+      title: "Chatbot (AI chatbot)"
+      description: "Co je chatbot? Konverzační aplikace, která odpovídá uživatelům v reálném čase - moderní verze využívají LLM a RAG."
+      short_definition: "Konverzační aplikace, která odpovídá uživatelům v reálném čase. Moderní varianty využívají LLM a RAG."
+      text: |
+        <h2>Co je chatbot?</h2>
+        <p><strong>Chatbot</strong> je softwarová aplikace, která vede konverzaci s uživatelem v přirozeném jazyce. První generace pracovala na bázi pevných pravidel a klíčových slov, moderní AI chatboti využívají <a href="/glossary/llm/">LLM</a> a většinou i <a href="/glossary/rag/">RAG</a>, aby odpovídali věcně a na základě vaší znalostní báze.</p>
+        <h3>Typy chatbotů</h3>
+        <ul>
+          <li><strong>Rule-based:</strong> Odpovídá podle předem nastavených pravidel a scénářů (rozhodovací strom). Jednoduchý, ale omezený.</li>
+          <li><strong>AI chatbot (LLM):</strong> Pohání ho jazykový model. Rozumí kontextu a volně odpovídá, ale bez RAG může <a href="/glossary/hallucination/">halucinovat</a>.</li>
+          <li><strong>RAG chatbot:</strong> Kombinuje LLM s vaší dokumentací. Odpovědi jsou založené na reálných datech.</li>
+          <li><strong>Agentní chatbot:</strong> Postavený na <a href="/glossary/agentni-systemy/">agentních systémech</a> - neodpovídá pouze, ale i jedná (objedná, zapíše, zavolá API).</li>
+        </ul>
+        <h3>Klíčové komponenty AI chatbota</h3>
+        <ul>
+          <li><strong><a href="/glossary/system-prompt/">Systémový prompt</a>:</strong> Definuje roli, tón a pravidla chatbota</li>
+          <li><strong>Znalostní báze:</strong> Dokumenty a <a href="/glossary/faq/">FAQ</a>, ze kterých chatbot odpovídá</li>
+          <li><strong><a href="/glossary/guardrails/">Guardrails</a>:</strong> Omezení, co chatbot smí a nesmí dělat</li>
+          <li><strong>Integrace:</strong> Napojení na web, e-mail, Slack, WhatsApp nebo <a href="/glossary/n8n/">n8n</a></li>
+        </ul>
+    en:
+      title: "Chatbot (AI chatbot)"
+      description: "What is a chatbot? A conversational application that replies to users in real time - modern versions use LLMs and RAG."
+      short_definition: "A conversational application that replies to users in real time. Modern variants use LLMs and RAG."
+      text: |
+        <h2>What is a chatbot?</h2>
+        <p>A <strong>chatbot</strong> is a software application that carries on a conversation with a user in natural language. The first generation worked on fixed rules and keywords, while modern AI chatbots rely on <a href="/en/glossary/llm/">LLMs</a> and usually on <a href="/en/glossary/rag/">RAG</a> too, so that answers are factual and grounded in your own knowledge base.</p>
+        <h3>Types of chatbots</h3>
+        <ul>
+          <li><strong>Rule-based:</strong> Responds using preset rules and scripts (decision tree). Simple, but limited.</li>
+          <li><strong>AI chatbot (LLM):</strong> Powered by a language model. Understands context and replies freely, but may <a href="/en/glossary/hallucination/">hallucinate</a> without RAG.</li>
+          <li><strong>RAG chatbot:</strong> Combines an LLM with your documentation. Answers are grounded in real data.</li>
+          <li><strong>Agent chatbot:</strong> Built on <a href="/en/glossary/agentni-systemy/">agent systems</a> - not only replies but also acts (places an order, writes to a database, calls an API).</li>
+        </ul>
+        <h3>Key components of an AI chatbot</h3>
+        <ul>
+          <li><strong><a href="/en/glossary/system-prompt/">System prompt</a>:</strong> Defines the chatbot's role, tone, and rules</li>
+          <li><strong>Knowledge base:</strong> Documents and <a href="/en/glossary/faq/">FAQs</a> the chatbot answers from</li>
+          <li><strong><a href="/en/glossary/guardrails/">Guardrails</a>:</strong> Limits on what the chatbot may and may not do</li>
+          <li><strong>Integrations:</strong> Connections to websites, email, Slack, WhatsApp, or <a href="/en/glossary/n8n/">n8n</a></li>
+        </ul>
+
+- page_id: workflow
+  type: glossary
+  slug: workflow
+  term: Workflow
+  categories: [automation]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: schema
+  lang:
+    cs:
+      title: "Workflow (automatizovaný proces)"
+      description: "Co je workflow? Sled kroků a rozhodnutí, které systém vykoná automaticky za účelem splnění úkolu - např. v n8n, Zapieru nebo Make."
+      short_definition: "Sled kroků a rozhodnutí, které systém vykoná automaticky za účelem splnění úkolu."
+      text: |
+        <h2>Co je workflow?</h2>
+        <p><strong>Workflow</strong> (pracovní postup) je řetězec kroků a rozhodnutí, které systém vykoná automaticky, aby dosáhl určitého cíle. Vzniká například v <a href="/glossary/n8n/">n8n</a>, Zapieru nebo Make a je základním stavebním kamenem <a href="/glossary/low-code-no-code/">low-code</a> automatizací.</p>
+        <h3>Z čeho se workflow skládá</h3>
+        <ul>
+          <li><strong><a href="/glossary/trigger/">Trigger</a>:</strong> První krok, který workflow spustí (časovač, <a href="/glossary/webhook/">webhook</a>, nový e-mail)</li>
+          <li><strong>Kroky (nodes):</strong> Jednotlivé akce - volání <a href="/glossary/api/">API</a>, transformace dat, <a href="/glossary/parsing/">parsing</a>, zápis do databáze</li>
+          <li><strong>Podmínky a větvení:</strong> If/else logika, která rozhoduje, co se stane dál</li>
+          <li><strong>Zpracování chyb:</strong> Retry logika, fallback cesty, notifikace při selhání</li>
+        </ul>
+        <h3>Typické workflow v AI automatizaci</h3>
+        <ul>
+          <li>Příchozí e-mail → extrakce dat přes <a href="/glossary/llm/">LLM</a> → zápis do CRM → notifikace</li>
+          <li>Formulář na webu → <a href="/glossary/webhook/">webhook</a> → odpověď od <a href="/glossary/chatbot/">chatbota</a> → e-mail klientovi</li>
+          <li>Plánované stažení obsahu webu → <a href="/glossary/chunking/">chunking</a> → uložení do <a href="/glossary/vektorova-databaze/">vektorové databáze</a></li>
+        </ul>
+    en:
+      title: "Workflow (automated process)"
+      description: "What is a workflow? A sequence of steps and decisions that a system runs automatically to complete a task - e.g. in n8n, Zapier, or Make."
+      short_definition: "A sequence of steps and decisions that a system runs automatically to complete a task."
+      text: |
+        <h2>What is a workflow?</h2>
+        <p>A <strong>workflow</strong> is a chain of steps and decisions that a system executes automatically to achieve a certain goal. It is built, for example, in <a href="/en/glossary/n8n/">n8n</a>, Zapier, or Make and is the fundamental building block of <a href="/en/glossary/low-code-no-code/">low-code</a> automation.</p>
+        <h3>What a workflow is made of</h3>
+        <ul>
+          <li><strong><a href="/en/glossary/trigger/">Trigger</a>:</strong> The first step that starts the workflow (timer, <a href="/en/glossary/webhook/">webhook</a>, new email)</li>
+          <li><strong>Steps (nodes):</strong> Individual actions - calling an <a href="/en/glossary/api/">API</a>, transforming data, <a href="/en/glossary/parsing/">parsing</a>, writing to a database</li>
+          <li><strong>Conditions and branching:</strong> If/else logic that decides what happens next</li>
+          <li><strong>Error handling:</strong> Retry logic, fallback paths, failure notifications</li>
+        </ul>
+        <h3>Typical workflows in AI automation</h3>
+        <ul>
+          <li>Incoming email → data extraction via <a href="/en/glossary/llm/">LLM</a> → save to CRM → notification</li>
+          <li>Website form → <a href="/en/glossary/webhook/">webhook</a> → reply from a <a href="/en/glossary/chatbot/">chatbot</a> → email to the customer</li>
+          <li>Scheduled website crawl → <a href="/en/glossary/chunking/">chunking</a> → save to a <a href="/en/glossary/vektorova-databaze/">vector database</a></li>
+        </ul>
+
+- page_id: semanticke-vyhledavani
+  type: glossary
+  slug: semanticke-vyhledavani
+  term: Sémantické vyhledávání
+  categories: [rag]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: search_insights
+  lang:
+    cs:
+      title: "Sémantické vyhledávání"
+      description: "Co je sémantické vyhledávání? Vyhledávání podle významu textu, nikoliv podle přesné shody klíčových slov. Základ moderních RAG systémů."
+      short_definition: "Vyhledávání podle významu textu, nikoliv podle přesné shody klíčových slov. Základ moderních RAG systémů."
+      text: |
+        <h2>Co je sémantické vyhledávání?</h2>
+        <p><strong>Sémantické vyhledávání</strong> (anglicky <em>semantic search</em>) hledá v textu podle významu, ne podle přesné shody slov. Na dotaz „Jak zrušit předplatné?" najde i dokument, který popisuje „ukončení platebního plánu". Klasické fulltextové vyhledávání by tento dokument minulo, protože neobsahuje slovo „zrušit" ani „předplatné".</p>
+        <h3>Jak sémantické vyhledávání funguje</h3>
+        <ol>
+          <li>Dokumenty se pomocí <a href="/glossary/embedding-model/">embedding modelu</a> převedou na <a href="/glossary/vektor/">vektory</a> a uloží do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</li>
+          <li>Dotaz uživatele se převede na vektor stejným modelem.</li>
+          <li>Databáze najde vektory s nejbližší polohou (např. pomocí kosinové podobnosti) - tedy dokumenty s podobným významem.</li>
+        </ol>
+        <h3>Proč je sémantika lepší</h3>
+        <ul>
+          <li>Zvládá synonyma, překlady a různé formulace</li>
+          <li>Chápe kontext - „jablko" vs. značka Apple</li>
+          <li>Funguje i u dotazů v přirozeném jazyce</li>
+          <li>Je základem <a href="/glossary/rag/">RAG systémů</a> a moderních <a href="/glossary/chatbot/">chatbotů</a></li>
+        </ul>
+        <h3>Limity sémantického vyhledávání</h3>
+        <p>U krátkých, přesných dotazů (katalogová čísla, SKU, jména) může čisté sémantické hledání selhat. Řešením je <a href="/glossary/hybrid-search/">hybrid search</a> - kombinace sémantiky a klíčových slov, která zároveň často využívá <a href="/glossary/re-ranking/">re-ranking</a>.</p>
+    en:
+      title: "Semantic Search"
+      description: "What is semantic search? Searching by the meaning of text rather than by exact keyword match. The foundation of modern RAG systems."
+      short_definition: "Searching by the meaning of text rather than by exact keyword match. The foundation of modern RAG systems."
+      text: |
+        <h2>What is semantic search?</h2>
+        <p><strong>Semantic search</strong> finds text by meaning, not by exact word match. For the query "How do I cancel my subscription?" it can also return a document that describes "terminating a payment plan." Classic full-text search would miss this document because it contains neither "cancel" nor "subscription."</p>
+        <h3>How semantic search works</h3>
+        <ol>
+          <li>Documents are converted into <a href="/en/glossary/vektor/">vectors</a> by an <a href="/en/glossary/embedding-model/">embedding model</a> and stored in a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</li>
+          <li>The user's query is turned into a vector by the same model.</li>
+          <li>The database finds vectors that sit closest to the query vector (e.g. using cosine similarity) - i.e. documents with similar meaning.</li>
+        </ol>
+        <h3>Why semantics wins</h3>
+        <ul>
+          <li>Handles synonyms, translations, and varied phrasing</li>
+          <li>Understands context - "apple" the fruit vs. Apple the brand</li>
+          <li>Works even for natural-language questions</li>
+          <li>It is the backbone of <a href="/en/glossary/rag/">RAG systems</a> and modern <a href="/en/glossary/chatbot/">chatbots</a></li>
+        </ul>
+        <h3>Limits of semantic search</h3>
+        <p>For short, exact queries (catalog numbers, SKUs, names), pure semantic search may fail. The fix is <a href="/en/glossary/hybrid-search/">hybrid search</a> - combining semantics with keyword matching, often paired with <a href="/en/glossary/re-ranking/">re-ranking</a>.</p>
+
+- page_id: hybrid-search
+  type: glossary
+  slug: hybrid-search
+  term: Hybrid search
+  categories: [rag]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: join_inner
+  lang:
+    cs:
+      title: "Hybrid search (hybridní vyhledávání)"
+      description: "Co je hybrid search? Kombinace sémantického (vektorového) a klasického klíčového vyhledávání, která zvyšuje přesnost výsledků v RAG systémech."
+      short_definition: "Kombinace sémantického (vektorového) a klasického klíčového vyhledávání pro vyšší přesnost výsledků v RAG."
+      text: |
+        <h2>Co je hybrid search?</h2>
+        <p><strong>Hybrid search</strong> (hybridní vyhledávání) kombinuje dva typy vyhledávání: <a href="/glossary/semanticke-vyhledavani/">sémantické (vektorové)</a> a klasické klíčové (fulltextové, např. BM25). Cílem je získat nejlepší výsledky z obou přístupů - sémantika chápe význam, klíčové hledání přesně zasáhne konkrétní slova, čísla nebo názvy.</p>
+        <h3>Proč hybrid search</h3>
+        <ul>
+          <li><strong>Sémantika:</strong> Najde relevantní dokumenty, i když dotaz používá jiná slova než text ve <a href="/glossary/vektorova-databaze/">vektorové databázi</a></li>
+          <li><strong>Klíčová slova:</strong> Přesně zasáhnou unikátní identifikátory - čísla produktů, jména, zkratky, kódy</li>
+          <li><strong>Kombinace skóre:</strong> Oba přístupy se sloučí (např. pomocí Reciprocal Rank Fusion) a výsledky se seřadí podle celkové relevance</li>
+        </ul>
+        <h3>Kdy hybrid search použít</h3>
+        <ul>
+          <li>Vyhledávání v technické dokumentaci s čísly dílů a SKU</li>
+          <li>Právní a lékařské texty plné specifických termínů</li>
+          <li>E-commerce - kombinace vyhledávání podle popisu i podle kódu produktu</li>
+        </ul>
+        <p>Hybrid search bývá dále doplněn o <a href="/glossary/re-ranking/">re-ranking</a>, který z finálního výběru vybere nejvhodnější dokumenty pro <a href="/glossary/llm/">LLM</a>.</p>
+    en:
+      title: "Hybrid Search"
+      description: "What is hybrid search? A combination of semantic (vector) and traditional keyword search that improves accuracy in RAG systems."
+      short_definition: "A combination of semantic (vector) and traditional keyword search that improves accuracy in RAG systems."
+      text: |
+        <h2>What is hybrid search?</h2>
+        <p><strong>Hybrid search</strong> combines two types of search: <a href="/en/glossary/semanticke-vyhledavani/">semantic (vector)</a> search and classic keyword (full-text, e.g., BM25) search. The goal is to combine the strengths of both approaches - semantics understands meaning, while keyword search precisely matches specific words, numbers, or names.</p>
+        <h3>Why hybrid search</h3>
+        <ul>
+          <li><strong>Semantics:</strong> Finds relevant documents even when the query uses different words than the text in the <a href="/en/glossary/vektorova-databaze/">vector database</a></li>
+          <li><strong>Keywords:</strong> Precisely hit unique identifiers - product numbers, names, abbreviations, codes</li>
+          <li><strong>Score fusion:</strong> Both approaches are merged (e.g., using Reciprocal Rank Fusion) and results are ranked by combined relevance</li>
+        </ul>
+        <h3>When to use hybrid search</h3>
+        <ul>
+          <li>Searching technical documentation with part numbers and SKUs</li>
+          <li>Legal and medical texts full of specific terminology</li>
+          <li>E-commerce - combining search by description and by product code</li>
+        </ul>
+        <p>Hybrid search is often further refined with <a href="/en/glossary/re-ranking/">re-ranking</a>, which selects the most suitable documents for the <a href="/en/glossary/llm/">LLM</a> from the final set.</p>
+
+- page_id: chain-of-thought
+  type: glossary
+  slug: chain-of-thought
+  term: Chain of Thought
+  categories: [llm]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: account_tree
+  lang:
+    cs:
+      title: "Chain of Thought (CoT) - myšlenkový řetězec"
+      description: "Co je Chain of Thought? Technika promptování, která přiměje LLM model uvažovat krok za krokem a zlepšuje přesnost u složitých úloh."
+      short_definition: "Technika promptování, která přiměje LLM model uvažovat krok za krokem a zlepšuje přesnost u složitých úloh."
+      text: |
+        <h2>Co je Chain of Thought?</h2>
+        <p><strong>Chain of Thought</strong> (zkratkou CoT, česky „myšlenkový řetězec") je technika <a href="/glossary/prompt/">promptování</a>, při které modelu explicitně řeknete, aby řešení rozepsal krok za krokem. Místo jedné věty odpovědi tak <a href="/glossary/llm/">LLM</a> nejdřív zveřejní průběžné úvahy a teprve pak dospěje k finálnímu výsledku. U logických, matematických a vícekrokových úloh to znatelně zvyšuje přesnost.</p>
+        <h3>Jak CoT použít</h3>
+        <ul>
+          <li><strong>Zero-shot CoT:</strong> Stačí k promptu přidat větu jako „Uvažuj krok za krokem" nebo „Nejdřív rozeber problém, pak odpověz"</li>
+          <li><strong>Few-shot CoT:</strong> V promptu ukážete modelu několik příkladů, které obsahují postupné řešení (navazuje na <a href="/glossary/zero-shot/">few-shot prompting</a>)</li>
+          <li><strong>Reasoning modely:</strong> Moderní modely (např. o1, Claude s extended thinking) mají CoT zabudované a uvažují samy od sebe</li>
+        </ul>
+        <h3>Kdy CoT pomáhá</h3>
+        <ul>
+          <li>Matematické a logické úlohy</li>
+          <li>Analýza smluv a dokumentů s mnoha podmínkami</li>
+          <li>Rozhodování <a href="/glossary/agentni-systemy/">AI agentů</a>, kteří musí volit další akci</li>
+        </ul>
+        <p>Nevýhoda: delší odpověď znamená více <a href="/glossary/token/">tokenů</a>, tedy vyšší cenu a delší latenci.</p>
+    en:
+      title: "Chain of Thought (CoT)"
+      description: "What is Chain of Thought? A prompting technique that makes an LLM reason step by step, improving accuracy on complex tasks."
+      short_definition: "A prompting technique that makes an LLM reason step by step, improving accuracy on complex tasks."
+      text: |
+        <h2>What is Chain of Thought?</h2>
+        <p><strong>Chain of Thought</strong> (CoT) is a <a href="/en/glossary/prompt/">prompting</a> technique in which you explicitly ask the model to lay out its reasoning step by step. Instead of a one-sentence answer, the <a href="/en/glossary/llm/">LLM</a> first writes out intermediate thoughts and only then reaches the final result. On logical, math, and multi-step tasks this noticeably improves accuracy.</p>
+        <h3>How to use CoT</h3>
+        <ul>
+          <li><strong>Zero-shot CoT:</strong> Simply add a phrase like "Think step by step" or "First break down the problem, then answer" to the prompt</li>
+          <li><strong>Few-shot CoT:</strong> Include several examples in the prompt that contain step-by-step solutions (builds on <a href="/en/glossary/zero-shot/">few-shot prompting</a>)</li>
+          <li><strong>Reasoning models:</strong> Modern models (e.g., o1 or Claude with extended thinking) have CoT built in and reason on their own</li>
+        </ul>
+        <h3>When CoT helps</h3>
+        <ul>
+          <li>Math and logic problems</li>
+          <li>Analysis of contracts and documents with many conditions</li>
+          <li>Decision-making in <a href="/en/glossary/agentni-systemy/">AI agents</a> that have to pick the next action</li>
+        </ul>
+        <p>Downside: a longer answer means more <a href="/en/glossary/token/">tokens</a> and therefore higher cost and latency.</p>
+
+- page_id: streaming-response
+  type: glossary
+  slug: streaming-response
+  term: Streaming response
+  categories: [llm, web]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: stream
+  lang:
+    cs:
+      title: "Streaming response (streamování odpovědi)"
+      description: "Co je streaming response? Postupné odesílání odpovědi LLM po jednotlivých tokenech, díky kterému uživatel vidí text okamžitě místo čekání na celý výstup."
+      short_definition: "Postupné odesílání odpovědi LLM po jednotlivých tokenech, díky kterému uživatel vidí text okamžitě."
+      text: |
+        <h2>Co je streaming response?</h2>
+        <p><strong>Streaming response</strong> (streamování) je způsob, jakým <a href="/glossary/llm/">LLM</a> vrací odpověď - ne naráz jako jeden blok, ale po jednotlivých <a href="/glossary/token/">tokenech</a>, jakmile je model vygeneruje. Uživatel vidí text „psát se" v reálném čase, podobně jako v ChatGPT.</p>
+        <h3>Jak streaming funguje</h3>
+        <ol>
+          <li>Klient odešle <a href="/glossary/http-request/">HTTP požadavek</a> s parametrem <code>stream: true</code> na <a href="/glossary/api/">API</a>.</li>
+          <li>Server otevře dlouhodobé spojení (Server-Sent Events - SSE) a posílá tokeny ihned po jejich generování.</li>
+          <li>Klient přijímá kousky odpovědi a postupně je vykresluje.</li>
+        </ol>
+        <h3>Výhody streamování</h3>
+        <ul>
+          <li><strong>Vnímaná rychlost:</strong> Uživatel vidí první slova po milisekundách místo čekání několika sekund</li>
+          <li><strong>Lepší UX chatbotů:</strong> Konverzace působí přirozeněji, uživatel může odpověď přerušit</li>
+          <li><strong>Time to first token (TTFT):</strong> Důležitá metrika u <a href="/glossary/chatbot/">chatbotů</a> a asistentů</li>
+        </ul>
+        <h3>Nevýhody</h3>
+        <ul>
+          <li>Složitější zpracování na straně klienta (průběžný <a href="/glossary/parsing/">parsing</a>)</li>
+          <li>Pro <a href="/glossary/structured-output/">strukturovaný výstup</a> (např. JSON) je nutné počkat na celou odpověď nebo řešit průběžný parsing</li>
+        </ul>
+    en:
+      title: "Streaming Response"
+      description: "What is a streaming response? Sending an LLM's answer token by token so the user sees the text appear immediately instead of waiting for the full output."
+      short_definition: "Sending an LLM's answer token by token so the user sees the text appear immediately."
+      text: |
+        <h2>What is a streaming response?</h2>
+        <p>A <strong>streaming response</strong> is a way for an <a href="/en/glossary/llm/">LLM</a> to return its answer - not as one block, but token by token as the model generates each <a href="/en/glossary/token/">token</a>. The user watches the text "type itself" in real time, similar to ChatGPT.</p>
+        <h3>How streaming works</h3>
+        <ol>
+          <li>The client sends an <a href="/en/glossary/http-request/">HTTP request</a> with the <code>stream: true</code> parameter to the <a href="/en/glossary/api/">API</a>.</li>
+          <li>The server opens a long-lived connection (Server-Sent Events - SSE) and pushes tokens as soon as they are generated.</li>
+          <li>The client receives the chunks and renders them progressively.</li>
+        </ol>
+        <h3>Benefits of streaming</h3>
+        <ul>
+          <li><strong>Perceived speed:</strong> The user sees the first words in milliseconds instead of waiting several seconds</li>
+          <li><strong>Better chatbot UX:</strong> Conversations feel more natural, users can interrupt an answer</li>
+          <li><strong>Time to first token (TTFT):</strong> An important metric for <a href="/en/glossary/chatbot/">chatbots</a> and assistants</li>
+        </ul>
+        <h3>Drawbacks</h3>
+        <ul>
+          <li>More complex client-side handling (progressive <a href="/en/glossary/parsing/">parsing</a>)</li>
+          <li>For <a href="/en/glossary/structured-output/">structured output</a> (e.g., JSON), you either wait for the full response or deal with incremental parsing</li>
+        </ul>
+
+- page_id: multimodalni-model
+  type: glossary
+  slug: multimodalni-model
+  term: Multimodální model
+  categories: [llm]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: perm_media
+  lang:
+    cs:
+      title: "Multimodální model"
+      description: "Co je multimodální model? AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video."
+      short_definition: "AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video."
+      text: |
+        <h2>Co je multimodální model?</h2>
+        <p><strong>Multimodální model</strong> je typ <a href="/glossary/llm/">LLM</a>, který si kromě textu rozumí i s dalšími „modalitami" - obrázky, zvukem, videem, PDF. Neřeší každý vstup zvlášť, ale pracuje s nimi společně: dokáže např. popsat fotku, přečíst graf z obrázku nebo na základě skici vygenerovat HTML.</p>
+        <h3>Příklady multimodálních modelů</h3>
+        <ul>
+          <li><strong>GPT-4o</strong> (OpenAI) - text, obraz, zvuk, video</li>
+          <li><strong>Claude 3.5 Sonnet</strong> (Anthropic) - text a obraz (včetně PDF a grafů)</li>
+          <li><strong>Gemini 1.5 Pro</strong> (Google) - text, obraz, zvuk, video, kód</li>
+        </ul>
+        <h3>Typické use casy</h3>
+        <ul>
+          <li>Extrakce dat z naskenovaných faktur a smluv (alternativa k OCR + <a href="/glossary/parsing/">parsing</a>)</li>
+          <li>Popis produktových fotografií pro e-shop</li>
+          <li>Kontrola kvality - foto výrobku + textový popis závady</li>
+          <li>Přepis a shrnutí audio záznamů schůzek</li>
+        </ul>
+        <h3>Co si ohlídat</h3>
+        <ul>
+          <li>Obrázky spotřebovávají výrazně více <a href="/glossary/token/">tokenů</a> než text - hlídejte cenu</li>
+          <li><a href="/glossary/context-window/">Kontextové okno</a> platí i pro obrazové vstupy</li>
+          <li>Kvalita rozpoznání klesá u malého písma nebo nekvalitních skenů</li>
+        </ul>
+    en:
+      title: "Multimodal Model"
+      description: "What is a multimodal model? An AI model that processes multiple input types at once - text, images, audio, and video."
+      short_definition: "An AI model that processes multiple input types at once - text, images, audio, and video."
+      text: |
+        <h2>What is a multimodal model?</h2>
+        <p>A <strong>multimodal model</strong> is a type of <a href="/en/glossary/llm/">LLM</a> that understands more than just text - it handles other "modalities" such as images, audio, video, and PDFs. It does not treat each input in isolation but combines them: it can describe a photo, read a chart from an image, or turn a hand-drawn sketch into HTML.</p>
+        <h3>Examples of multimodal models</h3>
+        <ul>
+          <li><strong>GPT-4o</strong> (OpenAI) - text, image, audio, video</li>
+          <li><strong>Claude 3.5 Sonnet</strong> (Anthropic) - text and images (including PDFs and charts)</li>
+          <li><strong>Gemini 1.5 Pro</strong> (Google) - text, image, audio, video, code</li>
+        </ul>
+        <h3>Typical use cases</h3>
+        <ul>
+          <li>Extracting data from scanned invoices and contracts (alternative to OCR + <a href="/en/glossary/parsing/">parsing</a>)</li>
+          <li>Describing product photos for an e-shop</li>
+          <li>Quality control - product photo + text description of the defect</li>
+          <li>Transcribing and summarizing meeting audio</li>
+        </ul>
+        <h3>What to watch out for</h3>
+        <ul>
+          <li>Images consume significantly more <a href="/en/glossary/token/">tokens</a> than text - watch the cost</li>
+          <li>The <a href="/en/glossary/context-window/">context window</a> applies to image inputs too</li>
+          <li>Recognition quality drops on small print or low-quality scans</li>
+        </ul>
+
+- page_id: function-calling
+  type: glossary
+  slug: function-calling
+  term: Function calling
+  categories: [llm, automation]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: function
+  lang:
+    cs:
+      title: "Function calling (Tool use)"
+      description: "Co je function calling? Schopnost LLM modelu volat externí funkce a nástroje - základ moderních AI agentů a chatbotů se skutečnými akcemi."
+      short_definition: "Schopnost LLM modelu volat externí funkce a nástroje - základ AI agentů a chatbotů se skutečnými akcemi."
+      text: |
+        <h2>Co je function calling?</h2>
+        <p><strong>Function calling</strong> (někdy zvané <em>tool use</em>) je funkce moderních <a href="/glossary/llm/">LLM</a>, díky které se model nespokojí s textovou odpovědí, ale vygeneruje strukturovaný požadavek na zavolání konkrétní funkce - například „vyhledej zásilku 12345" nebo „vytvoř událost v kalendáři". Aplikace funkci provede a výsledek vrátí modelu, ten z něj sestaví finální odpověď uživateli.</p>
+        <h3>Jak function calling funguje</h3>
+        <ol>
+          <li>V promptu nebo přes <a href="/glossary/api/">API</a> modelu předáte definice funkcí (jméno, popis, parametry ve formátu <a href="/glossary/json/">JSON</a> schema).</li>
+          <li>Model se při odpovědi rozhodne, zda funkci potřebuje - pokud ano, vrátí <a href="/glossary/structured-output/">strukturovaný výstup</a> s názvem funkce a argumenty.</li>
+          <li>Vaše aplikace funkci zavolá (např. <a href="/glossary/http-request/">HTTP požadavek</a> na interní API) a výsledek pošle zpět modelu.</li>
+          <li>Model zapracuje výsledek a vygeneruje finální odpověď v přirozeném jazyce.</li>
+        </ol>
+        <h3>K čemu se function calling hodí</h3>
+        <ul>
+          <li>Základ <a href="/glossary/agentni-systemy/">AI agentů</a> - model se sám rozhoduje, které nástroje zavolat</li>
+          <li>Napojení <a href="/glossary/chatbot/">chatbota</a> na CRM, fakturační systém nebo databázi</li>
+          <li>Alternativa k <a href="/glossary/mcp/">MCP</a> - MCP function calling standardizuje napříč modely</li>
+          <li>Spolehlivé vyplnění formulářů a strukturovaných dat z volného textu</li>
+        </ul>
+    en:
+      title: "Function Calling (Tool Use)"
+      description: "What is function calling? The ability of an LLM to call external functions and tools - the foundation of modern AI agents and chatbots that take real actions."
+      short_definition: "The ability of an LLM to call external functions and tools - the foundation of AI agents and chatbots that take real actions."
+      text: |
+        <h2>What is function calling?</h2>
+        <p><strong>Function calling</strong> (sometimes called <em>tool use</em>) is a capability of modern <a href="/en/glossary/llm/">LLMs</a> in which the model does not stop at a text reply but instead generates a structured request to invoke a specific function - for example, "look up shipment 12345" or "create a calendar event." The application executes the function and returns the result to the model, which then produces the final answer for the user.</p>
+        <h3>How function calling works</h3>
+        <ol>
+          <li>Via a prompt or the model's <a href="/en/glossary/api/">API</a> you pass function definitions (name, description, parameters as a <a href="/en/glossary/json/">JSON</a> schema).</li>
+          <li>In its response the model decides whether it needs a function - if so, it returns a <a href="/en/glossary/structured-output/">structured output</a> with the function name and arguments.</li>
+          <li>Your application calls the function (e.g., an <a href="/en/glossary/http-request/">HTTP request</a> to an internal API) and sends the result back to the model.</li>
+          <li>The model incorporates the result and produces a final natural-language answer.</li>
+        </ol>
+        <h3>What function calling is useful for</h3>
+        <ul>
+          <li>The foundation of <a href="/en/glossary/agentni-systemy/">AI agents</a> - the model itself decides which tools to call</li>
+          <li>Connecting a <a href="/en/glossary/chatbot/">chatbot</a> to a CRM, billing system, or database</li>
+          <li>Alternative to <a href="/en/glossary/mcp/">MCP</a> - MCP standardizes function calling across models</li>
+          <li>Reliable extraction of structured data and form fields from free text</li>
+        </ul>
+
+- page_id: structured-output
+  type: glossary
+  slug: structured-output
+  term: Structured output
+  categories: [llm, data]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: data_array
+  lang:
+    cs:
+      title: "Structured output (strukturovaný výstup)"
+      description: "Co je structured output? Režim, ve kterém LLM vrací odpověď v předem daném formátu (nejčastěji JSON), zaručeně validní a připravený pro další zpracování."
+      short_definition: "Režim, ve kterém LLM vrací odpověď v předem daném formátu (typicky JSON), zaručeně validní a připravený pro další zpracování."
+      text: |
+        <h2>Co je structured output?</h2>
+        <p><strong>Structured output</strong> (strukturovaný výstup) je funkce <a href="/glossary/llm/">LLM</a>, při které model místo volného textu vrací odpověď v pevně daném formátu - typicky <a href="/glossary/json/">JSON</a> podle zadaného schématu. Model má zaručeno, že výstup bude syntakticky validní, takže ho lze okamžitě předat dalšímu kroku <a href="/glossary/workflow/">workflow</a> bez rizika chyby <a href="/glossary/parsing/">parsingu</a>.</p>
+        <h3>Jak structured output aktivovat</h3>
+        <ul>
+          <li><strong>JSON mode:</strong> Jednoduchý přepínač v <a href="/glossary/api/">API</a>, model vrátí validní JSON (bez garance konkrétních polí)</li>
+          <li><strong>JSON schema:</strong> Předáte schéma s požadovanými poli a typy - model výstup přesně dodrží</li>
+          <li><strong>Tool/function schema:</strong> U <a href="/glossary/function-calling/">function calling</a> je strukturovaný výstup de facto povinný</li>
+        </ul>
+        <h3>Typické use casy</h3>
+        <ul>
+          <li>Extrakce dat z e-mailů nebo dokumentů (jméno, IČO, částka, datum)</li>
+          <li>Klasifikace ticketů: <code>{"kategorie": "fakturace", "priorita": "vysoká"}</code></li>
+          <li>Výstupy <a href="/glossary/chatbot/">chatbotů</a> pro strojové zpracování</li>
+          <li>Kroky <a href="/glossary/agentni-systemy/">AI agentů</a> - další akce jsou strukturovaný záznam</li>
+        </ul>
+        <h3>Doporučení</h3>
+        <ul>
+          <li>Při structured output nastavte <a href="/glossary/temperature/">temperature</a> blízko 0 pro konzistenci</li>
+          <li>Definujte schéma co nejužší - nepovinná pole zvyšují variabilitu</li>
+          <li>Vždy validujte schéma i na své straně, ne vše modely dodrží 100 %</li>
+        </ul>
+    en:
+      title: "Structured Output"
+      description: "What is structured output? A mode where an LLM returns its answer in a predefined format (usually JSON), guaranteed to be valid and ready for downstream processing."
+      short_definition: "A mode where an LLM returns its answer in a predefined format (usually JSON), guaranteed to be valid and ready for downstream processing."
+      text: |
+        <h2>What is structured output?</h2>
+        <p><strong>Structured output</strong> is an <a href="/en/glossary/llm/">LLM</a> feature in which the model returns its answer in a strict format instead of free text - typically <a href="/en/glossary/json/">JSON</a> conforming to a supplied schema. The model is guaranteed to produce syntactically valid output, so it can be fed directly into the next step of a <a href="/en/glossary/workflow/">workflow</a> without risking <a href="/en/glossary/parsing/">parsing</a> errors.</p>
+        <h3>How to enable structured output</h3>
+        <ul>
+          <li><strong>JSON mode:</strong> A simple toggle in the <a href="/en/glossary/api/">API</a>, the model returns valid JSON (but no guarantee about specific fields)</li>
+          <li><strong>JSON schema:</strong> You pass a schema with required fields and types - the model follows it exactly</li>
+          <li><strong>Tool/function schema:</strong> With <a href="/en/glossary/function-calling/">function calling</a>, structured output is effectively mandatory</li>
+        </ul>
+        <h3>Typical use cases</h3>
+        <ul>
+          <li>Data extraction from emails or documents (name, ID, amount, date)</li>
+          <li>Ticket classification: <code>{"category": "billing", "priority": "high"}</code></li>
+          <li><a href="/en/glossary/chatbot/">Chatbot</a> outputs for machine processing</li>
+          <li>Steps of <a href="/en/glossary/agentni-systemy/">AI agents</a> - each next action is a structured record</li>
+        </ul>
+        <h3>Recommendations</h3>
+        <ul>
+          <li>For structured output set <a href="/en/glossary/temperature/">temperature</a> close to 0 for consistency</li>
+          <li>Define the schema as tightly as possible - optional fields increase variability</li>
+          <li>Always validate the schema on your side too, not all models comply 100%</li>
+        </ul>
+
+- page_id: bias
+  type: glossary
+  slug: bias
+  term: Bias (v AI)
+  categories: [llm, security]
+  date: 2026-04-24 +02:00
+  published: true
+  icon: balance
+  lang:
+    cs:
+      title: "Bias v AI (předpojatost)"
+      description: "Co je bias v AI? Systematické zkreslení modelu, které vzniká v trénovacích datech a projevuje se jako nespravedlivé nebo chybné výstupy."
+      short_definition: "Systematické zkreslení AI modelu, které vzniká z trénovacích dat a vede k nespravedlivým nebo chybným výstupům."
+      text: |
+        <h2>Co je bias v AI?</h2>
+        <p><strong>Bias</strong> (česky <em>předpojatost</em> nebo <em>zkreslení</em>) je systematická chyba v chování AI modelu. Model neodpovídá neutrálně, ale s tendencí určitým směrem - například preferuje určité demografické skupiny, přebírá společenské stereotypy nebo má politicky zabarvené názory. Bias vzniká převážně v trénovacích datech a je dědičný - <a href="/glossary/llm/">LLM</a> se učí na textech od lidí, tedy včetně jejich předsudků.</p>
+        <h3>Typy bias</h3>
+        <ul>
+          <li><strong>Data bias:</strong> Trénovací data nereprezentují realitu proporčně (např. více mužských než ženských postav v IT)</li>
+          <li><strong>Selection bias:</strong> Výběr dat je zkreslený - např. internet obsahuje převážně anglický obsah</li>
+          <li><strong>Confirmation bias:</strong> Model posiluje převládající názory, protože se v datech objevují nejčastěji</li>
+          <li><strong>Labeling bias:</strong> Anotátoři při labelování promítnou do dat své vlastní předsudky</li>
+        </ul>
+        <h3>Jak bias omezit</h3>
+        <ul>
+          <li>Pečlivá příprava a diverzifikace trénovacích dat</li>
+          <li><strong>RLHF</strong> (Reinforcement Learning from Human Feedback) a bezpečnostní ladění</li>
+          <li><a href="/glossary/guardrails/">Guardrails</a> a výstupní filtry pro citlivé oblasti</li>
+          <li>Pravidelné audity odpovědí - testy na známých benchmarcích biasu</li>
+          <li>Jasné instrukce v <a href="/glossary/system-prompt/">systémovém promptu</a>, kdy se model má zdržet názoru</li>
+          <li>Úprava modelu přes <a href="/glossary/fine-tuning/">fine-tuning</a> na vyváženějších datech</li>
+        </ul>
+        <p>Bias úzce souvisí s <a href="/glossary/hallucination/">halucinacemi</a> - obojí jsou důvody, proč u klíčových rozhodnutí ponechat člověka v procesu.</p>
+    en:
+      title: "Bias (in AI)"
+      description: "What is bias in AI? A systematic skew of a model that originates in training data and leads to unfair or incorrect outputs."
+      short_definition: "A systematic skew of an AI model originating in training data that leads to unfair or incorrect outputs."
+      text: |
+        <h2>What is bias in AI?</h2>
+        <p><strong>Bias</strong> is a systematic error in an AI model's behavior. The model does not answer neutrally but leans in a particular direction - for example it favors certain demographic groups, reproduces social stereotypes, or carries political coloring. Bias is inherited mostly from training data: an <a href="/en/glossary/llm/">LLM</a> learns from human-written text, including human prejudices.</p>
+        <h3>Types of bias</h3>
+        <ul>
+          <li><strong>Data bias:</strong> Training data does not proportionally represent reality (e.g. more male than female software developers)</li>
+          <li><strong>Selection bias:</strong> Data selection is skewed - e.g. the internet is mostly English-language content</li>
+          <li><strong>Confirmation bias:</strong> The model reinforces prevailing opinions because they appear most often in the data</li>
+          <li><strong>Labeling bias:</strong> Annotators inject their own prejudices when labeling data</li>
+        </ul>
+        <h3>How to mitigate bias</h3>
+        <ul>
+          <li>Careful preparation and diversification of training data</li>
+          <li><strong>RLHF</strong> (Reinforcement Learning from Human Feedback) and safety tuning</li>
+          <li><a href="/en/glossary/guardrails/">Guardrails</a> and output filters for sensitive domains</li>
+          <li>Regular output audits - tests against known bias benchmarks</li>
+          <li>Clear instructions in the <a href="/en/glossary/system-prompt/">system prompt</a> telling the model when to withhold an opinion</li>
+          <li>Adjusting the model via <a href="/en/glossary/fine-tuning/">fine-tuning</a> on more balanced data</li>
+        </ul>
+        <p>Bias is closely related to <a href="/en/glossary/hallucination/">hallucinations</a> - both are reasons to keep a human in the loop for important decisions.</p>
