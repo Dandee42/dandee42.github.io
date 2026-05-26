@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-    Vektorová databáze (Vector database) &middot; Daniel Hladík
+    Vektor (v kontextu AI) &middot; Daniel Hladík
     
   </title>
   
@@ -21,16 +21,16 @@
 
 <!-- Cannonical url START -->
 
-<link rel="canonical" href="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+<link rel="canonical" href="https://daniel-hladik.cz/glossary/vector/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
   
-  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/glossary/vector/">
 
   
-  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/vektorova-databaze/">
+  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/vector/">
 
 <!-- Alternate Href lang END -->
 
@@ -43,19 +43,19 @@
   
   
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="Vektorová databáze (Vector database) · Daniel Hladík">
+  <meta property="og:title" content="Vektor (v kontextu AI) · Daniel Hladík">
   <meta name="author" content="Daniel Hladík">
   <meta property="og:locale" content="cs_CZ">
-  <meta name="description" content="Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.">
-  <meta property="og:description" content="Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.">
-  <meta property="og:url" content="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+  <meta name="description" content="Co je vektor v AI? Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.">
+  <meta property="og:description" content="Co je vektor v AI? Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.">
+  <meta property="og:url" content="https://daniel-hladik.cz/glossary/vector/">
   <meta property="og:site_name" content="Daniel Hladík">
   <meta property="og:image" content="https://daniel-hladik.czassets/files/photo.png">
   <meta property="twitter:image" content="https://daniel-hladik.czassets/files/photo.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Vektorová databáze (Vector database) · Daniel Hladík">
-  <meta name="twitter:description" content="Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.">
+  <meta property="twitter:title" content="Vektor (v kontextu AI) · Daniel Hladík">
+  <meta name="twitter:description" content="Co je vektor v AI? Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.">
 
   <!-- JSON-LD STRUCTURED DATA START -->
   
@@ -65,9 +65,9 @@
   {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
-    "name": "Vektorová databáze (Vector database)",
-    "description": "Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.",
-    "url": "https://daniel-hladik.cz/glossary/vektorova-databaze/",
+    "name": "Vektor (v kontextu AI)",
+    "description": "Co je vektor v AI? Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.",
+    "url": "https://daniel-hladik.cz/glossary/vector/",
     "inLanguage": "cs_CZ",
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
@@ -87,7 +87,7 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://daniel-hladik.cz/" },
       { "@type": "ListItem", "position": 2, "name": "AI Slovník", "item": "https://daniel-hladik.cz/glossary/" },
-      { "@type": "ListItem", "position": 3, "name": "Vektorová databáze (Vector database)" }
+      { "@type": "ListItem", "position": 3, "name": "Vektor (v kontextu AI)" }
     ]
   }
   </script>
@@ -343,24 +343,17 @@
 
 <p class="blog-back"><a href="/glossary/">← Všechny pojmy</a></p>
 
-<h1>Vektorová databáze (Vector database)</h1>
-<p>Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.</p>
+<h1>Vektor (v kontextu AI)</h1>
+<p>Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.</p>
 
-<h2>Co je vektorová databáze?</h2>
-<p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong><a href="/glossary/vektor/">vektorů</a></strong> - číselných reprezentací textu vytvořených <a href="/glossary/embedding-model/">embedding modelem</a>. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
-<h3>Jak vektorová databáze funguje v RAG</h3>
-<ol>
-  <li><strong>Indexace:</strong> Dokumenty se rozdělí na <a href="/glossary/chunking/">chunky</a>, převedou na vektory a uloží do databáze.</li>
-  <li><strong>Dotaz:</strong> Uživatelova otázka se také převede na vektor.</li>
-  <li><strong>Vyhledávání:</strong> Databáze najde vektory (chunky), které jsou nejblíže vektoru otázky.</li>
-  <li><strong>Výsledek:</strong> Nejrelevantnější chunky se předají <a href="/glossary/llm/">LLM</a> pro generování odpovědi.</li>
-</ol>
-<h3>Populární vektorové databáze</h3>
+<h2>Co je vektor v kontextu AI?</h2>
+<p><strong>Vektor</strong> je v kontextu AI číselné vyjádření významu slova, věty nebo celého dokumentu. Protože počítače nerozumí textu tak jako lidé, používají k porovnávání informací dlouhé seznamy čísel (souřadnice).</p>
+<p>Tyto souřadnice určují přesnou polohu dané informace v pomyslném prostoru znalostí. Pokud mají dva texty podobný význam, leží jejich vektory v databázi blízko sebe.</p>
+<h3>Proč jsou vektory důležité</h3>
 <ul>
-  <li><strong>Pinecone</strong> - cloudová, spravovaná služba</li>
-  <li><strong>Qdrant</strong> - open-source, možnost self-hosted</li>
-  <li><strong>Weaviate</strong> - open-source s hybridním vyhledáváním</li>
-  <li><strong>Chroma</strong> - lehká, ideální pro lokální vývoj</li>
+  <li>Umožňují <a href="/glossary/semantic-search/">sémantické vyhledávání</a> - hledání podle významu, ne jen podle klíčových slov</li>
+  <li>Jsou základem <a href="/glossary/rag/">RAG systémů</a> a <a href="/glossary/vector-database/">vektorových databází</a></li>
+  <li>Vytvářejí se pomocí <a href="/glossary/embedding-model/">embedding modelů</a></li>
 </ul>
 
 
@@ -386,8 +379,8 @@
         <input type="hidden" name="from_name" value="daniel-hladik.cz" />
         <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-        <input type="hidden" name="title" value="Vektorová databáze (Vector database)">
-        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+        <input type="hidden" name="title" value="Vektor (v kontextu AI)">
+        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/vector/">
         <input type="hidden" name="lang" value="cs">
 
         <div class="form-group-container">
@@ -484,14 +477,14 @@
     
     
         
-<a class="lang-link" href="/en/glossary/vektorova-databaze/" aria-label="English">English</a>
+<a class="lang-link" href="/en/glossary/vector/" aria-label="English">English</a>
         
     
 
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-24T08:41:28+00:00">2026</time>
+  <small>&copy; <time datetime="2026-05-26T20:48:27+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

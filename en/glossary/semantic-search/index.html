@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-    Vector (in AI context) &middot; Daniel Hladik
+    Semantic Search &middot; Daniel Hladik
     
   </title>
   
@@ -21,16 +21,16 @@
 
 <!-- Cannonical url START -->
 
-<link rel="canonical" href="https://daniel-hladik.cz/en/glossary/vektor/">
+<link rel="canonical" href="https://daniel-hladik.cz/en/glossary/semantic-search/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
   
-  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/glossary/vektor/">
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/glossary/semantic-search/">
 
   
-  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/vektor/">
+  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/semantic-search/">
 
 <!-- Alternate Href lang END -->
 
@@ -43,19 +43,19 @@
   
   
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="Vector (in AI context) · Daniel Hladik">
+  <meta property="og:title" content="Semantic Search · Daniel Hladik">
   <meta name="author" content="Daniel Hladik">
   <meta property="og:locale" content="en_US">
-  <meta name="description" content="What is a vector in AI? A numerical representation of text meaning that allows machines to compare information by its sense.">
-  <meta property="og:description" content="What is a vector in AI? A numerical representation of text meaning that allows machines to compare information by its sense.">
-  <meta property="og:url" content="https://daniel-hladik.cz/en/glossary/vektor/">
+  <meta name="description" content="What is semantic search? Searching by the meaning of text rather than by exact keyword match. The foundation of modern RAG systems.">
+  <meta property="og:description" content="What is semantic search? Searching by the meaning of text rather than by exact keyword match. The foundation of modern RAG systems.">
+  <meta property="og:url" content="https://daniel-hladik.cz/en/glossary/semantic-search/">
   <meta property="og:site_name" content="Daniel Hladik">
   <meta property="og:image" content="https://daniel-hladik.czassets/files/photo.png">
   <meta property="twitter:image" content="https://daniel-hladik.czassets/files/photo.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Vector (in AI context) · Daniel Hladik">
-  <meta name="twitter:description" content="What is a vector in AI? A numerical representation of text meaning that allows machines to compare information by its sense.">
+  <meta property="twitter:title" content="Semantic Search · Daniel Hladik">
+  <meta name="twitter:description" content="What is semantic search? Searching by the meaning of text rather than by exact keyword match. The foundation of modern RAG systems.">
 
   <!-- JSON-LD STRUCTURED DATA START -->
   
@@ -65,9 +65,9 @@
   {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
-    "name": "Vector (in AI context)",
-    "description": "What is a vector in AI? A numerical representation of text meaning that allows machines to compare information by its sense.",
-    "url": "https://daniel-hladik.cz/en/glossary/vektor/",
+    "name": "Semantic Search",
+    "description": "What is semantic search? Searching by the meaning of text rather than by exact keyword match. The foundation of modern RAG systems.",
+    "url": "https://daniel-hladik.cz/en/glossary/semantic-search/",
     "inLanguage": "en_US",
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
@@ -87,7 +87,7 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://daniel-hladik.cz/en/" },
       { "@type": "ListItem", "position": 2, "name": "AI Glossary", "item": "https://daniel-hladik.cz/en/glossary/" },
-      { "@type": "ListItem", "position": 3, "name": "Vector (in AI context)" }
+      { "@type": "ListItem", "position": 3, "name": "Semantic Search" }
     ]
   }
   </script>
@@ -343,18 +343,26 @@
 
 <p class="blog-back"><a href="/en/glossary/">← All terms</a></p>
 
-<h1>Vector (in AI context)</h1>
-<p>A numerical representation of text meaning that allows machines to compare information by its sense.</p>
+<h1>Semantic Search</h1>
+<p>Searching by the meaning of text rather than by exact keyword match. The foundation of modern RAG systems.</p>
 
-<h2>What is a vector in AI?</h2>
-<p>A <strong>vector</strong> in the context of AI is a numerical representation of the meaning of a word, sentence, or entire document. Because computers do not understand text the way humans do, they use long lists of numbers (coordinates) to compare information.</p>
-<p>These coordinates determine the exact position of the information in a hypothetical knowledge space. If two texts have similar meanings, their vectors lie close to each other in the database.</p>
-<h3>Why vectors matter</h3>
+<h2>What is semantic search?</h2>
+<p><strong>Semantic search</strong> finds text by meaning, not by exact word match. For the query "How do I cancel my subscription?" it can also return a document that describes "terminating a payment plan." Classic full-text search would miss this document because it contains neither "cancel" nor "subscription."</p>
+<h3>How semantic search works</h3>
+<ol>
+  <li>Documents are converted into <a href="/en/glossary/vector/">vectors</a> by an <a href="/en/glossary/embedding-model/">embedding model</a> and stored in a <a href="/en/glossary/vector-database/">vector database</a>.</li>
+  <li>The user's query is turned into a vector by the same model.</li>
+  <li>The database finds vectors that sit closest to the query vector (e.g. using cosine similarity) - i.e. documents with similar meaning.</li>
+</ol>
+<h3>Why semantics wins</h3>
 <ul>
-  <li>Enable <a href="/en/glossary/semanticke-vyhledavani/">semantic search</a> - searching by meaning, not just keywords</li>
-  <li>Are the foundation of <a href="/en/glossary/rag/">RAG systems</a> and <a href="/en/glossary/vektorova-databaze/">vector databases</a></li>
-  <li>Created using <a href="/en/glossary/embedding-model/">embedding models</a></li>
+  <li>Handles synonyms, translations, and varied phrasing</li>
+  <li>Understands context - "apple" the fruit vs. Apple the brand</li>
+  <li>Works even for natural-language questions</li>
+  <li>It is the backbone of <a href="/en/glossary/rag/">RAG systems</a> and modern <a href="/en/glossary/chatbot/">chatbots</a></li>
 </ul>
+<h3>Limits of semantic search</h3>
+<p>For short, exact queries (catalog numbers, SKUs, names), pure semantic search may fail. The fix is <a href="/en/glossary/hybrid-search/">hybrid search</a> - combining semantics with keyword matching, often paired with <a href="/en/glossary/re-ranking/">re-ranking</a>.</p>
 
 
   </main>
@@ -379,8 +387,8 @@
         <input type="hidden" name="from_name" value="daniel-hladik.cz" />
         <input type="hidden" name="redirect" value="https://daniel-hladik.cz/en/form-success/" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-        <input type="hidden" name="title" value="Vector (in AI context)">
-        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/vektor/">
+        <input type="hidden" name="title" value="Semantic Search">
+        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/semantic-search/">
         <input type="hidden" name="lang" value="en">
 
         <div class="form-group-container">
@@ -475,7 +483,7 @@
     
     
         
-<a class="lang-link" href=" /glossary/vektor/" aria-label="Čeština">Čeština</a>
+<a class="lang-link" href=" /glossary/semantic-search/" aria-label="Čeština">Čeština</a>
     
 
     
@@ -487,7 +495,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-24T08:41:29+00:00">2026</time>
+  <small>&copy; <time datetime="2026-05-26T20:48:28+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
