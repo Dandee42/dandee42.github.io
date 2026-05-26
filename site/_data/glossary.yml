@@ -17,7 +17,7 @@
         <h3>Jak RAG funguje</h3>
         <p>Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. RAG tento problém řeší tak, že modelu v momentě dotazu předloží relevantní informace z vaší databáze.</p>
         <ol>
-          <li><strong>Příprava dat:</strong> Dokumenty se rozsekají na menší části a pomocí <a href="/glossary/embedding-model/">embedding modelu</a> se převedou na <a href="/glossary/vektor/">vektory</a>, které se uloží do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</li>
+          <li><strong>Příprava dat:</strong> Dokumenty se rozsekají na menší části a pomocí <a href="/glossary/embedding-model/">embedding modelu</a> se převedou na <a href="/glossary/vector/">vektory</a>, které se uloží do <a href="/glossary/vector-database/">vektorové databáze</a>.</li>
           <li><strong>Zpracování dotazu:</strong> Když se uživatel zeptá, systém převede dotaz na vektor a najde nejbližší kontextovou shodu v databázi.</li>
           <li><strong>Generování odpovědi:</strong> Nalezené odstavce se přibalí k otázce a pošlou <a href="/glossary/llm/">LLM modelu</a>, který z nich sestaví finální odpověď.</li>
         </ol>
@@ -37,7 +37,7 @@
         <h3>How RAG works</h3>
         <p>A regular AI model is like a highly educated person who stopped following the news after a certain date and knows nothing about your specific business. RAG solves this problem by presenting relevant information from your database to the model at query time.</p>
         <ol>
-          <li><strong>Data preparation:</strong> Documents are split into smaller <a href="/en/glossary/chunking/">chunks</a> and converted into vectors using an <a href="/en/glossary/embedding-model/">embedding model</a>, then stored in a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</li>
+          <li><strong>Data preparation:</strong> Documents are split into smaller <a href="/en/glossary/chunking/">chunks</a> and converted into vectors using an <a href="/en/glossary/embedding-model/">embedding model</a>, then stored in a <a href="/en/glossary/vector-database/">vector database</a>.</li>
           <li><strong>Query processing:</strong> When a user asks a question, the system converts the query into a vector and finds the closest contextual match in the database.</li>
           <li><strong>Answer generation:</strong> The found paragraphs are bundled with the question and sent to the <a href="/en/glossary/llm/">LLM</a>, which composes the final answer.</li>
         </ol>
@@ -111,7 +111,7 @@
           <li><strong>Vizuální editor:</strong> Drag-and-drop rozhraní pro tvorbu automatizací</li>
           <li><strong>400+ integrací:</strong> Propojení s CRM, e-mailem, databázemi, <a href="/glossary/api/">API</a> a dalšími službami</li>
           <li><strong>Self-hosted:</strong> Možnost provozovat na vlastním serveru pro plnou kontrolu nad daty</li>
-          <li><strong>AI integrace:</strong> Nativní podpora pro <a href="/glossary/llm/">LLM modely</a>, <a href="/glossary/rag/">RAG</a> a <a href="/glossary/agentni-systemy/">AI agenty</a></li>
+          <li><strong>AI integrace:</strong> Nativní podpora pro <a href="/glossary/llm/">LLM modely</a>, <a href="/glossary/rag/">RAG</a> a <a href="/glossary/agentic-systems/">AI agenty</a></li>
         </ul>
         <h3>Kdy se n8n hodí</h3>
         <ul>
@@ -132,7 +132,7 @@
           <li><strong>Visual editor:</strong> Drag-and-drop interface for building automations</li>
           <li><strong>400+ integrations:</strong> Connect with CRM, email, databases, <a href="/en/glossary/api/">APIs</a>, and more</li>
           <li><strong>Self-hosted:</strong> Run on your own server for full data control</li>
-          <li><strong>AI integration:</strong> Native support for <a href="/en/glossary/llm/">LLM models</a>, <a href="/en/glossary/rag/">RAG</a>, and <a href="/en/glossary/agentni-systemy/">AI agents</a></li>
+          <li><strong>AI integration:</strong> Native support for <a href="/en/glossary/llm/">LLM models</a>, <a href="/en/glossary/rag/">RAG</a>, and <a href="/en/glossary/agentic-systems/">AI agents</a></li>
         </ul>
         <h3>When n8n is the right fit</h3>
         <ul>
@@ -162,9 +162,9 @@
         <p>Moderní embedding modely pracují v prostoru o stovkách až tisících dimenzí. Například model od OpenAI (text-embedding-3-small) používá 1 536 dimenzí. Každý úsek textu tak dostane 1 536 souřadnic, které přesně definují jeho význam.</p>
         <h3>Využití v <a href="/glossary/rag/">RAG</a></h3>
         <ul>
-          <li>Při ukládání se dokumenty převádějí na <a href="/glossary/vektor/">vektory</a> do <a href="/glossary/vektorova-databaze/">vektorové databáze</a></li>
+          <li>Při ukládání se dokumenty převádějí na <a href="/glossary/vector/">vektory</a> do <a href="/glossary/vector-database/">vektorové databáze</a></li>
           <li>Při dotazu se otázka uživatele převede na vektor pro porovnání s uloženými daty</li>
-          <li>Umožňuje <a href="/glossary/semanticke-vyhledavani/">sémantické vyhledávání</a> - hledání podle významu, ne jen klíčových slov</li>
+          <li>Umožňuje <a href="/glossary/semantic-search/">sémantické vyhledávání</a> - hledání podle významu, ne jen klíčových slov</li>
         </ul>
     en:
       title: "Embedding Model"
@@ -172,20 +172,20 @@
       short_definition: "A specialized type of AI that converts text into numerical vectors for efficient semantic search."
       text: |
         <h2>What is an embedding model?</h2>
-        <p>An <strong>embedding model</strong> is a specialized type of artificial intelligence that serves as a translator between human speech and the world of numbers. Its task is to take a piece of text (a word, sentence, or paragraph) and calculate its <a href="/en/glossary/vektor/">vector</a> - a numerical representation of meaning.</p>
+        <p>An <strong>embedding model</strong> is a specialized type of artificial intelligence that serves as a translator between human speech and the world of numbers. Its task is to take a piece of text (a word, sentence, or paragraph) and calculate its <a href="/en/glossary/vector/">vector</a> - a numerical representation of meaning.</p>
         <h3>How embedding models work</h3>
         <p>Modern embedding models operate in a space with hundreds to thousands of dimensions. For example, the OpenAI model (text-embedding-3-small) uses 1,536 dimensions. Each section of text is assigned 1,536 coordinates that precisely define its meaning.</p>
         <h3>Use in <a href="/en/glossary/rag/">RAG</a></h3>
         <ul>
-          <li>When storing, documents are converted to vectors in a <a href="/en/glossary/vektorova-databaze/">vector database</a></li>
+          <li>When storing, documents are converted to vectors in a <a href="/en/glossary/vector-database/">vector database</a></li>
           <li>When querying, the user's question is converted to a vector for comparison with stored data</li>
-          <li>Enables <a href="/en/glossary/semanticke-vyhledavani/">semantic search</a> - searching by meaning, not just keywords</li>
+          <li>Enables <a href="/en/glossary/semantic-search/">semantic search</a> - searching by meaning, not just keywords</li>
         </ul>
 
-- page_id: vektor
+- page_id: vector
   type: glossary
-  slug: vektor
-  term: Vektor
+  slug: vector
+  term: Vector
   categories: [rag]
   date: 2026-04-21 +02:00
   published: true
@@ -201,8 +201,8 @@
         <p>Tyto souřadnice určují přesnou polohu dané informace v pomyslném prostoru znalostí. Pokud mají dva texty podobný význam, leží jejich vektory v databázi blízko sebe.</p>
         <h3>Proč jsou vektory důležité</h3>
         <ul>
-          <li>Umožňují <a href="/glossary/semanticke-vyhledavani/">sémantické vyhledávání</a> - hledání podle významu, ne jen podle klíčových slov</li>
-          <li>Jsou základem <a href="/glossary/rag/">RAG systémů</a> a <a href="/glossary/vektorova-databaze/">vektorových databází</a></li>
+          <li>Umožňují <a href="/glossary/semantic-search/">sémantické vyhledávání</a> - hledání podle významu, ne jen podle klíčových slov</li>
+          <li>Jsou základem <a href="/glossary/rag/">RAG systémů</a> a <a href="/glossary/vector-database/">vektorových databází</a></li>
           <li>Vytvářejí se pomocí <a href="/glossary/embedding-model/">embedding modelů</a></li>
         </ul>
     en:
@@ -215,8 +215,8 @@
         <p>These coordinates determine the exact position of the information in a hypothetical knowledge space. If two texts have similar meanings, their vectors lie close to each other in the database.</p>
         <h3>Why vectors matter</h3>
         <ul>
-          <li>Enable <a href="/en/glossary/semanticke-vyhledavani/">semantic search</a> - searching by meaning, not just keywords</li>
-          <li>Are the foundation of <a href="/en/glossary/rag/">RAG systems</a> and <a href="/en/glossary/vektorova-databaze/">vector databases</a></li>
+          <li>Enable <a href="/en/glossary/semantic-search/">semantic search</a> - searching by meaning, not just keywords</li>
+          <li>Are the foundation of <a href="/en/glossary/rag/">RAG systems</a> and <a href="/en/glossary/vector-database/">vector databases</a></li>
           <li>Created using <a href="/en/glossary/embedding-model/">embedding models</a></li>
         </ul>
 
@@ -275,7 +275,7 @@
         <h3>Klíčové vlastnosti</h3>
         <ul>
           <li><strong>Řetězení:</strong> Propojování více LLM volání a nástrojů do komplexních <a href="/glossary/workflow/">workflow</a></li>
-          <li><strong>Agenti:</strong> Vytváření autonomních <a href="/glossary/agentni-systemy/">AI agentů</a>, kteří se rozhodují na základě kontextu</li>
+          <li><strong>Agenti:</strong> Vytváření autonomních <a href="/glossary/agentic-systems/">AI agentů</a>, kteří se rozhodují na základě kontextu</li>
           <li><strong>Integrace:</strong> Podpora stovek nástrojů, databází a <a href="/glossary/api/">API</a></li>
           <li><strong>Paměť:</strong> Správa konverzační historie a kontextu</li>
         </ul>
@@ -289,15 +289,15 @@
         <h3>Key features</h3>
         <ul>
           <li><strong>Chaining:</strong> Connecting multiple LLM calls and tools into complex <a href="/en/glossary/workflow/">workflows</a></li>
-          <li><strong>Agents:</strong> Creating autonomous <a href="/en/glossary/agentni-systemy/">AI agents</a> that make decisions based on context</li>
+          <li><strong>Agents:</strong> Creating autonomous <a href="/en/glossary/agentic-systems/">AI agents</a> that make decisions based on context</li>
           <li><strong>Integrations:</strong> Support for hundreds of tools, databases, and <a href="/en/glossary/api/">APIs</a></li>
           <li><strong>Memory:</strong> Managing conversation history and context</li>
         </ul>
 
-- page_id: agentni-systemy
+- page_id: agentic-systems
   type: glossary
-  slug: agentni-systemy
-  term: Agentní systémy
+  slug: agentic-systems
+  term: Agentic systems
   categories: [llm, automation]
   date: 2026-04-21 +02:00
   published: true
@@ -357,7 +357,7 @@
         <h2>Co je sitemap?</h2>
         <p><strong>Sitemap</strong> (mapa stránek) je soubor, nejčastěji ve formátu XML, který obsahuje seznam všech důležitých URL adres vašeho webu. Slouží primárně pro roboty vyhledávačů (Google, Seznam), kterým pomáhá efektivněji procházet a indexovat web.</p>
         <h3>Využití v automatizaci</h3>
-        <p>V kontextu <a href="/glossary/rag/">RAG systémů</a> slouží sitemap jako výchozí bod pro automatické stahování obsahu webu do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</p>
+        <p>V kontextu <a href="/glossary/rag/">RAG systémů</a> slouží sitemap jako výchozí bod pro automatické stahování obsahu webu do <a href="/glossary/vector-database/">vektorové databáze</a>.</p>
     en:
       title: "Sitemap"
       description: "What is a sitemap? A file containing a list of all important URLs on a website that helps search engines index pages more effectively."
@@ -366,7 +366,7 @@
         <h2>What is a sitemap?</h2>
         <p>A <strong>sitemap</strong> is a file, usually in XML format, that contains a list of all the important URLs on your website. It is primarily used by search engine robots (e.g., Google) to crawl and index your website more effectively.</p>
         <h3>Use in automation</h3>
-        <p>In the context of <a href="/en/glossary/rag/">RAG systems</a>, a sitemap serves as a starting point for automatically downloading website content into a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</p>
+        <p>In the context of <a href="/en/glossary/rag/">RAG systems</a>, a sitemap serves as a starting point for automatically downloading website content into a <a href="/en/glossary/vector-database/">vector database</a>.</p>
 
 - page_id: json
   type: glossary
@@ -573,7 +573,7 @@
       short_definition: "Druhý filtr v RAG systému, který zpřesňuje výběr nejrelevantnějších výsledků z vektorového vyhledávání."
       text: |
         <h2>Co je re-ranking?</h2>
-        <p><strong>Re-ranking</strong> je proces, který zvyšuje přesnost odpovědí v <a href="/glossary/rag/">RAG systému</a>. <a href="/glossary/semanticke-vyhledavani/">Vektorové vyhledávání</a> je jako knihovník, který přinese 10 knih na dané téma. Re-ranking je ten moment, kdy si těch 10 knih prolistujete a vyberete jen ty 3, které nejpravděpodobněji obsahují odpověď.</p>
+        <p><strong>Re-ranking</strong> je proces, který zvyšuje přesnost odpovědí v <a href="/glossary/rag/">RAG systému</a>. <a href="/glossary/semantic-search/">Vektorové vyhledávání</a> je jako knihovník, který přinese 10 knih na dané téma. Re-ranking je ten moment, kdy si těch 10 knih prolistujete a vyberete jen ty 3, které nejpravděpodobněji obsahují odpověď.</p>
         <p>Je to druhý, přísnější filtr před předáním dat <a href="/glossary/llm/">LLM modelu</a>. Zvláště užitečný při velkém objemu vstupních dat.</p>
     en:
       title: "Re-ranking"
@@ -581,7 +581,7 @@
       short_definition: "A second filter in a RAG system that refines the selection of the most relevant results from vector search."
       text: |
         <h2>What is re-ranking?</h2>
-        <p><strong>Re-ranking</strong> is a process that increases the accuracy of responses in a <a href="/en/glossary/rag/">RAG system</a>. <a href="/en/glossary/semanticke-vyhledavani/">Vector search</a> is like a librarian who brings 10 books on a given topic. Re-ranking is the moment when you flip through those 10 books and select only the 3 most likely to contain the answer.</p>
+        <p><strong>Re-ranking</strong> is a process that increases the accuracy of responses in a <a href="/en/glossary/rag/">RAG system</a>. <a href="/en/glossary/semantic-search/">Vector search</a> is like a librarian who brings 10 books on a given topic. Re-ranking is the moment when you flip through those 10 books and select only the 3 most likely to contain the answer.</p>
         <p>It is a second, stricter filter before passing data to the <a href="/en/glossary/llm/">LLM model</a>. Especially useful with large volumes of input data.</p>
 
 - page_id: prompt-injection
@@ -624,10 +624,10 @@
           <li>Limit the agent's access to only necessary tools and data</li>
         </ul>
 
-- page_id: lokalni-model
+- page_id: local-model
   type: glossary
-  slug: lokalni-model
-  term: Lokální model
+  slug: local-model
+  term: Local model
   categories: [llm]
   date: 2026-04-21 +02:00
   published: true
@@ -966,10 +966,10 @@
           <li><strong>Lower <a href="/en/glossary/temperature/">temperature</a>:</strong> Less creativity means less fabrication</li>
         </ul>
 
-- page_id: vektorova-databaze
+- page_id: vector-database
   type: glossary
-  slug: vektorova-databaze
-  term: Vektorová databáze
+  slug: vector-database
+  term: Vector database
   categories: [rag]
   date: 2026-04-22 +02:00
   published: true
@@ -981,7 +981,7 @@
       short_definition: "Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu."
       text: |
         <h2>Co je vektorová databáze?</h2>
-        <p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong><a href="/glossary/vektor/">vektorů</a></strong> - číselných reprezentací textu vytvořených <a href="/glossary/embedding-model/">embedding modelem</a>. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
+        <p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong><a href="/glossary/vector/">vektorů</a></strong> - číselných reprezentací textu vytvořených <a href="/glossary/embedding-model/">embedding modelem</a>. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
         <h3>Jak vektorová databáze funguje v RAG</h3>
         <ol>
           <li><strong>Indexace:</strong> Dokumenty se rozdělí na <a href="/glossary/chunking/">chunky</a>, převedou na vektory a uloží do databáze.</li>
@@ -1002,7 +1002,7 @@
       short_definition: "A specialized database optimized for storing and semantically searching vectors - numerical representations of text."
       text: |
         <h2>What is a vector database?</h2>
-        <p>A <strong>vector database</strong> is a special type of database designed for storing and quickly searching <strong><a href="/en/glossary/vektor/">vectors</a></strong> - numerical representations of text created by an <a href="/en/glossary/embedding-model/">embedding model</a>. Unlike traditional databases that search for exact word matches, a vector database searches for <em>similarity of meaning</em>.</p>
+        <p>A <strong>vector database</strong> is a special type of database designed for storing and quickly searching <strong><a href="/en/glossary/vector/">vectors</a></strong> - numerical representations of text created by an <a href="/en/glossary/embedding-model/">embedding model</a>. Unlike traditional databases that search for exact word matches, a vector database searches for <em>similarity of meaning</em>.</p>
         <h3>How vector databases work in RAG</h3>
         <ol>
           <li><strong>Indexing:</strong> Documents are split into <a href="/en/glossary/chunking/">chunks</a>, converted to vectors, and stored in the database.</li>
@@ -1187,7 +1187,7 @@
         <h3>Příklad endpointů OpenAI API</h3>
         <ul>
           <li><code>/v1/chat/completions</code> - generování textu pomocí chat modelu</li>
-          <li><code>/v1/embeddings</code> - převod textu na <a href="/glossary/vektor/">vektory</a></li>
+          <li><code>/v1/embeddings</code> - převod textu na <a href="/glossary/vector/">vektory</a></li>
           <li><code>/v1/models</code> - seznam dostupných modelů</li>
         </ul>
         <h3>Jak endpoint použít</h3>
@@ -1202,7 +1202,7 @@
         <h3>Example endpoints from the OpenAI API</h3>
         <ul>
           <li><code>/v1/chat/completions</code> - generating text using a chat model</li>
-          <li><code>/v1/embeddings</code> - converting text to <a href="/en/glossary/vektor/">vectors</a></li>
+          <li><code>/v1/embeddings</code> - converting text to <a href="/en/glossary/vector/">vectors</a></li>
           <li><code>/v1/models</code> - listing available models</li>
         </ul>
         <h3>How to use an endpoint</h3>
@@ -1231,7 +1231,7 @@
           <li>Data se uloží do strukturovaného formátu (<a href="/glossary/json/">JSON</a>, CSV) nebo přímo do databáze.</li>
         </ol>
         <h3>Využití v RAG systémech</h3>
-        <p>Scraping je klíčový nástroj při budování <a href="/glossary/rag/">RAG</a> znalostní báze - umožňuje automaticky stáhnout obsah celého webu (s využitím <a href="/glossary/sitemap/">sitemapy</a>), převést ho na <a href="/glossary/markdown/">Markdown</a> a uložit do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</p>
+        <p>Scraping je klíčový nástroj při budování <a href="/glossary/rag/">RAG</a> znalostní báze - umožňuje automaticky stáhnout obsah celého webu (s využitím <a href="/glossary/sitemap/">sitemapy</a>), převést ho na <a href="/glossary/markdown/">Markdown</a> a uložit do <a href="/glossary/vector-database/">vektorové databáze</a>.</p>
         <h3>Právní aspekty</h3>
         <p>Před scrapingem vždy ověřte podmínky použití webu a soubor <code>robots.txt</code>. Některé weby scraping výslovně zakazují.</p>
     en:
@@ -1248,7 +1248,7 @@
           <li>The data is saved to a structured format (<a href="/en/glossary/json/">JSON</a>, CSV) or directly into a database.</li>
         </ol>
         <h3>Use in RAG systems</h3>
-        <p>Scraping is a key tool when building a <a href="/en/glossary/rag/">RAG</a> knowledge base - it allows you to automatically download the content of an entire website (using a <a href="/en/glossary/sitemap/">sitemap</a>), convert it to <a href="/en/glossary/markdown/">Markdown</a>, and store it in a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</p>
+        <p>Scraping is a key tool when building a <a href="/en/glossary/rag/">RAG</a> knowledge base - it allows you to automatically download the content of an entire website (using a <a href="/en/glossary/sitemap/">sitemap</a>), convert it to <a href="/en/glossary/markdown/">Markdown</a>, and store it in a <a href="/en/glossary/vector-database/">vector database</a>.</p>
         <h3>Legal considerations</h3>
         <p>Always check the website's terms of service and <code>robots.txt</code> file before scraping. Some websites explicitly prohibit it.</p>
 
@@ -1554,7 +1554,7 @@
         <ul>
           <li>Každý nástroj stačí implementovat jednou pro všechny kompatibilní AI modely</li>
           <li>Otevřený standard - MCP servery tvoří komunita a přibývají každý týden</li>
-          <li>Základ moderních <a href="/glossary/agentni-systemy/">AI agentů</a>, kteří potřebují přístup k reálným datům a akcím</li>
+          <li>Základ moderních <a href="/glossary/agentic-systems/">AI agentů</a>, kteří potřebují přístup k reálným datům a akcím</li>
         </ul>
         <h3>Příklady MCP serverů</h3>
         <ul>
@@ -1579,7 +1579,7 @@
         <ul>
           <li>Each tool only needs to be implemented once for all compatible AI models</li>
           <li>Open standard - MCP servers are built by the community and new ones appear every week</li>
-          <li>The foundation of modern <a href="/en/glossary/agentni-systemy/">AI agents</a> that need access to real data and actions</li>
+          <li>The foundation of modern <a href="/en/glossary/agentic-systems/">AI agents</a> that need access to real data and actions</li>
         </ul>
         <h3>Examples of MCP servers</h3>
         <ul>
@@ -1669,7 +1669,7 @@
           <li><strong>Rule-based:</strong> Odpovídá podle předem nastavených pravidel a scénářů (rozhodovací strom). Jednoduchý, ale omezený.</li>
           <li><strong>AI chatbot (LLM):</strong> Pohání ho jazykový model. Rozumí kontextu a volně odpovídá, ale bez RAG může <a href="/glossary/hallucination/">halucinovat</a>.</li>
           <li><strong>RAG chatbot:</strong> Kombinuje LLM s vaší dokumentací. Odpovědi jsou založené na reálných datech.</li>
-          <li><strong>Agentní chatbot:</strong> Postavený na <a href="/glossary/agentni-systemy/">agentních systémech</a> - neodpovídá pouze, ale i jedná (objedná, zapíše, zavolá API).</li>
+          <li><strong>Agentní chatbot:</strong> Postavený na <a href="/glossary/agentic-systems/">agentních systémech</a> - neodpovídá pouze, ale i jedná (objedná, zapíše, zavolá API).</li>
         </ul>
         <h3>Klíčové komponenty AI chatbota</h3>
         <ul>
@@ -1690,7 +1690,7 @@
           <li><strong>Rule-based:</strong> Responds using preset rules and scripts (decision tree). Simple, but limited.</li>
           <li><strong>AI chatbot (LLM):</strong> Powered by a language model. Understands context and replies freely, but may <a href="/en/glossary/hallucination/">hallucinate</a> without RAG.</li>
           <li><strong>RAG chatbot:</strong> Combines an LLM with your documentation. Answers are grounded in real data.</li>
-          <li><strong>Agent chatbot:</strong> Built on <a href="/en/glossary/agentni-systemy/">agent systems</a> - not only replies but also acts (places an order, writes to a database, calls an API).</li>
+          <li><strong>Agent chatbot:</strong> Built on <a href="/en/glossary/agentic-systems/">agent systems</a> - not only replies but also acts (places an order, writes to a database, calls an API).</li>
         </ul>
         <h3>Key components of an AI chatbot</h3>
         <ul>
@@ -1727,7 +1727,7 @@
         <ul>
           <li>Příchozí e-mail → extrakce dat přes <a href="/glossary/llm/">LLM</a> → zápis do CRM → notifikace</li>
           <li>Formulář na webu → <a href="/glossary/webhook/">webhook</a> → odpověď od <a href="/glossary/chatbot/">chatbota</a> → e-mail klientovi</li>
-          <li>Plánované stažení obsahu webu → <a href="/glossary/chunking/">chunking</a> → uložení do <a href="/glossary/vektorova-databaze/">vektorové databáze</a></li>
+          <li>Plánované stažení obsahu webu → <a href="/glossary/chunking/">chunking</a> → uložení do <a href="/glossary/vector-database/">vektorové databáze</a></li>
         </ul>
     en:
       title: "Workflow (automated process)"
@@ -1747,13 +1747,13 @@
         <ul>
           <li>Incoming email → data extraction via <a href="/en/glossary/llm/">LLM</a> → save to CRM → notification</li>
           <li>Website form → <a href="/en/glossary/webhook/">webhook</a> → reply from a <a href="/en/glossary/chatbot/">chatbot</a> → email to the customer</li>
-          <li>Scheduled website crawl → <a href="/en/glossary/chunking/">chunking</a> → save to a <a href="/en/glossary/vektorova-databaze/">vector database</a></li>
+          <li>Scheduled website crawl → <a href="/en/glossary/chunking/">chunking</a> → save to a <a href="/en/glossary/vector-database/">vector database</a></li>
         </ul>
 
-- page_id: semanticke-vyhledavani
+- page_id: semantic-search
   type: glossary
-  slug: semanticke-vyhledavani
-  term: Sémantické vyhledávání
+  slug: semantic-search
+  term: Semantic search
   categories: [rag]
   date: 2026-04-24 +02:00
   published: true
@@ -1768,7 +1768,7 @@
         <p><strong>Sémantické vyhledávání</strong> (anglicky <em>semantic search</em>) hledá v textu podle významu, ne podle přesné shody slov. Na dotaz „Jak zrušit předplatné?" najde i dokument, který popisuje „ukončení platebního plánu". Klasické fulltextové vyhledávání by tento dokument minulo, protože neobsahuje slovo „zrušit" ani „předplatné".</p>
         <h3>Jak sémantické vyhledávání funguje</h3>
         <ol>
-          <li>Dokumenty se pomocí <a href="/glossary/embedding-model/">embedding modelu</a> převedou na <a href="/glossary/vektor/">vektory</a> a uloží do <a href="/glossary/vektorova-databaze/">vektorové databáze</a>.</li>
+          <li>Dokumenty se pomocí <a href="/glossary/embedding-model/">embedding modelu</a> převedou na <a href="/glossary/vector/">vektory</a> a uloží do <a href="/glossary/vector-database/">vektorové databáze</a>.</li>
           <li>Dotaz uživatele se převede na vektor stejným modelem.</li>
           <li>Databáze najde vektory s nejbližší polohou (např. pomocí kosinové podobnosti) - tedy dokumenty s podobným významem.</li>
         </ol>
@@ -1790,7 +1790,7 @@
         <p><strong>Semantic search</strong> finds text by meaning, not by exact word match. For the query "How do I cancel my subscription?" it can also return a document that describes "terminating a payment plan." Classic full-text search would miss this document because it contains neither "cancel" nor "subscription."</p>
         <h3>How semantic search works</h3>
         <ol>
-          <li>Documents are converted into <a href="/en/glossary/vektor/">vectors</a> by an <a href="/en/glossary/embedding-model/">embedding model</a> and stored in a <a href="/en/glossary/vektorova-databaze/">vector database</a>.</li>
+          <li>Documents are converted into <a href="/en/glossary/vector/">vectors</a> by an <a href="/en/glossary/embedding-model/">embedding model</a> and stored in a <a href="/en/glossary/vector-database/">vector database</a>.</li>
           <li>The user's query is turned into a vector by the same model.</li>
           <li>The database finds vectors that sit closest to the query vector (e.g. using cosine similarity) - i.e. documents with similar meaning.</li>
         </ol>
@@ -1819,10 +1819,10 @@
       short_definition: "Kombinace sémantického (vektorového) a klasického klíčového vyhledávání pro vyšší přesnost výsledků v RAG."
       text: |
         <h2>Co je hybrid search?</h2>
-        <p><strong>Hybrid search</strong> (hybridní vyhledávání) kombinuje dva typy vyhledávání: <a href="/glossary/semanticke-vyhledavani/">sémantické (vektorové)</a> a klasické klíčové (fulltextové, např. BM25). Cílem je získat nejlepší výsledky z obou přístupů - sémantika chápe význam, klíčové hledání přesně zasáhne konkrétní slova, čísla nebo názvy.</p>
+        <p><strong>Hybrid search</strong> (hybridní vyhledávání) kombinuje dva typy vyhledávání: <a href="/glossary/semantic-search/">sémantické (vektorové)</a> a klasické klíčové (fulltextové, např. BM25). Cílem je získat nejlepší výsledky z obou přístupů - sémantika chápe význam, klíčové hledání přesně zasáhne konkrétní slova, čísla nebo názvy.</p>
         <h3>Proč hybrid search</h3>
         <ul>
-          <li><strong>Sémantika:</strong> Najde relevantní dokumenty, i když dotaz používá jiná slova než text ve <a href="/glossary/vektorova-databaze/">vektorové databázi</a></li>
+          <li><strong>Sémantika:</strong> Najde relevantní dokumenty, i když dotaz používá jiná slova než text ve <a href="/glossary/vector-database/">vektorové databázi</a></li>
           <li><strong>Klíčová slova:</strong> Přesně zasáhnou unikátní identifikátory - čísla produktů, jména, zkratky, kódy</li>
           <li><strong>Kombinace skóre:</strong> Oba přístupy se sloučí (např. pomocí Reciprocal Rank Fusion) a výsledky se seřadí podle celkové relevance</li>
         </ul>
@@ -1839,10 +1839,10 @@
       short_definition: "A combination of semantic (vector) and traditional keyword search that improves accuracy in RAG systems."
       text: |
         <h2>What is hybrid search?</h2>
-        <p><strong>Hybrid search</strong> combines two types of search: <a href="/en/glossary/semanticke-vyhledavani/">semantic (vector)</a> search and classic keyword (full-text, e.g., BM25) search. The goal is to combine the strengths of both approaches - semantics understands meaning, while keyword search precisely matches specific words, numbers, or names.</p>
+        <p><strong>Hybrid search</strong> combines two types of search: <a href="/en/glossary/semantic-search/">semantic (vector)</a> search and classic keyword (full-text, e.g., BM25) search. The goal is to combine the strengths of both approaches - semantics understands meaning, while keyword search precisely matches specific words, numbers, or names.</p>
         <h3>Why hybrid search</h3>
         <ul>
-          <li><strong>Semantics:</strong> Finds relevant documents even when the query uses different words than the text in the <a href="/en/glossary/vektorova-databaze/">vector database</a></li>
+          <li><strong>Semantics:</strong> Finds relevant documents even when the query uses different words than the text in the <a href="/en/glossary/vector-database/">vector database</a></li>
           <li><strong>Keywords:</strong> Precisely hit unique identifiers - product numbers, names, abbreviations, codes</li>
           <li><strong>Score fusion:</strong> Both approaches are merged (e.g., using Reciprocal Rank Fusion) and results are ranked by combined relevance</li>
         </ul>
@@ -1880,7 +1880,7 @@
         <ul>
           <li>Matematické a logické úlohy</li>
           <li>Analýza smluv a dokumentů s mnoha podmínkami</li>
-          <li>Rozhodování <a href="/glossary/agentni-systemy/">AI agentů</a>, kteří musí volit další akci</li>
+          <li>Rozhodování <a href="/glossary/agentic-systems/">AI agentů</a>, kteří musí volit další akci</li>
         </ul>
         <p>Nevýhoda: delší odpověď znamená více <a href="/glossary/token/">tokenů</a>, tedy vyšší cenu a delší latenci.</p>
     en:
@@ -1900,7 +1900,7 @@
         <ul>
           <li>Math and logic problems</li>
           <li>Analysis of contracts and documents with many conditions</li>
-          <li>Decision-making in <a href="/en/glossary/agentni-systemy/">AI agents</a> that have to pick the next action</li>
+          <li>Decision-making in <a href="/en/glossary/agentic-systems/">AI agents</a> that have to pick the next action</li>
         </ul>
         <p>Downside: a longer answer means more <a href="/en/glossary/token/">tokens</a> and therefore higher cost and latency.</p>
 
@@ -1962,10 +1962,10 @@
           <li>For <a href="/en/glossary/structured-output/">structured output</a> (e.g., JSON), you either wait for the full response or deal with incremental parsing</li>
         </ul>
 
-- page_id: multimodalni-model
+- page_id: multimodal-model
   type: glossary
-  slug: multimodalni-model
-  term: Multimodální model
+  slug: multimodal-model
+  term: Multimodal model
   categories: [llm]
   date: 2026-04-24 +02:00
   published: true
@@ -2049,7 +2049,7 @@
         </ol>
         <h3>K čemu se function calling hodí</h3>
         <ul>
-          <li>Základ <a href="/glossary/agentni-systemy/">AI agentů</a> - model se sám rozhoduje, které nástroje zavolat</li>
+          <li>Základ <a href="/glossary/agentic-systems/">AI agentů</a> - model se sám rozhoduje, které nástroje zavolat</li>
           <li>Napojení <a href="/glossary/chatbot/">chatbota</a> na CRM, fakturační systém nebo databázi</li>
           <li>Alternativa k <a href="/glossary/mcp/">MCP</a> - MCP function calling standardizuje napříč modely</li>
           <li>Spolehlivé vyplnění formulářů a strukturovaných dat z volného textu</li>
@@ -2070,7 +2070,7 @@
         </ol>
         <h3>What function calling is useful for</h3>
         <ul>
-          <li>The foundation of <a href="/en/glossary/agentni-systemy/">AI agents</a> - the model itself decides which tools to call</li>
+          <li>The foundation of <a href="/en/glossary/agentic-systems/">AI agents</a> - the model itself decides which tools to call</li>
           <li>Connecting a <a href="/en/glossary/chatbot/">chatbot</a> to a CRM, billing system, or database</li>
           <li>Alternative to <a href="/en/glossary/mcp/">MCP</a> - MCP standardizes function calling across models</li>
           <li>Reliable extraction of structured data and form fields from free text</li>
@@ -2103,7 +2103,7 @@
           <li>Extrakce dat z e-mailů nebo dokumentů (jméno, IČO, částka, datum)</li>
           <li>Klasifikace ticketů: <code>{"kategorie": "fakturace", "priorita": "vysoká"}</code></li>
           <li>Výstupy <a href="/glossary/chatbot/">chatbotů</a> pro strojové zpracování</li>
-          <li>Kroky <a href="/glossary/agentni-systemy/">AI agentů</a> - další akce jsou strukturovaný záznam</li>
+          <li>Kroky <a href="/glossary/agentic-systems/">AI agentů</a> - další akce jsou strukturovaný záznam</li>
         </ul>
         <h3>Doporučení</h3>
         <ul>
@@ -2129,7 +2129,7 @@
           <li>Data extraction from emails or documents (name, ID, amount, date)</li>
           <li>Ticket classification: <code>{"category": "billing", "priority": "high"}</code></li>
           <li><a href="/en/glossary/chatbot/">Chatbot</a> outputs for machine processing</li>
-          <li>Steps of <a href="/en/glossary/agentni-systemy/">AI agents</a> - each next action is a structured record</li>
+          <li>Steps of <a href="/en/glossary/agentic-systems/">AI agents</a> - each next action is a structured record</li>
         </ul>
         <h3>Recommendations</h3>
         <ul>
