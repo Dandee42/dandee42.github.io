@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     
-    Vektorová databáze (Vector database) &middot; Daniel Hladík
+    Multimodální model &middot; Daniel Hladík
     
   </title>
   
@@ -21,16 +21,16 @@
 
 <!-- Cannonical url START -->
 
-<link rel="canonical" href="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+<link rel="canonical" href="https://daniel-hladik.cz/glossary/multimodal-model/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
   
-  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/glossary/multimodal-model/">
 
   
-  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/vektorova-databaze/">
+  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/multimodal-model/">
 
 <!-- Alternate Href lang END -->
 
@@ -43,19 +43,19 @@
   
   
   <!-- OG / Twitter meta tagy -->
-  <meta property="og:title" content="Vektorová databáze (Vector database) · Daniel Hladík">
+  <meta property="og:title" content="Multimodální model · Daniel Hladík">
   <meta name="author" content="Daniel Hladík">
   <meta property="og:locale" content="cs_CZ">
-  <meta name="description" content="Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.">
-  <meta property="og:description" content="Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.">
-  <meta property="og:url" content="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+  <meta name="description" content="Co je multimodální model? AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video.">
+  <meta property="og:description" content="Co je multimodální model? AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video.">
+  <meta property="og:url" content="https://daniel-hladik.cz/glossary/multimodal-model/">
   <meta property="og:site_name" content="Daniel Hladík">
   <meta property="og:image" content="https://daniel-hladik.czassets/files/photo.png">
   <meta property="twitter:image" content="https://daniel-hladik.czassets/files/photo.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Vektorová databáze (Vector database) · Daniel Hladík">
-  <meta name="twitter:description" content="Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.">
+  <meta property="twitter:title" content="Multimodální model · Daniel Hladík">
+  <meta name="twitter:description" content="Co je multimodální model? AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video.">
 
   <!-- JSON-LD STRUCTURED DATA START -->
   
@@ -65,9 +65,9 @@
   {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
-    "name": "Vektorová databáze (Vector database)",
-    "description": "Co je vektorová databáze? Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.",
-    "url": "https://daniel-hladik.cz/glossary/vektorova-databaze/",
+    "name": "Multimodální model",
+    "description": "Co je multimodální model? AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video.",
+    "url": "https://daniel-hladik.cz/glossary/multimodal-model/",
     "inLanguage": "cs_CZ",
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
@@ -87,7 +87,7 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://daniel-hladik.cz/" },
       { "@type": "ListItem", "position": 2, "name": "AI Slovník", "item": "https://daniel-hladik.cz/glossary/" },
-      { "@type": "ListItem", "position": 3, "name": "Vektorová databáze (Vector database)" }
+      { "@type": "ListItem", "position": 3, "name": "Multimodální model" }
     ]
   }
   </script>
@@ -343,24 +343,29 @@
 
 <p class="blog-back"><a href="/glossary/">← Všechny pojmy</a></p>
 
-<h1>Vektorová databáze (Vector database)</h1>
-<p>Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.</p>
+<h1>Multimodální model</h1>
+<p>AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video.</p>
 
-<h2>Co je vektorová databáze?</h2>
-<p><strong>Vektorová databáze</strong> je speciální typ databáze navržený pro ukládání a rychlé vyhledávání <strong><a href="/glossary/vektor/">vektorů</a></strong> - číselných reprezentací textu vytvořených <a href="/glossary/embedding-model/">embedding modelem</a>. Na rozdíl od klasických databází, které hledají přesnou shodu slov, vektorová databáze hledá <em>podobnost významů</em>.</p>
-<h3>Jak vektorová databáze funguje v RAG</h3>
-<ol>
-  <li><strong>Indexace:</strong> Dokumenty se rozdělí na <a href="/glossary/chunking/">chunky</a>, převedou na vektory a uloží do databáze.</li>
-  <li><strong>Dotaz:</strong> Uživatelova otázka se také převede na vektor.</li>
-  <li><strong>Vyhledávání:</strong> Databáze najde vektory (chunky), které jsou nejblíže vektoru otázky.</li>
-  <li><strong>Výsledek:</strong> Nejrelevantnější chunky se předají <a href="/glossary/llm/">LLM</a> pro generování odpovědi.</li>
-</ol>
-<h3>Populární vektorové databáze</h3>
+<h2>Co je multimodální model?</h2>
+<p><strong>Multimodální model</strong> je typ <a href="/glossary/llm/">LLM</a>, který si kromě textu rozumí i s dalšími „modalitami" - obrázky, zvukem, videem, PDF. Neřeší každý vstup zvlášť, ale pracuje s nimi společně: dokáže např. popsat fotku, přečíst graf z obrázku nebo na základě skici vygenerovat HTML.</p>
+<h3>Příklady multimodálních modelů</h3>
 <ul>
-  <li><strong>Pinecone</strong> - cloudová, spravovaná služba</li>
-  <li><strong>Qdrant</strong> - open-source, možnost self-hosted</li>
-  <li><strong>Weaviate</strong> - open-source s hybridním vyhledáváním</li>
-  <li><strong>Chroma</strong> - lehká, ideální pro lokální vývoj</li>
+  <li><strong>GPT-4o</strong> (OpenAI) - text, obraz, zvuk, video</li>
+  <li><strong>Claude 3.5 Sonnet</strong> (Anthropic) - text a obraz (včetně PDF a grafů)</li>
+  <li><strong>Gemini 1.5 Pro</strong> (Google) - text, obraz, zvuk, video, kód</li>
+</ul>
+<h3>Typické use casy</h3>
+<ul>
+  <li>Extrakce dat z naskenovaných faktur a smluv (alternativa k OCR + <a href="/glossary/parsing/">parsing</a>)</li>
+  <li>Popis produktových fotografií pro e-shop</li>
+  <li>Kontrola kvality - foto výrobku + textový popis závady</li>
+  <li>Přepis a shrnutí audio záznamů schůzek</li>
+</ul>
+<h3>Co si ohlídat</h3>
+<ul>
+  <li>Obrázky spotřebovávají výrazně více <a href="/glossary/token/">tokenů</a> než text - hlídejte cenu</li>
+  <li><a href="/glossary/context-window/">Kontextové okno</a> platí i pro obrazové vstupy</li>
+  <li>Kvalita rozpoznání klesá u malého písma nebo nekvalitních skenů</li>
 </ul>
 
 
@@ -386,8 +391,8 @@
         <input type="hidden" name="from_name" value="daniel-hladik.cz" />
         <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-        <input type="hidden" name="title" value="Vektorová databáze (Vector database)">
-        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/vektorova-databaze/">
+        <input type="hidden" name="title" value="Multimodální model">
+        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/multimodal-model/">
         <input type="hidden" name="lang" value="cs">
 
         <div class="form-group-container">
@@ -484,14 +489,14 @@
     
     
         
-<a class="lang-link" href="/en/glossary/vektorova-databaze/" aria-label="English">English</a>
+<a class="lang-link" href="/en/glossary/multimodal-model/" aria-label="English">English</a>
         
     
 
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-04-24T08:38:44+00:00">2026</time>
+  <small>&copy; <time datetime="2026-05-26T20:46:50+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
