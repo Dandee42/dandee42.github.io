@@ -14,30 +14,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repozitáře
+      # 1. Checkout repozitáře (celá historie commitů kvůli jekyll-last-modified-at → správné lastmod/dateModified)
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
 
-      # 2. Nastavení Ruby
+      # 2. Nastavení Ruby + instalace gemů z Gemfile.lock (s cache)
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: '4.0'
+          bundler-cache: true
 
-      # 3. Instalace Bundler a gemů
-      - name: Install dependencies
-        run: |
-          gem install bundler -v 2.5.22
-          bundle install --jobs 4 --retry 3
-
-      # 4. Build Jekyll webu podle branch
+      # 3. Build Jekyll webu
       - name: Build Jekyll site
-        run: |
-          if [[ "${GITHUB_REF##*/}" == "production" ]]; then
-            bundle exec jekyll build --config _config.yml
-          else
-            bundle exec jekyll build --config _config.yml
-          fi
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+
+      # 4. Kontrola interních odkazů a obrázků (absolutní URL na vlastní doménu se kontrolují jako interní)
+      - name: Check links
+        run: >
+          bundle exec htmlproofer ./_site
+          --disable-external
+          --allow-missing-href
+          --swap-urls '^https\://daniel-hladik\.cz:'
 
       # 5a. Deploy production branch to GitHub Pages
       - name: Deploy to GitHub Pages (production)
@@ -51,7 +54,7 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
-      # 5b. Deploy develop branch to GitHub Pages
+      # 5b. Deploy develop branch to GitHub Pages (náhled: v Settings → Pages se dočasně přepne zdroj na develop-gh-pages)
       - name: Deploy to GitHub Pages (develop)
         if: github.ref == 'refs/heads/develop'
         uses: peaceiris/actions-gh-pages@v4

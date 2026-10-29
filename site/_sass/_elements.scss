@@ -807,15 +807,19 @@ a.reversefootnote {
   justify-content: center;
   padding: 0.5em 1em 0.5em 1em;
   text-align: center;
-  position: fixed;
+  position: sticky; // takes its own space above the content, stays visible while scrolling
   top: 0;
-  left: 0;
   z-index: 1000;
   width: 100%;
   font-size: 1rem;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-weight: bold;
+}
+
+// --alert-height is set by alert-banner.html / alert.js; anchor jumps stop below the banner
+html {
+  scroll-padding-top: var(--alert-height, 0px);
 }
 
 .alert-icon {

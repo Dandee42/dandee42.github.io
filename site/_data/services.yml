@@ -1,3 +1,145 @@
+- page_id: web-app-development
+  type: service
+  slug: web-app-development
+  date: 2026-10-29 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: terminal
+  related_posts:
+    - bodylog-app
+  related_use_cases:
+  lang:
+    cs:
+      title: "Tvorba webových aplikací na míru"
+      description: "Interní systémy, klientské portály a MVP na míru. Rychlý vývoj s AI, automatické testy a napojení na vaše nástroje. Prototyp za 30 000 Kč."
+      card_description: "Interní systémy, klientské portály a MVP na míru. Rychlý vývoj s AI, automatické testy a napojení na vaše nástroje."
+      lead: "Když Excel a krabicové nástroje přestanou stačit, přichází na řadu aplikace na míru."
+      text: |
+        <h2>Aplikace, které se přizpůsobí vám, ne naopak</h2>
+        <p>Firmy často vedou evidenci zakázek v Excelu, posílají si tabulky e-mailem a přepisují data mezi systémy. Krabicová řešení je zase nutí přizpůsobit procesy jejich logice. Webová aplikace na míru dělá přesně to, co potřebujete, a nic navíc.</p>
+        <h2>Co pro vás mohu postavit</h2>
+        <ul>
+          <li><strong>Interní systémy a evidence:</strong> místo sdílených tabulek přehledná aplikace pro zakázky, klienty nebo sklad, s uživatelskými právy a historií změn.</li>
+          <li><strong>Klientské portály:</strong> místo, kde vaši zákazníci najdou své objednávky, dokumenty nebo stav zakázky.</li>
+          <li><strong>Dashboardy a reporty:</strong> data z více zdrojů na jednom místě, bez ručního exportování.</li>
+          <li><strong>MVP a prototypy:</strong> první verze produktu, se kterou ověříte nápad na trhu.</li>
+          <li><strong>Rozšíření existujících systémů:</strong> doplnění funkcí tam, kde krabicové řešení končí.</li>
+        </ul>
+        <h2>Jaký je rozdíl mezi webem a webovou aplikací?</h2>
+        <p>Web vás prezentuje a návštěvník si ho přečte. Webová aplikace slouží k práci: uživatelé se přihlašují, zadávají a upravují data a aplikace s nimi dál pracuje, třeba počítá, třídí nebo posílá upozornění. Běží v prohlížeči, takže ji není potřeba instalovat a funguje na počítači i v mobilu.</p>
+        <h2>Napojení na nástroje, které už používáte</h2>
+        <p>Aplikace nemusí stát osamoceně. Díky zkušenostem s automatizací (n8n) a API ji propojím s nástroji, které už používáte, jako je fakturace, CRM, e-mail nebo tabulky, a data mezi nimi potečou automaticky. Kde to dává smysl, doplním i AI: třídění dokumentů, vytěžování dat nebo vyhledávání ve firemních dokumentech pomocí <a href="/services/rag-systems/">RAG</a>.</p>
+        <h2>Rychlý vývoj s AI, spolehlivost díky testům</h2>
+        <p>Aplikace stavím v Djangu (Python) nebo v Next.js, podle toho, co se pro váš projekt hodí víc, a při vývoji využívám AI nástroje jako Claude Code a Cursor. Rutinní část kódu díky tomu vzniká rychleji a vy dostanete funkční verzi dřív a levněji. Rychlost ale nesmí jít na úkor kvality, proto klíčové funkce pokrývám automatickými testy (Playwright), které hlídají, že aplikace funguje i po každé další úpravě.</p>
+        <h2>Jak probíhá spolupráce</h2>
+        <ol>
+          <li><strong>Úvodní konzultace zdarma:</strong> probereme, jaký problém má aplikace řešit a kdo ji bude používat.</li>
+          <li><strong>Placený prototyp za 30 000 Kč:</strong> uvidíte, jak bude aplikace fungovat, ještě než se rozhodnete pro celý projekt. Pokud budeme pokračovat, celá částka se započítá do ceny aplikace.</li>
+          <li><strong>Vývoj po částech:</strong> aplikaci stavím postupně a průběžně ji s vámi ladím.</li>
+          <li><strong>Testování a nasazení:</strong> automatické testy, spuštění do provozu a předání.</li>
+          <li><strong>Podpora a rozvoj:</strong> první měsíc podpory je v ceně, potom měsíční paušál nebo hodinová sazba.</li>
+        </ol>
+        <h2>Kolik stojí webová aplikace na míru</h2>
+        <p><strong>Prototyp za 30 000 Kč, webová aplikace od 80 000 Kč.</strong> Cena závisí na počtu funkcí, uživatelských rolí a napojení na další systémy. Po prototypu přesně víte, co dostanete a za kolik. Nejsem plátce DPH.</p>
+        <h2>Časté otázky</h2>
+        <h3>Jak dlouho vývoj trvá?</h3>
+        <p>Záleží na rozsahu. Díky vývoji s AI bývá první funkční verze hotová dřív než při klasickém vývoji. Konkrétní termín dostanete po prototypu.</p>
+        <h3>Musím mít přesné zadání?</h3>
+        <p>Ne. Stačí popsat problém, který řešíte. Zadání společně upřesníme během konzultace a prototypu.</p>
+        <h3>Napojíte aplikaci na naše systémy?</h3>
+        <p>Pokud vaše systémy mají API nebo umožňují export dat, většinou ano. Možnosti napojení prověříme už při prototypu.</p>
+        <h3>Komu patří zdrojový kód?</h3>
+        <p>Vám. Po dokončení vám předám zdrojový kód i přístupy, takže aplikaci může v budoucnu rozvíjet kdokoli.</p>
+        <h3>Kolik stojí provoz a údržba?</h3>
+        <p>Provoz zahrnuje hosting a údržbu aplikace. Péči můžete mít v měsíčním paušálu, nebo platit jen za úpravy, které si objednáte.</p>
+      contact_link: "Poptat vývoj"
+    en:
+      title: "Custom Web App Development"
+      description: "Custom internal systems, client portals and MVPs. Fast AI-assisted development, automated tests and integrations with your tools. Prototype for CZK 30,000."
+      card_description: "Custom internal systems, client portals and MVPs. Fast AI-assisted development, automated tests and integrations with your tools."
+      lead: "When spreadsheets and off-the-shelf tools stop being enough, it's time for a custom app."
+      text: |
+        <h2>Apps that adapt to you, not the other way around</h2>
+        <p>Companies often track orders in Excel, email spreadsheets back and forth and retype data between systems. Off-the-shelf software, on the other hand, forces them to adapt their processes to its logic. A custom web app does exactly what you need and nothing more.</p>
+        <h2>What I can build for you</h2>
+        <ul>
+          <li><strong>Internal systems and records:</strong> instead of shared spreadsheets, a clear app for orders, clients or stock, with user permissions and change history.</li>
+          <li><strong>Client portals:</strong> a place where your customers find their orders, documents or the status of their project.</li>
+          <li><strong>Dashboards and reports:</strong> data from multiple sources in one place, without manual exports.</li>
+          <li><strong>MVPs and prototypes:</strong> a first version of your product to test the idea on the market.</li>
+          <li><strong>Extensions to existing systems:</strong> adding features where off-the-shelf software stops.</li>
+        </ul>
+        <h2>What's the difference between a website and a web app?</h2>
+        <p>A website presents you, and visitors read it. A web app is for getting work done: users log in, enter and edit data, and the app works with it, for example by calculating, sorting or sending notifications. It runs in the browser, so there's nothing to install and it works on desktops and phones.</p>
+        <h2>Connected to the tools you already use</h2>
+        <p>An app doesn't have to stand alone. With my experience in automation (n8n) and APIs, I'll connect it to the tools you already use, such as invoicing, your CRM, email or spreadsheets, so data flows between them automatically. Where it makes sense, I'll add AI too: sorting documents, extracting data or searching company documents with <a href="/en/services/rag-systems/">RAG</a>.</p>
+        <h2>Fast AI-assisted development, reliable thanks to tests</h2>
+        <p>I build apps in Django (Python) or Next.js, depending on what suits your project better, and use AI tools such as Claude Code and Cursor during development. The routine parts of the code get written faster, so you get a working version sooner and for less. Speed must not come at the expense of quality, so I cover key features with automated tests (Playwright) that check the app still works after every change.</p>
+        <h2>How we'll work together</h2>
+        <ol>
+          <li><strong>Free initial consultation:</strong> we'll discuss what problem the app should solve and who will use it.</li>
+          <li><strong>Paid prototype for CZK 30,000:</strong> you'll see how the app will work before you commit to the whole project. If we continue, the full amount counts towards the price of the app.</li>
+          <li><strong>Development in stages:</strong> I build the app step by step and fine-tune it with you along the way.</li>
+          <li><strong>Testing and deployment:</strong> automated tests, going live and handover.</li>
+          <li><strong>Support and further development:</strong> the first month of support is included, then a monthly care plan or an hourly rate.</li>
+        </ol>
+        <h2>How much does a custom web app cost?</h2>
+        <p><strong>Prototype for CZK 30,000, web apps from CZK 80,000.</strong> The price depends on the number of features, user roles and integrations with other systems. After the prototype you'll know exactly what you'll get and for how much. I'm not registered for VAT, so no VAT is added.</p>
+        <h2>Frequently asked questions</h2>
+        <h3>How long does development take?</h3>
+        <p>It depends on the scope. Thanks to AI-assisted development, the first working version is usually ready sooner than with traditional development. You'll get a specific timeline after the prototype.</p>
+        <h3>Do I need a detailed specification?</h3>
+        <p>No. It's enough to describe the problem you're solving. We'll refine the requirements together during the consultation and the prototype.</p>
+        <h3>Can you connect the app to our systems?</h3>
+        <p>If your systems have an API or allow data export, usually yes. We'll check the integration options during the prototype.</p>
+        <h3>Who owns the source code?</h3>
+        <p>You do. When the project is finished, I'll hand over the source code and all access, so anyone can develop the app further.</p>
+        <h3>What do hosting and maintenance cost?</h3>
+        <p>Running the app includes hosting and maintenance. You can have it looked after through a monthly care plan, or pay only for the changes you order.</p>
+      contact_link: "Get a quote"
+
+- page_id: rag-systems
+  type: service
+  slug: rag-systems
+  date: 2026-02-21 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: manage_search
+  related_posts:
+    - rag-chat-web
+  related_use_cases:
+  lang:
+    cs:
+      title: "RAG systémy - AI nad vašimi daty"
+      description: "Vytvořím inteligentní vyhledávání a chatboty nad vašimi interními dokumenty, databázemi a znalostní bází."
+      lead: "Dejte svým datům hlas. Ptejte se firemní dokumentace jako člověka."
+      text: |
+        <h2>Vaše data jako nejchytřejší kolega</h2>
+        <p>RAG (Retrieval-Augmented Generation) je technika, která propojí velký jazykový model s vašimi vlastními daty. Výsledkem je AI, která odpovídá přesně a fakticky - nikoliv z obecných znalostí, ale přímo z vašich PDF, interních wiki, smluv nebo databází.</p>
+        <h3>Kdy se RAG hodí:</h3>
+        <ul>
+          <li><strong>Interní znalostní báze:</strong> Zaměstnanci se ptají systému místo procházení stohu dokumentů.</li>
+          <li><strong>Zákaznická podpora:</strong> Chatbot, který odpovídá z vašich manuálů a FAQ s přesností a zdrojem.</li>
+          <li><strong>Analýza dokumentů:</strong> Rychlé hledání v právních smlouvách, technické dokumentaci nebo výzkumných zprávách.</li>
+        </ul>
+      contact_link: "Chci AI nad svými daty"
+    en:
+      title: "RAG Systems - AI Over Your Data"
+      description: "I build intelligent search and chatbots over your internal documents, databases, and knowledge base."
+      lead: "Give your data a voice. Ask your company knowledge base like a person."
+      text: |
+        <h2>Your data as your smartest colleague</h2>
+        <p>RAG (Retrieval-Augmented Generation) connects a large language model to your own data. The result is an AI that answers accurately and factually - not from general knowledge, but directly from your PDFs, internal wikis, contracts, or databases.</p>
+        <h3>When RAG is the right fit:</h3>
+        <ul>
+          <li><strong>Internal knowledge base:</strong> Employees ask the system instead of digging through stacks of documents.</li>
+          <li><strong>Customer support:</strong> A chatbot that answers from your manuals and FAQ with accuracy and source citations.</li>
+          <li><strong>Document analysis:</strong> Fast search through legal contracts, technical documentation, or research reports.</li>
+        </ul>
+      contact_link: "I want AI over my data"
+
 - page_id: intelligent-automation
   type: service
   slug: intelligent-automation
@@ -40,6 +182,292 @@
         </ul>
       contact_link: "Let's automate"
 
+- page_id: landing-pages
+  type: service
+  slug: landing-pages
+  date: 2026-10-29 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: ads_click
+  related_posts:
+  related_use_cases:
+  lang:
+    cs:
+      title: "Tvorba landing page na míru"
+      description: "Landing page pro vaši kampaň s měřením konverzí a poptávkami rovnou do CRM. Jednostránkový web, který přivádí zákazníky. Od 7 900 Kč."
+      card_description: "Landing page pro vaši kampaň s měřením konverzí a poptávkami rovnou do CRM. Jednostránkový web, který přivádí zákazníky."
+      lead: "Jedna stránka, jeden cíl: proměnit návštěvníky z kampaně v zákazníky."
+      text: |
+        <h2>Co je landing page a kdy ji potřebujete</h2>
+        <p>Landing page (vstupní stránka) je jednostránkový web zaměřený na jediný cíl: poptávku, registraci, rezervaci nebo stažení. Na rozdíl od běžného webu nenabízí menu s desítkami odkazů, ale vede návštěvníka přímo k akci.</p>
+        <p>Landing page se hodí, když:</p>
+        <ul>
+          <li>spouštíte kampaň na Google Ads, Skliku nebo sociálních sítích,</li>
+          <li>uvádíte novou službu nebo produkt,</li>
+          <li>sbíráte registrace na akci, webinář nebo konzultaci,</li>
+          <li>chcete rychle ověřit, jestli o vaši nabídku je zájem,</li>
+          <li>vám místo velkého webu stačí jednoduchý jednostránkový web.</li>
+        </ul>
+        <h2>Landing page, kterou můžete měřit</h2>
+        <p>Z online marketingu vím, že landing page bez měření je jen hezký obrázek. Každou stránku proto připravím tak, abyste věděli, kolik vás stojí jedna poptávka:</p>
+        <ul>
+          <li>měření konverzí v Google Analytics 4,</li>
+          <li>připravenost na reklamní kampaně (UTM parametry, cíle),</li>
+          <li>rychlé načítání, protože každá sekunda navíc snižuje počet poptávek,</li>
+          <li>srozumitelná struktura: problém, řešení, důvěra a výzva k akci.</li>
+        </ul>
+        <h2>Poptávky rovnou do CRM</h2>
+        <p>Formulář na landing page napojím pomocí automatizace (n8n) tam, kde poptávky potřebujete: do CRM, tabulky nebo e-mailu. Zákazník dostane okamžitou odpověď a vy upozornění, takže žádný kontakt z placené kampaně nezapadne.</p>
+        <h2>Co dostanete</h2>
+        <ul>
+          <li>jednostránkový web na míru vaší kampani,</li>
+          <li>zobrazení na mobilu i počítači, protože velká část návštěv z reklam přichází z telefonu,</li>
+          <li>základní SEO a náhled pro sdílení na sociálních sítích,</li>
+          <li>měření konverzí,</li>
+          <li>napojení formuláře na vaše nástroje,</li>
+          <li>kontrolu, že formulář funguje, ještě než spustíte kampaň.</li>
+        </ul>
+        <h2>Jak probíhá tvorba landing page</h2>
+        <ol>
+          <li><strong>Konzultace zdarma:</strong> cíl kampaně, cílová skupina a vaše nabídka.</li>
+          <li><strong>Struktura a texty:</strong> návrh sekcí a hlavních sdělení.</li>
+          <li><strong>Vývoj a napojení:</strong> stránka, měření a formulář.</li>
+          <li><strong>Test a spuštění:</strong> kontrola na mobilu i počítači, test formuláře a spuštění.</li>
+        </ol>
+        <h2>Kolik stojí landing page</h2>
+        <p><strong>Landing page od 7 900 Kč.</strong> Cena závisí na počtu sekcí, jazykových verzích a napojení na další systémy. Po konzultaci dostanete cenovou nabídku. Nejsem plátce DPH.</p>
+        <p>První měsíc po spuštění jsou drobné úpravy v ceně. Potom si můžete vybrat měsíční paušál, nebo platit jen jednotlivé úpravy podle hodinové sazby.</p>
+        <p>Potřebujete víc než jednu stránku? Podívejte se na <a href="/services/website-development/">tvorbu webových stránek na míru</a>.</p>
+        <h2>Časté otázky</h2>
+        <h3>Jaký je rozdíl mezi landing page a webem?</h3>
+        <p>Web vás představuje jako celek a návštěvník si na něm vybírá, kam půjde dál. Landing page má jeden cíl a všechno na ní vede k jedné akci, proto u kampaní obvykle přinese víc poptávek.</p>
+        <h3>Je landing page dobrá pro SEO?</h3>
+        <p>Landing page je postavená hlavně pro kampaně. Na konkrétní dotaz se ve vyhledávání najít může, ale pro dlouhodobé SEO je lepší web s více stránkami a pravidelným obsahem.</p>
+        <h3>Jak rychle bude landing page hotová?</h3>
+        <p>Díky menšímu rozsahu je landing page nejrychlejší způsob, jak mít novou nabídku online. Konkrétní termín dostanete v nabídce po konzultaci.</p>
+        <h3>Můžu landing page později rozšířit na celý web?</h3>
+        <p>Ano. Landing page může být základem budoucího webu a další stránky k ní přidáme, až je budete potřebovat.</p>
+      contact_link: "Chci landing page"
+    en:
+      title: "Landing Page Development"
+      description: "A landing page for your campaign with conversion tracking and enquiries sent straight to your CRM. A one-page site that brings customers. From CZK 7,900."
+      card_description: "A landing page for your campaign with conversion tracking and enquiries sent straight to your CRM. A one-page site that brings customers."
+      lead: "One page, one goal: turning campaign visitors into customers."
+      text: |
+        <h2>What a landing page is and when you need one</h2>
+        <p>A landing page is a one-page website focused on a single goal: an enquiry, a sign-up, a booking or a download. Unlike a regular website, it doesn't offer a menu with dozens of links; it leads visitors straight to action.</p>
+        <p>A landing page is a good fit when you:</p>
+        <ul>
+          <li>launch a campaign on Google Ads, Sklik or social media,</li>
+          <li>introduce a new service or product,</li>
+          <li>collect sign-ups for an event, a webinar or a consultation,</li>
+          <li>want to quickly test whether there's demand for your offer,</li>
+          <li>need a simple one-page site instead of a full website.</li>
+        </ul>
+        <h2>A landing page you can measure</h2>
+        <p>My background in online marketing taught me that a landing page without tracking is just a pretty picture. I build every page so you know what each enquiry costs you:</p>
+        <ul>
+          <li>conversion tracking in Google Analytics 4,</li>
+          <li>ready for ad campaigns (UTM parameters, goals),</li>
+          <li>fast loading, because every extra second costs you enquiries,</li>
+          <li>a clear structure: problem, solution, trust and a call to action.</li>
+        </ul>
+        <h2>Enquiries straight to your CRM</h2>
+        <p>I connect the landing page form through automation (n8n) to wherever you need your enquiries: a CRM, a spreadsheet or your inbox. The customer gets an instant reply and you get a notification, so no lead from a paid campaign slips through the cracks.</p>
+        <h2>What you get</h2>
+        <ul>
+          <li>a one-page website tailored to your campaign,</li>
+          <li>a layout that works on phones and desktops, since much of ad traffic comes from phones,</li>
+          <li>SEO basics and a preview for sharing on social media,</li>
+          <li>conversion tracking,</li>
+          <li>the form connected to your tools,</li>
+          <li>a check that the form works before you launch the campaign.</li>
+        </ul>
+        <h2>How a landing page gets built</h2>
+        <ol>
+          <li><strong>Free consultation:</strong> the campaign goal, the target audience and your offer.</li>
+          <li><strong>Structure and copy:</strong> a plan for the sections and the key messages.</li>
+          <li><strong>Development and integrations:</strong> the page, tracking and the form.</li>
+          <li><strong>Testing and launch:</strong> a check on phone and desktop, a form test and the launch.</li>
+        </ol>
+        <h2>How much does a landing page cost?</h2>
+        <p><strong>Landing pages from CZK 7,900.</strong> The price depends on the number of sections, language versions and integrations with other systems. After the consultation you'll get a quote. I'm not registered for VAT, so no VAT is added.</p>
+        <p>Small edits are included for the first month after launch. After that you can choose a monthly care plan or pay only for individual changes at an hourly rate.</p>
+        <p>Need more than one page? Have a look at <a href="/en/services/website-development/">custom website development</a>.</p>
+        <h2>Frequently asked questions</h2>
+        <h3>What's the difference between a landing page and a website?</h3>
+        <p>A website presents you as a whole, and visitors choose where to go next. A landing page has a single goal and everything on it leads to one action, which is why it usually brings more enquiries from campaigns.</p>
+        <h3>Is a landing page good for SEO?</h3>
+        <p>A landing page is built mainly for campaigns. It can rank for a specific query, but for long-term SEO a website with more pages and regular content works better.</p>
+        <h3>How quickly will the landing page be ready?</h3>
+        <p>Because of its smaller scope, a landing page is the fastest way to get a new offer online. You'll get a specific timeline in the quote after the consultation.</p>
+        <h3>Can I extend the landing page into a full website later?</h3>
+        <p>Yes. A landing page can be the foundation of a future website, and we'll add more pages when you need them.</p>
+      contact_link: "I want a landing page"
+
+- page_id: website-development
+  type: service
+  slug: website-development
+  date: 2026-10-29 +01:00
+  published: true
+  show_in_list: true
+  image:
+  icon: web
+  related_posts:
+  related_use_cases:
+  lang:
+    cs:
+      title: "Tvorba webových stránek na míru"
+      description: "Prezentační weby na míru, které se rychle načtou, dobře se najdou a poptávky vám samy doručí do e-mailu nebo CRM. Od 24 900 Kč."
+      card_description: "Prezentační weby na míru, které se rychle načtou, dobře se najdou a poptávky vám samy doručí do e-mailu nebo CRM."
+      lead: "Web, který pro vás pracuje, i když vy zrovna ne."
+      text: |
+        <h2>Web, který nekončí u vizitky</h2>
+        <p>Většina webů malých firem vypadá hezky, ale tím jejich práce končí. Poptávka zapadne v e-mailu, nikdo neví, odkud návštěvníci přišli, a po roce se web načítá pomalu kvůli desítkám pluginů. Stavím prezentační weby na míru, které jsou rychlé, dobře se najdou ve vyhledávání a hlavně jsou napojené na to, jak pracujete.</p>
+        <p>Do IT jsem přišel z online marketingu a e-commerce. Web proto neberu jen jako kód, ale jako nástroj, který vám má přivádět zákazníky.</p>
+        <h2>Pro koho je tvorba webu na míru</h2>
+        <ul>
+          <li><strong>Živnostníci a konzultanti,</strong> kteří potřebují důvěryhodnou prezentaci a pravidelné poptávky.</li>
+          <li><strong>Malé firmy a služby,</strong> které chtějí web propojit s CRM, kalendářem nebo tabulkami.</li>
+          <li><strong>Firmy se zahraničními klienty,</strong> které potřebují web v češtině i angličtině.</li>
+          <li><strong>Všichni, komu přestal stačit web ze šablony</strong> – je pomalý, špatně se upravuje nebo ho nikdo nenajde.</li>
+        </ul>
+        <h2>Co dostanete</h2>
+        <ul>
+          <li><strong>Struktura a obsah podle vašich zákazníků:</strong> web postavený kolem toho, co návštěvníci hledají a co mají udělat.</li>
+          <li><strong>SEO základ:</strong> struktura nadpisů, metadata, sitemap, strukturovaná data a čisté URL, aby vás Google i Seznam správně pochopily.</li>
+          <li><strong>Zobrazení na všech zařízeních:</strong> mobil, tablet i počítač.</li>
+          <li><strong>Vícejazyčnost:</strong> web v češtině i angličtině včetně správného nastavení pro vyhledávače.</li>
+          <li><strong>Měření návštěvnosti:</strong> Google Analytics 4 s lištou pro souhlas s cookies.</li>
+          <li><strong>Formuláře napojené na vaše procesy:</strong> viz další sekce.</li>
+        </ul>
+        <h2>Poptávky, které se zpracují samy</h2>
+        <p>V tom se můj web liší od běžného webu. Protože se věnuji automatizaci procesů (n8n), může váš web s poptávkami rovnou pracovat:</p>
+        <ul>
+          <li>zápis poptávky do CRM, Google Sheets nebo jiné tabulky,</li>
+          <li>automatická potvrzovací odpověď zákazníkovi,</li>
+          <li>okamžité upozornění e-mailem nebo do chatu,</li>
+          <li>třídění poptávek pomocí AI podle typu nebo naléhavosti,</li>
+          <li>připomenutí, když na poptávku nikdo neodpoví.</li>
+        </ul>
+        <p>Víc o propojování systémů najdete u služby <a href="/services/intelligent-automation/">Inteligentní automatizace</a>.</p>
+        <h2>Otestovaný web, který nepřestane fungovat</h2>
+        <p>Formulář, který potichu přestane odesílat, stojí zakázky a nikdo si toho nevšimne. Věnuji se i automatizovanému testování (Playwright), takže klíčové části webu, jako jsou formuláře a rezervace, můžu pokrýt automatickými testy, které hlídají, že fungují i po každé úpravě.</p>
+        <h2>Proč statický web na míru</h2>
+        <p>Weby nestavím na WordPressu ani na šablonách z webových builderů, ale jako rychlé statické weby na míru:</p>
+        <ul>
+          <li><strong>Rychlost:</strong> stránky jsou připravené předem, takže se načítají okamžitě.</li>
+          <li><strong>Bezpečnost:</strong> web nemá databázi ani pluginy, které je potřeba neustále aktualizovat a které bývají nejčastějším cílem útoků.</li>
+          <li><strong>Nízké náklady na provoz:</strong> hosting statického webu je výrazně levnější.</li>
+          <li><strong>Úpravy obsahu:</strong> web doplním o jednoduchý editor, ve kterém si texty a obrázky upravíte sami. Větší změny za vás udělám v rámci paušálu nebo podle hodinové sazby.</li>
+        </ul>
+        <h2>Jak probíhá spolupráce</h2>
+        <ol>
+          <li><strong>Úvodní konzultace zdarma:</strong> probereme vaše služby, zákazníky a co má web přinášet.</li>
+          <li><strong>Návrh struktury a obsahu:</strong> připravím strukturu stránek a doporučení k textům.</li>
+          <li><strong>Vývoj webu:</strong> rozpracovanou verzi uvidíte průběžně a můžete ji připomínkovat.</li>
+          <li><strong>Napojení a testování:</strong> formuláře, měření návštěvnosti a automatizace.</li>
+          <li><strong>Spuštění a podpora:</strong> web spustím na vaší doméně a první měsíc po spuštění jsou opravy a drobné úpravy v ceně.</li>
+        </ol>
+        <h2>Kolik stojí tvorba webu na míru</h2>
+        <p><strong>Prezentační web od 24 900 Kč.</strong> Výsledná cena závisí na počtu stránek, jazykových verzích a napojení na další systémy. Po konzultaci dostanete cenovou nabídku. Nejsem plátce DPH.</p>
+        <p>Po spuštění si můžete vybrat <strong>měsíční paušál</strong> (hosting, údržba, zálohy a drobné úpravy), nebo platit jen <strong>jednotlivé úpravy podle hodinové sazby</strong>.</p>
+        <p>Potřebujete jen jednu stránku pro kampaň? Podívejte se na <a href="/services/landing-pages/">tvorbu landing page</a>.</p>
+        <h2>Časté otázky</h2>
+        <h3>Jak dlouho tvorba webu trvá?</h3>
+        <p>Záleží na rozsahu a na tom, jak rychle se podaří připravit texty a podklady. Konkrétní termín dostanete v nabídce po úvodní konzultaci.</p>
+        <h3>Budu si moct web upravovat sám?</h3>
+        <p>Ano. Web doplním o jednoduchý editor, ve kterém si texty a obrázky upravíte sami, bez znalosti programování. Větší změny, jako jsou nové sekce nebo funkce, za vás udělám v rámci paušálu nebo podle hodinové sazby.</p>
+        <h3>Komu bude web patřit?</h3>
+        <p>Vám. Doména i obsah jsou vaše a po dokončení vám předám všechny přístupy.</p>
+        <h3>Kolik budu platit za provoz?</h3>
+        <p>Statický web má nízké náklady na hosting. Péči o web můžete mít v měsíčním paušálu, nebo platit jen za úpravy, které si objednáte.</p>
+        <h3>Co od vás budu potřebovat?</h3>
+        <p>Informace o vašich službách, logo, fotografie a podklady k textům. Se strukturou obsahu vám pomůžu.</p>
+        <h3>Už web mám. Můžete ho předělat?</h3>
+        <p>Ano. Projdu současný web a nový postavím tak, aby nepřišel o pozice ve vyhledávání, například přesměrováním starých adres.</p>
+        <h3>Jaký je rozdíl mezi webem a landing page?</h3>
+        <p>Web vás představuje jako celek a má více stránek. <a href="/services/landing-pages/">Landing page</a> je jedna stránka s jediným cílem, nejčastěji pro reklamní kampaň.</p>
+        <h3>Postavíte i e-shop?</h3>
+        <p>Ne. Zaměřuji se na prezentační weby, landing pages a <a href="/services/web-app-development/">webové aplikace na míru</a>.</p>
+      contact_link: "Chci nový web"
+    en:
+      title: "Custom Website Development"
+      description: "Custom business websites that load fast, rank well and deliver enquiries straight to your inbox or CRM. From CZK 24,900."
+      card_description: "Custom business websites that load fast, rank well and deliver enquiries straight to your inbox or CRM."
+      lead: "A website that works for you, even when you don't."
+      text: |
+        <h2>A website that's more than a business card</h2>
+        <p>Most small business websites look nice, but that's where their job ends. Enquiries get lost in an inbox, nobody knows where visitors came from, and after a year the site is slow because of dozens of plugins. I build custom business websites that are fast, easy to find in search and, above all, connected to the way you work.</p>
+        <p>I came to IT from online marketing and e-commerce, so I don't see a website as just code, but as a tool that should bring you customers.</p>
+        <h2>Who a custom website is for</h2>
+        <ul>
+          <li><strong>Freelancers and consultants</strong> who need a trustworthy presentation and a steady flow of enquiries.</li>
+          <li><strong>Small businesses and service providers</strong> who want their website connected to a CRM, calendar or spreadsheets.</li>
+          <li><strong>Companies with international clients</strong> who need a website in Czech and English.</li>
+          <li><strong>Anyone who has outgrown a template website</strong> because it's slow, hard to edit or nobody finds it.</li>
+        </ul>
+        <h2>What you get</h2>
+        <ul>
+          <li><strong>Structure and content built around your customers:</strong> a website shaped by what visitors are looking for and what they should do next.</li>
+          <li><strong>SEO foundations:</strong> heading structure, metadata, sitemap, structured data and clean URLs, so search engines understand your site.</li>
+          <li><strong>Works on every device:</strong> phone, tablet and desktop.</li>
+          <li><strong>Multiple languages:</strong> a website in Czech and English, set up correctly for search engines.</li>
+          <li><strong>Traffic analytics:</strong> Google Analytics 4 with a cookie consent banner.</li>
+          <li><strong>Forms connected to your processes:</strong> see the next section.</li>
+        </ul>
+        <h2>Enquiries that handle themselves</h2>
+        <p>This is where my websites differ from the usual ones. Because I specialise in process automation (n8n), your website can work with enquiries straight away:</p>
+        <ul>
+          <li>saving each enquiry to your CRM, Google Sheets or another spreadsheet,</li>
+          <li>sending the customer an automatic confirmation,</li>
+          <li>notifying you instantly by email or chat,</li>
+          <li>sorting enquiries with AI by type or urgency,</li>
+          <li>reminding you when an enquiry hasn't been answered.</li>
+        </ul>
+        <p>Find out more about connecting systems under <a href="/en/services/intelligent-automation/">Intelligent Automation</a>.</p>
+        <h2>A tested website that keeps working</h2>
+        <p>A form that silently stops sending costs you business, and nobody notices. I also do automated testing (Playwright), so key parts of your website, such as forms and bookings, can be covered by automated tests that check they still work after every change.</p>
+        <h2>Why a custom static website</h2>
+        <p>I don't build websites on WordPress or on website-builder templates. I build fast, custom static websites:</p>
+        <ul>
+          <li><strong>Speed:</strong> pages are prepared in advance, so they load instantly.</li>
+          <li><strong>Security:</strong> there's no database and no plugins that need constant updates and are the most common target of attacks.</li>
+          <li><strong>Low running costs:</strong> hosting a static website is much cheaper.</li>
+          <li><strong>Content editing:</strong> I'll add a simple editor where you can change text and images yourself. I'll handle bigger changes through a care plan or at an hourly rate.</li>
+        </ul>
+        <h2>How we'll work together</h2>
+        <ol>
+          <li><strong>Free initial consultation:</strong> we'll talk about your services, your customers and what the website should achieve.</li>
+          <li><strong>Structure and content plan:</strong> I'll prepare the page structure and recommendations for the copy.</li>
+          <li><strong>Development:</strong> you'll see the work in progress and can comment along the way.</li>
+          <li><strong>Integrations and testing:</strong> forms, analytics and automations.</li>
+          <li><strong>Launch and support:</strong> I'll launch the website on your domain, and fixes and small edits are included for the first month.</li>
+        </ol>
+        <h2>How much does a custom website cost?</h2>
+        <p><strong>Business websites from CZK 24,900.</strong> The final price depends on the number of pages, language versions and integrations with other systems. After the consultation you'll get a quote. I'm not registered for VAT, so no VAT is added.</p>
+        <p>After launch you can choose a <strong>monthly care plan</strong> (hosting, maintenance, backups and small edits) or pay only for <strong>individual changes at an hourly rate</strong>.</p>
+        <p>Need just one page for a campaign? Have a look at <a href="/en/services/landing-pages/">landing page development</a>.</p>
+        <h2>Frequently asked questions</h2>
+        <h3>How long does it take to build a website?</h3>
+        <p>It depends on the scope and on how quickly the copy and materials are ready. You'll get a specific timeline in the quote after the initial consultation.</p>
+        <h3>Will I be able to edit the website myself?</h3>
+        <p>Yes. I'll add a simple editor where you can change text and images yourself, no coding needed. I'll handle bigger changes, such as new sections or features, through a care plan or at an hourly rate.</p>
+        <h3>Who will own the website?</h3>
+        <p>You will. The domain and the content are yours, and I'll hand over all access when the project is finished.</p>
+        <h3>What will the running costs be?</h3>
+        <p>A static website has low hosting costs. You can have the website looked after through a monthly care plan, or pay only for the changes you order.</p>
+        <h3>What will you need from me?</h3>
+        <p>Information about your services, your logo, photos and material for the copy. I'll help you with the content structure.</p>
+        <h3>I already have a website. Can you rebuild it?</h3>
+        <p>Yes. I'll review your current website and build the new one so that it keeps its search rankings, for example by redirecting old URLs.</p>
+        <h3>What's the difference between a website and a landing page?</h3>
+        <p>A website presents you as a whole and has multiple pages. A <a href="/en/services/landing-pages/">landing page</a> is a single page with a single goal, usually for an ad campaign.</p>
+        <h3>Do you build online shops?</h3>
+        <p>No. I focus on business websites, landing pages and <a href="/en/services/web-app-development/">custom web apps</a>.</p>
+      contact_link: "I want a new website"
+
 - page_id: automation-testing-qa
   type: service
   slug: automation-testing-qa
@@ -79,47 +507,6 @@
           <li><strong>CI/CD integration:</strong> Tests run automatically with every code change.</li>
         </ul>
       contact_link: "Improve my quality"
-
-- page_id: web-app-development
-  type: service
-  slug: web-app-development
-  date: 2026-01-25 +01:00
-  published: true
-  show_in_list: false
-  image:
-  icon: terminal
-  related_posts:
-    - bodylog-app
-  related_use_cases:
-  lang:
-    cs:
-      title: "Vývoj webových aplikací na míru"
-      description: "Když no-code narazí na své limity, přichází na řadu kód na míru. Stavím spolehlivá řešení v podobě menších aplikací a interní nástroje v Pythonu."
-      lead: "Když no-code narazí na své limity, přichází na řadu kód na míru."
-      text: |
-        <h2>Aplikace, které se přizpůsobí vám, ne naopak</h2>
-        <p>Někdy hotové nástroje prostě nestačí. Stavím efektivní aplikace, které řeší specifické problémy vašeho podnikání. Od databázových návrhů až po API, která propojí váš svět.</p>
-        <h3>V čem vám mohu pomoci:</h3>
-        <ul>
-          <li><strong>Interní nástroje:</strong> Dashboardy, správa zakázek nebo specifické databáze.</li>
-          <li><strong>Mikroslužby:</strong> Malé, rychlé aplikace, které vykonávají konkrétní úkol v rámci vašeho systému.</li>
-          <li><strong>Rozšíření existujících systémů:</strong> Doplnění funkcí tam, kde krabicové řešení končí.</li>
-        </ul>
-      contact_link: "Poptat vývoj"
-    en:
-      title: "Custom Web Apps Development"
-      description: "When no-code hits its limits, custom code takes over. I build reliable web app solutions and internal tools in Python."
-      lead: "When no-code hits its limits, custom code takes over."
-      text: |
-        <h2>Apps that adapt to you, not the other way around</h2>
-        <p>Sometimes off-the-shelf tools just aren't enough. I build efficient small web applications to solve your specific business challenges. From database design to APIs that connect your world.</p>
-        <h3>Where I can help:</h3>
-        <ul>
-          <li><strong>Internal Tools:</strong> Dashboards, order management, or specialized databases.</li>
-          <li><strong>Microservices:</strong> Small, fast applications performing specific tasks within your system.</li>
-          <li><strong>System Extensions:</strong> Adding features where standard software stops.</li>
-        </ul>
-      contact_link: "Get a quote"
 
 - page_id: ai-agents
   type: service
@@ -163,52 +550,11 @@
         </ul>
       contact_link: "I want my AI agent"
 
-- page_id: rag-systems
-  type: service
-  slug: rag-systems
-  date: 2026-02-21 +01:00
-  published: true
-  show_in_list: true
-  image:
-  icon: manage_search
-  related_posts:
-    - rag-chat-web
-  related_use_cases:
-  lang:
-    cs:
-      title: "RAG systémy - AI nad vašimi daty"
-      description: "Vytvořím inteligentní vyhledávání a chatboty nad vašimi interními dokumenty, databázemi a znalostní bází."
-      lead: "Dejte svým datům hlas. Ptejte se firemní dokumentace jako člověka."
-      text: |
-        <h2>Vaše data jako nejchytřejší kolega</h2>
-        <p>RAG (Retrieval-Augmented Generation) je technika, která propojí velký jazykový model s vašimi vlastními daty. Výsledkem je AI, která odpovídá přesně a fakticky - nikoliv z obecných znalostí, ale přímo z vašich PDF, interních wiki, smluv nebo databází.</p>
-        <h3>Kdy se RAG hodí:</h3>
-        <ul>
-          <li><strong>Interní znalostní báze:</strong> Zaměstnanci se ptají systému místo procházení stohu dokumentů.</li>
-          <li><strong>Zákaznická podpora:</strong> Chatbot, který odpovídá z vašich manuálů a FAQ s přesností a zdrojem.</li>
-          <li><strong>Analýza dokumentů:</strong> Rychlé hledání v právních smlouvách, technické dokumentaci nebo výzkumných zprávách.</li>
-        </ul>
-      contact_link: "Chci AI nad svými daty"
-    en:
-      title: "RAG Systems - AI Over Your Data"
-      description: "I build intelligent search and chatbots over your internal documents, databases, and knowledge base."
-      lead: "Give your data a voice. Ask your company knowledge base like a person."
-      text: |
-        <h2>Your data as your smartest colleague</h2>
-        <p>RAG (Retrieval-Augmented Generation) connects a large language model to your own data. The result is an AI that answers accurately and factually - not from general knowledge, but directly from your PDFs, internal wikis, contracts, or databases.</p>
-        <h3>When RAG is the right fit:</h3>
-        <ul>
-          <li><strong>Internal knowledge base:</strong> Employees ask the system instead of digging through stacks of documents.</li>
-          <li><strong>Customer support:</strong> A chatbot that answers from your manuals and FAQ with accuracy and source citations.</li>
-          <li><strong>Document analysis:</strong> Fast search through legal contracts, technical documentation, or research reports.</li>
-        </ul>
-      contact_link: "I want AI over my data"
-
 - page_id: vibecoding
   type: service
   slug: vibecoding
   date: 2026-02-21 +01:00
-  published: true
+  published: false
   show_in_list: false
   image:
   icon: electric_bolt
@@ -465,7 +811,7 @@
   type: service
   slug: vibecoding-praha
   date: 2026-02-21 +01:00
-  published: true
+  published: false
   show_in_list: false
   image:
   icon: electric_bolt

@@ -21,7 +21,7 @@
     '<div class="abbr-sheet-handle-bar"></div>' +
     '<div class="abbr-sheet-header">' +
       '<span class="abbr-sheet-term"></span>' +
-      '<button class="abbr-sheet-close" aria-label="Zavřít">&times;</button>' +
+      '<button class="abbr-sheet-close" aria-label="{{ site.data[site.active_lang].general.close }}">&times;</button>' +
     '</div>' +
     '<p class="abbr-sheet-desc"></p>' +
     '<a class="abbr-sheet-link" href="#" style="display:none"></a>';
@@ -42,7 +42,7 @@
     if (glossarySlug) {
       var lang = document.documentElement.lang || 'cs';
       var prefix = (lang === 'cs') ? '' : '/' + lang;
-      linkEl.href = prefix + '/glossary/' + glossarySlug;
+      linkEl.href = prefix + '/glossary/' + glossarySlug + '/';
       linkEl.textContent = glossaryLinkLabel;
       linkEl.style.display = '';
     } else {

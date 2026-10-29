@@ -19,17 +19,17 @@ layout: page
   {% if use_case.published and use_case.show_in_list %}
     {% assign clean_url = '' %}
     {% if lang == site.default_lang %}
-        {% assign full_url = site.url %}
+        {% assign lang_prefix = '' %}
     {% else %}
-        {% assign full_url = site.url | append: '/' | append: lang %}
+        {% assign lang_prefix = '/' | append: lang %}
     {% endif %}
     <li class="service-item">
       <span class="material-symbols-outlined service-icon">{{ use_case.icon }}</span>
-      <a class="service-title" href="{{ full_url }}/use-cases/{{ use_case.slug }}">
+      <a class="service-title" href="{{ lang_prefix }}/use-cases/{{ use_case.slug }}/">
         <h2>{{ use_case.lang[lang].title }}</h2>
       </a>
       <p class="service-description">{{ use_case.lang[lang].description }}</p>
-      <a class="service-link" href="{{ full_url }}/use-cases/{{ use_case.slug }}">
+      <a class="service-link" href="{{ lang_prefix }}/use-cases/{{ use_case.slug }}/">
         {{ trans.datapages_use_cases.use_case_link }}
       </a>
     </li>

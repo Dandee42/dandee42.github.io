@@ -7,7 +7,7 @@
 
   .particles-js-canvas-el {
     width: 100%;
-    height: 99.5vh !important;
+    height: calc(99.5vh - var(--alert-height, 0px)) !important;
   }
 
   .jumbotron {
@@ -21,7 +21,7 @@
 }
 
 .fullscreen {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--alert-height, 0px)); // the alert banner sits above the hero
 
   h1,
   h2 {
