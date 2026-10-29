@@ -63,10 +63,10 @@ layout: page
       </div>
       <span class="material-symbols-outlined glossary-icon">{{ item.icon }}</span>
       <div class="glossary-title">
-        <h2><a href="{{ lang_prefix }}/glossary/{{ item.slug }}">{{ item.lang[lang].title }}</a></h2>
+        <h2><a href="{{ lang_prefix }}/glossary/{{ item.slug }}/">{{ item.lang[lang].title }}</a></h2>
       </div>
       <p class="glossary-description">{{ item.lang[lang].short_definition }}</p>
-      <a class="glossary-link" href="{{ lang_prefix }}/glossary/{{ item.slug }}">
+      <a class="glossary-link" href="{{ lang_prefix }}/glossary/{{ item.slug }}/">
         {{ trans.datapages_glossary.term_link }}
       </a>
     </li>

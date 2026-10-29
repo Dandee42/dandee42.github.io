@@ -23,10 +23,10 @@ layout: page
     <li class="service-item">
       <span class="material-symbols-outlined service-icon">{{ service.icon }}</span>
       <div class="service-title">
-        <h2><a href="{{ lang_prefix }}/services/{{ service.slug }}">{{ service.lang[lang].title }}</a></h2>
+        <h2><a href="{{ lang_prefix }}/services/{{ service.slug }}/">{{ service.lang[lang].title }}</a></h2>
       </div>
       <p class="service-description">{{ service.lang[lang].description }}</p>
-      <a class="service-link" href="{{ lang_prefix }}/services/{{ service.slug }}">{{ trans.datapages_services.service_link }}</a>
+      <a class="service-link" href="{{ lang_prefix }}/services/{{ service.slug }}/">{{ trans.datapages_services.service_link }}</a>
     </li>
   {% endif %}
 {% endfor %}
