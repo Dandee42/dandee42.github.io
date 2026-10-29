@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Bilingual (Czech default, English secondary) Jekyll personal/business site for Daniel Hladík, served at https://daniel-hladik.cz. There is no test suite or linter; "verifying" a change means building the site and checking the output in both languages.
+Bilingual (Czech default, English secondary) Jekyll personal/business site for Daniel Hladík, served at https://daniel-hladik.cz. There is no test suite or linter. The only automated check is html-proofer in CI (internal links and images). Otherwise, "verifying" a change means building the site and checking the output in both languages.
 
 ## Commands
 
@@ -14,15 +14,24 @@ The config lives at the repo root, but `_config.yml` sets `source: site`. All co
 # Local dev via Docker (Ruby is not installed on this machine). Serves http://localhost:4000
 docker compose up
 
-# With Ruby/Bundler installed (CI uses Ruby 3.2, Bundler 2.5.22)
+# With Ruby/Bundler installed (CI uses Ruby 4.0 like the Docker image; Bundler 2.5.22 from the lockfile)
 bundle install
 bundle exec jekyll serve      # dev server
 bundle exec jekyll build      # output to _site/
+
+# Link check exactly as CI runs it: production build into /tmp, then html-proofer.
+# The Docker image lacks libcurl (html-proofer needs it), so install it once per container.
+docker compose exec cvless sh -c "apt-get update -qq && apt-get install -y -qq libcurl4t64"
+docker compose exec -e JEKYLL_ENV=production cvless sh -c "bundle exec jekyll build -d /tmp/prodbuild && bundle exec htmlproofer /tmp/prodbuild --disable-external --allow-missing-href --swap-urls '^https\://daniel-hladik\.cz:'"
 ```
+
+Don't build into `/site/_site` inside the container while the dev server is running, because it serves from there.
 
 `parallel_localization` must stay `false`, because it does not work on Windows.
 
-The `bretfisher/jekyll-serve` image runs `bundle install` on every start, and this rewrites the tracked `Gemfile.lock`: it adds the `x86_64-linux` platform and drops `wdm`, which is Windows-only. Don't commit that diff by accident.
+`Gemfile.lock` is committed and locked for both `x64-mingw-ucrt` and `x86_64-linux`. `wdm` is restricted with `platforms:` rather than `if Gem.win_platform?`, so the lock stays identical across Windows, Docker and CI. If `bundle install` in the container changes it, the Gemfile has drifted. Fix the cause (or re-run `bundle lock --add-platform x86_64-linux`) instead of committing a platform-specific lock. CI installs in frozen (deployment) mode, so a lock missing `x86_64-linux` breaks the build.
+
+html-proofer runs with `--allow-missing-href` because the dark-mode toggle and the EN Calendly button are intentionally `<a>` elements without a real `href`. Elements that are filled in by JS, such as the lightbox `<img>`, carry `data-proofer-ignore`.
 
 `docker compose up` stays in the foreground after `Server running...` and reports each auto-regeneration once per language. That is normal, not a loop. Use `docker compose up -d` plus `docker compose logs -f` to run it in the background.
 
@@ -34,22 +43,23 @@ The `bretfisher/jekyll-serve` image runs `bundle install` on every start, and th
   - chat: n8n webhook (`n8n.daniel-hladik.cz`)
   - booking: zapti.me (CS) and Calendly (EN)
   - analytics: GA4
-- **The site is built in GitHub Actions, not by GitHub Pages' built-in Jekyll.** The Pages plugin whitelist therefore doesn't apply. That's why polyglot and the datapage generator work at all. Any gem in the Gemfile, a custom plugin in `site/_plugins/`, or an extra CI step (link checking, image optimisation) is fine, as long as it runs on Ruby 3.2 in CI and in the Docker image.
-- **GitHub Pages serves only one branch per repository** (the live `production-gh-pages`). `develop-gh-pages` isn't publicly reachable, so the `develop` deploy only works as a build check.
+- **The site is built in GitHub Actions, not by GitHub Pages' built-in Jekyll.** The Pages plugin whitelist therefore doesn't apply. That's why polyglot and the datapage generator work at all. Any gem in the Gemfile, a custom plugin in `site/_plugins/`, or an extra CI step (link checking, image optimisation) is fine, as long as it runs on Ruby 4.0 (CI and the Docker image).
+- **GitHub Pages serves only one branch per repository**, normally `production-gh-pages`. To preview `develop`, the owner temporarily switches the Pages source to `develop-gh-pages` (Settings → Pages), checks it, and switches back. While switched, the public domain serves the develop build to real visitors.
 
 ## Branches and deployment
 
 | Branch | Role |
 |---|---|
-| `develop` | Development branch. All work is committed here. A push runs `.github/workflows/build_deploy.yml` and publishes a preview build to `develop-gh-pages`. |
-| `production` | Production branch. Never commit to it directly; it only receives merges from `develop`. A push builds with `JEKYLL_ENV=production` and deploys `_site` to `production-gh-pages`, which is the live site (`site/CNAME`). |
+| `develop` | Development branch. All work is committed here. A push runs `.github/workflows/build_deploy.yml` (production build plus html-proofer) and deploys the result to `develop-gh-pages`. |
+| `production` | Production branch. Never commit to it directly; it only receives merges from `develop`. A push runs the same build and check, then deploys `_site` to `production-gh-pages`, which is the live site (`site/CNAME`). |
 | `automated-translations` | Written only by the n8n translation workflow (see below). Never commit to it by hand. |
 | `main` | Stale since 2025-10 and unused. |
-| `*-gh-pages` | CI build output. Never edit. |
+| `production-gh-pages` | CI build output. This is the normal GitHub Pages source. Never edit. |
+| `develop-gh-pages` | CI build output used as a preview (see Hosting constraints). Never edit. |
 
 How a change gets to production (this pattern is consistent throughout the git history):
 
-1. Commit on `develop` and push. The CI build on `develop` is the only automated check, so if it fails, don't merge.
+1. Commit on `develop` and push. The CI run on `develop` (build plus link check) is the gate, so if it fails, don't merge. Optionally preview it by switching the Pages source to `develop-gh-pages`, and switch it back to `production-gh-pages` afterwards.
 2. If a Czech blog post changed, wait for the n8n translation. Then run `git fetch` and `git merge origin/automated-translations` while on `develop`, and push.
 3. `git checkout production && git merge develop`. This creates a merge commit `Merge branch 'develop' into production`; don't fast-forward, rebase or cherry-pick. Push, and CI deploys the site.
 4. Switch back to `develop`.
