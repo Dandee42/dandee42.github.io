@@ -14,9 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repozitáře
+      # 1. Checkout repozitáře (celá historie commitů kvůli jekyll-last-modified-at → správné lastmod/dateModified)
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
 
       # 2. Nastavení Ruby + instalace gemů z Gemfile.lock (s cache)
       - name: Set up Ruby

@@ -33,6 +33,8 @@ Don't build into `/site/_site` inside the container while the dev server is runn
 
 html-proofer runs with `--allow-missing-href` because the dark-mode toggle and the EN Calendly button are intentionally `<a>` elements without a real `href`. Elements that are filled in by JS, such as the lightbox `<img>`, carry `data-proofer-ignore`.
 
+CI checks out the full commit history (`fetch-depth: 0`, `filter: blob:none`). `jekyll-last-modified-at` reads each file's last commit date from git for the sitemap `<lastmod>` and the posts' JSON-LD `dateModified`. With a shallow checkout, every page would get the date of the latest commit.
+
 `docker compose up` stays in the foreground after `Server running...` and reports each auto-regeneration once per language. That is normal, not a loop. Use `docker compose up -d` plus `docker compose logs -f` to run it in the background.
 
 ## Hosting constraints
