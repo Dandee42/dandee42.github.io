@@ -47,9 +47,9 @@ layout: page
 {% for item in sorted_glossary %}
   {% if item.published %}
     {% if lang == site.default_lang %}
-      {% assign full_url = site.url %}
+      {% assign lang_prefix = '' %}
     {% else %}
-      {% assign full_url = site.url | append: '/' | append: lang %}
+      {% assign lang_prefix = '/' | append: lang %}
     {% endif %}
     <li class="glossary-item" data-term="{{ item.lang[lang].title }}"
         data-letter="{{ item.lang[lang].title | slice: 0 | upcase }}"
@@ -63,10 +63,10 @@ layout: page
       </div>
       <span class="material-symbols-outlined glossary-icon">{{ item.icon }}</span>
       <div class="glossary-title">
-        <h2><a href="{{ full_url }}/glossary/{{ item.slug }}">{{ item.lang[lang].title }}</a></h2>
+        <h2><a href="{{ lang_prefix }}/glossary/{{ item.slug }}">{{ item.lang[lang].title }}</a></h2>
       </div>
       <p class="glossary-description">{{ item.lang[lang].short_definition }}</p>
-      <a class="glossary-link" href="{{ full_url }}/glossary/{{ item.slug }}">
+      <a class="glossary-link" href="{{ lang_prefix }}/glossary/{{ item.slug }}">
         {{ trans.datapages_glossary.term_link }}
       </a>
     </li>

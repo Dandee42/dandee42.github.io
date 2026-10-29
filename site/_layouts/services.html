@@ -16,17 +16,17 @@ layout: page
 {% for service in site.data.services %}
   {% if service.published and service.show_in_list %}
     {% if lang == site.default_lang %}
-        {% assign full_url = site.url | append: clean_url %}
+        {% assign lang_prefix = '' %}
     {% else %}
-        {% assign full_url = site.url | append: '/' | append: lang | append: clean_url %}
+        {% assign lang_prefix = '/' | append: lang %}
     {% endif %}
     <li class="service-item">
       <span class="material-symbols-outlined service-icon">{{ service.icon }}</span>
       <div class="service-title">
-        <h2><a href="{{ full_url }}/services/{{ service.slug }}">{{ service.lang[lang].title }}</a></h2>
+        <h2><a href="{{ lang_prefix }}/services/{{ service.slug }}">{{ service.lang[lang].title }}</a></h2>
       </div>
       <p class="service-description">{{ service.lang[lang].description }}</p>
-      <a class="service-link" href="{{ full_url }}/services/{{ service.slug }}">{{ trans.datapages_services.service_link }}</a>
+      <a class="service-link" href="{{ lang_prefix }}/services/{{ service.slug }}">{{ trans.datapages_services.service_link }}</a>
     </li>
   {% endif %}
 {% endfor %}

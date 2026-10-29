@@ -1,4 +1,4 @@
-{% if site.google_analytics %}
+{% if site.google_analytics and jekyll.environment == "production" %}
 {% assign lang = site.active_lang | default: site.default_lang %}
 
 <!-- Google Analytics -->

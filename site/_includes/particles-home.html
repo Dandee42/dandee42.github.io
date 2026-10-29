@@ -4,7 +4,7 @@
 <div id="particles-js" class="fullscreen">
   <div class="jumbotron text-center">
     {% if site.photo %}
-    <img class="particles-photo" src="{{ site.photo | absolute_url }}" alt="{{ site.title[lang] }} - {{ site.description[lang] }}">
+    <img class="particles-photo" src="{{ site.photo | relative_url }}" alt="{{ site.title[lang] }} - {{ site.description[lang] }}">
     {% endif %}
     <h1 class="particles-title">{{ site.title[lang] }}</h1>
     <h1 class="particles-subtitle">{{ site.taglong[lang] }}</h1>
@@ -27,7 +27,7 @@
       {% if site.social.github %}
       <a class="particles-icon" href="https://github.com/{{ site.social.github }}" aria-label="GitHub">{% include svg/github.svg %}</a>&nbsp;
       {% endif %}
-      <a class="particles-icon" href="{{ site.url }}/cv" aria-label="Curriculum vitae">{% include svg/cv-circled.svg %}</a>&nbsp;
+      <a class="particles-icon" href="{{ '/cv/' | relative_url }}" aria-label="Curriculum vitae">{% include svg/cv-circled.svg %}</a>&nbsp;
     </div>
   </div>
   <div class="particles-scroll">
