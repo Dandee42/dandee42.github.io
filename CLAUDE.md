@@ -26,6 +26,17 @@ The `bretfisher/jekyll-serve` image runs `bundle install` on every start, and th
 
 `docker compose up` stays in the foreground after `Server running...` and reports each auto-regeneration once per language. That is normal, not a loop. Use `docker compose up -d` plus `docker compose logs -f` to run it in the background.
 
+## Hosting constraints
+
+- **GitHub Pages serves the site as purely static files.** That means no server-side code, no custom HTTP headers, and no server-side redirects (`redirect_from` only generates meta-refresh pages).
+- **Anything dynamic goes through external services:**
+  - contact form: Web3Forms (`api.web3forms.com`)
+  - chat: n8n webhook (`n8n.daniel-hladik.cz`)
+  - booking: zapti.me (CS) and Calendly (EN)
+  - analytics: GA4
+- **The site is built in GitHub Actions, not by GitHub Pages' built-in Jekyll.** The Pages plugin whitelist therefore doesn't apply. That's why polyglot and the datapage generator work at all. Any gem in the Gemfile, a custom plugin in `site/_plugins/`, or an extra CI step (link checking, image optimisation) is fine, as long as it runs on Ruby 3.2 in CI and in the Docker image.
+- **GitHub Pages serves only one branch per repository** (the live `production-gh-pages`). `develop-gh-pages` isn't publicly reachable, so the `develop` deploy only works as a build check.
+
 ## Branches and deployment
 
 | Branch | Role |
