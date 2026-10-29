@@ -6,14 +6,14 @@ title:
   cs: Daniel Hladík
   en: Daniel Hladik
 description:
-  cs: Pomáhám firmám i jednotlivcům zbavit se rutiny, která nepřináší přidanou hodnotu | AI & Automation | n8n | Tvorba webových aplikací
-  en: I help companies and individuals get rid of routines that don't add value | AI & Automation | n8n | Building web apps
+  cs: Stavím webové aplikace, AI řešení, automatizace i weby, od nápadu po spuštění. S ohledem na bezpečnost, škálovatelnost a udržovatelnost.
+  en: I build web applications, AI solutions, automations and websites, from idea to launch. With a focus on security, scalability and maintainability.
 taglong:
-  cs: AI Automation Engineer
-  en: AI Automation Engineer
+  cs: AI Product Builder
+  en: AI Product Builder
 tagshort:
-  cs: AI Automation Engineer
-  en: AI Automation Engineer
+  cs: AI Product Builder
+  en: AI Product Builder
 
 baseurl: ""
 url: https://daniel-hladik.cz
@@ -25,9 +25,9 @@ remote_theme: piazzai/cvless
 # ----------------------------------------------------------
 
 alert: # Message in the alert has to be setup in the language files (_data)
-  enabled: true # Visibility of alert message (true/false) 
+  enabled: true # Visibility of alert message (true/false)
   type: "notice" # Type of alert (notice, warning, error)
-  dismissable: true  # Possibility to hide alert by the user (true/false)
+  dismissable: true # Possibility to hide alert by the user (true/false)
 
 # ----------------------------------------------------------
 # AUTHOR INFO
@@ -95,22 +95,22 @@ parallel_localization: false # set to true if you have a lot of posts/pages (doe
 page_gen-dirs: true
 
 page_gen:
-  - data: 'services'
-    template: 'service'
-    name: 'slug'
-    dir: 'services'
+  - data: "services"
+    template: "service"
+    name: "slug"
+    dir: "services"
     filter: published
     lang: lang
-  - data: 'use_cases'
-    template: 'use-case'
-    name: 'slug'
-    dir: 'use-cases'
+  - data: "use_cases"
+    template: "use-case"
+    name: "slug"
+    dir: "use-cases"
     filter: published
     lang: lang
-  - data: 'glossary'
-    template: 'glossary-term'
-    name: 'slug'
-    dir: 'glossary'
+  - data: "glossary"
+    template: "glossary-term"
+    name: "slug"
+    dir: "glossary"
     filter: published
     lang: lang
 
@@ -123,16 +123,16 @@ autopages:
   tags:
     enabled: true
     layouts:
-      - 'autopage_tag.html'
+      - "autopage_tag.html"
     title: "#:tag"
-    permalink: '/tag/:tag/'
-  
+    permalink: "/tag/:tag/"
+
   categories:
     enabled: true
     layouts:
-      - 'autopage_category.html'
+      - "autopage_category.html"
     title: ":cat"
-    permalink: '/:cat/'
+    permalink: "/:cat/"
   collections:
     enabled: false
 

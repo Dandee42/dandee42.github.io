@@ -4,6 +4,6 @@ page_id: services
 lang: en
 permalink: /services/
 title: Services
-description: I make automation meaningful. I offer process AI automation and application development for your growth.
+description: Custom web applications, AI solutions, automations, websites and landing pages. From idea to launch, with a focus on security, scalability and maintainability.
 published: true
 ---

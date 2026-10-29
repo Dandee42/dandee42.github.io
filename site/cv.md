@@ -4,7 +4,7 @@ page_id: cv
 lang: cs
 permalink: /cv/
 title: Něco o mně
-description: Automation engineer se zaměřením na automatizaci procesů (n8n & AI) a vývoj v Pythonu. Background v online marketingu a e-commerce.
+description: AI Product Builder. Stavím webové aplikace a AI produkty v Djangu a Next.js, s automatizací (n8n) a testy (Playwright). Background v online marketingu a e-commerce.
 published: true
 ---
 
@@ -13,15 +13,15 @@ Na začátku roku 2024 jsem se rozhodl pro zásadní změnu kariéry a začal in
 
 Postupně jsem se naučil nejen manuálně testovat, ale i automatizovat testy pomocí **Playwrightu** a Selenia, vytvářet jednoduché aplikace v platformě **Django** a později objevovat potenciál automatizace procesů pomocí **n8n**.
 
-## Proč právě IT a automatizace
+## Proč právě IT a stavění produktů
 V jedné ze svých pracovních pozic online markeťáka jsem měl to štěstí, že jsem mohl nahlédnout pod ruce programátorům při vývoji eshopu a otevřel se mi do té doby nepoznaný svět. Bavilo mě se podílet na vývoji eshopu krok po kroku, vymýšlet nové funkcionality, testovat a navrhovat vhodná řešení na aktuální problémy.
 
-Tato zkušenost mě inspirovala k přechodu do IT a položila základy k mé současné dráze – **automatizaci testů i firemních workflow**.
+Tato zkušenost mě inspirovala k přechodu do IT a položila základy k mé současné dráze – **AI Product Builder**.
 
 ## Kam aktuálně směřuji a co vám můžu nabídnout
-Zkušenosti z **e-commerce** a online marketingu mi stále pomáhají lépe chápat souvislosti při testování eshopů. V současnosti se zaměřuji především na automatizaci testů pomocí **Playwrightu**, ale i automatizaci procesů pomocí **n8n**, která mě svými možnostmi nadchla. Po večerech si ve svém volném čase pohrávám s vývojem aplikací. 
+Zkušenosti z **e-commerce** a online marketingu mi pomáhají dívat se na každý projekt očima byznysu: co má produkt přinést a komu. Dnes stavím **webové aplikace** v Djangu a Next.js, **AI řešení** nad firemními daty a **automatizace** v n8n, od prvního nápadu přes prototyp až po spuštění. Při vývoji využívám AI nástroje, díky kterým se k fungujícímu produktu dostanu rychleji, a testy v **Playwrightu** hlídají, aby se cestou nic nerozbilo. Dbám přitom na bezpečnost, škálovatelnost a udržovatelnost, aby produkt obstál, i když poroste.
 
-Mým cílem je tvořit řešení, která nejenom šetří čas, ale i dávají smysl.
+Mým cílem je stavět produkty, které nejenom šetří čas, ale i dávají smysl.
 
 ## Co ovládám?
 Mám zkušenosti s vývojem a testováním webových aplikací. Stejně tak mě baví vymýšlet automatizace procesů, ať už pro zlepšení procesů firemních, tak i v osobním životě.
@@ -29,6 +29,20 @@ Mám zkušenosti s vývojem a testováním webových aplikací. Stejně tak mě 
 Mám praktické zkušenosti s následujícími technologiemi a nástroji:
 
 <div class="progress-bar-container">
+
+    <div class="progress-bar-unit">
+        <h3 class="progress-bar-title">Vývoj webových aplikací (Frontend & Backend)</h3>
+        <div class="tools">
+            <span><small>Python (Django)</small></span>
+            <span><small>Next.js</small></span>
+            <span><small>HTML</small></span>
+            <span><small>HTMX</small></span>
+            <span><small>CSS3 (Bootstrap, Flexbox, Grid)</small></span>
+            <span><small>JavaScript</small></span>
+            <span><small>Markdown</small></span>
+            <span><small>Jinja2</small></span>
+        </div>
+    </div>
 
     <div class="progress-bar-unit">
         <h3 class="progress-bar-title">Automatizace & Integrace</h3>
@@ -54,19 +68,6 @@ Mám praktické zkušenosti s následujícími technologiemi a nástroji:
     </div>
 
     <div class="progress-bar-unit">
-        <h3 class="progress-bar-title">Vývoj webových aplikací (Frontend & Backend)</h3>
-        <div class="tools">
-            <span><small>Python (Django)</small></span>
-            <span><small>HTML</small></span>
-            <span><small>HTMX</small></span>
-            <span><small>CSS3 (Bootstrap, Flexbox, Grid)</small></span>
-            <span><small>JavaScript</small></span>
-            <span><small>Markdown</small></span>
-            <span><small>Jinja2</small></span>
-        </div>
-    </div>
-
-    <div class="progress-bar-unit">
         <h3 class="progress-bar-title">Vývojářské nástroje & Workflow</h3>
         <div class="tools">
             <span><small>Git</small></span>
@@ -74,6 +75,7 @@ Mám praktické zkušenosti s následujícími technologiemi a nástroji:
             <span><small>GitHub Desktop / GitKraken</small></span>
             <span><small>Docker</small></span>
             <span><small>VS Code / PyCharm</small></span>
+            <span><small>Claude Code / Cursor</small></span>
             <span><small>CI/CD (GitHub Actions, Gitlab CI/CD)</small></span>
             <span><small>Jira / Asana / Freelo</small></span>
         </div>
