@@ -28,9 +28,27 @@ The `bretfisher/jekyll-serve` image runs `bundle install` on every start, and th
 
 ## Branches and deployment
 
-- Work happens on `develop` and is merged into `production`. Both branches build through `.github/workflows/build_deploy.yml`.
-- A push to `production` deploys `_site` to the `production-gh-pages` branch (live site; `site/CNAME`). A push to `develop` deploys to `develop-gh-pages` (preview).
-- `automated-translations` is a branch where machine-translated `*-en.md` posts are committed by an external process.
+| Branch | Role |
+|---|---|
+| `develop` | Development branch. All work is committed here. A push runs `.github/workflows/build_deploy.yml` and publishes a preview build to `develop-gh-pages`. |
+| `production` | Production branch. Never commit to it directly; it only receives merges from `develop`. A push builds with `JEKYLL_ENV=production` and deploys `_site` to `production-gh-pages`, which is the live site (`site/CNAME`). |
+| `automated-translations` | Written only by the n8n translation workflow (see below). Never commit to it by hand. |
+| `main` | Stale since 2025-10 and unused. |
+| `*-gh-pages` | CI build output. Never edit. |
+
+How a change gets to production (this pattern is consistent throughout the git history):
+
+1. Commit on `develop` and push. The CI build on `develop` is the only automated check, so if it fails, don't merge.
+2. If a Czech blog post changed, wait for the n8n translation. Then run `git fetch` and `git merge origin/automated-translations` while on `develop`, and push.
+3. `git checkout production && git merge develop`. This creates a merge commit `Merge branch 'develop' into production`; don't fast-forward, rebase or cherry-pick. Push, and CI deploys the site.
+4. Switch back to `develop`.
+
+### Automatic translation of blog posts (n8n)
+
+- Posts are written in Czech (`*-cs.md`). After a push that adds or changes a Czech post, an external n8n workflow translates it and commits the English counterpart (`site/_posts/<same date-name>-en.md`) to `automated-translations` through the GitHub API. In the history it lands about 20 s after the push.
+- Commit messages: `Added new translated post: <file>-en.md`. An update arrives as a pair: `Deleted translated post: …` followed by `Updated translated post: …`. Commits are authored as Dandee42, the same as manual commits.
+- The workflow lives in n8n, not in this repo.
+- A re-translation replaces the whole English file. Make manual fixes to an English post, such as adding images, only after the translation has been merged into `develop` (e.g. `3410bfeb`). Otherwise the next translation run overwrites them or they conflict on merge.
 
 ## Architecture
 
@@ -74,5 +92,6 @@ The index pages (`services.md`, `use-cases.md`, `glossary.md` + `.en.md`) are th
 - The `cvless` gem is installed mainly for its Jekyll and plugin dependencies. All layouts, includes and SCSS used by the site are local copies under `site/`, so edit those directly.
 - Styles: `site/assets/css/styles.min.scss` `@use`s the partials in `site/_sass/`. Theme colours are CSS custom properties in `_variables.scss`, switched via `html[data-theme="light"|"dark"]`. The inline script in `head.html` sets the theme and `darkmode.js` toggles it. Bootstrap and Open Color are vendored as minified CSS.
 - Material Symbols icon names are used for the `icon` field on data records.
-- Third-party embeds: an n8n chat widget on every page (`n8n-chat.html`, per-language config), GA4 (`google_analytics` in config), and booking links (zapti.me for CS, Calendly for EN) hardcoded in `service.html`, `use-case.html` and `schedule-meeting-link.html`.
+- Use relative URLs (`'/path/' | relative_url`) for internal links and assets. Keep `site.url` / `absolute_url` for canonical, OG, JSON-LD, the sitemap and the feed. Under `jekyll serve` in Docker, `site.url` becomes `http://0.0.0.0:4000`, which a browser on Windows can't open.
+- Third-party embeds: an n8n chat widget on every page (`n8n-chat.html`, per-language config), GA4 (`google_analytics` in config; it loads only when `jekyll.environment == "production"`, so it's absent locally), and booking links (zapti.me for CS, Calendly for EN) hardcoded in `service.html`, `use-case.html` and `schedule-meeting-link.html`.
 - The site-wide alert banner is toggled in `_config.yml` (`alert:`). Its text lives in `_data/<lang>/general.yml` under `alert.message`.
