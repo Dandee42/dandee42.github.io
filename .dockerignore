@@ -1,0 +1,2 @@
+# Dockerfile nic nekopíruje (web se připojuje jako volume), build context může být prázdný
+*

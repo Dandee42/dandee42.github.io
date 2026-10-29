@@ -12,20 +12,22 @@ The config lives at the repo root, but `_config.yml` sets `source: site`. All co
 
 ```bash
 # Local dev via Docker (Ruby is not installed on this machine). Serves http://localhost:4000
-docker compose up
+docker compose up              # add --build after changing the Dockerfile
 
 # With Ruby/Bundler installed (CI uses Ruby 4.0 like the Docker image; Bundler 2.5.22 from the lockfile)
 bundle install
 bundle exec jekyll serve      # dev server
 bundle exec jekyll build      # output to _site/
 
-# Link check exactly as CI runs it: production build into /tmp, then html-proofer.
-# The Docker image lacks libcurl (html-proofer needs it), so install it once per container.
-docker compose exec cvless sh -c "apt-get update -qq && apt-get install -y -qq libcurl4t64"
+# Link check exactly as CI runs it: production build into /tmp, then html-proofer
 docker compose exec -e JEKYLL_ENV=production cvless sh -c "bundle exec jekyll build -d /tmp/prodbuild && bundle exec htmlproofer /tmp/prodbuild --disable-external --allow-missing-href --swap-urls '^https\://daniel-hladik\.cz:'"
 ```
 
 Don't build into `/site/_site` inside the container while the dev server is running, because it serves from there.
+
+The local `Dockerfile` builds on `bretfisher/jekyll-serve`, pinned by tag and digest, and adds `libcurl4t64`, which html-proofer needs. The pinned image has Ruby 4.0.1, keep it in step with CI's `ruby-version`. The image's entrypoint runs `bundle install` on every start. Gems persist in the named volume `bundle` (`/usr/local/bundle`), so only the first start installs them. To upgrade the base image:
+1. Update both the tag and the digest in the `FROM` line. `docker buildx imagetools inspect bretfisher/jekyll-serve:<tag>` prints the digest.
+2. Run `docker compose down -v` to drop gems built for the old Ruby, then `docker compose up --build`.
 
 `parallel_localization` must stay `false`, because it does not work on Windows.
 

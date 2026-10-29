@@ -1,7 +1,12 @@
 services:
   cvless:
-    image: bretfisher/jekyll-serve
+    build: .
     ports:
       - "4000:4000"
     volumes:
       - .:/site
+      # Gemy přežijí i smazání kontejneru, takže start nemusí vše instalovat znovu
+      - bundle:/usr/local/bundle
+
+volumes:
+  bundle:
