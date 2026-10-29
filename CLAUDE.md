@@ -95,7 +95,7 @@ Services, use cases and the AI glossary are **YAML records, not markdown files**
 | `site/_data/use_cases.yml` | `use-case.html` | `/use-cases/<slug>/` |
 | `site/_data/glossary.yml` | `glossary-term.html` | `/glossary/<slug>/` |
 
-Each record has shared fields (`page_id`, `type`, `slug`, `date`, `published`, `icon`, and for services/use cases `show_in_list`, `related_posts`, `related_use_cases`). It also has a `lang:` map with `cs:` and `en:` subtrees holding `title`, `description`, `text` (raw HTML) and so on. Layouts render via `page.lang[lang].<field>`. Only `published: true` records generate pages. Glossary records also carry `term` and `categories`. Category labels come from `datapages_glossary.categories` in the per-language data files.
+Each record has shared fields (`page_id`, `type`, `slug`, `date`, `published`, `icon`, and for services/use cases `show_in_list`, `related_posts`, `related_use_cases`). It also has a `lang:` map with `cs:` and `en:` subtrees holding `title`, `description`, `text` (raw HTML) and so on. Layouts render via `page.lang[lang].<field>`. Only `published: true` records generate pages. `description` is also the page's meta/OG description. Services may add an optional `card_description`, which the service tiles on the homepage (`home-services.html`) and on `/services/` (`services.html`) show instead of `description`. It keeps prices off the tiles while the meta description includes them. Glossary records also carry `term` and `categories`. Category labels come from `datapages_glossary.categories` in the per-language data files.
 
 Inside the HTML `text`, cross-links to other glossary terms are hardcoded per language: `/glossary/<slug>/` in `cs` and `/en/glossary/<slug>/` in `en`.
 

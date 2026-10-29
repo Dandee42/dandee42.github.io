@@ -25,7 +25,7 @@ layout: page
       <div class="service-title">
         <h2><a href="{{ lang_prefix }}/services/{{ service.slug }}/">{{ service.lang[lang].title }}</a></h2>
       </div>
-      <p class="service-description">{{ service.lang[lang].description }}</p>
+      <p class="service-description">{{ service.lang[lang].card_description | default: service.lang[lang].description }}</p>
       <a class="service-link" href="{{ lang_prefix }}/services/{{ service.slug }}/">{{ trans.datapages_services.service_link }}</a>
     </li>
   {% endif %}

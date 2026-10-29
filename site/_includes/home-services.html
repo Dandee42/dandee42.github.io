@@ -14,7 +14,7 @@
       <div class="service-title">
         <h3><a href="{{ service_url | relative_url }}">{{ service.lang[lang].title }}</a></h3>
       </div>
-      <p class="service-description">{{ service.lang[lang].description }}</p>
+      <p class="service-description">{{ service.lang[lang].card_description | default: service.lang[lang].description }}</p>
       <a class="service-link" href="{{ service_url | relative_url }}">{{ trans.datapages_services.service_link }}</a>
     </li>
   {% endif %}
