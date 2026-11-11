@@ -1,15 +1,6 @@
 {% assign lang = site.active_lang | default: site.default_lang %}
 <!-- Stylesheets, icons -->
 <link rel="preload" href="{{ '/assets/fonts/Piazzolla-Regular.woff2' | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
-{% if page.layout == "post" and page.image %}
-{% comment %} The hero is the largest element of a post; start fetching it before the parser reaches it {% endcomment %}
-{% include post-hero-sources.html %}
-{% if has_webp %}
-<link rel="preload" as="image" type="image/webp" imagesrcset="{{ hero_srcset }}" imagesizes="{{ hero_sizes }}" fetchpriority="high">
-{% else %}
-<link rel="preload" as="image" href="{{ page.image }}" fetchpriority="high">
-{% endif %}
-{% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ '/assets/css/open-color.min.css' | prepend: site.baseurl }}">
 {% if page.layout == "post" %}
@@ -23,9 +14,10 @@
 <link rel="manifest" href="{{ '/assets/site.webmanifest' | prepend: site.baseurl }}">
 {% comment %}
   Request only the icons the site uses, so Google Fonts serves a few KiB instead of the whole
-  icon font. Static icons come from the includes; the rest from the data records' icon field.
+  icon font. Static icons come from the includes and from CSS content: ligatures (the chat
+  toggle in _elements.scss); the rest from the data records' icon field.
 {% endcomment %}
-{% assign icon_names = "cancel,check,content_copy,error,info,share,warning" | split: "," %}
+{% assign icon_names = "all_inclusive,cancel,check,close,content_copy,error,info,share,warning" | split: "," %}
 {% assign data_icons = site.data.services | map: "icon" %}
 {% assign icon_names = icon_names | concat: data_icons %}
 {% assign data_icons = site.data.use_cases | map: "icon" %}
