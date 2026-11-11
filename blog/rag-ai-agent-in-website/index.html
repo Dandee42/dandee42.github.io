@@ -410,6 +410,7 @@
       </div>
     
     <br>
+    
     <p>Chcete na webu <strong>chatbota</strong>, který skutečně zná vaše produkty, služby, ceníky nebo dokumentaci a neodpovídá jen obecné fráze? V tomto článku vás provedu tvorbou “agentního” chatbota sestrojeného pomocí nástroje <strong>n8n</strong>. Ukážeme si, jak využít metodu <strong>RAG</strong> k propojení <strong>AI</strong> s vašimi daty z webu a jak agentovi umožnit provádět akce, jako je odesílání e-mailů či domlouvání schůzek.</p>
 
 <p>Obsah článku:</p>
@@ -432,7 +433,7 @@
 
 <p>Zkratka <strong>RAG (Retrieval-Augmented Generation)</strong> se překládá do češtiny jako <em>generování rozšířené o vyhledávání</em>. Jedná se o koncept, díky kterému váš AI model “nehalucinuje” (nevymýšlí si), ale odpovědi generuje na základě nějaké znalostní databáze, kterou mu vy sami předložíte.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-01.jpg" alt="Srovnání položení dotazu na běžný AI model a RAG AI model" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-01.jpg" alt="Srovnání položení dotazu na běžný AI model a RAG AI model" class="post-image" /></p>
 
 <p>Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. Když se ho zeptáte na něco z interní dokumentace, nebude vědět a může si i vymýšlet. Pokud tomu samému člověku dáte do ruky vaše materiály (ceník, dokumentaci, články, <strong><abbr title="FAQ (Frequently Asked Questions - často kladené otázky) je strukturovaný seznam otázek a odpovědí, které řeší nejběžnější nejasnosti uživatelů." data-glossary="faq">FAQ</abbr></strong>) a řeknete mu: <em>“Odpovídej pouze na základě toho, co zde najdeš.”</em>, najde tu správnou odpověď. Takto velmi zjednodušeně funguje RAG AI Model.</p>
 
@@ -450,7 +451,7 @@
 
 <p>Pro vás neznalé, n8n je taková virtuální stavebnice Merkur, jen pro <strong>automatizace</strong>. Má v sobě přímo integrované stavební bloky <strong><abbr title="LangChain je open-source framework s předpřipravenou architekturou pro agenty a integracemi pro jakýkoliv model nebo nástroj. Umožňuje stavět agenty, kteří se dokážou přizpůsobovat stejně rychle, jako se vyvíjí celý AI ekosystém." data-glossary="langchain">LangChain</abbr></strong>, takže v něm lze vytvářet komplexní <strong><abbr title="Agentní systémy (nebo AI agenti) jsou pokročilé implementace umělé inteligence, které nefungují podle předem daného scénáře, ale samostatně rozhodují o postupu k dosažení stanoveného cíle." data-glossary="agentic-systems">agentní systémy</abbr></strong> bez napsání jediného řádku kódu.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-04-a.jpg" alt="AI Agent s řídícím mozkem n8n platformy" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-04-a.jpg" alt="AI Agent s řídícím mozkem n8n platformy" class="post-image" /></p>
 
 <p>Co budeme potřebovat:</p>
 
@@ -486,7 +487,7 @@
 
 <p>Obvykle se velikost jednoho kousku (“chunku”) pohybuje mezi 500-1000 znaky s překryvem 10-20%. Tento překryv je klíčový, aby se při rozdělení textu neztratil kontext a myšlenka plynule navazovala i v dalším bloku. Samotné rozdělování pak probíhá podle logických pravidel, nejčastěji podle odstavců nebo nadpisů.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-05.jpg" alt="Abstrakce převodu textu na vektory pomocí embedding modelu" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-05.jpg" alt="Abstrakce převodu textu na vektory pomocí embedding modelu" class="post-image" /></p>
 
 <p>Do vektorové databáze tedy ukládáme data ideálně očištěná a rozsekaná na menší části. Abychom neztratili kontext, odkud data pocházejí, doplníme do <strong><abbr title="Metadata jsou data o datech. Jsou to doplňující informace, které AI model nevidí jako hlavní text k přečtení, ale které systému pomáhají s organizací." data-glossary="metadata">metadat</abbr></strong> URL adresu a datum poslední aktualizace dané webové stránky. Agent pak může v odpovědi uvést odkaz, odkud čerpal, což zvyšuje jeho důvěryhodnost a dotazující si může odpovědi rovnou ověřit na konkrétním odkazu.</p>
 
@@ -509,12 +510,12 @@
 <h3 id="krok-4-automatická-aktualizace-dat">Krok 4. Automatická aktualizace dat</h3>
 <p>Vytvoříme workflow, která bude automaticky jednou za čas (např. 1x denně o půlnoci) aktualizovat data ve vektorové databázi, aby vždy odpovídala aktuálnímu stavu informací na webu.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-02-a.jpg" alt="Low-code nástroj n8n a výsledné workflow AI agenta s RAG modelem" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-02-a.jpg" alt="Low-code nástroj n8n a výsledné workflow AI agenta s RAG modelem" class="post-image" /></p>
 
 <h3 id="krok-5-přidání-chatovacího-okna-na-web">Krok 5. Přidání chatovacího okna na web</h3>
 <p>Interakce s AI agentem bude probíhat pomocí chatovacího okna, které umístíme do kódu na našem webu. Nativní chatovací okno má už v sobě <strong>n8n</strong> integrované, takže není nutné si psát vlastní chatovací rozhraní či používat aplikaci 3. strany. Vyzkoušíme, zda vše chodí, jak má. Nezapomeneme přidat svoji webovou stránku do <strong><abbr title="CORS (Cross-Origin Resource Sharing) je bezpečnostní mechanismus v internetových prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server." data-glossary="cors">CORS</abbr></strong>.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-03-a.jpg" alt="Chatovací okno na webu" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-03-a.jpg" alt="Chatovací okno na webu" class="post-image" /></p>
 
 <blockquote class="alert alert-idea">
   <p><strong>Vyzkoušejte si chatbota přímo na mém webu</strong>
@@ -1045,7 +1046,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-11-11T18:52:30+00:00">2026</time>
+  <small>&copy; <time datetime="2026-11-11T19:09:52+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>

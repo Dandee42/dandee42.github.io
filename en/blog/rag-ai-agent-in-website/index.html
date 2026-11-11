@@ -410,6 +410,7 @@
       </div>
     
     <br>
+    
     <p>Do you want a <strong>chatbot</strong> on your website that really knows your products, services, price lists, or documentation and doesn’t just respond with general phrases? In this article, I will guide you through the creation of an “agent” chatbot built using the <strong>n8n</strong> tool. We will show you how to use the <strong>RAG</strong> method to connect <strong>AI</strong> with your website data and how to enable the agent to perform actions such as sending emails or arranging meetings.</p>
 
 <p>Article content:</p>
@@ -432,7 +433,7 @@
 
 <p>The abbreviation <strong>RAG (Retrieval-Augmented Generation)</strong> translates into Czech as <em>generation augmented by retrieval</em>. It is a concept that prevents your AI model from “hallucinating” (making things up), but instead generates answers based on a knowledge database that you provide.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-01-en.jpg" alt="Comparison of asking a question to a regular AI model and a RAG AI model" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-01-en.jpg" alt="Comparison of asking a question to a regular AI model and a RAG AI model" class="post-image" /></p>
 
 <p>A regular AI model is like a highly educated person who, however, stopped following the news at a certain point and knows nothing about your specific business. If you ask them something from your internal documentation, they won’t know and may even make things up. If you give that same person your materials (price list, documentation, articles, <strong><abbr title="FAQ (Frequently Asked Questions) is a structured list of questions and answers that address the most common user concerns." data-glossary="faq">FAQ</abbr></strong>) and tell them, “Answer only based on what you find here,” they will find the right answer. This is how the RAG AI Model works in a very simplified way.</p>
 
@@ -450,7 +451,7 @@
 
 <p>For those of you who are unfamiliar with it, n8n is like a virtual <strong><abbr title="For those outside of Central Europe, Merkur is the iconic Czech equivalent of Meccano (UK) or the Erector Set (US).">Merkur</abbr></strong> construction kit, but for <strong>automation</strong>. It has <strong><abbr title="LangChain is an open-source framework with a ready-made architecture for agents and integrations for any model or tool. It allows you to build agents that can adapt as quickly as the entire AI ecosystem evolves." data-glossary="langchain">LangChain</abbr></strong> building blocks integrated directly into it, so you can create complex <strong><abbr title="Agent systems (or AI agents) are advanced implementations of artificial intelligence that do not operate according to a predetermined scenario, but independently decide on the steps to take to achieve a set goal." data-glossary="agentic-systems">agent systems</abbr></strong> without writing a single line of code.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-04-a.jpg" alt="AI Agent with the n8n platform's control brain" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-04-a.jpg" alt="AI Agent with the n8n platform's control brain" class="post-image" /></p>
 
 <p>What we will need:</p>
 
@@ -486,7 +487,7 @@
 
 <p>Typically, the size of a single chunk ranges from 500 to 1,000 characters with 10-20% overlap. This overlap is crucial to ensure that the context is not lost when the text is divided and that the idea continues smoothly in the next block. The division itself is then carried out according to logical rules, most often according to paragraphs or headings.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-05-en.jpg" alt="Abstraction of text conversion to vectors using an embedding model" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-05-en.jpg" alt="Abstraction of text conversion to vectors using an embedding model" class="post-image" /></p>
 
 <p>Ideally, we store data that has been cleaned and broken down into smaller parts in the vector database. In order not to lose the context from which the data originates, we add the URL address and the date of the last update of the website to the <strong><abbr title="Metadata is data about data. It is supplementary information that the AI model does not see as the main text to read, but which helps the system with organization." data-glossary="metadata">metadata</abbr></strong>. The agent can then include a link to the source in its response, which increases its credibility and allows the questioner to verify the answer directly at the specific link.</p>
 
@@ -509,12 +510,12 @@
 <h3 id="step-4-automatic-data-update">Step 4. Automatic data update</h3>
 <p>We will create a workflow that will automatically update the data in the vector database once in a while (e.g., once a day at midnight) so that it always corresponds to the current state of information on the web.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-02-a.jpg" alt="Low-code tool n8n and the resulting AI agent workflow with the RAG model" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-02-a.jpg" alt="Low-code tool n8n and the resulting AI agent workflow with the RAG model" class="post-image" /></p>
 
 <h3 id="step-5-adding-a-chat-window-to-the-website">Step 5. Adding a chat window to the website</h3>
 <p>Interaction with the AI agent will take place via a chat window, which we will place in the code on our website. The native chat window already has <strong>n8n</strong> integrated, so there is no need to write your own chat interface or use a third-party application. We will test whether everything is working as it should. Don’t forget to add your website to <strong><abbr title="CORS (Cross-Origin Resource Sharing) is a security mechanism in web browsers that monitors where requests to your server can come from." data-glossary="cors">CORS</abbr></strong>.</p>
 
-<p><img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-03-a.jpg" alt="Chat window on the website" class="post-image" /></p>
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-03-a.jpg" alt="Chat window on the website" class="post-image" /></p>
 
 <blockquote class="alert alert-idea">
   <p><strong>Try the chatbot directly on my website</strong>
@@ -1048,7 +1049,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-11-11T18:52:31+00:00">2026</time>
+  <small>&copy; <time datetime="2026-11-11T19:09:52+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
