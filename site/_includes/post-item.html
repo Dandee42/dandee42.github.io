@@ -15,8 +15,22 @@
     <p class="lead">{{ page.lead }}</p>
 
     {% if page.image %}
+      {% comment %}
+        The hero stays a JPG/PNG for social previews (og:image). When WebP versions sit next to it
+        (<name>.webp at 1200 px and <name>-800.webp), browsers get those instead.
+      {% endcomment %}
+      {% assign hero_base = page.image | split: "." | pop | join: "." %}
+      {% assign hero_webp = hero_base | append: ".webp" %}
+      {% assign hero_webp_small = hero_base | append: "-800.webp" %}
+      {% assign has_webp = hero_webp | file_exists %}
+      {% assign has_webp_small = hero_webp_small | file_exists %}
       <div class="post-hero-image">
-        <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}" loading="eager" fetchpriority="high">
+        <picture>
+          {% if has_webp %}
+          <source type="image/webp" srcset="{% if has_webp_small %}{{ hero_webp_small }} 800w, {% endif %}{{ hero_webp }} 1200w" sizes="(min-width: 768px) 640px, 100vw">
+          {% endif %}
+          <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}" loading="eager" fetchpriority="high">
+        </picture>
       </div>
     {% endif %}
     <br>
