@@ -384,8 +384,19 @@
     <p class="lead">Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.</p>
 
     
+      
+      
+      
+      
+      
+      
       <div class="post-hero-image">
-        <img src="/assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero.jpg" alt="Úvodní obrázek pro BodyLog - Jak jsem si vytvořil svou první fitness apku" loading="eager" fetchpriority="high">
+        <picture>
+          
+          <source type="image/webp" srcset="/assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero-800.webp 800w, /assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero.webp 1200w" sizes="(min-width: 768px) 640px, 100vw">
+          
+          <img src="/assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero.jpg" alt="Úvodní obrázek pro BodyLog - Jak jsem si vytvořil svou první fitness apku" loading="eager" fetchpriority="high">
+        </picture>
       </div>
     
     <br>
@@ -981,7 +992,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-11-11T17:55:44+00:00">2026</time>
+  <small>&copy; <time datetime="2026-11-11T18:05:48+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -1109,7 +1120,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Load the chat only after the page itself, so its bundle and stylesheet don't delay the first render
+    // Load the chat on the visitor's first interaction, so its bundle doesn't compete with the page itself
     function startChat() {
         const style = document.createElement('link');
         style.rel = 'stylesheet';
@@ -1148,8 +1159,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.head.insertBefore(style, document.head.querySelector('link[rel="stylesheet"]'));
     }
 
-    if (document.readyState === 'complete') startChat();
-    else window.addEventListener('load', startChat, { once: true });
+    const START_EVENTS = ['pointerdown', 'pointermove', 'keydown', 'scroll', 'touchstart', 'wheel'];
+    function onFirstInteraction() {
+        START_EVENTS.forEach((type) => window.removeEventListener(type, onFirstInteraction));
+        startChat();
+    }
+    START_EVENTS.forEach((type) => window.addEventListener(type, onFirstInteraction, { passive: true }));
 
 </script>
 
