@@ -526,7 +526,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-10-29T14:22:19+00:00">2026</time>
+  <small>&copy; <time datetime="2026-11-11T16:00:49+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -543,8 +543,65 @@
 
 
 
+<div id="chat-turnstile"></div>
+
 <script type="module">
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    const TURNSTILE_SITE_KEY = '0x4AAAAAAF8-PXoM-ZzA9--I';
+    // Keep in sync with the length check in the n8n workflow
+    const MAX_MESSAGE_LENGTH = 500;
+
+    const metadata = {
+        current_url: window.location.href,
+        page_path: window.location.pathname,
+        page_title: document.title,
+        turnstileToken: ''
+    };
+
+    // Invisible Cloudflare Turnstile: n8n verifies the token before calling the AI.
+    // A token is single-use, so the next one is solved right after each message.
+    let widgetId = null;
+    let token = null;
+    const waiting = [];
+
+    function loadTurnstile() {
+        if (window.onTurnstileLoad) return;
+        window.onTurnstileLoad = () => {
+            widgetId = turnstile.render('#chat-turnstile', {
+                sitekey: TURNSTILE_SITE_KEY,
+                callback: (t) => {
+                    token = t;
+                    waiting.splice(0).forEach((resolve) => resolve(t));
+                },
+                'expired-callback': () => { token = null; },
+            });
+        };
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad';
+        document.head.appendChild(script);
+    }
+
+    async function takeToken() {
+        loadTurnstile();
+        const t = token || await new Promise((resolve) => {
+            waiting.push(resolve);
+            setTimeout(() => resolve(''), 15000);
+        });
+        token = null;
+        if (widgetId !== null) turnstile.reset(widgetId);
+        return t;
+    }
+
+    // Start solving when the chat is opened, so the first message doesn't wait
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.chat-window-toggle')) loadTurnstile();
+    });
+
+    new MutationObserver(() => {
+        const input = document.querySelector('.chat-input textarea');
+        if (input && input.maxLength !== MAX_MESSAGE_LENGTH) input.maxLength = MAX_MESSAGE_LENGTH;
+    }).observe(document.body, { childList: true, subtree: true });
 
     createChat({
         webhookUrl: 'https://n8n.daniel-hladik.cz/webhook/c84ece32-c094-454b-920c-b34138ab3a82/chat',
@@ -553,10 +610,9 @@
         chatInputKey: 'chatInput',
         chatSessionKey: 'sessionId',
         loadPreviousSession: true,
-        metadata: {
-            current_url: window.location.href,
-            page_path: window.location.pathname,
-            page_title: document.title
+        metadata,
+        beforeMessageSent: async () => {
+            metadata.turnstileToken = await takeToken();
         },
         showWelcomeScreen: false,
         defaultLanguage: 'cs',
