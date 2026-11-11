@@ -26,7 +26,12 @@
       </div>
     {% endif %}
     <br>
-    {{ content }}
+    {% comment %}
+      Lazy-load the post's own images in the HTML itself. add-img-lazy-loading.js sets the attribute
+      only after the parser has already started downloading them, and posts can't carry it without
+      editing the Czech Markdown, which would trigger a new translation.
+    {% endcomment %}
+    {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
     <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: trans.general.date_format }}</time>
     <p class="back-to-top">
       <a href="#top">{{ trans.blog.back_to_top}}</a>
