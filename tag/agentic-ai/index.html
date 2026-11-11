@@ -14,6 +14,7 @@
     
   </title>
   
+  
 
 
 
@@ -81,17 +82,27 @@
 
   
 <!-- Stylesheets, icons -->
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link rel="preload" href="/assets/fonts/Piazzolla-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/css/open-color.min.css">
-<link rel="stylesheet" href="/assets/css/syntax.css">
+
 <link rel="stylesheet" href="/assets/css/styles.min.css">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" >
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 <link rel="manifest" href="/assets/site.webmanifest">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,cancel,chat,chat_bubble,check,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
 <!-- RSS Feed -->
 
 <link rel="alternate" type="application/rss+xml" title="Daniel Hladík - RSS (cs)" href="https://daniel-hladik.cz/feed.xml" />
@@ -282,7 +293,7 @@
         
     </span>
 
-    <span class="alert-text">Otevřen novým pracovním výzvám! <a href="#contact-form">Kontaktujte mě</a></span>
+    <span class="alert-text">Přijímám nové projekty: webové aplikace, AI a automatizace. <a href="#contact-form">Napište&nbsp;mi</a></span>
 
     
       <button class="alert-close">
@@ -484,7 +495,7 @@
 
   
   </div>
-  <small>&copy; <time datetime="2026-11-11T16:49:36+00:00">2026</time>
+  <small>&copy; <time datetime="2026-11-11T17:56:23+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -492,7 +503,7 @@
       </div>
     </div>
   </div>
-  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js" defer></script>
   
   <script src="/assets/js/darkmode.js"></script>
   
@@ -504,8 +515,7 @@
 <div id="chat-turnstile"></div>
 
 <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
+    const CHAT_URL = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/';
     const TURNSTILE_SITE_KEY = '0x4AAAAAAF8-PXoM-ZzA9--I';
     // Keep in sync with the length check in the n8n workflow
     const MAX_MESSAGE_LENGTH = 500;
@@ -611,33 +621,47 @@
         }
     };
 
-    createChat({
-        webhookUrl: WEBHOOK_URL,
-        target: '#n8n-chat',
-        mode: 'window',
-        chatInputKey: 'chatInput',
-        chatSessionKey: 'sessionId',
-        loadPreviousSession: true,
-        metadata,
-        beforeMessageSent: async () => {
-            metadata.turnstileToken = await takeToken();
-        },
-        showWelcomeScreen: false,
-        defaultLanguage: 'cs',
-        initialMessages: [
-            'Dobrý den👋', 'Jmenuji se Danka. Co pro vás mohu udělat?',
-        ],
-        i18n: {
-            cs: {
-                title: 'Danka - virtuální asistentka',
-                subtitle: "",
-                footer: '',
-                getStarted: 'Nová konverzace',
-                inputPlaceholder: 'Pište sem...',
-            },
-        },
-        enableStreaming: true,
-    });
+    // Load the chat only after the page itself, so its bundle and stylesheet don't delay the first render
+    function startChat() {
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = CHAT_URL + 'style.css';
+        style.onload = style.onerror = async () => {
+            const { createChat } = await import(CHAT_URL + 'chat.bundle.es.js');
+            createChat({
+                webhookUrl: WEBHOOK_URL,
+                target: '#n8n-chat',
+                mode: 'window',
+                chatInputKey: 'chatInput',
+                chatSessionKey: 'sessionId',
+                loadPreviousSession: true,
+                metadata,
+                beforeMessageSent: async () => {
+                    metadata.turnstileToken = await takeToken();
+                },
+                showWelcomeScreen: false,
+                defaultLanguage: 'cs',
+                initialMessages: [
+                    'Dobrý den👋', 'Jmenuji se Danka. Co pro vás mohu udělat?',
+                ],
+                i18n: {
+                    cs: {
+                        title: 'Danka - virtuální asistentka',
+                        subtitle: "",
+                        footer: '',
+                        getStarted: 'Nová konverzace',
+                        inputPlaceholder: 'Pište sem...',
+                    },
+                },
+                enableStreaming: true,
+            });
+        };
+        // Before the site's stylesheets, so the site's --chat-- colour overrides still win
+        document.head.insertBefore(style, document.head.querySelector('link[rel="stylesheet"]'));
+    }
+
+    if (document.readyState === 'complete') startChat();
+    else window.addEventListener('load', startChat, { once: true });
 
 </script>
 
