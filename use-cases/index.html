@@ -514,7 +514,7 @@ Každá firma má jiné procesy, ale problémy se opakují. Tady najdete konkré
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-11-11T17:56:23+00:00">2026</time>
+  <small>&copy; <time datetime="2026-11-11T18:06:46+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -640,7 +640,7 @@ Každá firma má jiné procesy, ale problémy se opakují. Tady najdete konkré
         }
     };
 
-    // Load the chat only after the page itself, so its bundle and stylesheet don't delay the first render
+    // Load the chat on the visitor's first interaction, so its bundle doesn't compete with the page itself
     function startChat() {
         const style = document.createElement('link');
         style.rel = 'stylesheet';
@@ -679,8 +679,12 @@ Každá firma má jiné procesy, ale problémy se opakují. Tady najdete konkré
         document.head.insertBefore(style, document.head.querySelector('link[rel="stylesheet"]'));
     }
 
-    if (document.readyState === 'complete') startChat();
-    else window.addEventListener('load', startChat, { once: true });
+    const START_EVENTS = ['pointerdown', 'pointermove', 'keydown', 'scroll', 'touchstart', 'wheel'];
+    function onFirstInteraction() {
+        START_EVENTS.forEach((type) => window.removeEventListener(type, onFirstInteraction));
+        startChat();
+    }
+    START_EVENTS.forEach((type) => window.addEventListener(type, onFirstInteraction, { passive: true }));
 
 </script>
 
