@@ -4,10 +4,10 @@
 <div id="particles-js" class="fullscreen">
   <div class="jumbotron text-center">
     {% if site.photo %}
-    <img class="particles-photo" src="{{ site.photo | relative_url }}" alt="{{ site.title[lang] }} - {{ site.description[lang] }}">
+    <img class="particles-photo" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="512" height="512" alt="{{ site.title[lang] }} - {{ site.description[lang] }}">
     {% endif %}
     <h1 class="particles-title">{{ site.title[lang] }}</h1>
-    <h1 class="particles-subtitle">{{ site.taglong[lang] }}</h1>
+    <h2 class="particles-subtitle">{{ site.taglong[lang] }}</h2>
     <div class="nowrap">
       {% if site.social.facebook %}
       <a class="particles-icon" href="https://www.facebook.com/{{ site.social.facebook }}" aria-label="Facebook">{% include svg/facebook.svg %}</a>&nbsp;

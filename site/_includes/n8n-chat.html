@@ -5,8 +5,7 @@
 <div id="chat-turnstile"></div>
 
 <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
+    const CHAT_URL = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/';
     const TURNSTILE_SITE_KEY = '0x4AAAAAAF8-PXoM-ZzA9--I';
     // Keep in sync with the length check in the n8n workflow
     const MAX_MESSAGE_LENGTH = 500;
@@ -112,33 +111,47 @@
         }
     };
 
-    createChat({
-        webhookUrl: WEBHOOK_URL,
-        target: '#n8n-chat',
-        mode: 'window',
-        chatInputKey: 'chatInput',
-        chatSessionKey: 'sessionId',
-        loadPreviousSession: true,
-        metadata,
-        beforeMessageSent: async () => {
-            metadata.turnstileToken = await takeToken();
-        },
-        showWelcomeScreen: false,
-        defaultLanguage: 'cs',
-        initialMessages: [
-            'Dobrý den👋', 'Jmenuji se Danka. Co pro vás mohu udělat?',
-        ],
-        i18n: {
-            cs: {
-                title: 'Danka - virtuální asistentka',
-                subtitle: "",
-                footer: '',
-                getStarted: 'Nová konverzace',
-                inputPlaceholder: 'Pište sem...',
-            },
-        },
-        enableStreaming: true,
-    });
+    // Load the chat only after the page itself, so its bundle and stylesheet don't delay the first render
+    function startChat() {
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = CHAT_URL + 'style.css';
+        style.onload = style.onerror = async () => {
+            const { createChat } = await import(CHAT_URL + 'chat.bundle.es.js');
+            createChat({
+                webhookUrl: WEBHOOK_URL,
+                target: '#n8n-chat',
+                mode: 'window',
+                chatInputKey: 'chatInput',
+                chatSessionKey: 'sessionId',
+                loadPreviousSession: true,
+                metadata,
+                beforeMessageSent: async () => {
+                    metadata.turnstileToken = await takeToken();
+                },
+                showWelcomeScreen: false,
+                defaultLanguage: 'cs',
+                initialMessages: [
+                    'Dobrý den👋', 'Jmenuji se Danka. Co pro vás mohu udělat?',
+                ],
+                i18n: {
+                    cs: {
+                        title: 'Danka - virtuální asistentka',
+                        subtitle: "",
+                        footer: '',
+                        getStarted: 'Nová konverzace',
+                        inputPlaceholder: 'Pište sem...',
+                    },
+                },
+                enableStreaming: true,
+            });
+        };
+        // Before the site's stylesheets, so the site's --chat-- colour overrides still win
+        document.head.insertBefore(style, document.head.querySelector('link[rel="stylesheet"]'));
+    }
+
+    if (document.readyState === 'complete') startChat();
+    else window.addEventListener('load', startChat, { once: true });
 
 </script>
 

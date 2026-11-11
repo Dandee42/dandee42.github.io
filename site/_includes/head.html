@@ -12,6 +12,10 @@
     {{ page.title }} &middot; {{ site.title[lang] }}
     {% endif %}
   </title>
+  {% if page.layout == "home" %}
+  <!-- Seznam Webmaster ownership verification; it must stay on the home page -->
+  <meta name="seznam-wmt" content="NZapUmyKk3GM6Ka9GBynO6gAG3xeANfx" />
+  {% endif %}
   {% include head-seo-lang.html %}
   {% include head-links.html %}
   {% include google-analytics.html %}

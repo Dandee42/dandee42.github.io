@@ -1,16 +1,31 @@
 {% assign lang = site.active_lang | default: site.default_lang %}
 <!-- Stylesheets, icons -->
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link rel="preload" href="{{ '/assets/fonts/Piazzolla-Regular.woff2' | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ '/assets/css/open-color.min.css' | prepend: site.baseurl }}">
+{% if page.layout == "post" %}
 <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | prepend: site.baseurl }}">
+{% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | prepend: site.baseurl }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | prepend: site.baseurl }}">
 <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | prepend: site.baseurl }}" >
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | prepend: site.baseurl }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | prepend: site.baseurl }}">
 <link rel="manifest" href="{{ '/assets/site.webmanifest' | prepend: site.baseurl }}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+{% comment %}
+  Request only the icons the site uses, so Google Fonts serves a few KiB instead of the whole
+  icon font. Static icons come from the includes; the rest from the data records' icon field.
+{% endcomment %}
+{% assign icon_names = "cancel,check,content_copy,error,info,share,warning" | split: "," %}
+{% assign data_icons = site.data.services | map: "icon" %}
+{% assign icon_names = icon_names | concat: data_icons %}
+{% assign data_icons = site.data.use_cases | map: "icon" %}
+{% assign icon_names = icon_names | concat: data_icons %}
+{% assign data_icons = site.data.glossary | map: "icon" %}
+{% assign icon_names = icon_names | concat: data_icons | compact | uniq | sort | join: "," %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names={{ icon_names }}&display=block"/>
 <!-- RSS Feed -->
 {% if lang == site.default_lang %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title[lang] }} - RSS ({{ lang }})" href="{{ '/feed.xml' | absolute_url }}" />

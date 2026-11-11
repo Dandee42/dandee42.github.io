@@ -16,7 +16,7 @@
 
     {% if page.image %}
       <div class="post-hero-image">
-        <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}" loading="lazy">
+        <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}" loading="eager" fetchpriority="high">
       </div>
     {% endif %}
     <br>
