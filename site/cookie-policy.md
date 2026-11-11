@@ -9,6 +9,8 @@ published: true
 sitemap_priority: 0.2
 ---
 
+# Zásady cookies
+
 ## Co jsou cookies?
 
 Cookies jsou malé textové soubory ukládané ve vašem prohlížeči při návštěvě webových stránek. Slouží k zapamatování vašich preferencí nebo ke sledování návštěvnosti.

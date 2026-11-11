@@ -46,6 +46,8 @@
 }
 
 .particles-subtitle {
+  // An h2, which the headings style turns into a flex row; keep it a centred block
+  display: block;
   margin: 0 0 1em 0;
   font-size: 1.25em;
   font-weight: 400;

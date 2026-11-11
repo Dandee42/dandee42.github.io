@@ -9,6 +9,8 @@ published: true
 sitemap_priority: 0.2
 ---
 
+# Cookie Policy
+
 ## What are cookies?
 
 Cookies are small text files stored in your browser when you visit a website. They are used to remember your preferences or to track website traffic.
