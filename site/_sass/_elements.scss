@@ -258,6 +258,11 @@ h4:hover .heading-link {
   color: var(--color-text);
 }
 
+// The hero img carries width/height to reserve its space; keep its aspect ratio when scaled down
+.post-hero-image img {
+  height: auto;
+}
+
 .post-homepage-banner ul {
   list-style: none;
   padding: 0;
@@ -856,6 +861,14 @@ html {
 
 .alert-close:hover {
   transform: scale(1.1);
+}
+
+// Until the icon font arrives, an icon is laid out as its name ("info", "cancel"), which would
+// wrap the banner text differently and shift the page when the font loads. Fix the icon box.
+.alert-icon .material-symbols-outlined,
+.alert-close .material-symbols-outlined {
+  width: 1em;
+  overflow: hidden;
 }
 
 .alert-notice {
