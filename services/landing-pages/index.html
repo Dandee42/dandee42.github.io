@@ -553,7 +553,7 @@
 </div>
 
   </div>
-  <small>&copy; <time datetime="2026-11-11T16:02:23+00:00">2026</time>
+  <small>&copy; <time datetime="2026-11-11T16:49:36+00:00">2026</time>
     Daniel Hladík. All rights reserved.
   </small>
 </footer>
@@ -630,8 +630,58 @@
         if (input && input.maxLength !== MAX_MESSAGE_LENGTH) input.maxLength = MAX_MESSAGE_LENGTH;
     }).observe(document.body, { childList: true, subtree: true });
 
+    // The n8n AI Agent saves its tool calls and tool results in the chat memory, and the
+    // widget shows every stored message when it reloads the history on another page.
+    // Keep only the visitor's messages and the agent's text replies.
+    function messageText(content) {
+        if (typeof content === 'string') return content;
+        if (Array.isArray(content)) {
+            return content.filter((block) => block && block.type === 'text').map((block) => block.text).join('');
+        }
+        return '';
+    }
+
+    function isJson(text) {
+        if (!/^[\[{]/.test(text)) return false;
+        try {
+            JSON.parse(text);
+            return true;
+        } catch {
+            return false;
+        }
+    }
+
+    function cleanHistory(messages) {
+        return messages.flatMap((message) => {
+            const id = Array.isArray(message.id) ? message.id : [];
+            const isAi = id.includes('AIMessage');
+            if (!id.includes('HumanMessage') && !isAi) return [];
+            const text = messageText(message.kwargs && message.kwargs.content).trim();
+            if (!text || (isAi && isJson(text))) return [];
+            return [{ ...message, kwargs: { ...message.kwargs, content: text } }];
+        });
+    }
+
+    const WEBHOOK_URL = 'https://n8n.daniel-hladik.cz/webhook/c84ece32-c094-454b-920c-b34138ab3a82/chat';
+    const originalFetch = window.fetch;
+    window.fetch = async (input, init) => {
+        const response = await originalFetch(input, init);
+        const isHistory = input === WEBHOOK_URL && typeof init?.body === 'string' && init.body.includes('"loadPreviousSession"');
+        if (!isHistory || !response.ok) return response;
+        try {
+            const body = await response.clone().json();
+            if (!Array.isArray(body.data)) return response;
+            return new Response(JSON.stringify({ ...body, data: cleanHistory(body.data) }), {
+                status: response.status,
+                headers: { 'Content-Type': 'application/json' },
+            });
+        } catch {
+            return response;
+        }
+    };
+
     createChat({
-        webhookUrl: 'https://n8n.daniel-hladik.cz/webhook/c84ece32-c094-454b-920c-b34138ab3a82/chat',
+        webhookUrl: WEBHOOK_URL,
         target: '#n8n-chat',
         mode: 'window',
         chatInputKey: 'chatInput',
