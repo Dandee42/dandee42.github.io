@@ -9,7 +9,7 @@ page-not-found:
   paragraph: "It seems that the page has wandered into the unknown.<br>Please return to the home page and try your luck elsewhere :)"
 
 alert:
-  message: 'Open to new work opportunities! <a href="#contact-form">Contact me</a>'
+  message: 'Taking on new projects: web apps, AI and automation. <a href="#contact-form">Get&nbsp;in&nbsp;touch</a>'
 
 copyLink: "Link copied to clipboard!"
 
