@@ -1,7 +1,7 @@
 {% comment %}
-  Sources for a post's hero image, shared by the hero itself (post-item.html) and its preload
-  (head-links.html). The hero stays a JPG/PNG for social previews (og:image). When WebP versions
-  sit next to it (<name>.webp at 1200 px and <name>-800.webp), browsers get those instead.
+  Sources for a post's hero image (post-item.html). The hero stays a JPG/PNG for social previews
+  (og:image). When WebP versions sit next to it (<name>.webp at 1200 px and <name>-800.webp),
+  browsers get those instead.
 {% endcomment %}
 {% assign hero_base = page.image | split: "." | pop | join: "." %}
 {% assign hero_webp = hero_base | append: ".webp" %}
