@@ -9,11 +9,11 @@
     <atom:link href="https://daniel-hladik.cz/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Stavím webové aplikace, AI řešení, automatizace i weby, od nápadu po spuštění. S ohledem na bezpečnost, škálovatelnost a udržovatelnost.</description>
     <language>cs</language>
-    <lastBuildDate>Thu, 12 Nov 2026 09:42:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 12:20:25 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
     <image>
-      <url>https://daniel-hladik.cz/assets/files/photo.png</url>
+      <url>https://daniel-hladik.cz/assets/files/portrait.png</url>
       <title>Daniel Hladík - AI Product Builder</title>
       <link>https://daniel-hladik.cz</link>
     </image>
