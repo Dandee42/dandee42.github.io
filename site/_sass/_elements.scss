@@ -1289,8 +1289,11 @@ html[data-theme="dark"] .quote-hero {
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
+// Headings are position: relative (_base.scss), which would confine the link's ::after overlay
+// to the title. Static, the overlay spans the whole card, so the image and the text are clickable too.
 .service-title h2,
 .service-title h3 {
+  position: static;
   margin: 0 0 0.75rem;
   font-size: 1.25em;
   font-weight: 500;
