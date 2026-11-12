@@ -1,0 +1,16 @@
+{% comment %}
+  The top of a service tile (services.html, home-services.html): the service's illustration, or its
+  icon when it has none. The image is decorative, as the tile's title names the service.
+  Parameters: service (required), eager (optional, for a tile that can be above the fold).
+{% endcomment %}
+{% if include.service.image %}
+  {% include post-hero-sources.html image=include.service.image %}
+  <picture class="service-image">
+    {% if has_webp %}
+    <source type="image/webp" srcset="{{ hero_srcset }}" sizes="{{ hero_sizes }}">
+    {% endif %}
+    <img src="{{ include.service.image }}" alt=""{% if hero_size %} width="{{ hero_size[0] }}" height="{{ hero_size[1] }}"{% endif %} loading="{% if include.eager %}eager{% else %}lazy{% endif %}" decoding="async">
+  </picture>
+{% else %}
+  <span class="material-symbols-outlined service-icon">{{ include.service.icon }}</span>
+{% endif %}

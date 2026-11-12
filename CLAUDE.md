@@ -97,6 +97,8 @@ Services, use cases and the AI glossary are **YAML records, not markdown files**
 
 Each record has shared fields (`page_id`, `type`, `slug`, `date`, `published`, `icon`, and for services/use cases `show_in_list`, `related_posts`, `related_use_cases`). It also has a `lang:` map with `cs:` and `en:` subtrees holding `title`, `description`, `text` (raw HTML) and so on. Layouts render via `page.lang[lang].<field>`. Only `published: true` records generate pages. `description` is also the page's meta/OG description. Services may add an optional `card_description`, which the service tiles on the homepage (`home-services.html`) and on `/services/` (`services.html`) show instead of `description`. It keeps prices off the tiles while the meta description includes them. Glossary records also carry `term` and `categories`. Category labels come from `datapages_glossary.categories` in the per-language data files.
 
+Services and use cases may set `image` (a 1200×630 JPG under `/assets/files/images/services/` or `/use-cases/`, with WebP versions next to it as for post heroes) plus a per-language `image_alt`. The layouts render it below the lead through `hero-picture.html`, and it becomes the page's `og:image`. Service tiles on `/services/` and the homepage show it in place of the icon, through `service-tile-image.html`. These images are generated illustrations: cool graphite grays with one blue accent, on the page background `#f1f3f5`. Before converting them, shift the background to exactly that colour and flatten the paper grain, so the image blends into the page in light mode. In dark mode, the `.hero-illustration` CSS shows it as a dimmed card with rounded corners.
+
 Inside the HTML `text`, cross-links to other glossary terms are hardcoded per language: `/glossary/<slug>/` in `cs` and `/en/glossary/<slug>/` in `en`.
 
 The index pages (`services.md`, `use-cases.md`, `glossary.md` + `.en.md`) are thin front-matter stubs. Their layouts (`services.html`, `use-cases.html`, `glossary.html`) iterate `site.data.<collection>` directly.
@@ -109,7 +111,7 @@ The index pages (`services.md`, `use-cases.md`, `glossary.md` + `.en.md`) are th
 - Use `- toc\n{: toc }` (kramdown) for a table of contents.
 - Glossary tooltips: `<abbr title="Term: short definition" data-glossary="<glossary-slug>">Term</abbr>`. `post-abbr-tooltip.html` turns these into hover tooltips or a bottom sheet with a link to the glossary entry.
 - Templates in `site/_posts/templates/` are `published: false`. Copy `2025-10-18-post-template-1-{cs,en}.md` when starting a new post.
-- Hero images: put `<name>.webp` (1200 px wide) and `<name>-800.webp` next to the hero JPG. `post-item.html` serves them through `<picture>` only when they exist (checked with the `file_exists` filter in `site/_plugins/image_filters.rb`), and the JPG stays the `og:image`.
+- Hero images: put `<name>.webp` (1200 px wide) and `<name>-800.webp` next to the hero JPG. `hero-picture.html` (used by `post-item.html`) serves them through `<picture>` only when they exist (checked with the `file_exists` filter in `site/_plugins/image_filters.rb`), and the JPG stays the `og:image`.
 - Autopages generate `/tag/:tag/` and `/:cat/`. jekyll-paginate-v2 paginates `/blog/` at 3 per page.
 - `search-cs.json` / `search-en.json` (layout `search.html`) produce per-language post indexes for client-side search. `sitemap.xml` is an index pointing at `sitemap_cs.xml` / `sitemap_en.xml` (layout `sitemap.xml`). Set `sitemap: false` in front matter to exclude a page.
 

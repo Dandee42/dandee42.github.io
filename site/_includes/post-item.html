@@ -15,15 +15,8 @@
     <p class="lead">{{ page.lead }}</p>
 
     {% if page.image %}
-      {% include post-hero-sources.html %}
-      <div class="post-hero-image">
-        <picture>
-          {% if has_webp %}
-          <source type="image/webp" srcset="{{ hero_srcset }}" sizes="{{ hero_sizes }}">
-          {% endif %}
-          <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}"{% if hero_size %} width="{{ hero_size[0] }}" height="{{ hero_size[1] }}"{% endif %} loading="eager" fetchpriority="high">
-        </picture>
-      </div>
+      {% capture hero_alt %}{{ trans.blog.alt_hero_image }} {{ page.title }}{% endcapture %}
+      {% include hero-picture.html alt=hero_alt %}
     {% endif %}
     <br>
     {% comment %}

@@ -13,6 +13,7 @@ layout: page
 {% include schedule-meeting-link.html %}
 
 <ul class="services-list">
+{% assign first_tile = true %}
 {% for service in site.data.services %}
   {% if service.published and service.show_in_list %}
     {% if lang == site.default_lang %}
@@ -21,7 +22,9 @@ layout: page
         {% assign lang_prefix = '/' | append: lang %}
     {% endif %}
     <li class="service-item">
-      <span class="material-symbols-outlined service-icon">{{ service.icon }}</span>
+      {% comment %} The first tile can be above the fold {% endcomment %}
+      {% include service-tile-image.html service=service eager=first_tile %}
+      {% assign first_tile = false %}
       <div class="service-title">
         <h2><a href="{{ lang_prefix }}/services/{{ service.slug }}/">{{ service.lang[lang].title }}</a></h2>
       </div>

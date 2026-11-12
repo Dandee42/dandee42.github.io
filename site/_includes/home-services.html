@@ -10,7 +10,7 @@
       {% assign service_url = '/' | append: lang | append: '/services/' | append: service.slug | append: '/' %}
     {% endif %}
     <li class="service-item">
-      <span class="material-symbols-outlined service-icon">{{ service.icon }}</span>
+      {% include service-tile-image.html service=service %}
       <div class="service-title">
         <h3><a href="{{ service_url | relative_url }}">{{ service.lang[lang].title }}</a></h3>
       </div>

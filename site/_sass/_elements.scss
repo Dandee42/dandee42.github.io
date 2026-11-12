@@ -263,6 +263,16 @@ h4:hover .heading-link {
   height: auto;
 }
 
+// Service and use-case illustrations are drawn on the light page background, so in dark mode
+// they show as a light card: round it and tone its brightness down
+.hero-illustration img {
+  border-radius: 8px;
+}
+
+html[data-theme="dark"] .hero-illustration img {
+  filter: brightness(0.85);
+}
+
 .post-homepage-banner ul {
   list-style: none;
   padding: 0;
@@ -1235,6 +1245,20 @@ html[data-theme="dark"] .quote-hero {
 .service-icon {
   font-size: 36px !important;
   color: var(--color-icon-service);
+}
+
+// The illustration fills the top of the card edge to edge, over the card's padding
+.service-image img {
+  display: block;
+  width: calc(100% + 3rem);
+  max-width: none;
+  height: auto;
+  margin: -1.5rem -1.5rem 1rem;
+  border-radius: 12px 12px 0 0;
+}
+
+html[data-theme="dark"] .service-image img {
+  filter: brightness(0.85);
 }
 
 // =========================
