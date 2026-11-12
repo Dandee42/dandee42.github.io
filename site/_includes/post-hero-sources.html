@@ -1,13 +1,14 @@
 {% comment %}
-  Sources for a post's hero image (post-item.html). The hero stays a JPG/PNG for social previews
-  (og:image). When WebP versions sit next to it (<name>.webp at 1200 px and <name>-800.webp),
-  browsers get those instead.
+  Sources for a hero image: include.image, or the page's own page.image (hero-picture.html).
+  The image stays a JPG/PNG for social previews (og:image). When WebP versions sit next to it
+  (<name>.webp at 1200 px and <name>-800.webp), browsers get those instead.
 {% endcomment %}
-{% assign hero_base = page.image | split: "." | pop | join: "." %}
+{% assign hero_image = include.image | default: page.image %}
+{% assign hero_base = hero_image | split: "." | pop | join: "." %}
 {% assign hero_webp = hero_base | append: ".webp" %}
 {% assign hero_webp_small = hero_base | append: "-800.webp" %}
 {% assign has_webp = hero_webp | file_exists %}
 {% assign has_webp_small = hero_webp_small | file_exists %}
 {% capture hero_srcset %}{% if has_webp_small %}{{ hero_webp_small }} 800w, {% endif %}{{ hero_webp }} 1200w{% endcapture %}
 {% assign hero_sizes = "(min-width: 768px) 640px, 100vw" %}
-{% assign hero_size = page.image | image_size %}
+{% assign hero_size = hero_image | image_size %}

@@ -1,0 +1,14 @@
+{% comment %}
+  The page's hero image (page.image) for posts, services and use cases, with the WebP versions
+  from post-hero-sources.html. It sits above the fold, so it loads eagerly.
+  Parameters: alt (required), class (optional, added to the wrapper).
+{% endcomment %}
+{% include post-hero-sources.html %}
+<div class="post-hero-image{% if include.class %} {{ include.class }}{% endif %}">
+  <picture>
+    {% if has_webp %}
+    <source type="image/webp" srcset="{{ hero_srcset }}" sizes="{{ hero_sizes }}">
+    {% endif %}
+    <img src="{{ page.image }}" alt="{{ include.alt }}"{% if hero_size %} width="{{ hero_size[0] }}" height="{{ hero_size[1] }}"{% endif %} loading="eager" fetchpriority="high">
+  </picture>
+</div>

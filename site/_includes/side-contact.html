@@ -1,0 +1,22 @@
+{% comment %}
+  Contact card in the right margin, shown only on screens wider than 1200 px (below that, the alert
+  banner and the contact form at the bottom of the page do the job). It stays in view while the
+  page scrolls.
+{% endcomment %}
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[lang] %}
+<aside class="side-contact" aria-label="{{ trans.general.side_contact.label }}">
+  <div class="side-contact-card">
+    <img class="side-contact-photo" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="96" height="96" alt="" loading="lazy">
+    <p class="side-contact-name">{{ site.title[lang] }}</p>
+    <p class="side-contact-role">{{ site.tagshort[lang] }}</p>
+    <p class="side-contact-text">{{ trans.general.side_contact.text }}</p>
+    <a class="side-contact-button" href="#contact-form">{{ trans.general.side_contact.write }}</a>
+    {% if lang == "cs" %}
+      {% assign call_url = "https://zapti.me/daniel-hladik/konzultace-zdarma" %}
+    {% else %}
+      {% assign call_url = "https://calendly.com/daniel-hladik/free-meeting" %}
+    {% endif %}
+    <a class="side-contact-call" href="{{ call_url }}" target="_blank" rel="noopener">{{ trans.general.side_contact.call }}</a>
+  </div>
+</aside>

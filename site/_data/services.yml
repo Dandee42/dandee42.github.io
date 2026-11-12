@@ -4,7 +4,7 @@
   date: 2026-10-29 +01:00
   published: true
   show_in_list: true
-  image:
+  image: /assets/files/images/services/web-app-development.jpg
   icon: terminal
   related_posts:
     - bodylog-app
@@ -15,6 +15,7 @@
       description: "Interní systémy, klientské portály a MVP na míru. Rychlý vývoj s AI, automatické testy a napojení na vaše nástroje. Prototyp za 30 000 Kč."
       card_description: "Interní systémy, klientské portály a MVP na míru. Rychlý vývoj s AI, automatické testy a napojení na vaše nástroje."
       lead: "Když Excel a krabicové nástroje přestanou stačit, přichází na řadu aplikace na míru."
+      image_alt: "Ilustrace: krejčí skládá sako na míru z dílků puzzle"
       text: |
         <h2>Aplikace, které se přizpůsobí vám, ne naopak</h2>
         <p>Firmy často vedou evidenci zakázek v Excelu, posílají si tabulky e-mailem a přepisují data mezi systémy. Krabicová řešení je zase nutí přizpůsobit procesy jejich logice. Webová aplikace na míru dělá přesně to, co potřebujete, a nic navíc.</p>
@@ -59,6 +60,7 @@
       description: "Custom internal systems, client portals and MVPs. Fast AI-assisted development, automated tests and integrations with your tools. Prototype for CZK 30,000."
       card_description: "Custom internal systems, client portals and MVPs. Fast AI-assisted development, automated tests and integrations with your tools."
       lead: "When spreadsheets and off-the-shelf tools stop being enough, it's time for a custom app."
+      image_alt: "Illustration: a tailor fits a made-to-measure jacket assembled from puzzle pieces"
       text: |
         <h2>Apps that adapt to you, not the other way around</h2>
         <p>Companies often track orders in Excel, email spreadsheets back and forth and retype data between systems. Off-the-shelf software, on the other hand, forces them to adapt their processes to its logic. A custom web app does exactly what you need and nothing more.</p>
@@ -105,7 +107,7 @@
   date: 2026-02-21 +01:00
   published: true
   show_in_list: true
-  image:
+  image: /assets/files/images/services/rag-systems.jpg
   icon: manage_search
   related_posts:
     - rag-chat-web
@@ -115,6 +117,7 @@
       title: "RAG systémy - AI nad vašimi daty"
       description: "Vytvořím inteligentní vyhledávání a chatboty nad vašimi interními dokumenty, databázemi a znalostní bází."
       lead: "Dejte svým datům hlas. Ptejte se firemní dokumentace jako člověka."
+      image_alt: "Ilustrace: knihovnice podává návštěvníkovi z tisíců knih přesně tu správnou, otevřenou na správné stránce"
       text: |
         <h2>Vaše data jako nejchytřejší kolega</h2>
         <p>RAG (Retrieval-Augmented Generation) je technika, která propojí velký jazykový model s vašimi vlastními daty. Výsledkem je AI, která odpovídá přesně a fakticky - nikoliv z obecných znalostí, ale přímo z vašich PDF, interních wiki, smluv nebo databází.</p>
@@ -129,6 +132,7 @@
       title: "RAG Systems - AI Over Your Data"
       description: "I build intelligent search and chatbots over your internal documents, databases, and knowledge base."
       lead: "Give your data a voice. Ask your company knowledge base like a person."
+      image_alt: "Illustration: a librarian hands a visitor exactly the right book out of thousands, open at the right page"
       text: |
         <h2>Your data as your smartest colleague</h2>
         <p>RAG (Retrieval-Augmented Generation) connects a large language model to your own data. The result is an AI that answers accurately and factually - not from general knowledge, but directly from your PDFs, internal wikis, contracts, or databases.</p>
@@ -146,7 +150,7 @@
   date: 2026-01-25 +01:00
   published: true
   show_in_list: true
-  image:
+  image: /assets/files/images/services/intelligent-automation.jpg
   icon: all_inclusive
   related_posts:
   related_use_cases:
@@ -155,6 +159,7 @@
       title: "Inteligentní automatizace (n8n & AI)"
       description: "Propojím vaše aplikace a zapojím AI agenty do vašich procesů."
       lead: "Zbavte se rutiny a nechte systémy, aby spolu mluvily a samy se rozhodovaly."
+      image_alt: "Ilustrace: důmyslný stroj sám zalije květinu, orazítkuje dopis a nalije kávu, zatímco muž v klidu čte noviny"
       text: |
         <h2>Změňte chaos v efektivní ekosystém</h2>
         <p>Většina firem používá desítky nástrojů, které spolu nekomunikují. Moje řešení staví mosty mezi CRM, e-mailem, tabulkami a vaším interním systémem. Díky n8n a integraci AI dokážu vytvořit workflow, která nejsou jen tupými spoji, ale inteligentními pomocníky.</p>
@@ -170,6 +175,7 @@
       title: "Intelligent Automation (n8n & AI)"
       description: "Connect your apps and integrate AI agents into your workflows."
       lead: "Stop doing the routine work. Let your systems communicate and decide on their own."
+      image_alt: "Illustration: a clever contraption waters a plant, stamps a letter and pours coffee on its own while a man reads the newspaper"
       text: |
         <h2>Turn chaos into an efficient ecosystem</h2>
         <p>Most companies use dozens of tools that don't talk to each other. My solutions build bridges between CRM, email, sheets, and your internal systems. Using n8n and AI, I create workflows that are intelligent assistants, not just simple pipes.</p>
@@ -188,7 +194,7 @@
   date: 2026-10-29 +01:00
   published: true
   show_in_list: true
-  image:
+  image: /assets/files/images/services/landing-pages.jpg
   icon: ads_click
   related_posts:
   related_use_cases:
@@ -198,6 +204,7 @@
       description: "Landing page pro vaši kampaň s měřením konverzí a poptávkami rovnou do CRM. Jednostránkový web, který přivádí zákazníky. Od 7 900 Kč."
       card_description: "Landing page pro vaši kampaň s měřením konverzí a poptávkami rovnou do CRM. Jednostránkový web, který přivádí zákazníky."
       lead: "Jedna stránka, jeden cíl: proměnit návštěvníky z kampaně v zákazníky."
+      image_alt: "Ilustrace: maják svým světlem navádí lodě do přístavu"
       text: |
         <h2>Co je landing page a kdy ji potřebujete</h2>
         <p>Landing page (vstupní stránka) je jednostránkový web zaměřený na jediný cíl: poptávku, registraci, rezervaci nebo stažení. Na rozdíl od běžného webu nenabízí menu s desítkami odkazů, ale vede návštěvníka přímo k akci.</p>
@@ -254,6 +261,7 @@
       description: "A landing page for your campaign with conversion tracking and enquiries sent straight to your CRM. A one-page site that brings customers. From CZK 7,900."
       card_description: "A landing page for your campaign with conversion tracking and enquiries sent straight to your CRM. A one-page site that brings customers."
       lead: "One page, one goal: turning campaign visitors into customers."
+      image_alt: "Illustration: a lighthouse beam guides boats into a harbor"
       text: |
         <h2>What a landing page is and when you need one</h2>
         <p>A landing page is a one-page website focused on a single goal: an enquiry, a sign-up, a booking or a download. Unlike a regular website, it doesn't offer a menu with dozens of links; it leads visitors straight to action.</p>
@@ -312,7 +320,7 @@
   date: 2026-10-29 +01:00
   published: true
   show_in_list: true
-  image:
+  image: /assets/files/images/services/website-development.jpg
   icon: web
   related_posts:
   related_use_cases:
@@ -322,6 +330,7 @@
       description: "Prezentační weby na míru, které se rychle načtou, dobře se najdou a poptávky vám samy doručí do e-mailu nebo CRM. Od 24 900 Kč."
       card_description: "Prezentační weby na míru, které se rychle načtou, dobře se najdou a poptávky vám samy doručí do e-mailu nebo CRM."
       lead: "Web, který pro vás pracuje, i když vy zrovna ne."
+      image_alt: "Ilustrace: kolegyně ukazuje kolegovi nový web na tabletu"
       text: |
         <h2>Web, který nekončí u vizitky</h2>
         <p>Většina webů malých firem vypadá hezky, ale tím jejich práce končí. Poptávka zapadne v e-mailu, nikdo neví, odkud návštěvníci přišli, a po roce se web načítá pomalu kvůli desítkám pluginů. Stavím prezentační weby na míru, které jsou rychlé, dobře se najdou ve vyhledávání a hlavně jsou napojené na to, jak pracujete.</p>
@@ -397,6 +406,7 @@
       description: "Custom business websites that load fast, rank well and deliver enquiries straight to your inbox or CRM. From CZK 24,900."
       card_description: "Custom business websites that load fast, rank well and deliver enquiries straight to your inbox or CRM."
       lead: "A website that works for you, even when you don't."
+      image_alt: "Illustration: a woman shows a colleague a new website on a tablet"
       text: |
         <h2>A website that's more than a business card</h2>
         <p>Most small business websites look nice, but that's where their job ends. Enquiries get lost in an inbox, nobody knows where visitors came from, and after a year the site is slow because of dozens of plugins. I build custom business websites that are fast, easy to find in search and, above all, connected to the way you work.</p>

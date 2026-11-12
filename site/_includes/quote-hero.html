@@ -1,14 +1,14 @@
 {% assign lang = site.active_lang | default: page.lang %}
 <div class="quote-hero">
   {% if lang == 'en' %}
-    <img src="/assets/files/road-mountains-middle.webp" width="800" height="1200" alt="A road leading to the mountains" loading="lazy">
+    <img src="/assets/files/images/home/quote-mountains.webp" srcset="/assets/files/images/home/quote-mountains-800.webp 800w, /assets/files/images/home/quote-mountains.webp 1200w" sizes="(min-width: 768px) 640px, 100vw" width="1200" height="896" alt="Illustration: a hiker with a backpack walks along a road toward the mountains" loading="lazy" decoding="async">
     <div class="quote-overlay">
       <p>"Smart solutions start with an idea, not code."</p>
     </div>
   {% else %}
-    <img src="/assets/files/road-mountains-middle.webp" width="800" height="1200" alt="Cesta vedoucí k horám" loading="lazy">
+    <img src="/assets/files/images/home/quote-mountains.webp" srcset="/assets/files/images/home/quote-mountains-800.webp 800w, /assets/files/images/home/quote-mountains.webp 1200w" sizes="(min-width: 768px) 640px, 100vw" width="1200" height="896" alt="Ilustrace: poutník s batohem kráčí po cestě k horám" loading="lazy" decoding="async">
     <div class="quote-overlay">
-      <p>„Chytrá řešení začínají u myšlenky, ne u kódu."</p>
+      <p>„Chytrá řešení začínají u&nbsp;myšlenky, ne u&nbsp;kódu.“</p>
     </div>
   {% endif %}
 </div>

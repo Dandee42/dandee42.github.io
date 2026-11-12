@@ -4,12 +4,10 @@ page_id: home
 lang: cs
 title: Vývoj webových aplikací a AI řešení na míru | Daniel Hladík
 description: Stavím webové aplikace, AI řešení, automatizace i weby, od nápadu po spuštění. S ohledem na bezpečnost, škálovatelnost a udržovatelnost.
-image: /assets/files/photo.png
+image: /assets/files/og-image.jpg
 permalink: /
 canonical: false
 ---
-
-{% include side-images.html %}
 
 ## Jsem Dan a stavím produkty s AI – od nápadu po spuštění
 

@@ -10,6 +10,12 @@ page-not-found:
 alert:
   message: 'Přijímám nové projekty: webové aplikace, AI a automatizace. <a href="#contact-form">Napište&nbsp;mi</a>'
 
+side_contact:
+  label: "Kontakt"
+  text: "Stavím webové aplikace, AI&nbsp;řešení a&nbsp;automatizace&nbsp;– od nápadu po spuštění."
+  write: "Napište mi"
+  call: "Domluvit hovor"
+
 copyLink: "Odkaz zkopírován do schránky!"
 
 go_to_social: "Přejít na můj "

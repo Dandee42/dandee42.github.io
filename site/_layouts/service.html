@@ -9,9 +9,8 @@ layout: page
 <h1>{{ page.lang[lang].title }}</h1>
 <p>{{ page.lang[lang].lead }}</p>
 {% if page.image %}
-    <div class="post-hero-image">
-    <img src="{{ page.image }}" alt="{{ trans.blog.alt_hero_image }} {{ page.title }}" loading="lazy">
-    </div>
+    {% assign hero_alt = page.lang[lang].image_alt | default: page.lang[lang].title %}
+    {% include hero-picture.html alt=hero_alt class="hero-illustration" %}
 {% endif %}
 {{ page.lang[lang].text }}
 

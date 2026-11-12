@@ -382,13 +382,14 @@
   date: 2026-02-21 +01:00
   published: true
   show_in_list: true
-  image:
+  image: /assets/files/images/use-cases/eshop-accounting-integration.jpg
   icon: sync_alt
   lang:
     cs:
       title: "Propojení e-shopu s účetnictvím"
       description: "Automatická synchronizace e-shopu s Pohodou, Fakturoidem nebo Money S3. Každá objednávka automaticky v účetnictví."
       lead: "Každá objednávka automaticky v účetnictví — žádné ruční přepisování, žádné chyby."
+      image_alt: "Ilustrace: z e-shopu odjíždějí balíky a doklady k nim létají jako papíroví ptáci rovnou do účetní knihy"
       text: |
         <h2>Objednávky z e-shopu rovnou v účetnictví</h2>
         <p>Příchozí objednávka na e-shopu by neměla znamenat další hodinu práce v účetním programu. Propojím váš Shopify, WooCommerce nebo jiný e-shop s Pohodou, Fakturoidem, Money S3 nebo jiným systémem tak, aby data tekla automaticky oběma směry. Spolupracuji s e-shopy v Praze i po celé ČR.</p>
@@ -405,6 +406,7 @@
       title: "E-shop to Accounting Integration"
       description: "Automatic e-shop synchronization with your accounting system. Every order automatically recorded in your accounting."
       lead: "Every order automatically in your accounting system — no manual entry, no errors."
+      image_alt: "Illustration: parcels leave an e-shop while their receipts fly like paper birds straight into an accounting ledger"
       text: |
         <h2>Orders from your e-shop straight into accounting</h2>
         <p>An incoming order on your e-shop shouldn't mean another hour of work in your accounting software. I'll connect your Shopify, WooCommerce, or other platform with Pohoda, Fakturoid, Money S3, or any other system so data flows automatically in both directions. I work with e-shops in Prague and across the Czech Republic.</p>

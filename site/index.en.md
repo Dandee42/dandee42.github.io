@@ -4,12 +4,10 @@ page_id: home
 lang: en
 title: Custom Web Apps and AI Solutions | Daniel Hladík
 description: I build web applications, AI solutions, automations and websites, from idea to launch. With a focus on security, scalability and maintainability.
-image: /assets/files/photo.png
+image: /assets/files/og-image.jpg
 permalink: /
 canonical: false
 ---
-
-{% include side-images.html %}
 
 ## I'm Daniel, and I build AI products – from idea to launch
 
