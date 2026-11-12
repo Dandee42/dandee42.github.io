@@ -1435,7 +1435,7 @@ html[data-theme="dark"] .service-image img {
   --chat--input--border-radius: 1.25rem;
 
   // Toggle bubble — black in both themes
-  --chat--toggle--size: 54px;
+  --chat--toggle--size: 64px;
   --chat--toggle--border-radius: 50%;
   --chat--toggle--background: #000000;
   --chat--toggle--hover--background: #212529;
@@ -1447,6 +1447,13 @@ html[data-theme="dark"] .service-image img {
   --chat--input--send--button--color: #ffffff;
   --chat--input--send--button--background-hover: #343a40;
   --chat--input--send--button--color-hover: #ffffff;
+}
+
+// The toggle shows Danka's face (danka.webp is 3x the desktop size), a bit bigger on desktop
+@media (min-width: 768px) {
+  :root {
+    --chat--toggle--size: 72px;
+  }
 }
 
 // Light theme
@@ -1566,85 +1573,79 @@ html[data-theme="dark"] {
   50%       { transform: translateY(-6px); }
 }
 
-@keyframes chat-bubble-ring-light {
-  0%   { box-shadow: 0 0 0 0   rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.3); }
-  70%  { box-shadow: 0 0 0 12px rgba(0, 0, 0, 0),   0 4px 16px rgba(0, 0, 0, 0.3); }
-  100% { box-shadow: 0 0 0 0   rgba(0, 0, 0, 0),   0 4px 16px rgba(0, 0, 0, 0.3); }
-}
-
-@keyframes chat-bubble-ring-dark {
-  0%   { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0.4),  0 4px 16px rgba(255, 255, 255, 0.15); }
-  70%  { box-shadow: 0 0 0 12px rgba(255, 255, 255, 0),   0 4px 16px rgba(255, 255, 255, 0.15); }
-  100% { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0),   0 4px 16px rgba(255, 255, 255, 0.15); }
-}
-
-// Toggle bubble — animated, white (light) / white (dark)
+// Toggle — closed, the button itself is a speech bubble with Danka, the assistant: the button is
+// transparent and its ::after shows danka.webp, the avatar already cut into the bubble shape
+// (3x the toggle size). drop-shadow on the button follows the bubble's outline, where box-shadow
+// would draw a circle.
 .chat-window-toggle {
-  background: #ffffff !important;
+  background: transparent !important;
+  box-shadow: none !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  animation:
-    chat-bubble-bounce 3s ease-in-out infinite,
-    chat-bubble-ring-light 2.5s ease-out infinite !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  animation: chat-bubble-bounce 3s ease-in-out infinite !important;
 
   svg {
     display: none !important;
   }
 
   &::after {
-    content: 'all_inclusive';
-    font-family: 'Material Symbols Outlined';
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    font-feature-settings: 'liga' 1;
-    font-size: 2rem;
-    line-height: 1;
-    color: #1971c2;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/files/images/chat/danka.webp') center / contain no-repeat;
   }
 
   &:hover {
     animation: none !important;
     transform: scale(1.08) !important;
-    background: #ffffff !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
   }
 }
 
 html[data-theme="dark"] .chat-window-toggle {
-  background: #3c4145 !important;
-  animation:
-    chat-bubble-bounce 3s ease-in-out infinite,
-    chat-bubble-ring-dark 2.5s ease-out infinite !important;
-
-  &::after {
-    color: #339af0;
-  }
+  filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.15));
 
   &:hover {
-    animation: none !important;
-    background: #343a40 !important;
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2) !important;
+    filter: drop-shadow(0 6px 16px rgba(255, 255, 255, 0.2));
   }
 }
 
 // Chat je OTEVŘENÝ — Vue skryje .chat-window přidáním display:none
 // Když chat-window NEMÁ display:none → okno je otevřené
+// Open, the toggle turns back into a round button with a close icon
 .chat-window-wrapper:not(:has(.chat-window[style*="display: none"])) {
   .chat-window-toggle {
     animation: none !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    filter: none;
 
     &::after {
       content: 'close';
+      width: auto;
+      height: auto;
+      background: none;
       font-family: 'Material Symbols Outlined';
       font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
       font-feature-settings: 'liga' 1;
       font-size: 2rem;
+      line-height: 1;
       color: #1971c2;
     }
   }
 }
 
 html[data-theme="dark"] .chat-window-wrapper:not(:has(.chat-window[style*="display: none"])) {
+  .chat-window-toggle {
+    background: #3c4145 !important;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15) !important;
+  }
+
   .chat-window-toggle::after {
     color: #339af0;
   }
@@ -1772,7 +1773,7 @@ html[data-theme="dark"] .chat-inputs textarea:not(:placeholder-shown) ~ .chat-in
 
 .chat-bubble-hint {
   position: absolute;
-  bottom: calc(var(--chat--toggle--size, 54px) + 1rem);
+  bottom: calc(var(--chat--toggle--size, 64px) + 1rem);
   right: 0;
   background: #ffffff;
   color: #343a40;

@@ -17,7 +17,7 @@
   icon font. Static icons come from the includes and from CSS content: ligatures (the chat
   toggle in _elements.scss); the rest from the data records' icon field.
 {% endcomment %}
-{% assign icon_names = "all_inclusive,cancel,check,close,content_copy,error,info,share,warning" | split: "," %}
+{% assign icon_names = "cancel,check,close,content_copy,error,info,share,warning" | split: "," %}
 {% assign data_icons = site.data.services | map: "icon" %}
 {% assign icon_names = icon_names | concat: data_icons %}
 {% assign data_icons = site.data.use_cases | map: "icon" %}
