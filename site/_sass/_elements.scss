@@ -385,7 +385,17 @@ html[data-theme="dark"] .hero-illustration img {
   padding-bottom: 1rem;
 }
 
+// The post's image heads its item, like a card
+.blog-list .post-hero-image img {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  border-radius: 8px;
+}
+
+// Headings are flex for their anchor icon, which turns the link into a block and puts the hover
+// underline only below the last line of a wrapped title. These have no icon, so keep the link inline.
 .blog-list .post-title {
+  display: block;
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
 }
