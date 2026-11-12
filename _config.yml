@@ -36,8 +36,8 @@ alert: # Message in the alert has to be setup in the language files (_data)
 author:
   name: Daniel Hladík
   email: info&#64;daniel-hladik&#46;cz
-photo: assets/files/photo.png
-og_image: assets/files/photo.png
+photo: assets/files/portrait.png
+og_image: /assets/files/og-image.jpg
 address: Praha 6
 phone:
 
