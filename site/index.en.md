@@ -9,8 +9,6 @@ permalink: /
 canonical: false
 ---
 
-{% include side-images.html %}
-
 ## I'm Daniel, and I build AI products – from idea to launch
 
 My path to the world of IT did not lead through university lecture halls, but through real-world **experience in e-commerce** and **online marketing**. It was there that I realized good ideas are plentiful; what's missing is a fast way to turn them into a working product.

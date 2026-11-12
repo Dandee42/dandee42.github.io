@@ -1037,44 +1037,87 @@ html {
 }
 
 // =========================
-// SIDE IMAGES & PARALLAX
+// SIDE CONTACT CARD
 // =========================
 
-.start-side-image {
+.page-column {
   position: relative;
 }
 
-.side-image {
+// Fills the column's height in the right margin, so the card inside can stick while the page scrolls
+.side-contact {
   position: absolute;
-  width: 50%;
-  height: 1600px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.side-image.left {
-  left: -55%;
   top: 0;
-  transform: translateY(-1%);
-  background-image: url('/assets/files/road-left.jpg');
+  bottom: 0;
+  left: calc(100% + 2rem);
+  width: 16rem;
 }
 
-.side-image.right {
-  right: -55%;
-  top: 0;
-  transform: translateY(-1%);
-  background-image: url('/assets/files/road-right.jpg');
+.side-contact-card {
+  position: sticky;
+  top: calc(var(--alert-height, 0px) + 2rem);
+  margin-top: 5.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--color-background);
+  box-shadow: 0 4px 16px var(--shadow-service);
+  text-align: center;
 }
 
-.start-side-image.visible .side-image {
-  opacity: 1;
+.side-contact-photo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.side-contact-name {
+  margin: 0;
+  font-size: 1.1em;
+  color: var(--color-heading);
+}
+
+.side-contact-role {
+  margin: 0 0 1rem;
+  font-size: 0.85em;
+  color: var(--color-form-description);
+}
+
+.side-contact-text {
+  margin: 0 0 1.25rem;
+  font-size: 0.9em;
+  color: var(--color-text);
+  text-wrap: balance;
+}
+
+.side-contact-button {
+  display: block;
+  // Piazzolla sits low in its line box; less padding on top centres the text optically
+  padding: 0.375rem 1rem 0.625rem;
+  border: solid 2px var(--color-text);
+  border-radius: 12px;
+  color: var(--color-button-text);
+  background-color: var(--color-button-background);
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:focus,
+  &:hover {
+    border: solid 2px var(--color-text);
+    background-color: var(--color-button-background-hover);
+    color: var(--color-button-text-hover);
+  }
+}
+
+.side-contact-call {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9em;
 }
 
 @media (max-width: 1200px) {
-  .side-image {
+  .side-contact {
     display: none;
   }
 }
@@ -1093,87 +1136,67 @@ html {
 // QUOTE HERO
 // =========================
 
+// The quote sits in the illustration's sky, so the hiker and the road below it stay visible
 .quote-hero {
   position: relative;
   margin: 2.5rem 0;
 
   img {
-    display: none;
+    display: block;
     width: 100%;
+    height: auto;
     margin: 0;
-    border-radius: 0.5rem;
-    object-fit: cover;
-    max-height: 280px;
+    border-radius: 12px;
   }
 
   .quote-overlay {
-    position: relative;
-    padding: 2rem 2.5rem;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 82%;
+    padding: 0.6rem 1.5rem;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px var(--shadow-service);
-
-    &::before {
-      content: '\201C';
-      position: absolute;
-      top: -0.5rem;
-      left: 1.25rem;
-      font-size: 4.5em;
-      line-height: 1;
-      font-family: var(--type-serif);
-      color: var(--color-border);
-      pointer-events: none;
-    }
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 
     p {
-      font-size: 1.35em;
+      font-size: 1.25em;
       font-style: italic;
       font-weight: 500;
-      color: var(--color-heading);
+      color: #1a1a1a;
       margin: 0;
+      text-wrap: balance;
     }
   }
 
-  @media (max-width: 1200px) {
-    img {
-      display: block;
-    }
-
+  @media (max-width: 576px) {
     .quote-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 78%;
-      text-align: center;
-      padding: 1.25rem 1.5rem;
-      border-radius: 0.75rem;
-      background: rgba(255, 255, 255, 0.78);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      box-shadow: none;
-
-      &::before {
-        display: none;
-      }
+      top: 3%;
+      width: 90%;
+      padding: 0.4rem 0.75rem;
 
       p {
-        color: #1a1a1a;
+        font-size: 1.1em;
       }
     }
   }
 }
 
 html[data-theme="dark"] .quote-hero {
-  @media (max-width: 1200px) {
-    .quote-overlay {
-      background: rgba(25, 25, 25, 0.78);
-      border-color: rgba(255, 255, 255, 0.1);
+  img {
+    filter: brightness(0.85);
+  }
 
-      p {
-        color: #e9ecef;
-      }
+  .quote-overlay {
+    background: rgba(25, 25, 25, 0.78);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    p {
+      color: #e9ecef;
     }
   }
 }

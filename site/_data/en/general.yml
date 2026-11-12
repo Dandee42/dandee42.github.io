@@ -11,6 +11,12 @@ page-not-found:
 alert:
   message: 'Taking on new projects: web apps, AI and automation. <a href="#contact-form">Get&nbsp;in&nbsp;touch</a>'
 
+side_contact:
+  label: "Contact"
+  text: "I build web apps, AI&nbsp;solutions and automations&nbsp;– from idea to launch."
+  write: "Get in touch"
+  call: "Book a call"
+
 copyLink: "Link copied to clipboard!"
 
 go_to_social: "Go to my "

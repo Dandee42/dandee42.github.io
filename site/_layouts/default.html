@@ -13,8 +13,11 @@
 
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col col-sm-10 col-md-8 col-lg-6">
+      <div class="col col-sm-10 col-md-8 col-lg-6 page-column">
         {{ content }}
+        {% unless page.layout == "home" or page.title == "404" or page.type == "form success" %}
+          {% include side-contact.html %}
+        {% endunless %}
       </div>
     </div>
   </div>

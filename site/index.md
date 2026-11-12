@@ -9,8 +9,6 @@ permalink: /
 canonical: false
 ---
 
-{% include side-images.html %}
-
 ## Jsem Dan a stavím produkty s AI – od nápadu po spuštění
 
 Moje cesta k IT nevedla skrze univerzitní auly, ale skrze reálnou **praxi v e-commerce** a **online marketingu**. Právě tam jsem pochopil, že dobrých nápadů je dost, ale chybí rychlá cesta, jak je proměnit ve fungující produkt.
