@@ -1120,6 +1120,47 @@ html {
   }
 }
 
+// =========================
+// TIMELINE (CV page)
+// =========================
+
+.timeline {
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  padding: 0 0 0 1.5rem;
+  border-left: 2px solid var(--color-border);
+
+  li {
+    position: relative;
+    margin: 0 0 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // A dot centred on the line: line centre is 1px into the 2px border, the dot is 12px wide
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.35em;
+      left: calc(-1.5rem - 2px + 1px - 6px);
+      width: 12px;
+      height: 12px;
+      border: 2px solid var(--color-link);
+      border-radius: 50%;
+      background: var(--color-background);
+    }
+  }
+}
+
+.timeline-year {
+  display: block;
+  font-family: var(--type-caps);
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+  color: var(--color-form-description);
+}
+
 .only-mobile {
   display: none;
 }
