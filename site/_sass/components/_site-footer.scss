@@ -1,20 +1,28 @@
+@use "breakpoints" as *;
+
 // =========================
 // SITE FOOTER
 // =========================
 
+// Centred: the page links in a row, below them the language switch and the copyright
 .site-footer {
   border-top: 1px solid var(--color-border-subtle);
 }
 
 .site-footer__inner {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 4px 32px;
-  padding-block: 16px 28px;
+  gap: 0;
+  padding-block: 20px 28px;
   color: var(--color-muted);
   font-size: 0.85em;
+  text-align: center;
+
+  // Room below the last line for the chat bubble, which sits over the bottom right corner
+  @include down(md) {
+    padding-bottom: calc(var(--chat--toggle--size, 64px) + 32px);
+  }
 }
 
 .site-footer__nav,
@@ -22,7 +30,21 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+}
+
+.site-footer__nav {
   gap: 0 22px;
+}
+
+// "English · © 2026 Daniel Hladík"; no dot when a page has no language switch (autopages)
+.site-footer__meta {
+  gap: 0 10px;
+
+  .language-switcher + span::before {
+    content: "·";
+    margin-right: 10px;
+  }
 }
 
 // A flex container drops the whitespace around the link in language-switcher.html
