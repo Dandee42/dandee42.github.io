@@ -1,0 +1,71 @@
+// =========================
+// MOBILE MENU
+// =========================
+
+// Full-screen menu below 1024 px, opened by .menu-toggle (site-nav.js). It covers the alert
+// banner too, so it sits above every other layer.
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--color-background);
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.mobile-menu__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  padding: 0 8px 0 var(--container-pad);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  padding: 8px var(--container-pad);
+}
+
+.mobile-menu__link {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  color: var(--color-heading);
+  font-size: 1.5em;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  &[aria-current="page"] {
+    color: var(--color-accent);
+  }
+}
+
+.mobile-menu__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding: 20px var(--container-pad) calc(20px + env(safe-area-inset-bottom));
+}
+
+// The page behind the open menu doesn't scroll, and the chat toggle doesn't cover the menu
+body.menu-open {
+  overflow: hidden;
+
+  .chat-window-wrapper {
+    display: none;
+  }
+}

@@ -1,13 +1,20 @@
-<nav class="post-nav">
-    {% if page.previous %}
-    <a class="prev-post" href="{{ page.previous.url | relative_url }}">
-        <span>← {{ page.previous.title }}</span>
-    </a>
-    {% endif %}
-
-    {% if page.next %}
-    <a class="next-post" href="{{ page.next.url | relative_url }}">
-       <span>{{ page.next.title }} →</span>
-    </a>
-    {% endif %}
+{% comment %}
+  The older and the newer post (page.previous / page.next) as post cards, each under a small label.
+{% endcomment %}
+{% assign pager_trans = site.data[site.active_lang].blog %}
+{% if page.previous or page.next %}
+<nav class="post-pager" aria-label="{{ pager_trans.post_navigation }}">
+  {% if page.previous %}
+  <div class="post-pager__item">
+    <p class="post-pager__label">{{ pager_trans.previous_post }}</p>
+    {% include post-card.html post=page.previous %}
+  </div>
+  {% endif %}
+  {% if page.next %}
+  <div class="post-pager__item post-pager__item--next">
+    <p class="post-pager__label">{{ pager_trans.next_post }}</p>
+    {% include post-card.html post=page.next %}
+  </div>
+  {% endif %}
 </nav>
+{% endif %}

@@ -1,0 +1,11 @@
+{% comment %}
+  Last tile of the services grid: "Nenašli jste, co hledáte?" with a button to the contact form.
+{% endcomment %}
+{% assign cta_trans = site.data[site.active_lang].datapages_services.cta_tile %}
+<article class="service-cta-tile">
+  <div class="service-cta-tile__text">
+    <h2 class="service-cta-tile__title">{{ cta_trans.title }}</h2>
+    <p>{{ cta_trans.text }}</p>
+  </div>
+  <a class="button--primary" href="#contact-form">{{ cta_trans.button }}</a>
+</article>

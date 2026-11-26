@@ -3,10 +3,10 @@ layout: page
 ---
 {% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
+{% assign term = page.lang[lang] %}
 
-<p class="blog-back"><a href="{{ '/glossary/' | relative_url }}">{{ trans.datapages_glossary.all_terms_link }}</a></p>
+{% include detail-head.html back_url='/glossary/' back_label=trans.datapages_glossary.all_terms_link title=term.title lead=term.short_definition %}
 
-<h1>{{ page.lang[lang].title }}</h1>
-<p>{{ page.lang[lang].short_definition }}</p>
-
-{{ page.lang[lang].text }}
+<div class="prose">
+{{ term.text }}
+</div>

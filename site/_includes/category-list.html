@@ -1,4 +1,6 @@
-<p class="blog-back"><a href="{{ '/blog/' | relative_url }}">← Všechny články</a></p>
-<h1>Články z kategorie "{{ page.autopages.display_name }}"</h1>
-<br>
+{% assign autopages_trans = site.data[site.active_lang].autopages %}
+<a class="back-link" href="{{ '/blog/' | relative_url }}">{{ autopages_trans.back_to_all_posts }}</a>
+<div class="page-head">
+  <h1>{{ autopages_trans.categories.title | replace: "%name%", page.autopages.display_name }}</h1>
+</div>
 {% include post-list.html %}

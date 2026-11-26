@@ -1,0 +1,13 @@
+{% comment %}
+  Address, e-mail and LinkedIn with icons. title (optional) renders a heading above the list;
+  inline (optional) lays the items out in a row, as under the contact page's title.
+{% endcomment %}
+{% assign trans = site.data[site.active_lang] %}
+<div class="contact-details{% if include.inline %} contact-details--inline{% endif %}" id="contact-details">
+  {% if include.title %}<h2 class="contact-details__title">{{ include.title }}</h2>{% endif %}
+  <ul class="contact-details__list">
+    <li>{% include svg/pin-alt.svg %}<span>{{ site.address }}</span></li>
+    <li>{% include svg/mail.svg %}<a href="mailto:{{ site.author.email }}?subject={{ trans.contact.form.mailto_subject }}">{{ site.author.email }}</a></li>
+    <li>{% include svg/linkedin.svg %}<a href="{{ trans.cv.lindkedIn }}" aria-label="LinkedIn">daniel-hladik</a></li>
+  </ul>
+</div>

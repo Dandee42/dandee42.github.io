@@ -1,0 +1,171 @@
+// =========================
+// PROSE
+// =========================
+
+// Running text from YAML or Markdown
+.prose {
+  h2 {
+    margin: 1.8em 0 0.5em;
+    font-size: 1.45em;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+// Service and use-case text: bullet lists with a check mark, numbered steps in circles and the
+// price paragraph as a card
+.service-body {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      position: relative;
+      padding-left: 34px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.2em;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background-color: var(--color-accent);
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+      }
+    }
+  }
+
+  ol {
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+
+    > li {
+      position: relative;
+      min-height: 40px;
+      padding: 14px 0 14px 58px;
+      border-bottom: 1px solid var(--color-border-subtle);
+      counter-increment: step;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &::before {
+        content: counter(step);
+        position: absolute;
+        top: 12px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;
+        border: 1.5px solid var(--color-accent);
+        border-radius: var(--radius-pill);
+        color: var(--color-accent);
+        font-weight: 700;
+      }
+    }
+  }
+
+  .price-box {
+    margin: 0.5em 0 1em;
+    padding: 24px 28px;
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-card);
+
+    strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--color-heading);
+      font-size: 1.35em;
+      line-height: 1.25;
+    }
+  }
+}
+
+// Kramdown footnotes
+.footnotes {
+  margin-top: 2em;
+
+  p {
+    margin: 0;
+  }
+
+  &::before {
+    content: "Notes";
+  }
+}
+
+a[href^="#fn:"] {
+  margin-left: 0.1em;
+  font-weight: 500;
+
+  &:focus,
+  &:hover {
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+a.reversefootnote {
+  font-weight: 500;
+
+  &:focus,
+  &:hover {
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+// A Markdown page in the page layout (the cookie policy): its title and headings like the rest
+// of the site, and a simple table
+.page-article {
+  > h1 {
+    margin: 0 0 32px;
+    font-size: clamp(2.1rem, 4.4vw, 3.3rem);
+    font-weight: 700;
+    line-height: 1.08;
+  }
+
+  > h2 {
+    margin: 1.8em 0 0.5em;
+    font-size: 1.45em;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  > table {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 1em;
+    overflow-x: auto;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 10px 16px 10px 0;
+      border-bottom: 1px solid var(--color-border-subtle);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--color-heading);
+      font-weight: 700;
+    }
+  }
+}

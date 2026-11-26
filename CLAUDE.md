@@ -33,7 +33,9 @@ The local `Dockerfile` builds on `bretfisher/jekyll-serve`, pinned by tag and di
 
 `Gemfile.lock` is committed and locked for both `x64-mingw-ucrt` and `x86_64-linux`. `wdm` is restricted with `platforms:` rather than `if Gem.win_platform?`, so the lock stays identical across Windows, Docker and CI. If `bundle install` in the container changes it, the Gemfile has drifted. Fix the cause (or re-run `bundle lock --add-platform x86_64-linux`) instead of committing a platform-specific lock. CI installs in frozen (deployment) mode, so a lock missing `x86_64-linux` breaks the build.
 
-html-proofer runs with `--allow-missing-href` because the dark-mode toggle and the EN Calendly button are intentionally `<a>` elements without a real `href`. Elements that are filled in by JS, such as the lightbox `<img>`, carry `data-proofer-ignore`.
+html-proofer runs with `--allow-missing-href`, although every `<a>` on the site now has a real `href`: the theme toggle and the menu are `<button>`s, and the EN Calendly link points at Calendly and opens the popup on click. Elements that are filled in by JS, such as the lightbox `<img>`, carry `data-proofer-ignore`.
+
+Every page must contain the targets of the site-wide in-page links, `#contact-form` and `#main`, because html-proofer also checks hashes.
 
 CI checks out the full commit history (`fetch-depth: 0`, `filter: blob:none`). `jekyll-last-modified-at` reads each file's last commit date from git for the sitemap `<lastmod>` and the posts' JSON-LD `dateModified`. With a shallow checkout, every page would get the date of the latest commit.
 
@@ -97,6 +99,11 @@ Services, use cases and the AI glossary are **YAML records, not markdown files**
 
 Each record has shared fields (`page_id`, `type`, `slug`, `date`, `published`, `icon`, and for services/use cases `show_in_list`, `related_posts`, `related_use_cases`). It also has a `lang:` map with `cs:` and `en:` subtrees holding `title`, `description`, `text` (raw HTML) and so on. Layouts render via `page.lang[lang].<field>`. Only `published: true` records generate pages. `description` is also the page's meta/OG description. Services may add an optional `card_description`, which the service tiles on the homepage (`home-services.html`) and on `/services/` (`services.html`) show instead of `description`. It keeps prices off the tiles while the meta description includes them. Glossary records also carry `term` and `categories`. Category labels come from `datapages_glossary.categories` in the per-language data files.
 
+Services may also carry structured fields next to the HTML `text`:
+- `faq: [{q, a}]` per language: `faq.html` renders it as a `<details>` accordion under the text (heading `datapages_services.faq_title`). Don't put FAQ markup back into `text`.
+- `facts: [{label, value}]` per language: `service-facts.html` renders the "V kostce" card in the aside, only when the field exists.
+- In `text`, the price paragraph is `<p class="price-box">`, bullet lists get check marks and ordered lists numbered circles from `.service-body` CSS alone.
+
 Services and use cases may set `image` (a 1200×630 JPG under `/assets/files/images/services/` or `/use-cases/`, with WebP versions next to it as for post heroes) plus a per-language `image_alt`. The layouts render it below the lead through `hero-picture.html`, and it becomes the page's `og:image`. Service tiles on `/services/` and the homepage show it in place of the icon, through `service-tile-image.html`. These images are generated illustrations: cool graphite grays with one blue accent, on the page background `#f1f3f5`. Before converting them, shift the background to exactly that colour and flatten the paper grain, so the image blends into the page in light mode. In dark mode, the `.hero-illustration` CSS shows it as a dimmed card with rounded corners.
 
 Inside the HTML `text`, cross-links to other glossary terms are hardcoded per language: `/glossary/<slug>/` in `cs` and `/en/glossary/<slug>/` in `en`.
@@ -108,18 +115,53 @@ The index pages (`services.md`, `use-cases.md`, `glossary.md` + `.en.md`) are th
 ### Blog posts
 
 - `permalink: /blog/:slug/`, so the front-matter `slug` determines the URL. Front matter used by the layouts: `layout: post`, `lang`, `page_id`, `title`, `description`, `lead`, `slug`, `reading_time`, `image` (1200×630, under `/assets/files/images/posts/<post-name>/`), `category`, `tags`, `published`.
-- Use `- toc\n{: toc }` (kramdown) for a table of contents.
+- Use `- toc\n{: toc }` (kramdown) for a table of contents. `post-toc.js` wraps it in a collapsible block in the text and copies it into the sticky aside, where the section being read is highlighted. From 1200 px only the aside copy shows. `reading-progress.js` fills the bar at the bottom edge of the header.
+- Callouts: `<div class="alert alert-info|idea|warning|success|error" markdown="1">` (styles in `components/_callouts.scss`).
 - Glossary tooltips: `<abbr title="Term: short definition" data-glossary="<glossary-slug>">Term</abbr>`. `post-abbr-tooltip.html` turns these into hover tooltips or a bottom sheet with a link to the glossary entry.
 - Templates in `site/_posts/templates/` are `published: false`. Copy `2025-10-18-post-template-1-{cs,en}.md` when starting a new post.
 - Hero images: put `<name>.webp` (1200 px wide) and `<name>-800.webp` next to the hero JPG. `hero-picture.html` (used by `post-item.html`) serves them through `<picture>` only when they exist (checked with the `file_exists` filter in `site/_plugins/image_filters.rb`), and the JPG stays the `og:image`.
-- Autopages generate `/tag/:tag/` and `/:cat/`. jekyll-paginate-v2 paginates `/blog/` at 3 per page.
+- Autopages generate `/tag/:tag/` and `/:cat/`. jekyll-paginate-v2 paginates `/blog/` and the tag and category pages at 6 per page (a multiple of the 3 grid columns); `blog.md` skips the newest post (`offset: 1`), which page 1 shows as the large featured card on top of its 6 posts.
 - `search-cs.json` / `search-en.json` (layout `search.html`) produce per-language post indexes for client-side search. `sitemap.xml` is an index pointing at `sitemap_cs.xml` / `sitemap_en.xml` (layout `sitemap.xml`). Set `sitemap: false` in front matter to exclude a page.
+
+### Page shell and components
+
+Layouts and includes are components; reuse them instead of writing page-specific markup.
+
+- **Page shell:** `default.html` renders, in order:
+  1. the alert banner;
+  2. on the homepage, 404 and the success pages, the particles background;
+  3. `site-header.html`;
+  4. `<main id="main">`;
+  5. `contact-section.html`;
+  6. `site-footer.html`;
+  7. the scripts.
+  - The 404 and success pages (`type: form success`) are bare: no header, contact section or footer.
+  - A layout or page with `contact_section: false` leaves out the contact section. The contact page uses this, because it is the form itself.
+- **Width:** `page.html` takes `width` from the page or the child layout.
+  - `split` (the default) puts the text next to a sticky aside with `side-contact.html`. The aside shows from 1200 px.
+  - `wide` uses the whole container: services, use cases, blog, glossary list, About and contact.
+  - Layout primitives (`.l-container`, `.l-split`, `.l-prose`, …) are in `_layout.scss`.
+- **Navigation:** `_data/navigation.yml` lists the items once. `nav-links.html place=header|footer` renders them, with labels from `trans.footer.<key>` and the active item matched by a `page.url` prefix. The header shows Služby, Blog, O mně, Kontakt and the theme toggle; the language switch and the AI glossary are only in the footer.
+  - The mobile menu (`#mobile-menu`, `site-nav.js`) is a sibling of the header, because the header's `backdrop-filter` would trap a fixed element inside it.
+- **Sticky top:** the alert banner sticks at `top: 0` and the header below it at `top: var(--alert-height)`. `scroll-padding-top` and the sticky asides subtract both (`--alert-height`, `--header-height`).
+- **Contact:**
+  - `contact-section.html` is the card above the footer with `id="contact-form"`, the target of every "Napište mi" link. It combines `contact-details.html` and `contact-form.html`.
+  - The contact page (`_layouts/contact.html`) shows the contact details (`contact-details.html inline=true`) and the portrait in its head, then the form next to `booking-card.html`.
+- **Booking:** `booking-link.html` is the only place that builds a booking link, from `contact.scheduled_meeting.booking_url`: zapti.me in a new tab for CS, the Calendly popup for EN. `calendly-assets.html` loads Calendly once, on EN pages.
+- **Cards and blocks:** `service-tile.html`, `post-card.html` (tags on one row with a "+N" chip, `tag-overflow.js`), `posts-related.html` (up to 6 related posts in a sideways card slider, `card-slider.js`), `post-homepage-banner.html` (the 3 latest posts in the same slider, ending with a button to the blog), `detail-head.html` (head of a service, use case or glossary term), `faq.html`, `service-facts.html`, `cta-block.html`, `service-cta-tile.html`, `contact-actions.html`, `tag-slider.html` (one scrolling row of tag chips; the glossary's category chips and A–Z row reuse its `.tag-chip` and `.tag-scroller` styles).
 
 ### Theme and assets
 
 - The `cvless` gem is installed mainly for its Jekyll and plugin dependencies. All layouts, includes and SCSS used by the site are local copies under `site/`, so edit those directly.
-- Styles: `site/assets/css/styles.min.scss` `@use`s the partials in `site/_sass/`. Theme colours are CSS custom properties in `_variables.scss`, switched via `html[data-theme="light"|"dark"]`. The inline script in `head.html` sets the theme and `darkmode.js` toggles it. Bootstrap and Open Color are vendored as minified CSS.
-- Material Symbols icon names are used for the `icon` field on data records. `head-links.html` requests only the icons the site uses (`icon_names`). It collects the data records' `icon` fields itself, but an icon used anywhere else (an include, JS, or a CSS `content:` ligature such as the chat toggle in `_elements.scss`) must be added to its static list, or it renders as its name.
+- Styles: `site/assets/css/styles.min.scss` `@use`s the partials in `site/_sass/`:
+  - base files at the top level (`_variables.scss`, `_breakpoints.scss`, `_base.scss`, `_headings.scss`, `_layout.scss`, …);
+  - one partial per component in `components/`;
+  - page-specific styles in `pages/`.
+  - Each partial that needs breakpoints starts with `@use "breakpoints" as *;` and uses `@include up(md)` / `down(lg)` (sm 576, md 768, lg 1024, xl 1200).
+  - Theme colours and design tokens (accent, surface, tint, radii, shadows, widths) are CSS custom properties in `_variables.scss`, switched via `html[data-theme="light"|"dark"]`. The inline script in `head.html` sets the theme and `darkmode.js` toggles it.
+  - Bootstrap and Open Color are vendored as minified CSS. Avoid class names that clash with Bootstrap (`.container`, `.row`, `.card`, `.btn`, `.lead`, `.pagination`, `.progress-bar`), and with `.prev`, `.next` and `.close`, which the lightbox uses.
+  - Piazzolla has weights 300, 400, 500 and 700 only.
+- Material Symbols icon names are used for the `icon` field on data records. `head-links.html` requests only the icons the site uses (`icon_names`). It collects the data records' `icon` fields itself, but an icon used anywhere else (an include, JS, or a CSS `content:` ligature such as the chat toggle in `components/_chat.scss`) must be added to its static list, or it renders as its name. UI icons that are not ligatures are inline SVGs in `_includes/svg/` with `class="icon"`.
 - The Piazzolla `.woff2` files are subset: Cyrillic and polytonic Greek were removed; all Latin, basic Greek, punctuation and symbols, the OpenType features and the hinting were kept. Subset any replacement font the same way.
 - Use relative URLs (`'/path/' | relative_url`) for internal links and assets. Keep `site.url` / `absolute_url` for canonical, OG, JSON-LD, the sitemap and the feed. Under `jekyll serve` in Docker, `site.url` becomes `http://0.0.0.0:4000`, which a browser on Windows can't open.
 - Two images come from `_config.yml`:
@@ -127,7 +169,7 @@ The index pages (`services.md`, `use-cases.md`, `glossary.md` + `.en.md`) are th
   - `og_image` is the default social preview (`og-image.jpg`, 1200×630). It must start with `/`, because `head-seo-lang.html` prepends `site.url` directly.
 
   Both are read only at server start, so restart `docker compose` after changing them.
-- Third-party embeds: an n8n chat widget on every page (`n8n-chat.html`, per-language config), GA4 (`google_analytics` in config; it loads only when `jekyll.environment == "production"`, so it and its cookie consent banner are absent locally), and booking links (zapti.me for CS, Calendly for EN) hardcoded in `service.html`, `use-case.html` and `schedule-meeting-link.html`.
+- Third-party embeds: an n8n chat widget on every page (`n8n-chat.html`, per-language config), GA4 (`google_analytics` in config; it loads only when `jekyll.environment == "production"`, so it and its cookie consent banner are absent locally), and booking links (zapti.me for CS, Calendly for EN) built by `booking-link.html`.
 - The n8n chat is intentionally switched off on the n8n side, so its webhook returns `401 Authorization is required!`. The owner turned it off after AI agents used it to try to extract sensitive data and break its security. The widget still loads on every page. Don't "fix" the 401; re-enabling the chat waits on the owner's security review.
-- The site-wide alert banner is toggled in `_config.yml` (`alert:`). Its text lives in `_data/<lang>/general.yml` under `alert.message`. It's `position: sticky` and takes its own space above the content. Its height is published as `--alert-height`, measured inline right after the banner and kept in sync by `alert.js`. The home hero (`.fullscreen`) and `scroll-padding-top` subtract it.
-- On screens wider than 1200 px, `side-contact.html` puts a contact card in the right margin that sticks below the banner while the page scrolls. It has the photo, a "write to me" button and a booking link. `default.html` includes it on every page except the homepage and the 404 and form-success pages, and its strings live in `_data/<lang>/general.yml` under `side_contact`.
+- The site-wide alert banner is toggled in `_config.yml` (`alert:`). Its text lives in `_data/<lang>/general.yml` under `alert.message`. It's `position: sticky` and takes its own space above the content. Its height is published as `--alert-height`, measured inline right after the banner and kept in sync by `alert.js`. The home hero (`.fullscreen`), the sticky header and `scroll-padding-top` subtract it.
+- On screens wider than 1200 px, `side-contact.html` puts a contact card in the sticky aside of `split` pages and service details. It has the photo, a "write to me" button and a booking link. Posts use its `compact=true` variant under the table of contents. Its strings live in `_data/<lang>/general.yml` under `side_contact`.

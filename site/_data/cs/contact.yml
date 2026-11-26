@@ -28,6 +28,7 @@ scheduled_meeting:
   paragraph: "Klikněte na tlačítko níže a vyberte si termín konzultace.<br><br>Těším se na naši spolupráci!"
   submit_button: "Chci konzultaci ZDARMA"
   link: "https://calendly.com/daniel-hladik/30min"
+  booking_url: "https://zapti.me/daniel-hladik/konzultace-zdarma"
 scheduled_meeting_success_page:
   title: "Úspěšně<br>odesláno"
   subtitle: "...brzy Vám přijde email<br>s potvrzením termínu"

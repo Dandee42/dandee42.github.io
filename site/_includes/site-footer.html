@@ -1,0 +1,16 @@
+{% comment %}
+  Footer, centred: every page from _data/navigation.yml in a row, below them the language switch
+  and the copyright.
+{% endcomment %}
+{% assign trans = site.data[site.active_lang] %}
+<footer class="site-footer">
+  <div class="l-container site-footer__inner">
+    <nav class="site-footer__nav" aria-label="{{ trans.general.nav.footer }}">
+      {% include nav-links.html place="footer" class="site-footer__link" %}
+    </nav>
+    <div class="site-footer__meta">
+      {% include language-switcher.html %}
+      <span>&copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}</span>
+    </div>
+  </div>
+</footer>

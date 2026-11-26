@@ -1,0 +1,31 @@
+---
+layout: page
+width: wide
+contact_section: false
+---
+{% comment %}
+  Contact page: the contact details under the title with the portrait beside them, then the form
+  next to the booking card. The page is the contact section itself, so default.html leaves out the
+  usual one (contact_section: false).
+{% endcomment %}
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+
+<div class="page-head contact-page__head">
+  <h1>{{ page.title }}</h1>
+  <p class="page-lead">{{ page.description }}</p>
+  {% include contact-details.html inline=true %}
+  <img class="contact-page__photo" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="512" height="512" alt="{{ site.title[lang] }}">
+</div>
+
+<div class="contact-page">
+  <section class="contact-card contact-page__form" id="contact-form">
+    <h2 class="contact-card__title">{{ trans.contact.form.title }}</h2>
+    <p class="contact-card__lead">{{ trans.contact.form.subtitle }}</p>
+    {% include contact-form.html %}
+  </section>
+
+  <div class="contact-page__aside">
+    {% include booking-card.html %}
+  </div>
+</div>

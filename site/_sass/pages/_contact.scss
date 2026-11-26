@@ -1,0 +1,120 @@
+@use "breakpoints" as *;
+
+// =========================
+// CONTACT PAGE
+// =========================
+
+// Head: title, lead and contact details. Below 1024 px the portrait sits next to the details
+// (listed one under another), from 1024 px it is on the right of the whole head.
+.contact-page__head {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "lead lead"
+    "photo details";
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 18px 20px;
+
+  h1 {
+    grid-area: title;
+  }
+
+  .page-lead {
+    grid-area: lead;
+  }
+
+  .contact-details {
+    grid-area: details;
+  }
+
+  .contact-details__list {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @include up(lg) {
+    grid-template-areas:
+      "title photo"
+      "lead photo"
+      "details photo";
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 64px;
+
+    .contact-details__list {
+      flex-direction: row;
+      gap: 10px 32px;
+    }
+  }
+}
+
+.contact-page__photo {
+  grid-area: photo;
+  width: 96px;
+  height: auto;
+  margin: 0;
+
+  @include up(lg) {
+    width: 200px;
+  }
+}
+
+// The form next to the booking card (_layouts/contact.html)
+.contact-page {
+  display: grid;
+  align-items: start;
+  gap: 24px;
+  margin-bottom: 48px;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
+// The form card reuses .contact-card, stacked instead of two columns
+.contact-page__form {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 16px;
+
+  .contact-form {
+    margin-top: 8px;
+  }
+}
+
+.contact-page__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(24px, 3vw, 32px);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-tint);
+
+  > svg {
+    width: 32px;
+    height: 32px;
+    color: var(--color-accent);
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+
+  .button--primary {
+    align-self: flex-start;
+  }
+}
+
+.booking-card__title {
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 1.2;
+}

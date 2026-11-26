@@ -1,4 +1,6 @@
-{% assign lang = site.active_lang | default: site.default_lang %}
+{% comment %}
+  Use cases listed in the page's related_use_cases (by page_id), as tiles.
+{% endcomment %}
 {% assign trans = site.data[site.active_lang] %}
 
 {% if page.related_use_cases and page.related_use_cases.size > 0 %}
@@ -10,18 +12,13 @@
   {% endfor %}
 
   {% if matched_use_cases.size > 0 %}
-    <div class="post-homepage-banner">
-      <h2 class="post-homepage-banner-title">{{ trans.datapages_use_cases.related_use_cases }}</h2>
-      <ul class="latest-posts">
-        {% for use_case in matched_use_cases %}
-          <li class="latest-post">
-            <a class="post-title" href="{{ '/use-cases/' | append: use_case.slug | append: '/' | relative_url }}">{{ use_case.lang[lang].title }}</a>
-            {% if use_case.lang[lang].description %}
-              <span class="post-lead">{{ use_case.lang[lang].description }}</span>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+  <section class="related">
+    <h2 class="related__title">{{ trans.datapages_use_cases.related_use_cases }}</h2>
+    <div class="service-grid service-grid--list">
+      {% for use_case in matched_use_cases %}
+        {% include service-tile.html service=use_case base="use-cases" %}
+      {% endfor %}
     </div>
+  </section>
   {% endif %}
 {% endif %}

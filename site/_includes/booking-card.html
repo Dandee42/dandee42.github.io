@@ -1,0 +1,10 @@
+{% comment %}
+  "Naplánujte si se mnou konzultaci" card with the booking button (contact.scheduled_meeting).
+{% endcomment %}
+{% assign meeting_trans = site.data[site.active_lang].contact.scheduled_meeting %}
+<section class="booking-card">
+  {% include svg/calendar.svg %}
+  <h2 class="booking-card__title">{{ meeting_trans.title }}</h2>
+  <p>{{ meeting_trans.subtitle }} {{ meeting_trans.paragraph | replace: '<br><br>', ' ' }}</p>
+  {% include booking-link.html class="button--primary" %}
+</section>

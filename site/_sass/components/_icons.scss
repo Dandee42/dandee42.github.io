@@ -1,0 +1,39 @@
+// Inline SVG icons of the redesign. The global `svg path { stroke: var(--color-text) }` rule in _base
+// would recolour them, so an .icon follows the colour of the surrounding text instead.
+.icon {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: middle;
+}
+
+svg.icon :is(path, circle, rect, line, polyline) {
+  stroke: currentColor;
+}
+
+// Material Symbols (the icon names are requested in head-links.html)
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+// An SVG icon as a link (iconlink.html)
+a.iconlink {
+  svg circle,
+  svg path {
+    stroke: var(--color-link);
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+
+    svg circle,
+    svg path {
+      stroke-width: 0.1em;
+    }
+  }
+}

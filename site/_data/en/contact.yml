@@ -28,6 +28,7 @@ scheduled_meeting:
   paragraph: "Click the button below and choose a consultation date.<br><br>Looking forward to our cooperation!"
   submit_button: "Arrange FREE consultation"
   link: "https://calendly.com/daniel-hladik/30min"
+  booking_url: "https://calendly.com/daniel-hladik/free-meeting"
 scheduled_meeting_success_page:
   title: "Sent<br>successfully"
   subtitle: "...you will soon receive<br>an confirmation email"

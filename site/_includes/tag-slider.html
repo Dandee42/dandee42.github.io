@@ -1,49 +1,48 @@
-<div class="tags-slider-wrapper">
-  <button class="tags-prev">{% include svg/nav-arrow-left.svg %}</button>
-  <div class="tags-slider">
-    {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq %}
+{% comment %}
+  All tags on one row that scrolls sideways (swipe, trackpad or the arrow buttons). The arrows and
+  the fading edges show only where there is more to scroll to. "Vše" stands for the whole blog.
+{% endcomment %}
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[site.active_lang] %}
+{% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq %}
+<div class="tag-scroller" data-tag-scroller>
+  <button type="button" class="tag-scroller__arrow" aria-label="{{ trans.blog.tags_prev }}" hidden data-tag-prev>{% include svg/nav-arrow-left.svg %}</button>
+  <nav class="tag-scroller__track" aria-label="{{ trans.blog.tags_label }}" data-tag-track>
+    <a class="tag-chip is-active" href="{% if lang != site.default_lang %}/{{ lang }}/blog/{% else %}/blog/{% endif %}" aria-current="true">{{ trans.blog.all_tags }}</a>
     {% for tag in all_tags %}
-      <div class="post-tags">
-        <a href="/tag/{{ tag | slugify }}/">
-          {{ tag }} ({{ site.posts | where_exp:"p","p.tags contains tag" | size }})
-        </a>
-      </div>
+    <a class="tag-chip" href="/tag/{{ tag | slugify }}/">{{ tag }} <span class="tag-chip__count">({{ site.posts | where_exp:"p","p.tags contains tag" | size }})</span></a>
     {% endfor %}
-  </div>
-  <button class="tags-next">{% include svg/nav-arrow-right.svg %}</button>
+  </nav>
+  <button type="button" class="tag-scroller__arrow" aria-label="{{ trans.blog.tags_next }}" hidden data-tag-next>{% include svg/nav-arrow-right.svg %}</button>
 </div>
 
-<script defer>
-document.addEventListener("DOMContentLoaded", function() {
-  const sliderWrapper = document.querySelector(".tags-slider-wrapper");
-  const slider = sliderWrapper.querySelector(".tags-slider");
-  const prevBtn = sliderWrapper.querySelector(".tags-prev");
-  const nextBtn = sliderWrapper.querySelector(".tags-next");
+<script>
+(function () {
+  var root = document.querySelector("[data-tag-scroller]");
+  if (!root) return;
+  var track = root.querySelector("[data-tag-track]");
+  var prev = root.querySelector("[data-tag-prev]");
+  var next = root.querySelector("[data-tag-next]");
 
-  function updateArrows() {
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-    prevBtn.style.display = slider.scrollLeft > 0 ? "inline-flex" : "none";
-    nextBtn.style.display = slider.scrollLeft < maxScroll ? "inline-flex" : "none";
+  function update() {
+    var max = track.scrollWidth - track.clientWidth;
+    var canPrev = track.scrollLeft > 1;
+    var canNext = max > 1 && track.scrollLeft < max - 1;
+    prev.hidden = !canPrev;
+    next.hidden = !canNext;
+    root.classList.toggle("can-prev", canPrev);
+    root.classList.toggle("can-next", canNext);
   }
 
-  prevBtn.addEventListener("click", () => {
-    slider.scrollBy({
-      left: -slider.clientWidth,
-      behavior: "smooth"
-    });
-  });
+  function step(direction) {
+    track.scrollBy({ left: direction * track.clientWidth * 0.8, behavior: "smooth" });
+  }
 
-  nextBtn.addEventListener("click", () => {
-    slider.scrollBy({
-      left: slider.clientWidth,
-      behavior: "smooth"
-    });
-  });
-
-  slider.addEventListener("scroll", updateArrows);
-  window.addEventListener("resize", updateArrows);
-
-  updateArrows();
-});
+  prev.addEventListener("click", function () { step(-1); });
+  next.addEventListener("click", function () { step(1); });
+  track.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  if (document.fonts) document.fonts.ready.then(update);
+  update();
+})();
 </script>

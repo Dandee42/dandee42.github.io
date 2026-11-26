@@ -1,0 +1,93 @@
+// =========================
+// POST CARDS
+// =========================
+
+// auto-fill keeps the column width, so a single related post doesn't stretch over the whole row
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 32px;
+}
+
+.post-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &:focus-within {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 6px;
+    border-radius: var(--radius-md);
+  }
+}
+
+// No top margin from the global img rule, so the image starts at the top of the card
+.post-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1em;
+  border-radius: var(--radius-md);
+  background-color: var(--color-band);
+  aspect-ratio: 40 / 21;
+  object-fit: cover;
+}
+
+html[data-theme="dark"] .post-card__image img {
+  filter: brightness(0.85);
+}
+
+.post-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.post-card__meta {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.8em;
+}
+
+// Static, the link's ::after spans the whole card
+.post-card__title {
+  position: static;
+  margin: 0;
+  font-family: var(--type-serif);
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.post-card__link {
+  color: var(--color-heading);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.post-card:hover .post-card__link {
+  color: var(--color-link);
+}
+
+.post-card__lead {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9em;
+}

@@ -13,6 +13,19 @@
   --color-idea:    #8b5cf6;
   --color-success: #10b981;
   --color-error:   #ef4444;
+  // Layout
+  --container-max: 1160px;
+  --container-pad: 20px;
+  --prose-max: 720px;
+  --aside-width: 300px;
+  --header-height: 56px;
+  --space-section: 56px;
+  // Shapes
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
 }
 
 html,
@@ -20,9 +33,24 @@ html[data-theme="light"] {
   --color-background: var(--oc-gray-1);
   --color-text: var(--oc-gray-8);
   --color-heading: var(--oc-gray-8);
-  --color-link: var(--oc-blue-8);
+  --color-link: var(--oc-blue-9);
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-yellow-3);
+  --color-accent: var(--oc-blue-9);
+  --color-accent-hover: color-mix(in srgb, var(--oc-blue-9) 78%, #000);
+  --color-on-accent: #ffffff;
+  --color-surface: #ffffff;
+  --color-band: var(--oc-gray-2);
+  --color-tint: #e7f0f9;
+  --color-tint-text: var(--oc-blue-9);
+  --color-muted: var(--oc-gray-7);
+  --color-border-subtle: var(--oc-gray-3);
+  --color-card-border: transparent;
+  --color-input: var(--oc-gray-0);
+  --color-header-bg: rgba(241, 243, 245, 0.94);
+  --color-error-text: #c92a2a;
+  --color-button: var(--oc-gray-6);
+  --shadow-card: 0 1px 2px rgba(33, 37, 41, 0.06), 0 8px 24px rgba(33, 37, 41, 0.06);
   --color-border: var(--oc-gray-4);
   --color-button-background: var(--oc-gray-1);
   --color-button-text: var(--oc-gray-8);
@@ -30,20 +58,10 @@ html[data-theme="light"] {
   --color-button-text-hover: var(--oc-gray-1);
   --color-form: white;
   --color-form-placeholder: var(--oc-gray-6);
-  --color-form-description: var(--oc-gray-6);
-  --color-alert-background: var(--oc-gray-1);
-  --color-progress-bar-background: var(--oc-gray-3);
-  --color-progress-bar: var(--oc-gray-7);
-  --color-progress-bar-text: var(--oc-gray-7);
-  --color-progress-bar-tools-background: var(--oc-gray-3);
-  --color-progress-bar-tools-text: var(--oc-gray-8);
-  --color-post-reading-time: var(--oc-gray-6);
   --color-icon-service: var(--oc-gray-6);
-  --shadow-service: rgba(0, 0, 0, 0.08);
   --alert-border: var(--oc-gray-4);
   --color-heading-link: var(--oc-gray-1);
   --code-block-bg: var(--oc-gray-2);
-  --code-block-fg: var(--oc-gray-8);
   --code-block-border: var(--oc-gray-4);
   .alert-warning { --alert-background: #fff7ed; }
   .alert-info    { --alert-background: #eff6ff; }
@@ -59,6 +77,21 @@ html[data-theme="dark"] {
   --color-link: var(--oc-blue-3);
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-gray-8);
+  --color-accent: var(--oc-blue-3);
+  --color-accent-hover: color-mix(in srgb, var(--oc-blue-3) 70%, #fff);
+  --color-on-accent: #15181c;
+  --color-surface: #2b3035;
+  --color-band: #1a1d20;
+  --color-tint: #1c3347;
+  --color-tint-text: var(--oc-blue-2);
+  --color-muted: var(--oc-gray-5);
+  --color-border-subtle: var(--oc-gray-8);
+  --color-card-border: var(--oc-gray-8);
+  --color-input: #1a1d20;
+  --color-header-bg: rgba(33, 37, 41, 0.92);
+  --color-error-text: #ff8787;
+  --color-button: var(--oc-gray-7);
+  --shadow-card: none;
   --color-border: var(--oc-gray-7);
   --color-button-background: var(--oc-gray-9);
   --color-button-text: var(--oc-gray-3);
@@ -66,20 +99,10 @@ html[data-theme="dark"] {
   --color-button-text-hover: var(--oc-gray-8);
   --color-form: var(--oc-gray-8);
   --color-form-placeholder: var(--oc-gray-6);
-  --color-form-description: var(--oc-gray-4);
-  --color-alert-background: var(--oc-gray-8);
-  --color-progress-bar-background: var(--oc-gray-8);
-  --color-progress-bar: var(--oc-gray-6);
-  --color-progress-bar-text: var(--oc-gray-6);
-  --color-progress-bar-tools-background: var(--oc-gray-8);
-  --color-progress-bar-tools-text: var(--oc-gray-4);
-  --color-post-reading-time: var(--oc-gray-6);
   --color-icon-service: var(--oc-gray-3);
-  --shadow-service: rgba(0, 0, 0, 0.4);
   --alert-border: var(--oc-gray-7);
   --color-heading-link: var(--oc-gray-3);
   --code-block-bg: var(--oc-gray-8);
-  --code-block-fg: var(--oc-gray-1);
   --code-block-border: var(--oc-gray-3);
   .alert { --alert-background: var(--oc-gray-8); }
 }

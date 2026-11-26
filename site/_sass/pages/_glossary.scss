@@ -1,0 +1,63 @@
+// =========================
+// AI GLOSSARY
+// =========================
+
+// The list reuses the blog's search field, tag chips and sideways scroller, and the service tiles
+// (_layouts/glossary.html)
+.glossary-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.glossary-letters {
+  margin-bottom: 32px;
+}
+
+.glossary-alpha-btn {
+  justify-content: center;
+  min-width: 40px;
+  padding: 0 12px;
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.glossary-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.glossary-item__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.glossary-icon {
+  flex: none;
+  color: var(--color-accent);
+  font-size: 32px !important;
+}
+
+// Category chips on a tile sit above the title link that covers the tile
+.glossary-item__tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.glossary-no-results {
+  color: var(--color-muted);
+  font-style: italic;
+}

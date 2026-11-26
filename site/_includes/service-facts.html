@@ -1,0 +1,13 @@
+{% comment %}
+  "V kostce" card: label/value pairs from a service's `facts`. Parameters: facts (required).
+{% endcomment %}
+{% assign facts_trans = site.data[site.active_lang].datapages_services %}
+<div class="facts-card">
+  <p class="facts-card__title">{{ facts_trans.facts_title }}</p>
+  <dl class="facts-card__list">
+    {% for fact in include.facts %}
+    <dt>{{ fact.label }}</dt>
+    <dd>{{ fact.value }}</dd>
+    {% endfor %}
+  </dl>
+</div>

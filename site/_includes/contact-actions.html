@@ -1,0 +1,10 @@
+{% comment %}
+  "Napište mi" (to the contact form) and "Domluvit hovor" (booking) buttons, optionally followed by a
+  text link. Parameters: more_url, more_label (both optional).
+{% endcomment %}
+{% assign trans = site.data[site.active_lang] %}
+<div class="contact-actions">
+  <a class="button--primary" href="#contact-form">{{ trans.general.side_contact.write }}</a>
+  {% include booking-link.html class="button--outline" label=trans.general.side_contact.call %}
+  {% if include.more_url %}<a class="contact-actions__more" href="{{ include.more_url | relative_url }}">{{ include.more_label }}</a>{% endif %}
+</div>
