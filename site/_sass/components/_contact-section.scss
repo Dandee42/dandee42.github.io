@@ -31,11 +31,12 @@
   min-width: 0;
 }
 
+// The same size as the other section titles (.section-head h2, .related__title)
 .contact-card__title {
   margin: 0;
-  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.12;
 }
 
 .contact-card__lead {

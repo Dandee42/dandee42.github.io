@@ -1,6 +1,6 @@
 {% assign autopages_trans = site.data[site.active_lang].autopages %}
 <a class="back-link" href="{{ '/blog/' | relative_url }}">{{ autopages_trans.back_to_all_posts }}</a>
 <div class="page-head">
-  <h1>{{ autopages_trans.tags.title }}"{{ page.autopages.display_name }}"</h1>
+  <h1>{{ autopages_trans.tags.title | replace: "%name%", page.autopages.display_name }}</h1>
 </div>
 {% include post-list.html %}
