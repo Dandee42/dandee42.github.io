@@ -9,6 +9,7 @@ lead: "Notes from building products with AI: my own projects, how-to guides and 
 width: wide
 pagination:
   enabled: true
+  offset: 1 # the newest post is the large card on page 1 (post-list.html featured=true)
 published: true
 ---
 {% assign trans = site.data[site.active_lang].blog %}

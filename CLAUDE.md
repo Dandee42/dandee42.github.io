@@ -120,7 +120,7 @@ The index pages (`services.md`, `use-cases.md`, `glossary.md` + `.en.md`) are th
 - Glossary tooltips: `<abbr title="Term: short definition" data-glossary="<glossary-slug>">Term</abbr>`. `post-abbr-tooltip.html` turns these into hover tooltips or a bottom sheet with a link to the glossary entry.
 - Templates in `site/_posts/templates/` are `published: false`. Copy `2025-10-18-post-template-1-{cs,en}.md` when starting a new post.
 - Hero images: put `<name>.webp` (1200 px wide) and `<name>-800.webp` next to the hero JPG. `hero-picture.html` (used by `post-item.html`) serves them through `<picture>` only when they exist (checked with the `file_exists` filter in `site/_plugins/image_filters.rb`), and the JPG stays the `og:image`.
-- Autopages generate `/tag/:tag/` and `/:cat/`. jekyll-paginate-v2 paginates `/blog/` at 3 per page.
+- Autopages generate `/tag/:tag/` and `/:cat/`. jekyll-paginate-v2 paginates `/blog/` at 3 per page; `blog.md` skips the newest post (`offset: 1`), which page 1 shows as the large featured card on top of its 3 posts.
 - `search-cs.json` / `search-en.json` (layout `search.html`) produce per-language post indexes for client-side search. `sitemap.xml` is an index pointing at `sitemap_cs.xml` / `sitemap_en.xml` (layout `sitemap.xml`). Set `sitemap: false` in front matter to exclude a page.
 
 ### Page shell and components
