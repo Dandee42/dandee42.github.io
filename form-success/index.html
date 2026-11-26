@@ -1,5 +1,9 @@
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="cs">
 
@@ -99,7 +103,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,cancel,chat,chat_bubble,check,close,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,chat,chat_bubble,check,close,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
 <!-- RSS Feed -->
 
 <link rel="alternate" type="application/rss+xml" title="Daniel Hladík - RSS (cs)" href="https://daniel-hladik.cz/feed.xml" />
@@ -124,88 +128,87 @@
 
 <!-- Cookie modal -->
 <style>
+  /* Compact card at the bottom: full width on phones, bottom left on wider screens (the chat
+     toggle sits bottom right) */
   #cookie-overlay {
     position: fixed;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
     z-index: 10001;
-    width: calc(100% - 2rem);
-    max-width: 600px;
+    max-width: 440px;
+  }
+  @media (min-width: 768px) {
+    #cookie-overlay {
+      left: 24px;
+      right: auto;
+      bottom: 24px;
+    }
   }
   #cookie-overlay.d-none { display: none !important; }
 
   #cookie-banner {
     font-family: var(--type-serif);
-    background: var(--color-background);
+    background: var(--color-surface);
     color: var(--color-text);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
   }
   #cookie-banner h2 {
     font-family: var(--type-serif);
     color: var(--color-heading);
-    font-size: var(--type-size);
-    font-weight: 600;
-    margin: 0 0 .6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 6px;
   }
   #cookie-banner p {
-    margin: 0 0 1.25rem;
-    font-size: var(--type-size);
-    line-height: 1.6;
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
     color: var(--color-text);
   }
   #cookie-banner a {
-    color: var(--color-text);
+    color: var(--color-link);
     font-weight: bold;
   }
   #cookie-banner a:hover {
     border-bottom: none;
   }
 
-  #cookie-banner .link-policy {
-    display: block;
-    text-align: right;
-    margin-top: .5rem;
-    font-size: calc(var(--type-size) * 0.85);
-    color: var(--color-text);
-  }
-
   #cookie-banner .cookie-actions {
     display: flex;
-    gap: .5rem;
+    gap: 8px;
   }
   #cookie-banner .cookie-actions button {
     flex: 1;
   }
   #cookie-banner button {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: var(--radius-pill);
     font-family: var(--type-serif);
-    font-size: var(--type-size);
-    padding: .4rem 1.5rem;
-    border-radius: 12px;
-    border: solid 2px var(--color-text);
+    font-size: 0.9375rem;
     cursor: pointer;
-    transition: background-color .15s, color .15s, box-shadow .15s;
+    transition: box-shadow .15s;
   }
   #cookie-decline {
-    background: var(--color-button-background);
-    color: var(--color-button-text);
+    background: transparent;
+    color: var(--color-heading);
+    border: 1.5px solid var(--color-text);
   }
   #cookie-decline:hover {
-    background: var(--color-button-background-hover);
-    color: var(--color-button-text-hover);
     box-shadow: 0 0 0 1px var(--color-text);
   }
   #cookie-accept {
-    background: var(--color-button-background-hover);
-    color: var(--color-button-text-hover);
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    background: var(--color-heading);
+    color: var(--color-background);
+    border: 0;
+    font-weight: 700;
   }
   #cookie-accept:hover {
-    box-shadow: 0 0 0 1px var(--color-text);
+    box-shadow: 0 0 0 3px var(--color-border);
   }
 </style>
 
@@ -298,18 +301,9 @@
 </div>
 
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col col-sm-10 col-md-8 col-lg-6 page-column">
-        
-
-        
-      </div>
-    </div>
-  </div>
-  <script src="/assets/js/bootstrap.min.js" defer></script>
   
-  <script src="/assets/js/darkmode.js"></script>
+  
+
   
   
   <script src="/assets/js/particles.min.js"></script>

@@ -3,23 +3,29 @@ var moon =
 var sun =
   '<svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M3 11.507a9.493 9.493 0 0018 4.219c-8.507 0-12.726-4.22-12.726-12.726A9.494 9.494 0 003 11.507z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
 
+// Pages without the toggle (bare pages) still get the theme from the inline script in head.html
+function setToggleIcon(icon) {
+  var toggle = document.getElementById("theme-toggle");
+  if (toggle) toggle.innerHTML = icon;
+}
+
 let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
 let theme = sessionStorage.getItem("theme");
 
 if (systemInitiatedDark.matches) {
-  document.getElementById("theme-toggle").innerHTML = sun;
+  setToggleIcon(sun);
 } else {
-  document.getElementById("theme-toggle").innerHTML = moon;
+  setToggleIcon(moon);
 }
 
 function prefersColorTest(systemInitiatedDark) {
   if (systemInitiatedDark.matches) {
     document.documentElement.setAttribute("data-theme", "dark");
-    document.getElementById("theme-toggle").innerHTML = sun;
+    setToggleIcon(sun);
     sessionStorage.setItem("theme", "");
   } else {
     document.documentElement.setAttribute("data-theme", "light");
-    document.getElementById("theme-toggle").innerHTML = moon;
+    setToggleIcon(moon);
     sessionStorage.setItem("theme", "");
   }
 }
@@ -32,28 +38,28 @@ function modeSwitcher() {
   if (theme === "dark") {
     document.documentElement.setAttribute("data-theme", "light");
     sessionStorage.setItem("theme", "light");
-    document.getElementById("theme-toggle").innerHTML = moon;
+    setToggleIcon(moon);
   } else if (theme === "light") {
     document.documentElement.setAttribute("data-theme", "dark");
     sessionStorage.setItem("theme", "dark");
-    document.getElementById("theme-toggle").innerHTML = sun;
+    setToggleIcon(sun);
   } else if (systemInitiatedDark.matches) {
     document.documentElement.setAttribute("data-theme", "light");
     sessionStorage.setItem("theme", "light");
-    document.getElementById("theme-toggle").innerHTML = moon;
+    setToggleIcon(moon);
   } else {
     document.documentElement.setAttribute("data-theme", "dark");
     sessionStorage.setItem("theme", "dark");
-    document.getElementById("theme-toggle").innerHTML = sun;
+    setToggleIcon(sun);
   }
 }
 
 if (theme === "dark") {
   document.documentElement.setAttribute("data-theme", "dark");
   sessionStorage.setItem("theme", "dark");
-  document.getElementById("theme-toggle").innerHTML = sun;
+  setToggleIcon(sun);
 } else if (theme === "light") {
   document.documentElement.setAttribute("data-theme", "light");
   sessionStorage.setItem("theme", "light");
-  document.getElementById("theme-toggle").innerHTML = moon;
+  setToggleIcon(moon);
 }

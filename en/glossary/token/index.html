@@ -1,5 +1,9 @@
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,7 +121,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,cancel,chat,chat_bubble,check,close,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,chat,chat_bubble,check,close,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
 <!-- RSS Feed -->
 
 <link rel="alternate" type="application/rss+xml" title="Daniel Hladik - RSS (en)" href="https://daniel-hladik.cz/en/feed.xml" />
@@ -142,88 +146,87 @@
 
 <!-- Cookie modal -->
 <style>
+  /* Compact card at the bottom: full width on phones, bottom left on wider screens (the chat
+     toggle sits bottom right) */
   #cookie-overlay {
     position: fixed;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
     z-index: 10001;
-    width: calc(100% - 2rem);
-    max-width: 600px;
+    max-width: 440px;
+  }
+  @media (min-width: 768px) {
+    #cookie-overlay {
+      left: 24px;
+      right: auto;
+      bottom: 24px;
+    }
   }
   #cookie-overlay.d-none { display: none !important; }
 
   #cookie-banner {
     font-family: var(--type-serif);
-    background: var(--color-background);
+    background: var(--color-surface);
     color: var(--color-text);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
   }
   #cookie-banner h2 {
     font-family: var(--type-serif);
     color: var(--color-heading);
-    font-size: var(--type-size);
-    font-weight: 600;
-    margin: 0 0 .6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 6px;
   }
   #cookie-banner p {
-    margin: 0 0 1.25rem;
-    font-size: var(--type-size);
-    line-height: 1.6;
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
     color: var(--color-text);
   }
   #cookie-banner a {
-    color: var(--color-text);
+    color: var(--color-link);
     font-weight: bold;
   }
   #cookie-banner a:hover {
     border-bottom: none;
   }
 
-  #cookie-banner .link-policy {
-    display: block;
-    text-align: right;
-    margin-top: .5rem;
-    font-size: calc(var(--type-size) * 0.85);
-    color: var(--color-text);
-  }
-
   #cookie-banner .cookie-actions {
     display: flex;
-    gap: .5rem;
+    gap: 8px;
   }
   #cookie-banner .cookie-actions button {
     flex: 1;
   }
   #cookie-banner button {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: var(--radius-pill);
     font-family: var(--type-serif);
-    font-size: var(--type-size);
-    padding: .4rem 1.5rem;
-    border-radius: 12px;
-    border: solid 2px var(--color-text);
+    font-size: 0.9375rem;
     cursor: pointer;
-    transition: background-color .15s, color .15s, box-shadow .15s;
+    transition: box-shadow .15s;
   }
   #cookie-decline {
-    background: var(--color-button-background);
-    color: var(--color-button-text);
+    background: transparent;
+    color: var(--color-heading);
+    border: 1.5px solid var(--color-text);
   }
   #cookie-decline:hover {
-    background: var(--color-button-background-hover);
-    color: var(--color-button-text-hover);
     box-shadow: 0 0 0 1px var(--color-text);
   }
   #cookie-accept {
-    background: var(--color-button-background-hover);
-    color: var(--color-button-text-hover);
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    background: var(--color-heading);
+    color: var(--color-background);
+    border: 0;
+    font-weight: 700;
   }
   #cookie-accept:hover {
-    box-shadow: 0 0 0 1px var(--color-text);
+    box-shadow: 0 0 0 3px var(--color-border);
   }
 </style>
 
@@ -311,8 +314,8 @@
     <span class="alert-text">Taking on new projects: web apps, AI and automation. <a href="#contact-form">Get&nbsp;in&nbsp;touch</a></span>
 
     
-      <button class="alert-close">
-        <span class="material-symbols-outlined">cancel</span>
+      <button type="button" class="alert-close" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
       </button>
     
   </div>
@@ -324,35 +327,136 @@
   
   
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col col-sm-10 col-md-8 col-lg-6 page-column">
-        
+  
+  
 
-<header>
-  <div>
-    <!--<a class="particles-icon icon-link" href="https://daniel-hladik.cz"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8m0 0l3.5 3.5M8 12l3.5-3.5M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</a>-->
-    <a class="site-title" href="/en/">Daniel Hladik</a>
-    <small>
+
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a class="site-header__brand" href="/en/">
+      <span class="site-header__name">Daniel Hladik</span>
+      <span class="site-header__role">AI Product Builder</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+
+
+  
+
+  
     
-      AI Product Builder
     
-    </small>
+    <a class="site-nav__link" href="/en/services/">Services</a>
+  
+
+  
+    
+    
+    <a class="site-nav__link" href="/en/blog/">Blog</a>
+  
+
+  
+
+  
+    
+    
+    <a class="site-nav__link" href="/en/cv/">About me</a>
+  
+
+  
+    
+    
+    <a class="site-nav__link" href="/en/contact/">Contact</a>
+  
+
+
+    </nav>
+    <div class="site-header__actions">
+      <button type="button" id="theme-toggle" class="icon-button" onclick="modeSwitcher()" aria-label="Toggle dark mode"></button>
+      <button type="button" class="icon-button menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" data-menu-open><svg class="icon" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+    </div>
   </div>
-  <a id="theme-toggle" class="toggle-icon" onclick="modeSwitcher()"></a>
+  
 </header>
 
-<article>
-  <main>
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Main navigation" hidden data-mobile-menu>
+  <div class="mobile-menu__top">
+    <span class="site-header__brand">
+      <span class="site-header__name">Daniel Hladik</span>
+      <span class="site-header__role">AI Product Builder</span>
+    </span>
+    <button type="button" class="icon-button" aria-label="Close menu" data-menu-close><svg class="icon" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Main navigation">
     
 
 
-<p class="blog-back"><a href="/en/glossary/">← All terms</a></p>
+  
 
-<h1>Token (in LLM context)</h1>
-<p>The basic unit of text that LLM models work with - roughly 3/4 of an English word or 2–3 characters.</p>
+  
+    
+    
+    <a class="mobile-menu__link" href="/en/services/">Services</a>
+  
 
+  
+    
+    
+    <a class="mobile-menu__link" href="/en/blog/">Blog</a>
+  
+
+  
+
+  
+    
+    
+    <a class="mobile-menu__link" href="/en/cv/">About me</a>
+  
+
+  
+    
+    
+    <a class="mobile-menu__link" href="/en/contact/">Contact</a>
+  
+
+
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button--primary button--block" href="#contact-form">Get in touch</a>
+    
+
+
+<a class="button--outline button--block" href="https://calendly.com/daniel-hladik/free-meeting" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">Book a call</a>
+
+  </div>
+</div>
+<script src="/assets/js/site-nav.js" defer></script>
+
+  <main id="main">
+    
+
+<div class="l-container l-page">
+
+  <div class="l-split">
+    <article class="l-split__main page-article">
+      
+
+
+
+
+<header class="detail-head">
+  <a class="back-link" href="/en/glossary/">← All terms</a>
+  <div class="detail-head__text">
+    <h1>Token (in LLM context)</h1>
+    <p class="page-lead page-lead--italic">The basic unit of text that LLM models work with - roughly 3/4 of an English word or 2–3 characters.</p>
+  </div>
+  
+</header>
+
+
+<div class="prose">
 <h2>What is a token?</h2>
 <p>A <strong>token</strong> is the smallest unit of text that large language models (<a href="/en/glossary/llm/">LLMs</a>) work with. It is not a whole word - the model first splits text into tokens (parts of words, whole words, or punctuation) and then processes them.</p>
 <h3>How large is a token?</h3>
@@ -368,119 +472,174 @@
   <li><strong>Chunking:</strong> When splitting documents for <a href="/en/glossary/rag/">RAG</a>, chunk size is typically measured in tokens</li>
 </ul>
 
+</div>
 
-  </main>
-</article>
-<footer>
-  <div id="contact-form">&nbsp;</div>
-  
+    </article>
+    <div class="l-split__aside">
+      
 
-<section class="contact-section">
-    <div class="contact-intro">
-        <h2>Leave me a message</h2>
-        <p class="contact-description">
-            If you're interested in working with me, don’t hesitate to contact me.
-        </p>
+
+
+<aside class="side-contact" aria-label="Contact">
+  <div class="side-contact-card">
+    <img class="side-contact-photo" src="/assets/files/portrait.webp" width="96" height="96" alt="" loading="lazy">
+    <p class="side-contact-name">Daniel Hladik</p>
+    <p class="side-contact-role">AI Product Builder</p>
+    <p class="side-contact-text">I build web apps, AI&nbsp;solutions and automations&nbsp;– from idea to launch.</p>
+    <a class="side-contact-button button--primary button--block" href="#contact-form">Get in touch</a>
+    
+
+
+<a class="side-contact-call" href="https://calendly.com/daniel-hladik/free-meeting" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">Book a call</a>
+
+  </div>
+</aside>
+
+
     </div>
-
-    <!-- Formulář pro odeslání zprávy -->
-    <form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <!-- Skryté hodnoty pro Web3Forms -->
-        <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
-        <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - EN" />
-        <input type="hidden" name="from_name" value="daniel-hladik.cz" />
-        <input type="hidden" name="redirect" value="https://daniel-hladik.cz/en/form-success/" />
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-        <input type="hidden" name="title" value="Token (in LLM context)">
-        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/token/">
-        <input type="hidden" name="lang" value="en">
-
-        <div class="form-group-container">
-            <!-- Name -->
-            <div class="form-group">
-                <label for="name" class="form-label">Name</label>
-                <input id="name" name="name" class="form-input" placeholder="Your name" type="text" autocomplete="name" required />
-                <div class="empty-feedback invalid-feedback">
-                    Please enter your name so I know how to call you :)
-                </div>
-            </div>
-
-            <!-- Email -->
-            <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" class="form-input" placeholder="write.your@email.com" type="email" autocomplete="email" required />
-                <div class="empty-feedback">
-                    Please fill in your email address.
-                </div>
-                <div class="invalid-feedback">
-                    Maybe just a typo, but your email isn’t valid for sending. Please use the format: "email@domain.com"
-                </div>
-            </div>
-
-            <!-- Messsage -->
-            <div class="form-group">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-textarea" id="message" name="message" placeholder="Write your message here" required></textarea>
-                <div class="empty-feedback invalid-feedback">
-                    Please fill in the message field.
-                </div>
-            </div>
-
-            <!-- Submit button -->
-            <div class="form-group">
-                <button class="form-submit" type="submit">Send</button>
-            </div>
-        </div>
-
-        <p class="text-center" id="result"></p>
-    </form>
-</section>
-
-<script src="/assets/js/contact-form.js" defer></script>
-  
-
-
-<div class="contact" id="contact-details">
-  <h2>Contact me if anything...</h2>
-  <ul>
-    <li>Daniel Hladik 
-      <small>
-        AI Product Builder
-      </small>
-    </li> 
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</span><span>Praha 6</span></li>
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
-</span><a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Attention! This email contains 100% good news&body=Let me know what's on your mind :)" aria-label="info&#64;daniel-hladik&#46;cz">info&#64;daniel-hladik&#46;cz</a></li>
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</span><a href="https://www.linkedin.com/in/daniel-hladik/?locale=en_US" aria-label="LinkedIn">daniel-hladik</a></li>
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10M13 2.05S16 6 16 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 21.95S8 18 8 12c0-6 3-9.95 3-9.95M2.63 15.5H12M2.63 8.5h18.74" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path clip-rule="evenodd" d="M21.879 17.917c.494.304.463 1.043-.045 1.101l-2.567.291-1.151 2.312c-.228.459-.933.234-1.05-.334l-1.255-6.116c-.099-.48.333-.782.75-.525l5.318 3.271z" stroke="#000000" stroke-width="1.5"></path></svg>
-</span><a href="https://daniel-hladik.cz" aria-label="daniel-hladik.cz">daniel-hladik.cz</a></li>
-  </ul>
-  
-
-
-
-<!-- Calendly link widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<p><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">Arrange FREE consultation</a></p>
-<!-- Calendly link widget end -->
+  </div>
 
 </div>
 
-  <div class="divider"></div>
-  <div class="footer-bottom">
+  </main>
   
-<p class="footer-links">
-  <a href="/en/" aria-label="Home">Home</a>
-  <a href="/en/cv/" aria-label="Curriculum vitae">CV</a>
-  <a href="/en/services/" aria-label="Services">Services</a>
-  <a href="/en/glossary/" aria-label="AI Glossary">AI Glossary</a>
-  <a href="/en/blog/" aria-label="Blog">Blog</a>
-</p>
+
+<section class="site-contact" aria-label="Contact">
+  <div class="l-container">
+    <div class="contact-card" id="contact-form">
+      <div class="contact-card__info">
+        <h2 class="contact-card__title">Leave me a message</h2>
+        <p class="contact-card__lead">If you're interested in working with me, don’t hesitate to contact me.</p>
+        
+
+<div class="contact-details" id="contact-details">
+  
+  <ul class="contact-details__list">
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span>Praha 6</span></li>
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
+<a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Attention! This email contains 100% good news&body=Let me know what's on your mind :)">info&#64;daniel-hladik&#46;cz</a></li>
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<a href="https://www.linkedin.com/in/daniel-hladik/?locale=en_US" aria-label="LinkedIn">daniel-hladik</a></li>
+  </ul>
+</div>
+
+        
+
+
+<a class="contact-card__booking" href="https://calendly.com/daniel-hladik/free-meeting" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">Arrange FREE consultation</a>
+
+      </div>
+      <div class="contact-card__form">
+        
+
+
+<form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <!-- Skryté hodnoty pro Web3Forms -->
+    <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
+    <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - EN" />
+    <input type="hidden" name="from_name" value="daniel-hladik.cz" />
+    <input type="hidden" name="redirect" value="https://daniel-hladik.cz/en/form-success/" />
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+    <input type="hidden" name="title" value="Token (in LLM context)">
+    <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/token/">
+    <input type="hidden" name="lang" value="en">
+
+    <div class="form-group-container">
+        <!-- Name -->
+        <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" name="name" class="form-input" placeholder="Your name" type="text" autocomplete="name" required />
+            <div class="empty-feedback invalid-feedback">
+                Please enter your name so I know how to call you :)
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" class="form-input" placeholder="write.your@email.com" type="email" autocomplete="email" required />
+            <div class="empty-feedback">
+                Please fill in your email address.
+            </div>
+            <div class="invalid-feedback">
+                Maybe just a typo, but your email isn’t valid for sending. Please use the format: "email@domain.com"
+            </div>
+        </div>
+
+        <!-- Messsage -->
+        <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Write your message here" required></textarea>
+            <div class="empty-feedback invalid-feedback">
+                Please fill in the message field.
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+            <button class="form-submit button--primary button--block" type="submit">Send</button>
+        </div>
+    </div>
+
+    <p class="text-center" id="result"></p>
+</form>
+
+<script src="/assets/js/contact-form.js" defer></script>
+
+      </div>
+    </div>
+  </div>
+</section>
 
   
+
+<footer class="site-footer">
+  <div class="l-container site-footer__inner">
+    <nav class="site-footer__nav" aria-label="Footer links">
+      
+
+
+  
+    
+    
+    <a class="site-footer__link" href="/en/">Home</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/en/services/">Services</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/en/blog/">Blog</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/en/glossary/" aria-current="page">AI Glossary</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/en/cv/">About me</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/en/contact/">Contact</a>
+  
+
+
+    </nav>
+    <div class="site-footer__meta">
+      
 <div class="language-switcher">
 
     
@@ -498,34 +657,15 @@
 
 </div>
 
-  </div>
-  <small>&copy; <time datetime="2026-11-12T12:20:26+00:00">2026</time>
-    Daniel Hladík. All rights reserved.
-  </small>
-</footer>
-
-        
-          
-
-
-<aside class="side-contact" aria-label="Contact">
-  <div class="side-contact-card">
-    <img class="side-contact-photo" src="/assets/files/portrait.webp" width="96" height="96" alt="" loading="lazy">
-    <p class="side-contact-name">Daniel Hladik</p>
-    <p class="side-contact-role">AI Product Builder</p>
-    <p class="side-contact-text">I build web apps, AI&nbsp;solutions and automations&nbsp;– from idea to launch.</p>
-    <a class="side-contact-button" href="#contact-form">Get in touch</a>
-    
-    <a class="side-contact-call" href="https://calendly.com/daniel-hladik/free-meeting" target="_blank" rel="noopener">Book a call</a>
-  </div>
-</aside>
-
-        
-      </div>
+      <span>&copy; <time datetime="2026-11-26T12:39:52+00:00">2026</time> Daniel Hladík</span>
     </div>
   </div>
-  <script src="/assets/js/bootstrap.min.js" defer></script>
+</footer>
+
   
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
   <script src="/assets/js/darkmode.js"></script>
   
   
