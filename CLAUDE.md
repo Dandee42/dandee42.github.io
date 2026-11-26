@@ -82,9 +82,14 @@ How a change gets to production (this pattern is consistent throughout the git h
 ### i18n with jekyll-polyglot
 
 - `languages: ["cs", "en"]`, `default_lang: "cs"`. Polyglot builds the site once per language. Czech is served at `/`, English at `/en/`.
-- **Pages and posts come in pairs:** `foo.md` + `foo.en.md` (pages), or `YYYY-MM-DD-name-cs.md` + `YYYY-MM-DD-name-en.md` (posts). Both files share the same `page_id`, the same `permalink`/`slug`, and set `lang: cs` / `lang: en`.
+- **Pages and posts come in pairs:** `foo.md` + `foo.en.md` (pages), or `YYYY-MM-DD-name-cs.md` + `YYYY-MM-DD-name-en.md` (posts). Both files share the same `page_id` and set `lang: cs` / `lang: en`. The Czech site has Czech URLs, so a pair can have a different `permalink` per language (`contact.md` `/kontakt/`, `contact.en.md` `/contact/`). Posts still share their `slug` (Czech post slugs wait on a check of the n8n translation workflow).
 - **UI strings** live in `site/_data/cs/*.yml` and `site/_data/en/*.yml` with identical key structures. Templates read them via `{% assign trans = site.data[site.active_lang] %}` and then `trans.<file>.<key>`. When you add a key, add it to both languages.
-- Language-aware URLs are built by hand throughout includes. The pattern is: if `lang == site.default_lang` use the path as-is, otherwise prefix `/{{ lang }}`. Polyglot also auto-prefixes absolute `href="/..."` links in the EN build. To stop that, add a leading space inside the href (see `site/_includes/language-switcher.html`).
+- **Per-language URLs:**
+  - `_data/urls.yml` holds the section paths per language (`/sluzby/` and `/services/`, `/reseni/` and `/use-cases/`, `/ai-slovnik/` and `/glossary/`, `/kontakt/`, `/o-mne/`, `/zasady-cookies/`, …). Templates link through it (`{{ site.data.urls.contact[lang] | relative_url }}`), and `_data/navigation.yml` refers to its keys. A page's `permalink` must match it.
+  - Never build the other language's URL by adding or removing `/en`. Use the filters in `_plugins/lang_url.rb`: `{{ page | lang_url: "en" }}` (the page in another language, from `page.permalink_lang`), `{{ "/sluzby/" | lang_url: lang }}` (a path with the language prefix) and `{{ record | record_url: "services", lang }}` (a data page). The language switcher, canonical, hreflang, JSON-LD and both sitemaps use them.
+  - Polyglot gives paired pages and posts `permalink_lang` and a `redirect_from` with the other language's permalink. In the Czech build that is the old Czech URL (`/contact/` → `/kontakt/`); `_plugins/localized_urls.rb` drops these redirects in the English build. Polyglot overwrites any hand-written `redirect_from` on a page with a `page_id`.
+  - In the EN build polyglot rewrites every `href="/..."` to `/en/...`. A Czech URL in an href there needs a leading space inside the href (see `language-switcher.html`); absolute URLs survive only after `rel="canonical" ` or `hreflang="cs" `, which is why `hreflang` comes right before `href` in `head-seo-lang.html` (and there is no `x-default`).
+  - Old URLs keep working as redirect pages (meta refresh, canonical, noindex). Keep them when renaming anything again.
 - `exclude_from_localization` lists assets and sitemaps, which are emitted only once.
 
 ### Data-driven pages (jekyll-datapage-generator)
@@ -93,9 +98,11 @@ Services, use cases and the AI glossary are **YAML records, not markdown files**
 
 | Data file | Layout | Output dir |
 |---|---|---|
-| `site/_data/services.yml` | `service.html` | `/services/<slug>/` |
-| `site/_data/use_cases.yml` | `use-case.html` | `/use-cases/<slug>/` |
-| `site/_data/glossary.yml` | `glossary-term.html` | `/glossary/<slug>/` |
+| `site/_data/services.yml` | `service.html` | `/sluzby/<cs slug>/`, `/en/services/<slug>/` |
+| `site/_data/use_cases.yml` | `use-case.html` | `/reseni/<cs slug>/`, `/en/use-cases/<slug>/` |
+| `site/_data/glossary.yml` | `glossary-term.html` | `/ai-slovnik/<cs slug>/`, `/en/glossary/<slug>/` |
+
+The generator writes every record to `<dir>/<slug>/` in both builds; `_plugins/localized_urls.rb` then gives each data page its URL in the build's language (the Czech slug is `lang.cs.slug` where a record has one, otherwise `slug`), sets `permalink_lang`, and in the Czech build adds a redirect from the old `/services/<slug>/`-style URL.
 
 Each record has shared fields (`page_id`, `type`, `slug`, `date`, `published`, `icon`, and for services/use cases `show_in_list`, `related_posts`, `related_use_cases`). It also has a `lang:` map with `cs:` and `en:` subtrees holding `title`, `description`, `text` (raw HTML) and so on. Layouts render via `page.lang[lang].<field>`. Only `published: true` records generate pages. `description` is also the page's meta/OG description. Services may add an optional `card_description`, which the service tiles on the homepage (`home-services.html`) and on `/services/` (`services.html`) show instead of `description`. It keeps prices off the tiles while the meta description includes them. Glossary records also carry `term` and `categories`. Category labels come from `datapages_glossary.categories` in the per-language data files.
 
@@ -106,7 +113,7 @@ Services may also carry structured fields next to the HTML `text`:
 
 Services and use cases may set `image` (a 1200×630 JPG under `/assets/files/images/services/` or `/use-cases/`, with WebP versions next to it as for post heroes) plus a per-language `image_alt`. The layouts render it below the lead through `hero-picture.html`, and it becomes the page's `og:image`. Service tiles on `/services/` and the homepage show it in place of the icon, through `service-tile-image.html`. These images are generated illustrations: cool graphite grays with one blue accent, on the page background `#f1f3f5`. Before converting them, shift the background to exactly that colour and flatten the paper grain, so the image blends into the page in light mode. In dark mode, the `.hero-illustration` CSS shows it as a dimmed card with rounded corners.
 
-Inside the HTML `text`, cross-links to other glossary terms are hardcoded per language: `/glossary/<slug>/` in `cs` and `/en/glossary/<slug>/` in `en`.
+Inside the HTML `text`, cross-links are hardcoded per language with the target's URL in that language: `/ai-slovnik/<cs slug>/` (or `/sluzby/…`) in `cs` and `/en/glossary/<slug>/` in `en`. `post-abbr-tooltip.html` maps a post's `data-glossary="<slug>"` to the term's URL the same way.
 
 The index pages (`services.md`, `use-cases.md`, `glossary.md` + `.en.md`) are thin front-matter stubs. Their layouts (`services.html`, `use-cases.html`, `glossary.html`) iterate `site.data.<collection>` directly.
 
@@ -141,7 +148,7 @@ Layouts and includes are components; reuse them instead of writing page-specific
   - `split` (the default) puts the text next to a sticky aside with `side-contact.html`. The aside shows from 1200 px.
   - `wide` uses the whole container: services, use cases, blog, glossary list, About and contact.
   - Layout primitives (`.l-container`, `.l-split`, `.l-page`, `.l-section`, …) are in `_layout.scss`.
-- **Navigation:** `_data/navigation.yml` lists the items once. `nav-links.html place=header|footer` renders them, with labels from `trans.footer.<key>` and the active item matched by a `page.url` prefix. The header shows Služby, Blog, O mně, Kontakt and the theme toggle; the language switch and the AI glossary are only in the footer.
+- **Navigation:** `_data/navigation.yml` lists the items once (keys of `_data/urls.yml`). `nav-links.html place=header|footer` renders them, with labels from `trans.footer.<key>` and the active item matched by a `page.url` prefix. The header shows Služby, Blog, O mně, Kontakt and the theme toggle; the language switch and the AI glossary are only in the footer.
   - The mobile menu (`#mobile-menu`, `site-nav.js`) is a sibling of the header, because the header's `backdrop-filter` would trap a fixed element inside it.
 - **Sticky top:** the alert banner sticks at `top: 0` and the header below it at `top: var(--alert-height)`. `scroll-padding-top` and the sticky asides subtract both (`--alert-height`, `--header-height`).
 - **Contact:**

@@ -1,30 +1,26 @@
+{% comment %}
+  The page's URLs come from the lang_url filter (_plugins/lang_url.rb): a page can have a different
+  path in each language (Czech URLs on the Czech site), so the other language's URL can't be built
+  by adding or removing /en.
+{% endcomment %}
 {% assign lang = site.active_lang | default: site.default_lang %}
-{% assign clean_url = page.url | replace: 'index.html', '' %}
 {% assign og_image = page.image | default: site.og_image %}
-{% if lang == site.default_lang %}
-  {% assign full_url = site.url | append: clean_url %}
-{% else %}
-  {% assign full_url = site.url | append: '/' | append: lang | append: clean_url %}
-{% endif %}
+{% assign page_path = page | lang_url: lang %}
+{% assign full_url = site.url | append: page_path %}
 {% assign trans = site.data[site.active_lang] %}
 
 <!-- Cannonical url START -->
-{% if lang == site.default_lang %}
-  {% assign canonical_url = site.url | append: page.url | replace: 'index.html', '' %}
-{% else %}
-  {% assign canonical_url = site.url | append: '/' | append: lang | append: page.url | replace: 'index.html', '' %}
-{% endif %}
-<link rel="canonical" href="{{ canonical_url }}">
+<link rel="canonical" href="{{ full_url }}">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
+{% comment %}
+  hreflang comes right before href: in the English build polyglot leaves an absolute href alone
+  only after hreflang="cs" (or rel="canonical"), otherwise the Czech URL would get /en added.
+{% endcomment %}
 {% for l in site.languages %}
-  {% if l == site.default_lang %}
-    {% assign alt_url = site.url | append: page.url | replace: 'index.html', '' %}
-  {% else %}
-    {% assign alt_url = site.url | append: '/' | append: l | append: page.url | replace: 'index.html', '' %}
-  {% endif %}
-  <link rel="alternate" hreflang="{{ l }}" href="{{ alt_url }}">
+  {% assign alt_path = page | lang_url: l %}
+  <link rel="alternate" hreflang="{{ l }}" href="{{ site.url }}{{ alt_path }}">
 {% endfor %}
 <!-- Alternate Href lang END -->
 
@@ -62,13 +58,10 @@
   {% endif %}
 
   <!-- JSON-LD POST START -->
-  {% if lang == site.default_lang %}
-    {% assign home_url = site.url | append: '/' %}
-    {% assign blog_url = site.url | append: '/blog/' %}
-  {% else %}
-    {% assign home_url = site.url | append: '/' | append: lang | append: '/' %}
-    {% assign blog_url = site.url | append: '/' | append: lang | append: '/blog/' %}
-  {% endif %}
+  {% assign home_path = site.data.urls.home[lang] | lang_url: lang %}
+  {% assign home_url = site.url | append: home_path %}
+  {% assign blog_path = site.data.urls.blog[lang] | lang_url: lang %}
+  {% assign blog_url = site.url | append: blog_path %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -133,21 +126,18 @@
   <!-- JSON-LD STRUCTURED DATA START -->
   {% if page.type == "service" %}
     {% assign section_name = trans.footer.services %}
-    {% assign section_path = '/services/' %}
+    {% assign section_key = 'services' %}
   {% elsif page.type == "use-case" %}
     {% assign section_name = trans.footer.use_cases %}
-    {% assign section_path = '/use-cases/' %}
+    {% assign section_key = 'use_cases' %}
   {% elsif page.type == "glossary" %}
     {% assign section_name = trans.footer.glossary %}
-    {% assign section_path = '/glossary/' %}
+    {% assign section_key = 'glossary' %}
   {% endif %}
-  {% if lang == site.default_lang %}
-    {% assign home_url = site.url | append: '/' %}
-    {% assign section_url = site.url | append: section_path %}
-  {% else %}
-    {% assign home_url = site.url | append: '/' | append: lang | append: '/' %}
-    {% assign section_url = site.url | append: '/' | append: lang | append: section_path %}
-  {% endif %}
+  {% assign home_path = site.data.urls.home[lang] | lang_url: lang %}
+  {% assign home_url = site.url | append: home_path %}
+  {% assign section_path = site.data.urls[section_key][lang] | lang_url: lang %}
+  {% assign section_url = site.url | append: section_path %}
   {% if page.type == "glossary" %}
   <script type="application/ld+json">
   {
@@ -234,11 +224,8 @@
   <meta name="twitter:description" content="{{ og_description }}">
   <!-- JSON-LD PAGE START -->
   {% if page.layout == "home" %}
-  {% if lang == site.default_lang %}
-    {% assign home_url = site.url | append: '/' %}
-  {% else %}
-    {% assign home_url = site.url | append: '/' | append: lang | append: '/' %}
-  {% endif %}
+  {% assign home_path = site.data.urls.home[lang] | lang_url: lang %}
+  {% assign home_url = site.url | append: home_path %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -280,11 +267,11 @@
       "{{ trans.footer.contact }}"
     ],
     "url": [
-      "{{ home_url }}services/",
-      "{{ home_url }}use-cases/",
-      "{{ home_url }}glossary/",
-      "{{ home_url }}blog/",
-      "{{ home_url }}contact/"
+      "{{ site.url }}{{ site.data.urls.services[lang] | lang_url: lang }}",
+      "{{ site.url }}{{ site.data.urls.use_cases[lang] | lang_url: lang }}",
+      "{{ site.url }}{{ site.data.urls.glossary[lang] | lang_url: lang }}",
+      "{{ site.url }}{{ site.data.urls.blog[lang] | lang_url: lang }}",
+      "{{ site.url }}{{ site.data.urls.contact[lang] | lang_url: lang }}"
     ]
   }
   </script>

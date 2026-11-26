@@ -8,7 +8,6 @@ width: wide
 {% endcomment %}
 {% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
-{% if lang == site.default_lang %}{% assign lang_prefix = '' %}{% else %}{% assign lang_prefix = '/' | append: lang %}{% endif %}
 
 <div class="page-head page-head--split">
   <div class="page-head__text">
@@ -56,7 +55,7 @@ width: wide
             {% endfor %}
           </div>
         </div>
-        <h2 class="service-tile__title"><a class="service-tile__link" href="{{ lang_prefix }}/glossary/{{ item.slug }}/">{{ item.lang[lang].title }}</a></h2>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="{{ item | record_url: 'glossary', lang }}">{{ item.lang[lang].title }}</a></h2>
         <p class="service-tile__text">{{ item.lang[lang].short_definition }}</p>
         <span class="service-tile__more" aria-hidden="true">{{ trans.datapages_glossary.term_link }} →</span>
       </div>

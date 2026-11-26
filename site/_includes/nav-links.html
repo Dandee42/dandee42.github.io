@@ -1,20 +1,23 @@
 {% comment %}
-  Links from _data/navigation.yml. place="header" renders the header items (header and mobile
-  menu), place="footer" all of them. class is the CSS class of each link. The current page's
-  link gets aria-current="page".
+  Links from _data/navigation.yml, with their URLs from _data/urls.yml in the page's language.
+  place="header" renders the header items (header and mobile menu), place="footer" all of them.
+  class is the CSS class of each link. The current page's link gets aria-current="page".
 {% endcomment %}
+{% assign nav_lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
 {% for item in site.data.navigation %}
   {% if include.place == "footer" or item.header %}
+    {% assign item_url = site.data.urls[item.key][nav_lang] %}
     {% assign current = false %}
     {% if item.exact %}
-      {% if page.url == item.url %}{% assign current = true %}{% endif %}
+      {% if page.url == item_url %}{% assign current = true %}{% endif %}
     {% else %}
-      {% for prefix in item.match %}
+      {% for key in item.match %}
+        {% assign prefix = site.data.urls[key][nav_lang] %}
         {% assign url_start = page.url | slice: 0, prefix.size %}
         {% if url_start == prefix %}{% assign current = true %}{% endif %}
       {% endfor %}
     {% endif %}
-    <a class="{{ include.class }}" href="{{ item.url | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ trans.footer[item.key] }}</a>
+    <a class="{{ include.class }}" href="{{ item_url | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ trans.footer[item.key] }}</a>
   {% endif %}
 {% endfor %}

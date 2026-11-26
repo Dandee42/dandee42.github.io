@@ -18,7 +18,7 @@ Moje cesta k IT nevedla skrze univerzitní auly, ale skrze reálnou **praxi v e-
 
 Dnes tu cestu zkracuji. Spojuji produktové myšlení s vývojem a AI, abych **z vašeho nápadu udělal fungující produkt**: webovou aplikaci, AI asistenta nebo automatizaci, která pracuje za vás.
 
-{% include contact-actions.html more_url="/cv/" more_label="Více o mně →" %}
+{% include contact-actions.html more_url="/o-mne/" more_label="Více o mně →" %}
 
 </div>
 <div class="home-intro__media">

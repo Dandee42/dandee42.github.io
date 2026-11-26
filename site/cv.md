@@ -3,7 +3,7 @@ layout: page
 width: wide
 page_id: cv
 lang: cs
-permalink: /cv/
+permalink: /o-mne/
 title: Můj příběh
 description: Jak jsem se od správy e-shopu přes Nový Zéland dostal k vývoji webových aplikací, testování a AI. Co jsem se naučil a kde jsem dnes.
 published: true

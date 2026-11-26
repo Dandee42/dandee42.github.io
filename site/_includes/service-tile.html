@@ -8,9 +8,8 @@
 {% assign tile_lang = site.active_lang | default: site.default_lang %}
 {% assign tile_trans = site.data[tile_lang] %}
 {% assign tile_heading = include.heading | default: "h3" %}
-{% assign tile_base = include.base | default: "services" %}
-{% if tile_lang == site.default_lang %}{% assign tile_prefix = "" %}{% else %}{% assign tile_prefix = "/" | append: tile_lang %}{% endif %}
-{% assign tile_url = tile_prefix | append: "/" | append: tile_base | append: "/" | append: include.service.slug | append: "/" %}
+{% assign tile_section = include.base | default: "services" | replace: "-", "_" %}
+{% assign tile_url = include.service | record_url: tile_section, tile_lang %}
 <article class="service-tile service-tile--{{ include.size | default: 'small' }}">
   {% include service-tile-image.html service=include.service eager=include.eager %}
   <div class="service-tile__body">

@@ -5,7 +5,8 @@ layout: page
 {% assign trans = site.data[site.active_lang] %}
 {% assign term = page.lang[lang] %}
 
-{% include detail-head.html back_url='/glossary/' back_label=trans.datapages_glossary.all_terms_link title=term.title lead=term.short_definition %}
+{% assign back_url = site.data.urls.glossary[lang] %}
+{% include detail-head.html back_url=back_url back_label=trans.datapages_glossary.all_terms_link title=term.title lead=term.short_definition %}
 
 <div class="prose">
 {{ term.text }}

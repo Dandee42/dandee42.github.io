@@ -34,15 +34,16 @@
   var closeBtn = sheet.querySelector('.abbr-sheet-close');
   var linkEl = sheet.querySelector('.abbr-sheet-link');
   var glossaryLinkLabel = '{{ site.data[site.active_lang].datapages_glossary.read_more | default: "Read more →" }}';
+  // data-glossary holds the term's slug; its page has a Czech slug on the Czech site
+  {% assign abbr_lang = site.active_lang | default: site.default_lang %}
+  var glossaryUrls = { {% for term in site.data.glossary %}{% if term.published %}"{{ term.slug }}": "{{ term | record_url: 'glossary', abbr_lang }}"{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %} };
 
   function openSheet(abbr) {
     termEl.textContent = abbr.textContent;
     descEl.textContent = abbr.getAttribute('data-tooltip');
     var glossarySlug = abbr.getAttribute('data-glossary');
     if (glossarySlug) {
-      var lang = document.documentElement.lang || 'cs';
-      var prefix = (lang === 'cs') ? '' : '/' + lang;
-      linkEl.href = prefix + '/glossary/' + glossarySlug + '/';
+      linkEl.href = glossaryUrls[glossarySlug] || '{{ site.data.urls.glossary[abbr_lang] | lang_url: abbr_lang }}';
       linkEl.textContent = glossaryLinkLabel;
       linkEl.style.display = '';
     } else {

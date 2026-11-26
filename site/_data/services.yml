@@ -11,6 +11,7 @@
   related_use_cases:
   lang:
     cs:
+      slug: tvorba-webovych-aplikaci
       title: "Tvorba webových aplikací na míru"
       description: "Interní systémy, klientské portály a MVP na míru. Rychlý vývoj s AI, automatické testy a napojení na vaše nástroje. Prototyp za 30 000 Kč."
       card_description: "Interní systémy, klientské portály a MVP na míru. Rychlý vývoj s AI, automatické testy a napojení na vaše nástroje."
@@ -30,7 +31,7 @@
         <h2>Jaký je rozdíl mezi webem a webovou aplikací?</h2>
         <p>Web vás prezentuje a návštěvník si ho přečte. Webová aplikace slouží k práci: uživatelé se přihlašují, zadávají a upravují data a aplikace s nimi dál pracuje, třeba počítá, třídí nebo posílá upozornění. Běží v prohlížeči, takže ji není potřeba instalovat a funguje na počítači i v mobilu.</p>
         <h2>Napojení na nástroje, které už používáte</h2>
-        <p>Aplikace nemusí stát osamoceně. Díky zkušenostem s automatizací (n8n) a API ji propojím s nástroji, které už používáte, jako je fakturace, CRM, e-mail nebo tabulky, a data mezi nimi potečou automaticky. Kde to dává smysl, doplním i AI: třídění dokumentů, vytěžování dat nebo vyhledávání ve firemních dokumentech pomocí <a href="/services/rag-systems/">RAG</a>.</p>
+        <p>Aplikace nemusí stát osamoceně. Díky zkušenostem s automatizací (n8n) a API ji propojím s nástroji, které už používáte, jako je fakturace, CRM, e-mail nebo tabulky, a data mezi nimi potečou automaticky. Kde to dává smysl, doplním i AI: třídění dokumentů, vytěžování dat nebo vyhledávání ve firemních dokumentech pomocí <a href="/sluzby/rag-systemy/">RAG</a>.</p>
         <h2>Rychlý vývoj s AI, spolehlivost díky testům</h2>
         <p>Aplikace stavím v Djangu (Python) nebo v Next.js, podle toho, co se pro váš projekt hodí víc, a při vývoji využívám AI nástroje jako Claude Code a Cursor. Rutinní část kódu díky tomu vzniká rychleji a vy dostanete funkční verzi dřív a levněji. Rychlost ale nesmí jít na úkor kvality, proto klíčové funkce pokrývám automatickými testy (Playwright), které hlídají, že aplikace funguje i po každé další úpravě.</p>
         <h2>Jak probíhá spolupráce</h2>
@@ -136,6 +137,7 @@
   related_use_cases:
   lang:
     cs:
+      slug: rag-systemy
       title: "RAG systémy - AI nad vašimi daty"
       description: "Vytvořím inteligentní vyhledávání a chatboty nad vašimi interními dokumenty, databázemi a znalostní bází."
       lead: "Dejte svým datům hlas. Ptejte se firemní dokumentace jako člověka."
@@ -178,6 +180,7 @@
   related_use_cases:
   lang:
     cs:
+      slug: automatizace-procesu
       title: "Inteligentní automatizace (n8n & AI)"
       description: "Propojím vaše aplikace a zapojím AI agenty do vašich procesů."
       lead: "Zbavte se rutiny a nechte systémy, aby spolu mluvily a samy se rozhodovaly."
@@ -222,6 +225,7 @@
   related_use_cases:
   lang:
     cs:
+      slug: tvorba-landing-page
       title: "Tvorba landing page na míru"
       description: "Landing page pro vaši kampaň s měřením konverzí a poptávkami rovnou do CRM. Jednostránkový web, který přivádí zákazníky. Od 7 900 Kč."
       card_description: "Landing page pro vaši kampaň s měřením konverzí a poptávkami rovnou do CRM. Jednostránkový web, který přivádí zákazníky."
@@ -267,7 +271,7 @@
         <h2>Kolik stojí landing page</h2>
         <p class="price-box"><strong>Landing page od 7 900 Kč.</strong> Cena závisí na počtu sekcí, jazykových verzích a napojení na další systémy. Po konzultaci dostanete cenovou nabídku. Nejsem plátce DPH.</p>
         <p>První měsíc po spuštění jsou drobné úpravy v ceně. Potom si můžete vybrat měsíční paušál, nebo platit jen jednotlivé úpravy podle hodinové sazby.</p>
-        <p>Potřebujete víc než jednu stránku? Podívejte se na <a href="/services/website-development/">tvorbu webových stránek na míru</a>.</p>
+        <p>Potřebujete víc než jednu stránku? Podívejte se na <a href="/sluzby/tvorba-webovych-stranek/">tvorbu webových stránek na míru</a>.</p>
       faq:
         - q: "Jaký je rozdíl mezi landing page a webem?"
           a: "Web vás představuje jako celek a návštěvník si na něm vybírá, kam půjde dál. Landing page má jeden cíl a všechno na ní vede k jedné akci, proto u kampaní obvykle přinese víc poptávek."
@@ -362,6 +366,7 @@
   related_use_cases:
   lang:
     cs:
+      slug: tvorba-webovych-stranek
       title: "Tvorba webových stránek na míru"
       description: "Prezentační weby na míru, které se rychle načtou, dobře se najdou a poptávky vám samy doručí do e-mailu nebo CRM. Od 24 900 Kč."
       card_description: "Prezentační weby na míru, které se rychle načtou, dobře se najdou a poptávky vám samy doručí do e-mailu nebo CRM."
@@ -396,7 +401,7 @@
           <li>třídění poptávek pomocí AI podle typu nebo naléhavosti,</li>
           <li>připomenutí, když na poptávku nikdo neodpoví.</li>
         </ul>
-        <p>Víc o propojování systémů najdete u služby <a href="/services/intelligent-automation/">Inteligentní automatizace</a>.</p>
+        <p>Víc o propojování systémů najdete u služby <a href="/sluzby/automatizace-procesu/">Inteligentní automatizace</a>.</p>
         <h2>Otestovaný web, který nepřestane fungovat</h2>
         <p>Formulář, který potichu přestane odesílat, stojí zakázky a nikdo si toho nevšimne. Věnuji se i automatizovanému testování (Playwright), takže klíčové části webu, jako jsou formuláře a rezervace, můžu pokrýt automatickými testy, které hlídají, že fungují i po každé úpravě.</p>
         <h2>Proč statický web na míru</h2>
@@ -418,7 +423,7 @@
         <h2>Kolik stojí tvorba webu na míru</h2>
         <p class="price-box"><strong>Prezentační web od 24 900 Kč.</strong> Výsledná cena závisí na počtu stránek, jazykových verzích a napojení na další systémy. Po konzultaci dostanete cenovou nabídku. Nejsem plátce DPH.</p>
         <p>Po spuštění si můžete vybrat <strong>měsíční paušál</strong> (hosting, údržba, zálohy a drobné úpravy), nebo platit jen <strong>jednotlivé úpravy podle hodinové sazby</strong>.</p>
-        <p>Potřebujete jen jednu stránku pro kampaň? Podívejte se na <a href="/services/landing-pages/">tvorbu landing page</a>.</p>
+        <p>Potřebujete jen jednu stránku pro kampaň? Podívejte se na <a href="/sluzby/tvorba-landing-page/">tvorbu landing page</a>.</p>
       faq:
         - q: "Jak dlouho tvorba webu trvá?"
           a: "Záleží na rozsahu a na tom, jak rychle se podaří připravit texty a podklady. Konkrétní termín dostanete v nabídce po úvodní konzultaci."
@@ -433,9 +438,9 @@
         - q: "Už web mám. Můžete ho předělat?"
           a: "Ano. Projdu současný web a nový postavím tak, aby nepřišel o pozice ve vyhledávání, například přesměrováním starých adres."
         - q: "Jaký je rozdíl mezi webem a landing page?"
-          a: "Web vás představuje jako celek a má více stránek. <a href=\"/services/landing-pages/\">Landing page</a> je jedna stránka s jediným cílem, nejčastěji pro reklamní kampaň."
+          a: "Web vás představuje jako celek a má více stránek. <a href=\"/sluzby/tvorba-landing-page/\">Landing page</a> je jedna stránka s jediným cílem, nejčastěji pro reklamní kampaň."
         - q: "Postavíte i e-shop?"
-          a: "Ne. Zaměřuji se na prezentační weby, landing pages a <a href=\"/services/web-app-development/\">webové aplikace na míru</a>."
+          a: "Ne. Zaměřuji se na prezentační weby, landing pages a <a href=\"/sluzby/tvorba-webovych-aplikaci/\">webové aplikace na míru</a>."
       facts:
         - label: "Cena"
           value: "od 24 900 Kč"
@@ -544,6 +549,7 @@
   related_use_cases:
   lang:
     cs:
+      slug: automatizovane-testovani
       title: "Automatizované testování (QA)"
       description: "Zajišťuji, aby váš software fungoval bezchybně při každém release nových funkcionalit."
       lead: "Odhalte chyby dříve, než je najdou vaši zákazníci."
@@ -584,6 +590,7 @@
   related_use_cases:
   lang:
     cs:
+      slug: ai-agenti
       title: "AI Agenti na míru"
       description: "Stavím autonomní AI agenty a multi-agentní systémy, které myslí, plánují a jednají za vás."
       lead: "Postavte si tým digitálních zaměstnanců, kteří pracují 24/7 bez přestávky."

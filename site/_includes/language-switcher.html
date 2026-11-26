@@ -1,16 +1,20 @@
+{% comment %}
+  Link to the same page in the other language, which can have a different URL (lang_url filter,
+  _plugins/lang_url.rb). Tag and category pages have no counterpart, so they show no switch.
+{% endcomment %}
 {% unless page.autopages %}
 <div class="language-switcher">
 {% for lang in site.languages %}
     {% assign lang_name = site.data[lang].general.lang_name %}
-    {% assign clean_url = page.url | replace: 'index.html', '' %}
+    {% assign lang_path = page | lang_url: lang %}
     {% if lang == site.active_lang %}
 <!--<span class="lang-active">{{ lang_name }}</span>-->
     {% else %}
         {% if lang == site.default_lang %}
-<a class="lang-link" href=" {{ clean_url }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
+<a class="lang-link" href=" {{ lang_path }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
         {%- comment -%}The leading space prevents jekyll-polyglot from rewriting this href with a language prefix.{%- endcomment -%}
         {% else %}
-<a class="lang-link" href="/{{ lang }}{{ clean_url }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
+<a class="lang-link" href="{{ lang_path }}" aria-label="{{ lang_name }}">{{ lang_name }}</a>
         {% endif %}
     {% endif %}
 {% endfor %}

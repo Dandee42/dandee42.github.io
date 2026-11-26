@@ -7,7 +7,8 @@ width: wide
 {% assign use_case_data = page.lang[lang] %}
 {% assign hero_alt = use_case_data.image_alt | default: use_case_data.title %}
 
-{% include detail-head.html back_url="/use-cases/" back_label=trans.datapages_use_cases.all_use_cases_link title=use_case_data.title lead=use_case_data.lead image_alt=hero_alt %}
+{% assign back_url = site.data.urls.use_cases[lang] %}
+{% include detail-head.html back_url=back_url back_label=trans.datapages_use_cases.all_use_cases_link title=use_case_data.title lead=use_case_data.lead image_alt=hero_alt %}
 
 <div class="l-split detail-body">
   <div class="l-split__main">

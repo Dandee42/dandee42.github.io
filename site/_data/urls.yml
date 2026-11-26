@@ -1,0 +1,31 @@
+# Paths of the site's sections per language: Czech URLs on the Czech site, English ones on the
+# English site (polyglot adds the /en prefix there). The pages' permalinks (contact.md and
+# contact.en.md, ...) and the data pages (_plugins/localized_urls.rb) use the same paths;
+# templates link through this map, e.g. {{ site.data.urls.contact[lang] | relative_url }}.
+home:
+  cs: /
+  en: /
+services:
+  cs: /sluzby/
+  en: /services/
+use_cases:
+  cs: /reseni/
+  en: /use-cases/
+glossary:
+  cs: /ai-slovnik/
+  en: /glossary/
+blog:
+  cs: /blog/
+  en: /blog/
+tag:
+  cs: /tag/
+  en: /tag/
+about:
+  cs: /o-mne/
+  en: /cv/
+contact:
+  cs: /kontakt/
+  en: /contact/
+cookies:
+  cs: /zasady-cookies/
+  en: /cookie-policy/
