@@ -1,3 +1,6 @@
 latest_posts_title: "Přečtěte si moje poslední příspěvky"
 reading_time_label: "čtení"
 all_posts_link: "Všechny články →"
+posts_prev: "Předchozí články"
+posts_next: "Další články"
+all_posts_button: "Přejít na všechny články"

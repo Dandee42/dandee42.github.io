@@ -39,3 +39,21 @@
     grid-auto-columns: calc((100% - 24px) / 2);
   }
 }
+
+// Full-width rows (the homepage): three cards in view from 1024 px
+.card-slider__track--wide {
+  @include up(lg) {
+    grid-auto-columns: calc((100% - 48px) / 3);
+  }
+}
+
+// The last tile of a row: a light blue tile with a button, e.g. to the whole blog
+.card-slider__end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-tint);
+  text-align: center;
+}

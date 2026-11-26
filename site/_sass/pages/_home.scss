@@ -57,3 +57,14 @@
 .contact-actions__more {
   font-weight: 700;
 }
+
+// Latest posts: the title, then the blog link and the slider arrows (post-homepage-banner.html)
+.home-posts__head {
+  align-items: center;
+}
+
+.home-posts__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

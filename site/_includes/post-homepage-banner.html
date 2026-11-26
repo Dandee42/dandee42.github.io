@@ -1,20 +1,33 @@
 {% comment %}
-  The three latest posts in the page's language, as cards, with a link to the blog.
+  The three latest posts in the page's language, as cards in a row that scrolls sideways
+  (card-slider.js), with a link to the blog next to the title and a tile with a button to the blog
+  at the end of the row.
 {% endcomment %}
 {% assign lang = site.active_lang | default: site.default_lang %}
 {% assign latest_posts = site.posts | where: "lang", lang | sort: "date" | reverse | slice: 0,3 %}
 {% assign trans = site.data[site.active_lang].home %}
+{% if lang != site.default_lang %}{% assign blog_url = "/" | append: lang | append: "/blog/" %}{% else %}{% assign blog_url = "/blog/" %}{% endif %}
 
 {% if latest_posts.size > 0 %}
-<section class="home-posts l-container l-section">
-  <div class="section-head section-head--row">
+<section class="home-posts l-container l-section" data-card-slider>
+  <div class="section-head section-head--row home-posts__head">
     <h2>{{ trans.latest_posts_title }}</h2>
-    <a class="section-head__link" href="{% if lang != site.default_lang %}/{{ lang }}/blog/{% else %}/blog/{% endif %}">{{ trans.all_posts_link }}</a>
+    <div class="home-posts__actions">
+      <a class="section-head__link" href="{{ blog_url }}">{{ trans.all_posts_link }}</a>
+      <div class="card-slider__nav">
+        <button type="button" class="tag-scroller__arrow" aria-label="{{ trans.posts_prev }}" hidden data-slider-prev>{% include svg/nav-arrow-left.svg %}</button>
+        <button type="button" class="tag-scroller__arrow" aria-label="{{ trans.posts_next }}" hidden data-slider-next>{% include svg/nav-arrow-right.svg %}</button>
+      </div>
+    </div>
   </div>
-  <div class="post-grid">
+  <div class="card-slider__track card-slider__track--wide" data-slider-track>
     {% for post in latest_posts %}
       {% include post-card.html post=post %}
     {% endfor %}
+    <div class="card-slider__end">
+      <a class="button--primary" href="{{ blog_url }}">{{ trans.all_posts_button }}</a>
+    </div>
   </div>
 </section>
+<script src="{{ '/assets/js/card-slider.js' | relative_url }}" defer></script>
 {% endif %}

@@ -22,10 +22,12 @@
   }
 }
 
+// No top margin from the global img rule, so the image starts at the top of the card
 .post-card__image img {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0 0 1em;
   border-radius: var(--radius-md);
   background-color: var(--color-band);
   aspect-ratio: 40 / 21;
