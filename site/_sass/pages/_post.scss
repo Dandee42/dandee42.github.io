@@ -146,10 +146,11 @@
 
 // Table of contents in the aside (post-toc-aside.html, filled by post-toc.js)
 .toc-card {
+  display: flex;
   flex: 0 1 auto;
+  flex-direction: column;
   min-height: 0;
   padding: 20px 22px;
-  overflow-y: auto;
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-lg);
   background-color: var(--color-surface);
@@ -161,6 +162,7 @@
 }
 
 .toc-card__title {
+  flex: none;
   margin: 0 0 10px;
   color: var(--color-muted);
   font-size: 0.75em;
@@ -169,12 +171,39 @@
   text-transform: uppercase;
 }
 
+// Only the list scrolls, under the title, with a thin rounded scrollbar in the card's right padding
 .toc-card__list {
-  margin: 0;
-  padding: 0;
+  min-height: 0;
+  margin: 0 -14px 0 0;
+  padding: 0 8px 0 0;
+  overflow-y: auto;
   font-size: 0.8em;
   line-height: 1.35;
   list-style: none;
+
+  // Chrome, Edge and Safari: a 6 px rounded thumb without arrow buttons. They ignore these as soon
+  // as scrollbar-width or scrollbar-color is set, so the standard properties are for Firefox only.
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: var(--color-border);
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-color: var(--color-border) transparent;
+    scrollbar-width: thin;
+  }
 
   ul {
     margin: 0;

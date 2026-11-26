@@ -60,12 +60,12 @@
     links[active.id].setAttribute("aria-current", "location");
     current = active;
 
-    // Keep the highlighted item in view when the card is shorter than its list and scrolls (the
-    // card itself, not the page)
-    var cardBox = card.getBoundingClientRect();
+    // Keep the highlighted item in view when the list is shorter than its content and scrolls
+    // (the list itself, not the page)
+    var listBox = list.getBoundingClientRect();
     var linkBox = links[active.id].getBoundingClientRect();
-    if (linkBox.top < cardBox.top || linkBox.bottom > cardBox.bottom) {
-      card.scrollTop += linkBox.top - cardBox.top - (card.clientHeight - linkBox.height) / 2;
+    if (linkBox.top < listBox.top || linkBox.bottom > listBox.bottom) {
+      list.scrollTop += linkBox.top - listBox.top - (list.clientHeight - linkBox.height) / 2;
     }
   }
 
