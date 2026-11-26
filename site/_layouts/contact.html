@@ -4,16 +4,17 @@ width: wide
 contact_section: false
 ---
 {% comment %}
-  Contact page: the form next to the booking card and the contact details. The page is the contact
-  section itself, so default.html leaves out the usual one (contact_section: false).
+  Contact page: the contact details under the title, then the form next to the booking card. The
+  page is the contact section itself, so default.html leaves out the usual one
+  (contact_section: false).
 {% endcomment %}
-{% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
 
 <div class="page-head">
   <div class="page-head__text">
     <h1>{{ page.title }}</h1>
     <p class="page-lead">{{ page.description }}</p>
+    {% include contact-details.html inline=true %}
   </div>
 </div>
 
@@ -26,16 +27,5 @@ contact_section: false
 
   <div class="contact-page__aside">
     {% include booking-card.html %}
-    <section class="details-card">
-      <h2 class="details-card__title">{{ trans.contact.title }}</h2>
-      <div class="details-card__person">
-        <img src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="80" height="80" alt="">
-        <p>
-          <span class="details-card__name">{{ site.title[lang] }}</span>
-          <span class="details-card__role">{{ site.tagshort[lang] }}</span>
-        </p>
-      </div>
-      {% include contact-details.html %}
-    </section>
   </div>
 </div>

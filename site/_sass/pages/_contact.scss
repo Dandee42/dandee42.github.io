@@ -4,7 +4,7 @@
 // CONTACT PAGE
 // =========================
 
-// The form next to the booking card and the contact details (_layouts/contact.html)
+// The form next to the booking card (_layouts/contact.html)
 .contact-page {
   display: grid;
   align-items: start;
@@ -57,54 +57,9 @@
   }
 }
 
-.booking-card__title,
-.details-card__title {
+.booking-card__title {
   margin: 0;
   font-size: 1.3em;
   font-weight: 700;
   line-height: 1.2;
-}
-
-.details-card {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: clamp(24px, 3vw, 32px);
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-xl);
-  background-color: var(--color-surface);
-  box-shadow: var(--shadow-card);
-
-  .contact-details__list {
-    margin-top: 0;
-  }
-}
-
-.details-card__person {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  img {
-    flex: none;
-    width: 80px;
-    height: 80px;
-  }
-
-  p {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    line-height: 1.35;
-  }
-}
-
-.details-card__name {
-  color: var(--color-heading);
-  font-weight: 700;
-}
-
-.details-card__role {
-  color: var(--color-muted);
-  font-size: 0.85em;
 }
