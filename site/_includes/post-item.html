@@ -1,27 +1,30 @@
 {% comment %}
-  A blog post: head (back link, tags, title, lead, author and date, hero image) and below it the
-  text next to a sticky aside with the table of contents and the contact card.
+  A blog post: head (back link, tags, title, lead, author and date, with the hero image beside them
+  from 1024 px) and below it the text next to a sticky aside with the table of contents and the
+  contact card.
 {% endcomment %}
 {% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
 
-<header class="detail-head post-head">
+<header class="detail-head post-head{% if page.image %} detail-head--media{% endif %}">
   <a class="back-link" href="{{ '/blog/' | relative_url }}">{{ trans.blog.all_posts_link }}</a>
-  {% if page.tags and page.tags != empty %}
-  <p class="post-head__tags">{% for tag in page.tags %}<a class="tag-chip tag-chip--small" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% endfor %}</p>
-  {% endif %}
-  <h1 class="post-title">{{ page.title }}</h1>
-  {% if page.lead %}<p class="page-lead page-lead--italic">{{ page.lead }}</p>{% endif %}
-  <p class="post-meta">
-    <img class="post-meta__avatar" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="44" height="44" alt="">
-    <span class="post-meta__text">
-      <span class="post-meta__author">{{ site.title[lang] }}</span>
-      <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: trans.general.date_format }}</time>{% if page.reading_time %} · {{ page.reading_time }} {{ trans.blog.reading_time }}{% endif %}</span>
-    </span>
-  </p>
+  <div class="detail-head__text">
+    {% if page.tags and page.tags != empty %}
+    <p class="post-head__tags">{% for tag in page.tags %}<a class="tag-chip tag-chip--small" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% endfor %}</p>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.lead %}<p class="page-lead page-lead--italic">{{ page.lead }}</p>{% endif %}
+    <p class="post-meta">
+      <img class="post-meta__avatar" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="44" height="44" alt="">
+      <span class="post-meta__text">
+        <span class="post-meta__author">{{ site.title[lang] }}</span>
+        <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: trans.general.date_format }}</time>{% if page.reading_time %} · {{ page.reading_time }} {{ trans.blog.reading_time }}{% endif %}</span>
+      </span>
+    </p>
+  </div>
   {% if page.image %}
     {% capture hero_alt %}{{ trans.blog.alt_hero_image }} {{ page.title }}{% endcapture %}
-    {% include hero-picture.html alt=hero_alt class="detail-hero" sizes="(min-width: 1224px) 1160px, 100vw" %}
+    {% include hero-picture.html alt=hero_alt class="detail-hero" sizes="(min-width: 1224px) 500px, (min-width: 1024px) 44vw, 100vw" %}
   {% endif %}
 </header>
 

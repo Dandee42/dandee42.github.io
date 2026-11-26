@@ -87,6 +87,36 @@
   }
 }
 
+.detail-head__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// With a hero image: the text on the left, the image on the right from 1024 px, so the image
+// doesn't take the whole first screen
+.detail-head--media {
+  @include up(lg) {
+    display: grid;
+    grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+    align-items: center;
+    gap: 16px 56px;
+
+    > .back-link {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3.4vw, 2.75rem);
+    }
+
+    .detail-hero {
+      margin-top: 0;
+    }
+  }
+}
+
 .detail-hero {
   margin-top: 8px;
 

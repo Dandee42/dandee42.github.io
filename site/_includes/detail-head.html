@@ -1,13 +1,16 @@
 {% comment %}
   Head of a service, use-case or glossary term page: back link, title, lead and the hero
-  illustration (page.image, if any).
+  illustration (page.image, if any). With an image, the text and the image sit side by side from
+  1024 px (.detail-head--media).
   Parameters: back_url, back_label, title, lead, image_alt (all from the calling layout).
 {% endcomment %}
-<header class="detail-head">
+<header class="detail-head{% if page.image %} detail-head--media{% endif %}">
   <a class="back-link" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
-  <h1>{{ include.title }}</h1>
-  {% if include.lead %}<p class="page-lead page-lead--italic">{{ include.lead }}</p>{% endif %}
+  <div class="detail-head__text">
+    <h1>{{ include.title }}</h1>
+    {% if include.lead %}<p class="page-lead page-lead--italic">{{ include.lead }}</p>{% endif %}
+  </div>
   {% if page.image %}
-    {% include hero-picture.html alt=include.image_alt class="hero-illustration detail-hero" sizes="(min-width: 1224px) 1160px, 100vw" %}
+    {% include hero-picture.html alt=include.image_alt class="hero-illustration detail-hero" sizes="(min-width: 1224px) 500px, (min-width: 1024px) 44vw, 100vw" %}
   {% endif %}
 </header>
