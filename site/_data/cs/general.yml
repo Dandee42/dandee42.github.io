@@ -10,6 +10,12 @@ page-not-found:
 alert:
   message: 'Přijímám nové projekty: webové aplikace, AI a automatizace. <a href="#contact-form">Napište&nbsp;mi</a>'
 
+nav:
+  label: "Hlavní navigace"
+  open: "Otevřít menu"
+  close: "Zavřít menu"
+  theme: "Přepnout tmavý režim"
+
 side_contact:
   label: "Kontakt"
   text: "Stavím webové aplikace, AI&nbsp;řešení a&nbsp;automatizace&nbsp;– od nápadu po spuštění."

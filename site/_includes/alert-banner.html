@@ -17,8 +17,8 @@
     <span class="alert-text">{{ trans.general.alert.message }}</span>
 
     {% if site.alert.dismissable %}
-      <button class="alert-close">
-        <span class="material-symbols-outlined">cancel</span>
+      <button type="button" class="alert-close" aria-label="{{ trans.general.close }}">
+        <span class="material-symbols-outlined">close</span>
       </button>
     {% endif %}
   </div>

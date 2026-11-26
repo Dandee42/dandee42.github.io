@@ -428,16 +428,6 @@ html[data-theme="dark"] .hero-illustration img {
   float: right;
 }
 
-a.site-title {
-  font-weight: 500;
-  color: var(--color-heading);
-
-  &:focus,
-  &:hover {
-    border-color: inherit;
-    color: inherit;
-  }
-}
 
 .share-button-container {
   text-align: center;
@@ -800,91 +790,6 @@ a.reversefootnote {
     color: #f87171;       
     font-size: 0.875rem;  
     margin-top: 0.25rem;
-}
-
-.alert-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5em 1em 0.5em 1em;
-  text-align: center;
-  position: sticky; // takes its own space above the content, stays visible while scrolling
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  font-size: 1rem;
-  box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-}
-
-// --alert-height is set by alert-banner.html / alert.js; anchor jumps stop below the banner
-html {
-  scroll-padding-top: var(--alert-height, 0px);
-}
-
-.alert-icon {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  font-size: 2em;
-}
-
-.alert-text {
-  flex-grow: 1;
-}
-
-.alert-text a {
-  color: var(--color-link);
-  text-decoration: none;
-}
-
-.alert-text a:hover {
-  color: var(--color-link);
-  text-decoration: dotted;
-}
-
-.alert-close {
-  margin-left: auto;
-  padding-left: 10px;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: inherit;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.alert-close:hover {
-  transform: scale(1.1);
-}
-
-// Until the icon font arrives, an icon is laid out as its name ("info", "cancel"), which would
-// wrap the banner text differently and shift the page when the font loads. Fix the icon box.
-.alert-icon .material-symbols-outlined,
-.alert-close .material-symbols-outlined {
-  width: 1em;
-  overflow: hidden;
-}
-
-.alert-notice {
-  background-color: var(--color-alert-background);
-  color: var(--color-text);
-}
-
-.alert-warning {
-  background-color: #fbebd1;
-  color: #e65100;
-}
-
-.alert-error {
-  background-color: #ffd8de;
-  color: #b71c1c;
-}
-
-/* Non-dismissible banners */
-[data-non-dismissible] .alert-close {
-  display: none;
 }
 
 .material-symbols-outlined {

@@ -22,9 +22,7 @@
   {% if bare %}
   {{ content }}
   {% else %}
-  <div class="l-container">
-    {% include header.html %}
-  </div>
+  {% include site-header.html %}
   <main id="main">
     {{ content }}
   </main>

@@ -36,7 +36,11 @@
 
 // Main content of a page, between the header and the contact section
 .l-page {
-  padding-bottom: 2rem;
+  padding-block: 32px 2rem;
+
+  @include up(md) {
+    padding-top: 48px;
+  }
 }
 
 // Text column plus a sticky aside; the aside drops below 1200 px and the text column centres
