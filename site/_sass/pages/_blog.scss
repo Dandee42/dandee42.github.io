@@ -294,7 +294,7 @@
 // PAGER
 // =========================
 
-// Older / newer pages of a paginated list (pagination.html), with the site's outline buttons
+// Older / newer pages of a paginated list (pagination.html): blue text links
 .pager {
   display: flex;
   flex-wrap: wrap;
@@ -302,6 +302,14 @@
   justify-content: space-between;
   gap: 12px;
   margin-top: 56px;
+}
+
+// 44 px tall for touch, like the back link of a detail page
+.pager__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
 }
 
 .pager__info {
