@@ -28,6 +28,7 @@
   </main>
   {% if show_contact %}{% include contact-section.html %}{% endif %}
   {% include site-footer.html %}
+  {% if lang == "en" %}{% include calendly-assets.html %}{% endif %}
   <script src="{{ '/assets/js/darkmode.js' | prepend: site.baseurl }}"></script>
   {% endif %}
   {% if page.layout == "home" or bare %}

@@ -1,12 +1,16 @@
-<footer class="site-footer l-container">
-  <div class="l-prose l-prose--center">
-    <div class="divider"></div>
-    <div class="footer-bottom">
-    {% include footer-links.html %}
-    {% include language-switcher.html %}
+{% comment %}
+  Footer: every page from _data/navigation.yml on the left; the language switch and the copyright
+  on the right.
+{% endcomment %}
+{% assign trans = site.data[site.active_lang] %}
+<footer class="site-footer">
+  <div class="l-container site-footer__inner">
+    <nav class="site-footer__nav" aria-label="{{ trans.general.nav.footer }}">
+      {% include nav-links.html place="footer" class="site-footer__link" %}
+    </nav>
+    <div class="site-footer__meta">
+      {% include language-switcher.html %}
+      <span>&copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}</span>
     </div>
-    <small>&copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-      {{ site.author.name }}. All rights reserved.
-    </small>
   </div>
 </footer>

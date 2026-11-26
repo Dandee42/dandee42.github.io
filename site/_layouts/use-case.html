@@ -14,13 +14,5 @@ layout: page
 {% endif %}
 {{ page.lang[lang].text }}
 
-{% if lang == "cs" %}
-<p><a href="https://zapti.me/daniel-hladik/konzultace-zdarma">{{ trans.contact.scheduled_meeting.submit_button }}</a></p>
-{% else %}
-<!-- Calendly link widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<p><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">{{ trans.contact.scheduled_meeting.submit_button }}</a></p>
-<!-- Calendly link widget end -->
-{% endif %}
+<p>{% include booking-link.html %}</p>
 <p><a href="#contact-form">{{ page.lang[lang].contact_link }}</a></p>

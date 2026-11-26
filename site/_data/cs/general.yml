@@ -15,6 +15,7 @@ nav:
   open: "Otevřít menu"
   close: "Zavřít menu"
   theme: "Přepnout tmavý režim"
+  footer: "Odkazy v patičce"
 
 side_contact:
   label: "Kontakt"

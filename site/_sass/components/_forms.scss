@@ -1,0 +1,80 @@
+// =========================
+// FORMS
+// =========================
+
+// Contact form (contact-form.html). contact-form.js adds .was-validated on submit, which shows the
+// *-feedback messages of invalid fields.
+.form-group-container {
+  display: grid;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  margin: 0;
+  color: var(--color-heading);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.form-input,
+.form-textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-input);
+  color: var(--color-heading);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+
+  &::placeholder {
+    color: var(--color-form-placeholder);
+  }
+
+  &:focus-visible {
+    border-color: var(--color-accent);
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+  }
+}
+
+.form-textarea {
+  min-height: 150px;
+  padding-block: 12px;
+  resize: vertical;
+}
+
+.form-submit {
+  margin-top: 4px;
+}
+
+.invalid-feedback,
+.empty-feedback {
+  display: none;
+}
+
+.was-validated :placeholder-shown:invalid ~ .empty-feedback,
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.is-invalid,
+.was-validated :invalid {
+  border-color: var(--color-error-text);
+}
+
+.custom-feedback,
+.empty-feedback,
+.invalid-feedback {
+  color: var(--color-error-text);
+  font-size: 0.875rem;
+}

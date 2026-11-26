@@ -1,0 +1,76 @@
+// =========================
+// CONTACT SECTION
+// =========================
+
+// Card above the footer (contact-section.html): details and booking link next to the form
+.site-contact {
+  padding-block: 24px var(--space-section);
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 64px;
+  padding: clamp(24px, 4vw, 56px);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-card__info {
+  display: flex;
+  flex: 1 1 320px;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.contact-card__form {
+  flex: 1 1 400px;
+  min-width: 0;
+}
+
+.contact-card__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.contact-card__lead {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.contact-card__booking {
+  align-self: flex-start;
+  font-weight: 700;
+}
+
+// Address, e-mail and LinkedIn with icons (contact-details.html)
+.contact-details__title {
+  margin: 0 0 12px;
+  font-size: 1.25em;
+}
+
+.contact-details__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  svg {
+    flex: none;
+    width: 20px;
+    height: 20px;
+  }
+}
