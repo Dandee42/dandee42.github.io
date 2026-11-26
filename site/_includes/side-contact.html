@@ -1,9 +1,22 @@
 {% comment %}
   Contact card in the sticky aside of .l-split pages, shown only on screens wider than 1200 px (below
   that, the alert banner and the contact form at the bottom of the page do the job).
+  Parameters: compact (optional): a short row with the photo, for an aside that also holds the
+  table of contents of a post.
 {% endcomment %}
 {% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[lang] %}
+{% if include.compact %}
+<aside class="side-contact" aria-label="{{ trans.general.side_contact.label }}">
+  <div class="side-contact-card side-contact-card--compact">
+    <img class="side-contact-photo" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="72" height="72" alt="" loading="lazy">
+    <div class="side-contact-card__body">
+      <p class="side-contact-text">{{ trans.general.side_contact.text }}</p>
+      <a class="side-contact-call" href="#contact-form">{{ trans.general.side_contact.write }} →</a>
+    </div>
+  </div>
+</aside>
+{% else %}
 <aside class="side-contact" aria-label="{{ trans.general.side_contact.label }}">
   <div class="side-contact-card">
     <img class="side-contact-photo" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="96" height="96" alt="" loading="lazy">
@@ -14,3 +27,4 @@
     {% include booking-link.html class="side-contact-call" label=trans.general.side_contact.call %}
   </div>
 </aside>
+{% endif %}

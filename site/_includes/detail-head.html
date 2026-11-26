@@ -7,6 +7,6 @@
   <h1>{{ include.title }}</h1>
   {% if include.lead %}<p class="page-lead page-lead--italic">{{ include.lead }}</p>{% endif %}
   {% if page.image %}
-    {% include hero-picture.html alt=include.image_alt class="hero-illustration detail-hero" %}
+    {% include hero-picture.html alt=include.image_alt class="hero-illustration detail-hero" sizes="(min-width: 1224px) 1160px, 100vw" %}
   {% endif %}
 </header>

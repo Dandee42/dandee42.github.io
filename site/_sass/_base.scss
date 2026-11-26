@@ -75,34 +75,37 @@ abbr[data-tooltip] {
   font-family: inherit;
 }
 
+// The tooltip box only exists while shown: a hidden but laid-out box near the right edge would
+// widen the page and let it scroll sideways on narrow screens
 abbr[data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: calc(100% + 6px);
+  bottom: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-text);
-  color: var(--color-background);
-  font-size: 0.9rem;
-  font-weight: normal;
-  font-style: italic;
-  padding: 0.35rem 0.65rem;
-  border-radius: 0.4rem;
-  min-width: 180px;
-  max-width: min(260px, 80vw);
-  white-space: normal;
-  text-align: center;
-  line-height: 1.4;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s ease;
   z-index: 100;
+  display: none;
+  width: max-content;
+  max-width: min(300px, 80vw);
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--color-heading);
+  color: var(--color-background);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  pointer-events: none;
+  transform: translateX(-50%);
 }
 
 @media (hover: hover) and (pointer: fine) {
   abbr[data-tooltip]:hover::after,
-  abbr[data-tooltip]:focus::after {
-    opacity: 1;
+  abbr[data-tooltip]:focus::after,
+  abbr.tooltip-visible::after {
+    display: block;
   }
 }
 

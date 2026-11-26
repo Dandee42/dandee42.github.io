@@ -1,0 +1,8 @@
+{% comment %}
+  Table of contents in the post's aside. post-toc.js fills it from the post's own kramdown TOC
+  (#markdown-toc) and shows it; posts without a TOC keep it hidden.
+{% endcomment %}
+{% assign toc_trans = site.data[site.active_lang].blog %}
+<nav class="toc-card" aria-label="{{ toc_trans.toc_title }}" hidden data-post-toc>
+  <p class="toc-card__title">{{ toc_trans.toc_title }}</p>
+</nav>

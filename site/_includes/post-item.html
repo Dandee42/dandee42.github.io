@@ -1,39 +1,59 @@
+{% comment %}
+  A blog post: head (back link, tags, title, lead, author and date, hero image) and below it the
+  text next to a sticky aside with the table of contents and the contact card.
+{% endcomment %}
+{% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
 
-<article>
-  <div class="post-body">
-    <p class="blog-back"><a href="{{ '/blog/' | relative_url }}">{{ trans.blog.all_posts_link }}</a></p>
-    {% if page.tags and page.tags != empty %}
-      <p class="post-tags">
-        {% for tag in page.tags %}
-          <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %} {% endunless %}
-        {% endfor %}
-      </p>
-    {% endif %}
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="lead">{{ page.lead }}</p>
+<header class="detail-head post-head">
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">{{ trans.blog.all_posts_link }}</a>
+  {% if page.tags and page.tags != empty %}
+  <p class="post-head__tags">{% for tag in page.tags %}<a class="tag-chip tag-chip--small" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% endfor %}</p>
+  {% endif %}
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.lead %}<p class="page-lead page-lead--italic">{{ page.lead }}</p>{% endif %}
+  <p class="post-meta">
+    <img class="post-meta__avatar" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="44" height="44" alt="">
+    <span class="post-meta__text">
+      <span class="post-meta__author">{{ site.title[lang] }}</span>
+      <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: trans.general.date_format }}</time>{% if page.reading_time %} · {{ page.reading_time }} {{ trans.blog.reading_time }}{% endif %}</span>
+    </span>
+  </p>
+  {% if page.image %}
+    {% capture hero_alt %}{{ trans.blog.alt_hero_image }} {{ page.title }}{% endcapture %}
+    {% include hero-picture.html alt=hero_alt class="detail-hero" sizes="(min-width: 1224px) 1160px, 100vw" %}
+  {% endif %}
+</header>
 
-    {% if page.image %}
-      {% capture hero_alt %}{{ trans.blog.alt_hero_image }} {{ page.title }}{% endcapture %}
-      {% include hero-picture.html alt=hero_alt %}
-    {% endif %}
-    <br>
+<div class="l-split post-layout">
+  <article class="l-split__main" data-post-article>
     {% comment %}
       Lazy-load the post's own images in the HTML itself. add-img-lazy-loading.js sets the attribute
       only after the parser has already started downloading them, and posts can't carry it without
       editing the Czech Markdown, which would trigger a new translation.
     {% endcomment %}
-    {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
-    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: trans.general.date_format }}</time>
-    <p class="back-to-top">
-      <a href="#top">{{ trans.blog.back_to_top}}</a>
-    </p>
-    {% include share-button.html %}
-    {% include pagination-post.html %}
-  </div>
-</article>
+    <div class="prose post-content">
+      {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
+    </div>
+    <footer class="post-footer">
+      {% include share-button.html %}
+      <p class="post-footer__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: trans.general.date_format }}</time>
+        <a href="#top">{{ trans.blog.back_to_top }}</a>
+      </p>
+      {% include pagination-post.html %}
+    </footer>
+    {% include posts-related.html %}
+  </article>
+  <aside class="l-split__aside">
+    {% include post-toc-aside.html %}
+    {% include side-contact.html compact=true %}
+  </aside>
+</div>
 {% include heading-links.html %}
 <script src="/assets/js/add-img-lazy-loading.js" defer></script>
+<script src="{{ '/assets/js/post-toc.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/reading-progress.js' | relative_url }}" defer></script>
 {% include code-copy-button.html %}
 {% include lightbox-gallery.html %}
 {% include post-abbr-tooltip.html %}

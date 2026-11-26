@@ -1,14 +1,18 @@
 {% assign trans = site.data[site.active_lang] %}
 
-<p class="share-button-container">
-  {{ trans.blog.share_text_question | escape }}<br>{{ trans.blog.share_text_answer | escape }}<br>
-<button id="shareBtn" class="share-button">
-  <span class="material-symbols-outlined">share</span>
-  {{ trans.blog.share_button | escape }}
-</button>
-</p>
+<div class="share-card">
+  <p class="share-card__text">
+    <strong>{{ trans.blog.share_text_question | escape }}</strong>
+    <span>{{ trans.blog.share_text_answer | escape }}</span>
+  </p>
+  <button type="button" id="shareBtn" class="button--outline">
+    <span class="material-symbols-outlined" aria-hidden="true">share</span>
+    {{ trans.blog.share_button | escape }}
+  </button>
+</div>
 
-<script defer>
+<script>
+(function () {
   const currentLang = document.documentElement.lang || '{{ site.active_lang | default: "cs" }}';
 
   const translations = {
@@ -26,6 +30,20 @@
 
   const t = translations[currentLang] || translations.cs;
 
+  // Short confirmation at the bottom of the screen
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.setAttribute('role', 'status');
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('is-visible'));
+    setTimeout(() => {
+      toast.classList.remove('is-visible');
+      setTimeout(() => toast.remove(), 300);
+    }, 2200);
+  }
+
   document.getElementById('shareBtn').addEventListener('click', async () => {
     if (navigator.share) {
       try {
@@ -40,10 +58,11 @@
     } else {
       try {
         await navigator.clipboard.writeText(window.location.href);
-        alert(t.copied);
+        showToast(t.copied);
       } catch (err) {
         alert(t.copyError + window.location.href);
       }
     }
   });
+})();
 </script>

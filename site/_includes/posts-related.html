@@ -1,3 +1,6 @@
+{% comment %}
+  Up to three posts that share a tag with this one (not the previous or next post), as post cards.
+{% endcomment %}
 {% assign trans = site.data[site.active_lang] %}
 {% assign related_posts = site.posts | where_exp:"post","post != page" %}
 
@@ -14,12 +17,12 @@
 {% endfor %}
 
 {% if related_posts_filtered.size > 0 %}
-  <div class="related-posts">
-    <h3>{{ trans.blog.related_posts }}</h3>
-    <ul>
-      {% for post in related_posts_filtered limit:3 %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+<section class="related">
+  <h2 class="related__title">{{ trans.blog.related_posts }}</h2>
+  <div class="post-grid">
+    {% for post in related_posts_filtered limit:3 %}
+      {% include post-card.html post=post %}
+    {% endfor %}
   </div>
+</section>
 {% endif %}

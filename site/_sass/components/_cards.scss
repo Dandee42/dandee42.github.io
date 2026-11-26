@@ -98,6 +98,33 @@
   font-weight: 700;
 }
 
+// Short variant next to a post's table of contents
+.side-contact-card--compact {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  text-align: left;
+
+  .side-contact-photo {
+    flex: none;
+    width: 72px;
+    height: 72px;
+    margin: 0;
+  }
+
+  .side-contact-text {
+    margin: 0;
+    font-size: 0.8em;
+    text-wrap: pretty;
+  }
+
+  .side-contact-call {
+    min-height: 36px;
+    margin-top: 2px;
+  }
+}
+
 // Light blue call to action at the end of a service (cta-block.html)
 .cta-block {
   display: flex;
