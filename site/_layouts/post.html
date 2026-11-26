@@ -2,8 +2,14 @@
 layout: default
 ---
 <div id="top"></div>
-{% include header.html %}
-{% include post-item.html %}
-{% include posts-related.html %}
-{% include footer.html %}
-
+<div class="l-container l-page">
+  <div class="l-split">
+    <div class="l-split__main">
+      {% include post-item.html %}
+      {% include posts-related.html %}
+    </div>
+    <div class="l-split__aside">
+      {% include side-contact.html %}
+    </div>
+  </div>
+</div>

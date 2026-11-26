@@ -30,12 +30,28 @@
   max-width: var(--prose-max);
 }
 
-// Text column plus a sticky aside; the aside drops below 1200 px
+.l-prose--center {
+  margin-inline: auto;
+}
+
+// Main content of a page, between the header and the contact section
+.l-page {
+  padding-bottom: 2rem;
+}
+
+// Text column plus a sticky aside; the aside drops below 1200 px and the text column centres
 .l-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 48px 64px;
   align-items: start;
+}
+
+.l-split__main {
+  width: 100%;
+  min-width: 0;
+  max-width: var(--prose-max);
+  margin-inline: auto;
 }
 
 .l-split__aside {
@@ -46,6 +62,10 @@
   .l-split {
     grid-template-columns: minmax(0, var(--prose-max)) var(--aside-width);
     justify-content: space-between;
+  }
+
+  .l-split__main {
+    margin-inline: 0;
   }
 
   .l-split__aside {

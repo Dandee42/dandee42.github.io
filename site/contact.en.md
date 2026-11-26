@@ -9,4 +9,3 @@ published: true
 ---
 # Contact
 
-{% include contact.html %}

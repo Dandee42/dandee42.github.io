@@ -603,12 +603,6 @@ a.site-title {
 // HOMEPAGE - TOGGLE & MESSAGES
 // =========================
 
-.toggle-bar {
-  display: flex;
-  justify-content: end;
-  padding-top: 1.5em;
-}
-
 .toggle-icon {
   color: var(--color-heading);
 
@@ -1032,23 +1026,8 @@ html {
 // SIDE CONTACT CARD
 // =========================
 
-.page-column {
-  position: relative;
-}
-
-// Fills the column's height in the right margin, so the card inside can stick while the page scrolls
-.side-contact {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(100% + 2rem);
-  width: 16rem;
-}
-
+// Lives in the sticky aside of .l-split (see _layout.scss), which also hides it below 1200 px
 .side-contact-card {
-  position: sticky;
-  top: calc(var(--alert-height, 0px) + 2rem);
-  margin-top: 5.5rem;
   padding: 1.5rem;
   border-radius: 12px;
   background: var(--color-background);
@@ -1104,12 +1083,6 @@ html {
   display: inline-block;
   margin-top: 0.75rem;
   font-size: 0.9em;
-}
-
-@media (max-width: 1200px) {
-  .side-contact {
-    display: none;
-  }
 }
 
 // =========================
@@ -1399,28 +1372,6 @@ html[data-theme="dark"] .service-image img {
 .alert-success::before,
 .alert-error::before {
   mask-image: var(--alert-icon-svg);
-}
-
-// =========================
-// TYPEWRITER
-// =========================
-
-.tw {
-  color: var(--color-link);
-  border-right: 2px solid currentColor;
-  padding-right: 2px;
-  animation: tw-cursor 0.75s step-end infinite;
-}
-
-@keyframes tw-cursor {
-  0%, 100% { border-color: currentColor; }
-  50%       { border-color: transparent; }
-}
-
-@media (max-width: 576px) {
-  .tw-wrap {
-    display: block;
-  }
 }
 
 // =========================

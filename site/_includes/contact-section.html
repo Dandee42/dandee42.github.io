@@ -1,0 +1,11 @@
+{% comment %}
+  Contact form and contact details above the footer. default.html renders it on every page except
+  the bare ones and pages or layouts with contact_section: false.
+{% endcomment %}
+<section class="site-contact l-container">
+  <div class="l-prose l-prose--center">
+    <div id="contact-form">&nbsp;</div>
+    {% include contact-form.html %}
+    {% include contact.html %}
+  </div>
+</section>

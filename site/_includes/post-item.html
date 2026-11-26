@@ -1,7 +1,7 @@
 {% assign trans = site.data[site.active_lang] %}
 
 <article>
-  <main>
+  <div class="post-body">
     <p class="blog-back"><a href="{{ '/blog/' | relative_url }}">{{ trans.blog.all_posts_link }}</a></p>
     {% if page.tags and page.tags != empty %}
       <p class="post-tags">
@@ -30,7 +30,7 @@
     </p>
     {% include share-button.html %}
     {% include pagination-post.html %}
-  </main>
+  </div>
 </article>
 {% include heading-links.html %}
 <script src="/assets/js/add-img-lazy-loading.js" defer></script>

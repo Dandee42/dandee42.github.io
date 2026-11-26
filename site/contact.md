@@ -10,4 +10,3 @@ published: true
 
 # Kontakt
 
-{% include contact.html %}
