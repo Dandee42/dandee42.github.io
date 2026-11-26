@@ -25,7 +25,8 @@ layout: null
     <item>
       <title>{{ post.title | escape }}</title>
       <link>{{ post_url }}{{ post.url }}</link>
-      <guid isPermaLink="true">{{ post_url }}{{ post.url }}</guid>
+      {%- comment -%} Stable across URL changes (Czech slugs come from _data/post_slugs.yml), so feed readers don't show a post twice {%- endcomment %}
+      <guid isPermaLink="false">daniel-hladik.cz/blog/{{ post.page_id }}/{{ lang }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       {% if post.categories %}
       {% for category in post.categories %}
@@ -33,7 +34,7 @@ layout: null
       {% endfor %}
       {% endif %}
       <description><![CDATA[
-        {% if post.lead %}{{ post.lead }}{% else %}{{ post.description | strip_html | truncatewords: 50 }}{% endif %}]]
+        {% if post.lead %}{{ post.lead }}{% else %}{{ post.description | strip_html | truncatewords: 50 }}{% endif %}
       ]]></description>
     </item>
     {% endfor %}

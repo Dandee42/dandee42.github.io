@@ -16,6 +16,14 @@
   <!-- Seznam Webmaster ownership verification; it must stay on the home page -->
   <meta name="seznam-wmt" content="NZapUmyKk3GM6Ka9GBynO6gAG3xeANfx" />
   {% endif %}
+  {% comment %}
+    Kept out of the index: the thank-you pages after a form or a booking, and the tag and category
+    pages (one post each so far, with the home page's description). follow lets crawlers reach the
+    posts through them. Drop page.autopages here once the tags hold more posts.
+  {% endcomment %}
+  {% if page.type == "form success" or page.autopages %}
+  <meta name="robots" content="noindex, follow">
+  {% endif %}
   {% include head-seo-lang.html %}
   {% include head-links.html %}
   {% include google-analytics.html %}

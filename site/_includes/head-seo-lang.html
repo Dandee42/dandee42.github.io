@@ -39,6 +39,7 @@
   <meta property="og:title" content="{{ page.title }}">
   <meta name="author" content="{{ site.title[lang] }}">
   <meta property="og:locale" content="{{ trans.general.locale }}">
+  {% for l in site.languages %}{% unless l == lang %}<meta property="og:locale:alternate" content="{{ site.data[l].general.locale }}">{% endunless %}{% endfor %}
   <meta name="description" content="{{ og_description }}">
   <meta property="og:description" content="{{ og_description }}">
   <meta property="og:url" content="{{ full_url }}">
@@ -112,6 +113,7 @@
   <meta property="og:title" content="{{ og_title }} · {{ site.title[lang] }}">
   <meta name="author" content="{{ site.title[lang] }}">
   <meta property="og:locale" content="{{ trans.general.locale }}">
+  {% for l in site.languages %}{% unless l == lang %}<meta property="og:locale:alternate" content="{{ site.data[l].general.locale }}">{% endunless %}{% endfor %}
   <meta name="description" content="{{ og_description }}">
   <meta property="og:description" content="{{ og_description }}">
   <meta property="og:url" content="{{ full_url }}">
@@ -212,6 +214,7 @@
   <meta property="og:title" content="{{ og_page_title }}">
   <meta name="author" content="{{ site.title[lang] }}">
   <meta property="og:locale" content="{{ trans.general.locale }}">
+  {% for l in site.languages %}{% unless l == lang %}<meta property="og:locale:alternate" content="{{ site.data[l].general.locale }}">{% endunless %}{% endfor %}
   <meta name="description" content="{{ og_description }}">
   <meta property="og:description" content="{{ og_description }}">
   <meta property="og:url" content="{{ full_url }}">
