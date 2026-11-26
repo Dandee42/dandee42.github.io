@@ -258,20 +258,24 @@
   }
 }
 
+// Older and newer post as blue text links: a small grey label over the post's title. On hover only
+// the title gets the site's dotted underline.
 .post-pager__link {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 18px 22px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-text);
+  padding: 6px 0;
+  color: var(--color-link);
 
   &:hover,
   &:focus {
-    border: 1px solid var(--color-heading);
-    color: var(--color-text);
     text-decoration: none;
+
+    .post-pager__title {
+      text-decoration: underline dotted;
+      text-decoration-thickness: calc(var(--type-size) / 10);
+      text-underline-offset: 0.25em;
+    }
   }
 }
 
@@ -289,7 +293,7 @@
 }
 
 .post-pager__title {
-  color: var(--color-heading);
+  color: var(--color-link);
   font-weight: 700;
   line-height: 1.3;
 }
