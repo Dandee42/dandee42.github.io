@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<article id="home" class="l-container l-page">
-  <div class="l-prose l-prose--center">
-    {{ content }}
-  </div>
+{% comment %}
+  The homepage content (index.md) is made of full-width sections that place their own containers.
+{% endcomment %}
+<article id="home" class="home">
+  {{ content }}
 </article>

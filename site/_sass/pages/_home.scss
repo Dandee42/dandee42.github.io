@@ -1,0 +1,59 @@
+@use "breakpoints" as *;
+
+// =========================
+// HOMEPAGE
+// =========================
+
+// Intro: text with the contact buttons next to the illustration with the quote
+.home-intro {
+  display: grid;
+  align-items: center;
+  gap: 40px 64px;
+  padding-block: 48px var(--space-section);
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding-top: 72px;
+  }
+}
+
+.home-intro__text {
+  h2 {
+    margin: 0 0 20px;
+    font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+}
+
+.home-intro .quote-hero {
+  margin: 0;
+
+  img {
+    border-radius: var(--radius-lg);
+  }
+}
+
+// "Napište mi" / "Domluvit hovor" buttons and a text link (contact-actions.html)
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 28px;
+
+  @include down(sm) {
+    .button--primary,
+    .button--outline {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.contact-actions__more {
+  font-weight: 700;
+}
