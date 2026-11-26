@@ -1,0 +1,41 @@
+@use "breakpoints" as *;
+
+// =========================
+// CARD SLIDER
+// =========================
+
+// Cards in one row that scrolls sideways (card-slider.js): two cards in view from 768 px, below
+// that one with the next one peeking in. The arrows reuse the tag scroller's round buttons.
+.card-slider__nav {
+  display: flex;
+  flex: none;
+  gap: 8px;
+}
+
+.card-slider__track {
+  display: grid;
+  grid-auto-columns: 85%;
+  grid-auto-flow: column;
+  gap: 24px;
+  // Room for the cards' focus outline, which the scroll container would clip
+  margin: -6px;
+  padding: 6px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-padding-inline: 6px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > * {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  @include up(md) {
+    grid-auto-columns: calc((100% - 24px) / 2);
+  }
+}

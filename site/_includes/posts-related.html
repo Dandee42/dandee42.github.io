@@ -1,5 +1,6 @@
 {% comment %}
-  Up to three posts that share a tag with this one (not the previous or next post), as post cards.
+  Up to six posts that share a tag with this one (not the previous or next post), as post cards in
+  a row that scrolls sideways (card-slider.js).
 {% endcomment %}
 {% assign trans = site.data[site.active_lang] %}
 {% assign related_posts = site.posts | where_exp:"post","post != page" %}
@@ -17,12 +18,19 @@
 {% endfor %}
 
 {% if related_posts_filtered.size > 0 %}
-<section class="related">
-  <h2 class="related__title">{{ trans.blog.related_posts }}</h2>
-  <div class="post-grid">
-    {% for post in related_posts_filtered limit:3 %}
+<section class="related" data-card-slider>
+  <div class="related__head">
+    <h2 class="related__title">{{ trans.blog.related_posts }}</h2>
+    <div class="card-slider__nav">
+      <button type="button" class="tag-scroller__arrow" aria-label="{{ trans.blog.related_prev }}" hidden data-slider-prev>{% include svg/nav-arrow-left.svg %}</button>
+      <button type="button" class="tag-scroller__arrow" aria-label="{{ trans.blog.related_next }}" hidden data-slider-next>{% include svg/nav-arrow-right.svg %}</button>
+    </div>
+  </div>
+  <div class="card-slider__track" data-slider-track>
+    {% for post in related_posts_filtered limit:6 %}
       {% include post-card.html post=post %}
     {% endfor %}
   </div>
 </section>
+<script src="{{ '/assets/js/card-slider.js' | relative_url }}" defer></script>
 {% endif %}

@@ -190,6 +190,19 @@
   border-top: 1px solid var(--color-border-subtle);
 }
 
+// The title with the slider's arrows on the right (posts-related.html)
+.related__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+
+  .related__title {
+    margin: 0;
+  }
+}
+
 .related__title {
   margin: 0 0 28px;
   font-size: clamp(1.5rem, 2.6vw, 2rem);
