@@ -1,0 +1,11 @@
+{% comment %}
+  Call to action at the end of a service or use case: a sentence, a button to the contact form and
+  the booking link. Parameters: text (required), button (required, label of the contact button).
+{% endcomment %}
+<div class="cta-block">
+  <p class="cta-block__text">{{ include.text }}</p>
+  <div class="cta-block__actions">
+    <a class="button--primary" href="#contact-form">{{ include.button }} →</a>
+    {% include booking-link.html class="button--outline" %}
+  </div>
+</div>

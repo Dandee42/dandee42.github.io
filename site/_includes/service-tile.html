@@ -1,14 +1,16 @@
 {% comment %}
-  Service tile: illustration (or icon), title, card description and a "Zjistit více" hint. The title
-  link's ::after covers the whole tile, so the tile is one click target.
-  Parameters: service (required), size ("large" or "small", default small), heading (default h3),
+  Tile of a service or a use case: illustration (or icon), title, card description and a
+  "Zjistit více" hint. The title link's ::after covers the whole tile, so the tile is one click target.
+  Parameters: service (required, a services.yml or use_cases.yml record), base ("services" or
+  "use-cases", default services), size ("large" or "small", default small), heading (default h3),
   eager (optional, for a tile that can be above the fold).
 {% endcomment %}
 {% assign tile_lang = site.active_lang | default: site.default_lang %}
 {% assign tile_trans = site.data[tile_lang] %}
 {% assign tile_heading = include.heading | default: "h3" %}
+{% assign tile_base = include.base | default: "services" %}
 {% if tile_lang == site.default_lang %}{% assign tile_prefix = "" %}{% else %}{% assign tile_prefix = "/" | append: tile_lang %}{% endif %}
-{% assign tile_url = tile_prefix | append: "/services/" | append: include.service.slug | append: "/" %}
+{% assign tile_url = tile_prefix | append: "/" | append: tile_base | append: "/" | append: include.service.slug | append: "/" %}
 <article class="service-tile service-tile--{{ include.size | default: 'small' }}">
   {% include service-tile-image.html service=include.service eager=include.eager %}
   <div class="service-tile__body">

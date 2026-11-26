@@ -2,9 +2,10 @@
 // POST CARDS
 // =========================
 
+// auto-fill keeps the column width, so a single related post doesn't stretch over the whole row
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 32px;
 }
 

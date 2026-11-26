@@ -205,45 +205,6 @@ html[data-theme="dark"] .hero-illustration img {
   filter: brightness(0.85);
 }
 
-.post-homepage-banner ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 1rem 0;
-}
-
-.post-homepage-banner li {
-  margin-bottom: 0.5rem;
-}
-
-.post-homepage-banner a {
-  text-decoration: none;
-  color: var(--color-link);
-}
-
-.post-homepage-banner .post-title {
-  font-size: 1.5rem;
-}
-
-.post-homepage-banner span {
-  display: block;
-  font-size: 1rem;
-  color: var(--color-text);
-}
-
-.post-homepage-banner p {
-  margin-top: 1rem;
-}
-
-.post-homepage-banner .reading-time {
-  font-size: 0.85rem;
-  color: var(--color-post-reading-time);
-  font-style: italic;
-}
-
-.all-posts-link {
-  margin-bottom: 2rem;
-}
-
 .all-tags {
   display: flex;
   flex-wrap: wrap;
@@ -742,69 +703,6 @@ a.reversefootnote {
 }
 
 // =========================
-// SIDE CONTACT CARD
-// =========================
-
-// Lives in the sticky aside of .l-split (see _layout.scss), which also hides it below 1200 px
-.side-contact-card {
-  padding: 1.5rem;
-  border-radius: 12px;
-  background: var(--color-background);
-  box-shadow: 0 4px 16px var(--shadow-service);
-  text-align: center;
-}
-
-.side-contact-photo {
-  display: block;
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 0.75rem;
-}
-
-.side-contact-name {
-  margin: 0;
-  font-size: 1.1em;
-  color: var(--color-heading);
-}
-
-.side-contact-role {
-  margin: 0 0 1rem;
-  font-size: 0.85em;
-  color: var(--color-form-description);
-}
-
-.side-contact-text {
-  margin: 0 0 1.25rem;
-  font-size: 0.9em;
-  color: var(--color-text);
-  text-wrap: balance;
-}
-
-.side-contact-button {
-  display: block;
-  // Piazzolla sits low in its line box; less padding on top centres the text optically
-  padding: 0.375rem 1rem 0.625rem;
-  border: solid 2px var(--color-text);
-  border-radius: 12px;
-  color: var(--color-button-text);
-  background-color: var(--color-button-background);
-  transition: background-color 0.15s ease, color 0.15s ease;
-
-  &:focus,
-  &:hover {
-    border: solid 2px var(--color-text);
-    background-color: var(--color-button-background-hover);
-    color: var(--color-button-text-hover);
-  }
-}
-
-.side-contact-call {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-size: 0.9em;
-}
-
-// =========================
 // TIMELINE (CV page)
 // =========================
 
@@ -924,88 +822,12 @@ html[data-theme="dark"] .quote-hero {
   }
 }
 
-.services-list {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.service-item {
-  background: var(--color-background);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 16px var(--shadow-service);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.service-title h2 a::after,
-.service-title h3 a::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-}
-
-.service-link {
-  margin-top: auto;
-  padding-top: 0.75rem;
-  position: relative;
-  z-index: 1;
-}
-
-.service-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-// Headings are position: relative (_base.scss), which would confine the link's ::after overlay
-// to the title. Static, the overlay spans the whole card, so the image and the text are clickable too.
-.service-title h2,
-.service-title h3 {
-  position: static;
-  margin: 0 0 0.75rem;
-  font-size: 1.25em;
-  font-weight: 500;
-  font-family: var(--type-serif);
-  text-transform: none;
-  letter-spacing: normal;
-  color: var(--color-link);
-}
-
-.service-title h2 a,
-.service-title h3 a,
-.service-link {
-  &:hover,
-  &:focus {
-    border-bottom: none;
-  }
-}
-
-.service-description {
-  margin: 0 0 1rem;
-  color: var(--color-text);
-}
-
 .service-icon {
   font-size: 36px !important;
   color: var(--color-icon-service);
 }
 
-// The illustration fills the top of the card edge to edge, over the card's padding
-.service-image img {
-  display: block;
-  width: calc(100% + 3rem);
-  max-width: none;
-  height: auto;
-  margin: -1.5rem -1.5rem 1rem;
-  border-radius: 12px 12px 0 0;
-}
-
+// Service illustrations are drawn on the light page background; tone them down in dark mode
 html[data-theme="dark"] .service-image img {
   filter: brightness(0.85);
 }

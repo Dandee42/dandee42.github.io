@@ -14,6 +14,13 @@
   }
 }
 
+// Services and use-case lists: three columns from 1024 px
+.service-grid--list {
+  @include up(lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 // Homepage: two large tiles over three small ones
 .service-grid--home {
   @include up(lg) {

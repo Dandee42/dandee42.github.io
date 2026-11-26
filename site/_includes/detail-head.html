@@ -1,0 +1,12 @@
+{% comment %}
+  Head of a service or use-case page: back link, title, lead and the hero illustration (page.image).
+  Parameters: back_url, back_label, title, lead, image_alt (all from the calling layout).
+{% endcomment %}
+<header class="detail-head">
+  <a class="back-link" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
+  <h1>{{ include.title }}</h1>
+  {% if include.lead %}<p class="page-lead page-lead--italic">{{ include.lead }}</p>{% endif %}
+  {% if page.image %}
+    {% include hero-picture.html alt=include.image_alt class="hero-illustration detail-hero" %}
+  {% endif %}
+</header>
