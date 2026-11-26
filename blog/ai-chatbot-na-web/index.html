@@ -1,0 +1,1564 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="cs">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    
+    Jak přidat agentního AI chatbota na svůj web (RAG návod) &middot; Daniel Hladík
+    
+  </title>
+  
+  
+  
+  
+
+
+
+
+
+
+<!-- Cannonical url START -->
+<link rel="canonical" href="https://daniel-hladik.cz/blog/ai-chatbot-na-web/">
+<!-- Cannonical url END -->
+
+<!-- Alternate Href lang START -->
+
+
+  
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/ai-chatbot-na-web/">
+
+  
+  <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/rag-ai-agent-in-website/">
+
+<!-- Alternate Href lang END -->
+
+
+
+<meta http-equiv="Content-Language" content="cs_CZ">
+
+
+  <!-- BLOG POST -->
+  
+  
+  <!-- OG / Twitter meta tagy -->
+  <meta property="og:title" content="Jak přidat agentního AI chatbota na svůj web (RAG návod)">
+  <meta name="author" content="Daniel Hladík">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="description" content="Naučte se, jak pomocí n8n a RAG postavit AI agenta, který zná vaše služby, domlouvá schůzky a odesílá e-maily. Praktický návod pro váš web bez složitého kódování.">
+  <meta property="og:description" content="Naučte se, jak pomocí n8n a RAG postavit AI agenta, který zná vaše služby, domlouvá schůzky a odesílá e-maily. Praktický návod pro váš web bez složitého kódování.">
+  <meta property="og:url" content="https://daniel-hladik.cz/blog/ai-chatbot-na-web/">
+  <meta property="og:site_name" content="Daniel Hladík">
+  <meta property="og:image" content="https://daniel-hladik.cz/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-hero.jpg">
+  <meta property="twitter:image" content="https://daniel-hladik.cz/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-hero.jpg">
+  <meta property="og:type" content="article">
+  
+  <meta property="article:published_time" content="2026-02-28T00:00:00+00:00">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Jak přidat agentního AI chatbota na svůj web (RAG návod)">
+  <meta name="twitter:description" content="Naučte se, jak pomocí n8n a RAG postavit AI agenta, který zná vaše služby, domlouvá schůzky a odesílá e-maily. Praktický návod pro váš web bez složitého kódování.">
+  
+  <meta name="twitter:label1" content="Doba čtení">
+  <meta name="twitter:data1" content="7 min">
+  
+
+  <!-- JSON-LD POST START -->
+  
+  
+  
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Hladík"
+    },
+    "datePublished": "2026-02-28T00:00:00+00:00",
+    "dateModified": "2026-05-26T20:45:57+00:00",
+    "description": "Naučte se, jak pomocí n8n a RAG postavit AI agenta, který zná vaše služby, domlouvá schůzky a odesílá e-maily. Praktický návod pro váš web bez složitého kódování.",
+    "inLanguage": "cs_CZ",
+    "headline": "Jak přidat agentního AI chatbota na svůj web (RAG návod)",
+    "image": "https://daniel-hladik.cz/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-hero.jpg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://daniel-hladik.cz/blog/ai-chatbot-na-web/"
+    },
+    "url": "https://daniel-hladik.cz/blog/ai-chatbot-na-web/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Daniel Hladík",
+      "url": "https://daniel-hladik.cz/"
+    }
+  }
+  </script>
+  <!-- JSON-LD POST END -->
+
+  <!-- JSON-LD BREADCRUMB START -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://daniel-hladik.cz/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://daniel-hladik.cz/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Jak přidat agentního AI chatbota na svůj web (RAG návod)" }
+    ]
+  }
+  </script>
+  <!-- JSON-LD BREADCRUMB END -->
+
+
+  
+<!-- Stylesheets, icons -->
+<link rel="preload" href="/assets/fonts/Piazzolla-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/open-color.min.css">
+
+<link rel="stylesheet" href="/assets/css/syntax.css">
+
+<link rel="stylesheet" href="/assets/css/styles.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" >
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,chat,chat_bubble,check,close,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
+<!-- RSS Feed -->
+
+<link rel="alternate" type="application/rss+xml" title="Daniel Hladík - RSS (cs)" href="https://daniel-hladik.cz/feed.xml" />
+
+
+  
+
+
+<!-- Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-5FNL9M65H0', { 'anonymize_ip': true });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FNL9M65H0"></script>
+
+<!-- Cookie modal -->
+<style>
+  /* Compact card at the bottom: full width on phones, bottom left on wider screens (the chat
+     toggle sits bottom right) */
+  #cookie-overlay {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 10001;
+    max-width: 440px;
+  }
+  @media (min-width: 768px) {
+    #cookie-overlay {
+      left: 24px;
+      right: auto;
+      bottom: 24px;
+    }
+  }
+  #cookie-overlay.d-none { display: none !important; }
+
+  #cookie-banner {
+    font-family: var(--type-serif);
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  }
+  #cookie-banner h2 {
+    font-family: var(--type-serif);
+    color: var(--color-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  #cookie-banner p {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text);
+  }
+  #cookie-banner a {
+    color: var(--color-link);
+    font-weight: bold;
+  }
+  #cookie-banner a:hover {
+    border-bottom: none;
+  }
+
+  #cookie-banner .cookie-actions {
+    display: flex;
+    gap: 8px;
+  }
+  #cookie-banner .cookie-actions button {
+    flex: 1;
+  }
+  #cookie-banner button {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: var(--radius-pill);
+    font-family: var(--type-serif);
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: box-shadow .15s;
+  }
+  #cookie-decline {
+    background: transparent;
+    color: var(--color-heading);
+    border: 1.5px solid var(--color-text);
+  }
+  #cookie-decline:hover {
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+  #cookie-accept {
+    background: var(--color-heading);
+    color: var(--color-background);
+    border: 0;
+    font-weight: 700;
+  }
+  #cookie-accept:hover {
+    box-shadow: 0 0 0 3px var(--color-border);
+  }
+</style>
+
+<div id="cookie-overlay" class="d-none">
+  <div id="cookie-banner">
+    <h2>🍪 Pár slov o cookies</h2>
+    <p>
+      
+        Tento web používá soubory <a href="/zasady-cookies/">cookies</a> k analýze návštěvnosti a zlepšování uživatelského zážitku. Data o tom, jak web používáte, mi pomáhají dělat ho lepším. Cookies jsou nastaveny pouze s vaším souhlasem.
+      
+    </p>
+    <div class="cookie-actions">
+      <button id="cookie-decline">Odmítnout</button>
+      <button id="cookie-accept">Souhlasím</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var COOKIE_KEY = 'ga_consent';
+    var overlay = document.getElementById('cookie-overlay');
+    var consent = localStorage.getItem(COOKIE_KEY);
+
+    function showBanner() {
+      overlay.classList.remove('d-none');
+    }
+
+    function hideBanner() {
+      overlay.classList.add('d-none');
+    }
+
+    function grantConsent() {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      localStorage.setItem(COOKIE_KEY, 'granted');
+      hideBanner();
+    }
+
+    function denyConsent() {
+      gtag('consent', 'update', { 'analytics_storage': 'denied' });
+      localStorage.setItem(COOKIE_KEY, 'denied');
+      hideBanner();
+    }
+
+    if (consent === 'granted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    } else if (consent === null) {
+      showBanner();
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', grantConsent);
+    document.getElementById('cookie-decline').addEventListener('click', denyConsent);
+  })();
+</script>
+
+
+  <script>
+    (function () {
+      var theme = sessionStorage.getItem('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+
+
+<body>
+  
+
+
+  <div class="alert-banner alert-notice" >
+    <script>if(localStorage.getItem('alertDismissed')==='true')document.currentScript.parentElement.style.display='none';</script>
+    
+    <span class="alert-icon">
+        
+          <span class="material-symbols-outlined">info</span>
+        
+    </span>
+
+    <span class="alert-text">Přijímám nové projekty: webové aplikace, AI a automatizace. <a href="#contact-form">Napište&nbsp;mi</a></span>
+
+    
+      <button type="button" class="alert-close" aria-label="Zavřít">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    
+  </div>
+  <script>(function(b){if(b.style.display!=='none')document.documentElement.style.setProperty('--alert-height',b.offsetHeight+'px');})(document.currentScript.previousElementSibling);</script>
+  <script src="/assets/js/alert.js" defer></script>
+
+
+  
+  
+  
+
+  
+  
+
+
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a class="site-header__brand" href="/">
+      <span class="site-header__name">Daniel Hladík</span>
+      <span class="site-header__role">AI Product Builder</span>
+    </a>
+    <nav class="site-nav" aria-label="Hlavní navigace">
+      
+
+
+
+  
+
+  
+    
+    
+    
+    <a class="site-nav__link" href="/sluzby/">Služby</a>
+  
+
+  
+    
+    
+    
+    <a class="site-nav__link" href="/blog/" aria-current="page">Blog</a>
+  
+
+  
+
+  
+    
+    
+    
+    <a class="site-nav__link" href="/o-mne/">O mně</a>
+  
+
+  
+    
+    
+    
+    <a class="site-nav__link" href="/kontakt/">Kontakt</a>
+  
+
+
+    </nav>
+    <div class="site-header__actions">
+      <button type="button" id="theme-toggle" class="icon-button" onclick="modeSwitcher()" aria-label="Přepnout tmavý režim"></button>
+      <button type="button" class="icon-button menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Otevřít menu" data-menu-open><svg class="icon" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+    </div>
+  </div>
+  
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div>
+  
+</header>
+
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Hlavní navigace" hidden data-mobile-menu>
+  <div class="mobile-menu__top">
+    <span class="site-header__brand">
+      <span class="site-header__name">Daniel Hladík</span>
+      <span class="site-header__role">AI Product Builder</span>
+    </span>
+    <button type="button" class="icon-button" aria-label="Zavřít menu" data-menu-close><svg class="icon" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Hlavní navigace">
+    
+
+
+
+  
+
+  
+    
+    
+    
+    <a class="mobile-menu__link" href="/sluzby/">Služby</a>
+  
+
+  
+    
+    
+    
+    <a class="mobile-menu__link" href="/blog/" aria-current="page">Blog</a>
+  
+
+  
+
+  
+    
+    
+    
+    <a class="mobile-menu__link" href="/o-mne/">O mně</a>
+  
+
+  
+    
+    
+    
+    <a class="mobile-menu__link" href="/kontakt/">Kontakt</a>
+  
+
+
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button--primary button--block" href="#contact-form">Napište mi</a>
+    
+
+
+<a class="button--outline button--block" href="https://zapti.me/daniel-hladik/konzultace-zdarma" target="_blank" rel="noopener">Domluvit hovor</a>
+
+  </div>
+</div>
+<script src="/assets/js/site-nav.js" defer></script>
+
+  <main id="main">
+    <div id="top"></div>
+<div class="l-container l-page">
+  
+
+
+
+<header class="detail-head post-head detail-head--media">
+  <a class="back-link" href="/blog/">← Všechny články</a>
+  <div class="detail-head__text">
+    
+    <p class="post-head__tags"><a class="tag-chip tag-chip--small" href="/tag/ai-chat/">ai-chat</a><a class="tag-chip tag-chip--small" href="/tag/rag/">rag</a><a class="tag-chip tag-chip--small" href="/tag/agentic-ai/">agentic-ai</a><a class="tag-chip tag-chip--small" href="/tag/n8n/">n8n</a><a class="tag-chip tag-chip--small" href="/tag/llm/">llm</a></p>
+    
+    <h1 class="post-title">Jak přidat agentního AI chatbota na svůj web (RAG návod)</h1>
+    <p class="page-lead page-lead--italic">Chcete si na svůj web přidat chatbota, který posílá emaily, domlouvá schůzky a zná celý váš web nazpaměť? Přečtěte si více v článku.</p>
+    <p class="post-meta">
+      <img class="post-meta__avatar" src="/assets/files/portrait.webp" width="44" height="44" alt="">
+      <span class="post-meta__text">
+        <span class="post-meta__author">Daniel Hladík</span>
+        <span><time datetime="2026-02-28T00:00:00+00:00">28.02.2026</time> · 7 min čtení</span>
+      </span>
+    </p>
+  </div>
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-hero-image detail-hero">
+  <picture>
+    
+    <source type="image/webp" srcset="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-hero-800.webp 800w, /assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-hero.webp 1200w" sizes="(min-width: 1224px) 500px, (min-width: 1024px) 44vw, 100vw">
+    
+    <img src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-hero.jpg" alt="Úvodní obrázek pro Jak přidat agentního AI chatbota na svůj web (RAG návod)" width="1200" height="675" loading="eager" fetchpriority="high">
+  </picture>
+</div>
+
+  
+</header>
+
+<div class="l-split post-layout">
+  <article class="l-split__main" data-post-article>
+    
+    <div class="prose post-content">
+      <p>Chcete na webu <strong>chatbota</strong>, který skutečně zná vaše produkty, služby, ceníky nebo dokumentaci a neodpovídá jen obecné fráze? V tomto článku vás provedu tvorbou “agentního” chatbota sestrojeného pomocí nástroje <strong>n8n</strong>. Ukážeme si, jak využít metodu <strong>RAG</strong> k propojení <strong>AI</strong> s vašimi daty z webu a jak agentovi umožnit provádět akce, jako je odesílání e-mailů či domlouvání schůzek.</p>
+
+<p>Obsah článku:</p>
+<ul id="markdown-toc">
+  <li><a href="#co-znamená-rag-a-proč-ho-chtít" id="markdown-toc-co-znamená-rag-a-proč-ho-chtít">Co znamená RAG a proč ho chtít</a></li>
+  <li><a href="#jak-si-vytvořit-vlastního-chatbota-a-přidat-ho-na-svůj-web" id="markdown-toc-jak-si-vytvořit-vlastního-chatbota-a-přidat-ho-na-svůj-web">Jak si vytvořit vlastního chatbota a přidat ho na svůj web</a>    <ul>
+      <li><a href="#krok-1-příprava-dat-a-uložení-do-vektorové-databáze" id="markdown-toc-krok-1-příprava-dat-a-uložení-do-vektorové-databáze">Krok 1. Příprava dat a uložení do vektorové databáze</a></li>
+      <li><a href="#krok-2-sestavení-agenta-s-jeho-nástroji" id="markdown-toc-krok-2-sestavení-agenta-s-jeho-nástroji">Krok 2. Sestavení Agenta s jeho nástroji</a></li>
+      <li><a href="#krok-3-optimalizace-systémového-promptu-důkladné-testování-a-re-ranking" id="markdown-toc-krok-3-optimalizace-systémového-promptu-důkladné-testování-a-re-ranking">Krok 3. Optimalizace systémového promptu, důkladné testování a re-ranking</a></li>
+      <li><a href="#krok-4-automatická-aktualizace-dat" id="markdown-toc-krok-4-automatická-aktualizace-dat">Krok 4. Automatická aktualizace dat</a></li>
+      <li><a href="#krok-5-přidání-chatovacího-okna-na-web" id="markdown-toc-krok-5-přidání-chatovacího-okna-na-web">Krok 5. Přidání chatovacího okna na web</a></li>
+    </ul>
+  </li>
+  <li><a href="#shrnutí-jak-to-celé-funguje-v-bodech" id="markdown-toc-shrnutí-jak-to-celé-funguje-v-bodech">Shrnutí: Jak to celé funguje v bodech</a></li>
+  <li><a href="#na-co-si-dát-pozor" id="markdown-toc-na-co-si-dát-pozor">Na co si dát pozor</a></li>
+</ul>
+
+<h2 id="co-znamená-rag-a-proč-ho-chtít">Co znamená RAG a proč ho chtít</h2>
+<p>Ještě něž se dostaneme k samotné tvorbě, je potřeba pochopit klíčový koncept, bez kterého by nám model nedával relevantní odpovědi. Tím je <strong><abbr title="RAG (Retrieval-Augmented Generation, v překladu Generování rozšířené o vyhledávání ): Proces, kdy si AI nejdříve přečte vaše dokumenty a až pak odpoví uživateli." data-glossary="rag">RAG</abbr></strong>.</p>
+
+<p>Zkratka <strong>RAG (Retrieval-Augmented Generation)</strong> se překládá do češtiny jako <em>generování rozšířené o vyhledávání</em>. Jedná se o koncept, díky kterému váš AI model “nehalucinuje” (nevymýšlí si), ale odpovědi generuje na základě nějaké znalostní databáze, kterou mu vy sami předložíte.</p>
+
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-01.jpg" alt="Srovnání položení dotazu na běžný AI model a RAG AI model" class="post-image" /></p>
+
+<p>Běžný AI model je jako velmi vzdělaný člověk, který však od určitého data přestal sledovat novinky a nezná nic o vašem konkrétním byznysu. Když se ho zeptáte na něco z interní dokumentace, nebude vědět a může si i vymýšlet. Pokud tomu samému člověku dáte do ruky vaše materiály (ceník, dokumentaci, články, <strong><abbr title="FAQ (Frequently Asked Questions - často kladené otázky) je strukturovaný seznam otázek a odpovědí, které řeší nejběžnější nejasnosti uživatelů." data-glossary="faq">FAQ</abbr></strong>) a řeknete mu: <em>“Odpovídej pouze na základě toho, co zde najdeš.”</em>, najde tu správnou odpověď. Takto velmi zjednodušeně funguje RAG AI Model.</p>
+
+<p>Jak RAG proces vypadá v praxi:</p>
+
+<ol>
+  <li><strong>Příprava dat</strong>: Dokumenty očištěné o duplicity a nepotřebný obsah se rozsekají na menší části. Tyto kousky se pomocí <strong><abbr title="Embedding model je specializovaný typ umělé inteligence, který slouží jako překladač mezi lidskou řečí a světem čísel. Jeho jedinou úlohou je vzít kus textu (slovo, větu nebo odstavec) a vypočítat pro něj jeho vektor. V rámci procesu RAG se při ukládání převádějí dokumenty na vektory, aby se daly uložit do vektorové databáze. Při dotazu se otázka uživatele převede na vektory, aby ji systém mohl porovnat s uloženými daty." data-glossary="embedding-model">embedding modelu</abbr></strong> převedou na <strong><abbr title="V kontextu AI je vektor číselné vyjádření významu slova, věty nebo celého dokumentu. Protože počítače nerozumí textu tak jako lidé, používají k porovnávání informací dlouhé seznamy čísel (souřadnice). Tyto souřadnice určují přesnou polohu dané informace v pomyslném prostoru znalostí. Pokud mají dva texty podobný význam, leží jejich vektory v databázi blízko sebe. V rámci RAG umožňují systému bleskově najít souvislosti mezi otázkou uživatele a vašimi daty." data-glossary="vector">vektory</abbr></strong> a uloží do speciální vektorové databáze, kde v nich AI umí efektivně hledat dle kontextu.</li>
+  <li><strong>Zpracování dotazu</strong>: Když se uživatel zeptá, systém převede jeho dotaz pomocí stejného modelu na vektor a najde nejbližší kontextovou shodu v databázi. Vytáhne tak pouze ty odstavce, které s otázkou souvisí.</li>
+  <li><strong>Generování odpovědi</strong>: Tyto vybrané odstavce se přibalí k původní otázce a pošlou se <strong><abbr title="LLM (Large Language Model): Velký jazykový model je typ umělé inteligence (např. Chat GPT, Claude nebo Gemini) vytrénovaný na obrovském množství textu. Slouží jako mozek celého systému, který dokáže rozumět lidské řeči, generovat text a logicky uvažovat." data-glossary="llm">LLM modelu</abbr></strong>, který z nich sestaví finální odpověď. Do odpovědi tedy nejsou zahrnuty pouze znalosti natrénované v LLM modelu, ale i nalezené informace.</li>
+</ol>
+
+<h2 id="jak-si-vytvořit-vlastního-chatbota-a-přidat-ho-na-svůj-web">Jak si vytvořit vlastního chatbota a přidat ho na svůj web</h2>
+
+<p>Způsobů, jak si sestrojit chytrý AI chat a umístit ho na vašem webu, je hned několik. Velmi jsem si oblíbil low-code automatizační nástroj <strong><abbr title="n8n: Low-code platforma pro automatizaci workflow, která propojuje stovky aplikací bez nutnosti složitého kódování." data-glossary="n8n">n8n</abbr></strong>, kde můžete hezky vizuálně vidět, jak informace ve workflow putují z jednoho uzlu do druhého. Budu tedy popisovat implementaci právě s tímto nástrojem.</p>
+
+<p>Pro vás neznalé, n8n je taková virtuální stavebnice Merkur, jen pro <strong>automatizace</strong>. Má v sobě přímo integrované stavební bloky <strong><abbr title="LangChain je open-source framework s předpřipravenou architekturou pro agenty a integracemi pro jakýkoliv model nebo nástroj. Umožňuje stavět agenty, kteří se dokážou přizpůsobovat stejně rychle, jako se vyvíjí celý AI ekosystém." data-glossary="langchain">LangChain</abbr></strong>, takže v něm lze vytvářet komplexní <strong><abbr title="Agentní systémy (nebo AI agenti) jsou pokročilé implementace umělé inteligence, které nefungují podle předem daného scénáře, ale samostatně rozhodují o postupu k dosažení stanoveného cíle." data-glossary="agentic-systems">agentní systémy</abbr></strong> bez napsání jediného řádku kódu.</p>
+
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-04-a.jpg" alt="AI Agent s řídícím mozkem n8n platformy" class="post-image" /></p>
+
+<p>Co budeme potřebovat:</p>
+
+<ul>
+  <li><strong>n8n</strong> - Centrální mozek. Orchestruje workflow a poskytuje chatovací rozhraní pro uživatele na pokládání dotazů a dávání pokynů.</li>
+  <li><strong>Vektorová databáze</strong> - Místo, kam uložíme vlastní data v podobě, které AI rozumí.</li>
+  <li><strong>Embedding model</strong> - Nástroj, který převede váš lidský text na číselné vektory.</li>
+  <li><strong>Napojení na LLM model</strong> - Předtrénovaný AI model (Gemini, Chat GPT, lokální LLM …), který dává agentovi schopnost rozumět a generovat text.</li>
+  <li><strong>Paměťová databáze</strong> – Databáze sloužící k tomu, aby si agent pamatoval, co uživatel napsal před minutou.</li>
+  <li><strong>Google účet</strong> - Pro integraci s Gmailem (odesílání e-mailů), Google Diskem (čtení dokumentů) a Google Kalendářem (domlouvání schůzek).</li>
+</ul>
+
+<p>Teorii máme za sebou, pojďme si tedy vyhrnout rukávy a podívat se na to, jak tyto koncepty přetavit v realitu. Ani nemusíte být programátor, abyste vytvořili funkční systém, který dává smysl. Stačí pochopit, jak správně pospojovat jednotlivé stavební bloky od databáze až po samotné chatovací okno.</p>
+
+<blockquote class="alert alert-idea">
+  <p><strong>Zajímá vás, kolik stojí provoz takového chatbota?</strong>
+<em><a href="#contact-form">Napište mi zprávu</a> nebo si se mnou domluvte <a href="https://zapti.me/daniel-hladik/konzultace-zdarma">30 min konzultaci ZDARMA</a>, kde to spolu můžeme probrat :)</em></p>
+</blockquote>
+
+<h3 id="krok-1-příprava-dat-a-uložení-do-vektorové-databáze">Krok 1. Příprava dat a uložení do vektorové databáze</h3>
+<p>V mém případě chci, aby měl AI agent kontext celého webu. Musím tedy nějakým způsobem dostat informace z webu do vektorové databáze, odkud si bude LLM model brát informace ke zpracování odpovědí. Použijeme k tomu data ze <strong><abbr title="Sitemap (mapa stránek) je soubor, nejčastěji ve formátu .xml, který obsahuje seznam všech důležitých URL adres vašeho webu. Slouží primárně pro roboty vyhledávačů (Google, Seznam), kterým pomáhá efektivněji procházet a indexovat web, což zlepšuje SEO." data-glossary="sitemap">sitemapy</abbr></strong>. Stáhneme z ní url adresy stránek na webu, převedeme je z XML formátu do <strong><abbr title="Univerzální a lehký datový formát, který slouží k přehlednému ukládání a přenosu informací. V rámci n8n funguje jako hlavní komunikační jazyk." data-glossary="json">JSONu</abbr></strong>.</p>
+
+<p>Poté načteme obsah jednotlivých stránek přes GET <strong><abbr title="HTTP Request (HTTP požadavek) je digitální zpráva, kterou jeden počítač posílá druhému, aby od něj něco získal nebo mu něco předal." data-glossary="http-request">HTTP požadavek</abbr></strong> a <strong>očistíme o přebytečný balast</strong>. Nepotřebujeme totiž celou strukturu webu jako je hlavička nebo patička. Nakonec převedeme výsledný <strong><abbr title="HTML (HyperText Markup Language) je standardní značkovací jazyk, který určuje strukturu a obsah webových stránek. Není to programovací jazyk, ale spíše soubor instrukcí (tagů), které říkají prohlížeči: Tady je nadpis, tady odstavec a tady odkaz." data-glossary="html">HTML</abbr></strong> obsah do <strong><abbr title="Markdown je odlehčený značkovací jazyk, který slouží pro úpravu prostého textu a jeho následný převod na formátovaný text publikovatelný na webu, zejména ve formátu HTML. Umožňuje pomocí jednoduchých formátovacích značek vyznačit v textu nadpisy a seznamy, doplnit odkazy, obrázky atd. Cílem jazyka je, aby byl text dobře čitelný a publikovatelný i v původním formátu prostého textu." data-glossary="markdown">Markdown</abbr></strong> formátu, kterému AI modely lépe rozumí. A máme vstupní data z webu připravená.</p>
+
+<blockquote class="alert alert-info">
+  <p><strong>Jaká další data můžete svému AI agentovi předhodit?</strong>
+<em>Vstupní data můžete doplnit například soubory ze svého Google Disku jako jsou PDF soubory, tabulky, textové dokumenty apod. Důležité je však vždy myslet na bezpečnost citlivých dat a krmit agenta jen tím, co ke své roli skutečně potřebuje. Pamatujte, že s rostoucím množstvím a komplexitou dat roste i potřeba data řádně očišťovat a optimalizovat RAG pro rychlé a přesné odpovědi.</em></p>
+</blockquote>
+
+<p>Nyní můžeme vyčištěná data uložit do vektorové databáze, odkud si bude AI agent brát informace pro sestavení relevantních odpovědí. Do vektorové databáze však nelze uložit text jen tak napřímo. Aby v něm AI mohla efektivně vyhledávat, musí být text nejdříve převeden na digitální otisk (vektor). K tomu slouží již výše zmíněné <strong><abbr title="Zatímco my lidé vnímáme svět ve 3 rozměrech, moderní embedding modely pracují v nepředstavitelném prostoru o několika stovkách až tisících dimenzí. Například model od OpenAI (text-embedding-3-small) používá standardně 1 536 dimenzí. Každý úsek textu tak dostane 1 536 souřadnic, které přesně definují jeho význam. Díky tomu pak AI agent dokáže v mžiku najít souvislosti mezi otázkou uživatele a našimi daty na základě jejich hlubokého významu, nikoliv jen shody klíčových slov.">embedding modely</abbr></strong>.</p>
+
+<p>Před finálním uložením do vektorové databáze se text ještě musí rozdělit na menší celky, tzv. “<strong><abbr title="Chunking je proces rozdělení dlouhého textu na menší, logické celky – tzv. chunky (kousky)." data-glossary="chunking">chunking</abbr></strong>”. Jde o to, aby se modelu ke zpracování nepředhodily 42-stránkové obchodní podmínky e-shopu (které stejně nikdo nečte) najednou, ale pouze její menší celky relevantní vůči dotazu. Tím se zásadně šetří kontextové okno modelu a s tím související náklady na tokeny, za jejichž spotřebu se platí.</p>
+
+<p>Obvykle se velikost jednoho kousku (“chunku”) pohybuje mezi 500-1000 znaky s překryvem 10-20%. Tento překryv je klíčový, aby se při rozdělení textu neztratil kontext a myšlenka plynule navazovala i v dalším bloku. Samotné rozdělování pak probíhá podle logických pravidel, nejčastěji podle odstavců nebo nadpisů.</p>
+
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-05.jpg" alt="Abstrakce převodu textu na vektory pomocí embedding modelu" class="post-image" /></p>
+
+<p>Do vektorové databáze tedy ukládáme data ideálně očištěná a rozsekaná na menší části. Abychom neztratili kontext, odkud data pocházejí, doplníme do <strong><abbr title="Metadata jsou data o datech. Jsou to doplňující informace, které AI model nevidí jako hlavní text k přečtení, ale které systému pomáhají s organizací." data-glossary="metadata">metadat</abbr></strong> URL adresu a datum poslední aktualizace dané webové stránky. Agent pak může v odpovědi uvést odkaz, odkud čerpal, což zvyšuje jeho důvěryhodnost a dotazující si může odpovědi rovnou ověřit na konkrétním odkazu.</p>
+
+<h3 id="krok-2-sestavení-agenta-s-jeho-nástroji">Krok 2. Sestavení Agenta s jeho nástroji</h3>
+
+<p>V n8n propojíme AI Agenta s naší vektorovou databází. Tím získá svou <strong>dlouhodobou paměť</strong> ze zdrojů, které jsme mu předem uložili. Aby si agent pamatoval, co uživatel napsal před minutou, je potřeba mu také přidat <strong>krátkodobou paměť</strong>, kam se bude ukládat historie společné konverzace.</p>
+
+<p>Nyní bychom měli RAG AI Chatbota, ale stále ještě bychom mu nemohli říkat <strong>agentní chatbot</strong>. Co dělá z obyčejného chatbota skutečný agentem je právě schopnost jednat v reálném čase. V tomto případě mu přidáme nástroj, kterým může <strong>odesílat emaily</strong> z našeho Gmailového účtu. Můžeme mu také přidat <strong>přístup do kalendáře</strong>, aby věděl, v jakých časech jsou volné sloty pro domluvení schůzky a schůzku poté zapsat do kalendáře.</p>
+
+<p>Pokud bychom chtěli, mohli bychom mu dát přístup k vyhledávání na internetu nebo napojení na různé externí API, ať už jde o počasí, měnové kurzy či stavy eshopových objednávek, či se v reálném čase dotazovat na zákazníky přímo do svého <strong>CRM</strong>.</p>
+
+<h3 id="krok-3-optimalizace-systémového-promptu-důkladné-testování-a-re-ranking">Krok 3. Optimalizace systémového promptu, důkladné testování a re-ranking</h3>
+
+<p>Nejdůležitější částí je definice <strong>systémového promptu</strong>. Jde o sadu instrukcí, která definuje osobnost, cíle a mantinely agenta. Nesmíme zapomenout nadefinovat i to, jak má používat připojené nástroje. Jakmile jsme spokojení s pokyny pro AI Agenta, začneme testovat. Budeme testovat relevanci odpovědí a chování podle namyšlených scénářů.</p>
+
+<p>Když zjistíme, že agent odpovídá nepřesně, máme několik možností, co s tím udělat. Můžeme např. upravit systémový prompt, vyzkoušet jiný AI model nebo zpřesnit výběr dat z vektorové databáze pomocí tzv. <strong><abbr title="Re-ranking je proces, který zvyšuje přesnost odpovědí v systému RAG. Zatímco vektorové vyhledávání je jako knihovník, který z regálu přinese 10 knih na dané téma. Re-ranking je pak ten moment, kdy si těch 10 knih prolistujete a vyberete jen ty 3, které velmi pravděpodobně obsahují odpověď na vaši otázku. Je to tedy druhý filtr před předáním vstupních dat pro finalizaci odpovědi LLM modelem." data-glossary="re-ranking">Re-rankingu</abbr></strong>.</p>
+
+<p><strong>Re-ranking model</strong> funguje jako druhý, přísnější filtr. Znovu a důkladněji projde výsledky z databáze a seřadí je podle skutečné relevance k dotazu. Teprve ty nejlepší kousky informací pošle finálnímu modelu k vypracování odpovědi. V našem konkrétním případě však není re-ranking nezbytně nutný vzhledem k menšímu objemu vstupních dat, ale je dobré o něm vědět, jakmile váš systém začne růst.</p>
+
+<h3 id="krok-4-automatická-aktualizace-dat">Krok 4. Automatická aktualizace dat</h3>
+<p>Vytvoříme workflow, která bude automaticky jednou za čas (např. 1x denně o půlnoci) aktualizovat data ve vektorové databázi, aby vždy odpovídala aktuálnímu stavu informací na webu.</p>
+
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-02-a.jpg" alt="Low-code nástroj n8n a výsledné workflow AI agenta s RAG modelem" class="post-image" /></p>
+
+<h3 id="krok-5-přidání-chatovacího-okna-na-web">Krok 5. Přidání chatovacího okna na web</h3>
+<p>Interakce s AI agentem bude probíhat pomocí chatovacího okna, které umístíme do kódu na našem webu. Nativní chatovací okno má už v sobě <strong>n8n</strong> integrované, takže není nutné si psát vlastní chatovací rozhraní či používat aplikaci 3. strany. Vyzkoušíme, zda vše chodí, jak má. Nezapomeneme přidat svoji webovou stránku do <strong><abbr title="CORS (Cross-Origin Resource Sharing) je bezpečnostní mechanismus v internetových prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server." data-glossary="cors">CORS</abbr></strong>.</p>
+
+<p><img loading="lazy" decoding="async" src="/assets/files/images/posts/2026-02-28-rag-chat-web/rag-ai-03-a.jpg" alt="Chatovací okno na webu" class="post-image" /></p>
+
+<blockquote class="alert alert-idea">
+  <p><strong>Vyzkoušejte si chatbota přímo na mém webu</strong>
+<em>Pokláboste s Dankou - mojí virtuální asistentkou - přímo teď a tady. Vpravo dole by měla být umístěná bublina s chatem. Nebojte se vyzkoušet, jak na vás bude Danka reagovat. Klidně mi můžete poslat zpětnou vazbu emailem přímo skrz chatovací okno.</em></p>
+</blockquote>
+
+<h2 id="shrnutí-jak-to-celé-funguje-v-bodech">Shrnutí: Jak to celé funguje v bodech</h2>
+
+<p>V momentě, kdy uživatel odešle dotaz, proběhne v n8n tento řetězec událostí:</p>
+
+<ol>
+  <li><strong>Analýza záměru</strong>: AI zjistí, zda se uživatel ptá na informaci, nebo chce něco zařídit, např. odeslat vzkaz či domluvit schůzku.</li>
+  <li>Pokud jde o dotaz na znalostní databázi:
+    <ul>
+      <li><strong>Vyhledání</strong>: Agent prohledá vektorovou databázi.</li>
+      <li><strong>Zpřesnění</strong>: Vybere ty nejrelevantnější kousky informací.</li>
+    </ul>
+  </li>
+  <li>Pokud jde o akci:
+    <ul>
+      <li><strong>Akce</strong>: Jestliže uživatel chce např. zanechat vzkaz, agent použije emailový nástroj pro odeslaní zprávy. Pokud však nemá vše, co potřebuje, k odeslání emailu, doptá se na zbývající informace v dalším kroku.</li>
+    </ul>
+  </li>
+  <li><strong>Generování odpovědi</strong>: AI složí srozumitelnou odpověď kombinující data z databáze.</li>
+</ol>
+
+<h2 id="na-co-si-dát-pozor">Na co si dát pozor</h2>
+
+<ul>
+  <li><strong>Kvalita a zpracování vstupních dat</strong> - RAG je jen tak dobrý, jak dobrá jsou vaše zdrojová data. Mějte vždy data aktuální, dobře strukturovaná a ošetřená od duplicit či nepotřebných informací.</li>
+  <li><strong>Bezpečnost dat a soukromí</strong> - Nastavte agentovi jasné hranice, k jakým datům smí přistupovat. Vzhledem k citlivosti údajů je potřeba se zamyslet nad tím, odkud a kam data posíláte a kdo s nimi může nakládat (GDPR). Taky je potřeba mít na paměti, že většinou bezplatné LLM modely souvisí s trénováním modelu na vašich datech. V některých případech je potřeba zvážit, zda nepoužít svůj vlastní <strong><abbr title="Lokální modely jsou velké jazykové modely (LLM), které jsou staženy a spouštěny přímo na vašem vlastním počítači nebo firemním serveru. K jejich provozu nepotřebujete internetové připojení a žádná data neposíláte třetím stranám." data-glossary="local-model">lokální model</abbr></strong> (např. přes Ollama), čímž zajistíte, že data nikdy neopustí váš vlastní server. Pokud nemá model v základu ochranu proti pokusům o zneužití přes tzv. <strong><abbr title="Prompt Injection je technika, při které se uživatel snaží přepsat nebo obejít původní instrukce AI modelu (systémový prompt) tím, že do chatu vloží speciálně zformulovaný příkaz. Cílem je donutit agenta, aby dělal něco, co nemá – například prozradil citlivá data, ignoroval bezpečnostní pravidla nebo se začal chovat jako úplně jiná postava." data-glossary="prompt-injection">prompt injection</abbr></strong>, implementujte tuto ochranu do systémového promptu.</li>
+  <li><strong>Cena a efektivita</strong> - Sledujte spotřebu tokenů. Pro agentní systémy jsou spolehlivější dražší modely, ale ne vždy je nutné střílet z kanonu na vrabce. Pro jednodušší úkoly můžete zkusit levnější modely a ušetřit tak značné náklady. Hlídejte si také limit iterací, aby se agent při hledání odpovědi nezacyklil a zbytečně nevyčerpal váš rozpočet.</li>
+  <li><strong>Human-in-the-loop</strong> - U kritických akcí, jako je odesílání důležitých e-mailů nebo mazání dat v CRM, nenechávejte AI zcela o samotě. Přidejte schvalovací krok člověkem, abyste předešli nevratným chybám.</li>
+  <li><strong>Logování a monitoring</strong> - Logování je váš nejlepší nástroj pro následnou optimalizaci systému.</li>
+</ul>
+
+<p>V tomto článku jsem nezacházel do přílišných detailů ohledně samotné stavby workflow v rámci n8n. Cílem bylo poskytnout vám, čtenářům, představu o tom, jak funguje RAG a jak si každý může vytvořit vlastního agentního AI chatbota.</p>
+
+<blockquote class="alert alert-info">
+  <p><strong>Chcete vlastního chatbota na svém webu, ale nevíte si s tím rady?</strong>
+<em><a href="#contact-form">Napište mi zprávu</a> nebo si se mnou domluvte <a href="https://zapti.me/daniel-hladik/konzultace-zdarma">30 min konzultaci ZDARMA</a>.</em></p>
+</blockquote>
+
+    </div>
+    <footer class="post-footer">
+      <p class="post-footer__meta">
+        <a href="#top">↑ Zpět na začátek</a>
+      </p>
+      
+
+<div class="share-card">
+  <p class="share-card__text">
+    <strong>Pomohl vám tento článek?</strong>
+    <span>Sdílejte ho s ostatními.</span>
+  </p>
+  <button type="button" id="shareBtn" class="button--outline">
+    <span class="material-symbols-outlined" aria-hidden="true">share</span>
+    Sdílet článek
+  </button>
+</div>
+
+<script>
+(function () {
+  const currentLang = document.documentElement.lang || 'cs';
+
+  const translations = {
+    cs: {
+      shareText: 'Přečti si tento článek',
+      copied: 'Odkaz byl zkopírován do schránky!',
+      copyError: 'Nepodařilo se zkopírovat odkaz. Zkopírujte ho ručně: '
+    },
+    en: {
+      shareText: 'Check out this article',
+      copied: 'Link copied to clipboard!',
+      copyError: 'Could not copy the link. Please copy it manually: '
+    }
+  };
+
+  const t = translations[currentLang] || translations.cs;
+
+  // Short confirmation at the bottom of the screen
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.setAttribute('role', 'status');
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('is-visible'));
+    setTimeout(() => {
+      toast.classList.remove('is-visible');
+      setTimeout(() => toast.remove(), 300);
+    }, 2200);
+  }
+
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          text: t.shareText,
+          url: window.location.href
+        });
+      } catch(err) {
+        console.error('Chyba při sdílení:', err);
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        showToast(t.copied);
+      } catch (err) {
+        alert(t.copyError + window.location.href);
+      }
+    }
+  });
+})();
+</script>
+
+      
+
+
+<nav class="post-pager" aria-label="Další články">
+  
+  <div class="post-pager__item">
+    <p class="post-pager__label">← Starší článek</p>
+    
+
+
+<article class="post-card">
+  
+  
+
+
+
+
+
+
+
+
+
+
+  <picture class="post-card__image">
+    
+    <source type="image/webp" srcset="/assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero-800.webp 800w, /assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero.webp 1200w" sizes="(min-width: 1024px) 380px, 100vw">
+    
+    <img src="/assets/files/images/posts/2026-01-16-bodylog-app/bodylog_hero.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async">
+  </picture>
+  
+  <div class="post-card__body">
+    
+    <p class="post-card__meta"><time datetime="2026-01-16T00:00:00+00:00">16.01.2026</time> · 6 min čtení</p>
+    <h3 class="post-card__title"><a class="post-card__link" href="/blog/bodylog-fitness-aplikace/">BodyLog - Jak jsem si vytvořil svou první fitness apku</a></h3>
+    <p class="post-card__lead">Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.</p>
+  </div>
+</article>
+
+  </div>
+  
+  
+</nav>
+
+
+    </footer>
+    
+
+
+
+
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+
+
+
+  </article>
+  <aside class="l-split__aside">
+    
+
+<nav class="toc-card" aria-label="Obsah článku" hidden data-post-toc>
+  <p class="toc-card__title">Obsah článku</p>
+</nav>
+
+    
+
+
+
+<aside class="side-contact" aria-label="Kontakt">
+  <div class="side-contact-card side-contact-card--compact">
+    <img class="side-contact-photo" src="/assets/files/portrait.webp" width="72" height="72" alt="" loading="lazy">
+    <div class="side-contact-card__body">
+      <p class="side-contact-text">Stavím webové aplikace, AI&nbsp;řešení a&nbsp;automatizace&nbsp;– od nápadu po spuštění.</p>
+      <a class="side-contact-call" href="#contact-form">Napište mi →</a>
+    </div>
+  </div>
+</aside>
+
+
+  </aside>
+</div>
+
+
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+  const headings = document.querySelectorAll(".post-content h2, .post-content h3, .post-content h4");
+
+  headings.forEach(heading => {
+    if (heading.id) {
+      const link = document.createElement("a");
+      link.href = `#${heading.id}`;
+      link.className = "heading-link";
+      link.innerHTML = `<img src="/assets/files/icons/link-45deg.svg" alt="Odkaz na nadpis" width="16" height="16">`;
+
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const url = window.location.origin + window.location.pathname + `#${heading.id}`;
+        navigator.clipboard.writeText(url).then(() => {
+          showCopyMessage("Odkaz zkopírován do schránky!");
+        });
+      });
+
+      heading.appendChild(link);
+    }
+  });
+
+  function showCopyMessage(message) {
+    const msg = document.createElement("div");
+    msg.textContent = message;
+    msg.style.position = "fixed";
+    msg.style.bottom = "20px";
+    msg.style.right = "20px";
+    msg.style.backgroundColor = "#333";
+    msg.style.color = "#fff";
+    msg.style.padding = "10px 15px";
+    msg.style.borderRadius = "5px";
+    msg.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+    msg.style.zIndex = 1000;
+    msg.style.opacity = 0;
+    msg.style.transition = "opacity 0.3s";
+
+    document.body.appendChild(msg);
+
+    requestAnimationFrame(() => {
+      msg.style.opacity = 1;
+    });
+
+    setTimeout(() => {
+      msg.style.opacity = 0;
+      msg.addEventListener("transitionend", () => msg.remove());
+    }, 2000);
+  }
+});
+</script>
+<script src="/assets/js/add-img-lazy-loading.js" defer></script>
+<script src="/assets/js/post-toc.js" defer></script>
+<script src="/assets/js/reading-progress.js" defer></script>
+
+
+
+<script defer>
+document.querySelectorAll('pre').forEach(pre => {
+  const button = document.createElement('button');
+  button.className = 'copy-btn';
+
+  button.innerHTML = '<span class="material-symbols-outlined">content_copy</span>';
+  button.setAttribute('aria-label', 'Kopírovat kód');
+
+  pre.appendChild(button);
+
+  button.addEventListener('click', () => {
+    const code = pre.querySelector('code');
+    if (!code) return;
+
+    navigator.clipboard.writeText(code.textContent).then(() => {
+      button.innerHTML = '<span class="material-symbols-outlined">check</span> Kód zkopírován!';
+      
+      setTimeout(() => {
+        button.innerHTML = '<span class="material-symbols-outlined">content_copy</span>';
+      }, 1500);
+    }).catch(err => console.error('Chyba při kopírování kódu', err));
+  });
+});
+</script>
+<div id="lightbox" class="lightbox">
+  <button class="prev">‹</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" alt="" data-proofer-ignore>
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+  <button class="next">›</button>
+  <button class="close">×</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [...document.querySelectorAll(".post-image")];
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const caption = document.getElementById("lightbox-caption");
+
+  let current = 0;
+  let zoomed = false;
+  let startX = 0;
+  let endX = 0;
+
+  images.forEach((img, index) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => open(index));
+  });
+
+  function open(index) {
+    current = index;
+    updateImage();
+    resetZoom();
+    lightbox.classList.add("open");
+  }
+
+  function close() {
+    lightbox.classList.remove("open");
+    resetZoom();
+    lightboxImg.src = "";
+    caption.textContent = "";
+  }
+
+  function updateImage() {
+    const img = images[current];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || "";
+    caption.textContent = img.alt || "";
+  }
+
+  function move(step) {
+    if (zoomed) return;
+    current = (current + step + images.length) % images.length;
+    updateImage();
+    resetZoom();
+  }
+
+  document.querySelector(".prev").onclick = () => move(-1);
+  document.querySelector(".next").onclick = () => move(1);
+  document.querySelector(".close").onclick = close;
+
+  lightboxImg.addEventListener("click", e => {
+    zoomed = !zoomed;
+
+    if (zoomed) {
+      const rect = lightboxImg.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      lightboxImg.style.transformOrigin = `${x}% ${y}%`;
+      lightboxImg.classList.add("zoomed");
+    } else {
+      resetZoom();
+    }
+  });
+
+  function resetZoom() {
+    zoomed = false;
+    lightboxImg.classList.remove("zoomed");
+    lightboxImg.style.transform = "";
+    lightboxImg.style.transformOrigin = "";
+  }
+
+  document.addEventListener("keydown", e => {
+    if (!lightbox.classList.contains("open")) return;
+    if (e.key === "ArrowRight") move(1);
+    if (e.key === "ArrowLeft") move(-1);
+    if (e.key === "Escape") close();
+  });
+
+  lightbox.addEventListener("touchstart", e => {
+    if (zoomed) return;
+    startX = e.changedTouches[0].screenX;
+  });
+
+  lightbox.addEventListener("touchend", e => {
+    if (zoomed) return;
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const threshold = 50;
+    if (startX - endX > threshold) move(1);
+    if (endX - startX > threshold) move(-1);
+  }
+});
+</script>
+<script defer>
+  // 1. Convert title → data-tooltip
+  document.querySelectorAll('abbr[title]').forEach(function(el) {
+    if (!el.getAttribute('data-tooltip')) {
+      el.setAttribute('data-tooltip', el.getAttribute('title'));
+    }
+    el.setAttribute('aria-label', el.getAttribute('title'));
+    el.removeAttribute('title');
+  });
+
+  // 2. Create bottom sheet elements (for touch devices and glossary terms)
+  var backdrop = document.createElement('div');
+  backdrop.className = 'abbr-sheet-backdrop';
+  backdrop.setAttribute('aria-hidden', 'true');
+
+  var sheet = document.createElement('div');
+  sheet.className = 'abbr-sheet';
+  sheet.setAttribute('role', 'dialog');
+  sheet.setAttribute('aria-modal', 'true');
+  sheet.innerHTML =
+    '<div class="abbr-sheet-handle-bar"></div>' +
+    '<div class="abbr-sheet-header">' +
+      '<span class="abbr-sheet-term"></span>' +
+      '<button class="abbr-sheet-close" aria-label="Zavřít">&times;</button>' +
+    '</div>' +
+    '<p class="abbr-sheet-desc"></p>' +
+    '<a class="abbr-sheet-link" href="#" style="display:none"></a>';
+
+  document.body.appendChild(backdrop);
+  document.body.appendChild(sheet);
+
+  var termEl = sheet.querySelector('.abbr-sheet-term');
+  var descEl = sheet.querySelector('.abbr-sheet-desc');
+  var closeBtn = sheet.querySelector('.abbr-sheet-close');
+  var linkEl = sheet.querySelector('.abbr-sheet-link');
+  var glossaryLinkLabel = 'Přečíst více v AI slovníku →';
+  // data-glossary holds the term's slug; its page has a Czech slug on the Czech site
+  
+  var glossaryUrls = { "rag": "/ai-slovnik/rag/", "llm": "/ai-slovnik/llm/", "n8n": "/ai-slovnik/n8n/", "embedding-model": "/ai-slovnik/embedding-model/", "vector": "/ai-slovnik/vektor/", "faq": "/ai-slovnik/faq/", "langchain": "/ai-slovnik/langchain/", "agentic-systems": "/ai-slovnik/agentni-systemy/", "sitemap": "/ai-slovnik/sitemap/", "json": "/ai-slovnik/json/", "http-request": "/ai-slovnik/http-pozadavek/", "html": "/ai-slovnik/html/", "markdown": "/ai-slovnik/markdown/", "chunking": "/ai-slovnik/chunking/", "metadata": "/ai-slovnik/metadata/", "re-ranking": "/ai-slovnik/re-ranking/", "prompt-injection": "/ai-slovnik/prompt-injection/", "local-model": "/ai-slovnik/lokalni-model/", "cors": "/ai-slovnik/cors/", "api": "/ai-slovnik/api/", "webhook": "/ai-slovnik/webhook/", "token": "/ai-slovnik/token/", "system-prompt": "/ai-slovnik/systemovy-prompt/", "context-window": "/ai-slovnik/kontextove-okno/", "hallucination": "/ai-slovnik/halucinace/", "vector-database": "/ai-slovnik/vektorova-databaze/", "trigger": "/ai-slovnik/trigger/", "api-key": "/ai-slovnik/api-klic/", "rate-limit": "/ai-slovnik/rate-limit/", "endpoint": "/ai-slovnik/endpoint/", "web-scraping": "/ai-slovnik/web-scraping/", "parsing": "/ai-slovnik/parsing/", "prompt": "/ai-slovnik/prompt/", "temperature": "/ai-slovnik/temperature/", "fine-tuning": "/ai-slovnik/fine-tuning/", "zero-shot": "/ai-slovnik/zero-shot/", "guardrails": "/ai-slovnik/guardrails/", "mcp": "/ai-slovnik/mcp/", "low-code-no-code": "/ai-slovnik/low-code-no-code/", "chatbot": "/ai-slovnik/chatbot/", "workflow": "/ai-slovnik/workflow/", "semantic-search": "/ai-slovnik/semanticke-vyhledavani/", "hybrid-search": "/ai-slovnik/hybridni-vyhledavani/", "chain-of-thought": "/ai-slovnik/chain-of-thought/", "streaming-response": "/ai-slovnik/streamovani-odpovedi/", "multimodal-model": "/ai-slovnik/multimodalni-model/", "function-calling": "/ai-slovnik/function-calling/", "structured-output": "/ai-slovnik/strukturovany-vystup/", "bias": "/ai-slovnik/bias/" };
+
+  function openSheet(abbr) {
+    termEl.textContent = abbr.textContent;
+    descEl.textContent = abbr.getAttribute('data-tooltip');
+    var glossarySlug = abbr.getAttribute('data-glossary');
+    if (glossarySlug) {
+      linkEl.href = glossaryUrls[glossarySlug] || '/ai-slovnik/';
+      linkEl.textContent = glossaryLinkLabel;
+      linkEl.style.display = '';
+    } else {
+      linkEl.style.display = 'none';
+    }
+    backdrop.classList.add('open');
+    sheet.classList.add('open');
+  }
+
+  function closeSheet() {
+    backdrop.classList.remove('open');
+    sheet.classList.remove('open');
+  }
+
+  var isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+  // 3. Keep the desktop tooltip (the abbr's ::after) inside the window: near an edge, shift it
+  //    sideways (--tooltip-shift), and when the sticky header leaves no room above the word, show
+  //    it below (.tooltip-below). The box is measured once it shows; until then, its maximum size.
+  var header = document.querySelector('.site-header');
+  function placeTooltip(el) {
+    var margin = 12;
+    var viewport = document.documentElement.clientWidth;
+    var rect = el.getBoundingClientRect();
+    var box = getComputedStyle(el, '::after');
+    var width = parseFloat(box.width);
+    var height = parseFloat(box.height);
+    if (!(width > 0)) width = Math.min(300, viewport * 0.8);
+    if (!(height > 0)) height = 80;
+    var center = rect.left + rect.width / 2;
+    var shift = 0;
+    if (center - width / 2 < margin) {
+      shift = margin - (center - width / 2);
+    } else if (center + width / 2 > viewport - margin) {
+      shift = viewport - margin - (center + width / 2);
+    }
+    el.style.setProperty('--tooltip-shift', Math.round(shift) + 'px');
+    var top = header ? header.getBoundingClientRect().bottom : 0;
+    el.classList.toggle('tooltip-below', rect.top - height - 8 < top + margin);
+  }
+
+  // 4. Bind abbr hovers and clicks
+  document.querySelectorAll('abbr[data-tooltip]').forEach(function(el) {
+    el.addEventListener('mouseenter', function() {
+      placeTooltip(el);
+    });
+    el.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (isTouch || this.hasAttribute('data-glossary')) {
+        openSheet(this);
+      } else {
+        this.classList.toggle('tooltip-visible');
+        placeTooltip(this);
+      }
+    });
+  });
+
+  // 5. Close on backdrop click, close button, or Escape key
+  backdrop.addEventListener('click', closeSheet);
+  closeBtn.addEventListener('click', closeSheet);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSheet();
+  });
+
+  // 6. Desktop: close tooltip on outside click
+  document.addEventListener('click', function() {
+    if (!isTouch) {
+      document.querySelectorAll('abbr.tooltip-visible')
+        .forEach(function(el) { el.classList.remove('tooltip-visible'); });
+    }
+  });
+</script>
+
+
+</div>
+
+  </main>
+  
+
+<section class="site-contact" aria-label="Kontakt">
+  <div class="l-container">
+    <div class="contact-card" id="contact-form">
+      <div class="contact-card__info">
+        <h2 class="contact-card__title">Zanechte mi zprávu</h2>
+        <p class="contact-card__lead">Pokud máte zájem o spolupráci, neváhejte mě kontaktovat.</p>
+        
+
+<div class="contact-details" id="contact-details">
+  <ul class="contact-details__list">
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span>Praha 6</span></li>
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
+<a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)">info&#64;daniel-hladik&#46;cz</a></li>
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<a href="https://www.linkedin.com/in/daniel-hladik/" aria-label="LinkedIn">daniel-hladik</a></li>
+  </ul>
+</div>
+
+        
+
+
+<a class="contact-card__booking" href="https://zapti.me/daniel-hladik/konzultace-zdarma" target="_blank" rel="noopener">Chci konzultaci ZDARMA</a>
+
+      </div>
+      <div class="contact-card__form">
+        
+
+
+<form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <!-- Skryté hodnoty pro Web3Forms -->
+    <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
+    <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - CS" />
+    <input type="hidden" name="from_name" value="daniel-hladik.cz" />
+    <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+    <input type="hidden" name="title" value="Jak přidat agentního AI chatbota na svůj web (RAG návod)">
+    <input type="hidden" name="url" value="https://daniel-hladik.cz/blog/ai-chatbot-na-web/">
+    <input type="hidden" name="lang" value="cs">
+
+    <div class="form-group-container">
+        <!-- Name -->
+        <div class="form-group">
+            <label for="name" class="form-label">Jméno</label>
+            <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" autocomplete="name" required />
+            <div class="empty-feedback invalid-feedback">
+                Prosím zadejte svoje jméno, abych věděl, jak Vás oslovit :)
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" class="form-input" placeholder="napiste.vas@email.cz" type="email" autocomplete="email" required />
+            <div class="empty-feedback">
+                Prosím vyplňte svou emailovou adresu.
+            </div>
+            <div class="invalid-feedback">
+                Možná to byl jen překlep, ale Váš email není validní pro odeslání. Dodržte prosím formát: "email@domena.cz"
+            </div>
+        </div>
+
+        <!-- Messsage -->
+        <div class="form-group">
+            <label for="message" class="form-label">Zpráva</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
+            <div class="empty-feedback invalid-feedback">
+                Prosím vyplňte pole se zprávou.
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+            <button class="form-submit button--primary button--block" type="submit">Odeslat</button>
+        </div>
+    </div>
+
+    <p class="text-center" id="result"></p>
+</form>
+
+<script src="/assets/js/contact-form.js" defer></script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+<footer class="site-footer">
+  <div class="l-container site-footer__inner">
+    <nav class="site-footer__nav" aria-label="Odkazy v patičce">
+      
+
+
+
+  
+    
+    
+    
+    <a class="site-footer__link" href="/">Domů</a>
+  
+
+  
+    
+    
+    
+    <a class="site-footer__link" href="/sluzby/">Služby</a>
+  
+
+  
+    
+    
+    
+    <a class="site-footer__link" href="/blog/" aria-current="page">Blog</a>
+  
+
+  
+    
+    
+    
+    <a class="site-footer__link" href="/ai-slovnik/">AI Slovník</a>
+  
+
+  
+    
+    
+    
+    <a class="site-footer__link" href="/o-mne/">O mně</a>
+  
+
+  
+    
+    
+    
+    <a class="site-footer__link" href="/kontakt/">Kontakt</a>
+  
+
+
+    </nav>
+    <div class="site-footer__meta">
+      
+
+<div class="language-switcher">
+
+    
+    
+    
+<!--<span class="lang-active">Čeština</span>-->
+    
+
+    
+    
+    
+        
+<a class="lang-link" href="/en/blog/rag-ai-agent-in-website/" aria-label="English">English</a>
+        
+    
+
+</div>
+
+
+      <span>&copy; <time datetime="2026-11-26T14:43:55+00:00">2026</time> Daniel Hladík</span>
+    </div>
+  </div>
+</footer>
+
+  
+  <script src="/assets/js/darkmode.js"></script>
+  
+  
+  
+
+
+
+<div id="chat-turnstile"></div>
+
+<script type="module">
+    const CHAT_URL = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/';
+    const TURNSTILE_SITE_KEY = '0x4AAAAAAF8-PXoM-ZzA9--I';
+    // Keep in sync with the length check in the n8n workflow
+    const MAX_MESSAGE_LENGTH = 500;
+
+    const metadata = {
+        current_url: window.location.href,
+        page_path: window.location.pathname,
+        page_title: document.title,
+        turnstileToken: ''
+    };
+
+    // Invisible Cloudflare Turnstile: n8n verifies the token before calling the AI.
+    // A token is single-use, so the next one is solved right after each message.
+    let widgetId = null;
+    let token = null;
+    const waiting = [];
+
+    function loadTurnstile() {
+        if (window.onTurnstileLoad) return;
+        window.onTurnstileLoad = () => {
+            widgetId = turnstile.render('#chat-turnstile', {
+                sitekey: TURNSTILE_SITE_KEY,
+                callback: (t) => {
+                    token = t;
+                    waiting.splice(0).forEach((resolve) => resolve(t));
+                },
+                'expired-callback': () => { token = null; },
+            });
+        };
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad';
+        document.head.appendChild(script);
+    }
+
+    async function takeToken() {
+        loadTurnstile();
+        const t = token || await new Promise((resolve) => {
+            waiting.push(resolve);
+            setTimeout(() => resolve(''), 15000);
+        });
+        token = null;
+        if (widgetId !== null) turnstile.reset(widgetId);
+        return t;
+    }
+
+    // Start solving when the chat is opened, so the first message doesn't wait
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.chat-window-toggle')) loadTurnstile();
+    });
+
+    new MutationObserver(() => {
+        const input = document.querySelector('.chat-input textarea');
+        if (input && input.maxLength !== MAX_MESSAGE_LENGTH) input.maxLength = MAX_MESSAGE_LENGTH;
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // The n8n AI Agent saves its tool calls and tool results in the chat memory, and the
+    // widget shows every stored message when it reloads the history on another page.
+    // Keep only the visitor's messages and the agent's text replies.
+    function messageText(content) {
+        if (typeof content === 'string') return content;
+        if (Array.isArray(content)) {
+            return content.filter((block) => block && block.type === 'text').map((block) => block.text).join('');
+        }
+        return '';
+    }
+
+    function isJson(text) {
+        if (!/^[\[{]/.test(text)) return false;
+        try {
+            JSON.parse(text);
+            return true;
+        } catch {
+            return false;
+        }
+    }
+
+    function cleanHistory(messages) {
+        return messages.flatMap((message) => {
+            const id = Array.isArray(message.id) ? message.id : [];
+            const isAi = id.includes('AIMessage');
+            if (!id.includes('HumanMessage') && !isAi) return [];
+            const text = messageText(message.kwargs && message.kwargs.content).trim();
+            if (!text || (isAi && isJson(text))) return [];
+            return [{ ...message, kwargs: { ...message.kwargs, content: text } }];
+        });
+    }
+
+    const WEBHOOK_URL = 'https://n8n.daniel-hladik.cz/webhook/c84ece32-c094-454b-920c-b34138ab3a82/chat';
+    const originalFetch = window.fetch;
+    window.fetch = async (input, init) => {
+        const response = await originalFetch(input, init);
+        const isHistory = input === WEBHOOK_URL && typeof init?.body === 'string' && init.body.includes('"loadPreviousSession"');
+        if (!isHistory || !response.ok) return response;
+        try {
+            const body = await response.clone().json();
+            if (!Array.isArray(body.data)) return response;
+            return new Response(JSON.stringify({ ...body, data: cleanHistory(body.data) }), {
+                status: response.status,
+                headers: { 'Content-Type': 'application/json' },
+            });
+        } catch {
+            return response;
+        }
+    };
+
+    // Load the chat on the visitor's first interaction, so its bundle doesn't compete with the page itself
+    function startChat() {
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = CHAT_URL + 'style.css';
+        style.onload = style.onerror = async () => {
+            const { createChat } = await import(CHAT_URL + 'chat.bundle.es.js');
+            createChat({
+                webhookUrl: WEBHOOK_URL,
+                target: '#n8n-chat',
+                mode: 'window',
+                chatInputKey: 'chatInput',
+                chatSessionKey: 'sessionId',
+                loadPreviousSession: true,
+                metadata,
+                beforeMessageSent: async () => {
+                    metadata.turnstileToken = await takeToken();
+                },
+                showWelcomeScreen: false,
+                defaultLanguage: 'cs',
+                initialMessages: [
+                    'Dobrý den👋', 'Jmenuji se Danka. Co pro vás mohu udělat?',
+                ],
+                i18n: {
+                    cs: {
+                        title: 'Danka - virtuální asistentka',
+                        subtitle: "",
+                        footer: '',
+                        getStarted: 'Nová konverzace',
+                        inputPlaceholder: 'Pište sem...',
+                    },
+                },
+                enableStreaming: true,
+            });
+        };
+        // Before the site's stylesheets, so the site's --chat-- colour overrides still win
+        document.head.insertBefore(style, document.head.querySelector('link[rel="stylesheet"]'));
+    }
+
+    const START_EVENTS = ['pointerdown', 'pointermove', 'keydown', 'scroll', 'touchstart', 'wheel'];
+    function onFirstInteraction() {
+        START_EVENTS.forEach((type) => window.removeEventListener(type, onFirstInteraction));
+        startChat();
+    }
+    START_EVENTS.forEach((type) => window.addEventListener(type, onFirstInteraction, { passive: true }));
+
+</script>
+
+<script>
+(function () {
+    var observer = new MutationObserver(function () {
+        var wrapper = document.querySelector('.chat-window-wrapper');
+        if (!wrapper || wrapper.dataset.hintWired) return;
+        wrapper.dataset.hintWired = '1';
+
+        var bubble = document.createElement('div');
+        bubble.className = 'chat-bubble-hint';
+        bubble.textContent = 'Hledáte něco? Pomůžu Vám!';
+        wrapper.appendChild(bubble);
+
+        var timer = localStorage.getItem('chatOpened') ? null : setTimeout(function () {
+            bubble.classList.add('visible');
+            try {
+                var ctx = new (window.AudioContext || window.webkitAudioContext)();
+                ctx.resume().then(function () {
+                    var osc = ctx.createOscillator();
+                    var gain = ctx.createGain();
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(880, ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(660, ctx.currentTime + 0.12);
+                    gain.gain.setValueAtTime(0.25, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+                    osc.start(ctx.currentTime);
+                    osc.stop(ctx.currentTime + 0.4);
+                });
+            } catch (e) {}
+        }, 3000);
+
+        var toggle = wrapper.querySelector('.chat-window-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function () {
+                bubble.classList.remove('visible');
+                clearTimeout(timer);
+                localStorage.setItem('chatOpened', '1');
+            });
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+<script>
+(function () {
+    var chatWindow = null;
+    var chatWasOpen = false;
+    var styleObserver = new MutationObserver(function () {
+        var isOpen = chatWindow && chatWindow.style.display !== 'none';
+        document.body.classList.toggle('chat-open', isOpen);
+        if (isOpen && !chatWasOpen && typeof gtag === 'function') {
+            gtag('event', 'chat_opened', {
+                event_category: 'engagement',
+                event_label: 'n8n chat'
+            });
+        }
+        chatWasOpen = isOpen;
+    });
+
+    var domObserver = new MutationObserver(function () {
+        var win = document.querySelector('.chat-window');
+        if (win && win !== chatWindow) {
+            chatWindow = win;
+            styleObserver.observe(chatWindow, { attributes: true, attributeFilter: ['style'] });
+            document.body.classList.toggle('chat-open', chatWindow.style.display !== 'none');
+        }
+    });
+
+    domObserver.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+</body>
+
+</html>

@@ -1,85 +1,545 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-          <loc>https://daniel-hladik.cz/contact/</loc><lastmod>2026-11-26T10:41:09+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/cookie-policy/</loc><lastmod>2026-11-26T11:07:37+00:00</lastmod><changefreq>monthly</changefreq><priority>0.2</priority></url><url>
-          <loc>https://daniel-hladik.cz/cv/</loc><lastmod>2026-11-26T10:49:03+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/</loc><lastmod>2026-04-22T20:26:57+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/</loc><lastmod>2026-11-26T10:17:58+00:00</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/</loc><lastmod>2026-10-29T13:11:44+00:00</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/</loc><lastmod>2026-02-21T13:40:17+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/web-app-development/</loc><lastmod>2026-10-29T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/rag-systems/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/intelligent-automation/</loc><lastmod>2026-01-25T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/landing-pages/</loc><lastmod>2026-10-29T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/website-development/</loc><lastmod>2026-10-29T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/automation-testing-qa/</loc><lastmod>2026-01-25T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/services/ai-agents/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/invoice-processing/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/customer-support-chatbot/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/automated-reporting/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/ai-email-management/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/crm-automation/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/internal-documentation-chatbot/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/quote-generation/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/employee-onboarding/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/feedback-analysis/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/use-cases/eshop-accounting-integration/</loc><lastmod>2026-02-21T01:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/rag/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/llm/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/n8n/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/embedding-model/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/vector/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/faq/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/langchain/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/agentic-systems/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/sitemap/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/json/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/http-request/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/html/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/markdown/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/chunking/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/metadata/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/re-ranking/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/prompt-injection/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/local-model/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/cors/</loc><lastmod>2026-04-21T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/api/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/webhook/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/token/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/system-prompt/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/context-window/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/hallucination/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/vector-database/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/trigger/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/api-key/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/rate-limit/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/endpoint/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/web-scraping/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/parsing/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/prompt/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/temperature/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/fine-tuning/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/zero-shot/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/guardrails/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/mcp/</loc><lastmod>2026-04-22T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/low-code-no-code/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/chatbot/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/workflow/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/semantic-search/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/hybrid-search/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/chain-of-thought/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/streaming-response/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/multimodal-model/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/function-calling/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/structured-output/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/glossary/bias/</loc><lastmod>2026-04-24T02:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url>
-          <loc>https://daniel-hladik.cz/blog/</loc><lastmod>2026-11-26T11:32:33+00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-      <loc>https://daniel-hladik.cz/blog/rag-ai-agent-in-website/</loc><lastmod>2026-05-26T20:45:57+00:00</lastmod><changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-    </url><url>
-      <loc>https://daniel-hladik.cz/blog/bodylog-app/</loc><lastmod>2026-02-13T12:31:07+00:00</lastmod><changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-    </url><url>
-      <loc>https://daniel-hladik.cz/blog/sleep-habit-tracker/</loc><lastmod>2026-02-13T12:31:07+00:00</lastmod><changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-    </url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://daniel-hladik.cz/kontakt/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/contact/"/>
+    <lastmod>2026-11-26T14:18:11+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/zasady-cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/zasady-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/cookie-policy/"/>
+    <lastmod>2026-11-26T14:18:11+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/o-mne/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/o-mne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/cv/"/>
+    <lastmod>2026-11-26T14:26:40+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/"/>
+    <lastmod>2026-11-26T14:18:11+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/"/>
+    <lastmod>2026-11-26T14:18:11+00:00</lastmod>
+    <changefreq>weekly</changefreq><priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/"/>
+    <lastmod>2026-11-26T14:18:11+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/"/>
+    <lastmod>2026-11-26T14:18:11+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/tvorba-webovych-aplikaci/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/tvorba-webovych-aplikaci/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/web-app-development/"/>
+    <lastmod>2026-10-29T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/rag-systemy/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/rag-systemy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/rag-systems/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/automatizace-procesu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/automatizace-procesu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/intelligent-automation/"/>
+    <lastmod>2026-01-25T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/tvorba-landing-page/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/tvorba-landing-page/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/landing-pages/"/>
+    <lastmod>2026-10-29T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/tvorba-webovych-stranek/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/tvorba-webovych-stranek/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/website-development/"/>
+    <lastmod>2026-10-29T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/automatizovane-testovani/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/automatizovane-testovani/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/automation-testing-qa/"/>
+    <lastmod>2026-01-25T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/sluzby/ai-agenti/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/sluzby/ai-agenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/services/ai-agents/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/automatizace-faktur/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/automatizace-faktur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/invoice-processing/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/ai-chatbot-zakaznicka-podpora/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/ai-chatbot-zakaznicka-podpora/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/customer-support-chatbot/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/automaticky-reporting/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/automaticky-reporting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/automated-reporting/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/ai-sprava-emailu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/ai-sprava-emailu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/ai-email-management/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/automatizace-crm/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/automatizace-crm/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/crm-automation/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/chatbot-interni-dokumentace/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/chatbot-interni-dokumentace/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/internal-documentation-chatbot/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/generovani-nabidek-a-smluv/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/generovani-nabidek-a-smluv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/quote-generation/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/automatizace-onboardingu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/automatizace-onboardingu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/employee-onboarding/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/analyza-zpetne-vazby/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/analyza-zpetne-vazby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/feedback-analysis/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/reseni/propojeni-eshopu-s-ucetnictvim/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/reseni/propojeni-eshopu-s-ucetnictvim/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/use-cases/eshop-accounting-integration/"/>
+    <lastmod>2026-02-21T01:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/rag/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/rag/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/rag/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/llm/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/llm/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/llm/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/n8n/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/n8n/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/n8n/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/embedding-model/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/embedding-model/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/embedding-model/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/vektor/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/vektor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/vector/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/faq/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/langchain/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/langchain/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/langchain/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/agentni-systemy/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/agentni-systemy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/agentic-systems/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/sitemap/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/sitemap/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/json/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/json/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/json/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/http-pozadavek/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/http-pozadavek/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/http-request/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/html/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/html/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/html/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/markdown/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/markdown/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/markdown/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/chunking/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/chunking/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/chunking/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/metadata/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/metadata/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/metadata/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/re-ranking/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/re-ranking/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/re-ranking/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/prompt-injection/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/prompt-injection/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/prompt-injection/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/lokalni-model/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/lokalni-model/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/local-model/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/cors/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/cors/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/cors/"/>
+    <lastmod>2026-04-21T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/api/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/api/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/api/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/webhook/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/webhook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/webhook/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/token/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/token/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/token/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/systemovy-prompt/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/systemovy-prompt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/system-prompt/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/kontextove-okno/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/kontextove-okno/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/context-window/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/halucinace/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/halucinace/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/hallucination/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/vektorova-databaze/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/vektorova-databaze/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/vector-database/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/trigger/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/trigger/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/trigger/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/api-klic/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/api-klic/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/api-key/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/rate-limit/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/rate-limit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/rate-limit/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/endpoint/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/endpoint/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/endpoint/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/web-scraping/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/web-scraping/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/web-scraping/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/parsing/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/parsing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/parsing/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/prompt/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/prompt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/prompt/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/temperature/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/temperature/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/temperature/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/fine-tuning/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/fine-tuning/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/fine-tuning/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/zero-shot/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/zero-shot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/zero-shot/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/guardrails/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/guardrails/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/guardrails/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/mcp/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/mcp/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/mcp/"/>
+    <lastmod>2026-04-22T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/low-code-no-code/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/low-code-no-code/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/low-code-no-code/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/chatbot/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/chatbot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/chatbot/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/workflow/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/workflow/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/workflow/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/semanticke-vyhledavani/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/semanticke-vyhledavani/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/semantic-search/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/hybridni-vyhledavani/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/hybridni-vyhledavani/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/hybrid-search/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/chain-of-thought/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/chain-of-thought/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/chain-of-thought/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/streamovani-odpovedi/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/streamovani-odpovedi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/streaming-response/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/multimodalni-model/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/multimodalni-model/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/multimodal-model/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/function-calling/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/function-calling/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/function-calling/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/strukturovany-vystup/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/strukturovany-vystup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/structured-output/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/ai-slovnik/bias/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/ai-slovnik/bias/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/glossary/bias/"/>
+    <lastmod>2026-04-24T02:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/"/>
+    <lastmod>2026-11-26T11:32:33+00:00</lastmod>
+    <changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/blog/ai-chatbot-na-web/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/ai-chatbot-na-web/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/rag-ai-agent-in-website/"/>
+    <lastmod>2026-05-26T20:45:57+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/blog/bodylog-fitness-aplikace/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/bodylog-fitness-aplikace/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/bodylog-app/"/>
+    <lastmod>2026-02-13T12:31:07+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://daniel-hladik.cz/blog/sledovani-spanku-v-google-tabulkach/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/sledovani-spanku-v-google-tabulkach/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/sleep-habit-tracker/"/>
+    <lastmod>2026-02-13T12:31:07+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
