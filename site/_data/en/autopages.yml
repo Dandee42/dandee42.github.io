@@ -2,7 +2,7 @@ reading_time: "read"
 back_to_all_posts: "← All blog posts"
 
 tags:
-  title: "Posts with tag "
+  title: "Posts tagged “%name%”"
 
 categories:
-  title: "Posts in category "
+  title: "Posts in category “%name%”"

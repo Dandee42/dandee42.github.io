@@ -1,0 +1,43 @@
+{% comment %}
+  Sticky site header with the main navigation, the theme toggle (#theme-toggle, darkmode.js) and,
+  below 1024 px, the button of the full-screen mobile menu. The menu is a sibling of <header>:
+  the header's backdrop-filter would otherwise trap the fixed menu inside it.
+{% endcomment %}
+{% assign lang = site.active_lang | default: site.default_lang %}
+{% assign trans = site.data[lang] %}
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">
+      <span class="site-header__name">{{ site.title[lang] }}</span>
+      <span class="site-header__role">{{ site.tagshort[lang] | default: site.taglong[lang] }}</span>
+    </a>
+    <nav class="site-nav" aria-label="{{ trans.general.nav.label }}">
+      {% include nav-links.html place="header" class="site-nav__link" %}
+    </nav>
+    <div class="site-header__actions">
+      <button type="button" id="theme-toggle" class="icon-button" onclick="modeSwitcher()" aria-label="{{ trans.general.nav.theme }}"></button>
+      <button type="button" class="icon-button menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="{{ trans.general.nav.open }}" data-menu-open>{% include svg/menu.svg %}</button>
+    </div>
+  </div>
+  {% if page.layout == "post" %}
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div>
+  {% endif %}
+</header>
+
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="{{ trans.general.nav.label }}" hidden data-mobile-menu>
+  <div class="mobile-menu__top">
+    <span class="site-header__brand">
+      <span class="site-header__name">{{ site.title[lang] }}</span>
+      <span class="site-header__role">{{ site.tagshort[lang] | default: site.taglong[lang] }}</span>
+    </span>
+    <button type="button" class="icon-button" aria-label="{{ trans.general.nav.close }}" data-menu-close>{% include svg/close.svg %}</button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="{{ trans.general.nav.label }}">
+    {% include nav-links.html place="header" class="mobile-menu__link" %}
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button--primary button--block" href="#contact-form">{{ trans.general.side_contact.write }}</a>
+    {% include booking-link.html class="button--outline button--block" label=trans.general.side_contact.call %}
+  </div>
+</div>
+<script src="{{ '/assets/js/site-nav.js' | relative_url }}" defer></script>

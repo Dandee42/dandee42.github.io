@@ -1,0 +1,8 @@
+{% comment %}
+  Link to book a call (contact.scheduled_meeting.booking_url): zapti.me in Czech, opened in a new tab;
+  Calendly in English, opened as the Calendly popup (calendly-assets.html, loaded on EN pages).
+  Parameters: class, label (defaults to the "Chci konzultaci ZDARMA" button text).
+{% endcomment %}
+{% assign trans = site.data[site.active_lang] %}
+{% assign booking_url = trans.contact.scheduled_meeting.booking_url %}
+<a class="{{ include.class }}" href="{{ booking_url }}"{% if site.active_lang == "en" %} onclick="Calendly.initPopupWidget({url: '{{ booking_url }}'});return false;"{% else %} target="_blank" rel="noopener"{% endif %}>{{ include.label | default: trans.contact.scheduled_meeting.submit_button }}</a>

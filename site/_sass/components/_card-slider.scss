@@ -1,0 +1,161 @@
+@use "breakpoints" as *;
+
+// =========================
+// CARD SLIDER
+// =========================
+
+// A row of cards that scrolls sideways (card-slider.js), as card carousels usually work:
+// - from 1024 px whole cards only (three on the homepage, two in a text column); the arrows next
+//   to the title move by the cards in view and are dimmed at either end, not removed;
+// - on touch screens below that, the row runs to the edges of the screen with the next card
+//   peeking in, and the arrows are hidden in favour of swiping;
+// - the row snaps to the cards and can be scrolled with the keyboard (it is focusable).
+//
+// --bleed is how far the track reaches out of .card-slider (negative: stays inside it), --track-pad
+// the space before the first card; inside the content both are 6 px, room for the cards' focus
+// outline, which the scroll container would clip. The widths use container units, which the
+// track resolves against .card-slider.
+.card-slider {
+  --gap: 24px;
+  --bleed: var(--container-pad);
+  --track-pad: var(--container-pad);
+  --card-w: 85cqi;
+
+  container-type: inline-size;
+
+  // In a text column (related posts): two whole cards, inside the column
+  @include up(md) {
+    --bleed: 6px;
+    --track-pad: 6px;
+    --card-w: calc((100cqi - var(--gap)) / 2);
+  }
+}
+
+// Full width (the homepage): .card-slider spans the window and the cards line up with the content
+// column. Below 1024 px the row runs on to the screen edges; from 1024 px it keeps to the column.
+.card-slider--wide {
+  --content: min(100cqi - 2 * var(--container-pad), var(--container-max));
+  --side: calc((100cqi - var(--content)) / 2);
+  --bleed: 0px;
+  --track-pad: var(--side);
+  --card-w: calc(var(--content) * 0.85);
+
+  @include up(md) {
+    --bleed: 0px;
+    --track-pad: var(--side);
+    --card-w: calc((var(--content) - var(--gap)) / 2.25);
+  }
+
+  @include up(lg) {
+    --bleed: calc(6px - var(--side));
+    --track-pad: 6px;
+    --card-w: calc((var(--content) - 2 * var(--gap)) / 3);
+  }
+}
+
+.card-slider__track {
+  display: grid;
+  grid-auto-columns: var(--card-w);
+  grid-auto-flow: column;
+  gap: var(--gap);
+  // 6 px above and below for the cards' focus outline, which the scroll container would clip
+  margin: -6px calc(-1 * var(--bleed));
+  padding: 6px var(--track-pad);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-padding-inline: var(--track-pad);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: -2px;
+  }
+
+  > * {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+}
+
+// The title with the arrows on the right, on one row also on narrow screens
+.card-slider__head {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  h2 {
+    min-width: 0;
+    margin: 0;
+  }
+}
+
+// Also on .related, whose title otherwise carries the space below it
+.related .card-slider__head {
+  margin-bottom: 28px;
+}
+
+.card-slider__nav {
+  display: flex;
+  flex: none;
+  gap: 8px;
+
+  &[hidden] {
+    display: none;
+  }
+
+  // Touch screens swipe
+  @media (hover: none) {
+    display: none;
+  }
+}
+
+.card-slider__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  cursor: pointer;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+
+  &:hover {
+    border-color: var(--color-heading);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  &[aria-disabled="true"] {
+    border-color: var(--color-border);
+    cursor: default;
+    opacity: 0.35;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// The last item of a row: just a button, e.g. to the whole blog, centred in the card's space
+.card-slider__end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}

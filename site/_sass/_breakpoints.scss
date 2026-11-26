@@ -1,0 +1,23 @@
+@use "sass:map";
+
+// Breakpoints shared by all partials. A partial that needs them must `@use "breakpoints" as *;` itself.
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+// From this width up
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+// Below this width
+@mixin down($name) {
+  @media (max-width: map.get($breakpoints, $name) - 0.02px) {
+    @content;
+  }
+}

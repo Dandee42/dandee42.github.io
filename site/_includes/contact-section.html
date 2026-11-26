@@ -1,0 +1,21 @@
+{% comment %}
+  Contact card above the footer: heading, contact details and booking link next to the contact form.
+  default.html renders it on every page except the bare ones and pages or layouts with
+  contact_section: false. The card is the #contact-form target of the "write to me" links.
+{% endcomment %}
+{% assign trans = site.data[site.active_lang] %}
+<section class="site-contact" aria-label="{{ trans.general.side_contact.label }}">
+  <div class="l-container">
+    <div class="contact-card" id="contact-form">
+      <div class="contact-card__info">
+        <h2 class="contact-card__title">{{ trans.contact.form.title }}</h2>
+        <p class="contact-card__lead">{{ trans.contact.form.subtitle }}</p>
+        {% include contact-details.html %}
+        {% include booking-link.html class="contact-card__booking" %}
+      </div>
+      <div class="contact-card__form">
+        {% include contact-form.html %}
+      </div>
+    </div>
+  </div>
+</section>

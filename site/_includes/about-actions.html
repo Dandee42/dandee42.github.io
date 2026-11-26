@@ -1,0 +1,8 @@
+{% comment %}
+  Buttons under the intro of the About page: "Napište mi" (to the contact form) and LinkedIn.
+{% endcomment %}
+{% assign trans = site.data[site.active_lang] %}
+<div class="contact-actions">
+  <a class="button--primary" href="#contact-form">{{ trans.general.side_contact.write }}</a>
+  <a class="button--outline" href="{{ trans.cv.lindkedIn }}">LinkedIn</a>
+</div>

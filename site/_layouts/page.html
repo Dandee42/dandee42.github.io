@@ -1,10 +1,24 @@
 ---
 layout: default
 ---
-{% include header.html %}
-<article>
-  <main>
+{% comment %}
+  width: "split" (default) puts the text column next to a sticky aside with the contact card;
+  "wide" uses the whole container. A page or a child layout sets it in its front matter.
+{% endcomment %}
+{% assign width = page.width | default: layout.width | default: "split" %}
+<div class="l-container l-page">
+{% if width == "wide" %}
+  <article class="page-article">
     {{ content }}
-  </main>
-</article>
-{% include footer.html %}
+  </article>
+{% else %}
+  <div class="l-split">
+    <article class="l-split__main page-article">
+      {{ content }}
+    </article>
+    <div class="l-split__aside">
+      {% include side-contact.html %}
+    </div>
+  </div>
+{% endif %}
+</div>

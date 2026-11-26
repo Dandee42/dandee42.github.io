@@ -1,26 +1,23 @@
 ---
 layout: page
+width: wide
 ---
 {% assign lang = site.active_lang | default: site.default_lang %}
 {% assign trans = site.data[site.active_lang] %}
+{% assign use_case_data = page.lang[lang] %}
+{% assign hero_alt = use_case_data.image_alt | default: use_case_data.title %}
 
-<p class="blog-back"><a href="{{ '/use-cases/' | relative_url }}">{{ trans.datapages_use_cases.all_use_cases_link }}</a></p>
+{% include detail-head.html back_url="/use-cases/" back_label=trans.datapages_use_cases.all_use_cases_link title=use_case_data.title lead=use_case_data.lead image_alt=hero_alt %}
 
-<h1>{{ page.lang[lang].title }}</h1>
-<p>{{ page.lang[lang].lead }}</p>
-{% if page.image %}
-    {% assign hero_alt = page.lang[lang].image_alt | default: page.lang[lang].title %}
-    {% include hero-picture.html alt=hero_alt class="hero-illustration" %}
-{% endif %}
-{{ page.lang[lang].text }}
-
-{% if lang == "cs" %}
-<p><a href="https://zapti.me/daniel-hladik/konzultace-zdarma">{{ trans.contact.scheduled_meeting.submit_button }}</a></p>
-{% else %}
-<!-- Calendly link widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<p><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/daniel-hladik/free-meeting'});return false;">{{ trans.contact.scheduled_meeting.submit_button }}</a></p>
-<!-- Calendly link widget end -->
-{% endif %}
-<p><a href="#contact-form">{{ page.lang[lang].contact_link }}</a></p>
+<div class="l-split detail-body">
+  <div class="l-split__main">
+    <div class="prose service-body">
+      {{ use_case_data.text }}
+    </div>
+    {% include faq.html items=use_case_data.faq %}
+    {% include cta-block.html text=use_case_data.lead button=use_case_data.contact_link %}
+  </div>
+  <aside class="l-split__aside">
+    {% include side-contact.html %}
+  </aside>
+</div>

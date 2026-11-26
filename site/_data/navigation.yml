@@ -1,0 +1,29 @@
+# Site navigation, shared by the header, the mobile menu and the footer (nav-links.html).
+# Labels come from _data/<lang>/footer.yml (trans.footer.<key>); polyglot adds /en to the URLs.
+#   header: also shown in the header and the mobile menu (the footer lists every item)
+#   match:  page.url prefixes that mark the item as the current page (page.url has no /en prefix)
+#   exact:  current only on that exact URL
+- key: home
+  url: /
+  exact: true
+  header: false
+- key: services
+  url: /services/
+  match: [/services/, /use-cases/]
+  header: true
+- key: blog
+  url: /blog/
+  match: [/blog/, /tag/]
+  header: true
+- key: glossary
+  url: /glossary/
+  match: [/glossary/]
+  header: false
+- key: about
+  url: /cv/
+  match: [/cv/]
+  header: true
+- key: contact
+  url: /contact/
+  match: [/contact/]
+  header: true

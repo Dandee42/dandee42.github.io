@@ -1,0 +1,5 @@
+{% comment %}
+  The portrait next to the intro of the About page.
+{% endcomment %}
+{% assign lang = site.active_lang | default: site.default_lang %}
+<img class="cv-intro__photo" src="{{ site.photo | replace: '.png', '.webp' | relative_url }}" width="512" height="512" alt="{{ site.title[lang] }}">

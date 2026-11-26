@@ -1,0 +1,52 @@
+@use "breakpoints" as *;
+
+// =========================
+// SECTION HEAD
+// =========================
+
+// Heading of a page section, with an intro paragraph or a link
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-weight: 700;
+    line-height: 1.12;
+  }
+
+  p {
+    max-width: 40em;
+    margin: 0;
+  }
+}
+
+// Heading on the left, intro paragraph on the right
+.section-head--split {
+  @include up(lg) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 64px;
+
+    > * {
+      flex: 1 1 0;
+    }
+  }
+}
+
+// Heading with a link at the end of the same row
+.section-head--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 32px;
+}
+
+.section-head__link {
+  font-weight: 700;
+}

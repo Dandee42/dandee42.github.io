@@ -11,6 +11,13 @@ page-not-found:
 alert:
   message: 'Taking on new projects: web apps, AI and automation. <a href="#contact-form">Get&nbsp;in&nbsp;touch</a>'
 
+nav:
+  label: "Main navigation"
+  open: "Open menu"
+  close: "Close menu"
+  theme: "Toggle dark mode"
+  footer: "Footer links"
+
 side_contact:
   label: "Contact"
   text: "I build web apps, AI&nbsp;solutions and automations&nbsp;– from idea to launch."
