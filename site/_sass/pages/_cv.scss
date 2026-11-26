@@ -12,7 +12,7 @@
   margin-bottom: 56px;
 
   @include up(lg) {
-    grid-template-columns: minmax(0, 1fr) 360px;
+    grid-template-columns: minmax(0, 1fr) 280px;
   }
 }
 
@@ -35,7 +35,7 @@
   max-width: 220px;
 
   @include up(lg) {
-    max-width: 360px;
+    max-width: 280px;
   }
 }
 
@@ -94,8 +94,8 @@
 
     &:hover,
     &:focus {
-      border-bottom: 0;
       color: var(--color-link);
+      text-decoration: none;
     }
   }
 

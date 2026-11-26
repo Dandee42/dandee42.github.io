@@ -14,14 +14,18 @@ svg path {
   stroke-width: 0.075em;
 }
 
+// The dotted underline on hover is a text decoration, not a bottom border: a border would make a
+// block or flex link taller on hover and push the content around it
 a {
   text-decoration: none;
   color: var(--color-link);
 
   &:focus,
   &:hover {
-    border-bottom: calc(var(--type-size) / 10) dotted var(--color-link);
     color: var(--color-link);
+    text-decoration: underline dotted;
+    text-decoration-thickness: calc(var(--type-size) / 10);
+    text-underline-offset: 0.25em;
   }
 }
 

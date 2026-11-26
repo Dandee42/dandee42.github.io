@@ -37,7 +37,14 @@ abbr[data-tooltip]::after {
   text-align: left;
   white-space: normal;
   pointer-events: none;
-  transform: translateX(-50%);
+  // post-abbr-tooltip.html shifts it sideways near the window's edges
+  transform: translateX(calc(-50% + var(--tooltip-shift, 0px)));
+}
+
+// No room above the word (under the sticky header): below it instead
+abbr.tooltip-below::after {
+  top: calc(100% + 8px);
+  bottom: auto;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -147,12 +154,4 @@ html[data-theme="dark"] .abbr-sheet {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-link);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease;
-
-  &:hover,
-  &:focus {
-    border-bottom-color: var(--color-link);
-  }
 }

@@ -84,6 +84,7 @@
   &:focus {
     border: 1px solid var(--color-heading);
     color: var(--color-heading);
+    text-decoration: none;
   }
 
   &.is-active {
@@ -263,8 +264,8 @@
 
     &:hover,
     &:focus {
-      border-bottom: 0;
       background-color: var(--color-band);
+      text-decoration: none;
     }
   }
 }
@@ -305,8 +306,8 @@
 
   &:hover,
   &:focus {
-    border: 1.5px solid var(--color-text);
     color: var(--color-heading);
+    text-decoration: none;
     box-shadow: 0 0 0 1px var(--color-text);
   }
 }

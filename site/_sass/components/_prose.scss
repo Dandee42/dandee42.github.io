@@ -117,7 +117,7 @@ a[href^="#fn:"] {
   &:focus,
   &:hover {
     font-weight: 700;
-    border: none;
+    text-decoration: none;
   }
 }
 
@@ -127,7 +127,7 @@ a.reversefootnote {
   &:focus,
   &:hover {
     font-weight: 700;
-    border: none;
+    text-decoration: none;
   }
 }
 

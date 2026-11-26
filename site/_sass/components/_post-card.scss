@@ -71,8 +71,8 @@ html[data-theme="dark"] .post-card__image img {
 
   &:hover,
   &:focus {
-    border-bottom: 0;
     color: var(--color-link);
+    text-decoration: none;
   }
 
   &:focus-visible {

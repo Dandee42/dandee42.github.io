@@ -11,8 +11,8 @@
 
   &:focus,
   &:hover {
-    border: solid 2px var(--color-text);
     color: var(--color-text);
+    text-decoration: none;
     box-shadow: 0 0 0 1px var(--color-text);
   }
 }
@@ -52,8 +52,8 @@
 
   &:hover,
   &:focus {
-    border: 0;
     color: var(--color-on-accent);
+    text-decoration: none;
     box-shadow: 0 0 0 4px var(--color-tint);
   }
 }
@@ -65,8 +65,8 @@
 
   &:hover,
   &:focus {
-    border: 1.5px solid var(--color-text);
     color: var(--color-heading);
+    text-decoration: none;
     box-shadow: 0 0 0 1px var(--color-text);
   }
 }

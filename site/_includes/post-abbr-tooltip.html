@@ -59,26 +59,55 @@
 
   var isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
-  // 3. Bind abbr clicks
+  // 3. Keep the desktop tooltip (the abbr's ::after) inside the window: near an edge, shift it
+  //    sideways (--tooltip-shift), and when the sticky header leaves no room above the word, show
+  //    it below (.tooltip-below). The box is measured once it shows; until then, its maximum size.
+  var header = document.querySelector('.site-header');
+  function placeTooltip(el) {
+    var margin = 12;
+    var viewport = document.documentElement.clientWidth;
+    var rect = el.getBoundingClientRect();
+    var box = getComputedStyle(el, '::after');
+    var width = parseFloat(box.width);
+    var height = parseFloat(box.height);
+    if (!(width > 0)) width = Math.min(300, viewport * 0.8);
+    if (!(height > 0)) height = 80;
+    var center = rect.left + rect.width / 2;
+    var shift = 0;
+    if (center - width / 2 < margin) {
+      shift = margin - (center - width / 2);
+    } else if (center + width / 2 > viewport - margin) {
+      shift = viewport - margin - (center + width / 2);
+    }
+    el.style.setProperty('--tooltip-shift', Math.round(shift) + 'px');
+    var top = header ? header.getBoundingClientRect().bottom : 0;
+    el.classList.toggle('tooltip-below', rect.top - height - 8 < top + margin);
+  }
+
+  // 4. Bind abbr hovers and clicks
   document.querySelectorAll('abbr[data-tooltip]').forEach(function(el) {
+    el.addEventListener('mouseenter', function() {
+      placeTooltip(el);
+    });
     el.addEventListener('click', function(e) {
       e.stopPropagation();
       if (isTouch || this.hasAttribute('data-glossary')) {
         openSheet(this);
       } else {
         this.classList.toggle('tooltip-visible');
+        placeTooltip(this);
       }
     });
   });
 
-  // 4. Close on backdrop click, close button, or Escape key
+  // 5. Close on backdrop click, close button, or Escape key
   backdrop.addEventListener('click', closeSheet);
   closeBtn.addEventListener('click', closeSheet);
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeSheet();
   });
 
-  // 5. Desktop: close tooltip on outside click
+  // 6. Desktop: close tooltip on outside click
   document.addEventListener('click', function() {
     if (!isTouch) {
       document.querySelectorAll('abbr.tooltip-visible')
