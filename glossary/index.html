@@ -1,5 +1,9 @@
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="cs">
 
@@ -99,7 +103,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,cancel,chat,chat_bubble,check,close,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=account_tree,ads_click,all_inclusive,api,balance,bar_chart,bolt,chat,chat_bubble,check,close,code,computer,contacts,content_copy,crop_free,data_array,data_object,description,document_scanner,edit_note,electric_bolt,electrical_services,error,extension,filter_none,function,help_outline,hub,info,join_inner,key,label,link,manage_search,map,mark_email_read,menu_book,perm_media,person_add,policy,psychology,psychology_alt,receipt_long,reviews,scatter_plot,schema,search_insights,security,send,settings_suggest,share,shield,smart_toy,sort,speed,storage,stream,support_agent,sync_alt,terminal,thermometer,toll,transform,travel_explore,tune,verified_user,view_module,warning,web,webhook&display=block"/>
 <!-- RSS Feed -->
 
 <link rel="alternate" type="application/rss+xml" title="Daniel Hladík - RSS (cs)" href="https://daniel-hladik.cz/feed.xml" />
@@ -124,88 +128,87 @@
 
 <!-- Cookie modal -->
 <style>
+  /* Compact card at the bottom: full width on phones, bottom left on wider screens (the chat
+     toggle sits bottom right) */
   #cookie-overlay {
     position: fixed;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
     z-index: 10001;
-    width: calc(100% - 2rem);
-    max-width: 600px;
+    max-width: 440px;
+  }
+  @media (min-width: 768px) {
+    #cookie-overlay {
+      left: 24px;
+      right: auto;
+      bottom: 24px;
+    }
   }
   #cookie-overlay.d-none { display: none !important; }
 
   #cookie-banner {
     font-family: var(--type-serif);
-    background: var(--color-background);
+    background: var(--color-surface);
     color: var(--color-text);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
   }
   #cookie-banner h2 {
     font-family: var(--type-serif);
     color: var(--color-heading);
-    font-size: var(--type-size);
-    font-weight: 600;
-    margin: 0 0 .6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 6px;
   }
   #cookie-banner p {
-    margin: 0 0 1.25rem;
-    font-size: var(--type-size);
-    line-height: 1.6;
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
     color: var(--color-text);
   }
   #cookie-banner a {
-    color: var(--color-text);
+    color: var(--color-link);
     font-weight: bold;
   }
   #cookie-banner a:hover {
     border-bottom: none;
   }
 
-  #cookie-banner .link-policy {
-    display: block;
-    text-align: right;
-    margin-top: .5rem;
-    font-size: calc(var(--type-size) * 0.85);
-    color: var(--color-text);
-  }
-
   #cookie-banner .cookie-actions {
     display: flex;
-    gap: .5rem;
+    gap: 8px;
   }
   #cookie-banner .cookie-actions button {
     flex: 1;
   }
   #cookie-banner button {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: var(--radius-pill);
     font-family: var(--type-serif);
-    font-size: var(--type-size);
-    padding: .4rem 1.5rem;
-    border-radius: 12px;
-    border: solid 2px var(--color-text);
+    font-size: 0.9375rem;
     cursor: pointer;
-    transition: background-color .15s, color .15s, box-shadow .15s;
+    transition: box-shadow .15s;
   }
   #cookie-decline {
-    background: var(--color-button-background);
-    color: var(--color-button-text);
+    background: transparent;
+    color: var(--color-heading);
+    border: 1.5px solid var(--color-text);
   }
   #cookie-decline:hover {
-    background: var(--color-button-background-hover);
-    color: var(--color-button-text-hover);
     box-shadow: 0 0 0 1px var(--color-text);
   }
   #cookie-accept {
-    background: var(--color-button-background-hover);
-    color: var(--color-button-text-hover);
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    background: var(--color-heading);
+    color: var(--color-background);
+    border: 0;
+    font-weight: 700;
   }
   #cookie-accept:hover {
-    box-shadow: 0 0 0 1px var(--color-text);
+    box-shadow: 0 0 0 3px var(--color-border);
   }
 </style>
 
@@ -293,8 +296,8 @@
     <span class="alert-text">Přijímám nové projekty: webové aplikace, AI a automatizace. <a href="#contact-form">Napište&nbsp;mi</a></span>
 
     
-      <button class="alert-close">
-        <span class="material-symbols-outlined">cancel</span>
+      <button type="button" class="alert-close" aria-label="Zavřít">
+        <span class="material-symbols-outlined">close</span>
       </button>
     
   </div>
@@ -306,1312 +309,1201 @@
   
   
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col col-sm-10 col-md-8 col-lg-6 page-column">
-        
+  
+  
 
-<header>
-  <div>
-    <!--<a class="particles-icon icon-link" href="https://daniel-hladik.cz"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8m0 0l3.5 3.5M8 12l3.5-3.5M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</a>-->
-    <a class="site-title" href="/">Daniel Hladík</a>
-    <small>
+
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a class="site-header__brand" href="/">
+      <span class="site-header__name">Daniel Hladík</span>
+      <span class="site-header__role">AI Product Builder</span>
+    </a>
+    <nav class="site-nav" aria-label="Hlavní navigace">
+      
+
+
+  
+
+  
     
-      AI Product Builder
     
-    </small>
+    <a class="site-nav__link" href="/services/">Služby</a>
+  
+
+  
+    
+    
+    <a class="site-nav__link" href="/blog/">Blog</a>
+  
+
+  
+
+  
+    
+    
+    <a class="site-nav__link" href="/cv/">O mně</a>
+  
+
+  
+    
+    
+    <a class="site-nav__link" href="/contact/">Kontakt</a>
+  
+
+
+    </nav>
+    <div class="site-header__actions">
+      <button type="button" id="theme-toggle" class="icon-button" onclick="modeSwitcher()" aria-label="Přepnout tmavý režim"></button>
+      <button type="button" class="icon-button menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Otevřít menu" data-menu-open><svg class="icon" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+    </div>
   </div>
-  <a id="theme-toggle" class="toggle-icon" onclick="modeSwitcher()"></a>
+  
 </header>
 
-<article>
-  <main>
-    
-
-
-<h1>AI Slovník</h1>
-<p>Přehled pojmů z oblasti umělé inteligence a automatizace.</p>
-
-<!-- Search input -->
-<div class="glossary-search">
-  <input type="text" id="glossary-search-input"
-         class="glossary-search-input"
-         placeholder="Hledat pojem...">
-</div>
-
-<!-- Category filter -->
-
-<div class="glossary-category-bar">
-  <button class="glossary-category-btn active" data-category="all">
-    Vše
-  </button>
-  
-    
-    
-    <button class="glossary-category-btn glossary-category-btn--automation" data-category="automation">
-      Automatizace
-    </button>
-    
-  
-    
-    
-    <button class="glossary-category-btn glossary-category-btn--data" data-category="data">
-      Data & Formáty
-    </button>
-    
-  
-    
-    
-    <button class="glossary-category-btn glossary-category-btn--llm" data-category="llm">
-      Jazykové modely
-    </button>
-    
-  
-    
-    
-    <button class="glossary-category-btn glossary-category-btn--rag" data-category="rag">
-      RAG
-    </button>
-    
-  
-    
-    
-    <button class="glossary-category-btn glossary-category-btn--security" data-category="security">
-      Bezpečnost
-    </button>
-    
-  
-    
-    
-    <button class="glossary-category-btn glossary-category-btn--web" data-category="web">
-      Web
-    </button>
-    
-  
-</div>
-
-<!-- Alphabetical filter bar -->
-<div class="tags-slider-wrapper">
-  <button class="tags-prev" id="glossary-alpha-prev"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M15 6l-6 6 6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Hlavní navigace" hidden data-mobile-menu>
+  <div class="mobile-menu__top">
+    <span class="site-header__brand">
+      <span class="site-header__name">Daniel Hladík</span>
+      <span class="site-header__role">AI Product Builder</span>
+    </span>
+    <button type="button" class="icon-button" aria-label="Zavřít menu" data-menu-close><svg class="icon" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
-  <div class="tags-slider glossary-alpha-bar" id="glossary-alpha-bar">
-    <button class="glossary-alpha-btn active" data-letter="all">
-      Vše
-    </button>
   </div>
-  <button class="tags-next" id="glossary-alpha-next"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M9 6l6 6-6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</button>
-</div>
+  <nav class="mobile-menu__nav" aria-label="Hlavní navigace">
+    
 
-<!-- Term list -->
 
-<ul class="glossary-list" id="glossary-list">
+  
 
   
     
-    <li class="glossary-item" data-term="API (Application Programming Interface)"
+    
+    <a class="mobile-menu__link" href="/services/">Služby</a>
+  
+
+  
+    
+    
+    <a class="mobile-menu__link" href="/blog/">Blog</a>
+  
+
+  
+
+  
+    
+    
+    <a class="mobile-menu__link" href="/cv/">O mně</a>
+  
+
+  
+    
+    
+    <a class="mobile-menu__link" href="/contact/">Kontakt</a>
+  
+
+
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button--primary button--block" href="#contact-form">Napište mi</a>
+    
+
+
+<a class="button--outline button--block" href="https://zapti.me/daniel-hladik/konzultace-zdarma" target="_blank" rel="noopener">Domluvit hovor</a>
+
+  </div>
+</div>
+<script src="/assets/js/site-nav.js" defer></script>
+
+  <main id="main">
+    
+
+<div class="l-container l-page">
+
+  <article class="page-article">
+    
+
+
+
+
+<div class="page-head page-head--split">
+  <div class="page-head__text">
+    <h1>AI Slovník</h1>
+    <p class="page-lead">Přehled pojmů z oblasti umělé inteligence a automatizace.</p>
+  </div>
+  <div class="search-container">
+    <label class="visually-hidden" for="glossary-search-input">Hledat pojem...</label>
+    <input type="search" id="glossary-search-input" class="search-input" placeholder="Hledat pojem..." autocomplete="off">
+  </div>
+</div>
+
+
+<div class="glossary-categories" role="group" aria-label="Kategorie">
+  <button type="button" class="tag-chip glossary-category-btn is-active" aria-pressed="true" data-category="all">Vše</button>
+  
+    
+    
+    <button type="button" class="tag-chip glossary-category-btn" aria-pressed="false" data-category="automation">Automatizace</button>
+    
+  
+    
+    
+    <button type="button" class="tag-chip glossary-category-btn" aria-pressed="false" data-category="data">Data & Formáty</button>
+    
+  
+    
+    
+    <button type="button" class="tag-chip glossary-category-btn" aria-pressed="false" data-category="llm">Jazykové modely</button>
+    
+  
+    
+    
+    <button type="button" class="tag-chip glossary-category-btn" aria-pressed="false" data-category="rag">RAG</button>
+    
+  
+    
+    
+    <button type="button" class="tag-chip glossary-category-btn" aria-pressed="false" data-category="security">Bezpečnost</button>
+    
+  
+    
+    
+    <button type="button" class="tag-chip glossary-category-btn" aria-pressed="false" data-category="web">Web</button>
+    
+  
+</div>
+
+<div class="tag-scroller glossary-letters" data-alpha-scroller>
+  <button type="button" class="tag-scroller__arrow" aria-label="Předchozí písmena" hidden data-alpha-prev><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M15 6l-6 6 6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+  <div class="tag-scroller__track" role="group" aria-label="Počáteční písmeno" data-alpha-track>
+    <button type="button" class="tag-chip glossary-alpha-btn is-active" aria-pressed="true" data-letter="all">Vše</button>
+  </div>
+  <button type="button" class="tag-scroller__arrow" aria-label="Další písmena" hidden data-alpha-next><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M9 6l6 6-6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+
+
+<ul class="service-grid service-grid--list glossary-list" id="glossary-list">
+
+  
+    <li class="service-tile glossary-item" data-term="API (Application Programming Interface)"
         data-letter="A"
         data-categories="web">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">api</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/api/">API (Application Programming Interface)</a></h2>
+        <p class="service-tile__text">Rozhraní, které umožňuje dvěma aplikacím komunikovat a vyměňovat si data podle přesně daných pravidel.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">api</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/api/">API (Application Programming Interface)</a></h2>
-      </div>
-      <p class="glossary-description">Rozhraní, které umožňuje dvěma aplikacím komunikovat a vyměňovat si data podle přesně daných pravidel.</p>
-      <a class="glossary-link" href="/glossary/api/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="API klíč (API key)"
+    <li class="service-tile glossary-item" data-term="API klíč (API key)"
         data-letter="A"
         data-categories="web,security">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="security">
-          Bezpečnost
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">key</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="security">Bezpečnost</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/api-key/">API klíč (API key)</a></h2>
+        <p class="service-tile__text">Tajný identifikátor, který opravňuje vaši aplikaci k volání cizího API a umožňuje poskytovateli sledovat využití.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">key</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/api-key/">API klíč (API key)</a></h2>
-      </div>
-      <p class="glossary-description">Tajný identifikátor, který opravňuje vaši aplikaci k volání cizího API a umožňuje poskytovateli sledovat využití.</p>
-      <a class="glossary-link" href="/glossary/api-key/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Agentní systémy (AI agenti)"
+    <li class="service-tile glossary-item" data-term="Agentní systémy (AI agenti)"
         data-letter="A"
         data-categories="llm,automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">smart_toy</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/agentic-systems/">Agentní systémy (AI agenti)</a></h2>
+        <p class="service-tile__text">Pokročilé implementace AI, které samostatně rozhodují o postupu k dosažení stanoveného cíle.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">smart_toy</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/agentic-systems/">Agentní systémy (AI agenti)</a></h2>
-      </div>
-      <p class="glossary-description">Pokročilé implementace AI, které samostatně rozhodují o postupu k dosažení stanoveného cíle.</p>
-      <a class="glossary-link" href="/glossary/agentic-systems/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Bias v AI (předpojatost)"
+    <li class="service-tile glossary-item" data-term="Bias v AI (předpojatost)"
         data-letter="B"
         data-categories="llm,security">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="security">
-          Bezpečnost
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">balance</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="security">Bezpečnost</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/bias/">Bias v AI (předpojatost)</a></h2>
+        <p class="service-tile__text">Systematické zkreslení AI modelu, které vzniká z trénovacích dat a vede k nespravedlivým nebo chybným výstupům.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">balance</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/bias/">Bias v AI (předpojatost)</a></h2>
-      </div>
-      <p class="glossary-description">Systematické zkreslení AI modelu, které vzniká z trénovacích dat a vede k nespravedlivým nebo chybným výstupům.</p>
-      <a class="glossary-link" href="/glossary/bias/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="CORS (Cross-Origin Resource Sharing)"
+    <li class="service-tile glossary-item" data-term="CORS (Cross-Origin Resource Sharing)"
         data-letter="C"
         data-categories="web,security">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="security">
-          Bezpečnost
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">security</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="security">Bezpečnost</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/cors/">CORS (Cross-Origin Resource Sharing)</a></h2>
+        <p class="service-tile__text">Bezpečnostní mechanismus v prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">security</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/cors/">CORS (Cross-Origin Resource Sharing)</a></h2>
-      </div>
-      <p class="glossary-description">Bezpečnostní mechanismus v prohlížečích, který hlídá, odkud mohou přicházet požadavky na váš server.</p>
-      <a class="glossary-link" href="/glossary/cors/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Chain of Thought (CoT) - myšlenkový řetězec"
+    <li class="service-tile glossary-item" data-term="Chain of Thought (CoT) - myšlenkový řetězec"
         data-letter="C"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">account_tree</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/chain-of-thought/">Chain of Thought (CoT) - myšlenkový řetězec</a></h2>
+        <p class="service-tile__text">Technika promptování, která přiměje LLM model uvažovat krok za krokem a zlepšuje přesnost u složitých úloh.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">account_tree</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/chain-of-thought/">Chain of Thought (CoT) - myšlenkový řetězec</a></h2>
-      </div>
-      <p class="glossary-description">Technika promptování, která přiměje LLM model uvažovat krok za krokem a zlepšuje přesnost u složitých úloh.</p>
-      <a class="glossary-link" href="/glossary/chain-of-thought/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Chatbot (AI chatbot)"
+    <li class="service-tile glossary-item" data-term="Chatbot (AI chatbot)"
         data-letter="C"
         data-categories="llm,automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">chat_bubble</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/chatbot/">Chatbot (AI chatbot)</a></h2>
+        <p class="service-tile__text">Konverzační aplikace, která odpovídá uživatelům v reálném čase. Moderní varianty využívají LLM a RAG.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">chat_bubble</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/chatbot/">Chatbot (AI chatbot)</a></h2>
-      </div>
-      <p class="glossary-description">Konverzační aplikace, která odpovídá uživatelům v reálném čase. Moderní varianty využívají LLM a RAG.</p>
-      <a class="glossary-link" href="/glossary/chatbot/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Chunking"
+    <li class="service-tile glossary-item" data-term="Chunking"
         data-letter="C"
         data-categories="rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">view_module</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/chunking/">Chunking</a></h2>
+        <p class="service-tile__text">Proces rozdělení dlouhého textu na menší, logické celky (chunky) pro efektivní zpracování v RAG systémech.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">view_module</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/chunking/">Chunking</a></h2>
-      </div>
-      <p class="glossary-description">Proces rozdělení dlouhého textu na menší, logické celky (chunky) pro efektivní zpracování v RAG systémech.</p>
-      <a class="glossary-link" href="/glossary/chunking/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Kontextové okno (Context window)"
+    <li class="service-tile glossary-item" data-term="Kontextové okno (Context window)"
         data-letter="K"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">crop_free</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/context-window/">Kontextové okno (Context window)</a></h2>
+        <p class="service-tile__text">Maximální množství textu (v tokenech), které LLM model vidí a zpracuje najednou v jednom požadavku.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">crop_free</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/context-window/">Kontextové okno (Context window)</a></h2>
-      </div>
-      <p class="glossary-description">Maximální množství textu (v tokenech), které LLM model vidí a zpracuje najednou v jednom požadavku.</p>
-      <a class="glossary-link" href="/glossary/context-window/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Embedding model"
+    <li class="service-tile glossary-item" data-term="Embedding model"
         data-letter="E"
         data-categories="rag,llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">transform</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/embedding-model/">Embedding model</a></h2>
+        <p class="service-tile__text">Specializovaný typ AI, který převádí text na číselné vektory pro efektivní sémantické vyhledávání.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">transform</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/embedding-model/">Embedding model</a></h2>
-      </div>
-      <p class="glossary-description">Specializovaný typ AI, který převádí text na číselné vektory pro efektivní sémantické vyhledávání.</p>
-      <a class="glossary-link" href="/glossary/embedding-model/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Endpoint (API endpoint)"
+    <li class="service-tile glossary-item" data-term="Endpoint (API endpoint)"
         data-letter="E"
         data-categories="web">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">electrical_services</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/endpoint/">Endpoint (API endpoint)</a></h2>
+        <p class="service-tile__text">Konkrétní URL adresa, na které API přijímá požadavky pro danou operaci nebo zdroj dat.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">electrical_services</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/endpoint/">Endpoint (API endpoint)</a></h2>
-      </div>
-      <p class="glossary-description">Konkrétní URL adresa, na které API přijímá požadavky pro danou operaci nebo zdroj dat.</p>
-      <a class="glossary-link" href="/glossary/endpoint/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="FAQ (Frequently Asked Questions)"
+    <li class="service-tile glossary-item" data-term="FAQ (Frequently Asked Questions)"
         data-letter="F"
         data-categories="data">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="data">
-          Data & Formáty
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">help_outline</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="data">Data & Formáty</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/faq/">FAQ (Frequently Asked Questions)</a></h2>
+        <p class="service-tile__text">Strukturovaný seznam často kladených otázek a odpovědí, které řeší nejběžnější nejasnosti uživatelů.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">help_outline</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/faq/">FAQ (Frequently Asked Questions)</a></h2>
-      </div>
-      <p class="glossary-description">Strukturovaný seznam často kladených otázek a odpovědí, které řeší nejběžnější nejasnosti uživatelů.</p>
-      <a class="glossary-link" href="/glossary/faq/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Fine-tuning (doladění modelu)"
+    <li class="service-tile glossary-item" data-term="Fine-tuning (doladění modelu)"
         data-letter="F"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">tune</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/fine-tuning/">Fine-tuning (doladění modelu)</a></h2>
+        <p class="service-tile__text">Proces dalšího trénování předtrénovaného LLM modelu na vlastních datech pro specializaci na konkrétní úkol nebo styl.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">tune</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/fine-tuning/">Fine-tuning (doladění modelu)</a></h2>
-      </div>
-      <p class="glossary-description">Proces dalšího trénování předtrénovaného LLM modelu na vlastních datech pro specializaci na konkrétní úkol nebo styl.</p>
-      <a class="glossary-link" href="/glossary/fine-tuning/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Function calling (Tool use)"
+    <li class="service-tile glossary-item" data-term="Function calling (Tool use)"
         data-letter="F"
         data-categories="llm,automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">function</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/function-calling/">Function calling (Tool use)</a></h2>
+        <p class="service-tile__text">Schopnost LLM modelu volat externí funkce a nástroje - základ AI agentů a chatbotů se skutečnými akcemi.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">function</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/function-calling/">Function calling (Tool use)</a></h2>
-      </div>
-      <p class="glossary-description">Schopnost LLM modelu volat externí funkce a nástroje - základ AI agentů a chatbotů se skutečnými akcemi.</p>
-      <a class="glossary-link" href="/glossary/function-calling/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Guardrails (ochranné mantinely AI)"
+    <li class="service-tile glossary-item" data-term="Guardrails (ochranné mantinely AI)"
         data-letter="G"
         data-categories="llm,security">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="security">
-          Bezpečnost
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">policy</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="security">Bezpečnost</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/guardrails/">Guardrails (ochranné mantinely AI)</a></h2>
+        <p class="service-tile__text">Ochranné mechanismy omezující chování AI systému a zabraňující nežádoucím, škodlivým nebo mimoscopovým výstupům.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">policy</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/guardrails/">Guardrails (ochranné mantinely AI)</a></h2>
-      </div>
-      <p class="glossary-description">Ochranné mechanismy omezující chování AI systému a zabraňující nežádoucím, škodlivým nebo mimoscopovým výstupům.</p>
-      <a class="glossary-link" href="/glossary/guardrails/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="HTML (HyperText Markup Language)"
+    <li class="service-tile glossary-item" data-term="HTML (HyperText Markup Language)"
         data-letter="H"
         data-categories="web,data">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="data">
-          Data & Formáty
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">code</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="data">Data & Formáty</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/html/">HTML (HyperText Markup Language)</a></h2>
+        <p class="service-tile__text">Standardní značkovací jazyk, který určuje strukturu a obsah webových stránek.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">code</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/html/">HTML (HyperText Markup Language)</a></h2>
-      </div>
-      <p class="glossary-description">Standardní značkovací jazyk, který určuje strukturu a obsah webových stránek.</p>
-      <a class="glossary-link" href="/glossary/html/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="HTTP Request (HTTP požadavek)"
+    <li class="service-tile glossary-item" data-term="HTTP Request (HTTP požadavek)"
         data-letter="H"
         data-categories="web">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">send</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/http-request/">HTTP Request (HTTP požadavek)</a></h2>
+        <p class="service-tile__text">Digitální zpráva, kterou jeden počítač posílá druhému pro získání nebo předání dat.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">send</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/http-request/">HTTP Request (HTTP požadavek)</a></h2>
-      </div>
-      <p class="glossary-description">Digitální zpráva, kterou jeden počítač posílá druhému pro získání nebo předání dat.</p>
-      <a class="glossary-link" href="/glossary/http-request/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Halucinace AI (Hallucination)"
+    <li class="service-tile glossary-item" data-term="Halucinace AI (Hallucination)"
         data-letter="H"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">psychology_alt</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/hallucination/">Halucinace AI (Hallucination)</a></h2>
+        <p class="service-tile__text">Jev, kdy AI model vygeneruje přesvědčivě znějící, ale fakticky chybnou nebo smyšlenou informaci.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">psychology_alt</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/hallucination/">Halucinace AI (Hallucination)</a></h2>
-      </div>
-      <p class="glossary-description">Jev, kdy AI model vygeneruje přesvědčivě znějící, ale fakticky chybnou nebo smyšlenou informaci.</p>
-      <a class="glossary-link" href="/glossary/hallucination/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Hybrid search (hybridní vyhledávání)"
+    <li class="service-tile glossary-item" data-term="Hybrid search (hybridní vyhledávání)"
         data-letter="H"
         data-categories="rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">join_inner</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/hybrid-search/">Hybrid search (hybridní vyhledávání)</a></h2>
+        <p class="service-tile__text">Kombinace sémantického (vektorového) a klasického klíčového vyhledávání pro vyšší přesnost výsledků v RAG.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">join_inner</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/hybrid-search/">Hybrid search (hybridní vyhledávání)</a></h2>
-      </div>
-      <p class="glossary-description">Kombinace sémantického (vektorového) a klasického klíčového vyhledávání pro vyšší přesnost výsledků v RAG.</p>
-      <a class="glossary-link" href="/glossary/hybrid-search/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="JSON (JavaScript Object Notation)"
+    <li class="service-tile glossary-item" data-term="JSON (JavaScript Object Notation)"
         data-letter="J"
         data-categories="data,web">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="data">
-          Data & Formáty
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">data_object</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="data">Data & Formáty</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/json/">JSON (JavaScript Object Notation)</a></h2>
+        <p class="service-tile__text">Univerzální a lehký datový formát pro přehledné ukládání a přenos informací mezi systémy.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">data_object</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/json/">JSON (JavaScript Object Notation)</a></h2>
-      </div>
-      <p class="glossary-description">Univerzální a lehký datový formát pro přehledné ukládání a přenos informací mezi systémy.</p>
-      <a class="glossary-link" href="/glossary/json/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="LLM (Large Language Model)"
+    <li class="service-tile glossary-item" data-term="LLM (Large Language Model)"
         data-letter="L"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">psychology</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/llm/">LLM (Large Language Model)</a></h2>
+        <p class="service-tile__text">Velký jazykový model - typ AI vytrénovaný na obrovském množství textu, který dokáže rozumět lidské řeči a generovat text.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">psychology</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/llm/">LLM (Large Language Model)</a></h2>
-      </div>
-      <p class="glossary-description">Velký jazykový model - typ AI vytrénovaný na obrovském množství textu, který dokáže rozumět lidské řeči a generovat text.</p>
-      <a class="glossary-link" href="/glossary/llm/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="LangChain"
+    <li class="service-tile glossary-item" data-term="LangChain"
         data-letter="L"
         data-categories="automation,llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">link</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/langchain/">LangChain</a></h2>
+        <p class="service-tile__text">Open-source framework s předpřipravenou architekturou pro AI agenty a integracemi pro jakýkoliv model nebo nástroj.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">link</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/langchain/">LangChain</a></h2>
-      </div>
-      <p class="glossary-description">Open-source framework s předpřipravenou architekturou pro AI agenty a integracemi pro jakýkoliv model nebo nástroj.</p>
-      <a class="glossary-link" href="/glossary/langchain/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Lokální model (Local LLM)"
+    <li class="service-tile glossary-item" data-term="Lokální model (Local LLM)"
         data-letter="L"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">computer</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/local-model/">Lokální model (Local LLM)</a></h2>
+        <p class="service-tile__text">Velký jazykový model stažený a spuštěný přímo na vašem vlastním počítači nebo serveru bez odesílání dat třetím stranám.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">computer</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/local-model/">Lokální model (Local LLM)</a></h2>
-      </div>
-      <p class="glossary-description">Velký jazykový model stažený a spuštěný přímo na vašem vlastním počítači nebo serveru bez odesílání dat třetím stranám.</p>
-      <a class="glossary-link" href="/glossary/local-model/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Low-code / No-code"
+    <li class="service-tile glossary-item" data-term="Low-code / No-code"
         data-letter="L"
         data-categories="automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">extension</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/low-code-no-code/">Low-code / No-code</a></h2>
+        <p class="service-tile__text">Vývojové přístupy, které umožňují tvořit aplikace a automatizace s minimem nebo úplně bez psaní kódu.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">extension</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/low-code-no-code/">Low-code / No-code</a></h2>
-      </div>
-      <p class="glossary-description">Vývojové přístupy, které umožňují tvořit aplikace a automatizace s minimem nebo úplně bez psaní kódu.</p>
-      <a class="glossary-link" href="/glossary/low-code-no-code/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="MCP (Model Context Protocol)"
+    <li class="service-tile glossary-item" data-term="MCP (Model Context Protocol)"
         data-letter="M"
         data-categories="llm,automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">hub</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/mcp/">MCP (Model Context Protocol)</a></h2>
+        <p class="service-tile__text">Otevřený protokol standardizující komunikaci AI modelů s externími nástroji, daty a službami.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">hub</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/mcp/">MCP (Model Context Protocol)</a></h2>
-      </div>
-      <p class="glossary-description">Otevřený protokol standardizující komunikaci AI modelů s externími nástroji, daty a službami.</p>
-      <a class="glossary-link" href="/glossary/mcp/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Markdown"
+    <li class="service-tile glossary-item" data-term="Markdown"
         data-letter="M"
         data-categories="data">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="data">
-          Data & Formáty
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">edit_note</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="data">Data & Formáty</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/markdown/">Markdown</a></h2>
+        <p class="service-tile__text">Odlehčený značkovací jazyk pro úpravu prostého textu a jeho převod na formátovaný text pro web.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">edit_note</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/markdown/">Markdown</a></h2>
-      </div>
-      <p class="glossary-description">Odlehčený značkovací jazyk pro úpravu prostého textu a jeho převod na formátovaný text pro web.</p>
-      <a class="glossary-link" href="/glossary/markdown/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Metadata"
+    <li class="service-tile glossary-item" data-term="Metadata"
         data-letter="M"
         data-categories="data,rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="data">
-          Data & Formáty
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">label</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="data">Data & Formáty</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/metadata/">Metadata</a></h2>
+        <p class="service-tile__text">Doplňující informace o datech (data o datech), které pomáhají systému s organizací a kontextem.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">label</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/metadata/">Metadata</a></h2>
-      </div>
-      <p class="glossary-description">Doplňující informace o datech (data o datech), které pomáhají systému s organizací a kontextem.</p>
-      <a class="glossary-link" href="/glossary/metadata/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Multimodální model"
+    <li class="service-tile glossary-item" data-term="Multimodální model"
         data-letter="M"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">perm_media</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/multimodal-model/">Multimodální model</a></h2>
+        <p class="service-tile__text">AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">perm_media</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/multimodal-model/">Multimodální model</a></h2>
-      </div>
-      <p class="glossary-description">AI model, který zpracovává více typů vstupu současně - text, obrázky, zvuk i video.</p>
-      <a class="glossary-link" href="/glossary/multimodal-model/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Parsing (parsování dat)"
+    <li class="service-tile glossary-item" data-term="Parsing (parsování dat)"
         data-letter="P"
         data-categories="data">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="data">
-          Data & Formáty
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">document_scanner</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="data">Data & Formáty</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/parsing/">Parsing (parsování dat)</a></h2>
+        <p class="service-tile__text">Proces analýzy a převodu textu nebo dat z jednoho formátu do strukturované podoby, se kterou může program pracovat.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">document_scanner</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/parsing/">Parsing (parsování dat)</a></h2>
-      </div>
-      <p class="glossary-description">Proces analýzy a převodu textu nebo dat z jednoho formátu do strukturované podoby, se kterou může program pracovat.</p>
-      <a class="glossary-link" href="/glossary/parsing/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Prompt"
+    <li class="service-tile glossary-item" data-term="Prompt"
         data-letter="P"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">chat</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/prompt/">Prompt</a></h2>
+        <p class="service-tile__text">Textový vstup - instrukce nebo otázka - který uživatel nebo systém předá AI modelu ke zpracování.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">chat</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/prompt/">Prompt</a></h2>
-      </div>
-      <p class="glossary-description">Textový vstup - instrukce nebo otázka - který uživatel nebo systém předá AI modelu ke zpracování.</p>
-      <a class="glossary-link" href="/glossary/prompt/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Prompt Injection"
+    <li class="service-tile glossary-item" data-term="Prompt Injection"
         data-letter="P"
         data-categories="security,llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="security">
-          Bezpečnost
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">shield</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="security">Bezpečnost</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/prompt-injection/">Prompt Injection</a></h2>
+        <p class="service-tile__text">Technika, při které se uživatel snaží obejít původní instrukce AI modelu pomocí speciálně formulovaného příkazu.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">shield</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/prompt-injection/">Prompt Injection</a></h2>
-      </div>
-      <p class="glossary-description">Technika, při které se uživatel snaží obejít původní instrukce AI modelu pomocí speciálně formulovaného příkazu.</p>
-      <a class="glossary-link" href="/glossary/prompt-injection/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="RAG (Retrieval-Augmented Generation)"
+    <li class="service-tile glossary-item" data-term="RAG (Retrieval-Augmented Generation)"
         data-letter="R"
         data-categories="rag,llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">manage_search</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/rag/">RAG (Retrieval-Augmented Generation)</a></h2>
+        <p class="service-tile__text">Proces, kdy si AI nejdříve přečte vaše dokumenty a až pak odpoví uživateli.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">manage_search</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/rag/">RAG (Retrieval-Augmented Generation)</a></h2>
-      </div>
-      <p class="glossary-description">Proces, kdy si AI nejdříve přečte vaše dokumenty a až pak odpoví uživateli.</p>
-      <a class="glossary-link" href="/glossary/rag/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Rate limit (omezení počtu požadavků)"
+    <li class="service-tile glossary-item" data-term="Rate limit (omezení počtu požadavků)"
         data-letter="R"
         data-categories="web">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">speed</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/rate-limit/">Rate limit (omezení počtu požadavků)</a></h2>
+        <p class="service-tile__text">Maximální počet API požadavků, které lze odeslat za dané časové období, než server dočasně přeruší přístup.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">speed</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/rate-limit/">Rate limit (omezení počtu požadavků)</a></h2>
-      </div>
-      <p class="glossary-description">Maximální počet API požadavků, které lze odeslat za dané časové období, než server dočasně přeruší přístup.</p>
-      <a class="glossary-link" href="/glossary/rate-limit/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Re-ranking"
+    <li class="service-tile glossary-item" data-term="Re-ranking"
         data-letter="R"
         data-categories="rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">sort</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/re-ranking/">Re-ranking</a></h2>
+        <p class="service-tile__text">Druhý filtr v RAG systému, který zpřesňuje výběr nejrelevantnějších výsledků z vektorového vyhledávání.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">sort</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/re-ranking/">Re-ranking</a></h2>
-      </div>
-      <p class="glossary-description">Druhý filtr v RAG systému, který zpřesňuje výběr nejrelevantnějších výsledků z vektorového vyhledávání.</p>
-      <a class="glossary-link" href="/glossary/re-ranking/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Sémantické vyhledávání"
+    <li class="service-tile glossary-item" data-term="Sémantické vyhledávání"
         data-letter="S"
         data-categories="rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">search_insights</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/semantic-search/">Sémantické vyhledávání</a></h2>
+        <p class="service-tile__text">Vyhledávání podle významu textu, nikoliv podle přesné shody klíčových slov. Základ moderních RAG systémů.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">search_insights</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/semantic-search/">Sémantické vyhledávání</a></h2>
-      </div>
-      <p class="glossary-description">Vyhledávání podle významu textu, nikoliv podle přesné shody klíčových slov. Základ moderních RAG systémů.</p>
-      <a class="glossary-link" href="/glossary/semantic-search/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Sitemap (mapa stránek)"
+    <li class="service-tile glossary-item" data-term="Sitemap (mapa stránek)"
         data-letter="S"
         data-categories="web,rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">map</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/sitemap/">Sitemap (mapa stránek)</a></h2>
+        <p class="service-tile__text">Soubor obsahující seznam všech důležitých URL adres webu, který pomáhá vyhledávačům efektivněji indexovat stránky.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">map</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/sitemap/">Sitemap (mapa stránek)</a></h2>
-      </div>
-      <p class="glossary-description">Soubor obsahující seznam všech důležitých URL adres webu, který pomáhá vyhledávačům efektivněji indexovat stránky.</p>
-      <a class="glossary-link" href="/glossary/sitemap/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Streaming response (streamování odpovědi)"
+    <li class="service-tile glossary-item" data-term="Streaming response (streamování odpovědi)"
         data-letter="S"
         data-categories="llm,web">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">stream</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/streaming-response/">Streaming response (streamování odpovědi)</a></h2>
+        <p class="service-tile__text">Postupné odesílání odpovědi LLM po jednotlivých tokenech, díky kterému uživatel vidí text okamžitě.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">stream</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/streaming-response/">Streaming response (streamování odpovědi)</a></h2>
-      </div>
-      <p class="glossary-description">Postupné odesílání odpovědi LLM po jednotlivých tokenech, díky kterému uživatel vidí text okamžitě.</p>
-      <a class="glossary-link" href="/glossary/streaming-response/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Structured output (strukturovaný výstup)"
+    <li class="service-tile glossary-item" data-term="Structured output (strukturovaný výstup)"
         data-letter="S"
         data-categories="llm,data">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="data">
-          Data & Formáty
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">data_array</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="data">Data & Formáty</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/structured-output/">Structured output (strukturovaný výstup)</a></h2>
+        <p class="service-tile__text">Režim, ve kterém LLM vrací odpověď v předem daném formátu (typicky JSON), zaručeně validní a připravený pro další zpracování.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">data_array</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/structured-output/">Structured output (strukturovaný výstup)</a></h2>
-      </div>
-      <p class="glossary-description">Režim, ve kterém LLM vrací odpověď v předem daném formátu (typicky JSON), zaručeně validní a připravený pro další zpracování.</p>
-      <a class="glossary-link" href="/glossary/structured-output/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Systémový prompt (System prompt)"
+    <li class="service-tile glossary-item" data-term="Systémový prompt (System prompt)"
         data-letter="S"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">settings_suggest</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/system-prompt/">Systémový prompt (System prompt)</a></h2>
+        <p class="service-tile__text">Skrytý text, který nastavuje chování, roli a pravidla AI modelu před začátkem konverzace s uživatelem.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">settings_suggest</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/system-prompt/">Systémový prompt (System prompt)</a></h2>
-      </div>
-      <p class="glossary-description">Skrytý text, který nastavuje chování, roli a pravidla AI modelu před začátkem konverzace s uživatelem.</p>
-      <a class="glossary-link" href="/glossary/system-prompt/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Temperature (teplota modelu)"
+    <li class="service-tile glossary-item" data-term="Temperature (teplota modelu)"
         data-letter="T"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">thermometer</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/temperature/">Temperature (teplota modelu)</a></h2>
+        <p class="service-tile__text">Parametr ovlivňující míru náhodnosti a kreativity odpovědí AI modelu - od deterministických (0) po velmi kreativní (2).</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">thermometer</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/temperature/">Temperature (teplota modelu)</a></h2>
-      </div>
-      <p class="glossary-description">Parametr ovlivňující míru náhodnosti a kreativity odpovědí AI modelu - od deterministických (0) po velmi kreativní (2).</p>
-      <a class="glossary-link" href="/glossary/temperature/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Token (v kontextu LLM)"
+    <li class="service-tile glossary-item" data-term="Token (v kontextu LLM)"
         data-letter="T"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">toll</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/token/">Token (v kontextu LLM)</a></h2>
+        <p class="service-tile__text">Základní jednotka textu, se kterou pracují LLM modely - přibližně 3/4 anglického slova nebo 2–3 znaky.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">toll</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/token/">Token (v kontextu LLM)</a></h2>
-      </div>
-      <p class="glossary-description">Základní jednotka textu, se kterou pracují LLM modely - přibližně 3/4 anglického slova nebo 2–3 znaky.</p>
-      <a class="glossary-link" href="/glossary/token/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Trigger (spouštěč workflow)"
+    <li class="service-tile glossary-item" data-term="Trigger (spouštěč workflow)"
         data-letter="T"
         data-categories="automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">bolt</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/trigger/">Trigger (spouštěč workflow)</a></h2>
+        <p class="service-tile__text">Událost nebo podmínka, která automaticky spustí workflow nebo automatizaci.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">bolt</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/trigger/">Trigger (spouštěč workflow)</a></h2>
-      </div>
-      <p class="glossary-description">Událost nebo podmínka, která automaticky spustí workflow nebo automatizaci.</p>
-      <a class="glossary-link" href="/glossary/trigger/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Vektor (v kontextu AI)"
+    <li class="service-tile glossary-item" data-term="Vektor (v kontextu AI)"
         data-letter="V"
         data-categories="rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">scatter_plot</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/vector/">Vektor (v kontextu AI)</a></h2>
+        <p class="service-tile__text">Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">scatter_plot</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/vector/">Vektor (v kontextu AI)</a></h2>
-      </div>
-      <p class="glossary-description">Číselné vyjádření významu textu, které umožňuje strojům porovnávat informace podle jejich smyslu.</p>
-      <a class="glossary-link" href="/glossary/vector/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Vektorová databáze (Vector database)"
+    <li class="service-tile glossary-item" data-term="Vektorová databáze (Vector database)"
         data-letter="V"
         data-categories="rag">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">storage</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/vector-database/">Vektorová databáze (Vector database)</a></h2>
+        <p class="service-tile__text">Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">storage</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/vector-database/">Vektorová databáze (Vector database)</a></h2>
-      </div>
-      <p class="glossary-description">Specializovaná databáze optimalizovaná pro ukládání a sémantické vyhledávání vektorů - číselných reprezentací textu.</p>
-      <a class="glossary-link" href="/glossary/vector-database/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Web scraping (stahování dat z webu)"
+    <li class="service-tile glossary-item" data-term="Web scraping (stahování dat z webu)"
         data-letter="W"
         data-categories="rag,web">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="rag">
-          RAG
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">travel_explore</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="rag">RAG</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/web-scraping/">Web scraping (stahování dat z webu)</a></h2>
+        <p class="service-tile__text">Automatizovaný proces extrakce dat z webových stránek pro jejich další zpracování nebo uložení.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">travel_explore</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/web-scraping/">Web scraping (stahování dat z webu)</a></h2>
-      </div>
-      <p class="glossary-description">Automatizovaný proces extrakce dat z webových stránek pro jejich další zpracování nebo uložení.</p>
-      <a class="glossary-link" href="/glossary/web-scraping/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Webhook"
+    <li class="service-tile glossary-item" data-term="Webhook"
         data-letter="W"
         data-categories="web,automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="web">
-          Web
-        </button>
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">webhook</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="web">Web</button>
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/webhook/">Webhook</a></h2>
+        <p class="service-tile__text">Automatická notifikace, kterou jeden systém odešle druhému v okamžiku, kdy nastane určitá událost.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">webhook</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/webhook/">Webhook</a></h2>
-      </div>
-      <p class="glossary-description">Automatická notifikace, kterou jeden systém odešle druhému v okamžiku, kdy nastane určitá událost.</p>
-      <a class="glossary-link" href="/glossary/webhook/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Workflow (automatizovaný proces)"
+    <li class="service-tile glossary-item" data-term="Workflow (automatizovaný proces)"
         data-letter="W"
         data-categories="automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">schema</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/workflow/">Workflow (automatizovaný proces)</a></h2>
+        <p class="service-tile__text">Sled kroků a rozhodnutí, které systém vykoná automaticky za účelem splnění úkolu.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">schema</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/workflow/">Workflow (automatizovaný proces)</a></h2>
-      </div>
-      <p class="glossary-description">Sled kroků a rozhodnutí, které systém vykoná automaticky za účelem splnění úkolu.</p>
-      <a class="glossary-link" href="/glossary/workflow/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="Zero-shot a Few-shot prompting"
+    <li class="service-tile glossary-item" data-term="Zero-shot a Few-shot prompting"
         data-letter="Z"
         data-categories="llm">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="llm">
-          Jazykové modely
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">filter_none</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="llm">Jazykové modely</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/zero-shot/">Zero-shot a Few-shot prompting</a></h2>
+        <p class="service-tile__text">Techniky prompting - zero-shot zadá úkol bez příkladů, few-shot přiloží ukázkové vstupy a výstupy pro lepší výsledky.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">filter_none</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/zero-shot/">Zero-shot a Few-shot prompting</a></h2>
-      </div>
-      <p class="glossary-description">Techniky prompting - zero-shot zadá úkol bez příkladů, few-shot přiloží ukázkové vstupy a výstupy pro lepší výsledky.</p>
-      <a class="glossary-link" href="/glossary/zero-shot/">
-        Zjistit více
-      </a>
     </li>
   
 
   
-    
-    <li class="glossary-item" data-term="n8n"
+    <li class="service-tile glossary-item" data-term="n8n"
         data-letter="N"
         data-categories="automation">
-      <div class="glossary-category-tags">
-        
-        <button class="glossary-category-btn glossary-category-tag" data-category="automation">
-          Automatizace
-        </button>
-        
+      <div class="service-tile__body">
+        <div class="glossary-item__top">
+          <span class="material-symbols-outlined glossary-icon" aria-hidden="true">account_tree</span>
+          <div class="glossary-item__tags">
+            
+            <button type="button" class="tag-chip tag-chip--small glossary-category-tag" data-category="automation">Automatizace</button>
+            
+          </div>
+        </div>
+        <h2 class="service-tile__title"><a class="service-tile__link" href="/glossary/n8n/">n8n</a></h2>
+        <p class="service-tile__text">Low-code platforma pro automatizaci workflow, která propojuje stovky aplikací bez nutnosti složitého kódování.</p>
+        <span class="service-tile__more" aria-hidden="true">Zjistit více →</span>
       </div>
-      <span class="material-symbols-outlined glossary-icon">account_tree</span>
-      <div class="glossary-title">
-        <h2><a href="/glossary/n8n/">n8n</a></h2>
-      </div>
-      <p class="glossary-description">Low-code platforma pro automatizaci workflow, která propojuje stovky aplikací bez nutnosti složitého kódování.</p>
-      <a class="glossary-link" href="/glossary/n8n/">
-        Zjistit více
-      </a>
     </li>
   
 
@@ -1625,16 +1517,25 @@
 (function() {
   var items = document.querySelectorAll('.glossary-item');
   var searchInput = document.getElementById('glossary-search-input');
-  var alphaBar = document.getElementById('glossary-alpha-bar');
-  var prevBtn = document.getElementById('glossary-alpha-prev');
-  var nextBtn = document.getElementById('glossary-alpha-next');
-  var categoryBar = document.querySelector('.glossary-category-bar');
+  var scroller = document.querySelector('[data-alpha-scroller]');
+  var alphaBar = scroller.querySelector('[data-alpha-track]');
+  var prevBtn = scroller.querySelector('[data-alpha-prev]');
+  var nextBtn = scroller.querySelector('[data-alpha-next]');
+  var categoryBar = document.querySelector('.glossary-categories');
   var noResults = document.getElementById('glossary-no-results');
   var activeLetter = 'all';
   var activeCategory = 'all';
 
   function normalizeLetter(l) {
     return l.normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function setActive(buttons, active) {
+    buttons.forEach(function(b) {
+      var on = b === active;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
   }
 
   // Build A–Z buttons; disable those with no matching terms
@@ -1644,29 +1545,32 @@
   });
   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(function(letter) {
     var btn = document.createElement('button');
-    btn.className = 'glossary-alpha-btn';
+    btn.type = 'button';
+    btn.className = 'tag-chip glossary-alpha-btn';
     btn.setAttribute('data-letter', letter);
+    btn.setAttribute('aria-pressed', 'false');
     btn.textContent = letter;
-    if (!usedLetters.has(letter)) {
-      btn.disabled = true;
-      btn.classList.add('glossary-alpha-btn--empty');
-    }
+    if (!usedLetters.has(letter)) btn.disabled = true;
     alphaBar.appendChild(btn);
   });
 
-  // Slider arrows
+  // Arrows and fading edges only where there is more to scroll to
   function updateAlphaArrows() {
-    var maxScroll = alphaBar.scrollWidth - alphaBar.clientWidth;
-    prevBtn.style.display = alphaBar.scrollLeft > 0 ? 'inline-flex' : 'none';
-    nextBtn.style.display = alphaBar.scrollLeft < maxScroll ? 'inline-flex' : 'none';
+    var max = alphaBar.scrollWidth - alphaBar.clientWidth;
+    var canPrev = alphaBar.scrollLeft > 1;
+    var canNext = max > 1 && alphaBar.scrollLeft < max - 1;
+    prevBtn.hidden = !canPrev;
+    nextBtn.hidden = !canNext;
+    scroller.classList.toggle('can-prev', canPrev);
+    scroller.classList.toggle('can-next', canNext);
   }
   prevBtn.addEventListener('click', function() {
-    alphaBar.scrollBy({ left: -alphaBar.clientWidth, behavior: 'smooth' });
+    alphaBar.scrollBy({ left: -alphaBar.clientWidth * 0.8, behavior: 'smooth' });
   });
   nextBtn.addEventListener('click', function() {
-    alphaBar.scrollBy({ left: alphaBar.clientWidth, behavior: 'smooth' });
+    alphaBar.scrollBy({ left: alphaBar.clientWidth * 0.8, behavior: 'smooth' });
   });
-  alphaBar.addEventListener('scroll', updateAlphaArrows);
+  alphaBar.addEventListener('scroll', updateAlphaArrows, { passive: true });
   window.addEventListener('resize', updateAlphaArrows);
   updateAlphaArrows();
 
@@ -1695,18 +1599,14 @@
     var btn = e.target.closest('.glossary-alpha-btn');
     if (!btn) return;
     activeLetter = btn.getAttribute('data-letter');
-    alphaBar.querySelectorAll('.glossary-alpha-btn').forEach(function(b) {
-      b.classList.remove('active');
-    });
-    btn.classList.add('active');
+    setActive(alphaBar.querySelectorAll('.glossary-alpha-btn'), btn);
     filterItems();
   });
 
   function activateCategory(cat) {
     activeCategory = cat;
-    categoryBar.querySelectorAll('.glossary-category-btn').forEach(function(b) {
-      b.classList.toggle('active', b.getAttribute('data-category') === cat);
-    });
+    var buttons = categoryBar.querySelectorAll('.glossary-category-btn');
+    setActive(buttons, categoryBar.querySelector('[data-category="' + cat + '"]'));
     filterItems();
   }
 
@@ -1722,119 +1622,154 @@
     e.preventDefault();
     e.stopPropagation();
     activateCategory(btn.getAttribute('data-category'));
-    document.querySelector('.glossary-category-bar').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    categoryBar.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 })();
 </script>
 
-  </main>
-</article>
-<footer>
-  <div id="contact-form">&nbsp;</div>
-  
-
-<section class="contact-section">
-    <div class="contact-intro">
-        <h2>Zanechte mi zprávu</h2>
-        <p class="contact-description">
-            Pokud máte zájem o spolupráci, neváhejte mě kontaktovat.
-        </p>
-    </div>
-
-    <!-- Formulář pro odeslání zprávy -->
-    <form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <!-- Skryté hodnoty pro Web3Forms -->
-        <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
-        <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - CS" />
-        <input type="hidden" name="from_name" value="daniel-hladik.cz" />
-        <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-        <input type="hidden" name="title" value="AI Slovník">
-        <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/">
-        <input type="hidden" name="lang" value="cs">
-
-        <div class="form-group-container">
-            <!-- Name -->
-            <div class="form-group">
-                <label for="name" class="form-label">Jméno</label>
-                <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" autocomplete="name" required />
-                <div class="empty-feedback invalid-feedback">
-                    Prosím zadejte svoje jméno, abych věděl, jak Vás oslovit :)
-                </div>
-            </div>
-
-            <!-- Email -->
-            <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" class="form-input" placeholder="napiste.vas@email.cz" type="email" autocomplete="email" required />
-                <div class="empty-feedback">
-                    Prosím vyplňte svou emailovou adresu.
-                </div>
-                <div class="invalid-feedback">
-                    Možná to byl jen překlep, ale Váš email není validní pro odeslání. Dodržte prosím formát: "email@domena.cz"
-                </div>
-            </div>
-
-            <!-- Messsage -->
-            <div class="form-group">
-                <label for="message" class="form-label">Zpráva</label>
-                <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
-                <div class="empty-feedback invalid-feedback">
-                    Prosím vyplňte pole se zprávou.
-                </div>
-            </div>
-
-            <!-- Submit button -->
-            <div class="form-group">
-                <button class="form-submit" type="submit">Odeslat</button>
-            </div>
-        </div>
-
-        <p class="text-center" id="result"></p>
-    </form>
-</section>
-
-<script src="/assets/js/contact-form.js" defer></script>
-  
-
-
-<div class="contact" id="contact-details">
-  <h2>Kontakt na mě, kdyby něco...</h2>
-  <ul>
-    <li>Daniel Hladík 
-      <small>
-        AI Product Builder
-      </small>
-    </li> 
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</span><span>Praha 6</span></li>
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
-</span><a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)" aria-label="info&#64;daniel-hladik&#46;cz">info&#64;daniel-hladik&#46;cz</a></li>
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</span><a href="https://www.linkedin.com/in/daniel-hladik/" aria-label="LinkedIn">daniel-hladik</a></li>
-    <li><span class="li-icon"><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10M13 2.05S16 6 16 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 21.95S8 18 8 12c0-6 3-9.95 3-9.95M2.63 15.5H12M2.63 8.5h18.74" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path clip-rule="evenodd" d="M21.879 17.917c.494.304.463 1.043-.045 1.101l-2.567.291-1.151 2.312c-.228.459-.933.234-1.05-.334l-1.255-6.116c-.099-.48.333-.782.75-.525l5.318 3.271z" stroke="#000000" stroke-width="1.5"></path></svg>
-</span><a href="https://daniel-hladik.cz" aria-label="daniel-hladik.cz">daniel-hladik.cz</a></li>
-  </ul>
-  
-
-
-
-<p><a href="https://zapti.me/daniel-hladik/konzultace-zdarma">Chci konzultaci ZDARMA</a></p>
+  </article>
 
 </div>
 
-  <div class="divider"></div>
-  <div class="footer-bottom">
+  </main>
   
-<p class="footer-links">
-  <a href="/" aria-label="Home">Domů</a>
-  <a href="/cv/" aria-label="Curriculum vitae">CV</a>
-  <a href="/services/" aria-label="Služby">Služby</a>
-  <a href="/glossary/" aria-label="AI Slovník">AI Slovník</a>
-  <a href="/blog/" aria-label="Blog">Blog</a>
-</p>
+
+<section class="site-contact" aria-label="Kontakt">
+  <div class="l-container">
+    <div class="contact-card" id="contact-form">
+      <div class="contact-card__info">
+        <h2 class="contact-card__title">Zanechte mi zprávu</h2>
+        <p class="contact-card__lead">Pokud máte zájem o spolupráci, neváhejte mě kontaktovat.</p>
+        
+
+<div class="contact-details" id="contact-details">
+  
+  <ul class="contact-details__list">
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="#000000" stroke-width="1.5"></path><path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span>Praha 6</span></li>
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9l5 3.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="#000000" stroke-width="1.5"></path></svg>
+<a href="mailto:info&#64;daniel-hladik&#46;cz?subject=Pozor! Tento e-mail obsahuje 100% dobré zprávy&body=Dejte mi vědět, co máte na srdci :)">info&#64;daniel-hladik&#46;cz</a></li>
+    <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<a href="https://www.linkedin.com/in/daniel-hladik/" aria-label="LinkedIn">daniel-hladik</a></li>
+  </ul>
+</div>
+
+        
+
+
+<a class="contact-card__booking" href="https://zapti.me/daniel-hladik/konzultace-zdarma" target="_blank" rel="noopener">Chci konzultaci ZDARMA</a>
+
+      </div>
+      <div class="contact-card__form">
+        
+
+
+<form class="contact-form needs-validation" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <!-- Skryté hodnoty pro Web3Forms -->
+    <input type="hidden" name="access_key" value="9cc9bff3-11a1-41eb-be20-521101ac2e1f" />
+    <input type="hidden" name="subject" value="Nová zpráva přes kontaktní formulář - CS" />
+    <input type="hidden" name="from_name" value="daniel-hladik.cz" />
+    <input type="hidden" name="redirect" value="https://daniel-hladik.cz/form-success/" />
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+    <input type="hidden" name="title" value="AI Slovník">
+    <input type="hidden" name="url" value="https://daniel-hladik.cz/glossary/">
+    <input type="hidden" name="lang" value="cs">
+
+    <div class="form-group-container">
+        <!-- Name -->
+        <div class="form-group">
+            <label for="name" class="form-label">Jméno</label>
+            <input id="name" name="name" class="form-input" placeholder="Vaše jméno" type="text" autocomplete="name" required />
+            <div class="empty-feedback invalid-feedback">
+                Prosím zadejte svoje jméno, abych věděl, jak Vás oslovit :)
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" class="form-input" placeholder="napiste.vas@email.cz" type="email" autocomplete="email" required />
+            <div class="empty-feedback">
+                Prosím vyplňte svou emailovou adresu.
+            </div>
+            <div class="invalid-feedback">
+                Možná to byl jen překlep, ale Váš email není validní pro odeslání. Dodržte prosím formát: "email@domena.cz"
+            </div>
+        </div>
+
+        <!-- Messsage -->
+        <div class="form-group">
+            <label for="message" class="form-label">Zpráva</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Napište mi zprávu sem" required></textarea>
+            <div class="empty-feedback invalid-feedback">
+                Prosím vyplňte pole se zprávou.
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+            <button class="form-submit button--primary button--block" type="submit">Odeslat</button>
+        </div>
+    </div>
+
+    <p class="text-center" id="result"></p>
+</form>
+
+<script src="/assets/js/contact-form.js" defer></script>
+
+      </div>
+    </div>
+  </div>
+</section>
 
   
+
+<footer class="site-footer">
+  <div class="l-container site-footer__inner">
+    <nav class="site-footer__nav" aria-label="Odkazy v patičce">
+      
+
+
+  
+    
+    
+    <a class="site-footer__link" href="/">Domů</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/services/">Služby</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/blog/">Blog</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/glossary/" aria-current="page">AI Slovník</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/cv/">O mně</a>
+  
+
+  
+    
+    
+    <a class="site-footer__link" href="/contact/">Kontakt</a>
+  
+
+
+    </nav>
+    <div class="site-footer__meta">
+      
 <div class="language-switcher">
 
     
@@ -1853,33 +1788,11 @@
 
 </div>
 
-  </div>
-  <small>&copy; <time datetime="2026-11-12T12:21:49+00:00">2026</time>
-    Daniel Hladík. All rights reserved.
-  </small>
-</footer>
-
-        
-          
-
-
-<aside class="side-contact" aria-label="Kontakt">
-  <div class="side-contact-card">
-    <img class="side-contact-photo" src="/assets/files/portrait.webp" width="96" height="96" alt="" loading="lazy">
-    <p class="side-contact-name">Daniel Hladík</p>
-    <p class="side-contact-role">AI Product Builder</p>
-    <p class="side-contact-text">Stavím webové aplikace, AI&nbsp;řešení a&nbsp;automatizace&nbsp;– od nápadu po spuštění.</p>
-    <a class="side-contact-button" href="#contact-form">Napište mi</a>
-    
-    <a class="side-contact-call" href="https://zapti.me/daniel-hladik/konzultace-zdarma" target="_blank" rel="noopener">Domluvit hovor</a>
-  </div>
-</aside>
-
-        
-      </div>
+      <span>&copy; <time datetime="2026-11-26T13:11:58+00:00">2026</time> Daniel Hladík</span>
     </div>
   </div>
-  <script src="/assets/js/bootstrap.min.js" defer></script>
+</footer>
+
   
   <script src="/assets/js/darkmode.js"></script>
   
