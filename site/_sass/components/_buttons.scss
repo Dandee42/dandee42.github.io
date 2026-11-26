@@ -1,0 +1,78 @@
+// Legacy bordered button (search "load more", cookie policy)
+.button {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: solid 2px var(--color-text);
+  border-radius: 12px;
+  padding: 8px 10px 8px 10px;
+  margin: 10px;
+  text-decoration: none;
+  transition: box-shadow 0.1s ease;
+
+  &:focus,
+  &:hover {
+    border: solid 2px var(--color-text);
+    color: var(--color-text);
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+}
+
+// Redesign buttons: a pill with a primary (filled) and an outline variant. They set every property
+// themselves, so they also work on top of the legacy .button and of plain links.
+.button--primary,
+.button--outline {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 52px;
+  margin: 0;
+  padding: 0 1.5em;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+.button--primary {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  border: 0;
+
+  &:hover,
+  &:focus {
+    border: 0;
+    color: var(--color-on-accent);
+    box-shadow: 0 0 0 4px var(--color-tint);
+  }
+}
+
+.button--outline {
+  background-color: transparent;
+  color: var(--color-heading);
+  border: 1.5px solid var(--color-text);
+
+  &:hover,
+  &:focus {
+    border: 1.5px solid var(--color-text);
+    color: var(--color-heading);
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+}
+
+// Full width, e.g. in the mobile menu and on narrow cards
+.button--block {
+  display: flex;
+  width: 100%;
+}

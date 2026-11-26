@@ -13,6 +13,19 @@
   --color-idea:    #8b5cf6;
   --color-success: #10b981;
   --color-error:   #ef4444;
+  // Layout
+  --container-max: 1160px;
+  --container-pad: 20px;
+  --prose-max: 720px;
+  --aside-width: 300px;
+  --header-height: 56px;
+  --space-section: 56px;
+  // Shapes
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
 }
 
 html,
@@ -20,9 +33,25 @@ html[data-theme="light"] {
   --color-background: var(--oc-gray-1);
   --color-text: var(--oc-gray-8);
   --color-heading: var(--oc-gray-8);
-  --color-link: var(--oc-blue-8);
+  --color-link: var(--oc-blue-9);
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-yellow-3);
+  --color-accent: var(--oc-blue-9);
+  --color-on-accent: #ffffff;
+  --color-surface: #ffffff;
+  --color-band: var(--oc-gray-2);
+  --color-tint: #e7f0f9;
+  --color-tint-text: var(--oc-blue-9);
+  --color-muted: var(--oc-gray-7);
+  --color-border-subtle: var(--oc-gray-3);
+  --color-card-border: transparent;
+  --color-input: var(--oc-gray-0);
+  --color-header-bg: rgba(241, 243, 245, 0.94);
+  --color-success-bg: #ebfbee;
+  --color-success-text: #237032;
+  --color-error-text: #c92a2a;
+  --color-button: var(--oc-gray-6);
+  --shadow-card: 0 1px 2px rgba(33, 37, 41, 0.06), 0 8px 24px rgba(33, 37, 41, 0.06);
   --color-border: var(--oc-gray-4);
   --color-button-background: var(--oc-gray-1);
   --color-button-text: var(--oc-gray-8);
@@ -59,6 +88,22 @@ html[data-theme="dark"] {
   --color-link: var(--oc-blue-3);
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-gray-8);
+  --color-accent: var(--oc-blue-3);
+  --color-on-accent: #15181c;
+  --color-surface: #2b3035;
+  --color-band: #1a1d20;
+  --color-tint: #1c3347;
+  --color-tint-text: var(--oc-blue-2);
+  --color-muted: var(--oc-gray-5);
+  --color-border-subtle: var(--oc-gray-8);
+  --color-card-border: var(--oc-gray-8);
+  --color-input: #1a1d20;
+  --color-header-bg: rgba(33, 37, 41, 0.92);
+  --color-success-bg: #1f3326;
+  --color-success-text: #8ce99a;
+  --color-error-text: #ff8787;
+  --color-button: var(--oc-gray-7);
+  --shadow-card: none;
   --color-border: var(--oc-gray-7);
   --color-button-background: var(--oc-gray-9);
   --color-button-text: var(--oc-gray-3);

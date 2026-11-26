@@ -1,0 +1,68 @@
+@use "breakpoints" as *;
+
+// Layout primitives of the redesign. Section and page components place content with these instead of
+// the Bootstrap grid.
+
+@include up(md) {
+  :root {
+    --container-pad: 32px;
+    --space-section: 96px;
+  }
+}
+
+@include up(lg) {
+  :root {
+    --header-height: 68px;
+  }
+}
+
+// Centred column of the full content width, with side padding
+.l-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(var(--container-max) + 2 * var(--container-pad));
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+// Reading width for running text
+.l-prose {
+  max-width: var(--prose-max);
+}
+
+// Text column plus a sticky aside; the aside drops below 1200 px
+.l-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 48px 64px;
+  align-items: start;
+}
+
+.l-split__aside {
+  display: none;
+}
+
+@include up(xl) {
+  .l-split {
+    grid-template-columns: minmax(0, var(--prose-max)) var(--aside-width);
+    justify-content: space-between;
+  }
+
+  .l-split__aside {
+    position: sticky;
+    top: calc(var(--alert-height, 0px) + var(--header-height) + 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+// Vertical rhythm of page sections
+.l-section {
+  padding-block: var(--space-section);
+}
+
+// Full-width tinted band behind a section
+.l-band {
+  background-color: var(--color-band);
+}

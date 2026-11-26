@@ -1,0 +1,12 @@
+// Inline SVG icons of the redesign. The global `svg path { stroke: var(--color-text) }` rule in _base
+// would recolour them, so an .icon follows the colour of the surrounding text instead.
+.icon {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: middle;
+}
+
+svg.icon :is(path, circle, rect, line, polyline) {
+  stroke: currentColor;
+}
