@@ -25,15 +25,6 @@
   padding-inline: var(--container-pad);
 }
 
-// Reading width for running text
-.l-prose {
-  max-width: var(--prose-max);
-}
-
-.l-prose--center {
-  margin-inline: auto;
-}
-
 // Main content of a page, between the header and the contact section
 .l-page {
   padding-block: 32px 2rem;
