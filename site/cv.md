@@ -3,7 +3,7 @@ layout: page
 width: wide
 page_id: cv
 lang: cs
-permalink: /cv/
+permalink: /o-mne/
 title: Můj příběh
 description: Jak jsem se od správy e-shopu přes Nový Zéland dostal k vývoji webových aplikací, testování a AI. Co jsem se naučil a kde jsem dnes.
 published: true
@@ -62,7 +62,7 @@ V letech 2022–2024 jsem strávil 15 měsíců na Novém Zélandu na Working Ho
 
 ## Návrat a cesta do IT {#cesta-do-it}
 
-Po návratu ze Zélandu v roce 2024 jsem se rozhodl pro zásadní změnu kariéry a začal se naplno vzdělávat. Učil jsem se základy programování a absolvoval několik kurzů zaměřených na **vývoj a testování webových aplikací** v Pythonu. Naučil jsem se pracovat s **Gitem** a vytvářet jednoduché webové aplikace v **Djangu**, třeba svou fitness aplikaci [BodyLog](/blog/bodylog-app/).
+Po návratu ze Zélandu v roce 2024 jsem se rozhodl pro zásadní změnu kariéry a začal se naplno vzdělávat. Učil jsem se základy programování a absolvoval několik kurzů zaměřených na **vývoj a testování webových aplikací** v Pythonu. Naučil jsem se pracovat s **Gitem** a vytvářet jednoduché webové aplikace v **Djangu**, třeba svou fitness aplikaci [BodyLog](/blog/bodylog-fitness-aplikace/).
 
 </div>
 </section>

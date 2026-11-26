@@ -8,6 +8,7 @@
   icon: receipt_long
   lang:
     cs:
+      slug: automatizace-faktur
       title: "Automatizace zpracování faktur"
       description: "Zbavte se ručního přepisování faktur. Pomocí AI a automatizace zpracuji příchozí faktury, ověřím údaje a zapíšu je do vašeho účetního systému."
       lead: "Konec ručního přepisování faktur — AI to zvládne za vás rychleji a bez chyb."
@@ -50,6 +51,7 @@
   icon: support_agent
   lang:
     cs:
+      slug: ai-chatbot-zakaznicka-podpora
       title: "AI Chatbot pro zákaznickou podporu"
       description: "Chatbot, který odpovídá z vašich reálných dat — manuálů, FAQ a historie objednávek. Bez halucinací, s přesnými zdroji."
       lead: "Zákaznická podpora, která funguje 24/7 a odpovídá přesně z vašich dat."
@@ -92,6 +94,7 @@
   icon: bar_chart
   lang:
     cs:
+      slug: automaticky-reporting
       title: "Automatický reporting z dat"
       description: "Pravidelné reporty z Google Analytics, CRM, databáze nebo tabulek — připravené a odeslané automaticky bez ručního kopírování dat."
       lead: "Report, který se napíše sám — každý týden ve vaší schránce bez jediného kliknutí."
@@ -134,6 +137,7 @@
   icon: mark_email_read
   lang:
     cs:
+      slug: ai-sprava-emailu
       title: "AI správa a třídění e-mailů"
       description: "AI agent, který čte váš inbox, třídí e-maily podle priority a tématu, navrhuje odpovědi a předává úkoly do vašeho systému."
       lead: "Inbox pod kontrolou — AI přečte, roztřídí a navrhne odpovědi ještě před tím, než vy otevřete schránku."
@@ -176,6 +180,7 @@
   icon: contacts
   lang:
     cs:
+      slug: automatizace-crm
       title: "CRM automatizace a lead enrichment"
       description: "Automatické doplňování CRM dat, scoring leadů a notifikace obchodníků — bez ručního zadávání a procházení LinkedIn."
       lead: "Váš CRM plný přesných dat bez toho, aby je někdo ručně hledal a zadával."
@@ -218,6 +223,7 @@
   icon: menu_book
   lang:
     cs:
+      slug: chatbot-interni-dokumentace
       title: "Chatbot pro interní dokumentaci a firemní wiki"
       description: "AI chatbot, který odpoví zaměstnancům z vašich interních dokumentů, směrnic, příruček a wiki — okamžitě a přesně."
       lead: "Zaměstnanci se přestanou ptát kolegů a začnou se ptát AI, která zná všechny firemní dokumenty."
@@ -260,6 +266,7 @@
   icon: description
   lang:
     cs:
+      slug: generovani-nabidek-a-smluv
       title: "Automatické generování nabídek a smluv"
       description: "AI agent, který sestaví cenovou nabídku nebo smlouvu z dat v CRM nebo formuláře — v minutách místo hodin."
       lead: "Od poptávky k odeslané nabídce za minuty, ne hodiny."
@@ -302,6 +309,7 @@
   icon: person_add
   lang:
     cs:
+      slug: automatizace-onboardingu
       title: "Automatizace onboardingu zaměstnanců"
       description: "Digitální onboarding, který nového zaměstnance provede od podpisu smlouvy po první pracovní den — bez zbytečného papírování a ručního předávání informací."
       lead: "Nový zaměstnanec má první den vše připravené — bez toho, aby to někdo musel ručně zařizovat."
@@ -344,6 +352,7 @@
   icon: reviews
   lang:
     cs:
+      slug: analyza-zpetne-vazby
       title: "AI analýza zákaznické zpětné vazby"
       description: "Automatická analýza recenzí, hodnocení a zákaznických průzkumů pomocí AI — s přehledem trendů, sentimentu a konkrétních problémů."
       lead: "Víte, co si zákazníci opravdu myslí — bez ručního procházení stovek recenzí."
@@ -386,6 +395,7 @@
   icon: sync_alt
   lang:
     cs:
+      slug: propojeni-eshopu-s-ucetnictvim
       title: "Propojení e-shopu s účetnictvím"
       description: "Automatická synchronizace e-shopu s Pohodou, Fakturoidem nebo Money S3. Každá objednávka automaticky v účetnictví."
       lead: "Každá objednávka automaticky v účetnictví — žádné ruční přepisování, žádné chyby."

@@ -7,7 +7,8 @@ width: wide
 {% assign service_data = page.lang[lang] %}
 {% assign hero_alt = service_data.image_alt | default: service_data.title %}
 
-{% include detail-head.html back_url="/services/" back_label=trans.datapages_services.all_services_link title=service_data.title lead=service_data.lead image_alt=hero_alt %}
+{% assign back_url = site.data.urls.services[lang] %}
+{% include detail-head.html back_url=back_url back_label=trans.datapages_services.all_services_link title=service_data.title lead=service_data.lead image_alt=hero_alt %}
 
 <div class="l-split detail-body">
   <div class="l-split__main">

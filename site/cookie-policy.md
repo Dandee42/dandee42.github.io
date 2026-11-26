@@ -2,7 +2,7 @@
 layout: page
 page_id: cookie-policy
 lang: cs
-permalink: /cookie-policy/
+permalink: /zasady-cookies/
 title: Zásady cookies
 description: Informace o tom, jak tento web používá soubory cookies a jak spravovat svůj souhlas.
 published: true

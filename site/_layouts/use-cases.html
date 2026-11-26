@@ -4,7 +4,7 @@ width: wide
 ---
 {% assign trans = site.data[site.active_lang] %}
 
-<a class="back-link" href="{{ '/services/' | relative_url }}">{{ trans.datapages_services.all_services_link }}</a>
+<a class="back-link" href="{{ site.data.urls.services[site.active_lang] | relative_url }}">{{ trans.datapages_services.all_services_link }}</a>
 
 <div class="page-head page-head--split">
   <div class="page-head__text">
