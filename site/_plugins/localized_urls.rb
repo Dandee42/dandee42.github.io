@@ -53,6 +53,23 @@ module Jekyll
     end
   end
 
+  # Czech post URLs from _data/post_slugs.yml (page_id => slug). The Czech Markdown keeps the slug
+  # it shares with its English translation, because n8n translates every change to a Czech post
+  # again. Runs before polyglot pairs the posts, so the pairing sees the Czech permalink.
+  Hooks.register :site, :post_read, priority: :high do |site|
+    slugs = site.data['post_slugs'] || {}
+    blog_path = site.data['urls']['blog'][site.default_lang]
+    site.posts.docs.each do |post|
+      next unless post.data['lang'] == site.default_lang
+
+      slug = slugs[post.data['page_id']]
+      next unless slug
+
+      post.data['permalink'] = "#{blog_path}#{slug}/"
+      post.instance_variable_set(:@url, nil)
+    end
+  end
+
   # Pages and posts: the Czech and the English file share a page_id and set their own permalink.
   # After reading the site, polyglot gives each one permalink_lang and a redirect_from with the
   # other language's permalink. In the Czech build that redirect is exactly the old Czech URL

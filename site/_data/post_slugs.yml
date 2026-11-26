@@ -1,0 +1,9 @@
+# Czech URLs of the blog posts: page_id => slug of the Czech post (/blog/<slug>/).
+#
+# The Czech Markdown keeps the English slug it shares with its English translation: every change to
+# a Czech post makes the n8n workflow translate it again, so the Czech URL is set here instead
+# (_plugins/localized_urls.rb). A post missing here keeps the shared slug in both languages; the old
+# Czech URL of a post added here redirects to the new one.
+rag-chat-web: ai-chatbot-na-web
+bodylog-app: bodylog-fitness-aplikace
+sleep-habit-tracker: sledovani-spanku-v-google-tabulkach
