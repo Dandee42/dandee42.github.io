@@ -67,12 +67,10 @@
   display: block;
 }
 
-.is-invalid,
 .was-validated :invalid {
   border-color: var(--color-error-text);
 }
 
-.custom-feedback,
 .empty-feedback,
 .invalid-feedback {
   color: var(--color-error-text);

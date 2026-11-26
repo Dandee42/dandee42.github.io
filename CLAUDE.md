@@ -140,7 +140,7 @@ Layouts and includes are components; reuse them instead of writing page-specific
 - **Width:** `page.html` takes `width` from the page or the child layout.
   - `split` (the default) puts the text next to a sticky aside with `side-contact.html`. The aside shows from 1200 px.
   - `wide` uses the whole container: services, use cases, blog, glossary list, About and contact.
-  - Layout primitives (`.l-container`, `.l-split`, `.l-prose`, …) are in `_layout.scss`.
+  - Layout primitives (`.l-container`, `.l-split`, `.l-page`, `.l-section`, …) are in `_layout.scss`.
 - **Navigation:** `_data/navigation.yml` lists the items once. `nav-links.html place=header|footer` renders them, with labels from `trans.footer.<key>` and the active item matched by a `page.url` prefix. The header shows Služby, Blog, O mně, Kontakt and the theme toggle; the language switch and the AI glossary are only in the footer.
   - The mobile menu (`#mobile-menu`, `site-nav.js`) is a sibling of the header, because the header's `backdrop-filter` would trap a fixed element inside it.
 - **Sticky top:** the alert banner sticks at `top: 0` and the header below it at `top: var(--alert-height)`. `scroll-padding-top` and the sticky asides subtract both (`--alert-height`, `--header-height`).
