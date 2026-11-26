@@ -39,11 +39,10 @@
       {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
     </div>
     <footer class="post-footer">
-      {% include share-button.html %}
       <p class="post-footer__meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: trans.general.date_format }}</time>
         <a href="#top">{{ trans.blog.back_to_top }}</a>
       </p>
+      {% include share-button.html %}
       {% include pagination-post.html %}
     </footer>
     {% include posts-related.html %}
