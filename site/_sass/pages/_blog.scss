@@ -48,17 +48,27 @@
   }
 }
 
-// Tags of a card sit above the card's stretched title link
+// Tags of a card sit above the card's stretched title link. tag-overflow.js keeps them on one row
+// and hides the rest behind the "+N" chip.
 .post-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin: 0;
 
-  a {
+  a,
+  button {
     position: relative;
     z-index: 1;
   }
+
+  .tag-chip[hidden] {
+    display: none;
+  }
+}
+
+.tag-chip--more {
+  font-weight: 700;
 }
 
 // =========================
@@ -284,7 +294,7 @@
 // PAGER
 // =========================
 
-// Older / newer pages of a paginated list (pagination.html)
+// Older / newer pages of a paginated list (pagination.html), with the site's outline buttons
 .pager {
   display: flex;
   flex-wrap: wrap;
@@ -292,24 +302,6 @@
   justify-content: space-between;
   gap: 12px;
   margin-top: 56px;
-}
-
-.pager__link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0 20px;
-  border: 1.5px solid var(--color-text);
-  border-radius: var(--radius-pill);
-  color: var(--color-heading);
-  font-weight: 700;
-
-  &:hover,
-  &:focus {
-    color: var(--color-heading);
-    text-decoration: none;
-    box-shadow: 0 0 0 1px var(--color-text);
-  }
 }
 
 .pager__info {

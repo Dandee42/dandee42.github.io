@@ -5,11 +5,11 @@
 {% if paginator.previous_page or paginator.next_page %}
 <nav class="pager" aria-label="{{ trans.blog.page }}">
   {% if paginator.next_page %}
-    <a class="pager__link" href="{{ paginator.next_page_path | prepend: site.baseurl }}">{{ trans.blog.older_posts }}</a>
+    <a class="button--outline" href="{{ paginator.next_page_path | prepend: site.baseurl }}">{{ trans.blog.older_posts }}</a>
   {% endif %}
   <span class="pager__info">{{ trans.blog.page }} {{ paginator.page }} {{ trans.blog.from }} {{ paginator.total_pages }}</span>
   {% if paginator.previous_page %}
-    <a class="pager__link" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">{{ trans.blog.newer_posts }}</a>
+    <a class="button--outline" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">{{ trans.blog.newer_posts }}</a>
   {% endif %}
 </nav>
 {% endif %}

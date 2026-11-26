@@ -1,6 +1,8 @@
 {% comment %}
   Blog post card: hero image, tags (optional), date and reading time, title and lead. The title
-  link's ::after covers the whole card; the tag links sit above it.
+  link's ::after covers the whole card; the tag links sit above it. The tags stay on one row: the
+  ones that don't fit hide behind a "+N" chip that shows them all (tag-overflow.js, loaded by the
+  list that asks for tags).
   Parameters: post (required), variant (optional, e.g. "featured"), heading (default h3),
   tags (optional, shows the post's tags), sizes (optional sizes attribute of the image),
   eager (optional, for a card above the fold).
@@ -19,7 +21,7 @@
   {% endif %}
   <div class="post-card__body">
     {% if include.tags and include.post.tags and include.post.tags != empty %}
-    <p class="post-card__tags">{% for tag in include.post.tags %}<a class="tag-chip tag-chip--small" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% endfor %}</p>
+    <p class="post-card__tags" data-tag-overflow>{% for tag in include.post.tags %}<a class="tag-chip tag-chip--small" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% endfor %}<button type="button" class="tag-chip tag-chip--small tag-chip--more" hidden data-tag-more><span data-tag-count></span><span class="visually-hidden"> {{ card_trans.blog.more_tags_label }}</span></button></p>
     {% endif %}
     <p class="post-card__meta"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: card_trans.general.date_format }}</time>{% if include.post.reading_time %} · {{ include.post.reading_time }} {{ card_trans.blog.reading_time }}{% endif %}</p>
     <{{ card_heading }} class="post-card__title"><a class="post-card__link" href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></{{ card_heading }}>
