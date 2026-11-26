@@ -46,10 +46,18 @@
   gap: 12px 20px;
   margin-top: 28px;
 
+  // Phones: the text link first, then the buttons over the full width
   @include down(sm) {
     .button--primary,
     .button--outline {
       flex: 1 1 100%;
+    }
+
+    .contact-actions__more {
+      order: -1;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
     }
   }
 }
