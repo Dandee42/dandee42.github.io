@@ -4,6 +4,26 @@
 // CONTACT PAGE
 // =========================
 
+// The portrait in the head: on the right from 1024 px, small above the title below that
+.contact-page__photo {
+  order: -1;
+  flex: none;
+  width: 112px;
+  height: auto;
+  margin: 0;
+
+  @include up(lg) {
+    order: 0;
+    width: 200px;
+  }
+}
+
+@include up(lg) {
+  .contact-page__head {
+    align-items: center;
+  }
+}
+
 // The form next to the booking card (_layouts/contact.html)
 .contact-page {
   display: grid;

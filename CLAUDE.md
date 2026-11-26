@@ -146,7 +146,7 @@ Layouts and includes are components; reuse them instead of writing page-specific
 - **Sticky top:** the alert banner sticks at `top: 0` and the header below it at `top: var(--alert-height)`. `scroll-padding-top` and the sticky asides subtract both (`--alert-height`, `--header-height`).
 - **Contact:**
   - `contact-section.html` is the card above the footer with `id="contact-form"`, the target of every "Napište mi" link. It combines `contact-details.html` and `contact-form.html`.
-  - The contact page (`_layouts/contact.html`) shows the form next to `booking-card.html` and a details card.
+  - The contact page (`_layouts/contact.html`) shows the contact details (`contact-details.html inline=true`) and the portrait in its head, then the form next to `booking-card.html`.
 - **Booking:** `booking-link.html` is the only place that builds a booking link, from `contact.scheduled_meeting.booking_url`: zapti.me in a new tab for CS, the Calendly popup for EN. `calendly-assets.html` loads Calendly once, on EN pages.
 - **Cards and blocks:** `service-tile.html`, `post-card.html` (tags on one row with a "+N" chip, `tag-overflow.js`), `posts-related.html` (up to 6 related posts in a sideways card slider, `card-slider.js`), `detail-head.html` (head of a service, use case or glossary term), `faq.html`, `service-facts.html`, `cta-block.html`, `service-cta-tile.html`, `contact-actions.html`, `tag-slider.html` (one scrolling row of tag chips; the glossary's category chips and A–Z row reuse its `.tag-chip` and `.tag-scroller` styles).
 
