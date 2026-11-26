@@ -47,8 +47,6 @@ html[data-theme="light"] {
   --color-card-border: transparent;
   --color-input: var(--oc-gray-0);
   --color-header-bg: rgba(241, 243, 245, 0.94);
-  --color-success-bg: #ebfbee;
-  --color-success-text: #237032;
   --color-error-text: #c92a2a;
   --color-button: var(--oc-gray-6);
   --shadow-card: 0 1px 2px rgba(33, 37, 41, 0.06), 0 8px 24px rgba(33, 37, 41, 0.06);
@@ -59,20 +57,10 @@ html[data-theme="light"] {
   --color-button-text-hover: var(--oc-gray-1);
   --color-form: white;
   --color-form-placeholder: var(--oc-gray-6);
-  --color-form-description: var(--oc-gray-6);
-  --color-alert-background: var(--oc-gray-1);
-  --color-progress-bar-background: var(--oc-gray-3);
-  --color-progress-bar: var(--oc-gray-7);
-  --color-progress-bar-text: var(--oc-gray-7);
-  --color-progress-bar-tools-background: var(--oc-gray-3);
-  --color-progress-bar-tools-text: var(--oc-gray-8);
-  --color-post-reading-time: var(--oc-gray-6);
   --color-icon-service: var(--oc-gray-6);
-  --shadow-service: rgba(0, 0, 0, 0.08);
   --alert-border: var(--oc-gray-4);
   --color-heading-link: var(--oc-gray-1);
   --code-block-bg: var(--oc-gray-2);
-  --code-block-fg: var(--oc-gray-8);
   --code-block-border: var(--oc-gray-4);
   .alert-warning { --alert-background: #fff7ed; }
   .alert-info    { --alert-background: #eff6ff; }
@@ -99,8 +87,6 @@ html[data-theme="dark"] {
   --color-card-border: var(--oc-gray-8);
   --color-input: #1a1d20;
   --color-header-bg: rgba(33, 37, 41, 0.92);
-  --color-success-bg: #1f3326;
-  --color-success-text: #8ce99a;
   --color-error-text: #ff8787;
   --color-button: var(--oc-gray-7);
   --shadow-card: none;
@@ -111,20 +97,10 @@ html[data-theme="dark"] {
   --color-button-text-hover: var(--oc-gray-8);
   --color-form: var(--oc-gray-8);
   --color-form-placeholder: var(--oc-gray-6);
-  --color-form-description: var(--oc-gray-4);
-  --color-alert-background: var(--oc-gray-8);
-  --color-progress-bar-background: var(--oc-gray-8);
-  --color-progress-bar: var(--oc-gray-6);
-  --color-progress-bar-text: var(--oc-gray-6);
-  --color-progress-bar-tools-background: var(--oc-gray-8);
-  --color-progress-bar-tools-text: var(--oc-gray-4);
-  --color-post-reading-time: var(--oc-gray-6);
   --color-icon-service: var(--oc-gray-3);
-  --shadow-service: rgba(0, 0, 0, 0.4);
   --alert-border: var(--oc-gray-7);
   --color-heading-link: var(--oc-gray-3);
   --code-block-bg: var(--oc-gray-8);
-  --code-block-fg: var(--oc-gray-1);
   --code-block-border: var(--oc-gray-3);
   .alert { --alert-background: var(--oc-gray-8); }
 }

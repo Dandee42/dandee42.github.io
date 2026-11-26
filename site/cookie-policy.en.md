@@ -34,7 +34,7 @@ On your first visit, a notice appears where you can accept or decline analytical
 
 You can withdraw your consent at any time by clicking the button below — the consent notice will reappear and you can change your choice.
 
-<button onclick="localStorage.removeItem('ga_consent'); location.reload();" style="font-family:var(--type-serif);font-size:.85rem;padding:.4rem .9rem;border-radius:12px;border:solid 2px var(--color-text);background:var(--color-button-background);color:var(--color-button-text);cursor:pointer;">Withdraw consent</button>
+<button type="button" class="button--outline" onclick="localStorage.removeItem('ga_consent'); location.reload();">Withdraw consent</button>
 
 ## Data processing by Google
 

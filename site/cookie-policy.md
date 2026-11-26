@@ -34,7 +34,7 @@ Při první návštěvě webu se zobrazí informační okno, kde máte možnost 
 
 Svůj souhlas můžete kdykoli odvolat kliknutím na tlačítko níže — zobrazí se informační okno a budete moci svou volbu změnit.
 
-<button onclick="localStorage.removeItem('ga_consent'); location.reload();" style="font-family:var(--type-serif);font-size:.85rem;padding:.4rem .9rem;border-radius:12px;border:solid 2px var(--color-text);background:var(--color-button-background);color:var(--color-button-text);cursor:pointer;">Odvolat souhlas</button>
+<button type="button" class="button--outline" onclick="localStorage.removeItem('ga_consent'); location.reload();">Odvolat souhlas</button>
 
 ## Zpracování dat společností Google
 

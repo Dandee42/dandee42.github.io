@@ -134,3 +134,14 @@
   font-size: 0.85em;
   font-weight: 700;
 }
+
+// Icon of a tile without an illustration (service-tile-image.html)
+.service-icon {
+  font-size: 36px !important;
+  color: var(--color-icon-service);
+}
+
+// Service illustrations are drawn on the light page background; tone them down in dark mode
+html[data-theme="dark"] .service-image img {
+  filter: brightness(0.85);
+}

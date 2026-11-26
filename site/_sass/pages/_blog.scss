@@ -75,8 +75,10 @@
   border-radius: var(--radius-pill);
   background-color: var(--color-surface);
   color: var(--color-text);
+  font-family: inherit;
   font-size: 0.8em;
   white-space: nowrap;
+  cursor: pointer;
 
   &:hover,
   &:focus {

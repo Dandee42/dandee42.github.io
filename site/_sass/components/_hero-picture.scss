@@ -1,0 +1,19 @@
+// =========================
+// HERO PICTURE
+// =========================
+
+// The hero img carries width/height to reserve its space; keep its aspect ratio when scaled down
+// (hero-picture.html)
+.post-hero-image img {
+  height: auto;
+}
+
+// Service and use-case illustrations are drawn on the light page background, so in dark mode
+// they show as a light card: round it and tone its brightness down
+.hero-illustration img {
+  border-radius: 8px;
+}
+
+html[data-theme="dark"] .hero-illustration img {
+  filter: brightness(0.85);
+}
