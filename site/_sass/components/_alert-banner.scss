@@ -32,6 +32,12 @@ html {
   scroll-padding-top: calc(var(--alert-height, 0px) + var(--header-height) + 16px);
 }
 
+// Without the 16 px gap for the hero's "scroll down" arrow: the header there is still in its place
+// right below the hero, so the gap would leave a strip of the dark hero above the header
+#main {
+  scroll-margin-top: -16px;
+}
+
 .alert-icon {
   display: flex;
   align-items: center;
