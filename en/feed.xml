@@ -9,7 +9,7 @@
     <atom:link href="https://daniel-hladik.cz/en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>I build web applications, AI solutions, automations and websites, from idea to launch. With a focus on security, scalability and maintainability.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 26 Nov 2026 13:21:02 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 14:32:30 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
     <image>
@@ -22,39 +22,39 @@
     <item>
       <title>How to add an AI chatbot agent to your website (RAG tutorial)</title>
       <link>https://daniel-hladik.cz/en/blog/rag-ai-agent-in-website/</link>
-      <guid isPermaLink="true">https://daniel-hladik.cz/en/blog/rag-ai-agent-in-website/</guid>
+      <guid isPermaLink="false">daniel-hladik.cz/blog/rag-chat-web/en</guid>
       <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
       
       
       
       <description><![CDATA[
-        Would you like to add a chatbot to your website that sends emails, arranges meetings, and knows your entire website by heart? Read more in the article.]]
+        Would you like to add a chatbot to your website that sends emails, arranges meetings, and knows your entire website by heart? Read more in the article.
       ]]></description>
     </item>
     
     <item>
       <title>BodyLog - How I created my first fitness app</title>
       <link>https://daniel-hladik.cz/en/blog/bodylog-app/</link>
-      <guid isPermaLink="true">https://daniel-hladik.cz/en/blog/bodylog-app/</guid>
+      <guid isPermaLink="false">daniel-hladik.cz/blog/bodylog-app/en</guid>
       <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
       
       
       
       <description><![CDATA[
-        The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.]]
+        The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.
       ]]></description>
     </item>
     
     <item>
       <title>How to track your sleep using Google tools</title>
       <link>https://daniel-hladik.cz/en/blog/sleep-habit-tracker/</link>
-      <guid isPermaLink="true">https://daniel-hladik.cz/en/blog/sleep-habit-tracker/</guid>
+      <guid isPermaLink="false">daniel-hladik.cz/blog/sleep-habit-tracker/en</guid>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
       
       
       
       <description><![CDATA[
-        I'll show you how to track your sleep routine using tools that everyone can access for free within their Google account.]]
+        I'll show you how to track your sleep routine using tools that everyone can access for free within their Google account.
       ]]></description>
     </item>
     

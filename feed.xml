@@ -9,7 +9,7 @@
     <atom:link href="https://daniel-hladik.cz/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Stavím webové aplikace, AI řešení, automatizace i weby, od nápadu po spuštění. S ohledem na bezpečnost, škálovatelnost a udržovatelnost.</description>
     <language>cs</language>
-    <lastBuildDate>Thu, 26 Nov 2026 13:21:01 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 14:32:29 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
     <image>
@@ -21,40 +21,40 @@
     
     <item>
       <title>Jak přidat agentního AI chatbota na svůj web (RAG návod)</title>
-      <link>https://daniel-hladik.cz/blog/rag-ai-agent-in-website/</link>
-      <guid isPermaLink="true">https://daniel-hladik.cz/blog/rag-ai-agent-in-website/</guid>
+      <link>https://daniel-hladik.cz/blog/ai-chatbot-na-web/</link>
+      <guid isPermaLink="false">daniel-hladik.cz/blog/rag-chat-web/cs</guid>
       <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
       
       
       
       <description><![CDATA[
-        Chcete si na svůj web přidat chatbota, který posílá emaily, domlouvá schůzky a zná celý váš web nazpaměť? Přečtěte si více v článku.]]
+        Chcete si na svůj web přidat chatbota, který posílá emaily, domlouvá schůzky a zná celý váš web nazpaměť? Přečtěte si více v článku.
       ]]></description>
     </item>
     
     <item>
       <title>BodyLog - Jak jsem si vytvořil svou první fitness apku</title>
-      <link>https://daniel-hladik.cz/blog/bodylog-app/</link>
-      <guid isPermaLink="true">https://daniel-hladik.cz/blog/bodylog-app/</guid>
+      <link>https://daniel-hladik.cz/blog/bodylog-fitness-aplikace/</link>
+      <guid isPermaLink="false">daniel-hladik.cz/blog/bodylog-app/cs</guid>
       <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
       
       
       
       <description><![CDATA[
-        Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.]]
+        Příběh o tom, jak jsem po 8 letech zaznamenávání dat v Excelu napsal vlastní webovou aplikaci a co mě to naučilo.
       ]]></description>
     </item>
     
     <item>
       <title>Jak sledovat svůj spánek pomocí Google nástrojů</title>
-      <link>https://daniel-hladik.cz/blog/sleep-habit-tracker/</link>
-      <guid isPermaLink="true">https://daniel-hladik.cz/blog/sleep-habit-tracker/</guid>
+      <link>https://daniel-hladik.cz/blog/sledovani-spanku-v-google-tabulkach/</link>
+      <guid isPermaLink="false">daniel-hladik.cz/blog/sleep-habit-tracker/cs</guid>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
       
       
       
       <description><![CDATA[
-        Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí nástrojů, ke kterým má každý přístup zdarma v rámci svého Google účtu.]]
+        Ukážu vám, jak sledovat vaši spánkovou rutinu pomocí nástrojů, ke kterým má každý přístup zdarma v rámci svého Google účtu.
       ]]></description>
     </item>
     

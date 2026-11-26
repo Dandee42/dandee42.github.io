@@ -19,20 +19,23 @@
   </title>
   
   
+  
+  
+
 
 
 
 
 
 <!-- Cannonical url START -->
-
 <link rel="canonical" href="https://daniel-hladik.cz/en/blog/bodylog-app/">
 <!-- Cannonical url END -->
 
 <!-- Alternate Href lang START -->
 
+
   
-  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/bodylog-app/">
+  <link rel="alternate" hreflang="cs" href="https://daniel-hladik.cz/blog/bodylog-fitness-aplikace/">
 
   
   <link rel="alternate" hreflang="en" href="https://daniel-hladik.cz/en/blog/bodylog-app/">
@@ -51,6 +54,7 @@
   <meta property="og:title" content="BodyLog - How I created my first fitness app">
   <meta name="author" content="Daniel Hladik">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="cs_CZ">
   <meta name="description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
   <meta property="og:description" content="The story of how, after 8 years of recording data in Excel, I wrote my own web application and what I learned from it.">
   <meta property="og:url" content="https://daniel-hladik.cz/en/blog/bodylog-app/">
@@ -70,6 +74,9 @@
   
 
   <!-- JSON-LD POST START -->
+  
+  
+  
   
   <script type="application/ld+json">
   {
@@ -358,15 +365,18 @@
       
 
 
+
   
 
   
+    
     
     
     <a class="site-nav__link" href="/en/services/">Services</a>
   
 
   
+    
     
     
     <a class="site-nav__link" href="/en/blog/" aria-current="page">Blog</a>
@@ -377,10 +387,12 @@
   
     
     
+    
     <a class="site-nav__link" href="/en/cv/">About me</a>
   
 
   
+    
     
     
     <a class="site-nav__link" href="/en/contact/">Contact</a>
@@ -412,15 +424,18 @@
     
 
 
+
   
 
   
+    
     
     
     <a class="mobile-menu__link" href="/en/services/">Services</a>
   
 
   
+    
     
     
     <a class="mobile-menu__link" href="/en/blog/" aria-current="page">Blog</a>
@@ -431,10 +446,12 @@
   
     
     
+    
     <a class="mobile-menu__link" href="/en/cv/">About me</a>
   
 
   
+    
     
     
     <a class="mobile-menu__link" href="/en/contact/">Contact</a>
@@ -1034,15 +1051,16 @@ document.addEventListener("DOMContentLoaded", () => {
   var closeBtn = sheet.querySelector('.abbr-sheet-close');
   var linkEl = sheet.querySelector('.abbr-sheet-link');
   var glossaryLinkLabel = 'Read more in AI Glossary →';
+  // data-glossary holds the term's slug; its page has a Czech slug on the Czech site
+  
+  var glossaryUrls = { "rag": "/en/glossary/rag/", "llm": "/en/glossary/llm/", "n8n": "/en/glossary/n8n/", "embedding-model": "/en/glossary/embedding-model/", "vector": "/en/glossary/vector/", "faq": "/en/glossary/faq/", "langchain": "/en/glossary/langchain/", "agentic-systems": "/en/glossary/agentic-systems/", "sitemap": "/en/glossary/sitemap/", "json": "/en/glossary/json/", "http-request": "/en/glossary/http-request/", "html": "/en/glossary/html/", "markdown": "/en/glossary/markdown/", "chunking": "/en/glossary/chunking/", "metadata": "/en/glossary/metadata/", "re-ranking": "/en/glossary/re-ranking/", "prompt-injection": "/en/glossary/prompt-injection/", "local-model": "/en/glossary/local-model/", "cors": "/en/glossary/cors/", "api": "/en/glossary/api/", "webhook": "/en/glossary/webhook/", "token": "/en/glossary/token/", "system-prompt": "/en/glossary/system-prompt/", "context-window": "/en/glossary/context-window/", "hallucination": "/en/glossary/hallucination/", "vector-database": "/en/glossary/vector-database/", "trigger": "/en/glossary/trigger/", "api-key": "/en/glossary/api-key/", "rate-limit": "/en/glossary/rate-limit/", "endpoint": "/en/glossary/endpoint/", "web-scraping": "/en/glossary/web-scraping/", "parsing": "/en/glossary/parsing/", "prompt": "/en/glossary/prompt/", "temperature": "/en/glossary/temperature/", "fine-tuning": "/en/glossary/fine-tuning/", "zero-shot": "/en/glossary/zero-shot/", "guardrails": "/en/glossary/guardrails/", "mcp": "/en/glossary/mcp/", "low-code-no-code": "/en/glossary/low-code-no-code/", "chatbot": "/en/glossary/chatbot/", "workflow": "/en/glossary/workflow/", "semantic-search": "/en/glossary/semantic-search/", "hybrid-search": "/en/glossary/hybrid-search/", "chain-of-thought": "/en/glossary/chain-of-thought/", "streaming-response": "/en/glossary/streaming-response/", "multimodal-model": "/en/glossary/multimodal-model/", "function-calling": "/en/glossary/function-calling/", "structured-output": "/en/glossary/structured-output/", "bias": "/en/glossary/bias/" };
 
   function openSheet(abbr) {
     termEl.textContent = abbr.textContent;
     descEl.textContent = abbr.getAttribute('data-tooltip');
     var glossarySlug = abbr.getAttribute('data-glossary');
     if (glossarySlug) {
-      var lang = document.documentElement.lang || 'cs';
-      var prefix = (lang === 'cs') ? '' : '/' + lang;
-      linkEl.href = prefix + '/glossary/' + glossarySlug + '/';
+      linkEl.href = glossaryUrls[glossarySlug] || '/en/glossary/';
       linkEl.textContent = glossaryLinkLabel;
       linkEl.style.display = '';
     } else {
@@ -1217,7 +1235,9 @@ document.addEventListener("DOMContentLoaded", () => {
       
 
 
+
   
+    
     
     
     <a class="site-footer__link" href="/en/">Home</a>
@@ -1226,10 +1246,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
     
     
+    
     <a class="site-footer__link" href="/en/services/">Services</a>
   
 
   
+    
     
     
     <a class="site-footer__link" href="/en/blog/" aria-current="page">Blog</a>
@@ -1238,16 +1260,19 @@ document.addEventListener("DOMContentLoaded", () => {
   
     
     
+    
     <a class="site-footer__link" href="/en/glossary/">AI Glossary</a>
   
 
   
     
     
+    
     <a class="site-footer__link" href="/en/cv/">About me</a>
   
 
   
+    
     
     
     <a class="site-footer__link" href="/en/contact/">Contact</a>
@@ -1257,13 +1282,14 @@ document.addEventListener("DOMContentLoaded", () => {
     </nav>
     <div class="site-footer__meta">
       
+
 <div class="language-switcher">
 
     
     
     
         
-<a class="lang-link" href=" /blog/bodylog-app/" aria-label="Čeština">Čeština</a>
+<a class="lang-link" href=" /blog/bodylog-fitness-aplikace/" aria-label="Čeština">Čeština</a>
     
 
     
@@ -1274,7 +1300,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </div>
 
-      <span>&copy; <time datetime="2026-11-26T13:21:02+00:00">2026</time> Daniel Hladík</span>
+
+      <span>&copy; <time datetime="2026-11-26T14:32:30+00:00">2026</time> Daniel Hladík</span>
     </div>
   </div>
 </footer>
