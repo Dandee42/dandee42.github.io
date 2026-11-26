@@ -82,8 +82,10 @@
     line-height: 1.08;
   }
 
+  // The link keeps its 44 px touch target, but sits visually close to the title
   .back-link {
     align-self: flex-start;
+    margin-block: -8px;
   }
 }
 
@@ -99,7 +101,7 @@
   @include up(lg) {
     display: grid;
     grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
-    align-items: center;
+    align-items: start;
     gap: 16px 56px;
 
     > .back-link {
