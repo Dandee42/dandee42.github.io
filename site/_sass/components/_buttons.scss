@@ -50,11 +50,13 @@
   color: var(--color-on-accent);
   border: 0;
 
+  // Darker (lighter in dark mode) with a ring in the accent colour, clearly visible on the page
   &:hover,
   &:focus {
+    background-color: var(--color-accent-hover);
     color: var(--color-on-accent);
     text-decoration: none;
-    box-shadow: 0 0 0 4px var(--color-tint);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 25%, transparent);
   }
 }
 

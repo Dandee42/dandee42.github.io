@@ -37,6 +37,7 @@ html[data-theme="light"] {
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-yellow-3);
   --color-accent: var(--oc-blue-9);
+  --color-accent-hover: color-mix(in srgb, var(--oc-blue-9) 78%, #000);
   --color-on-accent: #ffffff;
   --color-surface: #ffffff;
   --color-band: var(--oc-gray-2);
@@ -77,6 +78,7 @@ html[data-theme="dark"] {
   --color-chunk: var(--oc-gray-8);
   --color-mark: var(--oc-gray-8);
   --color-accent: var(--oc-blue-3);
+  --color-accent-hover: color-mix(in srgb, var(--oc-blue-3) 70%, #fff);
   --color-on-accent: #15181c;
   --color-surface: #2b3035;
   --color-band: #1a1d20;
