@@ -4,23 +4,58 @@
 // CONTACT PAGE
 // =========================
 
-// The portrait in the head: on the right from 1024 px, small above the title below that
+// Head: title, lead and contact details. Below 1024 px the portrait sits next to the details
+// (listed one under another), from 1024 px it is on the right of the whole head.
+.contact-page__head {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "lead lead"
+    "photo details";
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 18px 20px;
+
+  h1 {
+    grid-area: title;
+  }
+
+  .page-lead {
+    grid-area: lead;
+  }
+
+  .contact-details {
+    grid-area: details;
+  }
+
+  .contact-details__list {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @include up(lg) {
+    grid-template-areas:
+      "title photo"
+      "lead photo"
+      "details photo";
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 64px;
+
+    .contact-details__list {
+      flex-direction: row;
+      gap: 10px 32px;
+    }
+  }
+}
+
 .contact-page__photo {
-  order: -1;
-  flex: none;
-  width: 112px;
+  grid-area: photo;
+  width: 96px;
   height: auto;
   margin: 0;
 
   @include up(lg) {
-    order: 0;
     width: 200px;
-  }
-}
-
-@include up(lg) {
-  .contact-page__head {
-    align-items: center;
   }
 }
 
