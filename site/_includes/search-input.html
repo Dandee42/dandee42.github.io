@@ -1,7 +1,10 @@
 <div class="search-container">
-  <input type="text" id="search-input" class="search-input" placeholder="{{ site.data[page.lang].search.placeholder }}">
-  <ul id="search-results" class="search-results"></ul>
-  <button id="load-more" class="button load-more" style="display:none;">{{ site.data[page.lang].search.load_more }}</button>
+  <label class="visually-hidden" for="search-input">{{ site.data[page.lang].search.placeholder }}</label>
+  <input type="search" id="search-input" class="search-input" placeholder="{{ site.data[page.lang].search.placeholder }}" autocomplete="off">
+  <div class="search-dropdown">
+    <ul id="search-results" class="search-results"></ul>
+    <button type="button" id="load-more" class="button--outline button--block load-more" style="display:none;">{{ site.data[page.lang].search.load_more }}</button>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>

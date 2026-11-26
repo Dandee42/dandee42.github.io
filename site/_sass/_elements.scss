@@ -260,67 +260,6 @@ html[data-theme="dark"] .hero-illustration img {
   flex: 1;
 }
 
-.tags-slider .post-tags {
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0;
-  padding:0;
-}
-
-.blog-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.blog-list .post-item {
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 1rem;
-}
-
-// The post's image heads its item, like a card
-.blog-list .post-hero-image img {
-  width: 100%;
-  margin: 0 0 1rem 0;
-  border-radius: 8px;
-}
-
-// Headings are flex for their anchor icon, which turns the link into a block and puts the hover
-// underline only below the last line of a wrapped title. These have no icon, so keep the link inline.
-.blog-list .post-title {
-  display: block;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.5rem;
-}
-
-.blog-list .post-title a {
-  text-decoration: none;
-  color: var(--color-link);
-  border-bottom: 2px solid transparent;
-}
-
-.blog-list .post-title a:hover {
-  text-decoration: none;
-  border-bottom: 2px dotted var(--color-link);
-}
-
-.blog-list .post-lead {
-  margin: 0 0 0.5rem 0;
-  color: (--color-text);
-}
-
-.blog-list .reading-time {
-  font-size: 0.85rem;
-  color: var(--color-post-reading-time);
-  margin-bottom: 0.5rem;
-}
-
-.blog-list .post-date {
-  font-size: 0.85rem;
-  color: var(--color-post-reading-time);
-  float: right;
-}
-
 
 .share-button-container {
   text-align: center;
@@ -417,69 +356,6 @@ html[data-theme="dark"] .hero-illustration img {
 
 #lightbox-caption:empty {
   display: none;
-}
-
-// =========================
-// SEARCH COMPONENTS IN BLOG
-// =========================
-
-.search-container {
-  max-width: 500px;
-  width: 100%;
-  margin: 20px 0;
-  box-sizing: border-box;
-  text-align: left;
-}
-
-.search-input {
-  width: 100%;
-  padding: 8px 12px;
-  font-size: 1em;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  background-color: var(--color-form);
-  color: var(--color-text);
-  outline: none;
-}
-
-.search-input:focus {
-  outline: 2px solid var(--color-link);
-  outline-offset: 2px;
-}
-
-.search-results {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border: 1px solid var(--color-border);
-  border-radius: 5px;
-  background: var(--color-background);
-}
-
-.search-results li {
-  padding: 10px;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.search-results li:last-child {
-  border-bottom: none;
-}
-
-.search-results li a {
-  text-decoration: none;
-}
-
-.load-more {
-  margin-top: 10px;
-}
-
-.no-results {
-  color: var(--color-text);
-  list-style: none;
-  font-style: italic;
-  font-size: 1rem;
 }
 
 // =========================

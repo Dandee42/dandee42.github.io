@@ -1,7 +1,9 @@
 {% comment %}
-  Blog post card: hero image, date and reading time, title and lead. The title link's ::after covers
-  the whole card. Parameters: post (required), variant (optional, e.g. "featured"),
-  heading (default h3), sizes (optional sizes attribute of the image).
+  Blog post card: hero image, tags (optional), date and reading time, title and lead. The title
+  link's ::after covers the whole card; the tag links sit above it.
+  Parameters: post (required), variant (optional, e.g. "featured"), heading (default h3),
+  tags (optional, shows the post's tags), sizes (optional sizes attribute of the image),
+  eager (optional, for a card above the fold).
 {% endcomment %}
 {% assign card_trans = site.data[site.active_lang] %}
 {% assign card_heading = include.heading | default: "h3" %}
@@ -12,10 +14,13 @@
     {% if has_webp %}
     <source type="image/webp" srcset="{{ hero_srcset }}" sizes="{{ include.sizes | default: '(min-width: 1024px) 380px, 100vw' }}">
     {% endif %}
-    <img src="{{ include.post.image }}" alt=""{% if hero_size %} width="{{ hero_size[0] }}" height="{{ hero_size[1] }}"{% endif %} loading="lazy" decoding="async">
+    <img src="{{ include.post.image }}" alt=""{% if hero_size %} width="{{ hero_size[0] }}" height="{{ hero_size[1] }}"{% endif %} loading="{% if include.eager %}eager{% else %}lazy{% endif %}" decoding="async">
   </picture>
   {% endif %}
   <div class="post-card__body">
+    {% if include.tags and include.post.tags and include.post.tags != empty %}
+    <p class="post-card__tags">{% for tag in include.post.tags %}<a class="tag-chip tag-chip--small" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% endfor %}</p>
+    {% endif %}
     <p class="post-card__meta"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: card_trans.general.date_format }}</time>{% if include.post.reading_time %} · {{ include.post.reading_time }} {{ card_trans.blog.reading_time }}{% endif %}</p>
     <{{ card_heading }} class="post-card__title"><a class="post-card__link" href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></{{ card_heading }}>
     {% if include.post.lead %}<p class="post-card__lead">{{ include.post.lead }}</p>{% endif %}

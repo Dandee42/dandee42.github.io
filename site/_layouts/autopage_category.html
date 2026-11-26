@@ -5,13 +5,6 @@ pagination:
 sitemap: false
 ---
 <div class="l-container l-page">
-  <div class="l-split">
-    <div class="l-split__main">
-      {% include category-list.html %}
-      {% include pagination.html %}
-    </div>
-    <div class="l-split__aside">
-      {% include side-contact.html %}
-    </div>
-  </div>
+  {% include category-list.html %}
+  {% include pagination.html %}
 </div>

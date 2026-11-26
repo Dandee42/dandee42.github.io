@@ -1,0 +1,315 @@
+@use "breakpoints" as *;
+
+// =========================
+// BLOG
+// =========================
+
+// Post cards of the blog, tag and category pages (post-list.html)
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+  gap: 48px 32px;
+}
+
+// The newest post on the first page: a large card over the whole row
+.post-card--featured {
+  grid-column: 1 / -1;
+  padding: 16px;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+
+  .post-card__title {
+    font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+    line-height: 1.15;
+  }
+
+  .post-card__lead {
+    font-size: 1em;
+  }
+
+  @include up(lg) {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    padding: 20px;
+
+    .post-card__image {
+      flex: 3 1 0;
+      min-width: 0;
+    }
+
+    .post-card__body {
+      flex: 2 1 0;
+      min-width: 0;
+      padding-right: 16px;
+    }
+  }
+}
+
+// Tags of a card sit above the card's stretched title link
+.post-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// =========================
+// TAG CHIPS AND TAG SLIDER
+// =========================
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.8em;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--color-heading);
+    color: var(--color-heading);
+  }
+
+  &.is-active {
+    border-color: var(--color-heading);
+    background-color: var(--color-heading);
+    color: var(--color-background);
+  }
+}
+
+.tag-chip__count {
+  opacity: 0.7;
+}
+
+// Small tinted tag on a post card
+.tag-chip--small {
+  min-height: 26px;
+  padding: 0 10px;
+  border: 0;
+  background-color: var(--color-tint);
+  color: var(--color-tint-text);
+  font-size: 0.7em;
+
+  &:hover,
+  &:focus {
+    border: 0;
+    color: var(--color-tint-text);
+    text-decoration: underline;
+  }
+}
+
+// One row of tags that scrolls sideways (tag-slider.html); its JS sets can-prev / can-next
+.tag-scroller {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 40px;
+}
+
+.tag-scroller__track {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 8px;
+  min-width: 0;
+  padding: 2px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tag-scroller.can-next .tag-scroller__track {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+}
+
+.tag-scroller.can-prev .tag-scroller__track {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 40px);
+  mask-image: linear-gradient(to right, transparent, #000 40px);
+}
+
+.tag-scroller.can-prev.can-next .tag-scroller__track {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+}
+
+.tag-scroller__arrow {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  cursor: pointer;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// =========================
+// SEARCH
+// =========================
+
+// Search field with a dropdown of results (search-input.html)
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+
+  // Magnifying glass inside the field
+  &::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-muted);
+    transform: translateY(-50%);
+    pointer-events: none;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  @include up(lg) {
+    flex: 0 1 420px;
+  }
+}
+
+.search-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 52px;
+  padding: 0 18px 0 48px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  font-family: inherit;
+  font-size: 1rem;
+
+  &::placeholder {
+    color: var(--color-form-placeholder);
+  }
+
+  &:focus-visible {
+    border-color: var(--color-accent);
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+  }
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.search-results {
+  margin: 0;
+  padding: 6px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  list-style: none;
+
+  &:empty {
+    display: none;
+  }
+
+  li a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    color: var(--color-heading);
+
+    &:hover,
+    &:focus {
+      border-bottom: 0;
+      background-color: var(--color-band);
+    }
+  }
+}
+
+.no-results {
+  padding: 10px 12px;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.load-more {
+  margin-top: 8px;
+}
+
+// =========================
+// PAGER
+// =========================
+
+// Older / newer pages of a paginated list (pagination.html)
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 56px;
+}
+
+.pager__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1.5px solid var(--color-text);
+  border-radius: var(--radius-pill);
+  color: var(--color-heading);
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    border: 1.5px solid var(--color-text);
+    color: var(--color-heading);
+    box-shadow: 0 0 0 1px var(--color-text);
+  }
+}
+
+.pager__info {
+  color: var(--color-muted);
+  font-size: 0.85em;
+}

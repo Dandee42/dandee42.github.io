@@ -4,16 +4,7 @@ pagination:
   enabled: true
 sitemap: false
 ---
-{% assign trans = site.data[site.active_lang] %}
-
 <div class="l-container l-page">
-  <div class="l-split">
-    <div class="l-split__main">
-      {% include tag-list.html %}
-      {% include pagination.html %}
-    </div>
-    <div class="l-split__aside">
-      {% include side-contact.html %}
-    </div>
-  </div>
+  {% include tag-list.html %}
+  {% include pagination.html %}
 </div>
